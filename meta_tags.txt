@@ -1,0 +1,15 @@
+<!-- For Modern Browsers -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="/mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">

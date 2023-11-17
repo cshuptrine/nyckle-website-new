@@ -1,0 +1,90 @@
+<nav
+  class="navbar {% if include.extra_class %} {{include.extra_class}} {% endif %} navbar-hover-opacity navbar-expand-lg">
+  <div
+    class="{% if include.container_class %} {{include.container_class}} {% else %} container-fluid {% endif %} flex-row justify-content-center">
+    <div class="navbar-brand">
+      <a href="/">
+
+        {% if include.light_logo %}
+        <img src="/assets/images/important/DiscoverableLogo_White_320.webp"
+          class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-light {% endif %}"
+          alt="Discoverable logo" width="180" height="27"/>
+           {% endif %}
+        <img src="/assets/images/important/nyckel-color.png"
+         class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-dark {% endif %} {% if include.black_logo_disable %} d-none {% endif %}"
+          alt="Discoverable logo" width="320" height="77"/>
+
+        <!--
+        {% if include.light_logo %}
+        <img src="{{site.data.general_settings.light_logo_1x}}"
+          srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x"
+          class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-light {% endif %}"
+          alt="{{site.data.general_settings.title}}" width="180" height="27"/>
+        {% endif %}
+        <img src="{{site.data.general_settings.black_logo_1x}}"
+          srcset="{{site.data.general_settings.black_logo_1x}} 1x, {{site.data.general_settings.black_logo_2x}} 2x"
+          class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-dark {% endif %} {% if include.black_logo_disable %} d-none {% endif %}"
+          alt="{{site.data.general_settings.title}}" width="180" height="27"/> -->
+
+      </a>
+    </div>
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+        </li>
+        <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%"><a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Contact</a></li>
+       <li class="nav-item d-none d-lg-block pl-0"><a href="/contact-report/" class="btn m-0" style="background-color:#E96A57">Free Sign-Up</a></li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/">
+          <img src="/assets/images/important/DiscoverableLogo_White_320.webp" class="logo-light" alt="Discoverable logo" width="180" height="27" loading="lazy"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        {% for menu in site.data.nav2.main_menu %}
+        {% assign check_menu = menu.menu_type %}
+        {% case check_menu %}
+        {% when "megamenu" %} 
+        <li class="nav-item">
+      
+          <!--/.dropdown-menu -->
+        </li>
+        {% when "dropdown" %}
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
+          <ul class="dropdown-menu submenu">
+            {% for label_two in menu.label_two %}
+    			 <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">{{label_two.sub_menu_text}}</a>
+    			   <ul class="dropdown-menu submenu">
+    			   	 {% for sub_menu in label_two.sub_menu %}
+    			      <li class="nav-item"><a class="dropdown-item" href="{{sub_menu.url}}">{{sub_menu.text}}</a></li>
+    			   	 {% endfor %}
+
+    			   </ul>
+    			 </li>
+			   {% endfor %}
+       {% if menu.submenu %}
+        {% for label_one in menu.submenu %}
+              <li><a class="dropdown-item" href="{{label_one.url}}">{{label_one.text}}</a></li>
+              {% endfor %}
+              {% endif %}
+              
+          </ul>
+        </li>
+        {% else %}
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
+        </li>
+        {% endcase %}
+        {% endfor %}
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>

@@ -1,0 +1,16 @@
+{
+  "short_name": "Discoverable",
+  "name": "Discoverable Marketing",
+  "icons": [
+    {
+      "src": "https://www.discoverablemarketing.com/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://www.discoverablemarketing.com/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

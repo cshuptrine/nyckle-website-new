@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Meta Tags & Codes -->
+<!--- General Meta -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- For Modern Browsers -->
+<link rel="icon" href="https://www.discoverablemarketing.com/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="https://www.discoverablemarketing.com/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.discoverablemarketing.com/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://www.discoverablemarketing.com/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="https://www.discoverablemarketing.com//mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">
+
+
+<title>A top 3% score in the Kaggle Titanic Challenge using Transformers</title>
+
+
+<link rel="canonical" href="https://www.discoverablemarketing.com/blog/titanic-vs-transformers/"/>
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog/titanic-vs-transformers/" hreflang="x-default" />
+<meta property="og:url" content="https://www.discoverablemarketing.com/blog/titanic-vs-transformers/"/>
+
+
+<meta name="description" content=" Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable."/>
+<meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
+
+<!--- OpenGraph -->
+<meta property="og:title" content="A top 3% score in the Kaggle Titanic Challenge using Transformers"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<meta property="og:site_name" content="Discoverable Marketing"/>
+
+<meta property="og:type" content="website"/> 
+
+
+<!--- Robots -->
+<meta name="robots" content="max-image-preview:large"/>
+
+
+<!--- Schemas -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Discoverable Marketing","legalName":"Discoverable Marketing","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","logo":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","foundingDate":"2022","founders":[{"@type":"Person","name":"Chris Shuptrine"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"chris@discoverablemarketing.com","url":"https://www.discoverablemarketing.com/contact/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Discoverable Marketing","image":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","telephone":"910-516-8273","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
+
+  
+
+  
+
+  
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function loadGTM() {
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-587TTM6');
+  }
+
+  function lazyLoadGTM() {
+    window.removeEventListener('scroll', lazyLoadGTM);
+    loadGTM();
+  }
+
+  window.addEventListener('scroll', lazyLoadGTM);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader">
+    // Function to load the script
+    function loadHubSpotScript() {
+        var script = document.createElement('script');
+        script.src = "//js.hs-scripts.com/24298198.js";
+        document.body.appendChild(script);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        var loadPosition = 500; // Change this value based on when you want to load the script
+        if (window.scrollY > loadPosition) {
+            loadHubSpotScript();
+            // Remove the event listener after the script is loaded
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.querySelector('.hero-image');
+
+        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
+        var mobileBreakpoint = 768;
+
+        // Check if the screen width is less than or equal to the breakpoint
+        if (window.innerWidth <= mobileBreakpoint) {
+            // It's a mobile device, so add the lazy loading attribute
+            image.setAttribute('loading', 'lazy');
+        }
+    });
+</script>
+
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--Toggled -->
+
+  
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+
+</head>
+
+<body >
+    
+<nav
+  class="navbar  absolute nav-uppercase  navbar-hover-opacity navbar-expand-lg">
+  <div
+    class=" container  flex-row justify-content-center">
+    <div class="navbar-brand">
+      <a href="/">
+
+        
+        <img src="/assets/images/important/nyckel-color.png"
+         class=" logo-dark  "
+          alt="Discoverable logo" width="320" height="77"/>
+
+        <!--
+        
+        <img src="/assets/images/important/nyckel-black-small.png"
+          srcset="/assets/images/important/nyckel-black-small.png 1x, /assets/images/important/nyckel-black.png 2x"
+          class=" logo-dark  "
+          alt="Nyckel" width="180" height="27"/> -->
+
+      </a>
+    </div>
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+        </li>
+        <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%"><a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Contact</a></li>
+       <li class="nav-item d-none d-lg-block pl-0"><a href="/contact-report/" class="btn m-0" style="background-color:#E96A57">Free Sign-Up</a></li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/">
+          <img src="/assets/images/important/DiscoverableLogo_White_320.webp" class="logo-light" alt="Discoverable logo" width="180" height="27" loading="lazy"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/">Pricing</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/contact/">Customers</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/about/">About</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Blog</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Developers</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<div class="content-wrapper">
+<div class="wrapper white-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+<article class="post">
+  <div class="hero">
+    <div class="back-link-container contain-1200 p-mobile-1350">
+      <a class="back-link" href="/blog/">← All posts</a>
+    </div>
+    <div class="hero-contents contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1>A top 3% score in the Kaggle Titanic Challenge using Transformers</h1>
+          <div class="summary">In this post we show how to make a top 3% submission on the Kaggle Titanic Challenge using Transformers</div>
+        </div>
+
+        
+        
+        <div class="author">
+          <div class="author-area">
+            
+            <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot" class="author-icon" />
+            
+            <span class="author-name">Oscar Beijbom</span>
+            
+            <a href="https://github.com/beijbom" target="_blank">
+              <i class="fa fa-github fa-lg social-icon"></i>
+            </a>
+            
+            
+            <a href="https://twitter.com/beijbom" target="_blank">
+              <i class="fa fa-twitter fa-lg social-icon"></i>
+            </a>
+            
+            
+            
+            <a href="https://linkedin.com/in/oscarbeijbom" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            
+            
+          </div>
+          <span class="date">
+            Posted Oct 2021
+          </span>
+        </div>
+        
+      </div>
+      
+      <div class="image-area">
+        <img class="safari_only_unset_height" src="/blog/images/2021/titanic-kaggle-hero.jpg" alt="Titanic - learning from disaster" />
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="entry">
+    <p>The tragic Titanic shipwreck, documented in countless books and movies, has made its way into the Machine Learning world via the Kaggle challenge: <a href="https://www.kaggle.com/c/titanic">Titanic - learning from disaster</a>. In this challenge the goal is to predict which passengers survive based on metadata like sex, name and ticket price.</p>
+
+<p>The Titanic competition, with almost 16000 teams, is the <a href="https://dataaspirant.com/most-popular-kaggle-competition-solutions/">most popular on all of Kaggle</a>. The competition is perpetually open and is part of the “getting started” suite. Kaggle archives any submission older than 2 months, but even so there are over 15000 submissions as of today. There is also a wild amount of discussions and how-tos. A few worth looking at are: <a href="https://www.kaggle.com/carlmcbrideellis/titanic-leaderboard-a-score-0-8-is-great">a score of 0.8 is great</a> and the more comprehensive <a href="https://www.kaggle.com/pliptor/how-am-i-doing-with-my-score">how am I doing with my score</a>. The current top-score, as far as I can tell, is 85% by veteran Kaggle competitor <a href="https://www.kaggle.com/cdeotte/titanic-wcg-xgboost-0-84688">Chris Deotte</a>.</p>
+
+<p>In this post we look at a new approach to solving the Titanic dataset – render each row as a string and use a <a href="https://arxiv.org/abs/1706.03762">Transformer</a> to encode the strings into a feature vector. This eliminates tedious feature engineering required using a “standard” scikit-learn / pandas workflow, and as we shall see, performs in the top 3% on the Kaggle leaderboard!</p>
+
+<h2 id="data">Data</h2>
+
+<p>Let’s take a quick look at the data before we dive in. The first three entries in the training data look like this.</p>
+
+<div class="table-wrapper" markdown="block"><table>
+  <thead>
+    <tr>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Ticket</th>
+      <th>Fare</th>
+      <th>Cabin</th>
+      <th>Embarked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>3</td>
+      <td>Braund, Mr. Owen Harris</td>
+      <td>male</td>
+      <td>22</td>
+      <td>1</td>
+      <td>0</td>
+      <td>A/5 21171</td>
+      <td>7.25</td>
+      <td> </td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>Cumings, Mrs. John Bradley</td>
+      <td>female</td>
+      <td>38</td>
+      <td>1</td>
+      <td>0</td>
+      <td>PC 17599</td>
+      <td>71.2833</td>
+      <td>C85</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>3</td>
+      <td>Heikkinen, Miss. Laina</td>
+      <td>female</td>
+      <td>26</td>
+      <td>0</td>
+      <td>0</td>
+      <td>STON/O2. 3101282</td>
+      <td>7.925</td>
+      <td> </td>
+      <td>S</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>“SibSp” refers to the number of siblings and spouses and “Parch” the number of parents. Otherwise, the column names speak for themselves. For more details refer to the excellent Kaggle <a href="https://www.kaggle.com/c/titanic/data">data explorer</a>.</p>
+
+<h2 id="transformers">Transformers</h2>
+
+<p>A Transformer is a type of neural network that dominates the modern Natural Language Processing field. They are even starting to challenge the convolutional neural network for image processing. If you are not familiar with them, I recommend <a href="https://jalammar.github.io/illustrated-transformer/">the illustrated transformer</a> by Jay Alammar.</p>
+
+<p>Here we use the excellent Huggingface library to load up a pre-trained Transformer and use it as a feature extractor. Once we have the feature vector we train a XGBoost classifier with standard settings and that is pretty much it. The core feature extraction code looks like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TransformerExtractor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="s">"distilbert-base-uncased"</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="p">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">AutoModel</span><span class="p">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="n">model_name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">extract</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">texts</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
+        <span class="n">feats</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">texts</span><span class="p">),</span> <span class="mi">768</span><span class="p">),</span> <span class="n">np</span><span class="p">.</span><span class="n">float16</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">itt</span><span class="p">,</span> <span class="n">text</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tqdm</span><span class="p">(</span><span class="n">texts</span><span class="p">)):</span>
+            <span class="n">tokenized_text</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">tokenizer</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">return_tensors</span><span class="o">=</span><span class="s">"pt"</span><span class="p">)</span>
+            <span class="n">model_output</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">model</span><span class="p">(</span><span class="o">**</span><span class="n">tokenized_text</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="n">detach</span><span class="p">().</span><span class="n">cpu</span><span class="p">().</span><span class="n">numpy</span><span class="p">()</span>
+            <span class="n">feats</span><span class="p">[</span><span class="n">itt</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">model_output</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">).</span><span class="n">flatten</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">feats</span>
+</code></pre></div></div>
+
+<p>The only design choice here is how to join the row entries into a string. In this submission I use the simplest option possible: concatenating the entries together. This achieves a score of <code class="language-plaintext highlighter-rouge">0.80143</code> on the public benchmark which currently ranks 454 out of 14855 (top 3%). Not bad considering the simplicity and flexibility of the approach! I tried adding the column headers also but it didn’t boost the score any further.</p>
+
+<p>Code is available in a <a href="https://www.kaggle.com/oscarbeijbom/titanictransformers">Kaggle notebook</a>. That is pretty much it, happy coding!</p>
+
+
+  </div>
+
+</article></div></div></div>
+</div>
+
+<!--likely needed for hero banner loads -->
+  <script defer src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/popper.min.js"></script>
+  <script defer src="/assets/js/bootstrap.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!--likely not needed for hero banner loads -->
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script defer src="/assets/js/plugins.js"></script>
+ <script defer src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script defer src="/assets/js/scripts.js"></script>
+  <footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+
+ 
+
+  <div class="space50"></div>
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+
+
+<div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Learn More</div>
+          
+          <ul class="list-unstyled mb-0">
+            <li><a href="/contact/">Contact</a></li>
+             <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+
+
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <div class="h3 widget-title" style="color: white;">Follow Us</div>
+              <ul class="social social-mute social-s">
+                
+               <li><a href="https://twitter.com/discoverableB2B" title="Discoverable Marketing on Twitter"><i class="jam jam-twitter"></i></a></li>
+                
+               <li><a href="https://www.facebook.com/discoverablemarketing" title="Discoverable Marketing on Facebook"><i class="jam jam-facebook"></i></a></li>
+                
+               <li><a href="https://www.youtube.com/@discoverablemarketing" title="Discoverable Marketing on YouTube"><i class="jam jam-youtube"></i></a></li>
+                
+               <li><a href="https://www.linkedin.com/company/discoverable-marketing/" title="Discoverable Marketing on LinkedIn"><i class="jam jam-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            
+        <div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Company</div>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/blog/">Blog</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">© 2023 Nyckel | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">T&Cs</a></p>
+  </div>
+</footer>
+  
+</body>
+</html>

@@ -1,0 +1,22 @@
+<div class="customer-quote-block">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="customer-quote p-10">"{{ include.text }}"</div>
+        </div>
+        <div class="col-sm-4 pl-0">
+            <div class="customer-quote-signature">
+                {% if include.mugshot != null %}
+                <picture style="display: inline-block;">
+                    <img src="{{ include.mugshot }}" class="case-study-mugshot" loading="lazy" alt=""
+                        style="max-width: 100%;">
+                </picture>
+                {% endif %}
+
+                <div class="p-l-15">
+                    <div class="customer-quote-name">{{ include.author }}</div>
+                    <div class="customer-quote-title">{{ include.title }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

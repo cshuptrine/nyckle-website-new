@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Meta Tags & Codes -->
+<!--- General Meta -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- For Modern Browsers -->
+<link rel="icon" href="https://www.discoverablemarketing.com/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="https://www.discoverablemarketing.com/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.discoverablemarketing.com/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://www.discoverablemarketing.com/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="https://www.discoverablemarketing.com//mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">
+
+
+<title>How to Classify Time Series Signals With Computer Vision: Kaggle Whale Example</title>
+
+
+<link rel="canonical" href="https://www.discoverablemarketing.com/blog/time-series-signal-classification-using-computer-vision/"/>
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog/time-series-signal-classification-using-computer-vision/" hreflang="x-default" />
+<meta property="og:url" content="https://www.discoverablemarketing.com/blog/time-series-signal-classification-using-computer-vision/"/>
+
+
+<meta name="description" content=" Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable."/>
+<meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
+
+<!--- OpenGraph -->
+<meta property="og:title" content="How to Classify Time Series Signals With Computer Vision: Kaggle Whale Example"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<meta property="og:site_name" content="Discoverable Marketing"/>
+
+<meta property="og:type" content="website"/> 
+
+
+<!--- Robots -->
+<meta name="robots" content="max-image-preview:large"/>
+
+
+<!--- Schemas -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Discoverable Marketing","legalName":"Discoverable Marketing","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","logo":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","foundingDate":"2022","founders":[{"@type":"Person","name":"Chris Shuptrine"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"chris@discoverablemarketing.com","url":"https://www.discoverablemarketing.com/contact/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Discoverable Marketing","image":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","telephone":"910-516-8273","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
+
+  
+
+  
+
+  
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function loadGTM() {
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-587TTM6');
+  }
+
+  function lazyLoadGTM() {
+    window.removeEventListener('scroll', lazyLoadGTM);
+    loadGTM();
+  }
+
+  window.addEventListener('scroll', lazyLoadGTM);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader">
+    // Function to load the script
+    function loadHubSpotScript() {
+        var script = document.createElement('script');
+        script.src = "//js.hs-scripts.com/24298198.js";
+        document.body.appendChild(script);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        var loadPosition = 500; // Change this value based on when you want to load the script
+        if (window.scrollY > loadPosition) {
+            loadHubSpotScript();
+            // Remove the event listener after the script is loaded
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.querySelector('.hero-image');
+
+        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
+        var mobileBreakpoint = 768;
+
+        // Check if the screen width is less than or equal to the breakpoint
+        if (window.innerWidth <= mobileBreakpoint) {
+            // It's a mobile device, so add the lazy loading attribute
+            image.setAttribute('loading', 'lazy');
+        }
+    });
+</script>
+
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--Toggled -->
+
+  
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+
+</head>
+
+<body >
+    
+<nav
+  class="navbar  absolute nav-uppercase  navbar-hover-opacity navbar-expand-lg">
+  <div
+    class=" container  flex-row justify-content-center">
+    <div class="navbar-brand">
+      <a href="/">
+
+        
+        <img src="/assets/images/important/nyckel-color.png"
+         class=" logo-dark  "
+          alt="Discoverable logo" width="320" height="77"/>
+
+        <!--
+        
+        <img src="/assets/images/important/nyckel-black-small.png"
+          srcset="/assets/images/important/nyckel-black-small.png 1x, /assets/images/important/nyckel-black.png 2x"
+          class=" logo-dark  "
+          alt="Nyckel" width="180" height="27"/> -->
+
+      </a>
+    </div>
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+        </li>
+        <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%"><a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Contact</a></li>
+       <li class="nav-item d-none d-lg-block pl-0"><a href="/contact-report/" class="btn m-0" style="background-color:#E96A57">Free Sign-Up</a></li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/">
+          <img src="/assets/images/important/DiscoverableLogo_White_320.webp" class="logo-light" alt="Discoverable logo" width="180" height="27" loading="lazy"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/">Pricing</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/contact/">Customers</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/about/">About</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Blog</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Developers</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<div class="content-wrapper">
+<div class="wrapper white-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+<article class="post">
+  <div class="hero">
+    <div class="back-link-container contain-1200 p-mobile-1350">
+      <a class="back-link" href="/blog/">← All posts</a>
+    </div>
+    <div class="hero-contents contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1>How to Classify Time Series Signals With Computer Vision: Kaggle Whale Example</h1>
+          <div class="summary">Classifying time-series signals is a surprising and cool use-case of image classification. In this post, we show you one way to do that,  by solving the kaggle whale sound classification challenge using image classification.  </div>
+        </div>
+
+        
+        
+        <div class="author">
+          <div class="author-area">
+            
+            <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot" class="author-icon" />
+            
+            <span class="author-name">George Mathew</span>
+            
+            <a href="https://github.com/saintarian" target="_blank">
+              <i class="fa fa-github fa-lg social-icon"></i>
+            </a>
+            
+            
+            <a href="https://twitter.com/georgemkan" target="_blank">
+              <i class="fa fa-twitter fa-lg social-icon"></i>
+            </a>
+            
+            
+            
+            <a href="https://linkedin.com/in/georgemathew" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            
+            
+          </div>
+          <span class="date">
+            Posted Mar 2023
+          </span>
+        </div>
+        
+      </div>
+      
+      <div class="image-area">
+        <img class="safari_only_unset_height" src="/blog/images/signal_classification_header.jpg" alt="" />
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="entry">
+    <p>We are constantly surprised by the various ways our customers use our platform. One such use case that caught our attention is using image classification to analyze time series signals. In this blog post, we’ll demonstrate one approach to accomplish this by guiding you through building an <a href="https://www.nyckel.com/image-classification-api">image classification function</a> to classify audio clips, a form of time series signals.</p>
+
+<h2 id="the-challenge">The challenge</h2>
+
+<p>The challenge we aim to solve in this post is Kaggle’s <a href="https://www.kaggle.com/c/whale-detection-challenge">whale detection challenge.</a> The dataset provided with this challenge includes underwater audio recordings, some of which contain <a href="https://www.fisheries.noaa.gov/species/north-atlantic-right-whale">North Atlantic right whale</a> calls. The goal is to classify the audio clips as containing or not containing a right whale call. Let’s try it out with an image classification function.</p>
+
+<h2 id="turning-audio-clips-into-images">Turning audio clips into images </h2>
+
+<p>Time series data is generally a series of numbers representing amplitudes of the signal along the time series. In the case of the whale dataset, each audio clip is 2 seconds long and is sampled at 2kHz. This means that each clip is a series of 4000 numbers. To solve the challenge using image classification, the first thing we’ll have to do, of course, is turn the time series signal into an image. We have a few options for doing that:</p>
+
+<ul>
+  <li><strong>Plot the waveform with amplitude on the x-axis and time on the y-axis.</strong> This is the easiest method and can produce good classification results in some cases. See an example of such a plot below:</li>
+</ul>
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/whale_waveform.png" alt="A waveform plot of a right whale call" style="border-radius: 20px; max-width: 60%" srcset="../images/whale_waveform.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+<ul>
+  <li><strong><a href="https://en.wikipedia.org/wiki/Spectrogram">Spectrogram</a>:</strong> A spectrogram is a visual representation of the frequencies present in a signal, with time on the x-axis, frequency on the y-axis, and the amplitude at each frequency represented by color intensity. This method exposes a lot more information about the signal in image form, and it’s the method we’ll use in this post. You’ll see example images of spectrograms further down. </li>
+  <li><strong><a href="https://ketanhdoshi.github.io/Audio-Mel/">Mel spectrogram</a>:</strong> This is a variation of the spectrogram that uses a non-linear frequency scale on the y-axis, called the mel scale, which more closely mimics human perception of pitch. Automatic speech recognition models, like <a href="https://github.com/openai/whisper">OpenAI’s Whisper</a>, commonly use this method.</li>
+</ul>
+
+<h2 id="creating-spectrograms">Creating spectrograms</h2>
+
+<p>The complete code for this post is available <a href="https://github.com/NyckelAI/codesamples/blob/main/whale_sound_classification/whale_sound_classification.ipynb">here</a> as a python notebook. Let’s look at the code we use to convert audio files into spectrograms using matplotlib:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Helper class for creating a spectrogram from an audio signal
+</span><span class="k">class</span> <span class="nc">Spectrogram</span><span class="p">:</span>
+
+    <span class="c1"># Open an audio file and return the time series and sample rate
+</span>    <span class="k">def</span> <span class="nf">get_time_series</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image_path</span><span class="p">):</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">aifc</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+        <span class="n">n_samples</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">getnframes</span><span class="p">()</span>
+        <span class="n">sample_rate</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">getframerate</span><span class="p">()</span>
+        <span class="n">strsig</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">readframes</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">frombuffer</span><span class="p">(</span><span class="n">strsig</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">short</span><span class="p">).</span><span class="n">byteswap</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">values</span><span class="p">,</span> <span class="n">sample_rate</span>
+
+    <span class="c1"># Create a spectrogram from the time series and sample rate
+</span>    <span class="k">def</span> <span class="nf">plot_spectrogram</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image_path</span><span class="p">,</span> <span class="n">plot</span><span class="p">):</span>
+        <span class="n">series</span><span class="p">,</span> <span class="n">rate</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_time_series</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+        <span class="n">f</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">Sxx</span> <span class="o">=</span> <span class="n">signal</span><span class="p">.</span><span class="n">spectrogram</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">nperseg</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">noverlap</span><span class="o">=</span><span class="mi">224</span><span class="p">)</span>
+        <span class="n">plot</span><span class="p">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">Sxx</span><span class="p">)</span>
+
+    <span class="c1"># Save the plot to a byte array
+</span>    <span class="k">def</span> <span class="nf">get_plot_bytes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plt</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">io</span><span class="p">.</span><span class="n">BytesIO</span><span class="p">()</span> <span class="k">as</span> <span class="nb">buffer</span><span class="p">:</span>  <span class="c1"># use buffer memory
+</span>            <span class="n">plt</span><span class="p">.</span><span class="n">savefig</span><span class="p">(</span><span class="nb">buffer</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s">'jpg'</span><span class="p">)</span>
+            <span class="nb">buffer</span><span class="p">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">buffer</span><span class="p">.</span><span class="n">getvalue</span><span class="p">()</span>
+
+    <span class="c1"># Process an audo file and return the spectrogram as a byte array
+</span>    <span class="k">def</span> <span class="nf">process_audio</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image_path</span><span class="p">):</span>
+        <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">plot_spectrogram</span><span class="p">(</span><span class="n">image_path</span><span class="p">,</span> <span class="n">fig</span><span class="p">)</span>
+        <span class="n">plot_bytes</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_plot_bytes</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+        <span class="n">fig</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">plot_bytes</span>
+
+<span class="n">spectrogram</span> <span class="o">=</span> <span class="n">Spectrogram</span><span class="p">()</span>
+
+<span class="c1"># Let's look at some spectrograms of whale sounds
+</span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s">"Whale Spectrograms"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sample</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="n">whale_subset_train</span><span class="p">,</span><span class="mi">3</span><span class="p">)):</span>
+    <span class="n">spectrogram</span><span class="p">.</span><span class="n">plot_spectrogram</span><span class="p">(</span><span class="n">trainfolder</span><span class="o">+</span><span class="n">sample</span><span class="p">,</span> <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">savefig</span><span class="p">(</span><span class="s">"whale_spectrograms.png"</span><span class="p">)</span>
+
+<span class="c1"># Let's look at some spectrograms of not-whale sounds
+</span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s">"Not-Whale Spectrograms"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sample</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="n">not_whale_subset_train</span><span class="p">,</span><span class="mi">3</span><span class="p">)):</span>
+    <span class="n">spectrogram</span><span class="p">.</span><span class="n">plot_spectrogram</span><span class="p">(</span><span class="n">trainfolder</span><span class="o">+</span><span class="n">sample</span><span class="p">,</span> <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="n">fig</span><span class="p">.</span><span class="n">savefig</span><span class="p">(</span><span class="s">"not_whale_spectrograms.png"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>And here are a few examples of resulting spectrograms:</p>
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/whale_spectrograms.png" alt="Three example spectrograms of a right whale call" style="border-radius: 20px; max-width: 100%" srcset="../images/whale_spectrograms.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/not_whale_spectrograms.png" alt="Three example spectrograms that don't contain a right whale call" style="border-radius: 20px; max-width: 100%" srcset="../images/not_whale_spectrograms.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<p>As you can see, there is somewhat of a pattern for the whale calls in the spectrogram - a wisp in the lower end of the frequency spectrum that curves up (increases in frequency) as it progresses. You might also notice the amount of noise present in some of these clips. This is not going to be easy!</p>
+
+<h2 id="training-an-image-classification-function">Training an image classification function</h2>
+
+<p>We are going to use Nyckel’s <a href="https://www.nyckel.com/docs">API</a> to create and train an <a href="https://www.nyckel.com/docs/image-classification-quickstart">image classification function</a> from 5,000 spectrogram images - 2,500 with whale sounds and 2,500 without. Here is the code for doing so:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a helper class for nyckel API
+# Has methods to create an image classification function, add training samples to the function, and invoke the function to get predictions
+</span><span class="k">class</span> <span class="nc">Nyckel</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">client_id</span> <span class="o">=</span> <span class="n">client_id</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">client_secret</span> <span class="o">=</span> <span class="n">client_secret</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">auth_token</span> <span class="o">=</span> <span class="s">''</span>
+
+    <span class="c1"># Ensure we have an auth token
+</span>    <span class="k">def</span> <span class="nf">ensure_auth_token</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">auth_token</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'client_id'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">client_id</span><span class="p">,</span> <span class="s">'client_secret'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">client_secret</span><span class="p">,</span>
+                    <span class="s">'grant_type'</span><span class="p">:</span> <span class="s">'client_credentials'</span><span class="p">}</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span>
+                <span class="s">'https://www.nyckel.com/connect/token'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">auth_token</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">text</span><span class="p">)[</span><span class="s">'access_token'</span><span class="p">]</span>
+
+    <span class="c1"># Create a new image classification function and add the provided labels (classes)
+</span>    <span class="k">def</span> <span class="nf">create_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">label_names</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">ensure_auth_token</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s">"https://www.nyckel.com/v1/functions"</span><span class="p">,</span>
+            <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="s">"input"</span><span class="p">:</span> <span class="s">"Image"</span><span class="p">,</span> <span class="s">"output"</span><span class="p">:</span> <span class="s">"Classification"</span><span class="p">},</span>
+            <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">"authorization"</span><span class="p">:</span> <span class="s">"Bearer "</span> <span class="o">+</span> <span class="bp">self</span><span class="p">.</span><span class="n">auth_token</span><span class="p">})</span>
+        <span class="n">function_id</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">text</span><span class="p">)[</span><span class="s">'id'</span><span class="p">].</span><span class="n">replace</span><span class="p">(</span><span class="s">"function_"</span><span class="p">,</span> <span class="s">""</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">label_name</span> <span class="ow">in</span> <span class="n">label_names</span><span class="p">:</span>
+            <span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s">"https://www.nyckel.com/v1/functions/</span><span class="si">{</span><span class="n">function_id</span><span class="si">}</span><span class="s">/labels"</span><span class="p">,</span>
+                <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s">"name"</span><span class="p">:</span> <span class="n">label_name</span><span class="p">},</span>
+                <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">"authorization"</span><span class="p">:</span> <span class="s">"Bearer "</span> <span class="o">+</span> <span class="bp">self</span><span class="p">.</span><span class="n">auth_token</span><span class="p">})</span>
+        <span class="k">return</span> <span class="n">function_id</span>
+
+    <span class="c1"># Encode an image as base64 string for posting to the API
+</span>    <span class="k">def</span> <span class="nf">base64encoded_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img_bytes</span><span class="p">):</span>
+        <span class="n">encoded_string</span> <span class="o">=</span> <span class="n">base64</span><span class="p">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">img_bytes</span><span class="p">).</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s">"data:image/jpg;base64,"</span> <span class="o">+</span> <span class="n">encoded_string</span>
+
+    <span class="c1"># Add a training sample to the function annoated with the provided label_name
+</span>    <span class="k">def</span> <span class="nf">post_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function_id</span><span class="p">,</span> <span class="n">image_bytes</span><span class="p">,</span> <span class="n">external_id</span><span class="p">,</span> <span class="n">label_name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">ensure_auth_token</span><span class="p">()</span>
+        <span class="n">base64_image</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">base64encoded_image</span><span class="p">(</span><span class="n">image_bytes</span><span class="p">)</span>
+        <span class="n">json</span> <span class="o">=</span> <span class="p">{</span><span class="s">"data"</span><span class="p">:</span> <span class="n">base64_image</span><span class="p">,</span> <span class="s">"externalId"</span><span class="p">:</span> <span class="n">external_id</span><span class="p">,</span>
+                <span class="s">"annotation"</span><span class="p">:</span> <span class="p">{</span><span class="s">"labelName"</span><span class="p">:</span> <span class="n">label_name</span><span class="p">}}</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s">"https://www.nyckel.com/v1/functions/</span><span class="si">{</span><span class="n">function_id</span><span class="si">}</span><span class="s">/samples"</span><span class="p">,</span>
+            <span class="n">json</span><span class="o">=</span><span class="n">json</span><span class="p">,</span>
+            <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">"authorization"</span><span class="p">:</span> <span class="s">"Bearer "</span> <span class="o">+</span> <span class="bp">self</span><span class="p">.</span><span class="n">auth_token</span><span class="p">})</span>
+
+    <span class="c1"># Invoke the function to get a prediction for the provided image. Returns the predicted label name
+</span>    <span class="k">def</span> <span class="nf">predict_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">function_id</span><span class="p">,</span> <span class="n">image_bytes</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">ensure_auth_token</span><span class="p">()</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"data"</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">base64encoded_image</span><span class="p">(</span><span class="n">image_bytes</span><span class="p">)}</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s">"https://www.nyckel.com/v1/functions/</span><span class="si">{</span><span class="n">function_id</span><span class="si">}</span><span class="s">/invoke"</span><span class="p">,</span>
+            <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+            <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">"authorization"</span><span class="p">:</span> <span class="s">"Bearer "</span> <span class="o">+</span> <span class="bp">self</span><span class="p">.</span><span class="n">auth_token</span><span class="p">})</span>
+        <span class="k">return</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">text</span><span class="p">)[</span><span class="s">'labelName'</span><span class="p">]</span>
+
+<span class="c1"># Insert client_id and client_secret for nyckel below
+</span><span class="n">client_id</span> <span class="o">=</span> <span class="s">""</span>
+<span class="n">client_secret</span> <span class="o">=</span> <span class="s">""</span>
+<span class="n">nyckel</span> <span class="o">=</span> <span class="n">Nyckel</span><span class="p">(</span><span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span><span class="p">)</span>
+
+<span class="c1"># Create an image classification function with labels "whale" and "not whale"
+</span><span class="n">function_id</span> <span class="o">=</span> <span class="n">nyckel</span><span class="p">.</span><span class="n">create_function</span><span class="p">(</span><span class="s">"whale_test"</span><span class="p">,</span> <span class="p">[</span><span class="s">"whale"</span><span class="p">,</span> <span class="s">"not whale"</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Created function </span><span class="si">{</span><span class="n">function_id</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="c1"># Add training samples containing whale sounds to the function
+</span><span class="k">print</span><span class="p">(</span><span class="s">"Adding whale samples"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">sample</span> <span class="ow">in</span> <span class="n">whale_subset_train</span><span class="p">:</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">trainfolder</span><span class="o">+</span><span class="n">sample</span>
+    <span class="n">image_bytes</span> <span class="o">=</span> <span class="n">spectrogram</span><span class="p">.</span><span class="n">process_audio</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">nyckel</span><span class="p">.</span><span class="n">post_image</span><span class="p">(</span><span class="n">function_id</span><span class="p">,</span> <span class="n">image_bytes</span><span class="p">,</span> <span class="n">sample</span><span class="p">,</span> <span class="s">"whale"</span><span class="p">)</span>
+
+<span class="c1"># Add training samples without whale sounds to the function
+</span><span class="k">print</span><span class="p">(</span><span class="s">"Adding not-whale samples"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">sample</span> <span class="ow">in</span> <span class="n">not_whale_subset_train</span><span class="p">:</span>
+    <span class="n">filename</span> <span class="o">=</span> <span class="n">trainfolder</span><span class="o">+</span><span class="n">sample</span>
+    <span class="n">image_bytes</span> <span class="o">=</span> <span class="n">spectrogram</span><span class="p">.</span><span class="n">process_audio</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">nyckel</span><span class="p">.</span><span class="n">post_image</span><span class="p">(</span><span class="n">function_id</span><span class="p">,</span> <span class="n">image_bytes</span><span class="p">,</span> <span class="n">sample</span><span class="p">,</span> <span class="s">"not whale"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Done adding samples"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The function trains within a few seconds (yes, really!) after the images are uploaded. Here is a screenshot of the resulting function in our UI:</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/whale_classification_function_screenshot.png" alt="A screenshot of a trained Nyckel image classification function for whale calls" style="border-radius: 20px; max-width: 100%" srcset="../images/whale_classification_function_screenshot.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<p>The accuracy bars on the top right of the screen show that we got an ~85% accuracy as measured by <a href="https://docs.aws.amazon.com/machine-learning/latest/dg/cross-validation.html">cross-validation</a>. Not bad! But let’s check how it does against a holdout test set. Here’s the code we used to call our trained function using 1,000 examples each of whale and “not whale” audio clips:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">true_positives</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">false_positives</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">true_negatives</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">false_negatives</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Predicting whale test samples"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">sample</span> <span class="ow">in</span> <span class="n">whale_subset_test</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">nyckel</span><span class="p">.</span><span class="n">predict_image</span><span class="p">(</span><span class="n">function_id</span><span class="p">,</span> <span class="n">spectrogram</span><span class="p">.</span><span class="n">process_audio</span><span class="p">(</span><span class="n">trainfolder</span><span class="o">+</span><span class="n">sample</span><span class="p">))</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="s">"whale"</span><span class="p">):</span>
+        <span class="n">true_positives</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">false_negatives</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Predicting not-whale test samples"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">sample</span> <span class="ow">in</span> <span class="n">not_whale_subset_test</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">nyckel</span><span class="p">.</span><span class="n">predict_image</span><span class="p">(</span><span class="n">function_id</span><span class="p">,</span> <span class="n">spectrogram</span><span class="p">.</span><span class="n">process_audio</span><span class="p">(</span><span class="n">trainfolder</span><span class="o">+</span><span class="n">sample</span><span class="p">))</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="s">"not whale"</span><span class="p">):</span>
+        <span class="n">true_negatives</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">false_positives</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"True positives: </span><span class="si">{</span><span class="n">true_positives</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"False positives: </span><span class="si">{</span><span class="n">false_positives</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"True negatives: </span><span class="si">{</span><span class="n">true_negatives</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"False negatives: </span><span class="si">{</span><span class="n">false_negatives</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Accuracy: </span><span class="si">{</span><span class="p">(</span><span class="n">true_positives</span> <span class="o">+</span> <span class="n">true_negatives</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">true_positives</span> <span class="o">+</span> <span class="n">true_negatives</span> <span class="o">+</span> <span class="n">false_positives</span> <span class="o">+</span> <span class="n">false_negatives</span><span class="p">)</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>We got an accuracy of 85.45%, which is pretty much exactly what Nyckel’s cross-validation produced. Finally, here is the confusion matrix for the function:</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/whale_classification_confusion_matrix.png" alt="The confusion matrix for the whale sound classification function" style="border-radius: 20px; max-width: 45%" srcset="../images/whale_classification_confusion_matrix.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h2 id="possible-improvements">Possible improvements</h2>
+
+<p>An accuracy of 85% is not bad for having spent an hour on the problem, with most of it spent figuring out how to create spectrograms. But here are some ideas for further improvements that can be made that could increase accuracy:</p>
+
+<ul>
+  <li>Remove noise from spectrograms. Noise usually shows up as horizontal lines extending all the way through the spectrogram. There are <a href="https://scikit-maad.github.io/_auto_examples/2_advanced/plot_remove_background.html">ways to remove this noise</a>, allowing the classification function to have a cleaner signal. </li>
+  <li>Focus on specific frequency ranges. It is well-known that <a href="https://dosits.org/galleries/audio-gallery/marine-mammals/baleen-whales/north-atlantic-right-whale/">right whale calls fall within a narrow frequency range</a> range. We could modify the spectrogram to only focus on that range. </li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>As demonstrated in this post, image classification can be a powerful tool for analyzing time series signals like audio. I hope you found it useful. <a href="https://www.nyckel.com/console">Sign up</a> for a free account if you’d like to try this technique, or <a href="mailto:feedback@nyckel.com">get in touch</a> if you have any questions.</p>
+
+
+  </div>
+
+</article></div></div></div>
+</div>
+
+<!--likely needed for hero banner loads -->
+  <script defer src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/popper.min.js"></script>
+  <script defer src="/assets/js/bootstrap.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!--likely not needed for hero banner loads -->
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script defer src="/assets/js/plugins.js"></script>
+ <script defer src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script defer src="/assets/js/scripts.js"></script>
+  <footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+
+ 
+
+  <div class="space50"></div>
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+
+
+<div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Learn More</div>
+          
+          <ul class="list-unstyled mb-0">
+            <li><a href="/contact/">Contact</a></li>
+             <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+
+
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <div class="h3 widget-title" style="color: white;">Follow Us</div>
+              <ul class="social social-mute social-s">
+                
+               <li><a href="https://twitter.com/discoverableB2B" title="Discoverable Marketing on Twitter"><i class="jam jam-twitter"></i></a></li>
+                
+               <li><a href="https://www.facebook.com/discoverablemarketing" title="Discoverable Marketing on Facebook"><i class="jam jam-facebook"></i></a></li>
+                
+               <li><a href="https://www.youtube.com/@discoverablemarketing" title="Discoverable Marketing on YouTube"><i class="jam jam-youtube"></i></a></li>
+                
+               <li><a href="https://www.linkedin.com/company/discoverable-marketing/" title="Discoverable Marketing on LinkedIn"><i class="jam jam-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            
+        <div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Company</div>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/blog/">Blog</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">© 2023 Nyckel | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">T&Cs</a></p>
+  </div>
+</footer>
+  
+</body>
+</html>

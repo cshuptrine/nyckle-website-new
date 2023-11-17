@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Meta Tags & Codes -->
+{% include /meta/company-meta.html %}
+{% include /tags/head.html %}
+
+<!--SCSS -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+<!--Toggled -->
+{% if page.video %}
+<link rel="stylesheet" href="/lite-yt.css" />
+{% endif %}
+  
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+
+</head>
+
+<body {% if page.overflow %} class="overflow-hidden" {% endif %}>
+    
+{% include header.html container_class="container" extra_class="absolute nav-uppercase" %}
+
+<div class="content-wrapper">
+{{ content }}
+</div>
+
+<!--likely needed for hero banner loads -->
+  <script defer src="{{relative_url}}/assets/js/jquery.min.js"></script>
+  <script defer src="{{relative_url}}/assets/js/popper.min.js"></script>
+  <script defer src="{{relative_url}}/assets/js/bootstrap.min.js"></script>
+  <script defer src="{{relative_url}}/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script defer src="{{relative_url}}/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!--likely not needed for hero banner loads -->
+  <script defer src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script defer src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script defer src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script defer src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script defer src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script defer src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script defer src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script defer src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script defer src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script defer src="{{relative_url}}/assets/js/plugins.js"></script>
+ <script defer src="{{relative_url}}/assets/js/simple-jekyll-search.min.js"></script>
+  <script defer src="{{relative_url}}/assets/js/scripts.js"></script>
+  {% include footer.html light_logo="true" %}
+  {% include /tags/body.html %}
+</body>
+</html>

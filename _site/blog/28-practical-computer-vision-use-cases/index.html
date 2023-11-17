@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Meta Tags & Codes -->
+<!--- General Meta -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- For Modern Browsers -->
+<link rel="icon" href="https://www.discoverablemarketing.com/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="https://www.discoverablemarketing.com/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.discoverablemarketing.com/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://www.discoverablemarketing.com/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="https://www.discoverablemarketing.com//mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">
+
+
+<title>28 Practical Computer Vision Use Cases</title>
+
+
+<link rel="canonical" href="https://www.discoverablemarketing.com/blog/28-practical-computer-vision-use-cases/"/>
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog/28-practical-computer-vision-use-cases/" hreflang="x-default" />
+<meta property="og:url" content="https://www.discoverablemarketing.com/blog/28-practical-computer-vision-use-cases/"/>
+
+
+<meta name="description" content=" Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable."/>
+<meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
+
+<!--- OpenGraph -->
+<meta property="og:title" content="28 Practical Computer Vision Use Cases"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<meta property="og:site_name" content="Discoverable Marketing"/>
+
+<meta property="og:type" content="website"/> 
+
+
+<!--- Robots -->
+<meta name="robots" content="max-image-preview:large"/>
+
+
+<!--- Schemas -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Discoverable Marketing","legalName":"Discoverable Marketing","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","logo":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","foundingDate":"2022","founders":[{"@type":"Person","name":"Chris Shuptrine"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"chris@discoverablemarketing.com","url":"https://www.discoverablemarketing.com/contact/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Discoverable Marketing","image":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","telephone":"910-516-8273","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
+
+  
+
+  
+
+  
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function loadGTM() {
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-587TTM6');
+  }
+
+  function lazyLoadGTM() {
+    window.removeEventListener('scroll', lazyLoadGTM);
+    loadGTM();
+  }
+
+  window.addEventListener('scroll', lazyLoadGTM);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader">
+    // Function to load the script
+    function loadHubSpotScript() {
+        var script = document.createElement('script');
+        script.src = "//js.hs-scripts.com/24298198.js";
+        document.body.appendChild(script);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        var loadPosition = 500; // Change this value based on when you want to load the script
+        if (window.scrollY > loadPosition) {
+            loadHubSpotScript();
+            // Remove the event listener after the script is loaded
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.querySelector('.hero-image');
+
+        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
+        var mobileBreakpoint = 768;
+
+        // Check if the screen width is less than or equal to the breakpoint
+        if (window.innerWidth <= mobileBreakpoint) {
+            // It's a mobile device, so add the lazy loading attribute
+            image.setAttribute('loading', 'lazy');
+        }
+    });
+</script>
+
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--Toggled -->
+
+  
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+
+</head>
+
+<body >
+    
+<nav
+  class="navbar  absolute nav-uppercase  navbar-hover-opacity navbar-expand-lg">
+  <div
+    class=" container  flex-row justify-content-center">
+    <div class="navbar-brand">
+      <a href="/">
+
+        
+        <img src="/assets/images/important/nyckel-color.png"
+         class=" logo-dark  "
+          alt="Discoverable logo" width="320" height="77"/>
+
+        <!--
+        
+        <img src="/assets/images/important/nyckel-black-small.png"
+          srcset="/assets/images/important/nyckel-black-small.png 1x, /assets/images/important/nyckel-black.png 2x"
+          class=" logo-dark  "
+          alt="Nyckel" width="180" height="27"/> -->
+
+      </a>
+    </div>
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+        </li>
+        <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%"><a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Contact</a></li>
+       <li class="nav-item d-none d-lg-block pl-0"><a href="/contact-report/" class="btn m-0" style="background-color:#E96A57">Free Sign-Up</a></li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/">
+          <img src="/assets/images/important/DiscoverableLogo_White_320.webp" class="logo-light" alt="Discoverable logo" width="180" height="27" loading="lazy"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/">Pricing</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/contact/">Customers</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/about/">About</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Blog</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Developers</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<div class="content-wrapper">
+<div class="wrapper white-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+<article class="post">
+  <div class="hero">
+    <div class="back-link-container contain-1200 p-mobile-1350">
+      <a class="back-link" href="/blog/">← All posts</a>
+    </div>
+    <div class="hero-contents contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1>28 Practical Computer Vision Use Cases</h1>
+          <div class="summary">Computer vision has far-reaching benefits, and some of your favorite brands may be using it without you even realizing it. We put together a list of 28 real-world computer vision use cases to inspire you to think about how to use computer vision in your business. </div>
+        </div>
+
+        
+        
+        <div class="author">
+          <div class="author-area">
+            
+            <img src="https://www.nyckel.com/img/nyckel-icon.png" alt="mugshot" class="author-icon" />
+            
+            <span class="author-name">Nyckel</span>
+            
+            <a href="https://github.com/nyckelai" target="_blank">
+              <i class="fa fa-github fa-lg social-icon"></i>
+            </a>
+            
+            
+            <a href="https://twitter.com/nyckelai" target="_blank">
+              <i class="fa fa-twitter fa-lg social-icon"></i>
+            </a>
+            
+            
+            
+            <a href="https://linkedin.com/company/nyckelai" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            
+            
+          </div>
+          <span class="date">
+            Posted Feb 2023
+          </span>
+        </div>
+        
+      </div>
+      
+      <div class="image-area">
+        <img class="safari_only_unset_height" src="/blog/images/practical-computer-vision-use-cases.jpg" alt="List of 28 practical computer vision cases" />
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="entry">
+    <p>With computer vision, you train a machine learning (ML) function to understand the contents of an image. When a function can accurately predict what’s in an image, it enables companies to automate repetitive tasks or achieve things they wouldn’t have been able to otherwise. (For example, <a href="https://www.nyckel.com/blog/gardyn-reduces-workload-by-70-while-growing-2x-after-implementing-computer-vision/">Gardyn used computer vision</a> to speed the assessment of its customers’ plant health.)</p>
+
+<p><a href="https://www.nyckel.com/computer-vision-api">Computer vision</a> has many real-world applications that help businesses improve efficiency and performance. To illustrate the far-reaching benefits of the technology, we compiled a list of 29 computer vision use cases, broken down across eight industries.</p>
+
+<p><em><strong>**Note:</strong> This article aims to give you insight into how diverse the applications and possibilities are for computer vision, but it is by no means an exhaustive list.**</em></p>
+
+<h2 id="agriculture">Agriculture</h2>
+
+<p>Computer vision has revolutionized and streamlined a lot of agricultural practices in recent years. Gone are the days of using humans to inspect and determine crop disease, dehydration, yield amounts, and other important insights; computer vision is now able to accurately detect all of these things and more.</p>
+
+<h3 id="use-case-1-determining-whether-a-plant-needs-water">Use Case #1: Determining whether a plant needs water</h3>
+
+<p>It’s impractical for humans to manually inspect large fields of crops to make sure everything looks healthy and normal. And “normal” can vary. Wine ranchers in California, for example, prefer their grapes slightly dehydrated in order to yield the best-quality wine.</p>
+
+<p>This conundrum is easily solved by using a thermal image camera. In thermal imaging, <a href="https://www.popsci.com/artificial-intelligence-changing-farming/">thirsty plants</a> tend to be a little warmer than plants that are getting plenty of water. Using <a href="https://www.nyckel.com/image-classification-api">image classification</a>, farmers can easily tell whether their plants are getting enough water (or too much), and make adjustments as needed.</p>
+
+<h3 id="use-case-2-yield-estimation-by-counting">Use Case #2: Yield estimation by counting</h3>
+
+<p>Over or underestimating the yield of crops has serious consequences for farmers. But manually counting fruits and vegetables is too expensive to be sustainable for large-scale productions. The solution here is to use machine learning-based <a href="https://www.nyckel.com/docs/detection-quickstart">object detection</a> that can automatically count the number of fruits and vegetables in an image – even when they are slightly obscured by leaves, sun glare, or other factors.</p>
+
+<h3 id="use-case-3-determining-land-use-type">Use Case #3: Determining land use type</h3>
+
+<p>Climate change poses unique and pressing challenges for the agriculture industry. As climate conditions shift, farmers also need to adjust how they use their land. Land that was once hospitable to certain crops now needs to be reassessed for new types of crops or other uses.</p>
+
+<p>Computer vision is an efficient way to monitor your land and track any changes that may have occurred or are occurring. Typically this is done by using drones to capture footage and then processing the footage using <a href="https://www.nyckel.com/custom-categorize-aerial-imagery-api">image classification.</a> Image classification can help landowners spot changes to their land to determine how and if they need to adjust their crops accordingly.</p>
+
+<h3 id="use-case-4-detecting-crop-disease">Use Case #4: Detecting crop disease</h3>
+
+<p>Just like we don’t want our grapes overwatered or our crops under (or over) counted, anyone who manages crops needs an efficient way to make sure they remain disease-free.</p>
+
+<p>Computer vision can analyze an image, for example, of a blueberry and determine whether that blueberry is indeed healthy or is afflicted with bacteria, such as crown gall. (We don’t suggest you Google image-search that one, by the way.)</p>
+
+<h3 id="use-case-5-monitoring-livestock">Use Case #5: Monitoring livestock</h3>
+
+<p>A farmer’s livelihood often depends on making sure every animal of theirs is accounted for. A low-cost and minimally invasive solution to counting your livestock is to set up a camera to monitor the animals. You can then use computer vision to identify all the animals in the footage and ensure they are all accounted for.</p>
+
+<p>Want to make sure a sheep hasn’t wandered off from your field? Use a computer vision function to detect all the sheep in the image’s frame, count them, and compare that number to how many sheep are supposed to be present.</p>
+
+<h2 id="gaming-and-virtualaugmented-reality">Gaming and Virtual/Augmented Reality</h2>
+
+<p>Virtual reality may not be mainstream yet, but the technology continues to make strides. Meanwhile, gaming continues to evolve and become more sophisticated and intricate than ever.</p>
+
+<p>As new discoveries and challenges arise with the technological advances in gaming, <a href="https://www.nyckel.com/computer-vision-api">computer vision solutions</a> are needed to keep pace.</p>
+
+<h3 id="use-case-6-recognizing-real-life-objects-and-characters">Use Case #6: Recognizing real-life objects and characters</h3>
+
+<p>Augmented Reality (AR) relies on object recognition to work. That is, it relies on the computer’s ability to accurately identify an object in an image or video. Humans are pretty good at recognizing everyday things like trees, cars, and other humans – even when the objects are blurred or obscured. Computers aren’t quite as accurate as people, but they’ve come a long way.</p>
+
+<p>A well-trained ML function can accurately detect what the object is that it is scanning, which then allows it to, for example, add augmented overlays to the image. (For example, think of those mobile apps that let you add bunny or cat ears to your head.) AR isn’t just for playing around, though. Its potential extends to more practical use cases like helping customers in a digital marketplace “try on” digital products, like a sweater or makeup.</p>
+
+<h3 id="use-case-7-create-a-2d-representation-of-a-real-life-game">Use Case #7: Create a 2D representation of a real-life game</h3>
+
+<p>Computer vision allows you to create real-time representations of a game or other event in progress. For example, bowling alleys use computer-aided tracking systems to show bowlers the trajectory that their ball took down the lane, which pins the ball knocked over, the speed at which it traveled, and more.</p>
+
+<p>For another example, <a href="https://towardsdatascience.com/board-game-image-recognition-using-neural-networks-116fc876dafa">this author</a> used image classification to turn a video stream of an actual chess game into a 2D representation. The function recognized the different game pieces and their location on the board so that the game could be digitally represented.</p>
+
+<h2 id="manufacturing">Manufacturing</h2>
+
+<p>Humans are important in manufacturing, but computer vision can perform certain manufacturing-related tasks with greater speed and accuracy. From quality control to safety inspection, there’s a wide range of computer vision use cases related to manufacturing.</p>
+
+<h3 id="use-case-8-quality-assurance-for-food-and-beverage">Use Case #8: Quality assurance for food and beverage<a href="https://www.cognex.com/blogs/machine-vision/how-ocr-tools-are-helping-food-and-beverage-manufacturers"></a></h3>
+
+<p>Food producers have a lot to keep track of, including real-time production, expiration dates, placing and verifying labels, shipping management, and more. And considering how time-sensitive consumables are, quality assurance (QA) is something you don’t want to take risks with.</p>
+
+<p>Computer vision can automatically capture and record the data for each of these tasks, saving both time and energy. Because QA is a lengthy and potentially tedious process, computer vision is a more reliable and less labor-intensive solution than human input.</p>
+
+<h3 id="use-case-9-identifying-parts-of-fasteners">Use Case #9: Identifying parts of fasteners<a href="https://fastenershows.com/2021/06/23/how-image-recognition-for-manufacturing-is-redefining-parts-identification-in-fasteners/"></a></h3>
+
+<p>Using the human eye to detect machine parts can quickly lead to exhaustion – and less than optimal accuracy. Inaccurate detection could lead to product defects that have significant business impacts and, sometimes, safety concerns. Fasteners, for example, are a critical piece of factory equipment, considering they are (by definition) what holds everything together in one piece.</p>
+
+<p>To avoid errors made as a result of human fatigue or oversight, you can train an ML function to identify and classify the different parts of a fastener to ensure that each piece is in the correct place and to identify any defects. It’s a much faster (not to mention safer) approach than relying on human review.</p>
+
+<h3 id="use-case-10-inspecting-the-quality-of-packages">Use Case #10: Inspecting the quality of packages</h3>
+
+<p>There are few things more frustrating than receiving a package, only to open it up and find the item inside damaged (or not what you expected).</p>
+
+<p>This is where image classification comes in: while still on the conveyor belt, computer vision can ensure that packages are intact, undamaged, and up to standard before they’re shipped off to their final destinations.</p>
+
+<h2 id="healthcare-and-medical">Healthcare and medical</h2>
+
+<p>The medical field is always in need of faster and better solutions to solve the overwhelming healthcare challenges faced around the world.</p>
+
+<p>Computer vision plays an important role in helping to solve some of these challenges. While some people may imagine sophisticated <a href="https://www.davincisurgery.com/#:~:text=The%20da%20Vinci%20vision%20system,far%20greater%20range%20of%20motion.">da Vinci machines</a> when they think of medical AI (see our “Robotics” section), computer vision has helped automate a lot of other tasks in the healthcare field, from radiology to bookkeeping.</p>
+
+<h3 id="use-case-11-automatically-read-x-rays-and-other-images">Use Case #11: Automatically read X-rays (and other images)</h3>
+
+<p>The healthcare field faces a chronic shortage of workers, and radiology is no exception. While radiology ultimately still requires human interpretation, computer vision can greatly help to streamline, speed, and automate much of the process. For example, a computer can read an X-ray in a matter of seconds, while waiting for a human radiologist could (and often does) bottleneck the process.</p>
+
+<p>As an added benefit, computer vision is also capable of diagnosing conditions in the X-ray that are invisible to the human eye.</p>
+
+<h3 id="use-case-12-improve-data-entry">Use Case #12: Improve data entry</h3>
+
+<p>Data entry is time-consuming, and there’s no getting around all the data required in the healthcare field. Optical character recognition (OCR) speeds up the data entry process while at the same time reducing the number of errors. It also allows healthcare professionals to quickly retrieve the data they need it.</p>
+
+<h3 id="use-case-13-reading-healthcare-documents">Use Case #13: Reading healthcare documents</h3>
+
+<p>Not only is computer vision capable of entering healthcare-related data; it can help you better read that data. When human eyes are scanning a document, it can take a while to find the exact information or key details that you’re looking for. With OCR, you can quickly find what you’re looking for, thanks to search functions trained to “read” an image.</p>
+
+<p>For example, clinics often mail health assessment forms to patients before their annual physical exams. Patients fill out the forms and bring them with them to their appointments. Rather than relying on the doctor to scan the document quickly for important information, the patient services staff could scan the document when the patient checks in for their appointment, and a computer vision function could convert a photo of the form into text and then scan the text to flag it for important topics the doctor should discuss with the patient.</p>
+
+<h2 id="retail">Retail</h2>
+
+<p>It’s almost impossible to have a retail business these days without having a website. And websites require search functions along with other automated features to help customers find what they’re looking for quickly.</p>
+
+<p>Computer vision can do wonders to improve the customer experience online, whether it’s searching by category, product recommendation, or content moderation for 3rd party sellers.</p>
+
+<h3 id="use-case-14-search-products-by-typing-a-text-query-or-uploading-an-image">Use Case #14: Search products by typing a text query or uploading an image</h3>
+
+<p>If your customers are looking for red shoes on your site, and don’t have a way for them to quickly and accurately determine whether you sell them, chances are they’re going to shop on a site that’s easier to navigate.</p>
+
+<p>Fortunately, computer vision can allow your customers to search a database of images (e.g., the products you sell) using a text search query (e.g., “red shoes.) And while having a text-based query function like that is essential, you could seriously up your game by adding an image-based search function as well. Modern machine learning models enable online shoppers to simply upload a photo of what they’re looking for and quickly find the closest match in your own inventory.</p>
+
+<h3 id="use-case-15-capturing-product-data-from-price-tags">Use Case #15: Capturing product data from price tags<a href="https://www.klippa.com/en/blog/information/price-tag-ocr/"></a></h3>
+
+<p>It’s no secret that the retail industry is super competitive, and a key part of staying competitive is pricing. But collecting data on the prices of your competitor’s products can quickly become overwhelming, especially when you need to capture in-store prices that aren’t readily available online</p>
+
+<p>The solution is to capture that data with photos of price tags, and then use OCR to convert the images into easy-to-read text data. For example, take a look at <a href="https://www.klippa.com/en/blog/information/price-tag-ocr/">how Klippa recommends using OCR</a> to capture grocery store prices.</p>
+
+<h2 id="robotics">Robotics</h2>
+
+<p>Unlike what you see in Hollywood films, most robots actually aren’t humanoid-looking. They are, however, becoming more common and important across different industries ranging from the aerospace industry to consumer goods. Computer vision plays a critical role in helping these robots do their jobs (we’d say “with pride,” except that robots don’t have feelings).</p>
+
+<h3 id="use-case-16-depalletizing-boxes-in-a-warehouse">Use Case #16: Depalletizing boxes in a warehouse</h3>
+
+<p>Warehouses deal with a huge number of pallets on a regular basis. Things can get complicated pretty quickly, considering the different types and sizes of boxes (parcels) there are and the QR codes used to keep track of them all.</p>
+
+<p>Manual depalletization — which is the process of people unloading boxes from pallets and sorting them according to their contents — is slow and repetitive, easily leading to fatigue, error, and bottlenecks. Robotic arms, paired with computer vision image processing, can identify parcels of different shapes and sizes (including in low light), scan codes, and sort parcels in a fraction of the time it takes a human to perform the same tasks.</p>
+
+<h3 id="use-case-17-reading-street-signs">Use Case #17: Reading street signs</h3>
+
+<p>Driverless cars are beholden to the same traffic rules as everyone else, but unlike humans, these autonomous vehicles rely on computer vision to “see” the signs for them.</p>
+
+<p>Image classification functions trained to understand signs of all different shapes, colors, and meanings help ensure that driverless cars stay in their lane and keep their occupants (and everyone else on the road) safe.</p>
+
+<h3 id="use-case-18-cleaning-up-space-debris">Use Case #18: Cleaning up space debris</h3>
+
+<p>You might be aware of the <a href="https://education.nationalgeographic.org/resource/great-pacific-garbage-patch">Great Pacific garbage patch</a>, and the fact our planet has a lot of garbage. Did you know, though, that there are <a href="https://www.britannica.com/story/how-much-trash-is-in-space#:~:text=In%20Earth%27s%20orbit%20itself%2C%20the,of%20pieces%20smaller%20than%20that.">millions of pieces of space junk</a> floating just within earth’s orbit?</p>
+
+<p>While space clean-up initiatives are still in their earliest phases, computer vision promises to be one of the most practical solutions to helping robots locate space junk so that it can be tracked down for cleanup.</p>
+
+<h3 id="use-case-19-assisting-with-surgeries">Use Case #19: Assisting with surgeries</h3>
+
+<p>Robots have helped revolutionize operating rooms around the world and made life just a little bit easier for surgeons. Specifically, they are able to perform a variety of tasks, from planning surgeries and sorting tools to helping doctors make smaller, less invasive incisions.</p>
+
+<p>These robots employ computer vision to analyze and interpret visual data in order to perform these tasks to the highest order of safety.</p>
+
+<h3 id="use-case-20-mine-detection-and-removal">Use Case #20: Mine detection and removal</h3>
+
+<p><a href="https://landminefree.org/facts-about-landmines/#:~:text=Mines%20kill%20or%20maim%20more,every%205000%20successfully%20removed%20mines.">5,000 people around the world each year</a> are either killed or maimed by landmines. And while landmines aren’t that expensive to install, they are much more expensive and difficult to remove.</p>
+
+<p>Drones have become perhaps the most promising solution to this issue. Thanks to image recognition and processing, these drones can safely detect landmines and classify their make, model, and location to aid in their safe removal.</p>
+
+<h2 id="tech">Tech</h2>
+
+<p>Technology is critical to most types of businesses today, and many companies have to tackle challenges related to managing online communities and data sets, processing physical data digitally, and more. Computer vision can help technology companies — or any company that uses technology — more efficiently and effectively manage their digital products and data.</p>
+
+<h3 id="use-case-21-determining-whether-an-image-is-ai-generated">Use Case #21: Determining whether an image is AI-generated</h3>
+
+<p>No one likes seeing an intriguing or surprising photo, only to realize later that they’ve been duped by a computer. (In some rare cases, a crazy photo may in fact be real; remember <a href="https://www.bbc.com/news/uk-31711446">the weasel flying on a woodpecker</a> that made headlines a few years ago?)</p>
+
+<p>Since humans aren’t sophisticated enough (unfortunately) to always know whether a photo is real, a viable solution is to use a machine learning function trained on real vs. fake photos to make sure people aren’t fooled by AI. If you run an online social community (let’s say a dating site) where photos are important, the last thing you want is users who post deepfakes — photos that have been digitally altered to replace the person in them with someone else.</p>
+
+<p>Machine learning (ML) that’s trained on a wide dataset of AI-generated photos can help you combat this problem by determining which user photos are, in fact, genuine and which are fake.</p>
+
+<h3 id="use-case-22-moderating-not-safe-for-work-nsfw-content">Use Case #22: Moderating Not Safe for Work (NSFW) content</h3>
+
+<p>Not Safe for Work (NSFW) is a handy catch-all euphemism for any kind of content involving inappropriate nudity, sex, violence, or other so-called “adult” themes. It’s time-consuming, not to mention demoralizing, to have to manually review these types of offensive images when doing content moderation.</p>
+
+<p>Luckily, you can deploy computer vision to recognize, classify, and even remove offensive images so that you don’t have to deal with them – leaving you with more time to focus on growing your community or business.</p>
+
+<h3 id="use-case-23-auto-translate-text-from-a-photo">Use Case #23: Auto translate text from a photo</h3>
+
+<p>Let’s say you’ve received a handwritten note in indecipherable cursive from an older-generation family member. Or maybe you’re an antiquarian and you just like collecting old, handwritten notes.</p>
+
+<p>Rather than straining your eyes and brain trying to translate the text, you can use computer vision to scan and translate it for you. This same concept works for other languages as well – imagine being in a foreign country and needing a quick way to understand the signage around you. Once again, auto-translation to the rescue.</p>
+
+<h3 id="use-case-24-scan-and-deposit-a-check">Use Case #24: Scan and deposit a check</h3>
+
+<p>While it’s always great to receive a check, it’s not always convenient to drive to the bank to deposit it. In the comfort of your own home, though, you can take a photo of your check and allow OCR to process the text data from the image (e.g., the amount, your name, the payer), so you can deposit your check remotely.</p>
+
+<p>This is just one more of the many examples of how computer vision can save a considerable amount of time by bypassing human interaction.</p>
+
+<h2 id="transportation">Transportation</h2>
+
+<p>Whether you use a car, train, or plane to get around, computer vision is probably involved at some point.\</p>
+
+<p>While self-driving cars are perhaps the most obvious example of computer vision in transportation, we’ve included some less obvious examples here.</p>
+
+<h3 id="use-case-25-automated-license-plate-recognition">Use Case #25: Automated license plate recognition</h3>
+
+<p>When a vehicle is involved in a crime or accident, knowing the license plate number helps with corroborating evidence. Automated license plate recognition can be done through cameras that are specifically designed for this purpose, called regular road-rule enforcement cameras.</p>
+
+<p>Crimes and accidents aren’t the only examples where this applies either; automated license plate recognition is used for managing tolls and parking lots as well, ensuring the people who pass through tolls or enter the lot have paid their fees.</p>
+
+<h3 id="use-case-26-classifying-car-models">Use Case #26: Classifying car models</h3>
+
+<p>When trained on enough datasets, computer vision can even learn how to recognize and classify car models. If you’re the owner of a car dealership who needs to keep track of their inventory, for example, computer vision could be the fastest way to count, sort, and analyze cars on your lot.</p>
+
+<h3 id="use-case-27-expediting-logistics">Use Case #27: Expediting logistics</h3>
+
+<p>Effective transportation hinges on large amounts of data capture. In fact, the largest transportation and logistics firms scan and process close to one million multilingual forms per day. This quickly becomes an insurmountable challenge with manual input.</p>
+
+<p>OCR automates the process and cuts down on input time by as much as <a href="https://paperlessproductivity.com/industry/transportation-data-capture/">90%</a> by converting photos of the forms into text, which can then be quickly and easily uploaded to data management systems. Better yet, the automated approach is virtually error-free, leading to much more consistent results and much happier customers.</p>
+
+<h3 id="use-case-28-identifying-potholes">Use Case #28: Identifying potholes</h3>
+
+<p>Did you know that potholes cost US drivers about $3 trillion per year? (You can even look up the states with the worst potholes <a href="https://quotewizard.com/news/pothole-damage-costs-us-drivers-3-billion-dollars-per-year#:~:text=According%20to%20AAA%2C%20U.S.%20drivers,fixing%20damage%20caused%20by%20potholes.">here</a>).</p>
+
+<p>Not only is it inconvenient to drive around potholes, but it’s also inconvenient to report them. Luckily, computer vision is capable of taking care of that second task – as well as identifying how extensive and dangerous the pothole is. This allows government agencies to more quickly and accurately identify which roads are most in need of repair, and allocate resources accordingly so that we can all get to our destinations just a little more safely.</p>
+
+<h2 id="and-thats-just-the-tip-of-the-iceberg-for-computer-vision-use-cases">And that’s just the tip of the iceberg for computer vision use cases</h2>
+
+<p>Our goal here (which we hoped we succeeded in doing) was to give you a clearer idea of just how far-ranging the use cases for computer vision are and how many industries can harness the power of machine learning.</p>
+
+<p>Here at Nyckel, we offer several types of computer vision including <a href="https://www.nyckel.com/docs/image-classification-quickstart">image classification</a>, <a href="https://www.nyckel.com/docs/detection-quickstart">object detection</a>, <a href="https://www.nyckel.com/docs/image-search-quickstart">image search</a>, and <a href="https://www.nyckel.com/docs/ocr-quickstart">optical character recognition</a> (OCR). Our <a href="https://www.nyckel.com/customers">use cases</a> span across different fields including content moderation, agriculture, online communities and more. Chances are, one of our quickstarts will help you get started in the right direction.</p>
+
+
+  </div>
+
+</article></div></div></div>
+</div>
+
+<!--likely needed for hero banner loads -->
+  <script defer src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/popper.min.js"></script>
+  <script defer src="/assets/js/bootstrap.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!--likely not needed for hero banner loads -->
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script defer src="/assets/js/plugins.js"></script>
+ <script defer src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script defer src="/assets/js/scripts.js"></script>
+  <footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+
+ 
+
+  <div class="space50"></div>
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+
+
+<div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Learn More</div>
+          
+          <ul class="list-unstyled mb-0">
+            <li><a href="/contact/">Contact</a></li>
+             <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+
+
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <div class="h3 widget-title" style="color: white;">Follow Us</div>
+              <ul class="social social-mute social-s">
+                
+               <li><a href="https://twitter.com/discoverableB2B" title="Discoverable Marketing on Twitter"><i class="jam jam-twitter"></i></a></li>
+                
+               <li><a href="https://www.facebook.com/discoverablemarketing" title="Discoverable Marketing on Facebook"><i class="jam jam-facebook"></i></a></li>
+                
+               <li><a href="https://www.youtube.com/@discoverablemarketing" title="Discoverable Marketing on YouTube"><i class="jam jam-youtube"></i></a></li>
+                
+               <li><a href="https://www.linkedin.com/company/discoverable-marketing/" title="Discoverable Marketing on LinkedIn"><i class="jam jam-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            
+        <div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Company</div>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/blog/">Blog</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">© 2023 Nyckel | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">T&Cs</a></p>
+  </div>
+</footer>
+  
+</body>
+</html>

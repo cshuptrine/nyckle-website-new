@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Meta Tags & Codes -->
+<!--- General Meta -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- For Modern Browsers -->
+<link rel="icon" href="https://www.discoverablemarketing.com/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="https://www.discoverablemarketing.com/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.discoverablemarketing.com/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://www.discoverablemarketing.com/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="https://www.discoverablemarketing.com//mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">
+
+
+<title>Content Moderation using SurgeAI's Toxicity Dataset</title>
+
+
+<link rel="canonical" href="https://www.discoverablemarketing.com/blog/content-moderation-using-surgehq-toxicity-dataset/"/>
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog/content-moderation-using-surgehq-toxicity-dataset/" hreflang="x-default" />
+<meta property="og:url" content="https://www.discoverablemarketing.com/blog/content-moderation-using-surgehq-toxicity-dataset/"/>
+
+
+<meta name="description" content=" Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable."/>
+<meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
+
+<!--- OpenGraph -->
+<meta property="og:title" content="Content Moderation using SurgeAI's Toxicity Dataset"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<meta property="og:site_name" content="Discoverable Marketing"/>
+
+<meta property="og:type" content="website"/> 
+
+
+<!--- Robots -->
+<meta name="robots" content="max-image-preview:large"/>
+
+
+<!--- Schemas -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Discoverable Marketing","legalName":"Discoverable Marketing","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","logo":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","foundingDate":"2022","founders":[{"@type":"Person","name":"Chris Shuptrine"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"chris@discoverablemarketing.com","url":"https://www.discoverablemarketing.com/contact/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Discoverable Marketing","image":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","telephone":"910-516-8273","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
+
+  
+
+  
+
+  
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function loadGTM() {
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-587TTM6');
+  }
+
+  function lazyLoadGTM() {
+    window.removeEventListener('scroll', lazyLoadGTM);
+    loadGTM();
+  }
+
+  window.addEventListener('scroll', lazyLoadGTM);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader">
+    // Function to load the script
+    function loadHubSpotScript() {
+        var script = document.createElement('script');
+        script.src = "//js.hs-scripts.com/24298198.js";
+        document.body.appendChild(script);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        var loadPosition = 500; // Change this value based on when you want to load the script
+        if (window.scrollY > loadPosition) {
+            loadHubSpotScript();
+            // Remove the event listener after the script is loaded
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.querySelector('.hero-image');
+
+        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
+        var mobileBreakpoint = 768;
+
+        // Check if the screen width is less than or equal to the breakpoint
+        if (window.innerWidth <= mobileBreakpoint) {
+            // It's a mobile device, so add the lazy loading attribute
+            image.setAttribute('loading', 'lazy');
+        }
+    });
+</script>
+
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--Toggled -->
+
+  
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+
+</head>
+
+<body >
+    
+<nav
+  class="navbar  absolute nav-uppercase  navbar-hover-opacity navbar-expand-lg">
+  <div
+    class=" container  flex-row justify-content-center">
+    <div class="navbar-brand">
+      <a href="/">
+
+        
+        <img src="/assets/images/important/nyckel-color.png"
+         class=" logo-dark  "
+          alt="Discoverable logo" width="320" height="77"/>
+
+        <!--
+        
+        <img src="/assets/images/important/nyckel-black-small.png"
+          srcset="/assets/images/important/nyckel-black-small.png 1x, /assets/images/important/nyckel-black.png 2x"
+          class=" logo-dark  "
+          alt="Nyckel" width="180" height="27"/> -->
+
+      </a>
+    </div>
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+        </li>
+        <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%"><a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Contact</a></li>
+       <li class="nav-item d-none d-lg-block pl-0"><a href="/contact-report/" class="btn m-0" style="background-color:#E96A57">Free Sign-Up</a></li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/">
+          <img src="/assets/images/important/DiscoverableLogo_White_320.webp" class="logo-light" alt="Discoverable logo" width="180" height="27" loading="lazy"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/">Pricing</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/contact/">Customers</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/about/">About</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Blog</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Developers</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<div class="content-wrapper">
+<div class="wrapper white-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+<article class="post">
+  <div class="hero">
+    <div class="back-link-container contain-1200 p-mobile-1350">
+      <a class="back-link" href="/blog/">← All posts</a>
+    </div>
+    <div class="hero-contents contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1>Content Moderation using SurgeAI's Toxicity Dataset</h1>
+          <div class="summary">Train a text classification model for content moderation using SurgeAI's toxicity dataset.</div>
+        </div>
+
+        
+        
+        <div class="author">
+          <div class="author-area">
+            
+            <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot" class="author-icon" />
+            
+            <span class="author-name">George Mathew</span>
+            
+            <a href="https://github.com/saintarian" target="_blank">
+              <i class="fa fa-github fa-lg social-icon"></i>
+            </a>
+            
+            
+            <a href="https://twitter.com/georgemkan" target="_blank">
+              <i class="fa fa-twitter fa-lg social-icon"></i>
+            </a>
+            
+            
+            
+            <a href="https://linkedin.com/in/georgemathew" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            
+            
+          </div>
+          <span class="date">
+            Posted Sep 2022
+          </span>
+        </div>
+        
+      </div>
+      
+      <div class="image-area">
+        <img class="safari_only_unset_height" src="/blog/images/2022/toxicity-moderation.jpg" alt="Automated content moderation" />
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="entry">
+    <h2 id="what-can-you-do-when-your-online-community-outgrows-your-content-moderation-capacity">What can you do when your online community outgrows your content moderation capacity?</h2>
+
+<p>If you’re like most community managers the first time they’re confronted by spam, scams and hate speech in their user-generated content (UGC), you write a comprehensive list of naughty words and then use the list to automatically snag potentially harmful content in real time. This is much more efficient than tasking human moderators with trawling through every comment manually in order to moderate content, but, unlike human review, it’s a blunt instrument. It produces false positives by flagging innocent content that uses one of your banned words in a benign way that you didn’t anticipate. And it produces false negatives by letting through variant spellings of abusive terms, as well as all the latest vernacular innovations that are so numerous and diverse that it would be a full-time job just to keep up with them.</p>
+
+<h2 id="can-automation-provide-a-more-efficient-way-to-do-content-moderation">Can automation provide a more efficient way to do content moderation?</h2>
+
+<p>Yes! You can use machine learning (ML) / artificial intelligence (AI) to largely automate your content moderation process. This is one of the most popular use cases of AI technology. If you have a ML team, you can build your own algorithm based on example cases of appropriate and inappropriate content from your UGC. Then, the AI will classify a new set of previously unseen cases based on the examples that it trained on. Next, you inspect the model’s output and correct the cases that it got wrong. These moderation decisions serve to optimize the model’s fit to your data, making it progressively better at classifying new cases by itself. By using AI moderation as a first step, you will substantially reduce the amount of content that requires human review, shifting most of the decision-making burden from your human moderators to your algorithm, lightening workflows, and reducing exposure to inappropriate or disturbing content.</p>
+
+<h2 id="great-but-i-dont-have-a-machine-learning-team">Great! But I don’t have a machine learning team…</h2>
+
+<p>No problem. You can use a ML platform like Nyckel, whose user-friendly API makes AI moderation accessible to non-experts, allowing you to train an algorithm on your own dataset in a matter of minutes. You just need to scrape some examples taken from different types of content generated by your online community, import them into Nyckel’s API, and then sort the examples into toxic and non-toxic.</p>
+
+<h2 id="surgeais-toxicity-dataset">SurgeAI’s Toxicity Dataset</h2>
+<p>SurgeAI publishes a <a href="https://www.surgehq.ai/datasets/toxicity-dataset">toxicity dataset</a> gathered from thousands of online social media comments. The dataset contains 500 examples of toxic comments and 500 examples of non-toxic ones. Let’s look at how you can train a Nyckel <a href="https://www.nyckel.com/text-classification-api">text classification</a> function using this data. Play with the clickable demo below:</p>
+
+<figure class="figure" style="width: 100%">
+    <div style="position: relative; padding-bottom: calc(67.56756756756756% + 41px); height: 0;">
+        <iframe src="https://demo.arcade.software/aNvk8z06L7RDMPY0DCwp?embed" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px;"></iframe>
+    </div>
+    
+    <figcaption>Create a Content Moderation Function</figcaption>
+    
+</figure>
+
+<h2 id="a-word-of-caution">A Word of Caution</h2>
+<p>All datasets encode the subjectivity of the humans that created them and this is especially true for content moderation. The demo above shows you how to train a function using SurgeAI’s dataset, and using this dataset is a quick way to get started with content moderation. However, before you automate your content moderation, you might want to think quite carefully about the values that matter to your community and what it would consider toxic. The best dataset to use to train a content moderation model is one that’s generated by your own community and is specific to its values.</p>
+
+<h2 id="some-examples-from-the-dataset">Some Examples from the Dataset</h2>
+<p>Here are a few cases of political UGC taken from social media platforms that illustrate the subjective nature of content moderation.</p>
+
+<div class="table-wrapper" markdown="block"><table>
+  <tbody>
+    <tr>
+      <td>Right. All of them did the same thing but a Thousand times worse than any conservatives have done. I mean the democrat party act just like a bunch of thugs that are really 🤡.</td>
+      <td>Toxic</td>
+    </tr>
+    <tr>
+      <td>Democrats are terrorists</td>
+      <td>Toxic</td>
+    </tr>
+    <tr>
+      <td>Toxicity goes every way in politics. When I supported yang, this sub gave me crap. When I switched back to bernie, yang gang people gave me crap. Centrists have always given me crap. Toxicity exists in every group. It’s only emphasized when bernie people do it in order to push a certain victim narrative.</td>
+      <td>Not Toxic</td>
+    </tr>
+    <tr>
+      <td>You guys think you got it bad? I voted for Trump 😂 I’ll prolly get downvoted right here and now just for saying it again lol, shit I say something positive about Trump and I’ll have dudes commenting on my posts talking shit like 5 days after lmao</td>
+      <td>Not Toxic</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Do you agree with these decisions? Do you think your online community would agree? What values have human moderators encoded in their assessments of the social media dataset?
+Is a binary classification sufficiently granular to classify potentially harmful content using machine learning? Or do you need a multidimensional machine learning model to capture nuances that your community regards as important for content moderation?</p>
+
+<p>Whatever training data you use, it will be created by human beings. And we know what they’re like. They make mistakes. They believe weird things. They have biases and prejudices. This means that if we want to use AI systems to build in more automation to our UGC content moderation, our human moderators need to remain close to the real-world values they want to see in their online communities. In other words, to fully leverage artificial intelligence in our user-generated content moderation tools, we need to optimize our algorithms via mindful human moderation.</p>
+
+
+
+  </div>
+
+</article></div></div></div>
+</div>
+
+<!--likely needed for hero banner loads -->
+  <script defer src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/popper.min.js"></script>
+  <script defer src="/assets/js/bootstrap.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!--likely not needed for hero banner loads -->
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script defer src="/assets/js/plugins.js"></script>
+ <script defer src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script defer src="/assets/js/scripts.js"></script>
+  <footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+
+ 
+
+  <div class="space50"></div>
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+
+
+<div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Learn More</div>
+          
+          <ul class="list-unstyled mb-0">
+            <li><a href="/contact/">Contact</a></li>
+             <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+
+
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <div class="h3 widget-title" style="color: white;">Follow Us</div>
+              <ul class="social social-mute social-s">
+                
+               <li><a href="https://twitter.com/discoverableB2B" title="Discoverable Marketing on Twitter"><i class="jam jam-twitter"></i></a></li>
+                
+               <li><a href="https://www.facebook.com/discoverablemarketing" title="Discoverable Marketing on Facebook"><i class="jam jam-facebook"></i></a></li>
+                
+               <li><a href="https://www.youtube.com/@discoverablemarketing" title="Discoverable Marketing on YouTube"><i class="jam jam-youtube"></i></a></li>
+                
+               <li><a href="https://www.linkedin.com/company/discoverable-marketing/" title="Discoverable Marketing on LinkedIn"><i class="jam jam-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            
+        <div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Company</div>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/blog/">Blog</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">© 2023 Nyckel | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">T&Cs</a></p>
+  </div>
+</footer>
+  
+</body>
+</html>

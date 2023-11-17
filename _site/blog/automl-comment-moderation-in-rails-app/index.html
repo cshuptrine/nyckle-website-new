@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Meta Tags & Codes -->
+<!--- General Meta -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- For Modern Browsers -->
+<link rel="icon" href="https://www.discoverablemarketing.com/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="https://www.discoverablemarketing.com/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.discoverablemarketing.com/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://www.discoverablemarketing.com/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="https://www.discoverablemarketing.com//mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">
+
+
+<title>AutoML Comment Moderation in a Rails App</title>
+
+
+<link rel="canonical" href="https://www.discoverablemarketing.com/blog/automl-comment-moderation-in-rails-app/"/>
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog/automl-comment-moderation-in-rails-app/" hreflang="x-default" />
+<meta property="og:url" content="https://www.discoverablemarketing.com/blog/automl-comment-moderation-in-rails-app/"/>
+
+
+<meta name="description" content=" Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable."/>
+<meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
+
+<!--- OpenGraph -->
+<meta property="og:title" content="AutoML Comment Moderation in a Rails App"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<meta property="og:site_name" content="Discoverable Marketing"/>
+
+<meta property="og:type" content="website"/> 
+
+
+<!--- Robots -->
+<meta name="robots" content="max-image-preview:large"/>
+
+
+<!--- Schemas -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Discoverable Marketing","legalName":"Discoverable Marketing","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","logo":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","foundingDate":"2022","founders":[{"@type":"Person","name":"Chris Shuptrine"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"chris@discoverablemarketing.com","url":"https://www.discoverablemarketing.com/contact/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Discoverable Marketing","image":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","telephone":"910-516-8273","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
+
+  
+
+  
+
+  
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function loadGTM() {
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-587TTM6');
+  }
+
+  function lazyLoadGTM() {
+    window.removeEventListener('scroll', lazyLoadGTM);
+    loadGTM();
+  }
+
+  window.addEventListener('scroll', lazyLoadGTM);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader">
+    // Function to load the script
+    function loadHubSpotScript() {
+        var script = document.createElement('script');
+        script.src = "//js.hs-scripts.com/24298198.js";
+        document.body.appendChild(script);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        var loadPosition = 500; // Change this value based on when you want to load the script
+        if (window.scrollY > loadPosition) {
+            loadHubSpotScript();
+            // Remove the event listener after the script is loaded
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.querySelector('.hero-image');
+
+        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
+        var mobileBreakpoint = 768;
+
+        // Check if the screen width is less than or equal to the breakpoint
+        if (window.innerWidth <= mobileBreakpoint) {
+            // It's a mobile device, so add the lazy loading attribute
+            image.setAttribute('loading', 'lazy');
+        }
+    });
+</script>
+
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--Toggled -->
+
+  
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+
+</head>
+
+<body >
+    
+<nav
+  class="navbar  absolute nav-uppercase  navbar-hover-opacity navbar-expand-lg">
+  <div
+    class=" container  flex-row justify-content-center">
+    <div class="navbar-brand">
+      <a href="/">
+
+        
+        <img src="/assets/images/important/nyckel-color.png"
+         class=" logo-dark  "
+          alt="Discoverable logo" width="320" height="77"/>
+
+        <!--
+        
+        <img src="/assets/images/important/nyckel-black-small.png"
+          srcset="/assets/images/important/nyckel-black-small.png 1x, /assets/images/important/nyckel-black.png 2x"
+          class=" logo-dark  "
+          alt="Nyckel" width="180" height="27"/> -->
+
+      </a>
+    </div>
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+        </li>
+        <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%"><a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Contact</a></li>
+       <li class="nav-item d-none d-lg-block pl-0"><a href="/contact-report/" class="btn m-0" style="background-color:#E96A57">Free Sign-Up</a></li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/">
+          <img src="/assets/images/important/DiscoverableLogo_White_320.webp" class="logo-light" alt="Discoverable logo" width="180" height="27" loading="lazy"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/">Pricing</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/contact/">Customers</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/about/">About</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Blog</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Developers</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<div class="content-wrapper">
+<div class="wrapper white-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+<article class="post">
+  <div class="hero">
+    <div class="back-link-container contain-1200 p-mobile-1350">
+      <a class="back-link" href="/blog/">← All posts</a>
+    </div>
+    <div class="hero-contents contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1>AutoML Comment Moderation in a Rails App</h1>
+          <div class="summary">Using machine learning to help curate user content</div>
+        </div>
+
+        
+        
+        <div class="author">
+          <div class="author-area">
+            
+            <img src="https://avatars.githubusercontent.com/danielott" alt="mugshot" class="author-icon" />
+            
+            <span class="author-name">Dan Ott</span>
+            
+            <a href="https://github.com/danielott" target="_blank">
+              <i class="fa fa-github fa-lg social-icon"></i>
+            </a>
+            
+            
+            
+            
+            <a href="https://linkedin.com/in/danott" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            
+            
+          </div>
+          <span class="date">
+            Posted May 2021
+          </span>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="entry">
+    <h2 id="the-problem">The Problem</h2>
+
+<p>Many years ago a friend and I built whatsthatcharge.com, a site to help people identify mysterious charges on their credit card statement. Visitors could post the text of the charge, and others could weigh in on what it was. In the early years it seemed to be working well; people were helping each other solve those mysteries. But, as time went on we started to see inappropriate content on the site: some comments used strong language, some didn’t understand the purpose of the site, and spamming and scamming started to appear as well.</p>
+
+<p>We wrote some automatic rules to block profanity or specific spammy links, which helped some. We also added an admin UI for us to manually flag a comment as inappropriate. But as the traffic grew it became untenable to hand-review everything, and our rules either didn’t catch enough spam or excluded too many valid comments.</p>
+
+<p>We had a vague sense that Machine Learning (ML) could help us with this problem, but it felt like a big lift to invest in the ML knowledge and infra we’d need to build it all out. Most of the software-as-a-service offerings in the ML space were surprisingly difficult to use for what seemed like a relatively simple use case.</p>
+
+<h2 id="the-solution">The Solution</h2>
+
+<p><a href="https://www.nyckel.com">Nyckel</a> abstracts away most of the heavy lifting to make it easy for developers to build ML into their applications. You’re basically creating a cloud-hosted function, but instead of writing code to compute the output based on an input, you’re training the function with example data.</p>
+
+<p>Below are the steps we took to train a content moderation function for whatsthatcharge.</p>
+
+<h2 id="step-1-create-a-function-via-ui">Step 1: Create a Function (via UI)</h2>
+
+<p>After signing in, we created a new Nyckel function that takes text (the comment) as input, and outputs “Not appropriate” or “Appropriate”</p>
+
+<h2 id="step-2-import-our-data-via-api">Step 2: Import our Data (via API)</h2>
+
+<p>Although Nyckel has a UI to allow you to upload data, in our case we wanted to submit the data via API so that we can eventually automate the process. In the Nyckel UI there’s an “API” tab with code snippets we’ll use to upload samples (our comments) and annotations (whether they’re appropriate):</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># POST a sample</span>
+<span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://www.nyckel.com/v0.9/functions/dct6kijvs35x9s08/samples"</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Post</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="s1">'Content-Type'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span><span class="p">,</span> <span class="s1">'Authorization'</span> <span class="o">=&gt;</span> <span class="s2">"Bearer </span><span class="si">#{</span><span class="n">access_token</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">request</span><span class="p">.</span><span class="nf">body</span> <span class="o">=</span> <span class="p">{</span><span class="ss">input: </span><span class="p">{</span><span class="ss">inlineData: </span><span class="n">sample_data</span><span class="p">}}.</span><span class="nf">to_json</span>
+<span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">start</span><span class="p">(</span><span class="n">uri</span><span class="p">.</span><span class="nf">hostname</span><span class="p">,</span> <span class="n">uri</span><span class="p">.</span><span class="nf">port</span><span class="p">,</span> <span class="ss">use_ssl: </span><span class="kp">true</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
+  <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">body</span><span class="p">)</span>
+ 
+<span class="c1"># POST an Annotation</span>
+<span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://www.nyckel.com/v0.9/functions/dct6kijvs35x9s08/annotations"</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Post</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="s1">'Content-Type'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span><span class="p">,</span> <span class="s1">'Authorization'</span> <span class="o">=&gt;</span> <span class="s2">"Bearer </span><span class="si">#{</span><span class="n">access_token</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">request</span><span class="p">.</span><span class="nf">body</span> <span class="o">=</span> <span class="p">{</span><span class="ss">sampleId: </span><span class="n">sample_id</span><span class="p">,</span> <span class="ss">labelIndex: </span><span class="n">label_index</span><span class="p">}.</span><span class="nf">to_json</span>
+<span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">start</span><span class="p">(</span><span class="n">uri</span><span class="p">.</span><span class="nf">hostname</span><span class="p">,</span> <span class="n">uri</span><span class="p">.</span><span class="nf">port</span><span class="p">,</span> <span class="ss">use_ssl: </span><span class="kp">true</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
+  <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">body</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Note in addition to needing to supply sample_data (the comment text) and label_index (0 for inappropriate, 1 for appropriate), we also need to provide an access_token. For that, we need a third snippet from the docs:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># POST to get an access token</span>
+<span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://www.nyckel.com/connect/token"</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Post</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+<span class="n">request</span><span class="p">.</span><span class="nf">set_form_data</span><span class="p">({</span><span class="s1">'client_id'</span> <span class="o">=&gt;</span> <span class="n">client_id</span><span class="p">,</span> <span class="s1">'client_secret'</span> <span class="o">=&gt;</span> <span class="n">client_secret</span><span class="p">,</span> <span class="s1">'grant_type'</span> <span class="o">=&gt;</span> <span class="s1">'client_credentials'</span><span class="p">})</span>
+<span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">start</span><span class="p">(</span><span class="n">uri</span><span class="p">.</span><span class="nf">hostname</span><span class="p">,</span> <span class="n">uri</span><span class="p">.</span><span class="nf">port</span><span class="p">,</span> <span class="ss">use_ssl: </span><span class="kp">true</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
+  <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="k">end</span>
+<span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">body</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Taking these snippets, we created a NyckelClient class:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'net/http'</span>
+<span class="nb">require</span> <span class="s1">'date'</span>
+<span class="nb">require</span> <span class="s1">'json'</span>
+ 
+<span class="k">class</span> <span class="nc">NyckelClient</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">()</span>
+    <span class="vi">@client_id</span> <span class="o">||=</span> <span class="no">ENV</span><span class="p">[</span><span class="s1">'NYCKEL_CLIENT_ID'</span><span class="p">]</span>
+    <span class="vi">@client_secret</span> <span class="o">||=</span> <span class="no">ENV</span><span class="p">[</span><span class="s1">'NYCKEL_CLIENT_SECRET'</span><span class="p">]</span>
+  <span class="k">end</span>
+ 
+  <span class="k">def</span> <span class="nf">create_token</span><span class="p">()</span>
+    <span class="c1"># POST to get an access token</span>
+    <span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://www.nyckel.com/connect/token"</span><span class="p">)</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Post</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+    <span class="n">request</span><span class="p">.</span><span class="nf">set_form_data</span><span class="p">({</span><span class="s1">'client_id'</span> <span class="o">=&gt;</span> <span class="n">client_id</span><span class="p">,</span> <span class="s1">'client_secret'</span> <span class="o">=&gt;</span> <span class="n">client_secret</span><span class="p">,</span> <span class="s1">'grant_type'</span> <span class="o">=&gt;</span> <span class="s1">'client_credentials'</span><span class="p">})</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">start</span><span class="p">(</span><span class="n">uri</span><span class="p">.</span><span class="nf">hostname</span><span class="p">,</span> <span class="n">uri</span><span class="p">.</span><span class="nf">port</span><span class="p">,</span> <span class="ss">use_ssl: </span><span class="kp">true</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
+      <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">body</span><span class="p">)</span>
+  <span class="k">end</span>
+ 
+  <span class="k">def</span> <span class="nf">get_token</span><span class="p">()</span>
+    <span class="k">unless</span> <span class="k">defined?</span><span class="p">(</span><span class="vi">@token_expires_at</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="vi">@token_expires_at</span> <span class="o">&gt;</span> <span class="p">(</span><span class="no">DateTime</span><span class="p">.</span><span class="nf">now</span> <span class="o">+</span> <span class="mi">60</span><span class="p">.</span><span class="nf">seconds</span><span class="p">)</span>
+      <span class="n">token_response</span> <span class="o">=</span> <span class="n">create_token</span><span class="p">()</span>
+      <span class="vi">@access_token</span> <span class="o">=</span> <span class="n">token_response</span><span class="p">[</span><span class="s1">'access_token'</span><span class="p">]</span>
+      <span class="vi">@token_expires_at</span> <span class="o">=</span> <span class="no">DateTime</span><span class="p">.</span><span class="nf">now</span> <span class="o">+</span> <span class="n">token_response</span><span class="p">[</span><span class="s1">'expires_in'</span><span class="p">].</span><span class="nf">seconds</span>
+    <span class="k">end</span>
+    <span class="vi">@access_token</span>
+  <span class="k">end</span>
+ 
+  <span class="k">def</span> <span class="nf">create_sample</span><span class="p">(</span><span class="n">sample_data</span><span class="p">)</span>
+    <span class="c1"># POST a Sample</span>
+    <span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://www.nyckel.com/v0.9/functions/dct6kijvs35x9s08/samples"</span><span class="p">)</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Post</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="s1">'Content-Type'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span><span class="p">,</span> <span class="s1">'Authorization'</span> <span class="o">=&gt;</span> <span class="s2">"Bearer </span><span class="si">#{</span><span class="n">get_token</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">request</span><span class="p">.</span><span class="nf">body</span> <span class="o">=</span> <span class="p">{</span><span class="ss">input: </span><span class="p">{</span><span class="ss">inlineData: </span><span class="n">sample_data</span><span class="p">}}.</span><span class="nf">to_json</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">start</span><span class="p">(</span><span class="n">uri</span><span class="p">.</span><span class="nf">hostname</span><span class="p">,</span> <span class="n">uri</span><span class="p">.</span><span class="nf">port</span><span class="p">,</span> <span class="ss">use_ssl: </span><span class="kp">true</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
+      <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">body</span><span class="p">)</span>
+  <span class="k">end</span>
+ 
+  <span class="k">def</span> <span class="nf">create_annotation</span><span class="p">(</span><span class="n">sample_id</span><span class="p">,</span> <span class="n">label_index</span><span class="p">)</span>
+    <span class="c1"># POST an Annotation</span>
+    <span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://www.nyckel.com/v0.9/functions/dct6kijvs35x9s08/annotations"</span><span class="p">)</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Post</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="s1">'Content-Type'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span><span class="p">,</span> <span class="s1">'Authorization'</span> <span class="o">=&gt;</span> <span class="s2">"Bearer </span><span class="si">#{</span><span class="n">get_token</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">request</span><span class="p">.</span><span class="nf">body</span> <span class="o">=</span> <span class="p">{</span><span class="ss">sampleId: </span><span class="n">sample_id</span><span class="p">,</span> <span class="ss">labelIndex: </span><span class="n">label_index</span><span class="p">}.</span><span class="nf">to_json</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">start</span><span class="p">(</span><span class="n">uri</span><span class="p">.</span><span class="nf">hostname</span><span class="p">,</span> <span class="n">uri</span><span class="p">.</span><span class="nf">port</span><span class="p">,</span> <span class="ss">use_ssl: </span><span class="kp">true</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
+      <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">body</span><span class="p">)</span>
+  <span class="k">end</span>
+ 
+  <span class="k">def</span> <span class="nf">invoke</span><span class="p">(</span><span class="n">sample_data</span><span class="p">)</span>
+    <span class="c1"># POST to get a prediction</span>
+    <span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://www.nyckel.com/v0.9/functions/dct6kijvs35x9s08/invoke"</span><span class="p">)</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Post</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="s1">'Content-Type'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span><span class="p">,</span> <span class="s1">'Authorization'</span> <span class="o">=&gt;</span> <span class="s2">"Bearer </span><span class="si">#{</span><span class="n">get_token</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">request</span><span class="p">.</span><span class="nf">body</span> <span class="o">=</span> <span class="p">{</span><span class="ss">data: </span><span class="n">sample_data</span><span class="p">}.</span><span class="nf">to_json</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">start</span><span class="p">(</span><span class="n">uri</span><span class="p">.</span><span class="nf">hostname</span><span class="p">,</span> <span class="n">uri</span><span class="p">.</span><span class="nf">port</span><span class="p">,</span> <span class="ss">use_ssl: </span><span class="kp">true</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
+      <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">body</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Note that we’re storing the client_id and client_secret in environment variables as suggested by our hosting provider Heroku. Also note the get_token function which ensures that we create a new token any time the existing one gets close to expiring.
+Now, using the NyckelClient, we can create a rake task to send our samples and annotations to Nyckel:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">namespace</span> <span class="ss">:ml</span> <span class="k">do</span>
+  <span class="n">desc</span> <span class="s1">'Submit the annotated comments'</span>
+  <span class="n">task</span> <span class="ss">submit_annotated: :environment</span> <span class="k">do</span> <span class="o">|</span><span class="n">task</span><span class="p">,</span> <span class="n">args</span><span class="o">|</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="no">NyckelClient</span><span class="p">.</span><span class="nf">new</span>
+ 
+    <span class="n">annotated_comments</span> <span class="o">=</span> <span class="no">Comment</span><span class="p">.</span><span class="nf">where</span><span class="p">.</span><span class="nf">not</span><span class="p">(</span><span class="ss">appropriate: </span><span class="kp">nil</span><span class="p">)</span>
+    <span class="n">progressbar</span> <span class="o">=</span> <span class="no">ProgressBar</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">title: </span><span class="s1">'Comments'</span><span class="p">,</span> <span class="ss">total: </span><span class="n">annotated_comments</span><span class="p">.</span><span class="nf">count</span><span class="p">)</span>
+ 
+    <span class="n">annotated_comments</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">comment</span><span class="o">|</span>
+      <span class="n">sample</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">create_sample</span><span class="p">(</span><span class="n">comment</span><span class="p">.</span><span class="nf">text</span><span class="p">)</span>
+      <span class="n">annotation</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">create_annotation</span><span class="p">(</span><span class="n">sample</span><span class="p">[</span><span class="s1">'id'</span><span class="p">],</span> <span class="n">comment</span><span class="p">.</span><span class="nf">appropriate</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+ 
+      <span class="n">progressbar</span><span class="p">.</span><span class="nf">increment</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>We’re using the ruby-progressbar gem so we can watch it churn through the comments.</p>
+
+<p>Running the rake task on the command line:</p>
+
+<pre><code class="language-rake">rake ml:submit_annotated
+</code></pre>
+
+<p>As the data is being submitted, you can go back to the UI and watch as the data is imported, and every so often Nyckel trains a model that reflects the data submitted so far.</p>
+
+<h2 id="step-3-predict-all-comments">Step 3: Predict All Comments</h2>
+
+<p>Now that we have a model, it’s time to get Nyckel’s opinion on which comments are appropriate and which are not. For that we need to add an invoke() method to our NyckelClient class:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">NyckelClient</span>
+  <span class="o">...</span>
+ 
+  <span class="k">def</span> <span class="nf">invoke</span><span class="p">(</span><span class="n">sample_data</span><span class="p">)</span>
+    <span class="c1"># POST to get a prediction</span>
+    <span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://www.nyckel.com/v0.9/functions/dct6kijvs35x9s08/invoke"</span><span class="p">)</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Post</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="s1">'Content-Type'</span> <span class="o">=&gt;</span> <span class="s1">'application/json'</span><span class="p">,</span> <span class="s1">'Authorization'</span> <span class="o">=&gt;</span> <span class="s2">"Bearer </span><span class="si">#{</span><span class="n">get_token</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">request</span><span class="p">.</span><span class="nf">body</span> <span class="o">=</span> <span class="p">{</span><span class="ss">data: </span><span class="n">sample_data</span><span class="p">}.</span><span class="nf">to_json</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">start</span><span class="p">(</span><span class="n">uri</span><span class="p">.</span><span class="nf">hostname</span><span class="p">,</span> <span class="n">uri</span><span class="p">.</span><span class="nf">port</span><span class="p">,</span> <span class="ss">use_ssl: </span><span class="kp">true</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">http</span><span class="o">|</span>
+      <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="k">end</span>
+    <span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">body</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>and another rake task:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">namespace</span> <span class="ss">:ml</span> <span class="k">do</span>
+  <span class="o">...</span>
+ 
+  <span class="n">desc</span> <span class="s1">'Gets predictions for all comments'</span>
+  <span class="n">task</span> <span class="ss">predict_comments: :environment</span> <span class="k">do</span> <span class="o">|</span><span class="n">task</span><span class="p">,</span> <span class="n">args</span><span class="o">|</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="no">NyckelClient</span><span class="p">.</span><span class="nf">new</span>
+ 
+    <span class="n">comments</span> <span class="o">=</span> <span class="no">Post</span><span class="p">.</span><span class="nf">where</span><span class="p">(</span><span class="s1">'predicted_appropriate is null'</span><span class="p">)</span>
+    <span class="n">comments_count</span> <span class="o">=</span> <span class="n">comments</span><span class="p">.</span><span class="nf">count</span><span class="p">()</span>
+    <span class="nb">puts</span> <span class="s2">"Predicting </span><span class="si">#{</span><span class="n">comments_count</span><span class="si">}</span><span class="s2"> comments"</span>
+ 
+    <span class="n">progressbar</span> <span class="o">=</span> <span class="no">ProgressBar</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="ss">title: </span><span class="s1">'Comments'</span><span class="p">,</span> <span class="ss">total: </span><span class="n">comments_count</span><span class="p">)</span>
+    <span class="n">comments</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">comment</span><span class="o">|</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">invoke</span><span class="p">(</span><span class="n">comment</span><span class="p">.</span><span class="nf">body</span><span class="p">)</span>
+ 
+      <span class="n">comment</span><span class="p">.</span><span class="nf">predicted_appropriate</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s1">'index'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
+      <span class="n">comment</span><span class="p">.</span><span class="nf">predicted_appropriate_confidence</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s1">'confidence'</span><span class="p">]</span>
+      <span class="n">comment</span><span class="p">.</span><span class="nf">predicted_appropriate_updated_at</span> <span class="o">=</span> <span class="no">DateTime</span><span class="p">.</span><span class="nf">now</span><span class="p">()</span>
+      <span class="n">comment</span><span class="p">.</span><span class="nf">save!</span>
+ 
+      <span class="n">progressbar</span><span class="p">.</span><span class="nf">increment</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Running the command:</p>
+
+<pre><code class="language-rake">rake ml:predict_comments
+</code></pre>
+
+<p>Once that completes all of the comments have a prediction for whether that comment is appropriate or not, along with a confidence level provided by the model.</p>
+
+<h2 id="step-4-filter-the-comments">Step 4: Filter the Comments</h2>
+
+<p>After recording all the predicted values and their confidences, all that’s left is to filter out comments that were either manually marked as inappropriate, or were marked as inappropriate with high confidence by Nyckel.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+
+<p>So now the model has looked over all of the comments already in the database, but everything we’ve done so far has required running rake commands on the command line. New comments coming in won’t automatically be predicted. And, if we hand-annotate additional comments in our admin UI, they won’t automatically be sent to Nyckel to be incorporated into the model.</p>
+
+<p>Ideally, when a new comment comes in or a new hand-annotation is made, we’d kick off an async task to call the appropriate Nyckel API. We’ve previously used the DelayedJob gem for this type of thing, and will probably use it again here.</p>
+
+<h2 id="wrap-up">Wrap Up</h2>
+
+<p>It’s a huge piece of mind having a more reasonable process for moderating the comments. And as we upload new comments and annotations to Nyckel the model improves, and so does our ML comment moderation. Browsing through the results it’s pretty remarkable how well it does even with a few hundred annotated comments.</p>
+
+<p>Clearly machine learning is a powerful tool, but it’s a complicated subject area, and one that neither of us were looking to become experts in. For whatsthatcharge.com, Nyckel closed that gap for us and saved some nights and weekends of manual moderation.</p>
+
+
+  </div>
+
+</article></div></div></div>
+</div>
+
+<!--likely needed for hero banner loads -->
+  <script defer src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/popper.min.js"></script>
+  <script defer src="/assets/js/bootstrap.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!--likely not needed for hero banner loads -->
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script defer src="/assets/js/plugins.js"></script>
+ <script defer src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script defer src="/assets/js/scripts.js"></script>
+  <footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+
+ 
+
+  <div class="space50"></div>
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+
+
+<div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Learn More</div>
+          
+          <ul class="list-unstyled mb-0">
+            <li><a href="/contact/">Contact</a></li>
+             <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+
+
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <div class="h3 widget-title" style="color: white;">Follow Us</div>
+              <ul class="social social-mute social-s">
+                
+               <li><a href="https://twitter.com/discoverableB2B" title="Discoverable Marketing on Twitter"><i class="jam jam-twitter"></i></a></li>
+                
+               <li><a href="https://www.facebook.com/discoverablemarketing" title="Discoverable Marketing on Facebook"><i class="jam jam-facebook"></i></a></li>
+                
+               <li><a href="https://www.youtube.com/@discoverablemarketing" title="Discoverable Marketing on YouTube"><i class="jam jam-youtube"></i></a></li>
+                
+               <li><a href="https://www.linkedin.com/company/discoverable-marketing/" title="Discoverable Marketing on LinkedIn"><i class="jam jam-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            
+        <div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Company</div>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/blog/">Blog</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">© 2023 Nyckel | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">T&Cs</a></p>
+  </div>
+</footer>
+  
+</body>
+</html>

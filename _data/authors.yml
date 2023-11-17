@@ -1,0 +1,45 @@
+# Author details
+dan:
+  display_name: Dan Ott
+  github: danielott
+  linkedin: danott
+
+oscar:
+  display_name: Oscar Beijbom
+  github: beijbom
+  linkedin: oscarbeijbom
+  twitter: beijbom
+
+george:
+  display_name: George Mathew
+  github: saintarian
+  twitter: georgemkan
+  linkedin: georgemathew
+
+jeremy:
+  display_name: Jeremy Schneider
+  github: jerschneid
+  linkedin: jerschneid
+  twitter: jerschneid
+
+nyckel:
+  display_name: Nyckel
+  image: https://www.nyckel.com/img/nyckel-icon.png
+  twitter: nyckelai
+  github: nyckelai
+  linkedin: nyckelai
+  is_linkedin_company: true
+
+john:
+  display_name: John Weston
+  image: https://www.nyckel.com/blog/images/John_Weston_headshot.jpg
+  linkedin: john-weston
+
+andrew:
+  display_name: Andrew Tate
+  linkedin: andrew-tate-224b30a7
+  github: ajtatey
+
+becca:
+  display_name: Becca Miller
+  linkedin: becca-miller-96a570b8

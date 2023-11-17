@@ -1,0 +1,238 @@
+---
+layout: default
+permalink: "/about/"
+fill: fill-light-wrapper
+title: About Discoverable Marketing
+cta: none
+nav: dark
+description: About Discoverable Marketing, how the process works, and why the company was founded.
+sub_title: |
+ SaaS marketers who want to help you <br class="d-none d-lg-block" /><span style="color: #8AA9D6;">become a SaaS leader</span>
+header_image: "/assets/images/art/bg31.jpg"
+white_menu:
+
+page_header:
+  enable: true
+  title: "Want your Discoverable Report?"
+  sub_title: We'd love to talk and understand your business, your goals, and whether we're a good fit.
+  button_text: 
+  button_url: "#"
+  background_image: "/assets/images/important/home-bg.jpg"
+
+two_column_one:
+  enable: true
+  title: 
+  name: "Chris Shuptrine"
+  title2: "Founder"
+  image2: "assets/images/important/photo-orange2.webp"
+  image: "/assets/images/important/report_graphics.webp.png"
+  paragraphs:
+    - text: |
+        Discoverable Marketing was founded by Chris Shuptrine, who has spent 15 years  growing and working with early-stage SaaS startups. With this experience he built out the Discoverable inbound marketing report to help startups audit their market presence and find ways to grow. Find him on LinkedIn <a href="https://www.linkedin.com/in/chrisshuptrine/">here</a>.
+
+contact_area:
+  enable: true
+  sub_title: "Stand out. Be discovered. Get your report today."
+  bg_image: "/assets/images/art/map.png"
+  button_text: "Start now"
+  button_url: "/contact/"
+
+quote_area:
+  quote1: "Discoverable's report revealed opportunities we didn't have time to identify ourselves."
+  quote2: "It was the best, most insightful consulting experience I've ever had."
+  image: "assets/images/important/leslie.jpg"
+  name: "Leslie Gibson"
+  title: "VP of Growth"
+
+about_area: 
+  enable: true
+  title: "Who is Discoverable Marketing?"
+  sub_title:
+  description: "We're SaaS marketers who understand how to"
+  description2: "gauge a startup's market potential." 
+  projects_number:
+  project_tag:
+  image: "/assets/images/important/hero.webp"
+  skills:
+    - title: "SaaS Marketing"
+      numbers: 100
+      style: "blue2"
+
+    - title: "Technical SEO"
+      numbers: 90
+      style: "blue3"
+
+    - title: "Professional Writing"
+      numbers: 92
+      style: "orange1"
+
+    - title: "Entrepreneurship"
+      numbers: 95
+      style: "orange2"
+
+boxes_area:
+  enable: true
+  lists:
+    - title: "SaaS Marketing"
+      description: "We've scaled multiple companies from pre-revenue to $100M+."
+      bg_color: "bg-blue2"
+
+    - title: "Technical SEO"
+      description: "Schemas, metadata, script deferring, preconnect - we have experience with it all."
+      bg_color: "bg-blue3"
+
+    - title: "Professional Writing"
+      description: "Our team has written for SaaS blogs, Huffington Post, Forbes, and more."
+      bg_color: "bg-orange1"
+
+    - title: "Entrepreneurship"
+      description: "We've built our own companies already. We know the challenges."
+      bg_color: "bg-orange2"
+
+---
+
+  <div class="wrapper gray-wrapper">
+    <div class="container inner">
+      {% if page.about_area.enable %}
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2 text-center">
+          <div>
+            {% if page.about_area.image %}
+         <figure>
+        <img src="/assets/images/important/Report-Snapshot.webp" alt="discoverable report"/>
+    </figure>
+            {% endif %}
+            <div class="row counter counter-s position-absolute" style="top: 45%; right: 8%;">
+              <div class="col-md-10 text-center">
+                <div class="box bg-white shadow">
+                  {% if page.about_area.projects_number %}
+                   <h3><span class="value">{{page.about_area.projects_number}}</span>+</h3>
+                  {% endif %}
+                  {% if page.about_area.project_tag %}
+                   <p>{{page.about_area.project_tag}}</p>
+                  {% endif %}
+                </div>
+                <!--/.box -->
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+          </div>
+        </div>
+        <!--/column -->
+
+
+        <div class="col-lg-6 pr-60 pr-md-15">
+          {% if page.about_area.title %}
+           <h1 class="section-title text-uppercase mb-20">{{ page.about_area.title }}</h1>
+          {% endif %}
+           <p class="lead larger">{{page.about_area.description}}<span style="color: #8AA9D6;"> {{page.about_area.description2}}</span></p>
+          <div class="space20"></div>
+          <ul class="progress-list">
+            {% for skills in page.about_area.skills %}
+            <li>
+              <p>{{skills.title}}</p>
+              <div class="progressbar line {{skills.style}}" data-value="{{skills.numbers}}"></div>
+            </li>
+            {% endfor %}
+          </ul>
+          <!-- /.progress-list -->
+        </div>
+
+        <!--/column -->
+      </div>
+      <!--/.row --> 
+        {% endif %}
+
+
+    </div>
+  </div>
+
+  <div style="margin-top:-100px">
+
+  {% include process.html %}</div>
+
+<!--
+
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="row" style="margin-top:-50px;margin-bottom:-50px;">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <div class="basic-slider owl-carousel gap-small text-center" data-margin="30">
+          <div class="item">
+            <blockquote class="icon larger">
+              <p>{{page.quote_area.quote1}}<b><span style="color: #8AA9D6;"> {{page.quote_area.quote2}}</span></b></p>
+              <div class="blockquote-details justify-content-center">
+                <div class="img-blob blob1"><img src="{{relative_url}}/{{page.quote_area.image}}" alt="" /></div>
+                <div class="info">
+                  <h6 class="mb-0">{{page.quote_area.name}}</h6>
+                  <span class="meta mb-0">{{page.quote_area.title}}</span>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+
+ 
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+-->
+
+
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+     <h2 class="section-title mb-40 text-center" style="margin-top:-40px;">Our History</h2>
+ {% if page.two_column_one.enable %}
+                <div class="two-column-one" style="padding-bottom:2%;">
+                    <div class="space20"></div>
+                    <div class="row align-items-center">
+                        {% if page.two_column_one.image %}
+                        <div class="col-lg-6" style="padding-left: 5%;">
+                            <div class="item d-flex flex-column align-items-center">
+              <figure class="img-blob blob1 mb-25"><img src="{{relative_url}}/{{page.two_column_one.image2}}" style="width: 15rem" alt="" /></figure>
+              <h4 class="mb-15">{{page.two_column_one.name}}</h4>
+              <div class="meta mb-5">{{page.two_column_one.title2}}</div>
+            </div>
+                        </div>
+                        {% endif %}
+           
+                        <div class="col-lg-6 pl-60" style="padding-right: 5%;margin-left:-40px;">
+                            {% if page.two_column_one.title %}
+                            {% endif %}
+          
+                            {% for text_data in page.two_column_one.paragraphs %}
+                            <p class="display-4">{{text_data.text}}</p>
+                            {% endfor %} {% if page.two_column_one.button_text %}
+                          
+                            {% endif %}
+                        </div>
+                        <!--/column -->
+                    </div>
+                    <!--/.row -->
+                </div>
+                {% endif %} 
+ <div class="space10"></div>
+<div class="row clients text-center justify-content-center">
+  <div class="col-md-4 col-lg-3 award-container">
+    <figure class="award-image"><img src="{{relative_url}}/assets/images/important/ana.webp" alt="" /></figure>
+    <div class="mb-5">Association of National Advertisers - 2020 Marketing Exec of the Year</div>
+  </div>
+  <!--/column -->
+  <div class="col-md-4 col-lg-3 award-container">
+    <figure class="award-image"><img src="{{relative_url}}/assets/images/important/best.webp" alt="" /></figure>
+    <div class="mb-5">American Business Awards - Corporate Marketer of the Year</div>
+  </div>
+  <!--/column -->
+  <div class="col-md-4 col-lg-3 award-container">
+    <figure class="award-image"><img src="{{relative_url}}/assets/images/important/about-steve20.webp" alt="" /></figure>
+    <div class="mb-5">Marketing Executive of the Year</div>
+  </div>
+  <!--/column -->
+</div>
+<!--/.row --></div>
+                </div>   

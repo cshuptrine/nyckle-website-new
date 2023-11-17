@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--- General Meta -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- For Modern Browsers -->
+<link rel="icon" href="https://www.discoverablemarketing.com/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="https://www.discoverablemarketing.com/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.discoverablemarketing.com/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://www.discoverablemarketing.com/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="https://www.discoverablemarketing.com//mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">
+
+
+<title>Nyckel</title>
+
+
+<link rel="canonical" href="https://www.discoverablemarketing.com/elements/forms"/>
+<link rel="alternate" href="https://www.discoverablemarketing.com/elements/forms" hreflang="x-default" />
+<meta property="og:url" content="https://www.discoverablemarketing.com/elements/forms"/>
+
+
+<meta name="description" content=" Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable."/>
+<meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
+
+<!--- OpenGraph -->
+<meta property="og:title" content=""/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<meta property="og:site_name" content="Discoverable Marketing"/>
+
+<meta property="og:type" content="website"/> 
+
+
+<!--- Robots -->
+<meta name="robots" content="max-image-preview:large"/>
+
+
+<!--- Schemas -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Discoverable Marketing","legalName":"Discoverable Marketing","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","logo":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","foundingDate":"2022","founders":[{"@type":"Person","name":"Chris Shuptrine"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"chris@discoverablemarketing.com","url":"https://www.discoverablemarketing.com/contact/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Discoverable Marketing","image":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","telephone":"910-516-8273","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
+
+  
+
+  
+
+  
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function loadGTM() {
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-587TTM6');
+  }
+
+  function lazyLoadGTM() {
+    window.removeEventListener('scroll', lazyLoadGTM);
+    loadGTM();
+  }
+
+  window.addEventListener('scroll', lazyLoadGTM);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader">
+    // Function to load the script
+    function loadHubSpotScript() {
+        var script = document.createElement('script');
+        script.src = "//js.hs-scripts.com/24298198.js";
+        document.body.appendChild(script);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        var loadPosition = 500; // Change this value based on when you want to load the script
+        if (window.scrollY > loadPosition) {
+            loadHubSpotScript();
+            // Remove the event listener after the script is loaded
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.querySelector('.hero-image');
+
+        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
+        var mobileBreakpoint = 768;
+
+        // Check if the screen width is less than or equal to the breakpoint
+        if (window.innerWidth <= mobileBreakpoint) {
+            // It's a mobile device, so add the lazy loading attribute
+            image.setAttribute('loading', 'lazy');
+        }
+    });
+</script>
+
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+</head>
+<body >
+  <div class="content-wrapper">
+    <!-- /.wrapper -->
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+        <h2 class="section-title mb-40 text-center">Basic Form</h2>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputName1">Name</label>
+            <input type="text" class="form-control" id="exampleInputName1" placeholder="Jane Doe">
+          </div>
+          <!-- /.form-group -->
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="jane.doe@example.com">
+          </div>
+          <!-- /.form-group -->
+          <div class="form-group">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck1">
+              <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+            </div>
+          </div>
+          <!-- /.form-group -->
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <!-- /form -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+    <div class="space140"></div>
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+        <h2 class="section-title mb-40 text-center">Basic Form - White Fields</h2>
+        <form class="fields-white">
+          <div class="form-group">
+            <label for="exampleInputName2">Name</label>
+            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+          </div>
+          <!-- /.form-group -->
+          <div class="form-group">
+            <label for="exampleInputEmail2">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+          </div>
+          <!-- /.form-group -->
+          <div class="form-group">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck2">
+              <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
+            </div>
+          </div>
+          <!-- /.form-group -->
+          <button type="submit" class="btn">Submit</button>
+        </form>
+        <!-- /form -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+<div class="wrapper gray-wrapper">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+        <h2 class="section-title mb-40 text-center">Inline Form</h2>
+        <form class="form-inline">
+          <label class="sr-only" for="inlineFormInputName3">Name</label>
+          <input type="text" class="form-control mb-20 mr-sm-2" id="inlineFormInputName3" placeholder="Name">
+          <label class="sr-only" for="inlineFormInputGroupUsername3">Email</label>
+          <div class="input-group mb-20 mr-sm-2">
+            <input type="email" class="form-control" id="inlineFormInputGroupUsername3" placeholder="Email">
+          </div>
+          <div class="custom-control custom-checkbox mb-20 mr-sm-2">
+            <input type="checkbox" class="custom-control-input" id="customCheck3">
+            <label class="custom-control-label" for="customCheck3">Remember Me</label>
+          </div>
+          <br />
+          <button type="submit" class="btn mb-20 ml-10 ml-md-0">Submit</button>
+        </form>
+        <!-- /form -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+        <h2 class="section-title mb-40 text-center">Horizontal Form</h2>
+        <form>
+          <div class="form-group row">
+            <label for="inputEmail4" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword4" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-2"><strong class="color-dark">Checkbox</strong></div>
+            <div class="col-sm-10">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                <label class="custom-control-label" for="customCheck4">Checkbox</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn">Sign in</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+<div class="wrapper gray-wrapper">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+        <h2 class="section-title text-center">Supported Controls</h2>
+        <p class="lead text-center">Examples of standard form controls supported in an example form layout.</p>
+        <div class="space40"></div>
+        <h6>Input</h6>
+        <input type="text" class="form-control" placeholder="Text input">
+        <div class="space30"></div>
+        <h6>Textarea</h6>
+        <textarea class="form-control" rows="3" placeholder="Textarea"></textarea>
+        <div class="space30"></div>
+        <h6>Checkboxes</h6>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="customCheck5">
+          <label class="custom-control-label" for="customCheck5">Check this custom checkbox</label>
+        </div>
+        <div class="space30"></div>
+        <h6>Radios</h6>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+          <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+          <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+        </div>
+        <div class="space30"></div>
+        <h6>Disabled</h6>
+        <div class="custom-control custom-checkbox custom-control-inline">
+          <input type="checkbox" class="custom-control-input" id="customCheckDisabled" disabled>
+          <label class="custom-control-label" for="customCheckDisabled">Check this custom checkbox</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" name="radioDisabled" id="customRadioDisabled" class="custom-control-input" disabled>
+          <label class="custom-control-label" for="customRadioDisabled">Toggle this custom radio</label>
+        </div>
+        <div class="space30"></div>
+        <h6>Stacked</h6>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+        </div>
+        <div class="space30"></div>
+        <h6>Select</h6>
+        <div class="form-group custom-select-wrapper">
+          <select class="custom-select">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+  </div>
+
+ <!-- Above-the-fold JS tags -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/scripts.js"></script>
+
+
+<script>
+    var jsUrls = [
+        "/assets/revolution/js/extensions/revolution.extension.actions.min.js",
+        "/assets/revolution/js/extensions/revolution.extension.carousel.min.js",
+        "/assets/revolution/js/extensions/revolution.extension.kenburn.min.js",
+        "/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js",
+        "/assets/revolution/js/extensions/revolution.extension.migration.min.js",
+        "/assets/revolution/js/extensions/revolution.extension.navigation.min.js",
+        "/assets/revolution/js/extensions/revolution.extension.parallax.min.js",
+        "/assets/revolution/js/extensions/revolution.extension.slideanims.min.js",
+        "/assets/revolution/js/extensions/revolution.extension.video.min.js",
+        "/assets/js/simple-jekyll-search.min.js",
+    ];
+
+    var hasLoadedJsFiles = new Array(jsUrls.length).fill(false);
+
+    window.onscroll = function() {
+        for (var i = 0; i < jsUrls.length; i++) {
+            if (!hasLoadedJsFiles[i]) {
+                var script = document.createElement('script');
+                script.src = jsUrls[i];
+                script.type = 'text/javascript';
+                document.body.appendChild(script);
+
+                // Remember that we've loaded this JavaScript file so we don't try to load it again
+                hasLoadedJsFiles[i] = true;
+            }
+        }
+    };
+</script>
+
+
+
+<!-- original JS implementation 
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/simple-jekyll-search.min.js"></script>
+<script src="/assets/js/scripts.js"></script>-->
+<footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+
+ 
+
+  <div class="space50"></div>
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+
+
+<div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Learn More</div>
+          
+          <ul class="list-unstyled mb-0">
+            <li><a href="/contact/">Contact</a></li>
+             <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+
+
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <div class="h3 widget-title" style="color: white;">Follow Us</div>
+              <ul class="social social-mute social-s">
+                
+               <li><a href="https://twitter.com/discoverableB2B" title="Discoverable Marketing on Twitter"><i class="jam jam-twitter"></i></a></li>
+                
+               <li><a href="https://www.facebook.com/discoverablemarketing" title="Discoverable Marketing on Facebook"><i class="jam jam-facebook"></i></a></li>
+                
+               <li><a href="https://www.youtube.com/@discoverablemarketing" title="Discoverable Marketing on YouTube"><i class="jam jam-youtube"></i></a></li>
+                
+               <li><a href="https://www.linkedin.com/company/discoverable-marketing/" title="Discoverable Marketing on LinkedIn"><i class="jam jam-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            
+        <div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Company</div>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/blog/">Blog</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">© 2023 Nyckel | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">T&Cs</a></p>
+  </div>
+</footer>
+  
+</body>
+</html>

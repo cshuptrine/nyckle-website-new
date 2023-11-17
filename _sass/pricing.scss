@@ -1,0 +1,217 @@
+/*-----------------------------------------------------------------------------------*/
+/*  43. PRICING
+/*-----------------------------------------------------------------------------------*/
+.panel.pricing {
+    text-align: center;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.pricing-wrapper [class*="col-"] {
+    z-index: 1;
+}
+.pricing-wrapper [class*="col-"].popular {
+    z-index: 3 !important;
+}
+.pricing-wrapper .panel.pricing.box {
+    padding: 3rem 2rem;
+}
+.panel.pricing .icon-blob {
+    text-align: center;
+    margin: 0 auto;
+}
+.panel.pricing .panel-heading {
+    padding: 0;
+}
+.panel.pricing .panel-title {
+    margin: 0;
+    padding: 0.25rem 0 0 0;
+}
+.panel.pricing .icon {
+    margin-bottom: 0.5rem;
+}
+.panel.pricing table {
+    margin-bottom: 0
+}
+.pricing .panel-body {
+    padding: 1.75rem 0 0 0;
+    text-align: center;
+    border-top: 0;
+}
+.panel.pricing .prices {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    background: none;
+    font-weight: normal;
+}
+.price-value {
+    font-size: 3rem
+}
+.price-currency {
+    display: inline-block;
+    font-size: 0.9rem;
+    padding-right: 0.2rem;
+}
+.price-duration {
+    font-size: 0.8rem;
+}
+.price-duration:before {
+    content: "/";
+    padding-right: 0.25rem;
+}
+.panel-desc {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    line-height: 1;
+}
+.panel.pricing .table>thead>tr>th,
+.panel.pricing .table>tbody>tr>th,
+.panel.pricing .table>tfoot>tr>th,
+.panel.pricing .table>thead>tr>td,
+.panel.pricing .table>tbody>tr>td,
+.panel.pricing .table>tfoot>tr>td {
+    padding: 0.25rem 0;
+    line-height: 1;
+    vertical-align: top;
+}
+.pricing .table>tbody>tr>td {
+    border: 0
+}
+.panel.pricing .table>tbody>tr:nth-child(2n) {
+    background: none
+}
+.panel.pricing .panel-footer a {
+    margin: 0
+}
+.panel.pricing .panel-title,
+.pricing .panel-body {
+    border: 0;
+    background: none;
+}
+.pricing .panel-footer {
+    padding-top: 2.25rem;
+    padding-bottom: 0;
+    background: none;
+    border: 0;
+}
+.pricing-switcher-wrapper {
+    width: 10rem;
+    height: 1.8rem;
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+    position: relative;
+    background-color: rgba(var(--rgb-black), 0.05);
+    border-radius: 1.5rem;
+    border: 0.2rem solid transparent;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.pricing-switchers {
+    width: 100%;
+}
+.pricing-switcher {
+    cursor: pointer;
+    width: 50%;
+    float: left;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    position: relative;
+    z-index: 888;
+
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.025rem;
+    font-weight: 500;
+}
+.switcher-button {
+    height: 1.8rem;
+    width: 50%;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 555;
+    margin: 0;
+    border: none;
+  
+    border-radius: 1.5rem;
+}
+.pricing-switcher-active {
+    color: var(--color-white);
+}
+.pricing-switcher:nth-child(1).pricing-switcher-active~.switcher-button {
+    left: 0;
+}
+.pricing-switcher:nth-child(2).pricing-switcher-active~.switcher-button {
+    left: 50%;
+}
+.prices {
+    position: relative;
+    height: 3rem;
+}
+.prices .price {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.prices .price-hidden {
+    display: none;
+}
+.prices .price-show {
+    -webkit-animation: priceShow 0.6s forwards;
+    animation: priceShow 0.6s forwards;
+}
+.prices .price-hide {
+    -webkit-animation: priceFade 0.6s forwards;
+    animation: priceFade 0.6s forwards;
+}
+@keyframes priceFade {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(80%);
+        transform: translateY(80%);
+    }
+}
+@-webkit-keyframes priceFade {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(80%);
+        transform: translateY(80%);
+    }
+}
+@keyframes priceShow {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-80%);
+        transform: translateY(-80%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes priceShow {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-80%);
+        transform: translateY(-80%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}

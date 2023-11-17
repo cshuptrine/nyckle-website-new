@@ -1,0 +1,50 @@
+<meta charset="utf-8" />
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5.0'>
+
+{% if page.seo_title %}
+{% assign title = page.seo_title %}
+{% elsif page.title %}
+{% assign title = page.title %}
+{% else %}
+{% assign title = "Blog" %}
+{% endif %}
+
+<title> {{ title }} | {{ site.name }} </title>
+
+{% assign author = site.data.authors[page.author] %}
+{% if author.twitter %}
+<meta name="twitter:creator" content="@{{author.twitter}}" />
+{% endif %}
+<meta name="author" content="{{ site.name }}" />
+
+{% if page.seo_description %}
+<meta name="description" content="{{ page.seo_description }}" />
+{% else %}
+<meta name="description" content="{{ page.summary }}" />
+{% endif %}
+
+{% if page.title %}
+<meta property="og:title" content="{{ page.title }}" />
+{% else %}
+<meta property="og:title" content="Blog | Nyckel" />
+{% endif %}
+
+<meta property="og:type" content="article" />
+
+{% if page.summary %}
+<meta property="og:description" content="{{ page.summary }}" />
+{% else %}
+<meta property="og:description" content="Blog about ML technology, use-cases and terminology." />
+{% endif %}
+<meta property="og:url" content="www.nyckel.com/blog{{ page.url }}" />
+
+{% if page.og_image %}
+<meta property="og:image" content="https://www.nyckel.com{{ page.og_image }}" />
+{% else %}
+<meta property="og:image" content="https://www.nyckel.com/_content/Marketing/images/og-nyckel.jpg" />
+{% endif %}
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@nyckelai" />

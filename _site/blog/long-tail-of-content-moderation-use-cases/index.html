@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Meta Tags & Codes -->
+<!--- General Meta -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- For Modern Browsers -->
+<link rel="icon" href="https://www.discoverablemarketing.com/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="https://www.discoverablemarketing.com/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.discoverablemarketing.com/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://www.discoverablemarketing.com/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="https://www.discoverablemarketing.com//mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">
+
+
+<title>The Long Tail of Content Moderation Use-Cases</title>
+
+
+<link rel="canonical" href="https://www.discoverablemarketing.com/blog/long-tail-of-content-moderation-use-cases/"/>
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog/long-tail-of-content-moderation-use-cases/" hreflang="x-default" />
+<meta property="og:url" content="https://www.discoverablemarketing.com/blog/long-tail-of-content-moderation-use-cases/"/>
+
+
+<meta name="description" content=" Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable."/>
+<meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
+
+<!--- OpenGraph -->
+<meta property="og:title" content="The Long Tail of Content Moderation Use-Cases"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<meta property="og:site_name" content="Discoverable Marketing"/>
+
+<meta property="og:type" content="website"/> 
+
+
+<!--- Robots -->
+<meta name="robots" content="max-image-preview:large"/>
+
+
+<!--- Schemas -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Discoverable Marketing","legalName":"Discoverable Marketing","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","logo":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","foundingDate":"2022","founders":[{"@type":"Person","name":"Chris Shuptrine"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"chris@discoverablemarketing.com","url":"https://www.discoverablemarketing.com/contact/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Discoverable Marketing","image":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","telephone":"910-516-8273","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
+
+  
+
+  
+
+  
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function loadGTM() {
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-587TTM6');
+  }
+
+  function lazyLoadGTM() {
+    window.removeEventListener('scroll', lazyLoadGTM);
+    loadGTM();
+  }
+
+  window.addEventListener('scroll', lazyLoadGTM);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader">
+    // Function to load the script
+    function loadHubSpotScript() {
+        var script = document.createElement('script');
+        script.src = "//js.hs-scripts.com/24298198.js";
+        document.body.appendChild(script);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        var loadPosition = 500; // Change this value based on when you want to load the script
+        if (window.scrollY > loadPosition) {
+            loadHubSpotScript();
+            // Remove the event listener after the script is loaded
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.querySelector('.hero-image');
+
+        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
+        var mobileBreakpoint = 768;
+
+        // Check if the screen width is less than or equal to the breakpoint
+        if (window.innerWidth <= mobileBreakpoint) {
+            // It's a mobile device, so add the lazy loading attribute
+            image.setAttribute('loading', 'lazy');
+        }
+    });
+</script>
+
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--Toggled -->
+
+  
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+
+</head>
+
+<body >
+    
+<nav
+  class="navbar  absolute nav-uppercase  navbar-hover-opacity navbar-expand-lg">
+  <div
+    class=" container  flex-row justify-content-center">
+    <div class="navbar-brand">
+      <a href="/">
+
+        
+        <img src="/assets/images/important/nyckel-color.png"
+         class=" logo-dark  "
+          alt="Discoverable logo" width="320" height="77"/>
+
+        <!--
+        
+        <img src="/assets/images/important/nyckel-black-small.png"
+          srcset="/assets/images/important/nyckel-black-small.png 1x, /assets/images/important/nyckel-black.png 2x"
+          class=" logo-dark  "
+          alt="Nyckel" width="180" height="27"/> -->
+
+      </a>
+    </div>
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+        </li>
+        <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%"><a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Contact</a></li>
+       <li class="nav-item d-none d-lg-block pl-0"><a href="/contact-report/" class="btn m-0" style="background-color:#E96A57">Free Sign-Up</a></li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/">
+          <img src="/assets/images/important/DiscoverableLogo_White_320.webp" class="logo-light" alt="Discoverable logo" width="180" height="27" loading="lazy"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/">Pricing</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/contact/">Customers</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/about/">About</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Blog</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Developers</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<div class="content-wrapper">
+<div class="wrapper white-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+<article class="post">
+  <div class="hero">
+    <div class="back-link-container contain-1200 p-mobile-1350">
+      <a class="back-link" href="/blog/">← All posts</a>
+    </div>
+    <div class="hero-contents contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1>The Long Tail of Content Moderation Use-Cases</h1>
+          <div class="summary">Beyond Spam, NSFW and violence are a long tail of situations that require content moderation across gaming, dating, e-commerce and children's platforms.</div>
+        </div>
+
+        
+        
+        <div class="author">
+          <div class="author-area">
+            
+            <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot" class="author-icon" />
+            
+            <span class="author-name">Oscar Beijbom</span>
+            
+            <a href="https://github.com/beijbom" target="_blank">
+              <i class="fa fa-github fa-lg social-icon"></i>
+            </a>
+            
+            
+            <a href="https://twitter.com/beijbom" target="_blank">
+              <i class="fa fa-twitter fa-lg social-icon"></i>
+            </a>
+            
+            
+            
+            <a href="https://linkedin.com/in/oscarbeijbom" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            
+            
+          </div>
+          <span class="date">
+            Posted Sep 2022
+          </span>
+        </div>
+        
+      </div>
+      
+      <div class="image-area">
+        <img class="safari_only_unset_height" src="/blog/images/2022/long-tail-hero.jpeg" alt="Long Tail of Content Moderation Use-Cases" />
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="entry">
+    <p>As Dylan Jhaveri of Mux.com put it, <a href="https://www.mux.com/blog/you-either-die-an-mvp-or-live-long-enough-to-build-content-moderation">”You either die an MVP or live long enough to build content moderation.”</a></p>
+
+<p>Content moderation is the processing of reviewing content to determine whether or not it’s appropriate for your platform. Spam, NSFW, and violence are some of the most obvious examples – but there are many more.</p>
+
+<p>In this blog post we’ll explore these less obvious, “long tail” types of content moderation situations.</p>
+
+<h2 id="gaming">Gaming</h2>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/2022/long-tail-gaming.jpeg" alt="Gaming Use-Cases" style="border-radius: 20px; max-width: 100%" srcset="../images/2022/long-tail-gaming.jpeg 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h3 id="profanity">Profanity</h3>
+
+<p>While it’s typical for most gaming sites to allow for “normal” profanity, you will want measures in place to block certain inappropriate language – such as racist, sexist, or otherwise demeaning comments.</p>
+
+<p>A more generic flag-and-remove system can prevent this from happening, but it may also remove certain phrases that are on-brand. Keep in mind, meanwhile, that gamers are very creative with getting around the rules and coming up with new ways to spell.</p>
+
+<p>A content moderation service that allows for advanced and customizable options will solve your inappropriate language issues while keeping your platform on-brand and enjoyable for players.</p>
+
+<h3 id="harassmentcyberbullying">Harassment/cyberbullying</h3>
+
+<p>It’s not uncommon for players to harass and verbally abuse others through in-game chats. Filters for profanity as well as abusive or threatening content are critical to keep this from happening in the first place.</p>
+
+<h3 id="self-promotional-content">Self-promotional content</h3>
+
+<p>Users may take advantage of their access to user-generated content (UGC) to share irrelevant content that is self-promotional or even propagandistic. If you’re using AI for content moderation, be sure to train it to detect this type of content.</p>
+
+<h3 id="fake-profiles">Fake profiles</h3>
+
+<p>It’s important to have a vetting process in place for profile particulars, so that all user profiles are genuine and all profile images are appropriate. This will go a long way to eliminating fraudulent activity and spamming on your gaming site.</p>
+
+<h3 id="copyright-infringement">Copyright infringement</h3>
+
+<p>These days it’s easy for users to take screen-grabs of copyrighted materials and share them without permission. Copyright violations are very damaging to your brand, so be sure to have measures in place to block these attempts.</p>
+
+<h2 id="dating">Dating</h2>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/2022/long-tail-dating.jpg" alt="Dating Use-Cases" style="border-radius: 20px; max-width: 100%" srcset="../images/2022/long-tail-dating.jpg 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h3 id="profile-particulars">Profile particulars</h3>
+
+<p>Screening the profiles of your platform’s users upfront will save you more effort later on – since you’re effectively preventing fraudulent accounts. Have parameters in place both for the sharing of personal contact information as well as what sort of imagery you allow in the photos your users post.</p>
+
+<p>Depending on your platform’s brand, you may have either looser or stricter requirements on things like acceptable levels of nudity. In either case you still need a robust solution, especially if your platform is very active and gets a lot of traffic.</p>
+
+<h3 id="irrelevantoff-brand-content">Irrelevant/off-brand content</h3>
+
+<p>Some users may try to post content that is self-promotional, or otherwise distracting or irrelevant – most likely from a fake account. Other users may post content that is off-brand, offensive or degrading.</p>
+
+<p>This kind of content can drive away other users and cause serious damage to your brand. To prevent this from happening, have strong systems in place for suspending user accounts as soon as they attempt to post this type of content.</p>
+
+<h3 id="scamsphishing">Scams/phishing</h3>
+
+<p>Scams abound on the Internet and dating sites are no exception – in fact, they are a frequent target thanks to the number of users they have.</p>
+
+<p>Phishing is when cyber criminals send emails from a legitimate-looking source in order to get the receiver to send credit card numbers or other private information. This happens when fake users are able to create profiles and get the emails and other contact info of other users. Users on dating websites can be especially susceptible to phishing, since they are generally open to sharing personal information in order to connect with others.</p>
+
+<p>To prevent this from happening in the first place, you need a strong vetting system upfront when users submit their profile information. Be sure to have measures in place to verify these are real users and not fraudsters looking to take advantage of your platform.</p>
+
+<h2 id="childrens-platforms">Children’s Platforms</h2>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/2022/long-tail-childrens.jpeg" alt="Platform for children Use-Cases" style="border-radius: 20px; max-width: 100%" srcset="../images/2022/long-tail-childrens.jpeg 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h3 id="cyberbullying">Cyberbullying</h3>
+
+<p>According to <a href="https://cyberbullying.org/2021-cyberbullying-data">cyberbullying.org</a>, about 46% of teens have experienced cyberbullying at some point in their lives. Online bullies typically post demeaning, hateful or threatening messages. They may even encourage suicide or other harmful behavior.</p>
+
+<p>Sadly, a lot of cyberbullying goes unreported by other users. This is just one more reason it’s vital to have content moderation practices in place for this type of situation.</p>
+
+<h3 id="solicitations">Solicitations</h3>
+
+<p>On the other end of the spectrum from cyberbullying are users who attempt to befriend and groom minors in order to exploit them – sexually or otherwise. They may pose as underage users who seem harmless at first. A common red flag to look for is users suggesting they take conversations offline.</p>
+
+<h3 id="scamsphishing-1">Scams/Phishing</h3>
+
+<p>Adults aren’t the only ones who are bombarded with scams – children are even more vulnerable to misleading offers, and there are plenty of scams and phishing emails/texts designed specifically for unsuspecting minors.</p>
+
+<p>Cyber criminals use children’s platforms to gather emails and other contact information in order to send scam/phishing emails and texts. Make sure you have secure measures in place to keep cyber criminals from gathering this type of personal information in the first place.</p>
+
+<h3 id="pii">PII</h3>
+
+<p>Children aren’t as careful as adults about protecting their PII (personally identifying information) – whether it’s their home address, social security number or the name of the school they attend.</p>
+
+<p>Without realizing it, they may post photos or other content that reveals this information – making them vulnerable to predators. Content moderation on children’s platforms should include features to keep users from making their PII visible.</p>
+
+<h2 id="e-commerceonline-marketplaces">E-Commerce/Online Marketplaces</h2>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/2022/long-tail-ecommerce.jpg" alt="Ecommerce Use-Cases" style="border-radius: 20px; max-width: 100%" srcset="../images/2022/long-tail-ecommerce.jpg 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h3 id="disintermediation">Disintermediation</h3>
+
+<p>Few things will hurt your business more than sellers who, after using your marketplace to find buyers, direct those buyers off your site to bypass your matchmaking fees.</p>
+
+<p>This is disintermediation, and the best way to prevent it is to have measures in place that monitor and flag any time a user posts a link to their own website or other means of contact. You can then follow up to make sure the user is not trying to get customers to go outside your platform to buy their product.</p>
+
+<h3 id="contextually-appropriate-imagery">Contextually appropriate imagery</h3>
+
+<p>When it comes to e-commerce sites, imagery issues like nudity can suddenly become a bit tricky.</p>
+
+<p>This is because in certain contexts – think swimwear or other personal products, for example – it may not actually be inappropriate to reveal a certain amount of skin or other visual content that would normally be suggestive.</p>
+
+<p>You will need a sophisticated AI service to help you differentiate between contextually appropriate and contextually inappropriate imagery.</p>
+
+<h3 id="illegal-products">Illegal products</h3>
+
+<p>The last thing you need as an e-commerce platform is illegal listings (think weapons, drugs, other suspect materials).</p>
+
+<p>Make it clear on your platform what type of listings are not allowed, holding your users accountable. You also need a vigilant system in place for any users who violate this rule by posting an illegal listing.</p>
+
+<h3 id="cultural-context">Cultural context</h3>
+
+<p>Although not common, you may find yourself in a situation where the culture or religious context of one customer base demographic clashes with “mainstream” values. For example, in 2017 IKEA issued a catalog with products geared towards an ultra-conservative Jewish community. The catalog featured no women and as a result IKEA experienced a backlash on social media.</p>
+
+<p>When moderating content, you need to consider sensitive situations like these and where your boundary should be when it comes to a demographic whose culture and values may be at odds with the majority.</p>
+
+<h2 id="blogs-and-communities">Blogs and Communities</h2>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/2022/long-tail-earthporn.jpg" alt="r/Earthporn Use-Cases" style="border-radius: 20px; max-width: 100%" srcset="../images/2022/long-tail-earthporn.jpg 2x%" />
+        <figcaption>The absence of manmade structures qualifies this image as acceptable in the r/Earthporn subreddit</figcaption>
+        
+
+</figure>
+
+<h3 id="off-topic-content">Off-topic content</h3>
+
+<p>Certain communities have very specific content guidelines in order to keep the conversations focused and the user-base engaged. Reddit has many such communities. For example, the <a href="https://www.reddit.com/r/EarthPorn/">“EarthPorn”</a> subreddit doesn’t allow images with man-made structures; and <a href="https://www.reddit.com/r/CatsStandingUp/">“CatsStandingUp”</a> requires all images to contain cats that are, well, standing up.</p>
+
+<p>Making sure your content is on-topic is less about having blocklists for suggestive language and more about understanding your audience. Since online communities can have very unique criteria, you may need either the help of human moderators, or a custom AI solution (or both).</p>
+
+<h3 id="trollingabusive-speech">Trolling/abusive speech</h3>
+
+<p>Trolling and abusive speech is not limited to profanity. Users who are looking to start arguments, provoke negative reactions, and cause disturbances will quickly create a toxic atmosphere in your community if they’re not moderated. In the worst case, they will drive away other users permanently.</p>
+
+<p>You’ll need a flagging system in place to detect these instances from the very beginning.</p>
+
+<h3 id="misinformation">Misinformation</h3>
+
+<p>This one can be a slippery slope, but nevertheless it’s become a real issue in the content moderation world in recent years. One clear recent example is the COVID-19 pandemic, and the debate that emerged over whether questionable content should be allowed on platforms like Facebook and Twitter.</p>
+
+<p>Whatever the topic, both well-meaning and nefarious users who post misleading or false information on important issues can quickly cause both harm and confusion within your community. You may choose not to block or delete every instance of misinformation, but flagging it will at least help keep your user base safer and more accountable.</p>
+
+<h2 id="in-summary">In Summary</h2>
+
+<p>The type of UGC problems you experience will depend on the type of platform you run. Each platform has its own challenges, with some (such as dating and children’s platforms) having especially sensitive requirements.</p>
+
+<p>While human content moderation is usually accurate, it’s very hard to scale content moderation with human efforts alone. The most realistic solution to scale and outsource your content moderation is a custom AI solution that can be trained on the needs of your specific platform and audience.</p>
+
+
+  </div>
+
+</article></div></div></div>
+</div>
+
+<!--likely needed for hero banner loads -->
+  <script defer src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/popper.min.js"></script>
+  <script defer src="/assets/js/bootstrap.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!--likely not needed for hero banner loads -->
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script defer src="/assets/js/plugins.js"></script>
+ <script defer src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script defer src="/assets/js/scripts.js"></script>
+  <footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+
+ 
+
+  <div class="space50"></div>
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+
+
+<div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Learn More</div>
+          
+          <ul class="list-unstyled mb-0">
+            <li><a href="/contact/">Contact</a></li>
+             <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+
+
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <div class="h3 widget-title" style="color: white;">Follow Us</div>
+              <ul class="social social-mute social-s">
+                
+               <li><a href="https://twitter.com/discoverableB2B" title="Discoverable Marketing on Twitter"><i class="jam jam-twitter"></i></a></li>
+                
+               <li><a href="https://www.facebook.com/discoverablemarketing" title="Discoverable Marketing on Facebook"><i class="jam jam-facebook"></i></a></li>
+                
+               <li><a href="https://www.youtube.com/@discoverablemarketing" title="Discoverable Marketing on YouTube"><i class="jam jam-youtube"></i></a></li>
+                
+               <li><a href="https://www.linkedin.com/company/discoverable-marketing/" title="Discoverable Marketing on LinkedIn"><i class="jam jam-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            
+        <div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Company</div>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/blog/">Blog</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">© 2023 Nyckel | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">T&Cs</a></p>
+  </div>
+</footer>
+  
+</body>
+</html>

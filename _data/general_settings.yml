@@ -1,0 +1,68 @@
+# General Settings
+title: "Nyckel"
+email: "chris@nyckel.com"
+email_2: "chris@nyckel.com"
+image: "/assets/images/important/cover.jpg"
+description: >- # this means to ignore newlines until "baseurl:"
+ Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable.
+black_logo_1x: "/assets/images/important/nyckel-black-small.png"
+black_logo_2x: "/assets/images/important/nyckel-black.png"
+light_logo_1x: "/assets/images/important/DiscoverableLogo_White_180.webp"
+light_logo_2x: "/assets/images/important/DiscoverableLogo_White_320.webp"
+favicon_1x: "/favicon.png"
+favicon_2x: "/favicon.png"
+
+address_01: '5540 Centerview Dr Ste 204<br />PMB 158585<br /> Raleigh, NC'
+phone_number: "+01 (434) 444 2268"
+copyright_text: "© 2023 Nyckel"
+
+#google_map: |
+#  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.4564967931838!2d-122.03250858386237!3d37.33169997984258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5b6e94ffe23%3A0x63bb79532baa6af4!2sApple+Campus!5e0!3m2!1sen!2str!4v1553850783971!5m2!1sen!2str" style="width:100%; height: 100%; border:0" allowfullscreen=""></iframe>
+
+social_accounts:
+  title: "Follow Us"
+  links:
+    - url: "https://twitter.com/discoverableB2B"
+      icon: "jam jam-twitter"
+      alt: "Discoverable Marketing on Twitter"
+
+    - url: "https://www.facebook.com/discoverablemarketing"
+      icon: "jam jam-facebook"
+      alt: "Discoverable Marketing on Facebook"
+      
+    - url: "https://www.youtube.com/@discoverablemarketing"
+      icon: "jam jam-youtube"
+      alt: "Discoverable Marketing on YouTube"
+
+    - url: "https://www.linkedin.com/company/discoverable-marketing/"
+      icon: "jam jam-linkedin"
+      alt: "Discoverable Marketing on LinkedIn"
+
+external_links:
+  title: "Learn More"
+  links:
+    - url: "/contact/"
+      text: "Contact"
+    - url: "/pricing/"
+      text: "Pricing"   
+
+external_links_03:
+  title: "Company"
+  links:
+    - url: "/about/"
+      text: "About"
+    - url: "/blog/"
+      text: "Blog"   
+
+# footer_newsletter:
+#  title: "Our Newsletter"
+#  sub_title: "Subscribe to our newsletter to get our news & deals delivered to your inbox!"
+#  subscribe_button_text: "Join"
+
+# one_page_nav_settings:
+#  links:
+#    - text: "Home"
+#      url: "#home"
+
+author_page_header:
+  header_background_image: "/assets/images/art/bg31.jpg"

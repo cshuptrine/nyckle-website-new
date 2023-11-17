@@ -1,0 +1,16 @@
+main_menu:
+
+  - text: "Pricing"
+    url: "/"
+  
+  - text: "Customers"
+    url: "/contact/"
+       
+  - text: "About"
+    url: "/about/"
+    
+  - text: "Blog"
+    url: "/blog/" 
+
+  - text: "Developers"
+    url: "/blog/"   

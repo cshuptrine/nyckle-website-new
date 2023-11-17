@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Meta Tags & Codes -->
+<!--- General Meta -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- For Modern Browsers -->
+<link rel="icon" href="https://www.discoverablemarketing.com/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="https://www.discoverablemarketing.com/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.discoverablemarketing.com/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://www.discoverablemarketing.com/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="https://www.discoverablemarketing.com//mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">
+
+
+<title>Logo Identifier: How to Detect Your Logo With a Custom Image Classifier</title>
+
+
+<link rel="canonical" href="https://www.discoverablemarketing.com/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier/"/>
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier/" hreflang="x-default" />
+<meta property="og:url" content="https://www.discoverablemarketing.com/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier/"/>
+
+
+<meta name="description" content=" Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable."/>
+<meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
+
+<!--- OpenGraph -->
+<meta property="og:title" content="Logo Identifier: How to Detect Your Logo With a Custom Image Classifier"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<meta property="og:site_name" content="Discoverable Marketing"/>
+
+<meta property="og:type" content="website"/> 
+
+
+<!--- Robots -->
+<meta name="robots" content="max-image-preview:large"/>
+
+
+<!--- Schemas -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Discoverable Marketing","legalName":"Discoverable Marketing","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","logo":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","foundingDate":"2022","founders":[{"@type":"Person","name":"Chris Shuptrine"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"chris@discoverablemarketing.com","url":"https://www.discoverablemarketing.com/contact/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Discoverable Marketing","image":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","telephone":"910-516-8273","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
+
+  
+
+  
+
+  
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function loadGTM() {
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-587TTM6');
+  }
+
+  function lazyLoadGTM() {
+    window.removeEventListener('scroll', lazyLoadGTM);
+    loadGTM();
+  }
+
+  window.addEventListener('scroll', lazyLoadGTM);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader">
+    // Function to load the script
+    function loadHubSpotScript() {
+        var script = document.createElement('script');
+        script.src = "//js.hs-scripts.com/24298198.js";
+        document.body.appendChild(script);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        var loadPosition = 500; // Change this value based on when you want to load the script
+        if (window.scrollY > loadPosition) {
+            loadHubSpotScript();
+            // Remove the event listener after the script is loaded
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.querySelector('.hero-image');
+
+        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
+        var mobileBreakpoint = 768;
+
+        // Check if the screen width is less than or equal to the breakpoint
+        if (window.innerWidth <= mobileBreakpoint) {
+            // It's a mobile device, so add the lazy loading attribute
+            image.setAttribute('loading', 'lazy');
+        }
+    });
+</script>
+
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--Toggled -->
+
+  
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+
+</head>
+
+<body >
+    
+<nav
+  class="navbar  absolute nav-uppercase  navbar-hover-opacity navbar-expand-lg">
+  <div
+    class=" container  flex-row justify-content-center">
+    <div class="navbar-brand">
+      <a href="/">
+
+        
+        <img src="/assets/images/important/nyckel-color.png"
+         class=" logo-dark  "
+          alt="Discoverable logo" width="320" height="77"/>
+
+        <!--
+        
+        <img src="/assets/images/important/nyckel-black-small.png"
+          srcset="/assets/images/important/nyckel-black-small.png 1x, /assets/images/important/nyckel-black.png 2x"
+          class=" logo-dark  "
+          alt="Nyckel" width="180" height="27"/> -->
+
+      </a>
+    </div>
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+        </li>
+        <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%"><a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Contact</a></li>
+       <li class="nav-item d-none d-lg-block pl-0"><a href="/contact-report/" class="btn m-0" style="background-color:#E96A57">Free Sign-Up</a></li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/">
+          <img src="/assets/images/important/DiscoverableLogo_White_320.webp" class="logo-light" alt="Discoverable logo" width="180" height="27" loading="lazy"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/">Pricing</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/contact/">Customers</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/about/">About</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Blog</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Developers</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<div class="content-wrapper">
+<div class="wrapper white-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+<article class="post">
+  <div class="hero">
+    <div class="back-link-container contain-1200 p-mobile-1350">
+      <a class="back-link" href="/blog/">← All posts</a>
+    </div>
+    <div class="hero-contents contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1>Logo Identifier: How to Detect Your Logo With a Custom Image Classifier</h1>
+          <div class="summary">Your brand is one of your most valuable assets as a business, so it’s important to monitor and protect all visual representations of your brand, especially your logo. In this article, we share how your business can quickly and easily create a logo identifier to detect images containing your logo.</div>
+        </div>
+
+        
+        
+        <div class="author">
+          <div class="author-area">
+            
+            <span class="author-name">Becca Miller</span>
+            
+            
+            
+            
+            <a href="https://linkedin.com/in/becca-miller-96a570b8" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            
+            
+          </div>
+          <span class="date">
+            Posted Oct 2023
+          </span>
+        </div>
+        
+      </div>
+      
+      <div class="image-area">
+        <img class="safari_only_unset_height" src="/blog/images/logo-identifier-image-classifier.png" alt="" />
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="comment-div">
+  <p>Need help identifying a specific logo? Search for our pre-trained logo detectors including <a href="https://www.nyckel.com/public-functions/food-logos-image-classifier">food-related logos</a>, <a href="https://www.nyckel.com/public-functions/transportation-logos-image-classifier">transportation logos</a>, <a href="https://www.nyckel.com/public-functions/leisure-logos-image-classifier">leisure brands</a>, <a href="https://www.nyckel.com/public-functions/institution-logos-image-classifier">institution logos</a>, <a href="https://www.nyckel.com/public-functions/electronic-logos-image-classifier">electronic logos</a>, <a href="https://www.nyckel.com/public-functions/cosmetic-logos-image-classifier">cosmetic logos</a>, and <a href="https://www.nyckel.com/public-functions/clothes-logos-image-classifier">clothes logos</a>.</p>
+
+</div>
+
+<p>Your brand is one of your most valuable assets as a business. As a result, it’s critical to monitor and protect all visual representations of your brand, especially your logo. Logo detection (also called logo recognition) uses AI and automation to identify your logo across digital platforms and content.</p>
+
+<p>In today’s digital age, logo detection provides numerous benefits, enabling you to safeguard your brand identity, monitor brand mentions, and track the reach of your marketing efforts. For example, you can monitor your brand’s presence on social media platforms and across the broader online landscape, unlocking valuable insights into brand visibility and customer sentiment. </p>
+
+<p>Businesses can also swiftly identify counterfeit products bearing the company’s logo, thereby protecting brand integrity and consumer trust. A logo identifier can even be a powerful tool for anti-phishing efforts, enabling companies to spot fraudulent activities where companies illicitly employ their logo.</p>
+
+<p>In this article, we’ll share how your business can quickly and easily create a custom logo identifier to detect images containing your logo.</p>
+
+<h2 id="how-does-logo-detection-work">How does logo detection work?</h2>
+
+<p>Logo detection uses image classification, a fundamental task in <a href="https://www.nyckel.com/blog/glossary-of-computer-vision-function-types/">computer vision</a> where a machine learning model categorizes an image into predefined classes or labels. Image classification models analyze various visual features, such as shapes, colors, and textures, to determine which category or object an image belongs to.</p>
+
+<p>Logo detection leverages image classification to recognize the unique visual characteristics of a company’s logo in an image. Using machine learning algorithms, these models learn to identify the logo, distinguishing it from other elements in the image. When presented with new content to review, the model determines whether the logo is present in the image or not.</p>
+
+<h2 id="how-to-build-a-logo-identifier-in-5-steps">How to build a logo identifier in 5 steps</h2>
+
+<p>In this article, we’ll explore how you can easily build your own logo identifier. For this example, we’ll use Kaggle’s <a href="https://www.kaggle.com/datasets/linkanjarad/famous-brand-logos">Famous Brand Logos Dataset</a> and use it to train an image classification function with Nyckel. This data set contains over 2,500 logo images from 30 famous brands, with each image labeled by brand.</p>
+
+<h3 id="1-collect-training-data">1. Collect training data</h3>
+
+<p>The first step to creating an effective logo identifier involves collecting strong training data. To ensure good model performance, it’s important to collect a diverse array of images featuring your logo in various environments, including scenarios where the logo isn’t perfectly displayed. This image variety enables your image classifier to learn to recognize your logo under a wide range of conditions.</p>
+
+<p>When collecting the data, it’s also essential to determine a systematic labeling strategy. For example, you might want to use the label “Yes_[Brand Name] Logo” for images where your logo is correctly displayed, “Altered [Brand Name] Logo” for cases where your logo has been modified or adjusted, and “No_[Brand Name] Logo” for images where your logo is entirely absent. Organizing your training data into folders bearing these labels can simplify the annotation process in subsequent stages, making it more efficient to create your logo identifier.</p>
+
+<p>For our example, we’ll focus on identifying the Coca-Cola logo. Since we’re using a data set of official logos, we won’t be including altered versions of the logo in our training data. Instead, we’ll simply label the logos in our data set as either “CocaCola” or “NotCocaCola.” To do this, we start by placing all 98 Coca-Cola images from the data set in a folder called “CocaCola.” For our other logo examples, we’ll take 10 images from 10 other logo classes (i.e., brands) and place them in a folder labeled “NotCocaCola.”</p>
+
+<h3 id="2-upload-your-data-to-nyckel">2. Upload your data to Nyckel</h3>
+
+<p>To upload your data to Nyckel, you first need to <a href="https://www.nyckel.com/docs/image-classification-quickstart">configure an image classification function</a>. To do this, create a function that accepts an image as input and then set the output to “classify.” Next, you can import your training data into Nyckel’s platform.</p>
+
+<p>Nyckel lets you bulk-upload and bulk-label your images, simplifying the data annotation process. You can efficiently upload your data by selecting images in batch sizes (limited to 1,000 images per batch) and assigning labels accordingly. In this case, labeling the data is as simple as saving them into separate folders (e.g., “CocaCola” and “NotCocaCola”). We can then label all the images at once when we upload a folder. Nyckel also lets you annotate after uploading all of the images.</p>
+
+<p>After your data is uploaded and annotated, Nyckel immediately starts training your model. As the model trains, you’ll see an indicator on the side of your screen telling you how confident Nyckel is in its model predictions. This immediate feedback allows you to monitor and assess the accuracy and performance of your logo identifier in real time.</p>
+
+<h3 id="3-try-out-the-model">3. Try out the model</h3>
+
+<p>After the model finishes training, we can check its performance and see that it correctly classified 99% of examples as to whether they contained a Coca-Cola logo. Our model only got two examples wrong! Looking at the examples, it’s easy to see why our model may not have recognized the logo:</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/logo-identifer-api-model.png" alt="" style="border-radius: 20px; max-width: 100%" srcset="../images/logo-identifer-api-model.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h3 id="4-deploy-the-model-into-your-systems-using-our-api">4. Deploy the model into your systems using our API</h3>
+
+<p>Once the logo identifier is trained and ready to go, the next step is to deploy the model into your systems using Nyckel’s API. Nyckel designed this deployment process to be simple to ensure you can easily integrate your model into your existing infrastructure.</p>
+
+<p>Through Nyckel’s API, your model automatically runs on optimized hardware, eliminating the need for you to grapple with hardware-related complexities. Because Nyckel handles scaling demands and performance optimization, you can focus on getting the most out of your logo identifier while enjoying the benefits of a high-performance logo detection API.</p>
+
+<h3 id="5-monitor-and-improve-model-performance">5. Monitor and improve model performance</h3>
+
+<p>Nyckel provides tools that make it easy to monitor and enhance your logo identifier’s performance. Its <a href="https://www.nyckel.com/blog/introducing-invoke-capture-integrated-active-learning/">invoke capture feature</a> makes the process of refining and fine-tuning your model quick and intuitive. This feature automatically captures random data and data with low confidence predictions from the model’s invokes, so that you can annotate this data to retrain the model, ultimately improving the model’s performance.</p>
+
+<figure class="figure" style="width: 100%">
+    <div style="position: relative; padding-bottom: calc(67.56756756756756% + 41px); height: 0;">
+        <iframe src="https://app.arcade.software/IcuRLvCTKTAQV5cGOMXY?embed" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px;"></iframe>
+    </div>
+    
+    <figcaption>Click through this demo to see how we built the logo detector with Nyckel.</figcaption>
+    
+</figure>
+
+<h2 id="nyckel-vs-pre-built-logo-identifier">Nyckel vs. pre-built logo identifier</h2>
+
+<p>There are many pre-built logo identifiers and image recognition tools available. And while these tools may work well for certain companies, custom logo identifiers (like the one we built with Nyckel) offer several benefits. </p>
+
+<p>The most noticeable distinction is that pre-built logo identifiers primarily cater to large companies with significant brand recognition. Meaning, these pre-built tools have been trained using popular, recognizable logos (like Coca-Cola’s). With a custom logo identifier, however, you provide your own training data, so you can build a tool that’s optimized to detect your logo, whether you’re a burgeoning startup or an established company.</p>
+
+<p>Second, Nyckel’s built-in data engine makes it easy for you to improve your model over time with new samples of real-world data. As your brand grows and evolves, your logo identifier does, too. With Nyckel, your logo identifier can adapt to new challenges and provide consistent brand protection even as your brand changes.</p>
+
+<p>Nyckel provides the flexibility, accuracy, and adaptability that businesses need to create a reliable logo identifier. If you’d like to take the next step to safeguarding your brand, <a href="https://www.nyckel.com/console">sign up for a free Nyckel account</a> to create your custom logo identifier. Run into any issues along the way? <a href="mailto:feedback@nyckel.com">Reach out to us</a> at any time.</p>
+
+
+  </div>
+
+</article></div></div></div>
+</div>
+
+<!--likely needed for hero banner loads -->
+  <script defer src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/popper.min.js"></script>
+  <script defer src="/assets/js/bootstrap.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!--likely not needed for hero banner loads -->
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script defer src="/assets/js/plugins.js"></script>
+ <script defer src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script defer src="/assets/js/scripts.js"></script>
+  <footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+
+ 
+
+  <div class="space50"></div>
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+
+
+<div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Learn More</div>
+          
+          <ul class="list-unstyled mb-0">
+            <li><a href="/contact/">Contact</a></li>
+             <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+
+
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <div class="h3 widget-title" style="color: white;">Follow Us</div>
+              <ul class="social social-mute social-s">
+                
+               <li><a href="https://twitter.com/discoverableB2B" title="Discoverable Marketing on Twitter"><i class="jam jam-twitter"></i></a></li>
+                
+               <li><a href="https://www.facebook.com/discoverablemarketing" title="Discoverable Marketing on Facebook"><i class="jam jam-facebook"></i></a></li>
+                
+               <li><a href="https://www.youtube.com/@discoverablemarketing" title="Discoverable Marketing on YouTube"><i class="jam jam-youtube"></i></a></li>
+                
+               <li><a href="https://www.linkedin.com/company/discoverable-marketing/" title="Discoverable Marketing on LinkedIn"><i class="jam jam-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            
+        <div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Company</div>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/blog/">Blog</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">© 2023 Nyckel | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">T&Cs</a></p>
+  </div>
+</footer>
+  
+</body>
+</html>

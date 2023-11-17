@@ -1,0 +1,39 @@
+{% assign post = include.post %}
+{% assign author = site.data.authors[post.author] %}
+
+<div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
+    <a class="card summary-card" href="{{ site.baseurl }}{{ post.url }}">
+        {% if post.og_image %}
+        <img class="card-img-top summary-img" src="{{ post.og_image }}" loading="lazy" />
+        {% else %}
+        <img class="card-img-top summary-img" src="/blog/images/placeholder-header.png" loading="lazy" />
+        {% endif %}
+        <div class="card-body">
+            <h1>{{ post.title }}</h1>
+            <div class="entry">
+                {{ post.summary }}
+            </div>
+        </div>
+
+        <!-- Look the author details up from the site config. -->
+        {% if author %}
+        <div class="card-footer summary-footer d-flex flex-row justify-content-between">
+            <div class="author d-flex flex-column">
+                <div>
+                    {% if author.image %}
+                    <img src="{{author.image}}" alt="mugshot" class="author-icon" />
+                    {% elsif author.github %}
+                    <img src="https://avatars.githubusercontent.com/{{author.github}}" alt="mugshot"
+                        class="author-icon" />
+                    {% endif %}
+                    <span class="author-name">{{ author.display_name }}</span>
+                </div>
+                <span class="date">
+                    Posted {{ post.date | date: "%b %Y"}}
+                </span>
+            </div>
+            <div class="read-more">Read more →</div>
+        </div>
+        {% endif %}
+    </a>
+</div>

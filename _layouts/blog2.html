@@ -1,0 +1,34 @@
+---
+layout: default
+cta: none
+
+---
+
+{% assign all_posts = site.posts | where_exp: "item", "item.stage != true" %}
+<div class="posts contain-1300 p-mobile-1350 mb-3">
+    {% assign headliner_posts = all_posts | where: "headliner", true %}
+    {% for post in headliner_posts %}
+    {% assign post = post %}
+    {% include summary-hero.html %}
+    {% endfor %}
+
+    {% include newsletter-signup.html %}
+
+    <h1 class="heading">Posts</h1>
+    <div class="row">
+        {% assign featured_posts = all_posts | where: "featured", true %}
+        {% for post in featured_posts %}
+        {% assign post = post %}
+        {% include summary-card.html %}
+        {% endfor %}
+
+        {% assign remaining_posts = all_posts %}
+        {% for post in remaining_posts %}
+        {% if post.headliner or post.featured %}
+        {% else %}
+        {% assign post = post %}
+        {% include summary-card.html %}
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>

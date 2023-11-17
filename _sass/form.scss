@@ -1,0 +1,343 @@
+/*-----------------------------------------------------------------------------------*/
+/*  54. FORMS
+/*-----------------------------------------------------------------------------------*/
+select {
+    -webkit-appearance: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    font-weight: normal;
+}
+.col-form-label {
+    line-height: 1.9;
+}
+label:not(.custom-control-label) {
+    font-weight: 500;
+    color: #404040;
+}
+label input,
+label textarea {
+    margin-top: 0.25rem;
+}
+.form-field label,
+.form-group .custom-select {
+    width: 100%
+}
+.form-inline .btn,
+.form-group .btn {
+    vertical-align: top;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-inline .form-group {
+    margin-right: 0.25rem;
+}
+.form-inline .form-group label {
+    margin-right: 0.25rem;
+}
+.form-row {
+    margin-right: -10px;
+    margin-left: -10px
+}
+.form-row>.col,
+.form-row>[class*="col-"] {
+    padding-right: 10px;
+    padding-left: 10px
+}
+select,
+textarea,
+textarea.form-control,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    font-weight: inherit;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+    color: #606060;
+    background: rgba(var(--rgb-black), 0.05);
+    border: 0;
+    border-radius: 1.25rem;
+    resize: none;
+    vertical-align: middle;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+}
+textarea:focus,
+textarea.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    background: rgba(var(--rgb-black), 0.07);
+}
+*[type="submit"] {
+    height: 2.5rem;
+}
+.widget input {
+    margin-bottom: 0
+}
+textarea,
+textarea.form-control {
+    height: 8rem;
+    line-height: 1.4rem;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    resize: vertical;
+    font-weight: inherit;
+}
+.input-group>.custom-select:not(:last-child),
+.input-group>.form-control:not(:last-child),
+.input-group>.custom-select:not(:first-child),
+.input-group>.form-control:not(:first-child) {
+    border-radius: 1.25rem !important
+}
+.form-container .form-field {
+    position: relative
+}
+.form-container .form-field i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 0.65rem;
+    margin: 1px 0 0 0;
+    line-height: 2rem;
+    color: #a3a3a3;
+    height: 1.9rem;
+    line-height: 2rem;
+    border-right: 1px solid #ccc;
+    font-weight: normal;
+}
+input,
+select {
+    -moz-appearance: none
+}
+@-moz-document url-prefix() {
+    select {
+        text-shadow: 0 0 0 transparent;
+    }
+}
+input.error,
+textarea.error {
+    border: 1px solid #d9534f !important;
+}
+.state-error,
+.btn.state-error:hover {
+    background-color: #de4747 !important;
+    color: var(--color-white);
+}
+.help-block.with-errors {
+    color: #de4747;
+    margin-top: 5px;
+}
+.notification-box {
+    display: block;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    border-radius: 0.2rem;
+    opacity: 0;
+}
+.notification-box.show-error {
+    color: #721c24;
+    background: #f8d7da;
+    border: 0;
+    opacity: 1
+}
+.notification-box.show-success {
+    color: #155724;
+    background: #d4edda;
+    border: 0;
+    opacity: 1
+}
+.search-form {
+    position: relative
+}
+.search-form input {
+    margin: 0;
+    padding-right: 1rem !important;
+}
+.search-form:before {
+    content: "\ebab";
+    font-family: 'Jam';
+    display: block;
+    position: absolute;
+    top: 0.55rem;
+    right: 0.75rem;
+    font-size: 0.85rem;
+    color: #606060;
+}
+.custom-select {
+    height: 2.5rem;
+    background: rgba(var(--rgb-black), 0.05);
+    border: 0;
+    border-radius: 1.25rem;
+    padding: 0 2rem 0 1.2em;
+}
+.custom-select:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background: rgba(var(--rgb-black), 0.07);
+}
+.custom-select-wrapper {
+    position: relative;
+}
+.custom-select-wrapper:before {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.7rem;
+    font-family: 'Jam';
+    content: "\e9ba";
+    display: block;
+    color: #404040;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+.custom-control-label::before {
+    background-color: rgba(var(--rgb-black), 0.07);
+    top: 3px;
+}
+.custom-control-label::after {
+    top: 3px;
+}
+.custom-control-input:disabled~.custom-control-label::before {
+    background-color: rgba(var(--rgb-black), 0.04);
+}
+.custom-control-input:disabled~.custom-control-label {
+    color: #808080;
+}
+.custom-control-input:active~.custom-control-label::before,
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before,
+.custom-radio .custom-control-input:checked~.custom-control-label::before {
+    background-color: var(--color-default)
+}
+.custom-control-input:focus~.custom-control-label::before {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+}
+.form-control::-webkit-input-placeholder {
+    color: #606060;
+    font-weight: normal;
+}
+.form-control:-moz-placeholder {
+    color: #606060;
+    font-weight: normal;
+    opacity: 1;
+}
+.form-control::-moz-placeholder {
+    color: #606060;
+    font-weight: normal;
+    opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+    color: #606060;
+    font-weight: normal;
+}
+.item-quantity {
+    background: rgba(var(--rgb-black), 0.05);
+    border: 0;
+    border-radius: 1.25rem;
+    display: inline-block;
+    padding: 0 5px;
+    margin: 0;
+}
+.item-quantity input {
+    border: 0;
+    background: none;
+    height: 48px;
+    line-height: 1;
+}
+.item-quantity .qty {
+    border: 0;
+    background: none;
+    width: 60px;
+    text-align: center;
+}
+.item-quantity .qty:focus {
+    background: none;
+}
+.item-detailed .custom-select-wrapper {
+    min-width: 100px;
+}
+.fields-white select,
+.fields-white textarea,
+.fields-white textarea.form-control,
+.fields-white input[type="text"]:not(.qty),
+.fields-white input[type="password"],
+.fields-white input[type="datetime"],
+.fields-white input[type="datetime-local"],
+.fields-white input[type="date"],
+.fields-white input[type="month"],
+.fields-white input[type="time"],
+.fields-white input[type="week"],
+.fields-white input[type="number"],
+.fields-white input[type="email"],
+.fields-white input[type="url"],
+.fields-white input[type="search"],
+.fields-white input[type="tel"],
+.fields-white input[type="color"],
+.fields-white .uneditable-input,
+.fields-white textarea:focus,
+.fields-white textarea.form-control:focus,
+.fields-white input[type="text"]:focus,
+.fields-white input[type="password"]:focus,
+.fields-white input[type="datetime"]:focus,
+.fields-white input[type="datetime-local"]:focus,
+.fields-white input[type="date"]:focus,
+.fields-white input[type="month"]:focus,
+.fields-white input[type="time"]:focus,
+.fields-white input[type="week"]:focus,
+.fields-white input[type="number"]:focus,
+.fields-white input[type="email"]:focus,
+.fields-white input[type="url"]:focus,
+.fields-white input[type="search"]:focus,
+.fields-white input[type="tel"]:focus,
+.fields-white input[type="color"]:focus,
+.fields-white .uneditable-input:focus,
+.fields-white .custom-select,
+.fields-white .custom-select:focus,
+.fields-white .custom-control-label::before {
+    -webkit-appearance: none !important;
+    background: var(--color-white);
+    -webkit-box-shadow: var(--shadow) !important;
+            box-shadow: var(--shadow) !important;
+}
+.fields-white .custom-control-input:disabled~.custom-control-label::before {
+    background-color: rgba(var(--rgb-white), 0.6);
+    -webkit-box-shadow: var(--shadow) !important;
+            box-shadow: var(--shadow) !important;
+}

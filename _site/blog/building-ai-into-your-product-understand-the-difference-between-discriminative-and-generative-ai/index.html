@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Meta Tags & Codes -->
+<!--- General Meta -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- For Modern Browsers -->
+<link rel="icon" href="https://www.discoverablemarketing.com/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="https://www.discoverablemarketing.com/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.discoverablemarketing.com/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://www.discoverablemarketing.com/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="https://www.discoverablemarketing.com//mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">
+
+
+<title>Discriminative vs. Generative AI: Which Should You Build Into Your Product?</title>
+
+
+<link rel="canonical" href="https://www.discoverablemarketing.com/blog/building-ai-into-your-product-understand-the-difference-between-discriminative-and-generative-ai/"/>
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog/building-ai-into-your-product-understand-the-difference-between-discriminative-and-generative-ai/" hreflang="x-default" />
+<meta property="og:url" content="https://www.discoverablemarketing.com/blog/building-ai-into-your-product-understand-the-difference-between-discriminative-and-generative-ai/"/>
+
+
+<meta name="description" content=" Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable."/>
+<meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
+
+<!--- OpenGraph -->
+<meta property="og:title" content="Discriminative vs. Generative AI: Which Should You Build Into Your Product?"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<meta property="og:site_name" content="Discoverable Marketing"/>
+
+<meta property="og:type" content="website"/> 
+
+
+<!--- Robots -->
+<meta name="robots" content="max-image-preview:large"/>
+
+
+<!--- Schemas -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Discoverable Marketing","legalName":"Discoverable Marketing","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","logo":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","foundingDate":"2022","founders":[{"@type":"Person","name":"Chris Shuptrine"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"chris@discoverablemarketing.com","url":"https://www.discoverablemarketing.com/contact/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Discoverable Marketing","image":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","telephone":"910-516-8273","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
+
+  
+
+  
+
+  
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function loadGTM() {
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-587TTM6');
+  }
+
+  function lazyLoadGTM() {
+    window.removeEventListener('scroll', lazyLoadGTM);
+    loadGTM();
+  }
+
+  window.addEventListener('scroll', lazyLoadGTM);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader">
+    // Function to load the script
+    function loadHubSpotScript() {
+        var script = document.createElement('script');
+        script.src = "//js.hs-scripts.com/24298198.js";
+        document.body.appendChild(script);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        var loadPosition = 500; // Change this value based on when you want to load the script
+        if (window.scrollY > loadPosition) {
+            loadHubSpotScript();
+            // Remove the event listener after the script is loaded
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.querySelector('.hero-image');
+
+        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
+        var mobileBreakpoint = 768;
+
+        // Check if the screen width is less than or equal to the breakpoint
+        if (window.innerWidth <= mobileBreakpoint) {
+            // It's a mobile device, so add the lazy loading attribute
+            image.setAttribute('loading', 'lazy');
+        }
+    });
+</script>
+
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--Toggled -->
+
+  
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+
+</head>
+
+<body >
+    
+<nav
+  class="navbar  absolute nav-uppercase  navbar-hover-opacity navbar-expand-lg">
+  <div
+    class=" container  flex-row justify-content-center">
+    <div class="navbar-brand">
+      <a href="/">
+
+        
+        <img src="/assets/images/important/nyckel-color.png"
+         class=" logo-dark  "
+          alt="Discoverable logo" width="320" height="77"/>
+
+        <!--
+        
+        <img src="/assets/images/important/nyckel-black-small.png"
+          srcset="/assets/images/important/nyckel-black-small.png 1x, /assets/images/important/nyckel-black.png 2x"
+          class=" logo-dark  "
+          alt="Nyckel" width="180" height="27"/> -->
+
+      </a>
+    </div>
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+        </li>
+        <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%"><a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Contact</a></li>
+       <li class="nav-item d-none d-lg-block pl-0"><a href="/contact-report/" class="btn m-0" style="background-color:#E96A57">Free Sign-Up</a></li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/">
+          <img src="/assets/images/important/DiscoverableLogo_White_320.webp" class="logo-light" alt="Discoverable logo" width="180" height="27" loading="lazy"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/">Pricing</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/contact/">Customers</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/about/">About</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Blog</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Developers</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<div class="content-wrapper">
+<div class="wrapper white-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+<article class="post">
+  <div class="hero">
+    <div class="back-link-container contain-1200 p-mobile-1350">
+      <a class="back-link" href="/blog/">← All posts</a>
+    </div>
+    <div class="hero-contents contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1>Discriminative vs. Generative AI: Which Should You Build Into Your Product?</h1>
+          <div class="summary">If you’re considering building AI into your product, it’s important to know the difference between generative and discriminative AI. We dive into the differences and the pros and cons of each.</div>
+        </div>
+
+        
+        
+        <div class="author">
+          <div class="author-area">
+            
+            <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot" class="author-icon" />
+            
+            <span class="author-name">Oscar Beijbom</span>
+            
+            <a href="https://github.com/beijbom" target="_blank">
+              <i class="fa fa-github fa-lg social-icon"></i>
+            </a>
+            
+            
+            <a href="https://twitter.com/beijbom" target="_blank">
+              <i class="fa fa-twitter fa-lg social-icon"></i>
+            </a>
+            
+            
+            
+            <a href="https://linkedin.com/in/oscarbeijbom" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            
+            
+          </div>
+          <span class="date">
+            Posted Jul 2023
+          </span>
+        </div>
+        
+      </div>
+      
+      <div class="image-area">
+        <img class="safari_only_unset_height" src="/blog/images/discriminative-vs-generative-ai1.png" alt="" />
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="entry">
+    <p>At Nyckel, our goal is to not only make it simpler to solve problems with ML but also help developers and product teams learn what they actually need to know about ML to be successful in their roles. In this article, we’ll review one of the important ML distinctions you should know before building AI into your product: the differences between generative and discriminative AI.</p>
+
+<div class="table-wrapper" markdown="block"><table>
+  <thead>
+    <tr>
+      <th><strong>Generative AI</strong></th>
+      <th><strong>Discriminative AI</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Typically trained on very large language models (LLMs) to perform almost any task</td>
+      <td>Can be trained on narrow models to perform very specific tasks (e.g., text or image classification), making it quick and easy to spin up functions</td>
+    </tr>
+    <tr>
+      <td>Objective of the model is to create entirely new content using the data the model has been trained on</td>
+      <td>Objective of the model is to make a decision based on data the model has been trained on</td>
+    </tr>
+    <tr>
+      <td>Input and output are very flexible, often requiring prompt engineering to determine the best input to get the output needed</td>
+      <td>Input is typically fixed schema (e.g., input: text string or image, output: predefined categories)</td>
+    </tr>
+    <tr>
+      <td>Sometimes makes things up (hallucinates), which requires a human to confirm the output’s accuracy</td>
+      <td>Having a human reviewer in the loop to moderate low confidence decisions and retrain the model with new annotated data can help improve model performance</td>
+    </tr>
+    <tr>
+      <td>Solutions typically do not have the scaffolding required to discover problem cases and iterate on annotated data</td>
+      <td>Best solutions enable a data engine — a process for detecting and managing problematic data</td>
+    </tr>
+    <tr>
+      <td>Popular tools include ChatGPT, DALL-E, Jasper, Ask Codi, Sythesia, and Writesonic</td>
+      <td>Popular tools include Nyckel, Roboflow, Vertex AI, Hugging Face, and Akkio</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h2 id="what-is-generative-ai">What is generative AI?</h2>
+
+<p>We’ll start with the type of AI you’re likely most familiar with because it’s <a href="https://apnews.com/hub/generative-ai">driven much of the hype</a> in recent months: generative AI. The objective of generative AI is to create new content using what the ML model (a large language model) has learned from training data. The types of content you can create with generative AI are vast and include text, images, music, videos, 3D models, synthetic data, and more. One of the most commonly used forms of generative AI are customer support chatbots.</p>
+
+<p>Generative AI solutions, like GPT-4, typically have flexible interfaces, meaning you can guide the models to respond in a way that aligns with what you’re trying to accomplish. The applications for generative AI almost feel limitless; if there’s a type of content you want to create and deliver to your customers via your product, you can probably do it with support from LLMs like GPT-4.</p>
+
+<p>For all of the upside of generative AI, there are also challenges you’ll need to overcome: </p>
+
+<ul>
+  <li>Generative AI models are tricky to control. You never quite know what you’re going to get, so you may need a lot of trial and error (i.e., prompt engineering) to get closer to your desired output.</li>
+  <li>These models are prone to making stuff up (i.e., hallucinating). You’ll need a human reviewer involved to confirm the accuracy of the model’s output.</li>
+  <li>Most generative AI solutions lack the basic scaffolding required to help you solve discriminative (decision-based) tasks. More specifically, solutions like those from OpenAI don’t enable a <a href="https://www.nyckel.com/blog/9-ways-to-use-a-data-engine-to-improve-your-ml-model/">data engine</a> to help you discover corner cases and iterate on the labeling of your existing samples to ensure the model receives the right type of inputs.</li>
+</ul>
+
+<h3 id="generative-ai-skills">Generative AI skills</h3>
+
+<p>The most important generative AI skills to know as a product manager or developer are <strong>prompt engineering</strong> and <strong>prompt chaining.</strong></p>
+
+<p><strong>Prompt engineering</strong> is figuring out which words and phrases to use as an input to get the model to respond in the way you want it to (the output). Courses in prompt engineering are popping up left and right, and you can also learn a lot by searching for example prompts. But, in our opinion, the best way to learn is to jump into a tool like GPT-4 to give it a spin for yourself — experimenting with how different prompts get different results.</p>
+
+<p>Here’s how a product manager of a real estate mobile app could explore how they could use GPT-4 to help its customers (realtors) write property listings:</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/prompt-engineering-real-estate-listing.png" alt="GPT-4 prompt engineering for real estate application" style="border-radius: 20px; max-width: 100%" srcset="../images/prompt-engineering-real-estate-listing.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<p><strong>Prompt chaining</strong> is another important skill for generative AI. With prompt chaining, you ask the model a sequence of questions or provide a series of prompts to get additional information or closer to the answer you want from the model. For example, if the model’s initial output isn’t in the format you need it, you’ll need to “chain” prompts together to get the output in the right format. (In the example below, see how the user requested that the model only respond with the home type.)</p>
+
+<p>For example, the same real estate mobile app mentioned above could use generative AI to fill in all of the property fields for a listing by providing the high-level property details as the original prompt. By chaining together multiple prompts, the developer could have the LLM produce all the outputs it needs for each listing. See <a href="https://chat.openai.com/share/ade82814-d867-4902-87f8-fe6a2cd37f7f">an example chat transcript from ChatGPT</a> for how this might look.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/prompt-chaining-real-estate-listing2.png" alt="Prompt chaining with GPT-4" style="border-radius: 20px; max-width: 100%" srcset="../images/prompt-chaining-real-estate-listing2.png 2x%" />
+        <figcaption>Prompt chaining with GPT-4</figcaption>
+        
+
+</figure>
+
+<h2 id="what-is-discriminative-ai">What is discriminative AI?</h2>
+
+<p>Now let’s shift to discriminative AI, which is the type of solution that Nyckel provides. The objective of discriminative AI is to make a decision or distinguish between different types of data. These models learn the boundaries between different classes or categories in the training data and then make predictions (or decisions) based on them. One of the most commonly used forms of discriminative AI are spam filters: Is this “spam” or “not spam?”</p>
+
+<p>Typically, generative AI and discriminative AI are used for different situations altogether. However, you can use generative AI models/LLMs for discriminative tasks (including a spam filter). We shared an example of <a href="https://www.nyckel.com/blog/why-narrow-ai-is-better-than-gpt-4-for-machine-learning-driven-decisions/">how you could use GPT-4 for a discriminative task in this post</a>, showing how you could categorize an input as toxic or not toxic. </p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/Nyckel-AI-approach-relating-to-GPT-4-2.png" alt="The confusion matrix for the whale sound classification function" style="border-radius: 20px; max-width: 80%" srcset="../images/Nyckel-AI-approach-relating-to-GPT-4-2.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<p>However, when you need to complete a discriminative task (i.e., you need to make a decision), it’s often a lot faster to train a discriminative function. Plus, they scale much better because it’s easier to add more outputs and more data, while also tracking how well the function performs.</p>
+
+<p>Compared to generative AI, the downside of discriminative AI solutions is that they’re narrower in focus. In other words, they’re trained to complete specific tasks, like detect objects, classify images, search text, and more. As a result, you can’t perform as many tasks as you can with generative AI. However, this is only relevant if your use case is something you can’t manage with a discriminative function. The narrow scope is actually an upside if discriminative AI is what you need (again, because it’s faster and easier to scale).</p>
+
+<h3 id="discriminative-ai-skills">Discriminative AI skills</h3>
+
+<p>When you’re using a discriminative AI solution, the most important activities your team needs to do, include: </p>
+
+<ul>
+  <li><strong>Choosing the right data as inputs.</strong> The data you use to train your model needs to be real-world data from your system and have enough annotated examples from each label set to train the model with. </li>
+  <li><strong>Choose the right set of outputs.</strong> The output labels you choose will depend on what you’re trying to achieve with your discriminative function. For example, if you want to label your product images by the category they belong to on your website (e.g., <a href="https://www.rei.com">REI might label its products</a> by “Camp &amp; Hike,” “Climb,” “Cycle,” etc.), you will want to include all the relevant labels and decide <a href="https://www.nyckel.com/blog/multi-class-classification-vs-multi-label-classification-key-differences-how-to-choose/">whether a product image should only belong to one label or if it could have multiple labels assigned</a>.</li>
+  <li><strong>Chain together simpler functions to a more complex whole.</strong> For example, let’s go back to the real estate management app. Imagine the site auto-tags photos by which room they are taken in. This can be done by training a “WhichRoomIsThis” multi-class classification function. However, before tagging photos with which room they are, you may want to add a “pre-processing” function that simply says “is this photo relevant for the posting?” That function could filter out blurry photos, personal photos, and other non-relevant images. So, you end up chaining together the “IsThisPhotoRelevant” function with the “WhichRoomIsThis” function.</li>
+  <li><strong>Moderate decisions with low confidence and feed new annotated data into the model to improve performance.</strong> The most significant benefit to using a discriminative AI solution for discriminative tasks is the ability to monitor model performance and iterate on your data. Using a <a href="https://www.nyckel.com/blog/why-narrow-ai-is-better-than-gpt-4-for-machine-learning-driven-decisions/">discriminative solution that enables a data engine</a> helps you pinpoint where your model is underperforming and annotate new data to ensure the model receives the right kinds of inputs to increase performance. </li>
+</ul>
+
+<p>Here’s an example of how the same real estate mobile app could design a discriminative function to categorize listing photos into their respective categories:</p>
+
+<p><strong>Input data</strong>: Images from a listing of a house for sale</p>
+
+<p><strong>Output labels:</strong> Front exterior, Back exterior, Yard, Entryway, Kitchen, Dining Room, Living Room, Family Room, Sunroom, Office, Bedroom, ½ Bath, ¾ Bath, Full Bath, Closet, Mudroom, Stairway, Basement, Workout Room, Storage Space, Mechanical Room, Neighborhood Amenity, Neighborhood Park</p>
+
+<p>If the real estate app wanted to separate interior versus exterior photos from each other, they could chain together different functions to break down the listing photos into smaller subsets: </p>
+
+<ol>
+  <li>Is this photo of the exterior or interior of a house?</li>
+  <li>If exterior → is it: Front exterior, Back exterior, Yard, Neighborhood Amenity, Neighborhood Park?</li>
+  <li>If interior → is it: Entryway, Kitchen, Dining Room, Living Room, Family Room, Sunroom, Office, Bedroom, ½ Bath, ¾ Bath, Full Bath, Closet, Mudroom, Stairway, Basement, Workout Room, Storage Space, Mechanical Room?</li>
+</ol>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/discriminative-vs-generative-ai2.png" alt="Generative AI vs. Discriminative AI" style="border-radius: 20px; max-width: 100%" srcset="../images/discriminative-vs-generative-ai2.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h2 id="do-you-need-to-create-new-content-or-make-a-decision">Do you need to create new content or make a decision?</h2>
+
+<p>Chances are you’ll be in a meeting soon when someone broaches the topic of how to integrate AI in your product. During those conversations, we challenge you to get to the bottom of what you’re trying to accomplish with AI. For example, are you trying to automate a process? Help a customer find what they’re looking for quicker? Integrate a supportive AI chatbot that can respond to customer inquiries?</p>
+
+<p>The crux of this question is whether you need to classify existing data to help your product make a decision, or generate entirely new content.</p>
+
+<p>Once you have a solid understanding of this, you can begin to narrow in on the segment of the AI market that can best solve your challenge. Popular LLMs like GPT-4 can perform discriminative tasks, <a href="https://www.nyckel.com/blog/why-narrow-ai-is-better-than-gpt-4-for-machine-learning-driven-decisions/">but not as well as narrow AI models trained to make decisions</a> (discriminative models). Understanding the difference between these different types of models is one of the first steps to effectively building AI into your product. </p>
+
+<p>If discriminative AI is what you need, <a href="https://www.nyckel.com/console">give Nyckel a try for free</a>. If you need help getting started, <a href="https://www.nyckel.com/docs/image-classification-quickstart">check out our quickstarts</a> or <a href="mailto:feedback@nyckel.com">reach out to us</a>.</p>
+
+
+  </div>
+
+</article></div></div></div>
+</div>
+
+<!--likely needed for hero banner loads -->
+  <script defer src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/popper.min.js"></script>
+  <script defer src="/assets/js/bootstrap.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!--likely not needed for hero banner loads -->
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script defer src="/assets/js/plugins.js"></script>
+ <script defer src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script defer src="/assets/js/scripts.js"></script>
+  <footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+
+ 
+
+  <div class="space50"></div>
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+
+
+<div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Learn More</div>
+          
+          <ul class="list-unstyled mb-0">
+            <li><a href="/contact/">Contact</a></li>
+             <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+
+
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <div class="h3 widget-title" style="color: white;">Follow Us</div>
+              <ul class="social social-mute social-s">
+                
+               <li><a href="https://twitter.com/discoverableB2B" title="Discoverable Marketing on Twitter"><i class="jam jam-twitter"></i></a></li>
+                
+               <li><a href="https://www.facebook.com/discoverablemarketing" title="Discoverable Marketing on Facebook"><i class="jam jam-facebook"></i></a></li>
+                
+               <li><a href="https://www.youtube.com/@discoverablemarketing" title="Discoverable Marketing on YouTube"><i class="jam jam-youtube"></i></a></li>
+                
+               <li><a href="https://www.linkedin.com/company/discoverable-marketing/" title="Discoverable Marketing on LinkedIn"><i class="jam jam-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            
+        <div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Company</div>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/blog/">Blog</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">© 2023 Nyckel | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">T&Cs</a></p>
+  </div>
+</footer>
+  
+</body>
+</html>

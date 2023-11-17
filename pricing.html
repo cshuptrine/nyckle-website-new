@@ -1,0 +1,147 @@
+---
+layout: default
+permalink: "/pricing/"
+description: Discover what pricing plans Discoverable Marketing offers for its Discoverable Reports.
+title: Discoverable Marketing's Pricing Plans
+fill: fill-light-wrapper
+cta:
+nav: light
+page_header:
+  enable: true
+  title: "Discoverable Report Pricing"
+  sub_title: "One fixed price - no add-ons or hidden fees"
+  background_image: "/assets/images/important/home-bg.webp"  
+services_area:
+  title: What the inbound marketing report looks at
+  title2: This research is hard to pull without extensive experience working in SaaS marketing.
+  enable: true
+  services: 
+    - title: "Keyword Discoverability"
+      sub_title: "When people search for relevant terms, do they find your company?"
+      icon: "/assets/images/icons/services/de-magnifying-lens.webp" 
+
+    - title: "Business Listings"
+      sub_title: "When people search for relevant terms, do they find the company?"
+      icon: "/assets/images/icons/services/of-clipboard.webp" 
+
+    - title: "Vendor Listicles"
+      sub_title: "When people search for relevant terms, do they find the company?"
+      icon: "/assets/images/icons/services/co-chat-1.webp"
+
+    - title: "Search Term Rankings"
+      sub_title: "What terms are you ranking for?"
+      icon: "/assets/images/icons/services/hs-question.webp"  
+
+    - title: "Blog Audit"
+      sub_title: "Ideas for improving your blog"
+      icon: "/assets/images/icons/services/de-invention.webp"  
+
+    - title: "Technical SEO"
+      sub_title: "Is their site set up for success?"
+      icon: "/assets/images/icons/services/de-searcher.webp" 
+
+    - title: "Organic Traffic"
+      sub_title: "Do they have backlinks, good domain authority, or well-indexed articles?"
+      icon: "/assets/images/icons/services/sm-pie-graphic.webp"   
+
+    - title: "Social Presence"
+      sub_title: "How does their messaging and positioning differ from competitors?"
+      icon: "/assets/images/icons/services/sm-management.webp"  
+
+    - title: "Backlinks & Authority"
+      sub_title: "How does their messaging and positioning differ from competitors?"
+      icon: "/assets/images/icons/services/of-diagram.webp"  
+
+    - title: "G2 Grid Report"
+      sub_title: "Do they have backlinks, good domain authority, or well-indexed articles?"
+      icon: "/assets/images/icons/services/st-puzzle.webp"       
+
+    - title: "Paid Spend Reach"
+      sub_title: "Is their site set up for success?"
+      icon: "/assets/images/icons/services/st-target.webp" 
+
+    - title: "Page Speed Scores"
+      sub_title: "Do they have backlinks, good domain authority, or well-indexed articles?"
+      icon: "/assets/images/icons/services/de-web-site.webp"
+
+---
+
+{% if page.page_header.enable %}
+{% assign page_d = page.page_header %}
+<div class="wrapper image-wrapper bg-image page-title-wrapper inverse-text"
+    data-image-src="{{page_d.background_image}}">
+    <div class="container inner text-center">
+        
+        <div class="space90"></div>
+        {% if page_d.title %}
+        <h1 class="page-title">{{page_d.title}}</h1>
+        {% endif %}
+        {% if page_d.sub_title %}
+        <p class="lead mb-30">{{page_d.sub_title}}</p>
+        {% endif %}
+        {% if page_d.button_text != null %}
+        <a href="{{page_d.button_url}}" class="btn btn-white btn-strong-hover">{{page_d.button_text}}</a>
+        {% endif %}
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+{% endif %}
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <!-- <h2 class="section-title mb-40 text-center">Pricing Table in Box</h2> -->
+    <div class="pricing-wrapper">
+      <div class="row no-gutters">
+
+        <div class="col-md-4 popular">
+          <div class="pricing panel box bg-white shadow">
+            <div class="panel-heading">
+              <div class="icon icon-svg mb-10"><img src="{{relative_url}}/assets/images/icons/ec-store.webp" alt="discoverable snapshot report"/></div>
+              <h4 class="panel-title mb-5">Inbound Marketing Audit</h4><p>De-risk your potential SaaS investment with our inbound marketing audit</p>
+              <div class="prices color-dark">
+                 <div class="price price-show"><span class="price-currency">$</span><span class="price-value">2,999</span><span class="price-duration">one-time</span></div></div>
+            </div>
+ 
+          
+       
+           <div class="panel-footer" style="margin-top:-25px"> <a href="/contact/" class="btn" role="button">Get Report</a>
+</div>
+          </div>
+      
+        </div>
+     
+<div class="col-md-8 popular" style="padding-left:60px;padding-top:40px">
+  <div class="panel-body">
+    <div class="row gutter-50">
+      {% for services in page.services_area.services %}
+      <div class="col-md-6 col-lg-4" style="padding-bottom:40px">
+      {% if forloop.index > 3 %}
+       <div class="space30 d-none d-md-block d-lg-none"></div>
+      {% endif %}
+        <div class="d-flex flex-row justify-content-center align-items-center"> <!-- Added align-items-center -->
+          {% if services.icon %}
+          <div class="icon-container" style="display: flex; justify-content: center; align-items: center;"> <!-- Added align-items: center; -->
+            <div class="icon icon-svg mr-25">
+              <img src="{{services.icon}}" alt="{{services.title}}" loading="lazy"/>
+            </div>
+          </div>
+          {% endif %}
+          <div>
+            <h6><span style="color: #0C0F44;">{{services.title}}</span></h6>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+     
+        </div>
+   
+      </div>
+  
+    </div>
+
+  </div>

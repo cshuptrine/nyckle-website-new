@@ -1,0 +1,52 @@
+{% assign post = include.post %}
+
+<a href="{{ site.baseurl }}{{ post.url }}">
+    <div class="hero">
+        <div class="hero-contents d-flex mx-2 mt-4">
+            <div class="title-area d-flex flex-column justify-content-between">
+                <div>
+                    <h1>{{ post.title }}</h1>
+                    <div class="summary">{{ post.summary }}</div>
+                </div>
+
+                {% assign author = site.data.authors[post.author] %}
+                {% if author %}
+                <div class="author">
+                    <div class="author-area">
+                        {% if author.image %}
+                        <img src="{{author.image}}" alt="mugshot" class="author-icon" />
+                        {% elsif author.github %}
+                        <img src="https://avatars.githubusercontent.com/{{author.github}}" alt="mugshot"
+                            class="author-icon" />
+                        {% endif %}
+                        <span class="author-name">{{ author.display_name }}</span>
+                        {% if author.github %}
+                        <i class="fa fa-github fa-lg social-icon"></i>
+                        {% endif %}
+                        {% if author.twitter %}
+                        <i class="fa fa-twitter fa-lg social-icon"></i>
+                        {% endif %}
+                        {% if author.linkedin %}
+                        {% if author.is_linkedin_company %}
+                        <i class="fa fa-linkedin fa-lg social-icon"></i>
+                        {% else %}
+                        <i class="fa fa-linkedin fa-lg social-icon"></i>
+                        {% endif %}
+                        {% endif %}
+                    </div>
+                    <span class="date">
+                        Posted {{ post.date | date: "%b %Y"}}
+                    </span>
+                    <div class="read-more">Read more →</div>
+                </div>
+                {% endif %}
+            </div>
+            {% if post.og_image %}
+            <div class="image-area card summary-card">
+                <img class="card-img-top summary-img safari_only_unset_height" src="{{ post.og_image }}"
+                    alt="{{ post.og_image_alt }}" />
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</a>

@@ -1,0 +1,31 @@
+<figure class="figure">
+
+    {% if include.url2x == null or include.url2x == "" %}
+    {% assign url2x = include.url %}
+    {% else %}
+    {% assign url2x = include.url2x %}
+    {% endif %}
+
+    {% if include.alt == null or include.alt == "" %}
+    {% assign alt = include.description %}
+    {% else %}
+    {% assign alt = include.alt %}
+    {% endif %}
+
+    {% if include.width == null or include.width == "" %}
+    {% assign width = "100" %}
+    {% else %}
+    {% assign width = include.width %}
+    {% endif %}
+
+    {% if include.link != null and include.link != "" %}
+    <a href="{{ include.link }}">
+        {% endif %}
+        <img src="{{ include.url }}" alt="{{ alt }}" style="border-radius: 20px; max-width: {{width}}%"
+            srcset="{{ url2x }} 2x%">
+        <figcaption>{{ include.description }}</figcaption>
+        {% if include.link != null and include.link != "" %}
+    </a>
+    {% endif %}
+
+</figure>

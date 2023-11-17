@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Meta Tags & Codes -->
+<!--- General Meta -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- For Modern Browsers -->
+<link rel="icon" href="https://www.discoverablemarketing.com/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="https://www.discoverablemarketing.com/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.discoverablemarketing.com/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://www.discoverablemarketing.com/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="https://www.discoverablemarketing.com//mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">
+
+
+<title>What Is Image Recognition? (And How It Differs From Image Classification)</title>
+
+
+<link rel="canonical" href="https://www.discoverablemarketing.com/blog/what-is-image-recognition-and-how-it-differs-from-image-classification/"/>
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog/what-is-image-recognition-and-how-it-differs-from-image-classification/" hreflang="x-default" />
+<meta property="og:url" content="https://www.discoverablemarketing.com/blog/what-is-image-recognition-and-how-it-differs-from-image-classification/"/>
+
+
+<meta name="description" content=" Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable."/>
+<meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
+
+<!--- OpenGraph -->
+<meta property="og:title" content="What Is Image Recognition? (And How It Differs From Image Classification)"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<meta property="og:site_name" content="Discoverable Marketing"/>
+
+<meta property="og:type" content="website"/> 
+
+
+<!--- Robots -->
+<meta name="robots" content="max-image-preview:large"/>
+
+
+<!--- Schemas -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Discoverable Marketing","legalName":"Discoverable Marketing","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","logo":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","foundingDate":"2022","founders":[{"@type":"Person","name":"Chris Shuptrine"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"chris@discoverablemarketing.com","url":"https://www.discoverablemarketing.com/contact/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Discoverable Marketing","image":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","telephone":"910-516-8273","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
+
+  
+
+  
+
+  
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function loadGTM() {
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-587TTM6');
+  }
+
+  function lazyLoadGTM() {
+    window.removeEventListener('scroll', lazyLoadGTM);
+    loadGTM();
+  }
+
+  window.addEventListener('scroll', lazyLoadGTM);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader">
+    // Function to load the script
+    function loadHubSpotScript() {
+        var script = document.createElement('script');
+        script.src = "//js.hs-scripts.com/24298198.js";
+        document.body.appendChild(script);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        var loadPosition = 500; // Change this value based on when you want to load the script
+        if (window.scrollY > loadPosition) {
+            loadHubSpotScript();
+            // Remove the event listener after the script is loaded
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.querySelector('.hero-image');
+
+        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
+        var mobileBreakpoint = 768;
+
+        // Check if the screen width is less than or equal to the breakpoint
+        if (window.innerWidth <= mobileBreakpoint) {
+            // It's a mobile device, so add the lazy loading attribute
+            image.setAttribute('loading', 'lazy');
+        }
+    });
+</script>
+
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--Toggled -->
+
+  
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+
+</head>
+
+<body >
+    
+<nav
+  class="navbar  absolute nav-uppercase  navbar-hover-opacity navbar-expand-lg">
+  <div
+    class=" container  flex-row justify-content-center">
+    <div class="navbar-brand">
+      <a href="/">
+
+        
+        <img src="/assets/images/important/nyckel-color.png"
+         class=" logo-dark  "
+          alt="Discoverable logo" width="320" height="77"/>
+
+        <!--
+        
+        <img src="/assets/images/important/nyckel-black-small.png"
+          srcset="/assets/images/important/nyckel-black-small.png 1x, /assets/images/important/nyckel-black.png 2x"
+          class=" logo-dark  "
+          alt="Nyckel" width="180" height="27"/> -->
+
+      </a>
+    </div>
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+        </li>
+        <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%"><a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Contact</a></li>
+       <li class="nav-item d-none d-lg-block pl-0"><a href="/contact-report/" class="btn m-0" style="background-color:#E96A57">Free Sign-Up</a></li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/">
+          <img src="/assets/images/important/DiscoverableLogo_White_320.webp" class="logo-light" alt="Discoverable logo" width="180" height="27" loading="lazy"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/">Pricing</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/contact/">Customers</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/about/">About</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Blog</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Developers</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<div class="content-wrapper">
+<div class="wrapper white-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+<article class="post">
+  <div class="hero">
+    <div class="back-link-container contain-1200 p-mobile-1350">
+      <a class="back-link" href="/blog/">← All posts</a>
+    </div>
+    <div class="hero-contents contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1>What Is Image Recognition? (And How It Differs From Image Classification)</h1>
+          <div class="summary">Image recognition is a term often used to describe using machine learning or computer vision to recognize and identify what’s in an image. Even though people use the term image recognition frequently, its meaning is vague, which can cause confusion and misunderstanding. This post explores image recognition and what people usually mean when they say it.</div>
+        </div>
+
+        
+        
+        <div class="author">
+          <div class="author-area">
+            
+            <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot" class="author-icon" />
+            
+            <span class="author-name">George Mathew</span>
+            
+            <a href="https://github.com/saintarian" target="_blank">
+              <i class="fa fa-github fa-lg social-icon"></i>
+            </a>
+            
+            
+            <a href="https://twitter.com/georgemkan" target="_blank">
+              <i class="fa fa-twitter fa-lg social-icon"></i>
+            </a>
+            
+            
+            
+            <a href="https://linkedin.com/in/georgemathew" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            
+            
+          </div>
+          <span class="date">
+            Posted Nov 2023
+          </span>
+        </div>
+        
+      </div>
+      
+      <div class="image-area">
+        <img class="safari_only_unset_height" src="/blog/images/what-is-image-recognition-header-image.jpg" alt="" />
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="entry">
+    <p>Image recognition is a term often used to describe using machine learning or computer vision to recognize and identify what’s in an image. Even though people use the term image recognition frequently, its meaning is vague, which can cause confusion and misunderstanding. For example, when someone says image recognition, they likely actually mean one of the following <a href="https://www.nyckel.com/blog/glossary-of-computer-vision-function-types/">types of computer vision</a>:</p>
+
+<ul>
+  <li><strong>Image classification:</strong> Assigns a <em>single</em> label to an entire image. For example, you can train an image classification function to <a href="https://www.nyckel.com/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes/">determine whether an image is AI-generated or not</a>. </li>
+  <li><strong>Image tagging:</strong> Assigns <em>multiple</em> tags (i.e., labels) to an image. For example, you can train an image tagging model to identify all the colors in an article of clothing.</li>
+  <li><strong>Object detection:</strong> Locates and identifies instances of specific objects in images or videos. For example, you can train an object detector to <a href="https://www.nyckel.com/blog/are-bounding-boxes-necessary-for-object-detection/">identify how many instances of weeds are in a plot of grass</a>.</li>
+</ul>
+
+<p>Technically speaking, these computer vision function types use either <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">Convolutional Neural Networks</a> (CNNs) or <a href="https://medium.com/data-and-beyond/vision-transformers-vit-a-very-basic-introduction-6cd29a7e56f3#:~:text=What%20is%20a%20Vision%20Transformer,and%20other%20computer%20vision%20tasks.">vision transformers</a> (ViT) to identify patterns in the pixels or patches of an image. CNNs was widely accepted as the standard model architecture for image classification, but recent advancements have vision transformers emerging as superior.</p>
+
+<h2 id="what-do-you-really-mean-by-image-recognition">What do you really mean by image recognition?</h2>
+
+<p>If you’ve set out to solve an image recognition problem, your first task is to determine which computer vision function type you really mean. To do this, it’s helpful to think about what you’re doing as a “black box” function where your input is an image. Then, think about what you want your output to be. For example:</p>
+
+<ul>
+  <li>
+    <p><strong>Do you want to label the image with one label out of two or more possible choices?</strong> If so, you need to create an image classification function (also called multi-class classification).</p>
+
+    <p>For example, if you’re a car dealership that wants to use AI to label its vehicle inventory with the brand name of each car, you could create an image classification function. The input image would be the photo of the vehicle and the output labels would be all of the brands that you stock in your dealership. For example: Ford, Honda, Toyota, Kia, Hyundai.</p>
+  </li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/image-recognition-honda-cars.png" alt="Image classification to identify car make" style="border-radius: 20px; max-width: 80%" srcset="../images/image-recognition-honda-cars.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<ul>
+  <li>
+    <p><strong>Do you want to label the image with multiple labels or tags?</strong> If so, you need to create an image tagging function (also called <a href="https://www.nyckel.com/blog/multi-class-classification-vs-multi-label-classification-key-differences-how-to-choose/">multi-label classification</a>). </p>
+
+    <p>For example, if you’re an online retailer that wants to speed the process of tagging product inventory with all of its colors, you could create an image tagging function. The input image would be the article of clothing, and the output labels would be all of the possible colors. For example: yellow, orange, red, pink, purple, blue, green, black, white, brown.</p>
+  </li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/image-recognition-boy-blue.png" alt="Image tagging to automatically identify colors on clothing" style="border-radius: 20px; max-width: 80%" srcset="../images/image-recognition-boy-blue.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<ul>
+  <li>
+    <p><strong>Do you want to pinpoint the exact location of one or more specific objects in an image?</strong> If so, you need to create an object detection function.</p>
+
+    <p>For example, if you are a brand manager that wants to monitor how your product inventory is displayed on store shelves, you could use an object detector to identify all instances of your products, like Cheerios boxes.</p>
+  </li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="https://www.nyckel.com/_content/Marketing/images/function-example-store@2x.jpg" alt="Object detection to identify products on store shelves" style="border-radius: 20px; max-width: 100%" srcset="https://www.nyckel.com/_content/Marketing/images/function-example-store@2x.jpg 2x%" />
+        <figcaption>Nyckel object detector identifies Maple Cheerios on a store shelf.</figcaption>
+        
+
+</figure>
+
+<p>While any of these computer vision function types <em>could</em> be referred to as image recognition, it’s best to be more specific, so that you can identify the best approach for solving your challenge and which machine learning services are best designed to support you.</p>
+
+<h2 id="which-image-recognition-service-is-best-for-you">Which image recognition service is best for you?</h2>
+
+<p>Once you have a better idea of the type of image recognition you need, you can start to look for machine learning services that can help you solve your problem. One distinction to be aware of as you search for an ML service is whether pretrained models will work for your use case or if you’ll need to build a custom model.</p>
+
+<p><strong>Pretrained models</strong> have already been trained on a large dataset, so you can use these models out of the box to make predictions about your own dataset. In other words, you don’t need to come up with your own training data to train the model. The downside of pretrained models is that, since they haven’t been trained on your unique data, they may not perform as well as you’d like them to when you test them on your own data. Plus, you are constrained to using the output labels that the model was trained on, which may or may not work for your use case. One example of where this can be problematic is when you need to <a href="https://www.nyckel.com/blog/custom-auto-tagging-for-digital-asset-management/">label your digital assets with industry-specific terminology.</a></p>
+
+<p>Popular services that offer pretrained models include <a href="https://cloud.google.com/vision?hl=en">Vision AI from Google</a>, <a href="https://portal.vision.cognitive.azure.com/gallery/featured">Vision Studio from Microsoft Azure</a>, and <a href="https://aws.amazon.com/rekognition/image-features/">Amazon Rekognition Image from AWS</a>. While Nyckel’s core product helps customers build custom ML models, we also have a <a href="https://www.nyckel.com/public-functions">library of pretrained models available</a>.</p>
+
+<p><strong>Custom ML models</strong> allow you to train your model using your own training data and choose exactly what you’d like for your output labels. Contrary to popular belief, custom ML models do not usually need a ton of training data to perform exceptionally well. This is due largely in part to transfer learning, which allows you to fine-tune and adapt pretrained models when building a custom model. The best custom ML services also allow you to <a href="https://www.nyckel.com/blog/introducing-invoke-capture-integrated-active-learning/">easily retrain your model</a> as you learn where your model is underperforming.</p>
+
+<p>Popular services that allow you to build custom models include <a href="https://www.nyckel.com/computer-vision-api">Nyckel</a> (👋), <a href="https://www.ximilar.com/">Ximilar</a>, <a href="https://roboflow.com/">Roboflow</a>, <a href="https://levity.ai/">Levity</a>, <a href="https://www.clarifai.com/">Clarifai</a>, <a href="https://cloud.google.com/vertex-ai?hl=en">Google Vertex AI</a>, <a href="https://azure.microsoft.com/en-us/products/ai-services/ai-custom-vision">Azure Custom Vision</a>, and <a href="https://aws.amazon.com/rekognition/custom-labels-features/?nc=sn&amp;loc=3&amp;dn=4">AWS Rekognition Custom Labels</a>. (We did a <a href="https://www.nyckel.com/blog/computer-vision-saas-landscape-comparison-of-the-top-9-players/">comparison of all of these computer vision SaaS players</a> if you’re interested in seeing how they perform against each other.)</p>
+
+<p>Interested in building a custom <a href="https://www.nyckel.com/docs/image-classification-quickstart">image classification</a>, <a href="https://www.nyckel.com/docs/image-tags-quickstart">image tagging</a>, or <a href="https://www.nyckel.com/docs/detection-quickstart">object detection</a> function? <a href="https://www.nyckel.com/console">Give Nyckel a try for free</a>, and reach out to us at any time for support with your use case.</p>
+
+
+  </div>
+
+</article></div></div></div>
+</div>
+
+<!--likely needed for hero banner loads -->
+  <script defer src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/popper.min.js"></script>
+  <script defer src="/assets/js/bootstrap.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!--likely not needed for hero banner loads -->
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script defer src="/assets/js/plugins.js"></script>
+ <script defer src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script defer src="/assets/js/scripts.js"></script>
+  <footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+
+ 
+
+  <div class="space50"></div>
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+
+
+<div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Learn More</div>
+          
+          <ul class="list-unstyled mb-0">
+            <li><a href="/contact/">Contact</a></li>
+             <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+
+
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <div class="h3 widget-title" style="color: white;">Follow Us</div>
+              <ul class="social social-mute social-s">
+                
+               <li><a href="https://twitter.com/discoverableB2B" title="Discoverable Marketing on Twitter"><i class="jam jam-twitter"></i></a></li>
+                
+               <li><a href="https://www.facebook.com/discoverablemarketing" title="Discoverable Marketing on Facebook"><i class="jam jam-facebook"></i></a></li>
+                
+               <li><a href="https://www.youtube.com/@discoverablemarketing" title="Discoverable Marketing on YouTube"><i class="jam jam-youtube"></i></a></li>
+                
+               <li><a href="https://www.linkedin.com/company/discoverable-marketing/" title="Discoverable Marketing on LinkedIn"><i class="jam jam-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            
+        <div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Company</div>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/blog/">Blog</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">© 2023 Nyckel | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">T&Cs</a></p>
+  </div>
+</footer>
+  
+</body>
+</html>

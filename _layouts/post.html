@@ -1,0 +1,71 @@
+---
+layout: default-post
+---
+
+<div class="wrapper white-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+<article class="post">
+  <div class="hero">
+    <div class="back-link-container contain-1200 p-mobile-1350">
+      <a class="back-link" href="/blog/">← All posts</a>
+    </div>
+    <div class="hero-contents contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1>{{ page.title }}</h1>
+          <div class="summary">{{ page.summary }}</div>
+        </div>
+
+        {% assign author = site.data.authors[page.author] %}
+        {% if author %}
+        <div class="author">
+          <div class="author-area">
+            {% if author.image %}
+            <img src="{{author.image}}" alt="mugshot" class="author-icon" />
+            {% elsif author.github %}
+            <img src="https://avatars.githubusercontent.com/{{author.github}}" alt="mugshot" class="author-icon" />
+            {% endif %}
+            <span class="author-name">{{ author.display_name }}</span>
+            {% if author.github %}
+            <a href="https://github.com/{{ author.github }}" target="_blank">
+              <i class="fa fa-github fa-lg social-icon"></i>
+            </a>
+            {% endif %}
+            {% if author.twitter %}
+            <a href="https://twitter.com/{{ author.twitter }}" target="_blank">
+              <i class="fa fa-twitter fa-lg social-icon"></i>
+            </a>
+            {% endif %}
+            {% if author.linkedin %}
+            {% if author.is_linkedin_company %}
+            <a href="https://linkedin.com/company/{{ author.linkedin }}" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            {% else %}
+            <a href="https://linkedin.com/in/{{ author.linkedin }}" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            {% endif %}
+            {% endif %}
+          </div>
+          <span class="date">
+            Posted {{ page.date | date: "%b %Y"}}
+          </span>
+        </div>
+        {% endif %}
+      </div>
+      {% if page.og_image %}
+      <div class="image-area">
+        <img class="safari_only_unset_height" src="{{ page.og_image }}" alt="{{ page.og_image_alt }}" />
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="entry">
+    {{ content }}
+
+  </div>
+
+</article></div></div></div>

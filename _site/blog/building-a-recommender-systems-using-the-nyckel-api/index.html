@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Meta Tags & Codes -->
+<!--- General Meta -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- For Modern Browsers -->
+<link rel="icon" href="https://www.discoverablemarketing.com/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="https://www.discoverablemarketing.com/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.discoverablemarketing.com/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://www.discoverablemarketing.com/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="https://www.discoverablemarketing.com//mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">
+
+
+<title>Building a Recommender system using the Nyckel API.</title>
+
+
+<link rel="canonical" href="https://www.discoverablemarketing.com/blog/building-a-recommender-systems-using-the-nyckel-api/"/>
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog/building-a-recommender-systems-using-the-nyckel-api/" hreflang="x-default" />
+<meta property="og:url" content="https://www.discoverablemarketing.com/blog/building-a-recommender-systems-using-the-nyckel-api/"/>
+
+
+<meta name="description" content=" Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable."/>
+<meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
+
+<!--- OpenGraph -->
+<meta property="og:title" content="Building a Recommender system using the Nyckel API."/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<meta property="og:site_name" content="Discoverable Marketing"/>
+
+<meta property="og:type" content="website"/> 
+
+
+<!--- Robots -->
+<meta name="robots" content="max-image-preview:large"/>
+
+
+<!--- Schemas -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Discoverable Marketing","legalName":"Discoverable Marketing","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","logo":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","foundingDate":"2022","founders":[{"@type":"Person","name":"Chris Shuptrine"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"chris@discoverablemarketing.com","url":"https://www.discoverablemarketing.com/contact/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Discoverable Marketing","image":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","telephone":"910-516-8273","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
+
+  
+
+  
+
+  
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function loadGTM() {
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-587TTM6');
+  }
+
+  function lazyLoadGTM() {
+    window.removeEventListener('scroll', lazyLoadGTM);
+    loadGTM();
+  }
+
+  window.addEventListener('scroll', lazyLoadGTM);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader">
+    // Function to load the script
+    function loadHubSpotScript() {
+        var script = document.createElement('script');
+        script.src = "//js.hs-scripts.com/24298198.js";
+        document.body.appendChild(script);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        var loadPosition = 500; // Change this value based on when you want to load the script
+        if (window.scrollY > loadPosition) {
+            loadHubSpotScript();
+            // Remove the event listener after the script is loaded
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.querySelector('.hero-image');
+
+        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
+        var mobileBreakpoint = 768;
+
+        // Check if the screen width is less than or equal to the breakpoint
+        if (window.innerWidth <= mobileBreakpoint) {
+            // It's a mobile device, so add the lazy loading attribute
+            image.setAttribute('loading', 'lazy');
+        }
+    });
+</script>
+
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--Toggled -->
+
+  
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+
+</head>
+
+<body >
+    
+<nav
+  class="navbar  absolute nav-uppercase  navbar-hover-opacity navbar-expand-lg">
+  <div
+    class=" container  flex-row justify-content-center">
+    <div class="navbar-brand">
+      <a href="/">
+
+        
+        <img src="/assets/images/important/nyckel-color.png"
+         class=" logo-dark  "
+          alt="Discoverable logo" width="320" height="77"/>
+
+        <!--
+        
+        <img src="/assets/images/important/nyckel-black-small.png"
+          srcset="/assets/images/important/nyckel-black-small.png 1x, /assets/images/important/nyckel-black.png 2x"
+          class=" logo-dark  "
+          alt="Nyckel" width="180" height="27"/> -->
+
+      </a>
+    </div>
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+        </li>
+        <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%"><a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Contact</a></li>
+       <li class="nav-item d-none d-lg-block pl-0"><a href="/contact-report/" class="btn m-0" style="background-color:#E96A57">Free Sign-Up</a></li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/">
+          <img src="/assets/images/important/DiscoverableLogo_White_320.webp" class="logo-light" alt="Discoverable logo" width="180" height="27" loading="lazy"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/">Pricing</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/contact/">Customers</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/about/">About</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Blog</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Developers</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<div class="content-wrapper">
+<div class="wrapper white-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+<article class="post">
+  <div class="hero">
+    <div class="back-link-container contain-1200 p-mobile-1350">
+      <a class="back-link" href="/blog/">← All posts</a>
+    </div>
+    <div class="hero-contents contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1>Building a Recommender system using the Nyckel API.</h1>
+          <div class="summary">We break down the components of a Recommender system and show how ot set this up using the Nyckel API.</div>
+        </div>
+
+        
+        
+        <div class="author">
+          <div class="author-area">
+            
+            <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot" class="author-icon" />
+            
+            <span class="author-name">Oscar Beijbom</span>
+            
+            <a href="https://github.com/beijbom" target="_blank">
+              <i class="fa fa-github fa-lg social-icon"></i>
+            </a>
+            
+            
+            <a href="https://twitter.com/beijbom" target="_blank">
+              <i class="fa fa-twitter fa-lg social-icon"></i>
+            </a>
+            
+            
+            
+            <a href="https://linkedin.com/in/oscarbeijbom" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            
+            
+          </div>
+          <span class="date">
+            Posted Sep 2022
+          </span>
+        </div>
+        
+      </div>
+      
+      <div class="image-area">
+        <img class="safari_only_unset_height" src="/blog/images/2022/recommender-systems.jpg" alt="Recommender systems using Nyckel" />
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="entry">
+    <h2 id="intro">Intro</h2>
+
+<p>How does Spotify or Netflix recommend content to their users? How does Amazon recommend products? They both use so-called <a href="https://en.wikipedia.org/wiki/Recommender_system">Recommender systems</a> and in this post we break down some common algorithms. We then show how they can be decomposed into simple Machine Learning functions using the <a href="https://www.nyckel.com/docs">Nyckel API</a>.</p>
+
+<h2 id="music-recommender-example">Music Recommender example</h2>
+
+<p>Let’s use a concrete example: a music recommender. In this example we have three components: Users, Albums and Interactions.</p>
+
+<h3 id="users">Users</h3>
+
+<div class="table-wrapper" markdown="block"><table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Id</th>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Age</th>
+      <th style="text-align: left">Location</th>
+      <th style="text-align: left">Gender</th>
+      <th style="text-align: left">…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">0</td>
+      <td style="text-align: left">Oscar</td>
+      <td style="text-align: left">43</td>
+      <td style="text-align: left">Santa Cruz</td>
+      <td style="text-align: left">Male</td>
+      <td style="text-align: left">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">Dan</td>
+      <td style="text-align: left">42</td>
+      <td style="text-align: left">Santa Diego</td>
+      <td style="text-align: left">Male</td>
+      <td style="text-align: left">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">…</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h3 id="albums">Albums</h3>
+
+<div class="table-wrapper" markdown="block"><table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Id</th>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Artist</th>
+      <th style="text-align: left">Year</th>
+      <th style="text-align: left">Style</th>
+      <th style="text-align: left">…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">0</td>
+      <td style="text-align: left">Freewheeling</td>
+      <td style="text-align: left">Bob Dylan</td>
+      <td style="text-align: left">1963</td>
+      <td style="text-align: left">Folk</td>
+      <td style="text-align: left">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">Origin of Symmetry</td>
+      <td style="text-align: left">Muse</td>
+      <td style="text-align: left">2001</td>
+      <td style="text-align: left">Electronic Rock</td>
+      <td style="text-align: left">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">Abbey Road</td>
+      <td style="text-align: left">Beatles</td>
+      <td style="text-align: left">1970</td>
+      <td style="text-align: left">Rock</td>
+      <td style="text-align: left">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">…</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h3 id="interactions">Interactions</h3>
+
+<p>In this example “preferences” is some measure of how much a user likes a particular album. For example by measuring how much time they spend listening to it.</p>
+
+<div class="table-wrapper" markdown="block"><table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Id</th>
+      <th style="text-align: left">UserId</th>
+      <th style="text-align: left">AlbumId</th>
+      <th style="text-align: left">Preference</th>
+      <th style="text-align: left">…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">0</td>
+      <td style="text-align: left">0</td>
+      <td style="text-align: left">0</td>
+      <td style="text-align: left">90%</td>
+      <td style="text-align: left">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">0</td>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">85%</td>
+      <td style="text-align: left">…</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">0</td>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">79%</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">3</td>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">0</td>
+      <td style="text-align: left">92%</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>The problem statement now becomes:</p>
+
+<p><strong>Given a user, what albums should we recommend?</strong></p>
+
+<h2 id="solution-space">Solution space</h2>
+
+<p>There are two main sources of information to draw from: Content and Interactions. There are also several hybrid methods which combine both sources.</p>
+
+<h3 id="content-filtering">Content filtering</h3>
+
+<p>Following our example, Content filtering uses either the Users and Albums tables, whichever holds the most information to meaningfully measure similarity.</p>
+
+<p>Do we have enough meta-data to know if a user is similar to other users? For example, people of a certain age, gender and location may have similar music preferences. If so, recommend albums that users in that group tend to like.</p>
+
+<p>Do we know what music the user listens to? And do we have good meta-data on the Albums table to identify similar music? If so, recommend albums that are similar to the ones the user already listens to.</p>
+
+<h3 id="collaborative-filtering">Collaborative filtering</h3>
+
+<p>Collaborative filtering doesn’t group users or albums by their respective meta-data. Instead, it relies on the interaction table and infer preferences that way. For example, user “Oscar” listens to similar things that users “Dan” and “George”, so he is likely to like other albums that they like. This is appealing since we don’t have to rely on any explicit meta-data in the Users or Albums table.</p>
+
+<h2 id="recommender-systems-using-nyckel">Recommender systems using Nyckel</h2>
+
+<p>Let’s now look at how to implement a Recommender system using the <a href="https://www.nyckel.com/docs">Nyckel API</a>.</p>
+
+<h3 id="content-filtering-using-nyckel">Content filtering using Nyckel</h3>
+
+<p>Content-based filtering can be implemented using nearest neighbor search. For example, if you have rich meta-data for each user, try Content-based filtering on the Users table like so:</p>
+
+<ul>
+  <li>Concatenate the entries in each User table row and add to a <a href="https://www.nyckel.com/docs/text-search-quickstart">Nyckel Text Search function</a>.</li>
+  <li>Query using the new User and retrieve the most similar users.</li>
+  <li>Recommend the albums they listen to.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/2022/rs-user-content.png" alt="User based content filtering" style="border-radius: 20px; max-width: 100%" srcset="../images/2022/rs-user-content.png 2x%" />
+        <figcaption>Content-based filter by Text Search.</figcaption>
+        
+
+</figure>
+
+<p>Conversely, if you have rich album meta-data, you can try filtering like so:</p>
+
+<ul>
+  <li>Concatenate the elements in each Album table row and add to a <a href="https://www.nyckel.com/docs/text-search-quickstart">Nyckel Text Search function</a>.</li>
+  <li>For each album that the new user likes (if you know them) query for similar albums.</li>
+  <li>Recommend the intersection (or union) of the retrieved albums.</li>
+</ul>
+
+<h3 id="collaborative-filtering-using-nyckel">Collaborative filtering using Nyckel</h3>
+
+<p>The Interactions table is at the core of Collaborative filtering. However, the examples discussed below should be considered <em>Hybrid</em> since meta-data from the Users and Albums tables is used. A pure Collaborative implementation would use only the album ids.</p>
+
+<p>Collaborative filtering can be posed as classification where the input is a User and the output is an Album. Granted, in some situations it might be an “extreme” classification problem with 100,000’s of output categories. Still, it is a classification problem.</p>
+
+<p>The challenge arises due to the User context. Clearly, it is not enough to provide a UserId or Name – we must somehow encode the interaction and meta-data into the input so the classifier has access to it. So this becomes a context encoding challenge. We will look at two ways of doing this below. Let’s first look at how it all would fit together using a <a href="https://www.nyckel.com/docs/quickstart">Nyckel Text Classification function</a>.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/2022/rs-collaborative.png" alt="Collaborative filtering by Classification" style="border-radius: 20px; max-width: 100%" srcset="../images/2022/rs-collaborative.png 2x%" />
+        <figcaption>Collaborative filtering by Classification.</figcaption>
+        
+
+</figure>
+
+<p>The core idea is that the Text Classification function is <em>trained to associate a set of album preferences with a new album</em>. So how to create train samples from the music preferences? We look at two ways next.</p>
+
+<h4 id="leave-one-out">Leave-one-out</h4>
+
+<p>Since we know Oscar likes three albums, we create three input-output examples by holding out one of the albums. For Dan, we only have one data-point so we can only create one input-output example. Let’s call this method of encoding <code class="language-plaintext highlighter-rouge">leave-one-out</code>.</p>
+
+<div class="table-wrapper" markdown="block"><table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Input</th>
+      <th style="text-align: left">Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"Freewheeling, Origin of Symmetry"</code></td>
+      <td style="text-align: left">Abbey Road</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"Abbey Road, Origin of Symmetry"</code></td>
+      <td style="text-align: left">Freewheeling</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"Freewheeling, Abbey Road"</code></td>
+      <td style="text-align: left">Origin of Symmetry</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">""</code></td>
+      <td style="text-align: left">Freewheeling</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Note that the preferences of the Interaction table is binarized. Also note that while the input is a String, the output is a Category (in this case an Album).</p>
+
+<p><code class="language-plaintext highlighter-rouge">leave-one-out</code> encoding ignores the temporal ordering of how users came to like these albums. If this ordering is important in your application you can try <code class="language-plaintext highlighter-rouge">history-playback</code> encoding instead.</p>
+
+<h4 id="history-playback">History-playback</h4>
+
+<p>As an alternative encoding, we can instead play back the history and add a training sample for each point in the preference history. For Oscar, let’s say that he first liked Freewheeling, then Origin of Symmetry and finally Abbey Road, then the samples table might look like this. Let’s call this encoding <code class="language-plaintext highlighter-rouge">history-playback</code>.</p>
+
+<div class="table-wrapper" markdown="block"><table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Input</th>
+      <th style="text-align: left">Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">""</code></td>
+      <td style="text-align: left">Freewheeling</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"Freewheeling"</code></td>
+      <td style="text-align: left">Origin of Symmetry</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"Freewheeling, Origin of Symmetry"</code></td>
+      <td style="text-align: left">Abbey Road</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">""</code></td>
+      <td style="text-align: left">Freewheeling</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h4 id="updating-the-training-data">Updating the training data</h4>
+
+<p>Let’s say a user likes N albums and we have already created samples to reflect this. Now they like a new album. How do we incorporate this new information?</p>
+
+<p><code class="language-plaintext highlighter-rouge">history-playback</code> has a notable advantage here in that it’s trivial to add new preferences. For each new album that a user likes, you just create one new sample. Using <code class="language-plaintext highlighter-rouge">leave-one-out</code>, on the other hand, requires deleting the previous N samples and creating N+1 new ones.</p>
+
+<h4 id="encoding-recency-bias">Encoding recency bias</h4>
+
+<p>People’s preferences typically change over time, both at the personal and group levels. How do we account for this using Classification? The most straightforward way might be to delete old samples from the training set. Another way might be to give preference to newer albums in the set that is eventually shown to the user.</p>
+
+<h4 id="encoding-user-meta-data">Encoding User meta-data</h4>
+
+<p>As mentioned above, the Collaborative filtering method outlined above was actually a <em>Hybrid</em> method since it relies on the Album meta-data. The <a href="https://en.wikipedia.org/wiki/Recommender_system">Wikipedia page on Recommender systems</a> lists several other Hybrid flavors.</p>
+
+<p>In our running example, one could use the <code class="language-plaintext highlighter-rouge">history-playback</code> encoding together with user meta-data in a <a href="https://www.nyckel.com/docs/tabular-classification-quickstart">Nyckel Tabular Classification function</a> as shown below. This encodes user meta-data as part of the input in addition to the interactions.</p>
+
+<p><em>Hybrid history-playback encoding</em></p>
+
+<div class="table-wrapper" markdown="block"><table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Age</th>
+      <th style="text-align: left">Gender</th>
+      <th style="text-align: left">Location</th>
+      <th style="text-align: left">Albums</th>
+      <th style="text-align: left">Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">43</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"Male"</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"Santa Cruz"</code></td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Freewheeling</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">43</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"Male"</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"Santa Cruz"</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"Freewheeling"</code></td>
+      <td style="text-align: left">Origin of Symmetry</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">43</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"Male"</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"Santa Cruz"</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"Freewheeling, Origin of Symmetry"</code></td>
+      <td style="text-align: left">Abbey Road</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">42</td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"Male"</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">"San Diego"</code></td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Freewheeling</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Recommender systems are powerful systems that help users find relevant content and products. There are several ways to implement a recommender system, where one might focus on the content or the interactions. We have discussed a few ways one can use the <a href="https://www.nyckel.com/docs">Nyckel API</a> to quickly bring up a Recommender system.</p>
+
+
+  </div>
+
+</article></div></div></div>
+</div>
+
+<!--likely needed for hero banner loads -->
+  <script defer src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/popper.min.js"></script>
+  <script defer src="/assets/js/bootstrap.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!--likely not needed for hero banner loads -->
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script defer src="/assets/js/plugins.js"></script>
+ <script defer src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script defer src="/assets/js/scripts.js"></script>
+  <footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+
+ 
+
+  <div class="space50"></div>
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+
+
+<div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Learn More</div>
+          
+          <ul class="list-unstyled mb-0">
+            <li><a href="/contact/">Contact</a></li>
+             <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+
+
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <div class="h3 widget-title" style="color: white;">Follow Us</div>
+              <ul class="social social-mute social-s">
+                
+               <li><a href="https://twitter.com/discoverableB2B" title="Discoverable Marketing on Twitter"><i class="jam jam-twitter"></i></a></li>
+                
+               <li><a href="https://www.facebook.com/discoverablemarketing" title="Discoverable Marketing on Facebook"><i class="jam jam-facebook"></i></a></li>
+                
+               <li><a href="https://www.youtube.com/@discoverablemarketing" title="Discoverable Marketing on YouTube"><i class="jam jam-youtube"></i></a></li>
+                
+               <li><a href="https://www.linkedin.com/company/discoverable-marketing/" title="Discoverable Marketing on LinkedIn"><i class="jam jam-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            
+        <div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Company</div>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/blog/">Blog</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">© 2023 Nyckel | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">T&Cs</a></p>
+  </div>
+</footer>
+  
+</body>
+</html>

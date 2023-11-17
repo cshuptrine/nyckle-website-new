@@ -1,0 +1,1446 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/index.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-17T14:56:34-08:00</updated><id>http://localhost:4000/index.xml</id><title type="html">Nyckel | Classification API</title><subtitle>Nyckel&apos;s Classification API makes it simple to auto-label any content using AI.</subtitle><entry><title type="html">What Is Image Recognition? (And How It Differs From Image Classification)</title><link href="http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification/" rel="alternate" type="text/html" title="What Is Image Recognition? (And How It Differs From Image Classification)" /><published>2023-11-09T00:00:00-08:00</published><updated>2023-11-09T00:00:00-08:00</updated><id>http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification</id><content type="html" xml:base="http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification/"><![CDATA[<p>Image recognition is a term often used to describe using machine learning or computer vision to recognize and identify what’s in an image. Even though people use the term image recognition frequently, its meaning is vague, which can cause confusion and misunderstanding. For example, when someone says image recognition, they likely actually mean one of the following <a href="https://www.nyckel.com/blog/glossary-of-computer-vision-function-types/">types of computer vision</a>:</p>
+
+<ul>
+  <li><strong>Image classification:</strong> Assigns a <em>single</em> label to an entire image. For example, you can train an image classification function to <a href="https://www.nyckel.com/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes/">determine whether an image is AI-generated or not</a>. </li>
+  <li><strong>Image tagging:</strong> Assigns <em>multiple</em> tags (i.e., labels) to an image. For example, you can train an image tagging model to identify all the colors in an article of clothing.</li>
+  <li><strong>Object detection:</strong> Locates and identifies instances of specific objects in images or videos. For example, you can train an object detector to <a href="https://www.nyckel.com/blog/are-bounding-boxes-necessary-for-object-detection/">identify how many instances of weeds are in a plot of grass</a>.</li>
+</ul>
+
+<p>Technically speaking, these computer vision function types use either <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">Convolutional Neural Networks</a> (CNNs) or <a href="https://medium.com/data-and-beyond/vision-transformers-vit-a-very-basic-introduction-6cd29a7e56f3#:~:text=What%20is%20a%20Vision%20Transformer,and%20other%20computer%20vision%20tasks.">vision transformers</a> (ViT) to identify patterns in the pixels or patches of an image. CNNs was widely accepted as the standard model architecture for image classification, but recent advancements have vision transformers emerging as superior.</p>
+
+<h2 id="what-do-you-really-mean-by-image-recognition">What do you really mean by image recognition?</h2>
+
+<p>If you’ve set out to solve an image recognition problem, your first task is to determine which computer vision function type you really mean. To do this, it’s helpful to think about what you’re doing as a “black box” function where your input is an image. Then, think about what you want your output to be. For example:</p>
+
+<ul>
+  <li>
+    <p><strong>Do you want to label the image with one label out of two or more possible choices?</strong> If so, you need to create an image classification function (also called multi-class classification).</p>
+
+    <p>For example, if you’re a car dealership that wants to use AI to label its vehicle inventory with the brand name of each car, you could create an image classification function. The input image would be the photo of the vehicle and the output labels would be all of the brands that you stock in your dealership. For example: Ford, Honda, Toyota, Kia, Hyundai.</p>
+  </li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/image-recognition-honda-cars.png" alt="Image classification to identify car make" style="border-radius: 20px; max-width: 80%" srcset="../images/image-recognition-honda-cars.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<ul>
+  <li>
+    <p><strong>Do you want to label the image with multiple labels or tags?</strong> If so, you need to create an image tagging function (also called <a href="https://www.nyckel.com/blog/multi-class-classification-vs-multi-label-classification-key-differences-how-to-choose/">multi-label classification</a>). </p>
+
+    <p>For example, if you’re an online retailer that wants to speed the process of tagging product inventory with all of its colors, you could create an image tagging function. The input image would be the article of clothing, and the output labels would be all of the possible colors. For example: yellow, orange, red, pink, purple, blue, green, black, white, brown.</p>
+  </li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/image-recognition-boy-blue.png" alt="Image tagging to automatically identify colors on clothing" style="border-radius: 20px; max-width: 80%" srcset="../images/image-recognition-boy-blue.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<ul>
+  <li>
+    <p><strong>Do you want to pinpoint the exact location of one or more specific objects in an image?</strong> If so, you need to create an object detection function.</p>
+
+    <p>For example, if you are a brand manager that wants to monitor how your product inventory is displayed on store shelves, you could use an object detector to identify all instances of your products, like Cheerios boxes.</p>
+  </li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="https://www.nyckel.com/_content/Marketing/images/function-example-store@2x.jpg" alt="Object detection to identify products on store shelves" style="border-radius: 20px; max-width: 100%" srcset="https://www.nyckel.com/_content/Marketing/images/function-example-store@2x.jpg 2x%" />
+        <figcaption>Nyckel object detector identifies Maple Cheerios on a store shelf.</figcaption>
+        
+
+</figure>
+
+<p>While any of these computer vision function types <em>could</em> be referred to as image recognition, it’s best to be more specific, so that you can identify the best approach for solving your challenge and which machine learning services are best designed to support you.</p>
+
+<h2 id="which-image-recognition-service-is-best-for-you">Which image recognition service is best for you?</h2>
+
+<p>Once you have a better idea of the type of image recognition you need, you can start to look for machine learning services that can help you solve your problem. One distinction to be aware of as you search for an ML service is whether pretrained models will work for your use case or if you’ll need to build a custom model.</p>
+
+<p><strong>Pretrained models</strong> have already been trained on a large dataset, so you can use these models out of the box to make predictions about your own dataset. In other words, you don’t need to come up with your own training data to train the model. The downside of pretrained models is that, since they haven’t been trained on your unique data, they may not perform as well as you’d like them to when you test them on your own data. Plus, you are constrained to using the output labels that the model was trained on, which may or may not work for your use case. One example of where this can be problematic is when you need to <a href="https://www.nyckel.com/blog/custom-auto-tagging-for-digital-asset-management/">label your digital assets with industry-specific terminology.</a></p>
+
+<p>Popular services that offer pretrained models include <a href="https://cloud.google.com/vision?hl=en">Vision AI from Google</a>, <a href="https://portal.vision.cognitive.azure.com/gallery/featured">Vision Studio from Microsoft Azure</a>, and <a href="https://aws.amazon.com/rekognition/image-features/">Amazon Rekognition Image from AWS</a>. While Nyckel’s core product helps customers build custom ML models, we also have a <a href="https://www.nyckel.com/public-functions">library of pretrained models available</a>.</p>
+
+<p><strong>Custom ML models</strong> allow you to train your model using your own training data and choose exactly what you’d like for your output labels. Contrary to popular belief, custom ML models do not usually need a ton of training data to perform exceptionally well. This is due largely in part to transfer learning, which allows you to fine-tune and adapt pretrained models when building a custom model. The best custom ML services also allow you to <a href="https://www.nyckel.com/blog/introducing-invoke-capture-integrated-active-learning/">easily retrain your model</a> as you learn where your model is underperforming.</p>
+
+<p>Popular services that allow you to build custom models include <a href="https://www.nyckel.com/computer-vision-api">Nyckel</a> (👋), <a href="https://www.ximilar.com/">Ximilar</a>, <a href="https://roboflow.com/">Roboflow</a>, <a href="https://levity.ai/">Levity</a>, <a href="https://www.clarifai.com/">Clarifai</a>, <a href="https://cloud.google.com/vertex-ai?hl=en">Google Vertex AI</a>, <a href="https://azure.microsoft.com/en-us/products/ai-services/ai-custom-vision">Azure Custom Vision</a>, and <a href="https://aws.amazon.com/rekognition/custom-labels-features/?nc=sn&amp;loc=3&amp;dn=4">AWS Rekognition Custom Labels</a>. (We did a <a href="https://www.nyckel.com/blog/computer-vision-saas-landscape-comparison-of-the-top-9-players/">comparison of all of these computer vision SaaS players</a> if you’re interested in seeing how they perform against each other.)</p>
+
+<p>Interested in building a custom <a href="https://www.nyckel.com/docs/image-classification-quickstart">image classification</a>, <a href="https://www.nyckel.com/docs/image-tags-quickstart">image tagging</a>, or <a href="https://www.nyckel.com/docs/detection-quickstart">object detection</a> function? <a href="https://www.nyckel.com/console">Give Nyckel a try for free</a>, and reach out to us at any time for support with your use case.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;George Mathew&quot;, &quot;github&quot;=&gt;&quot;saintarian&quot;, &quot;twitter&quot;=&gt;&quot;georgemkan&quot;, &quot;linkedin&quot;=&gt;&quot;georgemathew&quot;}</name></author><summary type="html"><![CDATA[Image recognition is a term often used to describe using machine learning or computer vision to recognize and identify what’s in an image. Even though people use the term image recognition frequently, its meaning is vague, which can cause confusion and misunderstanding. For example, when someone says image recognition, they likely actually mean one of the following types of computer vision:]]></summary></entry><entry><title type="html">Customized Auto-Tagging for Digital Asset Management</title><link href="http://localhost:4000/blog/custom-auto-tagging-for-digital-asset-management/" rel="alternate" type="text/html" title="Customized Auto-Tagging for Digital Asset Management" /><published>2023-10-25T00:00:00-07:00</published><updated>2023-10-25T00:00:00-07:00</updated><id>http://localhost:4000/blog/custom-auto-tagging-for-digital-asset-management</id><content type="html" xml:base="http://localhost:4000/blog/custom-auto-tagging-for-digital-asset-management/"><![CDATA[<h2 id="tl-dr">TL; DR:</h2>
+
+<ul>
+  <li>AI-driven auto-tagging of digital assets (like images) aids in search, discovery, and workflow routing.</li>
+  <li>Generic auto-tagging is often frustrating because it adds noise and doesn’t provide the tags you are looking for.</li>
+  <li>Custom models that are trained on a handful of manual tags can tag exactly what you are looking for.</li>
+  <li>It is a common misconception that training custom models require tons of data, a team of AI experts, and a lot of time.</li>
+  <li>Custom auto-tagging can be implemented in hours, not weeks, and without any AI expertise. I show you how you can do it in three minutes <a href="https://www.loom.com/share/b71afe551eab40e3ab8baefd1f86a16a?sid=e54f559e-91c2-4f69-91c6-6c0e056e06f0">in this short video.</a></li>
+</ul>
+
+<h2 id="auto-tagging-in-digital-asset-management">Auto-tagging in digital asset management</h2>
+
+<p>Digital asset management (DAM) platforms help curate and manage large amounts of assets like photos. Businesses use DAM platforms to manage images for e-commerce, marketing departments, product inventory, art, photography, and much more.</p>
+
+<p>Tagging images with metadata is important in DAM for two reasons:</p>
+
+<ul>
+  <li><strong>It allows search and discovery.</strong> For example, if you want to find images of “yellow Jeep Wranglers on a beach,” one way to do that is through <a href="https://www.nyckel.com/semantic-image-search">semantic search</a>, which allows you to search a database of images using text. However, tagging the images with metadata about the contents of the image is another common way to enable this.</li>
+  <li><strong>It enables workflows based on the contents of the image.</strong> For example, if you want to kick off a process to remove the background in all images tagged with “sneakers.”</li>
+</ul>
+
+<p>Even though tagging is important, it is infeasible to tag large numbers of images manually. As a result, DAM platforms and users have been turning to AI-based auto-tagging to tag their assets without much effort.</p>
+
+<h2 id="the-problem-with-generic-auto-tagging">The problem with generic auto-tagging</h2>
+
+<p>Several APIs provide generic auto-tagging of images. For example, <a href="https://cloud.google.com/vision/docs/drag-and-drop">this one</a> from Google, <a href="https://aws.amazon.com/rekognition/image-features/">this one</a> from AWS, and <a href="https://portal.vision.cognitive.azure.com/demo/generic-image-tagging">this one</a> from Microsoft Azure. These APIs are easy to use and integrate into your DAM solution, but they have two big flaws:</p>
+
+<ul>
+  <li>They don’t always give you the tag(s) you care about.</li>
+  <li>They add noise by adding tags that you don’t care about.</li>
+</ul>
+
+<p>Let’s look at an illustrative example. Say you manage images of construction equipment, and you want to tag photos of <a href="https://en.wikipedia.org/wiki/Telescopic_handler">telehandlers</a>. Let’s look at the tags that Google’s API provides for an image of a telehandler:</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/generic_tagging_dam.png" alt="Google's tagging AI's response to an image of a telehandler" style="border-radius: 20px; max-width: 100%" srcset="../images/generic_tagging_dam.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<p>There are two things worth noting:</p>
+
+<ul>
+  <li>Google doesn’t tag the image as a telehandler (or anything close).</li>
+  <li>It returns tags like “machine,” which you don’t care about because all your photos are of machines.</li>
+</ul>
+
+<h2 id="the-solution-custom-trained-auto-tagging">The solution: custom-trained auto-tagging</h2>
+
+<p>Unlike generic auto-tagging, you can train custom AI models to tag the exact things you care about and nothing else. Let’s look at some use cases we’ve seen from our customers:</p>
+
+<ul>
+  <li>Tagging stock photography that matches a particular aesthetic</li>
+  <li>Tagging content with <a href="https://www.nyckel.com/blog/iab-classification/">IAB taxonomy</a></li>
+  <li>Make, model, and viewport tagging of car photos (<a href="https://www.nyckel.com/public-functions/vehicle-models-image-classifier">this public model</a> does just that)<a href="https://www.nyckel.com/public-functions/vehicle-models-image-classifier"></a></li>
+  <li>Detecting rooms and features in real estate photos. For example, detecting that a photo is of a kitchen and that it has an island and stainless steel appliances.</li>
+  <li><a href="https://www.nyckel.com/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier/">Custom logo detection</a> for smaller brands that are not well-served by generic logo detectors</li>
+</ul>
+
+<h2 id="myths-about-custom-trained-models">Myths about custom-trained models</h2>
+
+<p>You might wonder why everyone doesn’t use custom-trained auto-tagging if it’s so effective. Unfortunately, there are a few common <strong>misconceptions</strong> about what it takes to implement it that hold people back:</p>
+
+<ul>
+  <li><strong>Misconception 1: You need a lot of data to train a custom model</strong>. Modern models can be fine-tuned to your use case, using just a tiny amount of data. In this <a href="https://www.nyckel.com/blog/image-classification-benchmark-google-vs-aws-vs-hugging-face-vs-nyckel/">image classification benchmark</a>, we saw ~75% accuracy from just <em>five</em> examples per tag.</li>
+  <li><strong>Misconception 2: You need a team of AI experts to implement it</strong>. AutoML platforms like Nyckel do the work of an AI expert and hide the gory details behind a simple <a href="https://www.nyckel.com/docs">API</a>. Here is an example in python where we train a model to distinguish cats from dogs, and then invoke it:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">nyckel</span> <span class="kn">import</span> <span class="n">User</span><span class="p">,</span> <span class="n">ImageClassificationFunction</span>
+
+<span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">client_id</span><span class="o">=</span><span class="s">"..."</span><span class="p">,</span> <span class="n">client_secret</span><span class="o">=</span><span class="s">"..."</span><span class="p">)</span>
+
+<span class="n">func</span> <span class="o">=</span> <span class="n">ImageClassificationFunction</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s">"IsCatOrDog"</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span>
+
+<span class="c1"># provide a few examples of cats and dogs to train a model
+</span><span class="n">func</span><span class="p">.</span><span class="n">create_samples</span><span class="p">([</span>
+    <span class="p">(</span><span class="s">"cat1.jpg"</span><span class="p">,</span> <span class="s">"cat"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s">"cat2.jpg"</span><span class="p">,</span> <span class="s">"cat"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s">"dog1.jpg"</span><span class="p">,</span> <span class="s">"dog"</span><span class="p">),</span>
+    <span class="p">(</span><span class="s">"dog2.jpg"</span><span class="p">,</span> <span class="s">"dog"</span><span class="p">)])</span>
+
+<span class="c1"># check if an image has a cat or dog
+</span><span class="n">prediction</span> <span class="o">=</span> <span class="n">func</span><span class="p">.</span><span class="n">invoke</span><span class="p">(</span><span class="s">"cat_or_dog.jpg"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><strong>Misconception 3: It takes a lot of time to implement custom auto-tagging</strong>: Nyckel’s models train in roughly 60 seconds. <a href="https://www.nyckel.com/customers">Several of our customers</a> have gone from finding us to using their model in production within 24 hours. Some of our customers have trained 3,000+ models because it’s so easy, fast, and inexpensive.</li>
+</ul>
+
+<p>These myths were all true a few years ago, so they are not outright lies. But recent developments in AI research and <a href="https://www.nyckel.com/blog/automl-platform-9-features-your-solution-should-include/">user-friendly AutoML platforms</a> mean they are not true anymore and should not hold you back.</p>
+
+<h2 id="it-doesnt-have-to-be-that-hard">It doesn’t have to be that hard</h2>
+
+<p>Here is a short video showing me training, deploying, and using a custom trained model to detect telehandlers, all in under three minutes!</p>
+
+<p align="center"><iframe style="text-align:center" width="512" height="421" src="https://www.loom.com/embed/b71afe551eab40e3ab8baefd1f86a16a?sid=1fa7d442-c411-4f93-ab03-36112bbef114" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></p>
+
+<h2 id="get-in-touch">Get in touch</h2>
+
+<p><a href="https://www.nyckel.com/console">Try us out</a> for free or <a href="mailto:feedback@nyckel.com">get in touch</a> with our team to chat about your DAM use case.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;George Mathew&quot;, &quot;github&quot;=&gt;&quot;saintarian&quot;, &quot;twitter&quot;=&gt;&quot;georgemkan&quot;, &quot;linkedin&quot;=&gt;&quot;georgemathew&quot;}</name></author><summary type="html"><![CDATA[TL; DR:]]></summary></entry><entry><title type="html">Introducing Invoke Capture - Automatically Gather Important Data to Improve Your Model</title><link href="http://localhost:4000/blog/introducing-invoke-capture-integrated-active-learning/" rel="alternate" type="text/html" title="Introducing Invoke Capture - Automatically Gather Important Data to Improve Your Model" /><published>2023-10-12T00:00:00-07:00</published><updated>2023-10-12T00:00:00-07:00</updated><id>http://localhost:4000/blog/introducing-invoke-capture-integrated-active-learning</id><content type="html" xml:base="http://localhost:4000/blog/introducing-invoke-capture-integrated-active-learning/"><![CDATA[<p>At Nyckel, our goal is to give you the tools to keep your data fresh, correct, and up-to-date. To this end, we are excited to introduce our newest feature: invoke capture – active learning on model invoke data.</p>
+
+<h2 id="the-problem">The problem</h2>
+<p>Initial training is only the first step in the lifecycle of a machine learning model. To make your model more robust and keep it robust, you’ll want to continue to add more training data. Here are a couple of reasons why:</p>
+<ul>
+  <li>The world is always changing, and so is the data that your model encounters. This is called <a href="https://www.nyckel.com/blog/what-is-class-balance-drift-and-why-does-it-matter-for-content-moderation/">data drift</a>, and training data needs to be continuously updated to account for it.</li>
+  <li>We make it possible to spin up a model with a small amount of training data — as few as two examples per label — with <a href="https://www.nyckel.com/blog/image-classification-benchmark-google-vs-aws-vs-hugging-face-vs-nyckel/#ablation">impressive accuracy</a>. While our customers love how this gets them started quickly, we strongly encourage adding more data over time to make the model more robust.</li>
+</ul>
+
+<p>But where do you find data to add to your model? And once you have data, how do you find the <em>important subset of data</em> to focus your annotation effort on — the data that is most likely to improve the model?</p>
+
+<h2 id="the-solution-intelligently-capture-data-as-you-invoke-your-model">The solution: Intelligently capture data as you invoke your model</h2>
+
+<p>The best place to find more data is through the samples your model encounters as it is invoked. With invoke capture, Nyckel automatically and intelligently captures informative data as you invoke your models and then places it in a queue for your team to review and annotate later. When capturing data, we try only to capture <em>important</em> data. For example, data where the model is not confident, data from rare classes, etc. This process is commonly referred to as “active learning.” As you annotate this data in Nyckel’s dashboard, we retrain and redeploy your improved model.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/invoke-capture-workflow.jpeg" alt="Invoke capture flowchart" style="border-radius: 20px; max-width: 100%" srcset="../images/invoke-capture-workflow.jpeg 2x%" />
+        <figcaption>Invoke capture is integrated into Nyckel functions. It is designed to help you continuously improve your model by annotating more data.</figcaption>
+        
+
+</figure>
+
+<h2 id="how-does-it-work">How does it work?</h2>
+
+<p>Invoke capture is a key element of our end-to-end ML offering. It’s a built-in data flywheel powered by our active learning system. Here is how it works:</p>
+
+<ol>
+  <li>Call your trained model using the standard <code class="language-plaintext highlighter-rouge">/invoke</code> endpoint.</li>
+  <li>Nyckel automatically checks each data sample (image, text, etc.).</li>
+  <li>Samples that look “informative” are added to a staging area. You can find this staging area in the “Capture” tab on Nyckel’s dashboard.</li>
+  <li>Users annotate samples in the staging area at their own convenience.</li>
+  <li>Annotated samples are automatically added to the training data.</li>
+  <li>Nyckel retrains and redeploys the improved model.</li>
+</ol>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/invoke-capture-view-Nyckel.png" alt="UI for invoke capture" style="border-radius: 20px; max-width: 100%" srcset="../images/invoke-capture-view-Nyckel.png 2x%" />
+        <figcaption>Invoke capture is integrated into Nyckel's UI. Here's an example of captured samples, ready for review.</figcaption>
+        
+
+</figure>
+
+<h2 id="how-do-we-decide-which-samples-to-capture">How do we decide which samples to capture?</h2>
+
+<p>Identifying which samples to capture for annotation is not trivial. (Refer to our <a href="https://www.nyckel.com/blog/9-ways-to-use-a-data-engine-to-improve-your-ml-model/">deep dive on the various methods you can use to capture informative data</a>). For Nyckel’s automated invoke capture, we use several strategies for capturing informative data, including:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Sample type</strong></th>
+      <th><strong>Motivation</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Low-confidence samples</td>
+      <td>These are samples where the model is uncertain about the prediction.</td>
+    </tr>
+    <tr>
+      <td>Random samples*</td>
+      <td>Useful to avoid <a href="https://www.nyckel.com/blog/what-is-class-balance-drift-and-why-does-it-matter-for-content-moderation/">data drift</a> and to get an unbiased measure of accuracy.</td>
+    </tr>
+    <tr>
+      <td>Samples from rare classes</td>
+      <td>Improve performance of rare classes. Help balance out the training data.</td>
+    </tr>
+    <tr>
+      <td>…</td>
+      <td><em>We’ll continue to add new sample types over time.</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>*It may sound counter-intuitive to include random samples, but balancing the training data with randomly sampled data is important to ensure the model generalizes to new types of data.</p>
+
+<p>Over time, we will add to and improve our capture strategies.</p>
+
+<h2 id="why-is-invoke-capture-important">Why is invoke capture important?</h2>
+
+<p>To reiterate what we said earlier, a machine learning model exposed to real-world data is never fully trained. Data <a href="https://www.nyckel.com/blog/what-is-class-balance-drift-and-why-does-it-matter-for-content-moderation/">changes over time</a>, and new corner cases will always pop up. Selecting and annotating more data is, therefore, critical for a healthy ML production system.</p>
+
+<p>However, most data tends to be very boring and adds little value to the training set. So, if you rely simply on annotating randomly here and there, you will never discover the corner cases and data issues. This is where “active learning” shines. It helps you focus your valuable annotation time on the samples that matter the most to improving your model.</p>
+
+<p>We are excited to see you use this new feature and provide feedback. We are particularly excited about how this enables you to train and deploy a model with very little data and then continuously improve your model by periodically visiting Nyckel’s dashboard and annotating some captured data.</p>
+
+<p>Invoke capture is currently in beta. If you’re interested in trying it or have any questions about the feature, <a href="mailto:feedback@nyckel.com">reach out to us at any time</a>.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Oscar Beijbom&quot;, &quot;github&quot;=&gt;&quot;beijbom&quot;, &quot;linkedin&quot;=&gt;&quot;oscarbeijbom&quot;, &quot;twitter&quot;=&gt;&quot;beijbom&quot;}</name></author><summary type="html"><![CDATA[At Nyckel, our goal is to give you the tools to keep your data fresh, correct, and up-to-date. To this end, we are excited to introduce our newest feature: invoke capture – active learning on model invoke data.]]></summary></entry><entry><title type="html">What Is Image Classification? A Comprehensive Overview for Developers &amp;amp; Product Teams</title><link href="http://localhost:4000/blog/what-is-image-classification-a-comprehensive-overview-for-developers-product-teams/" rel="alternate" type="text/html" title="What Is Image Classification? A Comprehensive Overview for Developers &amp;amp; Product Teams" /><published>2023-10-05T00:00:00-07:00</published><updated>2023-10-05T00:00:00-07:00</updated><id>http://localhost:4000/blog/what-is-image-classification-a-comprehensive-overview-for-developers-product-teams</id><content type="html" xml:base="http://localhost:4000/blog/what-is-image-classification-a-comprehensive-overview-for-developers-product-teams/"><![CDATA[<p>Image classification is a vital technology in today’s data-driven world. But if the term is new to you, you may find yourself wondering, just what is image classification? In short, image classification is the automated categorization of images into predefined classes or labels, enabling computers to interpret visual data quickly. </p>
+
+<p>Although it’s often confused with terms like object detection, it’s not the same thing. While object detection involves identifying and locating specific instances of objects within images, image classification assigns labels to entire images.</p>
+
+<p>In this guide, we provide insights into how image classification works and discuss how you can leverage it to enhance your company’s competitive edge.</p>
+
+<h2 class="no_toc" id="table-of-contents">Table of Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#importance-of-image-classification-for-product-teams-and-developers" id="markdown-toc-importance-of-image-classification-for-product-teams-and-developers">Importance of image classification for product teams and developers</a></li>
+  <li><a href="#how-does-image-classification-work" id="markdown-toc-how-does-image-classification-work">How does image classification work?</a></li>
+  <li><a href="#types-of-image-classification" id="markdown-toc-types-of-image-classification">Types of image classification</a></li>
+  <li><a href="#applications-of-image-classification" id="markdown-toc-applications-of-image-classification">Applications of image classification</a></li>
+  <li><a href="#image-classification-models-algorithms-and-techniques" id="markdown-toc-image-classification-models-algorithms-and-techniques">Image classification models, algorithms, and techniques</a></li>
+  <li><a href="#image-classification-tools-automl-for-image-classification" id="markdown-toc-image-classification-tools-automl-for-image-classification">Image classification tools: AutoML for image classification</a></li>
+  <li><a href="#efficient-accurate-and-powerful-image-classification" id="markdown-toc-efficient-accurate-and-powerful-image-classification">Efficient, accurate, and powerful image classification</a></li>
+</ul>
+
+<h2 id="importance-of-image-classification-for-product-teams-and-developers">Importance of image classification for product teams and developers</h2>
+
+<p>As companies generate and consume increasing amounts of visual data, the importance of image classification has become more evident. Manually organizing and extracting meaningful insights from a significant amount of visual data is impractical and time-consuming. As a result, businesses need to automate how they manage, interpret, and moderate visual data.</p>
+
+<p>By harnessing advanced image classification techniques, companies can efficiently classify images, providing opportunities to improve their internal processes, create enhanced customer features, and provide improved content moderation services.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/03-image-classification-glossary-computer-vision-functions.jpg" alt="Image classifier classifies orange juice by its brand name" style="border-radius: 20px; max-width: 100%" srcset="../images/03-image-classification-glossary-computer-vision-functions.jpg 2x%" />
+        <figcaption>Nyckel’s image classifier classifies orange juice by its brand</figcaption>
+        
+
+</figure>
+
+<h3 class="no_toc" id="1-improve-internal-processes">1. Improve internal processes</h3>
+
+<p>Image classification allows businesses to streamline their data management processes. Organizations can efficiently organize and retrieve visual content by automatically categorizing images into predefined classes or labels, saving time and resources. Image classification can also promote effective decision-making by allowing companies to quickly sort through and assess large quantities of visual data. </p>
+
+<p>For example, retail businesses can enhance inventory management by automatically classifying products based on images. Inventory management driven by image classification enables them to efficiently maintain precise stock records, identify low-stock items, and track product variations. This approach helps optimize supply chain operations while decreasing the risk of overstocking or understocking. Similarly, environmental organizations can use image classification to evaluate ecosystem health, monitor landscape changes, and track wildlife populations. This process generates valuable information that policy-makers can use to formulate conversation strategies and make informed policy decisions.</p>
+
+<h3 class="no_toc" id="2-enhance-customer-features">2. Enhance customer features</h3>
+
+<p>Additionally, by harnessing advanced image classification techniques, your company can unlock opportunities to build features into your products that enhance your customer experience. If done well, these features can create a competitive edge for your business. </p>
+
+<p>Take, for instance, Gardyn, a company that sells smart indoor gardening systems. <a href="https://www.nyckel.com/blog/gardyn-reduces-workload-by-70-while-growing-2x-after-implementing-computer-vision/">Gardyn utilizes image classification</a> to analyze its customers’ plant health, helping them maintain thriving gardens. When the image classifier detects signs of stress or disease in their customers’ plants, it alerts the owner, suggesting specific actions for care. This not only simplifies gardening for users but also ensures healthy plant growth and longevity.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/gardyn-strawberry-not-strawberry.jpg" alt="Image classification to monitor plant health" style="border-radius: 20px; max-width: 100%" srcset="../images/gardyn-strawberry-not-strawberry.jpg 2x%" />
+        <figcaption>Gardyn uses image classification to monitor plant health</figcaption>
+        
+
+</figure>
+
+<p>E-commerce platforms also regularly leverage image classification to provide improved customer features. For example, Amazon uses this technology in its Amazon lens feature, which enables a visually-driven search. Customers can snap or upload a picture of a product they like, and using image classification, Amazon can quickly identify a similar item, allowing users to conveniently locate and purchase it. Amazon’s image search not only streamlines the shopping process but also sets Amazon apart as a leader in providing innovative solutions that enhance customer experiences. </p>
+
+<p>In both cases, the ability to classify images has not only addressed a customer need but has also created a competitive advantage for each business in their respective markets.</p>
+
+<h3 class="no_toc" id="3-moderate-content">3. Moderate content</h3>
+
+<p>For products with user-generated or submitted content, image classification can be critical to maintaining a safe online community. By automatically detecting and flagging inappropriate or harmful images, you can ensure your platform remains welcoming and secure for users. Strong content moderation practices foster trust and encourage user participation. For example, <a href="https://www.nyckel.com/blog/pet-media-group-saves-120k-annually-with-ai-content-moderation/">Pet Media Group uses image classification</a> to moderate pet listings on its sites and enforce the company’s strict animal welfare policies.</p>
+
+<h2 id="how-does-image-classification-work">How does image classification work?</h2>
+
+<p>Understanding how image classification works is pivotal for comprehending its significance in modern technology. This process comprises several crucial steps:</p>
+
+<p><strong>1. Gather training images:</strong> First, you must assemble a comprehensive dataset of images. These images serve as the raw material from which the classifier learns to recognize different categories.</p>
+
+<p><strong>2. Add training labels:</strong> Typically, you will need to label each image in the dataset with the category it represents. For example, if you’re developing an image classifier to identify various dog breeds, each dog image in your dataset is labeled with its respective breed.</p>
+
+<p><strong>3. Preprocessing:</strong> Before the actual training begins, the images undergo preprocessing. This step typically includes resizing images to a uniform size, normalizing pixel values, and augmenting the dataset with variations like rotations or brightness adjustments. These preparations ensure the model’s effectiveness.</p>
+
+<p><strong>4. Training:</strong> Once your input data is ready, you can train image classification models using machine learning techniques. While you can start training from scratch, it’s increasingly common to leverage transfer learning. Transfer learning involves taking pre-trained models, such as those developed on extensive image datasets like ImageNet, and fine-tuning them to recognize your specific categories. This approach often yields superior results, given that the model already possesses a wealth of general image recognition knowledge.</p>
+
+<p><strong>5. Evaluating the model:</strong> Following training, you can assess the model’s performance using a separate dataset not utilized during training. This evaluation measures how accurately the model can classify images. Metrics like accuracy, precision, recall, and F1 score are commonly used to gauge performance.</p>
+
+<p><strong>6. Inference with new images:</strong> Once the model is trained and evaluated, it’s ready for practical deployment. When presented with new, unlabeled images, the model can classify them into the predefined categories it has learned during training.</p>
+
+<p>Traditionally, the domain of machine learning (ML) was exclusive to data scientists and ML experts who had specialized knowledge to train and deploy ML models. However, a new segment of ML tools, <a href="https://www.nyckel.com/blog/end-to-end-automl-your-automl-platform-should-span-the-entire-ml-development-pipeline/">AutoML platforms</a>, has emerged to enable individuals without ML expertise to train models from labeled data and automate the intricate processes involved. These innovative tools have democratized machine learning, making it accessible to a broader audience.</p>
+
+<p>The <a href="https://www.nyckel.com/blog/image-classification-benchmark-google-vs-aws-vs-hugging-face-vs-nyckel/">best image classification platforms</a> make integrating an image classifier into your product straightforward. The process involves annotating your dataset with labels and deploying it through an API into your systems. This revolutionary approach eliminates the complexity and barriers that once held businesses without ML teams back from utilizing image classification to enhance their products and services. As a result, it’s key that your AutoML platform includes <a href="https://www.nyckel.com/blog/automl-platform-9-features-your-solution-should-include/">must-have features</a>, including a data engine and active learning.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/automl-features-graphic-new.jpeg" alt="AutoML for image classification" style="border-radius: 20px; max-width: 100%" srcset="../images/automl-features-graphic-new.jpeg 2x%" />
+        <figcaption>Nine features to evaluate in AutoML tools</figcaption>
+        
+
+</figure>
+
+<h2 id="types-of-image-classification">Types of image classification</h2>
+
+<p>There are three primary types of image classification: binary, multi-class, and multi-label. Each of these types serves distinct purposes, and selecting the appropriate one is pivotal for the success of your image classification project. When building an image classifier, it’s important to understand which type of classification you need to use. For a deeper dive, refer to our comprehensive guide on <a href="https://www.nyckel.com/blog/multi-class-classification-vs-multi-label-classification-key-differences-how-to-choose/">multi-class classification vs. multi-label classification</a>.</p>
+
+<h3 class="no_toc" id="binary-classification">Binary classification</h3>
+
+<p>Binary classification serves as the foundational block of image classification. In this approach, images are categorized into one of two exclusive classes, often representing a yes/no or true/false scenario. For example, consider the use of image classification in medical diagnostics. In cancer detection, binary classification might be used to categorize medical images into two exclusive classes: benign or malignant.</p>
+
+<h3 class="no_toc" id="multi-class-classification">Multi-class classification</h3>
+
+<p>Multi-class classification takes image categorization a step further by enabling images to be sorted into a single label or category from a set containing three or more options. Imagine an automated vehicle recognition system. It operates as a multi-class classifier, classifying images of vehicles into various categories like cars, trucks, bicycles, and motorcycles. Each image is assigned to one specific category, facilitating efficient traffic monitoring.</p>
+
+<h3 class="no_toc" id="multi-label-classification">Multi-label classification</h3>
+
+<p>Multi-label classification brings versatility to image classification by allowing images to belong to multiple categories concurrently. In the realm of content tagging for social media posts, multi-label classification proves its worth. An image posted on a social platform can be tagged with several labels, such as beach, sunset, and friends, all simultaneously. This approach enriches content discovery and user engagement.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/nyckel-flowchart-v4-medium-background.png" alt="Choose between multi-label vs. multiclass classification" style="border-radius: 20px; max-width: 100%" srcset="../images/nyckel-flowchart-v4-medium-background.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h2 id="applications-of-image-classification">Applications of image classification</h2>
+
+<p>Image classification has various practical applications across a wide range of industries. Here are a few specific use cases where image classification plays a pivotal role:</p>
+
+<h3 class="no_toc" id="label-products-for-online-shopping">Label products for online shopping</h3>
+
+<p>Companies can leverage image classification to identify, sort, and label their products, streamlining inventory management and customer interactions. For example, car dealerships can use this technology to detect the make and model of a car they need to add to their online inventory. And online retailers can use it to label clothing items with their colors, style, and fabric, supporting a seamless shopping experience.</p>
+
+<h3 class="no_toc" id="manage-digital-asset-inventory">Manage digital asset inventory</h3>
+
+<p>If your company has an extensive library of digital assets, it’s critical to have an effective way to store, organize, find, and share them. Image classification can support strong digital asset management (DAM) by quickly and accurately labeling digital assets with their respective labels. Custom classifiers trained on your own data that use labels relevant to your business can be game changers for the DAM industry, providing a level of specificity that pre-trained classifiers can’t offer.</p>
+
+<h3 class="no_toc" id="detect-ai-generated-images">Detect AI-generated images</h3>
+
+<p>The improvements we’ve seen in AI-generated content are stunning but also present growing concerns. Identifying authentic and trustworthy images from AI-generated ones can be challenging, which is especially important in specific scenarios like news reporting. To solve this, many organizations are turning to AI to detect AI. You can now <a href="https://www.nyckel.com/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes/">train an image classification function to detect fake images</a> with impressive accuracy.</p>
+
+<h3 class="no_toc" id="flag-inappropriate-content-on-your-platform">Flag inappropriate content on your platform</h3>
+
+<p>Image classification is integral to content moderation and inappropriate image detection, helping ensure online platforms remain safe and free from inappropriate content. As mentioned earlier, <a href="https://www.nyckel.com/blog/pet-media-group-saves-120k-annually-with-ai-content-moderation/">Pet Media Group uses image classification</a> to do just that: monitoring pet listings that violate the company’s animal welfare policies by detecting pictures of dogs with cropped ears or images with emojis overlaid, which often hide surgical modifications that PMG doesn’t allow.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/pmg-emoji-new2.png" alt="Image classification for pet marketplace" style="border-radius: 20px; max-width: 100%" srcset="../images/pmg-emoji-new2.png 2x%" />
+        <figcaption> PMG uses Nyckel's image classification API to detect if a seller added emojis to their image (fail) or not (pass).</figcaption>
+        
+
+</figure>
+
+<h3 class="no_toc" id="identify-your-company-logo">Identify your company logo</h3>
+
+<p>Your brand is one of your most valuable assets as a company, so monitoring how people use your logo is critical. You can use image classification to <a href="https://www.nyckel.com/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier/">automatically detect and locate instances of your company’s logo</a> across various digital platforms and content. This can help you maintain the integrity of your brand by spotting inappropriate uses of your logo while also providing valuable insights into brand visibility and customer sentiment.</p>
+
+<h3 class="no_toc" id="detect-objects-in-remote-sensing-data">Detect objects in remote sensing data</h3>
+
+<p>Remote sensors on satellites and aircraft collect a wide range of visual data that can be analyzed and interpreted for various use cases. Remote sensing data paired with image classification can detect and analyze objects or phenomena in this satellite imagery. For example, a remote sensing application could leverage image classification to identify icebergs in satellite images, aiding in planning safe ship routes in icy waters.</p>
+
+<h3 class="no_toc" id="custom-use-cases">Custom use cases</h3>
+
+<p>The beauty of custom image classification is that the use cases are nearly limitless. If you have image data and labels that you want to sort that data into, chances are you can create an image classifier that will add speed and accuracy to your product or operations. These <a href="https://www.nyckel.com/blog/5-image-classification-examples-datasets-to-build-functions-with-nyckel/">five image classification examples</a>, our <a href="https://www.nyckel.com/public-functions">pre-trained functions</a>, and <a href="https://www.nyckel.com/customers">customer stories</a> provide some good inspiration for brainstorming even more potential use cases.</p>
+
+<h2 id="image-classification-models-algorithms-and-techniques">Image classification models, algorithms, and techniques</h2>
+
+<p>Like all types of machine learning, image classification employs a range of sophisticated models, algorithms, and techniques. Recent advancements in technology have led to the democratization of machine learning, making it so developers and product teams can incorporate image classification into their products without having to become data scientists or ML experts themselves. </p>
+
+<p>While you do not need a comprehensive understanding of these methods to perform image classification, it’s helpful to understand how image classification works on a fundamental level. This section introduces you to some key concepts in image classification, including model architectures and training techniques.</p>
+
+<h3 class="no_toc" id="model-architectures">Model architectures</h3>
+
+<p>At the heart of image classification are the model architectures, which define the blueprint for how a machine learning system processes images to make predictions. One of the most pivotal breakthroughs in recent years has been the rise of Convolutional Neural Networks (CNNs). CNNs have revolutionized image classification by mimicking the human visual system, allowing them to learn hierarchical features from images. They consist of convolutional layers, pooling layers, and fully connected layers, making them exceptionally suited for tasks like image recognition. As a result, image classification using CNNs has become increasingly common.</p>
+
+<p>In addition to CNNs, the emergence of vision transformers has brought a new dimension to image classification. Vision transformers apply the self-attention mechanism, originally designed for natural language processing, to images. The self-attention mechanism allows a model to weigh the importance of elements in a sequence, such as pixels in an image, and to capture relationships between these elements. This approach has shown remarkable performance, enabling models like the Vision Transformer (ViT) to compete with CNNs in image classification tasks.</p>
+
+<h3 class="no_toc" id="training-techniques">Training techniques</h3>
+
+<p>Successful image classification hinges on the training techniques employed to fine-tune models and optimize their performance. Transfer learning is a dominant strategy in this domain. It involves leveraging pre-trained models, such as VGG, ResNet, or Inception, which have learned rich features from massive datasets like ImageNet. By transferring this knowledge to a new image classification task, developers can achieve impressive results with relatively small datasets, significantly reducing the need for vast amounts of labeled training data.</p>
+
+<p>Moreover, techniques like Support Vector Machines (SVMs), Random Forests, logistic regression, k-nearest neighbors (k-NN), and fine-tuning offer additional options for refining image classification models. These techniques allow practitioners to adapt and customize pre-existing models to specific use cases, tailoring their performance and accuracy.</p>
+
+<h3 class="no_toc" id="difference-between-supervised-and-unsupervised-classification">Difference between supervised and unsupervised classification</h3>
+
+<p>In addition to having a working understanding of the most popular image classification algorithms and models, it’s also important to understand the difference between supervised and unsupervised classification.</p>
+
+<h4 class="no_toc" id="supervised-classification">Supervised classification</h4>
+
+<p>Supervised classification is a method where a machine learning model is trained on a labeled dataset, meaning that each image in the dataset is assigned a predefined category or class. You can use this approach when you want the model to learn patterns and relationships between features in the labeled data, allowing it to generalize and make predictions on new, unlabeled data. It is highly beneficial when you have a clear understanding of the categories you want to classify images into. For example, in medical imaging, you can train a supervised classification model to identify different types of tumors based on a labeled dataset of medical images. This method allows for precise categorization and is particularly useful when you have well-defined classes and a substantial amount of labeled data.</p>
+
+<h4 class="no_toc" id="unsupervised-classification">Unsupervised classification</h4>
+
+<p>In contrast, unsupervised classification involves grouping images without predefined categories or labels. It’s a valuable technique when you have a large dataset and want to discover hidden patterns or group similar images together based on their inherent similarities. For example, you could use unsupervised classification to cluster photos on a social media platform. Without any prior labeling, the system can group photos with similar content or themes, making it easier for users to navigate and find related content. Unsupervised classification is versatile and can reveal insights from unstructured image data, but it may not provide as precise categorization as supervised methods due to the absence of predefined classes.</p>
+
+<h3 class="no_toc" id="popular-image-classification-frameworks">Popular image classification frameworks</h3>
+
+<p>Machine learning (ML) frameworks are essential software tools and libraries that provide a structured environment for developing, training, and deploying machine learning models. These frameworks offer a range of functionalities, including data preprocessing, model building, optimization, and evaluation. They simplify the implementation of complex algorithms and allow researchers and developers to efficiently work with various machine learning techniques and neural network architectures.</p>
+
+<p>For those with programming experience, Python is one of the most popular languages for machine learning tasks. Some popular machine learning frameworks for image classification using Python include Keras, PyTorch, Tensorflow, and SciKit Learn. While these frameworks are useful for developers with machine learning domain expertise, there are no-code or low-code APIs available that are more user-friendly and simplify the image classification process.</p>
+
+<h2 id="image-classification-tools-automl-for-image-classification">Image classification tools: AutoML for image classification</h2>
+
+<p>With image classification, the right tool can make all the difference for software engineers, product owners, and tech leaders looking to streamline their workflow without diving into the complexities of machine learning. Here, we guide you through a selection of image classification tools designed to simplify your journey. Our <a href="https://www.nyckel.com/blog/computer-vision-saas-landscape-comparison-of-the-top-9-players/">computer vision SaaS landscape</a> review offers a deeper look into these top players, and our <a href="https://www.nyckel.com/blog/image-classification-benchmark-google-vs-aws-vs-hugging-face-vs-nyckel/">image classification benchmark</a> offers additional side-by-side comparisons.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/CV-pillar-CVlandscape.png" alt="Computer vision SaaS tools" style="border-radius: 20px; max-width: 100%" srcset="../images/CV-pillar-CVlandscape.png 2x%" />
+        <figcaption>Top 9 Computer Vision SaaS Players</figcaption>
+        
+
+</figure>
+
+<h3 class="no_toc" id="nyckel">Nyckel</h3>
+
+<p><a href="https://www.nyckel.com/image-classification-api">Nyckel</a> stands out as a quick and accurate machine learning API tailored for developers and product teams lacking in-house ML expertise. Beyond image classification, Nyckel extends its capabilities to text and tabular classification, tagging, and search. With its user-friendly drag-and-drop interface and rapid setup, Nyckel allows you to import and label images in seconds. The model updates on the fly as new data is annotated, making it a top choice for those seeking lightning-fast machine learning without the need for deep ML knowledge.</p>
+
+<h3 class="no_toc" id="google-vertex-ai">Google Vertex AI</h3>
+
+<p><a href="https://cloud.google.com/vertex-ai/docs/image-data/classification/train-model">Google Vertex AI</a> is Google’s unified data and AI platform. While powerful, it comes with a steep learning curve. Although it provides solid accuracy, the initial setup and labeling process can be complex. Still, its integration with the broader Google ecosystem can be advantageous for those willing to invest time in the learning curve.</p>
+
+<h3 class="no_toc" id="amazon-rekognition-custom-labels">Amazon Rekognition Custom Labels</h3>
+
+<p><a href="https://docs.aws.amazon.com/rekognition/latest/customlabels-dg/tutorial-classification.html">Amazon Rekognition Custom Labels</a> offers customizable computer vision APIs. While the setup process can be tedious, the platform’s interface simplifies the training process. However, it requires coding for deployment, so it may not be suitable for those without coding expertise.</p>
+
+<h3 class="no_toc" id="hugging-face-autotrain">Hugging Face AutoTrain</h3>
+
+<p><a href="https://huggingface.co/blog/autotrain-image-classification">Hugging Face AutoTrain</a> allows you to build image classification models using transformer-based architectures. It offers pre-trained models and fine-tuning options, making it suitable for various applications. However, it’s neither the fastest nor cost-effective option in this space.</p>
+
+<h3 class="no_toc" id="ximilar">Ximilar</h3>
+
+<p><a href="https://www.ximilar.com/services/computer-vision-platform/#image-classification">Ximilar</a> specializes in computer vision, providing user-friendly tools and pre-trained models for specific use cases. Its drag-and-drop interface streamlines data import and labeling, while model training takes around 20 minutes. Ximilar offers accurate results and an “Explain” feature that overlays heatmaps on images to visualize AI weightings.</p>
+
+<h3 class="no_toc" id="roboflow">Roboflow</h3>
+
+<p><a href="https://roboflow.com">Roboflow</a> focuses on computer vision, offering a drag-and-drop interface for image and video upload. It provides training options for both speed and accuracy, with the ability to choose public checkpoints. Roboflow’s model training is efficient, taking just six minutes in our test, and offers various customization options through subscription plans.</p>
+
+<h3 class="no_toc" id="hasty">Hasty</h3>
+
+<p><a href="https://hasty.ai/docs/userdocs/annotation-environment/manual-and-semi-automated-tools/image-tags#:~:text=To%20support%20image%20classification%2C%20we,creating%20tags%20with%202%2D3x.">Hasty</a> is a data-centric ML platform specializing in computer vision. While it markets image classification, our test revealed a preference for object detection. The annotation process can be time-consuming, and Hasty’s model accuracy may be limited in some cases.</p>
+
+<h3 class="no_toc" id="levity">Levity</h3>
+
+<p><a href="https://levity.ai">Levity</a> automates tasks like tagging and classifying images, with an intuitive user interface. Model training is quick, but its core ML performance may not match some competitors.</p>
+
+<h3 class="no_toc" id="clarifai">Clarifai</h3>
+
+<p><a href="https://www.clarifai.com/computer-vision">Clarifai</a> offers a broad ML service with a mix of ease-of-use and complexity. While the data upload process is straightforward, some terminology and functionality can be confusing. </p>
+
+<h3 class="no_toc" id="azure-custom-vision">Azure Custom Vision</h3>
+
+<p><a href="https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/getting-started-build-a-classifier">Azure Custom Vision</a> is Microsoft’s computer vision solution within Azure Cognitive Services. While it delivers accurate results, the setup process can be frustrating. Once past the initial hurdles, training and testing the model is efficient, and Azure Custom Vision offers extensive resources for support.</p>
+
+<p>When choosing the best image classification tool for you, we recommend reviewing each platform to see <a href="https://www.nyckel.com/blog/automl-platform-9-features-your-solution-should-include/">how many of these nine features they include</a>. Consider factors like function type support, ease of use, model accuracy, latency, pricing transparency, and developer experience. Your ideal solution will depend on your specific needs, whether it’s rapid model training, top-notch accuracy, low latency, or a smooth developer experience. To optimize your image classification workflow, be sure to make an informed choice that aligns with your priorities.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/image-classification-with-automl.jpeg" alt="Image classification workflow with AutoML platform" style="border-radius: 20px; max-width: 100%" srcset="../images/image-classification-with-automl.jpeg 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h2 id="efficient-accurate-and-powerful-image-classification">Efficient, accurate, and powerful image classification</h2>
+
+<p>Image classification is a vital technology that offers numerous benefits to software engineers, product owners, and tech leaders in today’s data-driven business environment. It provides a solution for efficiently managing and interpreting the ever-increasing volume of visual data, automating processes, and enhancing decision-making.</p>
+
+<p>Nyckel’s image classification capabilities empower businesses by simplifying the complex world of machine learning and enabling users to harness the power of image recognition. Nyckel’s <a href="https://www.nyckel.com/customers">real use cases from satisfied customers</a> highlight the practicality and effectiveness of our image classification solutions. Whether it’s streamlining inventory management for car dealerships, enhancing customer convenience in food ordering, or automating content moderation for online platforms, Nyckel has demonstrated its value across diverse industries. </p>
+
+<p><a href="https://www.nyckel.com/console">Sign up for a free account</a> to explore Nyckel’s product, check out our <a href="https://www.nyckel.com/docs/image-classification-quickstart">image classification quick start guide</a>, and don’t hesitate to <a href="mailto:feedback@nyckel.com">reach out to us at any time</a> if you need support.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;George Mathew&quot;, &quot;github&quot;=&gt;&quot;saintarian&quot;, &quot;twitter&quot;=&gt;&quot;georgemkan&quot;, &quot;linkedin&quot;=&gt;&quot;georgemathew&quot;}</name></author><summary type="html"><![CDATA[Image classification is a vital technology in today’s data-driven world. But if the term is new to you, you may find yourself wondering, just what is image classification? In short, image classification is the automated categorization of images into predefined classes or labels, enabling computers to interpret visual data quickly. ]]></summary></entry><entry><title type="html">Logo Identifier: How to Detect Your Logo With a Custom Image Classifier</title><link href="http://localhost:4000/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier/" rel="alternate" type="text/html" title="Logo Identifier: How to Detect Your Logo With a Custom Image Classifier" /><published>2023-10-02T00:00:00-07:00</published><updated>2023-10-02T00:00:00-07:00</updated><id>http://localhost:4000/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier</id><content type="html" xml:base="http://localhost:4000/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier/"><![CDATA[<div class="comment-div">
+  <p>Need help identifying a specific logo? Search for our pre-trained logo detectors including <a href="https://www.nyckel.com/public-functions/food-logos-image-classifier">food-related logos</a>, <a href="https://www.nyckel.com/public-functions/transportation-logos-image-classifier">transportation logos</a>, <a href="https://www.nyckel.com/public-functions/leisure-logos-image-classifier">leisure brands</a>, <a href="https://www.nyckel.com/public-functions/institution-logos-image-classifier">institution logos</a>, <a href="https://www.nyckel.com/public-functions/electronic-logos-image-classifier">electronic logos</a>, <a href="https://www.nyckel.com/public-functions/cosmetic-logos-image-classifier">cosmetic logos</a>, and <a href="https://www.nyckel.com/public-functions/clothes-logos-image-classifier">clothes logos</a>.</p>
+
+</div>
+
+<p>Your brand is one of your most valuable assets as a business. As a result, it’s critical to monitor and protect all visual representations of your brand, especially your logo. Logo detection (also called logo recognition) uses AI and automation to identify your logo across digital platforms and content.</p>
+
+<p>In today’s digital age, logo detection provides numerous benefits, enabling you to safeguard your brand identity, monitor brand mentions, and track the reach of your marketing efforts. For example, you can monitor your brand’s presence on social media platforms and across the broader online landscape, unlocking valuable insights into brand visibility and customer sentiment. </p>
+
+<p>Businesses can also swiftly identify counterfeit products bearing the company’s logo, thereby protecting brand integrity and consumer trust. A logo identifier can even be a powerful tool for anti-phishing efforts, enabling companies to spot fraudulent activities where companies illicitly employ their logo.</p>
+
+<p>In this article, we’ll share how your business can quickly and easily create a custom logo identifier to detect images containing your logo.</p>
+
+<h2 id="how-does-logo-detection-work">How does logo detection work?</h2>
+
+<p>Logo detection uses image classification, a fundamental task in <a href="https://www.nyckel.com/blog/glossary-of-computer-vision-function-types/">computer vision</a> where a machine learning model categorizes an image into predefined classes or labels. Image classification models analyze various visual features, such as shapes, colors, and textures, to determine which category or object an image belongs to.</p>
+
+<p>Logo detection leverages image classification to recognize the unique visual characteristics of a company’s logo in an image. Using machine learning algorithms, these models learn to identify the logo, distinguishing it from other elements in the image. When presented with new content to review, the model determines whether the logo is present in the image or not.</p>
+
+<h2 id="how-to-build-a-logo-identifier-in-5-steps">How to build a logo identifier in 5 steps</h2>
+
+<p>In this article, we’ll explore how you can easily build your own logo identifier. For this example, we’ll use Kaggle’s <a href="https://www.kaggle.com/datasets/linkanjarad/famous-brand-logos">Famous Brand Logos Dataset</a> and use it to train an image classification function with Nyckel. This data set contains over 2,500 logo images from 30 famous brands, with each image labeled by brand.</p>
+
+<h3 id="1-collect-training-data">1. Collect training data</h3>
+
+<p>The first step to creating an effective logo identifier involves collecting strong training data. To ensure good model performance, it’s important to collect a diverse array of images featuring your logo in various environments, including scenarios where the logo isn’t perfectly displayed. This image variety enables your image classifier to learn to recognize your logo under a wide range of conditions.</p>
+
+<p>When collecting the data, it’s also essential to determine a systematic labeling strategy. For example, you might want to use the label “Yes_[Brand Name] Logo” for images where your logo is correctly displayed, “Altered [Brand Name] Logo” for cases where your logo has been modified or adjusted, and “No_[Brand Name] Logo” for images where your logo is entirely absent. Organizing your training data into folders bearing these labels can simplify the annotation process in subsequent stages, making it more efficient to create your logo identifier.</p>
+
+<p>For our example, we’ll focus on identifying the Coca-Cola logo. Since we’re using a data set of official logos, we won’t be including altered versions of the logo in our training data. Instead, we’ll simply label the logos in our data set as either “CocaCola” or “NotCocaCola.” To do this, we start by placing all 98 Coca-Cola images from the data set in a folder called “CocaCola.” For our other logo examples, we’ll take 10 images from 10 other logo classes (i.e., brands) and place them in a folder labeled “NotCocaCola.”</p>
+
+<h3 id="2-upload-your-data-to-nyckel">2. Upload your data to Nyckel</h3>
+
+<p>To upload your data to Nyckel, you first need to <a href="https://www.nyckel.com/docs/image-classification-quickstart">configure an image classification function</a>. To do this, create a function that accepts an image as input and then set the output to “classify.” Next, you can import your training data into Nyckel’s platform.</p>
+
+<p>Nyckel lets you bulk-upload and bulk-label your images, simplifying the data annotation process. You can efficiently upload your data by selecting images in batch sizes (limited to 1,000 images per batch) and assigning labels accordingly. In this case, labeling the data is as simple as saving them into separate folders (e.g., “CocaCola” and “NotCocaCola”). We can then label all the images at once when we upload a folder. Nyckel also lets you annotate after uploading all of the images.</p>
+
+<p>After your data is uploaded and annotated, Nyckel immediately starts training your model. As the model trains, you’ll see an indicator on the side of your screen telling you how confident Nyckel is in its model predictions. This immediate feedback allows you to monitor and assess the accuracy and performance of your logo identifier in real time.</p>
+
+<h3 id="3-try-out-the-model">3. Try out the model</h3>
+
+<p>After the model finishes training, we can check its performance and see that it correctly classified 99% of examples as to whether they contained a Coca-Cola logo. Our model only got two examples wrong! Looking at the examples, it’s easy to see why our model may not have recognized the logo:</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/logo-identifer-api-model.png" alt="" style="border-radius: 20px; max-width: 100%" srcset="../images/logo-identifer-api-model.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h3 id="4-deploy-the-model-into-your-systems-using-our-api">4. Deploy the model into your systems using our API</h3>
+
+<p>Once the logo identifier is trained and ready to go, the next step is to deploy the model into your systems using Nyckel’s API. Nyckel designed this deployment process to be simple to ensure you can easily integrate your model into your existing infrastructure.</p>
+
+<p>Through Nyckel’s API, your model automatically runs on optimized hardware, eliminating the need for you to grapple with hardware-related complexities. Because Nyckel handles scaling demands and performance optimization, you can focus on getting the most out of your logo identifier while enjoying the benefits of a high-performance logo detection API.</p>
+
+<h3 id="5-monitor-and-improve-model-performance">5. Monitor and improve model performance</h3>
+
+<p>Nyckel provides tools that make it easy to monitor and enhance your logo identifier’s performance. Its <a href="https://www.nyckel.com/blog/introducing-invoke-capture-integrated-active-learning/">invoke capture feature</a> makes the process of refining and fine-tuning your model quick and intuitive. This feature automatically captures random data and data with low confidence predictions from the model’s invokes, so that you can annotate this data to retrain the model, ultimately improving the model’s performance.</p>
+
+<figure class="figure" style="width: 100%">
+    <div style="position: relative; padding-bottom: calc(67.56756756756756% + 41px); height: 0;">
+        <iframe src="https://app.arcade.software/IcuRLvCTKTAQV5cGOMXY?embed" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px;"></iframe>
+    </div>
+    
+    <figcaption>Click through this demo to see how we built the logo detector with Nyckel.</figcaption>
+    
+</figure>
+
+<h2 id="nyckel-vs-pre-built-logo-identifier">Nyckel vs. pre-built logo identifier</h2>
+
+<p>There are many pre-built logo identifiers and image recognition tools available. And while these tools may work well for certain companies, custom logo identifiers (like the one we built with Nyckel) offer several benefits. </p>
+
+<p>The most noticeable distinction is that pre-built logo identifiers primarily cater to large companies with significant brand recognition. Meaning, these pre-built tools have been trained using popular, recognizable logos (like Coca-Cola’s). With a custom logo identifier, however, you provide your own training data, so you can build a tool that’s optimized to detect your logo, whether you’re a burgeoning startup or an established company.</p>
+
+<p>Second, Nyckel’s built-in data engine makes it easy for you to improve your model over time with new samples of real-world data. As your brand grows and evolves, your logo identifier does, too. With Nyckel, your logo identifier can adapt to new challenges and provide consistent brand protection even as your brand changes.</p>
+
+<p>Nyckel provides the flexibility, accuracy, and adaptability that businesses need to create a reliable logo identifier. If you’d like to take the next step to safeguarding your brand, <a href="https://www.nyckel.com/console">sign up for a free Nyckel account</a> to create your custom logo identifier. Run into any issues along the way? <a href="mailto:feedback@nyckel.com">Reach out to us</a> at any time.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Becca Miller&quot;, &quot;linkedin&quot;=&gt;&quot;becca-miller-96a570b8&quot;}</name></author><summary type="html"><![CDATA[Need help identifying a specific logo? Search for our pre-trained logo detectors including food-related logos, transportation logos, leisure brands, institution logos, electronic logos, cosmetic logos, and clothes logos.]]></summary></entry><entry><title type="html">AI Image Detector: Can You Use Image Classification to Spot the Fakes?</title><link href="http://localhost:4000/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes/" rel="alternate" type="text/html" title="AI Image Detector: Can You Use Image Classification to Spot the Fakes?" /><published>2023-09-11T00:00:00-07:00</published><updated>2023-09-11T00:00:00-07:00</updated><id>http://localhost:4000/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes</id><content type="html" xml:base="http://localhost:4000/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes/"><![CDATA[<p><em>For this article, we hired <a href="https://www.linkedin.com/in/becca-miller-96a570b8/">Becca Miller</a>, a freelance software developer and technical writer, to build an AI image detector using <a href="https://www.nyckel.com/image-classification-api">Nyckel image classification</a>. Becca details her experience below and shares how you can build the image classifier yourself.</em></p>
+
+<p>Thanks to recent advancements in artificial intelligence, we’ve seen remarkable quality improvements in AI-generated images. Tools like DALL-E, Midjourney, and Stable Diffusion continue to impress us with each new product release. However, these improvements have also led to growing <a href="https://www.nytimes.com/2023/04/08/business/media/ai-generated-images.html">concerns about identifying authentic and trustworthy images</a> (e.g., deepfakes on social media). With surges in AI-generated content, we now encounter synthetic images created by image generators that are difficult to distinguish from real photos.</p>
+
+<p>In this article, I explore the process of building an AI image detection tool using Nyckel image classification. I share a step-by-step overview of how I created the image classifier and reflect on my experience working with Nyckel’s product.</p>
+
+<p><em>Looking for a way to detect if a specific image is AI-generated? Upload your image to <a href="https://www.nyckel.com/public-functions/ai-generated-images-image-classifier">Nyckel’s pretrained AI-Generated Image Detector</a>.</em></p>
+
+<h2 id="cifake-real-and-ai-generated-synthetic-images">CIFAKE: Real and AI-Generated Synthetic Images</h2>
+
+<p>Building an image classification function starts with identifying a high-quality dataset. To train the AI image detection classifier, I used images from the publicly available <a href="https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images">CIFAKE dataset</a>. This dataset contains 60,000 synthetically-generated images and 60,000 real images, divided into training and testing sets. </p>
+
+<p>The real images in the dataset were collected from the publicly available CIFAR-10 dataset. Then, the synthetic images were generated by applying a technique called latent diffusion to the real images. This dataset is free for public use, so if you want to follow along with this tutorial by building your own classifier, you can get started by <a href="https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images">downloading the images</a> and <a href="https://www.nyckel.com/console">creating a free Nyckel account</a>.</p>
+
+<h2 id="5-steps-to-detect-fake-images-with-nyckel">5 Steps to Detect Fake Images with Nyckel</h2>
+
+<p>Here’s a glimpse into the high-level steps I took to craft the AI image detection tool:</p>
+
+<h3 id="1-create-a-new-function">1. Create a new function</h3>
+
+<p>After signing up for a Nyckel account, I started by creating a new function from Nyckel’s dashboard. This takes mere seconds; I simply had to specify that the function should accept an image as the input and that the output is “classify.” In other words, I’m creating an image classification function.</p>
+
+<h3 id="2-import-images">2. Import images</h3>
+
+<p>After creating the function, I started importing images. Nyckel lets you bulk-upload and bulk-label images. Import batch sizes are limited to 1,000 images, so I only used a subset of the CIFAKE training dataset. I selected 1,000 real images to import and set their label as “real,” and then selected 1,000 synthetic images to import and set their label to “synthetic.” The platform also allows you to import images unlabeled, and then later add the labels manually.</p>
+
+<h3 id="3-train-the-ai-model">3. Train the AI model</h3>
+
+<p>Once the images were imported and labeled, Nyckel launched the training process immediately. Within seconds, the model was making predictions based on the training data. With this near-instant feedback, I could quickly see whether the AI image detector was correctly classifying images as real or synthetic, as well as the model’s certainty (confidence score) about its predictions.</p>
+
+<p>Nyckel made the training process simple by handling the model fine-tuning behind the scenes. While that limits your ability to manually adjust training parameters, it makes the platform much more accessible for people who are new to machine learning. Nyckel tries out various training parameters and techniques to find one that works best for your data. Even if you do have some experience in ML, the benefit of this automated hyperparameter sweep is that it speeds the process, and you don’t have to worry about selecting optimal values.</p>
+
+<h3 id="4-review-model-outputs">4﻿. Review model outputs</h3>
+
+<p>Nyckel provided a variety of sorting and filtering options that I could use to assess the AI model’s performance on individual examples. I could sort image classifications based on the recency of the image import, the recency of the annotation, and the confidence of the model in its prediction. I could also filter by function’s output (e.g., real vs. synthetic and disagrees vs. agrees with the label), as well as by the label type (real, synthetic, or unlabeled). These sorting and filter options were useful for identifying examples where the model struggled to classify an image.</p>
+
+<h3 id="5-invoke-for-new-inputs">5﻿. Invoke for new inputs</h3>
+
+<p>With the model trained, I could now invoke the model with new inputs. Nyckel’s invoke tab allowed me to upload new images that our model would classify as real or synthetic, directly from the user interface. The invoke tab only allowed me to assess one image at a time, but Nyckel also provided an API to invoke the model, complete with example requests:</p>
+
+<p>``` python</p>
+
+<p>import requests</p>
+
+<p>url = ‘INSERT YOUR URL HERE`’</p>
+
+<p>headers = {</p>
+
+<p>    ’Authorization’: ‘Bearer ‘ + ‘INSERT YOUR BEARER TOKEN HERE’</p>
+
+<p>}</p>
+
+<p>with open(‘<fileName>', 'rb') as f:</fileName></p>
+
+<p>    result = requests.post(url, headers=headers, files={‘data’: f})</p>
+
+<p>print(result.text)</p>
+
+<p>```</p>
+
+<p>You can learn more about the API via the <a href="https://www.nyckel.com/docs">API documentation</a>.</p>
+
+<h2 id="the-ai-image-detectors-performance">The AI Image Detector’s Performance</h2>
+
+<p>Nyckel’s web interface did not provide a way to assess the model’s performance on a held-out validation set, but the AI image detector provided promising results in cross-validation. Since cross-validation involves resampling the data so that different portions of that data are used to test and train a model on each iteration, it provides a good idea of how the performance will generalize to an independent data set. Additionally, cross-validation is a very data efficient way to train a model, allowing users to produce models with less training data.</p>
+
+<p>In cross-validation, the model correctly identified 92.4% of AI-generated images as synthetic and 92.3% of real images as authentic. That’s great performance for a model only trained on 2,000 images!</p>
+
+<h2 id="spot-ai-generated-images-without-ml-expertise">Spot AI-Generated Images Without ML Expertise </h2>
+
+<p>The process of building our AI detection tool was simple and fast, taking less than 15 minutes to accomplish. The most substantial portion of my time was spent selecting and organizing the subset of images I would use to train the model, since I couldn’t train the model on the full dataset. </p>
+
+<p>Although the web interface doesn’t include certain features that machine learning experts might expect to find (like setting training parameters), Nyckel makes image classification accessible to non-experts through its user-friendly interface, real-time feedback, and easy navigation. It enables even those new to computer vision to train an algorithm on their own dataset in a matter of minutes.</p>
+
+<h2 id="demo-of-building-an-ai-image-detector">Demo of building an AI image detector</h2>
+<p>Click through the demo below to see how quick it is to create an AI image detector with Nyckel.</p>
+
+<figure class="figure" style="width: 100%">
+    <div style="position: relative; padding-bottom: calc(67.56756756756756% + 41px); height: 0;">
+        <iframe src="https://app.arcade.software/TsWgKl99OtRyCB3Et17q?embed" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px;"></iframe>
+    </div>
+    
+</figure>
+
+<p>Interested in building an image classifier yourself, or using Nyckel for AI detection? <a href="https://www.nyckel.com/console">Sign up for a free account</a> and <a href="mailto:feedback@nyckel.com">reach out to the Nyckel team</a> at any time with any questions.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Becca Miller&quot;, &quot;linkedin&quot;=&gt;&quot;becca-miller-96a570b8&quot;}</name></author><summary type="html"><![CDATA[For this article, we hired Becca Miller, a freelance software developer and technical writer, to build an AI image detector using Nyckel image classification. Becca details her experience below and shares how you can build the image classifier yourself.]]></summary></entry><entry><title type="html">Hierarchical Image Classification vs. Flat Classification: What Does Your ML Task Need?</title><link href="http://localhost:4000/blog/hierarchical-image-classification-vs-flat-classification-what-does-your-ml-task-need/" rel="alternate" type="text/html" title="Hierarchical Image Classification vs. Flat Classification: What Does Your ML Task Need?" /><published>2023-08-28T00:00:00-07:00</published><updated>2023-08-28T00:00:00-07:00</updated><id>http://localhost:4000/blog/hierarchical-image-classification-vs-flat-classification-what-does-your-ml-task-need</id><content type="html" xml:base="http://localhost:4000/blog/hierarchical-image-classification-vs-flat-classification-what-does-your-ml-task-need/"><![CDATA[<p>The objective of image classification is to categorize an image into one or more labels of your choosing. When building an image classifier, you can either use hierarchical image classification or flat image classification.</p>
+
+<p>In this article, we explain the differences between hierarchical and flat image classification and make the case for why a flat structure is often the better choice for many use cases.</p>
+
+<h2 id="what-is-hierarchical-image-classification">What is hierarchical image classification?</h2>
+
+<p>Hierarchical image classification organizes categories using a tree structure. At the top of the tree, you start by classifying an image into broad categories. As you can branch off from that initial category, the categories become more specific, ultimately working toward the level of granularity you’re aiming for in your desired output from the model.</p>
+
+<p>For example, let’s consider a use case where you are classifying a dataset of car images by their make and model, and your model is trying to classify a photo of a Toyota Camry. In a hierarchical classifier, your model would first predict the brand/make of the car (Toyota, Honda, Ford, etc.). Next, it predicts the vehicle type (sedan, SUV, truck, etc.). And then finally, it predicts the model of the car (e.g., Camry, Corolla, Prius, etc.). This means you end up with <strong>a lot</strong> of models. In the example below, you have 1 model in Level 1, N models in Level 2 (where N is the number of brands in Level 1), and so on.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/hierarchical-classificationexample.png" alt="hierarchical image classification example" style="border-radius: 20px; max-width: 100%" srcset="../images/hierarchical-classificationexample.png 2x%" />
+        <figcaption> In a real example, you’d likely have many more brands, and thus, many more models to manage.</figcaption>
+        
+
+</figure>
+
+<h2 id="what-is-flat-image-classification">What is flat image classification?</h2>
+
+<p>Flat image classification bypasses the granular steps of the different levels used in hierarchical classification and goes directly from input image → desired output label. Using the same example above, the image classifier would immediately classify the image with the make &amp; model (Toyota Camry), without making more granular decisions along the way (like whether the car is a sedan or SUV). If you really needed to know the vehicle type (sedan), you could work backward from the output label of “Toyota Camry” to infer what it is.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/flat-classification-example3.png" alt="Flat image classification example" style="border-radius: 20px; max-width: 100%" srcset="../images/flat-classification-example3.png 2x%" />
+        <figcaption> In a real example, you’d likely have many more output labels (as many labels are there are car types to classify).</figcaption>
+        
+
+</figure>
+
+<h2 id="are-hierarchical-classifiers-more-accurate">Are hierarchical classifiers more accurate?</h2>
+
+<p>The most significant benefit of a hierarchical classifier is that you can retrain the specific points at which the model isn’t performing well. For example, in the use case above, if the classifier is performing poorly when classifying Toyotas correctly, you could retrain just that node without changing the rest of the tree. Hierarchical classifiers are more modular in this way.</p>
+
+<p>However, hierarchical classifiers are not inherently more accurate, even if intuitively it may seem easier for a model to make predictions when the task is broken down into smaller, “easier” decisions. For example, it may seem like it would be easier for the model to predict a car is a Camry if it first knows that it’s a sedan. But, in practice, hierarchical classifiers are not more accurate, primarily because if the classifier makes a mistake in one level, there’s no correcting that mistake. It’s going to mislabel the image. If the classifier above incorrectly classified the Toyota Camry as a Honda in the first level, the image is ultimately going to be mislabeled when classifying it by the make of the vehicle.</p>
+
+<h2 id="how-to-choose-between-hierarchical-image-classification-and-flat-classification">How to choose between hierarchical image classification and flat classification</h2>
+
+<p>The decision about whether to use a hierarchical image classifier or a flat classifier shouldn’t be about accuracy. They can both be highly accurate with high-quality, well-annotated data and a <a href="https://www.nyckel.com/blog/9-ways-to-use-a-data-engine-to-improve-your-ml-model/">data engine</a> to help you find and correct problem cases.</p>
+
+<p>Instead, <strong>choosing between hierarchical image classification and flat image classification should be about whether it’s easier for you to manage one large function (flat) or many small functions (hierarchical).</strong> If you have a classifier with hundreds of possible labels, it’s often impractical and unwieldy to use a single classifier. In that case, it likely makes sense to break up the classifier into smaller functions with a hierarchical structure. For example, Nyckel’s image classifier can have up to 200 classes. If your ML task has more than that, you’ll need to create multiple functions.</p>
+
+<p>However, if you are labeling images with a smaller set of labels, the benefit of only managing one function likely outweighs any benefits you could get from using a hierarchical structure. </p>
+
+<p>Do you have an image classification use case you’re trying to solve and not sure how to approach it? <a href="mailto:feedback@nyckel.com">Reach out to us</a>, and we’ll help you brainstorm how best to structure your classifier. Otherwise, <a href="https://www.nyckel.com/console">sign up for a free account</a> to give it a spin for yourself and use our <a href="https://www.nyckel.com/docs/image-classification-quickstart">image classification quick start</a> as a guide.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Oscar Beijbom&quot;, &quot;github&quot;=&gt;&quot;beijbom&quot;, &quot;linkedin&quot;=&gt;&quot;oscarbeijbom&quot;, &quot;twitter&quot;=&gt;&quot;beijbom&quot;}</name></author><summary type="html"><![CDATA[The objective of image classification is to categorize an image into one or more labels of your choosing. When building an image classifier, you can either use hierarchical image classification or flat image classification.]]></summary></entry><entry><title type="html">9 Must-Have Features for Your AutoML Platform: A Comprehensive Guide</title><link href="http://localhost:4000/blog/automl-platform-9-features-your-solution-should-include/" rel="alternate" type="text/html" title="9 Must-Have Features for Your AutoML Platform: A Comprehensive Guide" /><published>2023-08-22T00:00:00-07:00</published><updated>2023-08-22T00:00:00-07:00</updated><id>http://localhost:4000/blog/automl-platform-9-features-your-solution-should-include</id><content type="html" xml:base="http://localhost:4000/blog/automl-platform-9-features-your-solution-should-include/"><![CDATA[<div class="comment-div">
+  <p>This post is the final post in a series of articles about AutoML and what it offers organizations looking to implement ML. The first article of this series was an <a href="https://www.nyckel.com/blog/what-is-automl-a-comprehensive-guide-what-it-means-for-product-teams/">intro to AutoML</a> and the second article <a href="https://www.nyckel.com/blog/end-to-end-automl-your-automl-platform-should-span-the-entire-ml-development-pipeline/">examines the concept of End-to-End AutoML</a>.</p>
+
+</div>
+
+<p>In our previous post, <em><a href="https://www.nyckel.com/blog/what-is-automl-a-comprehensive-guide-what-it-means-for-product-teams/">What is AutoML? A Comprehensive Guide &amp; What It Means for Product Teams</a></em>, we discussed the concept of AutoML and how it’s democratizing machine learning (ML). AutoML streamlines ML model creation by taking your annotated data and producing a model, automating tasks like model architecture selection, hyperparameter tuning, and performance evaluation. In this way, AutoML makes the creation of ML models faster, more efficient, and accessible even to those without ML expertise.</p>
+
+<p>Then, in our post <em><a href="https://www.nyckel.com/blog/end-to-end-automl-your-automl-platform-should-span-the-entire-ml-development-pipeline/">End-to-End AutoML: Your AutoML Platform Should Span the Entire ML Development Pipeline</a></em>, we discussed why AutoML needs to be more than just training a model; it should span the entire ML development pipeline.</p>
+
+<p>In this post, we explore nine features to consider when choosing an end-to-end AutoML platform.</p>
+
+<h2 id="1-data-engine">1. Data engine</h2>
+
+<p>A <a href="https://www.nyckel.com/blog/9-ways-to-use-a-data-engine-to-improve-your-ml-model/">data engine</a> enables you to manage an ML model’s training data by helping you find problem cases that illuminate 1) where your model is making bad decisions and 2) where you’ve incorrectly annotated data. It supports the iterative loops that are necessary to find this problematic data and then retrain your model with newly annotated data.  </p>
+
+<p>This data-centric approach to ML, <a href="https://mitsloan.mit.edu/ideas-made-to-matter/why-its-time-data-centric-artificial-intelligence">as advocated by Andrew Ng</a>, emphasizes that focusing on data quality is the best way to create a good model and that improving data quality is an iterative process. With the support of an AutoML tool with a robust data engine, continuous improvement of ML models becomes a streamlined process, leading to models that produce more accurate and reliable outcomes.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/data-engine-workflow.png" alt="AutoML platform with data engine" style="border-radius: 20px; max-width: 100%" srcset="../images/data-engine-workflow.png 2x%" />
+        <figcaption>Ensure your AutoML platform enables a data engine</figcaption>
+        
+
+</figure>
+
+<h2 id="2-labeling-tool">2. Labeling tool</h2>
+
+<p>An AutoML platform should offer an in-built labeling tool that is tailored to the machine learning task at hand, whether that’s <a href="https://www.nyckel.com/docs/quickstart">text classification</a>, <a href="https://www.nyckel.com/docs/detection-quickstart">object detection</a>, or something else. A specialized labeling tool streamlines the annotation process, allowing you to label data faster and more accurately. This enables you to create more high-quality annotations, which are crucial to creating a good model.</p>
+
+<p>When selecting an AutoML platform, look for a labeling tool that seamlessly integrates with the platform’s data engine, as this will make it easier for you to make quick and iterative updates to data. An in-built labeling tool prevents you from needing to switch between tools, reducing development friction and providing a better user experience.</p>
+
+<h2 id="3-model-deployment">3. Model deployment</h2>
+
+<p>Model deployment isn’t a trivial task. It involves steps such as choosing the optimal hardware for your latency and throughput needs, optimizing the model for peak performance on that hardware, ensuring it can handle varying workloads, and seamlessly integrating it into your existing system. To simplify this process, it’s important to select an AutoML solution that covers model deployment.</p>
+
+<p>When selecting an AutoML platform, ensure it offers a deployment option with a <a href="https://www.nyckel.com/pricing">pricing model</a> that suits your needs, whether elastic or continuous instance running. It’s also smart to verify if the platform provides appropriately-sized hardware for your model deployment, as the available hardware directly influences cost, latency, and throughput optimization for your model. The hardware should also be scalable to efficiently accommodate usage patterns and unexpected spikes in demand, while avoiding unnecessary costs during idle periods.</p>
+
+<h2 id="4-active-learning">4. Active learning</h2>
+
+<p>Active learning is the process of finding and annotating <em>informative</em> data to improve your model. Focusing on informative data instead of just randomly chosen data provides better results for your time spent on annotation. It’s important to do this periodically throughout the lifecycle of your model to handle <a href="https://www.nyckel.com/blog/what-is-class-balance-drift-and-why-does-it-matter-for-content-moderation/">data drift</a>, new edge cases, class imbalance, or a lack of generalization. Ideally, your AutoML platform would <a href="https://www.nyckel.com/blog/introducing-invoke-capture-integrated-active-learning/">automatically capture these important data points</a> when a deployed model is invoked - a process we call “invoke harvesting”. This enables adaptive model maintenance and retraining, which are essential for maintaining and improving model performance.</p>
+
+<p>Active learning through invoke harvesting offers several important benefits:</p>
+
+<ul>
+  <li><strong>Data drift mitigation:</strong> Data distribution in the production environment may change over time, leading to data drift. By continuously harvesting and labeling data through invoke harvesting, you can retrain your model to address data drift effectively.</li>
+  <li><strong>Balanced class representation:</strong> Invoke harvesting can automatically capture data from underrepresented classes, allowing you to retrain your model to perform better on those classes.</li>
+  <li><strong>Enhanced model generalization:</strong> By gathering low-confidence data points and data points similar to those where the model failed, invoke harvesting enables you to retrain your model on diverse data, enhancing its performance across a wide range of data.</li>
+</ul>
+
+<h2 id="5-fast-training">5. Fast training</h2>
+
+<p>Training speed is a crucial factor to consider when conducting an AutoML tools comparison. You can test training speed across platforms you’re evaluating using a sample dataset, like we did in our <a href="https://www.nyckel.com/blog/image-classification-benchmark-google-vs-aws-vs-hugging-face-vs-nyckel/">image classification benchmark</a>. Fast training offers several benefits that enhance the entire ML development lifecycle:</p>
+
+<ul>
+  <li><strong>Faster iterative workflow:</strong> Speed plays a pivotal role in the iterative loops of ML development. When models can be trained and deployed in seconds, development teams can gain rapid insights into improvements and annotation errors, accelerating the feedback loop.</li>
+  <li><strong>Reduced time-to-production:</strong> Faster development cycles enable teams to bring ML models to production quickly, resulting in a higher return on investment and a competitive edge in the market.</li>
+  <li><strong>Enabling continuous deployment:</strong> Just as continuous deployment is a best practice in software development, ML development is starting to embrace this approach. Fast iterations in the ML lifecycle, from model training to deployment, facilitate seamless continuous deployment, enhancing team productivity.</li>
+  <li><strong>Enable creating separate functions for each of your unique customers:</strong> When a new model can be trained in seconds from a handful of annotated examples, you can easily create custom models for each of your customers that handle their unique data.</li>
+</ul>
+
+<div class="comment-div">
+  <p>In our <a href="https://www.nyckel.com/blog/image-classification-benchmark-google-vs-aws-vs-hugging-face-vs-nyckel/">image classification benchmark comparison</a>, Nyckel trained a model in just around 1 minute, compared to ~12 minutes for HuggingFace and ~5 hours for Google. Nyckel also supports low latency and invokes with elastic scaling, making it a top-performing option for rapid model deployment and integration into applications.</p>
+
+</div>
+
+<h2 id="6-auto-retraining">6. Auto-retraining</h2>
+
+<p>Auto-retraining is a critical capability to look for in an AutoML platform. ML models are not static entities; they require continuous updates and improvements to remain accurate and relevant. By choosing a tool that enables auto-retraining, you can proactively address model errors and minimize the need to build complex data pipelines for the retraining process. </p>
+
+<p>Auto-retraining offers several important benefits:</p>
+
+<ul>
+  <li><strong>Continuous model improvement:</strong> Auto-retraining allows you to take advantage of new data and feedback to continuously improve your model’s performance. By leveraging up-to-date information and newly annotated data, ML models can deliver more accurate and relevant results.</li>
+  <li><strong>Streamlined model maintenance:</strong> Automating the retraining process simplifies model maintenance, reducing the manual effort required for regular updates.</li>
+  <li><strong>Minimizes data pipeline complexity:</strong> Building data pipelines for manual retraining can be complex and time-consuming. Auto-retraining reduces the need for intricate pipelines and streamlines the process of incorporating new data for model improvement.</li>
+</ul>
+
+<h2 id="7-minimal-training-parameters">7. Minimal training parameters</h2>
+
+<p>Choosing an AutoML platform with minimal training parameters eases parameter anxiety by reducing the worry of selecting optimal values. Users can rely on experts or automated hyperparameter sweeps to handle parameter selection, fostering a more confident and streamlined model training process. With less time spent fretting over parameter choices, you can focus on the core aspects of model development, enhancing your productivity and overall experience with the platform.</p>
+
+<p>An AutoML platform that requires fewer parameter inputs from you also reduces the likelihood of making mistakes in selecting the right values. By simplifying the decision-making process, users can avoid potential errors and achieve more accurate and effective ML models. Emphasizing simplicity in parameter selection can lead to a user-friendly AutoML experience, catering to both novices and experienced data scientists, while ensuring the <a href="https://www.nyckel.com/blog/service-oriented-design-applies-to-ml-too/">development of high-quality models without unnecessary complications.</a></p>
+
+<h2 id="8-api-and-developer-experience">8. API and developer experience</h2>
+
+<p>A platform with an intuitive, well-documented API empowers developers to efficiently leverage AutoML capabilities, while the ability to create custom functions allows developers to tailor ML solutions to suit specific requirements.</p>
+
+<p>When examining the <a href="https://www.nyckel.com/docs">API and docs for an  AutoML platform</a>, here are some qualities to look for:</p>
+
+<ul>
+  <li><strong>Intuitive and easy to use:</strong> An intuitive and easy-to-use API simplifies the development process and makes it faster and easier to integrate ML capabilities into your applications.</li>
+  <li><strong>High-quality documentation:</strong> Clear and comprehensive documentation helps developers understand the API’s functionalities. Well-documented APIs enable quick and efficient implementation and reduce the learning curve for using the platform.</li>
+  <li><strong>Ability to create new functions:</strong> A flexible API that makes it easy to create new functions will enable you to create custom ML features for individual customers or specific use cases.</li>
+</ul>
+
+<h2 id="9-intuitive-uiux">9. Intuitive UI/UX</h2>
+
+<p>An intuitive and well-designed user interface (UI) is essential for an efficient AutoML platform that seamlessly transitions between the stages of model development. Model deployment is an iterative process, so you’ll frequently revisit steps like data labeling, model training, evaluation, and deployment while refining your model. Fast iteration is crucial so that you can easily experiment with different model options, identify optimal solutions, and quickly deploy refined models. A well-designed UI/UX in an AutoML platform facilitates this by providing intuitive controls that promote rapid experimentation and effective model refinement.</p>
+
+<p>A robust UI/UX should easily support actions, including:</p>
+
+<ul>
+  <li><strong>Adding data:</strong> The platform should ensure a user-friendly data ingestion process that allows users to effortlessly upload and import datasets, while also providing clear instructions and guidance on supported data formats and options for seamless data integration.</li>
+  <li><strong>Annotating data:</strong> The platform should implement an intuitive annotation interface that simplifies the labeling process for ML training data. It should also offer interactive tools for easy labeling, such as dropdown menus for categorical data.</li>
+  <li><strong>Iterating on data and retraining:</strong> The platform should enable a smooth transition between data annotation and model retraining workflow. It should also offer versioning and tracking features to keep a record of data changes and model performance improvements.</li>
+  <li><strong>Checking model performance:</strong> The platform should present model performance metrics and insights in a user-friendly dashboard for quick and easy interpretation. It should also provide visualization tools to assess model predictions and understand areas for improvement.</li>
+</ul>
+
+<p>By bringing all these aspects together in an intuitive and cohesive UI/UX, an AutoML platform can empower users to seamlessly navigate through the data annotation and model training processes. This integration not only streamlines the workflow but also enhances the overall user experience, making the AutoML platform more accessible and effective for both users without ML expertise and experienced data scientists.</p>
+
+<h2 id="it-all-ties-in-together">It all ties in together</h2>
+
+<p>The sum of all the above is greater than any individual part. For instance:</p>
+
+<ul>
+  <li>The combination of a data engine and data labeling capability enables quick and efficient iterations on data, fostering continuous improvement in model accuracy.</li>
+  <li>Model deployment, when coupled with invoke harvesting, ensures the capture of important samples and provides valuable insights to handle data drift effectively.</li>
+</ul>
+
+<p>When conducting an AutoML tools comparison, it’s critical to consider how these individual components contribute to the overall experience. The interaction between each component streamlines the entire ML development lifecycle, from data preparation to model deployment, resulting in an intuitive and user-friendly experience that accelerates the journey from ML idea to successful implementation.</p>
+
+<hr />
+
+<p><em>We built Nyckel as an end-to-end AutoML platform, so you can train and deploy machine learning functions without writing code or dealing with infrastructure. Explore <a href="https://www.nyckel.com/docs/quickstart">Nyckel’s quick starts</a> and <a href="https://www.nyckel.com/console">sign up for a free account</a> to get started. Reach out to us if you have any questions about how Nyckel could work for your use case.</em></p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;George Mathew&quot;, &quot;github&quot;=&gt;&quot;saintarian&quot;, &quot;twitter&quot;=&gt;&quot;georgemkan&quot;, &quot;linkedin&quot;=&gt;&quot;georgemathew&quot;}</name></author><summary type="html"><![CDATA[This post is the final post in a series of articles about AutoML and what it offers organizations looking to implement ML. The first article of this series was an intro to AutoML and the second article examines the concept of End-to-End AutoML.]]></summary></entry><entry><title type="html">5 Image Classification Examples (+ Datasets To Build Functions With Nyckel)</title><link href="http://localhost:4000/blog/5-image-classification-examples-datasets-to-build-functions-with-nyckel/" rel="alternate" type="text/html" title="5 Image Classification Examples (+ Datasets To Build Functions With Nyckel)" /><published>2023-08-07T00:00:00-07:00</published><updated>2023-08-07T00:00:00-07:00</updated><id>http://localhost:4000/blog/5-image-classification-examples-datasets-to-build-functions-with-nyckel</id><content type="html" xml:base="http://localhost:4000/blog/5-image-classification-examples-datasets-to-build-functions-with-nyckel/"><![CDATA[<p>Image classification is a type of computer vision that categorizes images into one of several buckets. For example, you could classify images of cars for sale by the view of the car in each image: “front,” “back,” “side,” “dash,” and so on. Organizations can also use image classification for more obscure cases ranging from <a href="https://www.nyckel.com/blog/image-classification-for-augmented-reality-games-spyscape-case-study/">an augmented reality Batman game</a> to <a href="https://www.nyckel.com/blog/time-series-signal-classification-using-computer-vision/">identifying the time-series signals of North Atlantic right whales</a>.</p>
+
+<p>In this post, we look at 5 practical use cases of image classification. In each of these examples, we’re also including a dataset you could use to actually <a href="https://www.nyckel.com/docs/image-classification-quickstart">create the image classifier with Nyckel</a>.</p>
+
+<p><em>If you’re looking for even more image classification examples, explore our <a href="https://www.nyckel.com/public-functions">pre-trained functions</a>, which can help you deploy a model without having to collect your own data.</em></p>
+
+<h2 id="1-detect-whether-an-image-is-ai-generated">1. Detect whether an image is AI-generated</h2>
+
+<p>With the rapid rise of <a href="https://www.nyckel.com/blog/building-ai-into-your-product-understand-the-difference-between-discriminative-and-generative-ai/">generative AI</a>, many people are <a href="https://www.nytimes.com/2023/04/08/business/media/ai-generated-images.html">concerned about AI-generated images</a>. Concerns range from using generated images to fool people into thinking fake scenarios are real, plagiarizing an artist or brand’s work, and risking the careers of creatives. People also tend to prefer transparency and would like to know whether an image is human-made or AI-generated when choosing to use or purchase a photo or piece of artwork. </p>
+
+<p>Fortunately, we can use AI to detect AI by training an image classification function to <a href="https://www.nyckel.com/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes/">detect whether an image is AI-generated or not</a>. </p>
+
+<p><strong>Build it with Nyckel:</strong> Use the <a href="https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images?resource=download">CIFAKE dataset</a> created by Dr. Jordan J. Bird and Professor Ahmad Lotfi to build an image classifier to detect whether or not an image is AI-generated.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/detect-AI-generation-image-classification-example.png" alt="Detect if image is AI-generated with image classification" style="border-radius: 20px; max-width: 100%" srcset="../images/detect-AI-generation-image-classification-example.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h2 id="2-streamline-the-collection-of-waste-materials">2. Streamline the collection of waste materials </h2>
+
+<p>Waste management companies need to understand the various types and capacities of garbage cans on their routes in order to remove garbage quickly and efficiently.  An image classifier is an effective tool for this scenario since you can use it to analyze images of garbage cans in various states (empty, full, or scattered) to help determine optimal collection logistics.</p>
+
+<p>This data empowers users to identify patterns, assess usage trends, and optimize garbage collection routes for a more efficient waste management process.</p>
+
+<p>This example is a form of multi-label classification, sometimes called <a href="https://www.nyckel.com/blog/glossary-of-computer-vision-function-types/">image tagging</a>. In this example, each image of the garbage containers can be tagged with multiple labels (e.g., “full” and “scattered”). In the other use cases in this article, the images can only be tagged with one label (also called <a href="https://www.nyckel.com/blog/multi-class-classification-vs-multi-label-classification-key-differences-how-to-choose/">multi-class classification</a>). For example, an image is either “AI-generated” or “not AI-generated.” </p>
+
+<p><strong>Build it with Nyckel:</strong> Use <a href="https://huggingface.co/datasets/TrainingDataPro/outdoor_garbage_dataset">Hugging Face’s outdoor garbage dataset</a> to build an image classifier that optimizes your waste management system.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/multi-label-classification-example.png" alt="Streamline waste management operations with image classification" style="border-radius: 20px; max-width: 100%" srcset="../images/multi-label-classification-example.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h2 id="3-detect-deadly-diseases-in-bean-plants">3. Detect deadly diseases in bean plants</h2>
+
+<p>Millions of people around the world depend on beans for sustenance, particularly in Latin America, Africa, and parts of Asia.</p>
+
+<p>Unfortunately, beans are vulnerable to several devastating diseases, including angular leaf spot and rust, that are capable of causing yield losses of up to 100%. Needless to say, the sooner we can detect these diseases, the sooner we can save a harvest. While we can spot angular leaf spot and rust with the naked eye, image classification can be a far superior approach to detecting whether a bean plant is afflicted.</p>
+
+<p><strong>Build it with Nyckel:</strong> Use <a href="https://huggingface.co/datasets/beans">Hugging Face’s beans dataset</a> to build an image classifier to detect angular leaf spot and bean rust in photos of bean plants. </p>
+
+<p><em>This use case is similar to how our customer <a href="https://www.nyckel.com/blog/gardyn-reduces-workload-by-70-while-growing-2x-after-implementing-computer-vision/">Gardyn uses an image classifier</a> to monitor the health of its customers’ plants.</em></p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/detect-plant-disease-image-classification-example.jpg" alt="Detect plant disease with image classification" style="border-radius: 20px; max-width: 100%" srcset="../images/detect-plant-disease-image-classification-example.jpg 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h2 id="4-classify-marine-animals">4. Classify marine animals</h2>
+
+<p>Some of the key responsibilities of marine researchers and conservationists are to keep tabs on the health, behavior, and environment of various marine species. In a landscape as vast as the sea, image classification can be instrumental in improving the efficiency and accuracy of these efforts.</p>
+
+<p>For example, an image classifier trained on images of marine wildlife could help provide a visual inventory of marine species to aid in species monitoring, population estimates, and biodiversity research and provide insight that scientists could use to create habitat maps.</p>
+
+<p><strong>Build it with Nyckel:</strong> Use <a href="https://www.kaggle.com/datasets/mikoajfish99/marine-animal-images">Kaggle’s marine animals dataset</a> to build an image classifier to identify different types of marine species, including jellyfish, starfish, lobster, and squid.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/identify-marine-animals-image-classification-example.png" alt="Identify marine animal with image classification" style="border-radius: 20px; max-width: 100%" srcset="../images/identify-marine-animals-image-classification-example.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h2 id="5-locate-littered-roads-in-a-city">5. Locate littered roads in a city </h2>
+
+<p>Part of a city’s job in maintaining safe roadways is removing debris and litter from its streets and highways. A city could rely on its crews to remove trash as they come across it or wait for residents to report areas that need attention. </p>
+
+<p>A more efficient way to detect littered roads would be to use street cameras to take pictures of the streets and highways and then use an image classifier to spot whether an image contains litter or not. Using that data, the city could send a crew to the location of the littered road to clear it.</p>
+
+<p><strong>Build it with Nyckel:</strong> Use <a href="https://www.kaggle.com/datasets/faizalkarim/cleandirty-road-classification">Kaggle’s clean/littered roads dataset</a> to build an image classifier to detect whether a road is clean or littered.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/locate-littered-roads-image-classification-example.png" alt="Identify littered roadways with image classification" style="border-radius: 20px; max-width: 100%" srcset="../images/locate-littered-roads-image-classification-example.png 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<h2 id="could-image-classification-solve-your-challenge">Could image classification solve your challenge?</h2>
+
+<p>If you have a business challenge that involves categorizing visuals into different groups, there’s a good chance that image classification could not only speed the process but also improve accuracy. We’ve designed Nyckel to be easy, fast, and accurate (and, dare we say, fun?) for non-ML experts who need to use ML to solve business problems.</p>
+
+<p>Curious if Nyckel could work for your use case? <a href="https://www.nyckel.com/console">Sign up for a free account</a> to give it a try, and <a href="https://www.nyckel.com/docs/image-classification-quickstart">check out our image classification quick start</a> if you need help getting started.</p>
+
+<p>Not sure image classification is the right function type for your problem? Check out our other computer vision products: <a href="https://www.nyckel.com/docs/detection-quickstart">object detection</a>, <a href="https://www.nyckel.com/docs/image-tags-quickstart">image tagging</a>, <a href="https://www.nyckel.com/docs/image-search-quickstart">image search</a>, and <a href="https://www.nyckel.com/docs/ocr-quickstart">optical character recognition</a>.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Nyckel&quot;, &quot;image&quot;=&gt;&quot;https://www.nyckel.com/img/nyckel-icon.png&quot;, &quot;twitter&quot;=&gt;&quot;nyckelai&quot;, &quot;github&quot;=&gt;&quot;nyckelai&quot;, &quot;linkedin&quot;=&gt;&quot;nyckelai&quot;, &quot;is_linkedin_company&quot;=&gt;true}</name></author><summary type="html"><![CDATA[Image classification is a type of computer vision that categorizes images into one of several buckets. For example, you could classify images of cars for sale by the view of the car in each image: “front,” “back,” “side,” “dash,” and so on. Organizations can also use image classification for more obscure cases ranging from an augmented reality Batman game to identifying the time-series signals of North Atlantic right whales.]]></summary></entry><entry><title type="html">How to Improve your G2 Rank: 5 Top Strategies for 2023</title><link href="http://localhost:4000/blog/improve-g2-rank/" rel="alternate" type="text/html" title="How to Improve your G2 Rank: 5 Top Strategies for 2023" /><published>2023-08-05T01:05:11-07:00</published><updated>2023-08-05T01:05:11-07:00</updated><id>http://localhost:4000/blog/improve-g2-rank</id><content type="html" xml:base="http://localhost:4000/blog/improve-g2-rank/"><![CDATA[<p>How many times have you visited a B2B site and seen G2 badges that tout ‘#1 CRM’, ‘Top Vendor in SEO Tools’, ‘See our 5-star reviews’, and so on?</p>
+
+<p>Rhetorical question - it’s a lot. SaaS companies sure do love their G2 social proof. If we had a nickel for every site that directed us to G2, we could start our own SaaS company.</p>
+
+<p>But there is a reason G2 is the review site everyone cares about. It’s the Coke to <a href="https://www.capterra.com/" target="_blank">Capterra’s</a> Pepsi, with the other review sites fighting for scraps.</p>
+
+<div class="post-img">
+<img class="img" alt="Traffic volume of review sites" width="700" height="525" src="/assets/images/blog/g2-rank/review-site-ranks.webp" />
+</div>
+
+<p>It’s no surprise, then, that G2 Rank Optimization (G2RO - you heard it first here) is of growing interest to SaaS companies. Moving up the G2 rankings is the new Google SEO.</p>
+
+<div class="post-img">
+<img class="img" alt="G2 category list" width="700" height="536" src="/assets/images/blog/g2-rank/g2-category.webp" loading="lazy" />
+</div>
+
+<p>And while there are no easy hacks (just like with Google), improving your rank on G2 is not impossible. A small company in a crowded industry may never vault from spot #50 to #1, but moving up 5-10 spots (or more) is doable with a concerted effort.</p>
+
+<p><b>This article explains the importance of ranking high on G2, how the G2 ranking algorithm works, and how to improve your own G2 category rank.</b></p>
+
+<h2>Table of Contents:</h2>
+
+<p><a href="#1">1. The importance of a high G2 rank</a><br /> 
+<a href="#2">2. How we tried to reverse engineer the G2 algorithm</a> <br /> 
+<a href="#3">3. How does the G2 ranking algorithm work?</a> <br /> 
+<a href="#4">4. How to use G2 Grids to understand your ranking</a> <br /> 
+<a href="#5">5. 5 steps to improve your G2 ranking</a></p>
+
+<h2 id="1">The importance of a high G2 rank</h2>
+
+<p>To grow your business cost-efficiently, you need a strong inbound lead channel. Building this involves becoming discoverable to high-intent buyers actively doing product research.</p>
+
+<p>Where are these buyers searching? Well, Google of course. But G2 is increasingly becoming a go-to source for SaaS research as well. Being a top spot on these lists means you’re reaching people searching for your type of product.</p>
+
+<p>Most buyers, though, aren’t going to G2.com and doing a category search. Rather, they arrive on the category page after doing a relevant Google search. Indeed - <a href="https://www.similarweb.com/website/g2.com/#overview" target="_blank">over 70% of G2’s traffic</a> is from Google searches, not direct visits.</p>
+
+<div class="post-img">
+<img class="img" alt="G2 traffic comes from Google" width="673" height="505" src="/assets/images/blog/g2-rank/g2-traffic.webp" loading="lazy" />
+</div>
+
+<p>This is because G2 has excellent SEO, so most Google searches for ‘top (insert category) vendors’ will return the G2 category link within the first five results. A good G2 rank has double value, then: you’re more discoverable on both Google and G2 search results.</p>
+
+<div class="post-img">
+<img class="img" alt="G2 comes up in Google searches" width="700" height="296" src="/assets/images/blog/g2-rank/g2-google.webp" loading="lazy" />
+</div>
+
+<h2 id="2">How we tried to reverse engineer the G2 algorithm</h2>
+
+<p>When building this guide, we assumed G2’s ranking algorithm was simple; a basic calculation using ratings and reviews, with a weighted average favoring recent reviews.</p>
+
+<p>Turns out, it wasn’t that simple. In doing analysis across 20 G2 categories, we found consistent trends that made reverse engineering their exact algorithm impossible. Below looks at this analysis (for the sake of simplicity, we’ll highlight a representative category - SEO Tools).</p>
+
+<p>We did discover a big correlation between # of reviews and rank - but it was far from a perfect fit.</p>
+
+<div class="post-img">
+<img class="img" alt="Improving Your G2 Rank With Reviews" width="700" height="525" src="/assets/images/blog/g2-rank/g2-reviews.webp" loading="lazy" />
+</div>
+
+<p>Average star rating didn’t seem to correlate much, with higher spots often having lower scores than the average.</p>
+
+<div class="post-img">
+<img class="img" alt="G2 Ranking by Ratings" width="700" height="525" src="/assets/images/blog/g2-rank/g2-ratings.webp" loading="lazy" />
+</div>
+
+<p>Employee count provided an additional strong signal, but again was far from linear.</p>
+
+<div class="post-img">
+<img class="img" alt="G2 Ranking by Employees" width="700" height="525" src="/assets/images/blog/g2-rank/g2-employees.webp" loading="lazy" />
+</div>
+
+<p>Clear trends emerged when we bucketed ranks by groups of five. There’s of course the obvious one that more reviews will, on average, put you above other listings.</p>
+
+<div class="post-img">
+<img class="img" alt="G2 Rank Buckets" width="700" height="525" src="/assets/images/blog/g2-rank/g2-rank-buckets.webp" loading="lazy" />
+</div>
+
+<p><b>But when the # of reviews was similar, the tie breaker was clearly employee count.</b></p>
+
+<p>As you can see, even though spots 11-15 had only 10% fewer reviews than spots 5-10, the average # of employees was substantially lower - around 50%. This highlights the weight that G2 must give to larger vendors.</p>
+
+<p>You see that same trend with 16-20 vs 21-25. While the average # of reviews is effectively the same, the average # of employees is 75% lower. It’s clear that when review counts and ratings are similar, G2 favors the more established company.</p>
+
+<p>While these findings were consistent across categories, we also kept encountering two outliers:</p>
+
+<ul>
+  <li><b>Large companies with relatively few reviews would often rank higher than smaller companies with a lot more reviews.</b> In this example from the Translation Management System (TMS) category, GlobalLink is #7 with 53 reviews, while Transifix has 345 and is #9. The difference? GlobalLink’s parent company, Transperfect, has 9,000 employees, while Transifix has 80.</li>
+</ul>
+
+<div class="post-img">
+<img class="img" alt="G2 favors bigger companies" width="700" height="525" src="/assets/images/blog/g2-rank/g2-products.webp" loading="lazy" />
+</div>
+
+<ul>
+  <li><b>Similar categories would have the same companies but in different orders.</b> If the G2 algorithm was based purely on company info and the # of total reviews, this order would never change.</li>
+</ul>
+
+<div class="post-img">
+<img class="img" alt="G2 Category Rank Differences" width="700" height="525" src="/assets/images/blog/g2-rank/g2-differences.webp" loading="lazy" />
+</div>
+
+<p>As an example, below looks at two similar categories: Translation Management Systems and Website Translation Software. As you can see, the companies are in slightly different orders.</p>
+
+<p>So we realized a few things:</p>
+
+<ul>
+  <li>Regardless of # of reviews, G2 prioritizes large market leaders.</li>
+  <li>Driving more reviews – especially in a short time – is a great way to rise in rankings, but your ceiling may be capped if you’re a new or smaller player.</li>
+  <li>Average rating doesn’t appear to have a big impact on rank, although we did notice that if your average rating is substantially lower than the category average, you do get penalized.</li>
+  <li>Your category ranking isn’t based on total reviews.  It’s based on reviews for that specific category.</li>
+</ul>
+
+<p>This final point is complicated, so bear with us. When you sign up for G2, by default you are in one category. But you can request to be in more. Many large brands are indeed in multiple product categories. <b>These categories correspond with the ‘Purpose’ dropdown reviewers must select when reviewing you.</b></p>
+
+<div class="post-img">
+<img class="img" alt="G2 Purpose Dropdown in Reviews" width="700" height="525" src="/assets/images/blog/g2-rank/g2-purposes.webp" loading="lazy" />
+</div>
+
+<p><i>Note: this list is alphabetical and doesn’t lead with your main category (the names may also not always match).</i></p>
+
+<p><b>We realized that the algorithm must factor in which purpose the user chose.</b> If a user reviews you for Purpose #1 (associated with a specific category), then that review won’t have a huge impact on your ranking for Purpose #2 (a different category).</p>
+
+<p>This makes sense. If you built a SaaS product that, for whatever reason, is both an SEO tool and an on-demand limousine app, why should positive reviews for the SEO Tool use case impact your ranking in the Taxi &amp; Limo Service category?</p>
+
+<p>Of course, in reality, the categories are more closely related. In the above Clearscope example, SEO involves content analytics, so the two purposes heavily overlap.</p>
+
+<p>We should note that users can select multiple purposes in the same review. But we think it’s most likely that reviewers just pick one and move on (let’s not forget that nearly all reviews are incentivized, so people will be filling these out quickly).</p>
+
+<div class="post-img">
+<img class="img" alt="Choosing purposes while G2 reviewing" width="700" height="316" src="/assets/images/blog/g2-rank/g2-reviewing.webp" loading="lazy" />
+</div>
+
+<h2 id="3">How DOES the G2 algorithm work?</h2>
+
+<p>In doing our research, we of course first read through <a href="https://research.g2.com/methodology/scoring" target="_blank">G2’s Research Scoring Methodology</a>. But we were hoping the page was more aspirational than realistic. Turns out we should have trusted it.</p>
+
+<p>According to G2, these factors influence a company’s <b>G2 Score</b>, which is how lists are sorted by default. This score is broken down into two buckets: Satisfaction and Market Presence.</p>
+
+<p><b><u>Satisfaction</u></b></p>
+
+<ul>
+  <li>The star rating. Takes the “Likely to Recommend” question (1-10) and divides by two</li>
+  <li>The statistical significance of ratings (aka, one 5-star review isn’t very telling)</li>
+  <li>The quality of reviews (are customers writing long reviews or just saying, “It’s good” to get the $25 gift card)
+-Age of reviews (Grid Decay - see below)
+-Ratings of individual features</li>
+</ul>
+
+<p><b><u>Market Presence</u></b></p>
+
+<ul>
+  <li>Number of employees (LinkedIn, Crunchbase)</li>
+  <li>Number of reviews &amp; age of reviews (overlaps with Satisfaction)</li>
+  <li>SEO traffic and ranks (Moz, SEMrush)</li>
+  <li>Social followers</li>
+  <li>Employee growth velocity</li>
+  <li>Age of vendor</li>
+  <li>Glassdoor ratings</li>
+</ul>
+
+<p>G2 takes this section seriously. To rank in the Top 5, you need to be an established vendor.</p>
+
+<p><b><u>G2 Grid Decay</u></b></p>
+
+<p>G2 is transparent about the value of a review over time, calling it Grid Decay. This involves an exponential decay compounded daily, equaling roughly a 3% loss in value every month.</p>
+
+<div class="post-img">
+<img class="img" alt="G2 Grid Decay Chart" width="700" height="525" src="/assets/images/blog/g2-rank/g2-grid-decay.webp" loading="lazy" />
+</div>
+
+<p>Meaning, one review from the current month has roughly the same value as:</p>
+
+<ul>
+  <li>1.2 reviews from six months ago</li>
+  <li>1.45 reviews from a year ago</li>
+  <li>2.1 reviews from two years ago</li>
+  <li>3 reviews from three years ago</li>
+</ul>
+
+<p>G2’s Grid Decay formula tells us two things:</p>
+
+<ol>
+  <li>
+    <p>Companies happy with their position don’t have to constantly run incentivized review campaigns. After six months, a review has lost just ~17% of its value. That’s not a lot. Unless you’re trying to outpace someone else, doing a concerted review push twice a year is enough to maintain your rank.</p>
+  </li>
+  <li>
+    <p>If there’s a company above you with a lot of reviews - but no recent ones - you have a real opportunity to beat them with a big review campaign. Of course, # of reviews is just one factor in the algorithm, but it’s the big one.</p>
+  </li>
+</ol>
+
+<h2 id="4">How to use the G2 Grids to understand your ranking</h2>
+
+<p>Each category with at least 6 products with 10+ reviews (and 150 total reviews) has a G2 Grid. You’ll find this on the right side of the category page, and clicking it will lead you to a bigger version (which is also on the bottom of the page).</p>
+
+<div class="post-img">
+<img class="img" alt="G2 Grid using Satisfaction and Market Presence" width="700" height="525" src="/assets/images/blog/g2-rank/g2-satisfaction.webp" loading="lazy" />
+</div>
+
+<p>The G2 Grids display a four-quadrant breakdown of Market Presence versus Satisfaction. The vendor who is furthest to the right and highest up will always be #1 in the category. Tie-breakers are usually given to the company furthest to the right versus higher up.</p>
+
+<p>These grids correspond with the rankings. The companies in the top right quadrant are nearly always above everyone else. To get highly ranked, then, you need to enter this quadrant.</p>
+
+<p>Your spot on the grid provides insights into your opportunities and challenges, as we outline below:</p>
+
+<p><b><u>Top right</u></b></p>
+
+<p>You’re likely already in the Top 5-10. Great job! As an established leader who has invested in incentivized review campaigns, you’ve earned your spot. Climbing higher, even to #1, is possible if you can drive a significant influx of reviews. However, if you’re considerably lower on the Y-axis than #1, you could have trouble supplanting them.</p>
+
+<p><b><u>Bottom right</u></b></p>
+
+<p>You’re likely in spots #6-20, depending on the category’s competitiveness. The further down or to the left you are, the worse your ranking. Moving up is challenging; you can’t magically triple your employee count. There are growth opportunities, nevertheless, especially since the # and recency of reviews improves both Market Presence and Satisfaction. Your goal is to move as right as possible, via a lot of reviews, and shoot to be the first ranking outside of the top-right vendors. With enough positive reviews, you may even enter the top right.</p>
+
+<p><b><u>Top left</u></b></p>
+
+<p>You’re likely in spots #6-20, depending on the category’s competitiveness. You’re probably ranking below many vendors from the bottom right, as G2 prefers Satisfaction over Market Presence.</p>
+
+<p>This quadrant is the least populated. Companies with excellent market presence generally also invest in driving reviews. The good news is - it’s easier to move right than up! If you’re here, you have a great opportunity to push for reviews and move into the Top 5.</p>
+
+<p><b><u>Bottom left</u></b></p>
+
+<p>We’re sorry for you. G2 believes you have little market presence, and users who have reviewed you are not super satisfied. There is room for improvement, but it requires a decent number of 5-star reviews. Your best bet is to shoot for the bottom right quadrant and at least rise above the other bottom-left vendors.</p>
+
+<p><b><u>Not on the grid</u></b></p>
+
+<p>To make the grid, it appears you need 10 or more reviews in that category. If you’re ranked but not on the grid, then you haven’t hit that number. This spot is a wild card. If you’re a large company without many reviews, you could reach Top 5 with a tsunami of new reviews.</p>
+
+<h2 id="5">5 steps to improve your G2 ranking</h2>
+
+<p>Below outlines 5 steps you can take to improve your G2 ranking, via a combination of more reviews, better reviews, and improved market presence.</p>
+
+<h3>1. Choose one category to be in</h3>
+
+<p>By default, you’re placed in one software category. You can request more, and most large companies are in multiple.</p>
+
+<p>As mentioned, however, your category ranking is tied not to overall company reviews, but reviews for that specific category (the Purpose dropdown option when a reviewer goes to rank you). Unless reviewers pick every purpose in a review, there’s a chance reviews are ‘watered down’ - in that rather than moving up substantially in one category, you move up only slightly in three.</p>
+
+<div class="post-img">
+<img class="img" alt="G2 Purpose Dropdown in Reviews" width="700" height="525" src="/assets/images/blog/g2-rank/g2-purposes.webp" loading="lazy" />
+</div>
+
+<p>Rather than requesting multiple categories, contemplate being in just one. This means every single review will count toward that category’s rank.</p>
+
+<p>As a caveat, we’re not saying there’s no value to multiple categories. In fact, if you’re a market leader in the Top 10 of multiple categories, don’t reduce your category count. You’d lose overall visibility.</p>
+
+<p>But if you’re hyper-focused on improving your rank in one category, the one-category approach will maximize the impact of an incentivized review campaign.</p>
+
+<h3>2. Identify realistic targets</h3>
+
+<p>We believe it’s always possible to move up in the rankings. How much depends on where you are on the grid and the category’s competitiveness. Whether or not you prioritize G2 reviews as an initiative (and it doesn’t always make sense) boils down to these questions:</p>
+
+<ul>
+  <li>How do you rank compared to similarly-sized companies?</li>
+  <li>How does your # of reviews and ratings compare to similar-sized companies?</li>
+  <li>How do you compare to slightly larger companies (50-100 more employees)?</li>
+  <li>Are you close to the Y or X axes?</li>
+</ul>
+
+<p><b>There’s no magic number for ideal rank, but you should be aiming at the very least for Top 30, as there are 30 listings per page.</b></p>
+
+<p>If you don’t think 30 is possible, you shouldn’t pursue a G2 campaign at all (in SEO Tools, for instance, one would need ~150 reviews to enter Top 30). In practice, though, Top 10 is the actual number you should be aiming for.</p>
+
+<p>Once you’ve identified a rough number of reviews needed, you can gauge the work involved. Pushing for 25 reviews is much different than 250, but both are doable (depending on client base size). The latter just takes more time and money.</p>
+
+<div class="post-img">
+<img class="img" alt="G2 grid example" width="700" height="419" src="/assets/images/blog/g2-rank/g2-grid.webp" loading="lazy" />
+</div>
+
+<p>Want to outsource this research? Discoverable Marketing will analyze your G2 rankings and provide the # of reviews needed for each rank jump. You can learn more  <a href="https://www.discoverablemarketing.com" target="_blank">here</a>.</p>
+
+<h3>3. Run a G2 incentivized review campaign</h3>
+
+<p>Unsurprisingly, regardless of your grid position, reviews are invaluable. It’s also a two-for-one deal: according to G2, your # of reviews and recency of them influences both Market Presence and Satisfaction.</p>
+
+<p>We’re guessing you’ve already run an incentivized campaign at some point. If not, you’ve likely at least received a vendor email offering $25-$50+ for a G2 review, so you know what we mean. The most generous offer we’ve gotten was $100 AND a free pair of Allbirds (something only a SF start-up would think of).</p>
+
+<p>Here’s advice for a successful campaign:</p>
+
+<ul>
+  <li>Focus on just G2 reviews. Many companies ask for G2 and Capterra reviews at the same time, but this could lead to a paradox of choice and fewer total reviews. Plus, Capterra’s ranking is pay-to-play, so if you want a high spot on Capterra, just pay for it.
+Since bad star ratings can hurt you, first identify customers likely to give 5-star reviews. Start the campaign with this cohort and add additional groups as needed.</li>
+  <li>Don’t be stingy. It would be amazing to drive 200 new reviews in a month. If you pay reviewers $50 each, that’s $10K to jump in rankings - which is going to pay dividends down the line.
+Run a maintenance review campaign every six months. You don’t need it more often, and less often leaves you vulnerable to competitors.</li>
+  <li>If you’re using Amazon gift certificates, keep in mind Amazon doesn’t allow for cross-currency gifting, so you’ll need to find an alternative for those users</li>
+  <li>Expect some “Our company doesn’t allow us to accept incentives” responses.</li>
+  <li>Use an email drip campaign tool and shoot for 5 automated emails over 3 weeks.</li>
+</ul>
+
+<div class="post-img">
+<img class="img" alt="G2 incentivized review campaign email" width="700" height="279" src="/assets/images/blog/g2-rank/g2-campaign.webp" loading="lazy" />
+</div>
+
+<ul>
+  <li>Personalize emails as much as you can.</li>
+  <li>If possible, have a Client Success team member send the emails; otherwise, you can use someone in Marketing.</li>
+  <li>If you’re happy with your rank, run a maintenance review campaign every six months. You don’t need it more often, and less often leaves you vulnerable to competitors.</li>
+</ul>
+
+<h3>4. Invest in growing your market presence</h3>
+
+<p>You can’t magically grow from 50 to 400 employees, but G2’s Market Presence factors in more than just employee count. Follow these steps to look more like an industry leader:</p>
+
+<ul>
+  <li>Get listed on every relevant business directory. This includes long-tail business review sites, local listing directories, SaaS directories, etc.</li>
+  <li>Create social accounts on all social networks, even if you don’t actively post on them.</li>
+</ul>
+
+<div class="post-img">
+<img class="img" alt="List of social directories for better G2 rank" width="700" height="326" src="/assets/images/blog/g2-rank/g2-social.webp" loading="lazy" />
+</div>
+
+<ul>
+  <li>Keep LinkedIn and Crunchbase up-to-date.</li>
+  <li>Run an internal Glassdoor campaign to increase the # of Glassdoor reviews.</li>
+  <li>Produce more content! G2 factors in site traffic and SEO, so building a content engine helps with rankings.</li>
+  <li>Invest in a Technical SEO audit, which can greatly help with Google rankings.</li>
+</ul>
+
+<p>Don’t know where to start? <a href="https://www.discoverablemarketing.com" target="_blank">Discoverable’s Market Presence Report</a> provides an audit of these metrics, as well as step-by-step advice on improving your digital presence.</p>
+
+<h3>5. Consider a G2 paid plan</h3>
+
+<p>G2 emphasizes that their rankings aren’t pay-to-play. Meaning, customers with paid plans don’t get an extra boost in rank. It’s an even playing field.</p>
+
+<div class="post-img">
+<img class="img" alt="G2 Paid Plan Breakdown" width="700" height="384" src="/assets/images/blog/g2-rank/g2-paid.webp" loading="lazy" />
+</div>
+<p>But a paid plan does come with a G2 account manager. These are experts with unique insights on how to improve your position. They will also run review campaigns for you.</p>
+
+<p>You can tell if a competitor has a paid plan by looking for:</p>
+
+<ul>
+  <li>An orange “Try it Free” button on their listing</li>
+  <li>A banner/video at the top of their profile</li>
+</ul>
+
+<div class="post-img">
+<img class="img" alt="G2 Paid Plan Example" width="700" height="255" src="/assets/images/blog/g2-rank/g2-paid-plan.webp" loading="lazy" />
+</div>
+
+<p><i>(Note: We’re not affiliated with G2 and don’t receive kickbacks. These subscriptions can cost $10K+/year, so it’s also not a decision to take lightly.)</i></p>
+
+<hr />
+
+<p>There you go. You now have more information about how the G2 algorithm works and how to improve your G2 ranking. We truly believe it’s possible to jump in ranks through a concerted effort to increase Satisfaction (via more good reviews) and Market Presence (via investing in discoverability tactics).</p>
+
+<p>Is #1 feasible for everyone? No. But getting to Top 10 is, assuming you at least have a medium-sized presence in the space.</p>
+
+<p>As a final pitch for Discoverable, our focus is on helping SaaS companies like you improve your digital presences. This includes an audit of your current situation - be it G2 rankings, business directories, social, technical SEO (like <a href="https://www.discoverablemarketing.com/blog/webp-chatgpt/">webp</a> usage), and more. We then offer concrete steps on how to improve your market presence. Together, we can help your business become more discoverable, attract new customers, and succeed. You can learn more <a href="https://www.discoverablemarketing.com" target="_blank">here</a>.</p>]]></content><author><name>Chris Shuptrine</name></author><category term="SaaS Review Sites" /><summary type="html"><![CDATA[This article outlines the G2 ranking algorithm and the top 5 strategies for improving your rank.]]></summary></entry></feed>

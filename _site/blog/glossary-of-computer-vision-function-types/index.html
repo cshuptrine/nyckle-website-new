@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Meta Tags & Codes -->
+<!--- General Meta -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- For Modern Browsers -->
+<link rel="icon" href="https://www.discoverablemarketing.com/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="https://www.discoverablemarketing.com/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.discoverablemarketing.com/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://www.discoverablemarketing.com/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="https://www.discoverablemarketing.com//mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">
+
+
+<title>Glossary of Computer Vision Function Types</title>
+
+
+<link rel="canonical" href="https://www.discoverablemarketing.com/blog/glossary-of-computer-vision-function-types/"/>
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog/glossary-of-computer-vision-function-types/" hreflang="x-default" />
+<meta property="og:url" content="https://www.discoverablemarketing.com/blog/glossary-of-computer-vision-function-types/"/>
+
+
+<meta name="description" content=" Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable."/>
+<meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
+
+<!--- OpenGraph -->
+<meta property="og:title" content="Glossary of Computer Vision Function Types"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<meta property="og:site_name" content="Discoverable Marketing"/>
+
+<meta property="og:type" content="website"/> 
+
+
+<!--- Robots -->
+<meta name="robots" content="max-image-preview:large"/>
+
+
+<!--- Schemas -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Discoverable Marketing","legalName":"Discoverable Marketing","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","logo":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","foundingDate":"2022","founders":[{"@type":"Person","name":"Chris Shuptrine"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"chris@discoverablemarketing.com","url":"https://www.discoverablemarketing.com/contact/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Discoverable Marketing","image":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","telephone":"910-516-8273","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
+
+  
+
+  
+
+  
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function loadGTM() {
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-587TTM6');
+  }
+
+  function lazyLoadGTM() {
+    window.removeEventListener('scroll', lazyLoadGTM);
+    loadGTM();
+  }
+
+  window.addEventListener('scroll', lazyLoadGTM);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader">
+    // Function to load the script
+    function loadHubSpotScript() {
+        var script = document.createElement('script');
+        script.src = "//js.hs-scripts.com/24298198.js";
+        document.body.appendChild(script);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        var loadPosition = 500; // Change this value based on when you want to load the script
+        if (window.scrollY > loadPosition) {
+            loadHubSpotScript();
+            // Remove the event listener after the script is loaded
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.querySelector('.hero-image');
+
+        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
+        var mobileBreakpoint = 768;
+
+        // Check if the screen width is less than or equal to the breakpoint
+        if (window.innerWidth <= mobileBreakpoint) {
+            // It's a mobile device, so add the lazy loading attribute
+            image.setAttribute('loading', 'lazy');
+        }
+    });
+</script>
+
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--Toggled -->
+
+  
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+
+</head>
+
+<body >
+    
+<nav
+  class="navbar  absolute nav-uppercase  navbar-hover-opacity navbar-expand-lg">
+  <div
+    class=" container  flex-row justify-content-center">
+    <div class="navbar-brand">
+      <a href="/">
+
+        
+        <img src="/assets/images/important/nyckel-color.png"
+         class=" logo-dark  "
+          alt="Discoverable logo" width="320" height="77"/>
+
+        <!--
+        
+        <img src="/assets/images/important/nyckel-black-small.png"
+          srcset="/assets/images/important/nyckel-black-small.png 1x, /assets/images/important/nyckel-black.png 2x"
+          class=" logo-dark  "
+          alt="Nyckel" width="180" height="27"/> -->
+
+      </a>
+    </div>
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+        </li>
+        <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%"><a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Contact</a></li>
+       <li class="nav-item d-none d-lg-block pl-0"><a href="/contact-report/" class="btn m-0" style="background-color:#E96A57">Free Sign-Up</a></li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/">
+          <img src="/assets/images/important/DiscoverableLogo_White_320.webp" class="logo-light" alt="Discoverable logo" width="180" height="27" loading="lazy"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/">Pricing</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/contact/">Customers</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/about/">About</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Blog</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Developers</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<div class="content-wrapper">
+<div class="wrapper white-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+<article class="post">
+  <div class="hero">
+    <div class="back-link-container contain-1200 p-mobile-1350">
+      <a class="back-link" href="/blog/">← All posts</a>
+    </div>
+    <div class="hero-contents contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1>Glossary of Computer Vision Function Types</h1>
+          <div class="summary">Computer vision can be a reliable way to search, identify, and categorize many images in a matter of moments. We define various types of computer vision to get you a better sense of how much you can do with it.</div>
+        </div>
+
+        
+        
+        <div class="author">
+          <div class="author-area">
+            
+            <img src="https://www.nyckel.com/img/nyckel-icon.png" alt="mugshot" class="author-icon" />
+            
+            <span class="author-name">Nyckel</span>
+            
+            <a href="https://github.com/nyckelai" target="_blank">
+              <i class="fa fa-github fa-lg social-icon"></i>
+            </a>
+            
+            
+            <a href="https://twitter.com/nyckelai" target="_blank">
+              <i class="fa fa-twitter fa-lg social-icon"></i>
+            </a>
+            
+            
+            
+            <a href="https://linkedin.com/company/nyckelai" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            
+            
+          </div>
+          <span class="date">
+            Posted Mar 2023
+          </span>
+        </div>
+        
+      </div>
+      
+      <div class="image-area">
+        <img class="safari_only_unset_height" src="/blog/images/001-header-glossary-computer-visions.jpg" alt="Self-driving cars use computer vision to detect obstructions in their path" />
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="entry">
+    <p>Computer vision refers to machine learning techniques used to understand and process image and video data. There are many types of computer vision with <a href="https://www.nyckel.com/blog/28-practical-computer-vision-use-cases/">numerous practical applications</a>. To give you a better understanding of <a href="https://www.nyckel.com/blog/guide-to-computer-vision-for-non-ml-experts/">computer vision</a>, we define some of the most common types.</p>
+
+<ul>
+  <li><strong>Object detection:</strong> <a href="https://www.nyckel.com/docs/detection-quickstart">Object detection</a> identifies the locations of certain objects in an image. Aside from finding the exact locations of objects, object detection is also frequently used to count the number of objects or to detect the presence or absence of an object. Typically, an object detector draws a rectangle, called a bounding box, around each targeted object that it finds.  A less common but faster approach is for the object detector to just detect the <a href="https://www.nyckel.com/blog/are-bounding-boxes-necessary-for-object-detection/">center points of each object</a>. For most applications, center detection can often give you all the information you need, allowing you to train and launch your model quicker than with bounding boxes.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/02-object-detection-glossary-computer-functions.jpg" alt="Object detector identifies the presence of apples in an image" style="border-radius: 20px; max-width: 100%" srcset="../images/02-object-detection-glossary-computer-functions.jpg 2x%" />
+        <figcaption>Nyckel’s object detector identifies apples in an image</figcaption>
+        
+
+</figure>
+
+<ul>
+  <li><strong>Image classification:</strong> Image classification categorizes images using predefined labels. One <a href="https://www.nyckel.com/blog/5-image-classification-examples-datasets-to-build-functions-with-nyckel/">image classification example</a> could be classifying images of street signs by labeling them with what type of sign they are: stop sign, yield sign, school zone, or pedestrian crossing. There are <a href="https://www.nyckel.com/blog/multi-class-classification-vs-multi-label-classification-key-differences-how-to-choose/">three types of image classification</a>: binary classification, multi-class classification, and multi-label classification. In binary classification, the image can be labeled with one of two labels. In multi-class classification, an image can be labeled with one label of many possible choices. And in multi-label classification, an image can be labeled with multiple labels of many possible choices.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/03-image-classification-glossary-computer-vision-functions.jpg" alt="Image classifier classifies orange juice by their brand name" style="border-radius: 20px; max-width: 100%" srcset="../images/03-image-classification-glossary-computer-vision-functions.jpg 2x%" />
+        <figcaption>Nyckel’s image classifier classifies orange juice by its brand</figcaption>
+        
+
+</figure>
+
+<ul>
+  <li><strong>Image tagging:</strong> Image tagging is another term that you can use to describe multi-label image classification. In image tagging, one image can be tagged with multiple labels. For example, if you have a photo of a dress that’s multiple colors, image tagging allows you to identify more than one color in the dress and tag it with all of the respective labels (e.g., green, red, and yellow).</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/04-image-tagging-glossary-computer-functions.jpg" alt="Image tagger identifies all of the categories that an image belongs to" style="border-radius: 20px; max-width: 100%" srcset="../images/04-image-tagging-glossary-computer-functions.jpg 2x%" />
+        <figcaption>Nyckel’s image tagger identifies all of the food items on a plate</figcaption>
+        
+
+</figure>
+
+<ul>
+  <li><strong>Semantic image search:</strong> <a href="https://www.nyckel.com/blog/a-quick-guide-to-semantic-image-search-with-examples/">Semantic image search</a> lets you use either an image or text string to search for a certain object within a gallery of images. For example, you can search “green dress” to find all of the green dresses within a database of images.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/05-semantic-image-search-glossary-computer-vision-functions.jpg" alt="Semantic image search detects which images include black jeeps" style="border-radius: 20px; max-width: 100%" srcset="../images/05-semantic-image-search-glossary-computer-vision-functions.jpg 2x%" />
+        <figcaption>Nyckel’s semantic image search identifies black jeeps in a photo library</figcaption>
+        
+
+</figure>
+
+<ul>
+  <li><strong>Semantic segmentation:</strong> Semantic segmentation breaks down the pixels of an image to determine what each pixel is. It identifies all of the pixels in an image and then tags them based on what category (i.e., object) they are. Semantic segmentation is particularly important for self-driving cars. Self-driving cars need to be able to accurately identify the drivable surface. Semantic segmentation functions look at each pixel of an image to determine: Is this pixel part of the road? A pedestrian? A street sign? Tagging what’s in front of and around the car with these labels tells the car where it can and can’t drive.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/06-semantic-segmentation-glossary-computer-vision-functions.jpg" alt="TBD" style="border-radius: 20px; max-width: 100%" srcset="../images/06-semantic-segmentation-glossary-computer-vision-functions.jpg 2x%" />
+        <figcaption>Semantic segmentation function identifies cats from dogs</figcaption>
+        
+
+</figure>
+
+<ul>
+  <li><strong>Instance segmentation:</strong> Instance segmentation is similar to object detection in that it identifies instances of objects within an image. Instead of drawing a box around the object or detecting its center, instance segmentation finds the precise pixels that correspond to that object. This additional precision comes at a cost. Training images need to be annotated in a similar manner, which is time-consuming. The training and inference process is also more computationally demanding and expensive as a result. But sometimes you need this additional precision. For example, when you want to remove a specific person from a photo while keeping the other people in it.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/07-instance-segmentation-glossary-computer-vision-functions.jpg" alt="TBD" style="border-radius: 20px; max-width: 100%" srcset="../images/07-instance-segmentation-glossary-computer-vision-functions.jpg 2x%" />
+        <figcaption>Instance segmentation function identifies instances of cats and dogs</figcaption>
+        
+
+</figure>
+
+<ul>
+  <li><strong>Text extraction or optical character recognition (OCR):</strong> Text extraction or OCR converts an image of text into text that’s machine-readable. For example, you can scan a hard copy of a form and convert it into an editable text document using text extraction.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/08-text-extraction-glossary-computer-vision-functions.jpg" alt="Optical character recognition translates a coffee shop’s sign into text" style="border-radius: 20px; max-width: 100%" srcset="../images/08-text-extraction-glossary-computer-vision-functions.jpg 2x%" />
+        <figcaption>Nyckel’s OCR function translates a coffee shop’s sign into text</figcaption>
+        
+
+</figure>
+
+<ul>
+  <li><strong>Scene reconstruction:</strong> Scene reconstruction enables the function to “imagine” a visual that’s not actually in the image. For example, if someone in a photo is holding a balloon, the function can imagine what’s behind that balloon. Scene reconstruction can come in handy if you want to edit an object out of a photo but want to fill that blank space with what was behind it.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/09-scene-reconstruction-glossary-computer-vision-functions.jpg" alt="AI research scientist uses machine learning to remove person and piece of garbage from image" style="border-radius: 20px; max-width: 100%" srcset="../images/09-scene-reconstruction-glossary-computer-vision-functions.jpg 2x%" />
+        <figcaption>Photo credit: Louis Bouchard: &lt;https://pub.towardsai.net/this-ai-removes-unwanted-objects-from-your-images-29b2905df08e&gt;</figcaption>
+        
+
+</figure>
+
+<ul>
+  <li><strong>Event detection:</strong> Event detection detects certain events that happen in video data. For example, you might want to know if someone appeared on your home security camera. Using event detection, you can determine at what point in the video a person stepped in and out of the frame.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/10-event-detection-glossary-computer-vision-functions.jpg" alt="Security cameras monitor for motion" style="border-radius: 20px; max-width: 100%" srcset="../images/10-event-detection-glossary-computer-vision-functions.jpg 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<ul>
+  <li><strong>Object tracking:</strong> Object tracking can show you where an object is at each moment in a video and can track the path of that object. For example, you can use video tracking to track the movements of a basketball through each frame of a recorded basketball game. This applies object detection (see earlier bullet) to videos.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/11-object-tracking-glossary-computer-vision-functions.jpg" alt="Object tracker tracks the path of a basketball" style="border-radius: 20px; max-width: 100%" srcset="../images/11-object-tracking-glossary-computer-vision-functions.jpg 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<ul>
+  <li><strong>Motion estimation, aka optical flow:</strong> Building on object tracking, motion estimation enables you to predict where an object is going to be in the future. A fun example of this is creating <a href="https://www.youtube.com/watch?v=myO8fxhDRW0">a basketball hoop that won’t let you miss</a> because it predicts where the ball is going — and where the hoop needs to be — for you to make the basket.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/12-motion-estimation-glossary-computer-vision-functions.jpg" alt="Motion estimation predicts horse’s movement between video frames" style="border-radius: 20px; max-width: 100%" srcset="../images/12-motion-estimation-glossary-computer-vision-functions.jpg 2x%" />
+        <figcaption>Motion estimation Wikipedia page: &lt;https://en.wikipedia.org/wiki/Motion_estimation&gt;</figcaption>
+        
+
+</figure>
+
+<ul>
+  <li><strong>Pose estimation:</strong> Pose estimation detects human figures and understands their body pose. It is used for things like gesture detection and motion capture.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/13-pose-estimation-glossary-computer-vision-functions.jpg" alt=" Pose estimator detects the pose of people playing basketball" style="border-radius: 20px; max-width: 100%" srcset="../images/13-pose-estimation-glossary-computer-vision-functions.jpg 2x%" />
+        <figcaption></figcaption>
+        
+
+</figure>
+
+<ul>
+  <li><strong>3D scene modeling:</strong> 3D scene modeling involves taking 2D photos of different walls within a room and asking the computer to reconstruct a 3D rendering. This is how companies like <a href="https://matterport.com/industries/real-estate">Matterport</a>, a spatial data company, create 3D virtual tours of homes using photos of the house.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/14-3D-scene-modeling-glossary-computer-vision-functions.jpg" alt="3D scene modeler depicts an intersection in San Francisco" style="border-radius: 20px; max-width: 100%" srcset="../images/14-3D-scene-modeling-glossary-computer-vision-functions.jpg 2x%" />
+        <figcaption>Photo credit: Simultaneous localization and mapping Wikipedia: &lt;https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping&gt;</figcaption>
+        
+
+</figure>
+
+<ul>
+  <li><strong>Image restoration:</strong> Image restoration removes noise, damage, and other distortions from an image and makes adjustments to the image based on predictions of what its original color, lighting, and other factors would have been.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/15-image-restoration-glossary-computer-vision-functions.jpg" alt="Image restoration AI restores an old photo of a couple" style="border-radius: 20px; max-width: 100%" srcset="../images/15-image-restoration-glossary-computer-vision-functions.jpg 2x%" />
+        <figcaption>Photo credit: Vance AI: &lt;https://vanceai.com/old-photo-restoration/&gt;</figcaption>
+        
+
+</figure>
+
+<ul>
+  <li><strong>Keypoint detection:</strong> Keypoint detection identifies and localizes different key object parts or “keypoints” within an object. For example, identifying noses, mouths, eyes and eyebrows as all being keypoints that constitute a human face. This is used for tasks such as face recognition and motion capture.</li>
+</ul>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <img src="../images/16-keypoint-detection-glossary-computer-vision-functions.jpg" alt="Keypoint detector identifies points on a human face" style="border-radius: 20px; max-width: 100%" srcset="../images/16-keypoint-detection-glossary-computer-vision-functions.jpg 2x%" />
+        <figcaption>Photo credit: Facial Keypoints Detector GitHub Project: &lt;https://github.com/3ba2ii/Facial-Keypoints-Detector&gt;</figcaption>
+        
+
+</figure>
+
+<p>The science behind computer vision is complicated, but products like Nyckel make it accessible, even for companies that don’t have machine learning experts on staff. Take a look at our <a href="https://www.nyckel.com/docs/image-classification-quickstart">image classification</a>, <a href="https://www.nyckel.com/docs/detection-quickstart">object detection</a>, <a href="https://www.nyckel.com/docs/image-search-quickstart">image semantic search</a>, and <a href="https://www.nyckel.com/docs/ocr-quickstart">OCR quickstarts</a> to see how quick and easy it is to bring computer vision to your organization.</p>
+
+<p>What other types of <a href="https://www.nyckel.com/blog/guide-to-computer-vision-for-non-ml-experts/">computer vision</a> would you like to see defined in this glossary?</p>
+
+<p>Reach out to <a href="mailto:feedback@nyckel.com">feedback@nyckel.com</a>.</p>
+
+
+  </div>
+
+</article></div></div></div>
+</div>
+
+<!--likely needed for hero banner loads -->
+  <script defer src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/popper.min.js"></script>
+  <script defer src="/assets/js/bootstrap.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!--likely not needed for hero banner loads -->
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script defer src="/assets/js/plugins.js"></script>
+ <script defer src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script defer src="/assets/js/scripts.js"></script>
+  <footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+
+ 
+
+  <div class="space50"></div>
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+
+
+<div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Learn More</div>
+          
+          <ul class="list-unstyled mb-0">
+            <li><a href="/contact/">Contact</a></li>
+             <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+
+
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <div class="h3 widget-title" style="color: white;">Follow Us</div>
+              <ul class="social social-mute social-s">
+                
+               <li><a href="https://twitter.com/discoverableB2B" title="Discoverable Marketing on Twitter"><i class="jam jam-twitter"></i></a></li>
+                
+               <li><a href="https://www.facebook.com/discoverablemarketing" title="Discoverable Marketing on Facebook"><i class="jam jam-facebook"></i></a></li>
+                
+               <li><a href="https://www.youtube.com/@discoverablemarketing" title="Discoverable Marketing on YouTube"><i class="jam jam-youtube"></i></a></li>
+                
+               <li><a href="https://www.linkedin.com/company/discoverable-marketing/" title="Discoverable Marketing on LinkedIn"><i class="jam jam-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            
+        <div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Company</div>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/blog/">Blog</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">© 2023 Nyckel | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">T&Cs</a></p>
+  </div>
+</footer>
+  
+</body>
+</html>

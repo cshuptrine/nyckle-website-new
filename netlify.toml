@@ -1,0 +1,15 @@
+[[redirects]]
+  from = "/improve-g2-rank/"
+  to = "/blog/improve-g2-rank/"
+
+[[redirects]]
+  from = "/articles/improve-g2-rankings/"
+  to = "/blog/improve-g2-rank/"
+
+[[redirects]]
+  from = "/faq"
+  to = "/" 
+
+[[redirects]]
+  from = "/blog/index.html"
+  to = "/blog/" 

@@ -1,0 +1,36 @@
+---
+layout: default
+title: "404"
+noindex: true
+fill: fill-light-wrapper
+nav: dark
+page_header:
+  enable: true
+  title: "We're sorry!"
+  sub_title: "The page you requested cannot be found"
+  button_text: "Homepage"
+  button_url: "/"
+  background_image:
+permalink: /404.html
+cta: none
+---
+
+{% if page.page_header.enable %}
+{% assign page_d = page.page_header %}
+<div class="wrapper light-wrapper page-title-wrapper inverse-text">
+    <div class="container inner text-center">
+        
+        <div class="space90"></div>
+        {% if page_d.title %}
+        <h1 class="page-title" style="color: #0C0F44;">{{page_d.title}}</h1>
+        {% endif %}
+        {% if page_d.sub_title %}
+        <p class="lead mb-30" style="color: #0C0F44;">{{page_d.sub_title}}</p>
+        {% endif %}
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+{% endif %}
+<div class="space100"></div>
+ 

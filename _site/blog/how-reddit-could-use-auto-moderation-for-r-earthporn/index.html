@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Meta Tags & Codes -->
+<!--- General Meta -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- For Modern Browsers -->
+<link rel="icon" href="https://www.discoverablemarketing.com/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="https://www.discoverablemarketing.com/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.discoverablemarketing.com/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://www.discoverablemarketing.com/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="https://www.discoverablemarketing.com//mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">
+
+
+<title>How Reddit Could Use Machine Learning to Better Moderate Subreddits</title>
+
+
+<link rel="canonical" href="https://www.discoverablemarketing.com/blog/how-reddit-could-use-auto-moderation-for-r-earthporn/"/>
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog/how-reddit-could-use-auto-moderation-for-r-earthporn/" hreflang="x-default" />
+<meta property="og:url" content="https://www.discoverablemarketing.com/blog/how-reddit-could-use-auto-moderation-for-r-earthporn/"/>
+
+
+<meta name="description" content=" Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable."/>
+<meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
+
+<!--- OpenGraph -->
+<meta property="og:title" content="How Reddit Could Use Machine Learning to Better Moderate Subreddits"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<meta property="og:site_name" content="Discoverable Marketing"/>
+
+<meta property="og:type" content="website"/> 
+
+
+<!--- Robots -->
+<meta name="robots" content="max-image-preview:large"/>
+
+
+<!--- Schemas -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Discoverable Marketing","legalName":"Discoverable Marketing","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","logo":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","foundingDate":"2022","founders":[{"@type":"Person","name":"Chris Shuptrine"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"chris@discoverablemarketing.com","url":"https://www.discoverablemarketing.com/contact/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Discoverable Marketing","image":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","telephone":"910-516-8273","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
+
+  
+
+  
+
+  
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function loadGTM() {
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-587TTM6');
+  }
+
+  function lazyLoadGTM() {
+    window.removeEventListener('scroll', lazyLoadGTM);
+    loadGTM();
+  }
+
+  window.addEventListener('scroll', lazyLoadGTM);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader">
+    // Function to load the script
+    function loadHubSpotScript() {
+        var script = document.createElement('script');
+        script.src = "//js.hs-scripts.com/24298198.js";
+        document.body.appendChild(script);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        var loadPosition = 500; // Change this value based on when you want to load the script
+        if (window.scrollY > loadPosition) {
+            loadHubSpotScript();
+            // Remove the event listener after the script is loaded
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.querySelector('.hero-image');
+
+        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
+        var mobileBreakpoint = 768;
+
+        // Check if the screen width is less than or equal to the breakpoint
+        if (window.innerWidth <= mobileBreakpoint) {
+            // It's a mobile device, so add the lazy loading attribute
+            image.setAttribute('loading', 'lazy');
+        }
+    });
+</script>
+
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--Toggled -->
+
+  
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+
+</head>
+
+<body >
+    
+<nav
+  class="navbar  absolute nav-uppercase  navbar-hover-opacity navbar-expand-lg">
+  <div
+    class=" container  flex-row justify-content-center">
+    <div class="navbar-brand">
+      <a href="/">
+
+        
+        <img src="/assets/images/important/nyckel-color.png"
+         class=" logo-dark  "
+          alt="Discoverable logo" width="320" height="77"/>
+
+        <!--
+        
+        <img src="/assets/images/important/nyckel-black-small.png"
+          srcset="/assets/images/important/nyckel-black-small.png 1x, /assets/images/important/nyckel-black.png 2x"
+          class=" logo-dark  "
+          alt="Nyckel" width="180" height="27"/> -->
+
+      </a>
+    </div>
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+        </li>
+        <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%"><a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Contact</a></li>
+       <li class="nav-item d-none d-lg-block pl-0"><a href="/contact-report/" class="btn m-0" style="background-color:#E96A57">Free Sign-Up</a></li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/">
+          <img src="/assets/images/important/DiscoverableLogo_White_320.webp" class="logo-light" alt="Discoverable logo" width="180" height="27" loading="lazy"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/">Pricing</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/contact/">Customers</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/about/">About</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Blog</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Developers</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<div class="content-wrapper">
+<div class="wrapper white-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+<article class="post">
+  <div class="hero">
+    <div class="back-link-container contain-1200 p-mobile-1350">
+      <a class="back-link" href="/blog/">← All posts</a>
+    </div>
+    <div class="hero-contents contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1>How Reddit Could Use Machine Learning to Better Moderate Subreddits</h1>
+          <div class="summary">Subreddit moderators don’t have an easy job. We experimented to see how Reddit could use to Nyckel to moderate r/EarthPorn images quickly and effectively. </div>
+        </div>
+
+        
+        
+        <div class="author">
+          <div class="author-area">
+            
+            <img src="https://avatars.githubusercontent.com/danielott" alt="mugshot" class="author-icon" />
+            
+            <span class="author-name">Dan Ott</span>
+            
+            <a href="https://github.com/danielott" target="_blank">
+              <i class="fa fa-github fa-lg social-icon"></i>
+            </a>
+            
+            
+            
+            
+            <a href="https://linkedin.com/in/danott" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            
+            
+          </div>
+          <span class="date">
+            Posted Dec 2022
+          </span>
+        </div>
+        
+      </div>
+      
+      <div class="image-area">
+        <img class="safari_only_unset_height" src="/blog/images/moderating-earthporn-hero.jpg" alt="r/EarthPorn example" />
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="entry">
+    <p>Subreddit moderators don’t have an easy job. These are the hard-working people who lock down comments when they’re getting overly contentious, block NSFW content, and reject posts for straying from community guidelines, like a fence striking its way across the landscape in a picture posted in <a href="https://www.reddit.com/r/EarthPorn">r/EarthPorn</a>.</p>
+
+<p><em>EarthPorn: The subreddit for gorgeous images of nature (that at least appear to be) untouched by the human hand.</em></p>
+
+<p>Recently, NewScientist reported that “<a href="https://www.newscientist.com/article/2325828-reddit-moderators-do-3-4-million-worth-of-unpaid-work-each-year/">Reddit moderators do $3.4 million worth of unpaid work each year</a>.” These volunteer mods are doing content moderation work for free, simply for the love of their passions.</p>
+
+<p>But surely machine learning (ML) can tell a fence from a backdrop of nature? Couldn’t Reddit be deploying ML to do this type of content moderation instead? We decided to experiment with Nyckel to see how quickly we could train an image classification system to moderate r/EarthPorn images effectively.</p>
+
+<p>[For text moderation as opposed to images, take a look at how Nyckel <a href="https://www.nyckel.com/blog/custom-spam-filter-gust-case-study/">helped Gust stop spam</a> and allowed <a href="https://www.nyckel.com/blog/content-moderation-of-social-network-taimi-case-study/">Taimi to auto-moderate their social network</a>.]</p>
+
+<h2 id="our-starting-point-moderation-rules-for-rearthporn">Our starting point: Moderation rules for r/EarthPorn</h2>
+
+<p>There are a few <a href="https://www.reddit.com/r/earthporn/about/rules">community guidelines for posting in r/EarthPorn</a>, but a core guideline that we can assess from a machine learning moderation point of view, is:</p>
+
+<p><em>No images with human-made objects, people or animals.</em></p>
+
+<p>For simplification for our demo, we are shortening this to “no images with human-made objects.” More rules can always be added later.</p>
+
+<p>Let’s test to validate our auto-moderation idea.</p>
+
+<h2 id="step-1-crawl-the-rearthporn-subreddit-for-the-good-data">Step 1: Crawl the r/EarthPorn subreddit for the ‘Good’ data</h2>
+
+<p>To get the ‘Good’ data, let’s retrieve the moderated content from r/EarthPorn. We’ll want between 25 to 50 varied images.</p>
+
+<p>Rather than building a custom scraper, we’re using <a href="https://github.com/ClarityCoders/RedditImageScraper">Clarity Coders RedditImageScraper on GitHub</a>, which has a <a href="https://www.youtube.com/watch?v=sEIv8UcR3Go">YouTube walkthrough</a> and uses Reddit’s Python API Wrapper. Instead of running the scraper with a Reddit web app as suggested, we changed it to a personal use script, using a throwaway account’s credentials to scrape the images, which are then delivered neatly to the /images folder.</p>
+
+<p>Tip: Once you have a list of images, you might need to clean this data by deleting any images where you find man-made objects the mods may have missed.</p>
+
+<h2 id="step-2-search-the-web-for-the-bad-data">Step 2: Search the web for the ‘Bad’ data</h2>
+
+<p>We won’t be able to crawl EarthPorn for rejected images, but we still need to find some ‘Bad’ data to train the model. For instance, here is an <a href="https://www.reddit.com/r/EarthPorn/comments/x0td1g/mt_mikinley_denali_national_park_oc_4627x3085/">example</a> of an image that got blocked as it had a man-made structure (a bridge) in it.</p>
+
+<p>We will need to find other nature images that contain some man-made structures (e.g., road, bridge, building, power line, tower), making sure the images are varied, both in the type of nature and the type of man-made structure. Again, this will require around 25-50 such images.</p>
+
+<h2 id="step-3-train-a-nyckel-image-classification-function-to-tell-if-an-image-has-man-made-structures-or-not">Step 3: Train a Nyckel image classification function to tell if an image has man-made structures or not</h2>
+
+<p>Using the images we found in Steps 1 and 2, we can train a Nyckel classification function by assigning labels to both the ‘Good’ and ‘Bad’ images. Then, we simply invoke the function with a new image to see whether it is a picture of nature without a man-made structure in it.</p>
+
+<p>Try it for yourself with this clickable demo:</p>
+
+<figure class="figure" style="width: 100%">
+    <div style="position: relative; padding-bottom: calc(67.56756756756756% + 41px); height: 0;">
+        <iframe src="https://demo.arcade.software/YRrSnFWDf854WlbS9Jts?embed" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px;"></iframe>
+    </div>
+    
+    <figcaption>Train an image classifier to auto-moderate Reddit</figcaption>
+    
+</figure>
+
+<p>Is the function accurate enough yet to accurately approve or reject any image we give it? Probably not. However, human moderators can help train the model with each image rejection and approval.</p>
+
+<h2 id="how-it-could-work-in-the-real-world-embedding-image-classification-in-moderator-workflows">How it could work in the real world: Embedding image classification in moderator workflows</h2>
+
+<p>Our example above shows how to classify the images from r/EarthPorn retrospectively. However, this process could be embedded in the subreddit moderation workflow with <a href="https://www.nyckel.com/blog/custom-ai-assisted-content-moderation-pipeline/">Custom AI-Assisted Content Moderation</a>.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+    <a href="https://www.nyckel.com/custom-content-moderation-api">
+        
+        <img src="../images/2022/content-moderation-workflow.png" alt="AI-assisted content moderation workflow" style="border-radius: 20px; max-width: 100%" srcset="../images/2022/content-moderation-workflow.png 2x%" />
+        <figcaption>AI-assisted content moderation workflow</figcaption>
+        
+    </a>
+    
+
+</figure>
+
+<p>Each time a moderator manually approves or disapproves a post, the image and its approval or disapproval tag is routed to Nyckel via the API, so AI-assisted moderation gets more accurate with each manual action.</p>
+
+<p>By giving moderators a list sorted by confidence (lowest to highest), moderators can approve or disapprove the most difficult classifications first, in a priority system which will not only help save time but improve the AI model.</p>
+
+<p>When the AI reaches a high degree of accuracy, after 100 or so photos, then it can be trusted to auto-approve or reject submissions that have the highest confidence.</p>
+
+<h2 id="auto-moderation-is-essential-for-any-social-platform">Auto-moderation is essential for any social platform</h2>
+
+<p>If you’re running a social platform, moderation is essential. While Reddit is using auto-moderation, its <a href="https://www.reddit.com/r/AutoModerator/wiki/index/">AutoModerator system</a> doesn’t do much ML, and there is no tailoring to the rules of a subreddit. Instead of using volunteers to do the majority of the work, it should be ML augmented by humans.</p>
+
+<p>With simple auto-mod systems like we made with Nyckel that learn with each mod’s approval or disapproval, those unpaid volunteers will have a whole lot more time on their hands to enjoy the subreddit they’re so passionate about. Plus, <a href="https://www.nyckel.com/custom-content-moderation-api">Nyckel has a custom content moderation API</a> to boot.</p>
+
+<p>Interested in giving Nyckel a spin yourself? <a href="https://www.nyckel.com/console">Sign up for a free account</a> at any time, and <a href="mailto:feedback@nyckel.com">reach out to us</a> with any questions.</p>
+
+
+  </div>
+
+</article></div></div></div>
+</div>
+
+<!--likely needed for hero banner loads -->
+  <script defer src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/popper.min.js"></script>
+  <script defer src="/assets/js/bootstrap.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!--likely not needed for hero banner loads -->
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script defer src="/assets/js/plugins.js"></script>
+ <script defer src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script defer src="/assets/js/scripts.js"></script>
+  <footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+
+ 
+
+  <div class="space50"></div>
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+
+
+<div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Learn More</div>
+          
+          <ul class="list-unstyled mb-0">
+            <li><a href="/contact/">Contact</a></li>
+             <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+
+
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <div class="h3 widget-title" style="color: white;">Follow Us</div>
+              <ul class="social social-mute social-s">
+                
+               <li><a href="https://twitter.com/discoverableB2B" title="Discoverable Marketing on Twitter"><i class="jam jam-twitter"></i></a></li>
+                
+               <li><a href="https://www.facebook.com/discoverablemarketing" title="Discoverable Marketing on Facebook"><i class="jam jam-facebook"></i></a></li>
+                
+               <li><a href="https://www.youtube.com/@discoverablemarketing" title="Discoverable Marketing on YouTube"><i class="jam jam-youtube"></i></a></li>
+                
+               <li><a href="https://www.linkedin.com/company/discoverable-marketing/" title="Discoverable Marketing on LinkedIn"><i class="jam jam-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            
+        <div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Company</div>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/blog/">Blog</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">© 2023 Nyckel | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">T&Cs</a></p>
+  </div>
+</footer>
+  
+</body>
+</html>

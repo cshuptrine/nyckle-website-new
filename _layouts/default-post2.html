@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include gtm-header.html %}
+  {% include analytics.html %}
+  {% include meta.html %}
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/syntax-base16.solarized.light.css" />
+  <script src="https://www.nyckel.com/js/bootstrap/bootstrap.min.js" defer></script>
+  <script src="https://www.nyckel.com/js/bootstrap/jquery-3.6.0.min.js" defer></script>
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
+    href="{{ site.baseurl }}/feed.xml" />
+  <script async src="https://tag.clearbitscripts.com/v1/pk_f702a528ed447fbe5f759cf82f981128/tags.js"
+    referrerpolicy="strict-origin-when-cross-origin"></script>
+</head>
+
+<body>
+  {% include gtm-body.html %}
+  <header id="header" class="fixed-top" b-9kuxvwkknj>
+    <div id="menu-toggle-wrapper" b-9kuxvwkknj><button id="menu-toggle" class="menu-toggle"
+        aria-label="Toggle Main Navigation" aria-expanded="false" b-9kuxvwkknj><span id="menu-toggle-open"
+          class="menu-toggle-icon menu-toggle-open" b-9kuxvwkknj><img
+            src="/_content/Marketing/images/menu-toggle-open.svg" alt="Open Menu" b-9kuxvwkknj></span>
+        <span id="menu-toggle-close" class="menu-toggle-icon menu-toggle-close" style="display:none;" b-9kuxvwkknj><img
+            src="/_content/Marketing/images/menu-toggle-close.svg" alt="Open Menu" b-9kuxvwkknj></span></button></div>
+    <div class="contain-1300 p-mobile-1350 d-flex" b-9kuxvwkknj>
+      <div class="logo mr-3" b-9kuxvwkknj><a href="/" b-9kuxvwkknj>Nyckel</a></div>
+      <nav id="header-menu" class="nav-menu" b-9kuxvwkknj>
+        <ul b-9kuxvwkknj>
+          <li b-9kuxvwkknj><a href="/product" b-9kuxvwkknj>Product</a></li>
+          <li b-9kuxvwkknj><a href="/pricing" b-9kuxvwkknj>Pricing</a></li>
+          <li b-9kuxvwkknj><a href="/customers" b-9kuxvwkknj>Customers</a></li>
+          <li b-9kuxvwkknj><a href="/docs" b-9kuxvwkknj>Docs</a></li>
+          <li b-9kuxvwkknj><a href="/blog/" b-9kuxvwkknj>Blog</a></li>
+          <li class="mobile-only" b-9kuxvwkknj><a href="/console" b-9kuxvwkknj>Log In</a></li>
+        </ul>
+      </nav>
+      <div style="flex: 1" b-9kuxvwkknj></div>
+      <nav id="header-login" class="nav-menu" b-9kuxvwkknj>
+        <ul b-9kuxvwkknj>
+          <li b-9kuxvwkknj><a href="/console" b-9kuxvwkknj>Log In</a></li>
+        </ul>
+      </nav>
+      <button id="header-signup" type="button" class="btn btn-bordered ml-4" onclick="sessionSignIn()" b-9kuxvwkknj>
+        Sign Up
+      </button>
+    </div>
+  </header>
+
+  <div id="main" role="main" class="readingpane">
+    {{ content }}
+  </div>
+
+  <footer id="site-footer" class="site-footer text-invert p-t-50 p-b-25">
+    <div class="contain-1300 p-mobile-1350 columns-fluid collapse-700">
+      <div class="col-3"><a href="#"><img src="/_content/Marketing/images/logo-footer.svg" alt="Nyckel"
+            class="footer-logo" loading="lazy"></a>
+
+        <div class="p-t-30 p-b-50"><a href="https://www.ycombinator.com/" style="position: relative;"><img
+              src="/_content/Marketing/images/icon-y-combinator.svg" alt="Y Combinator" class="social-icon-ycombinator"
+              style="position: absolute;">
+            <span style="padding-left: 45px; line-height: 1.1; display: block; font-size: .8rem; padding-top: 3px;">
+              Backed by<br>
+              Y Combinator
+            </span></a></div>
+
+        <div><a href="https://twitter.com/nyckelai"><img src="/_content/Marketing/images/icon-twitter.svg" alt="Twitter"
+              class="social-icon" loading="lazy"></a>
+          <a href="https://www.linkedin.com/company/nyckelai"><img src="/_content/Marketing/images/icon-linkedin.svg"
+              alt="LinkedIn" class="social-icon"></a>
+          <a href="https://www.nyckel.com/blog/feed.xml"><img src="/_content/Marketing/images/icon-rss.svg" alt="RSS"
+              class="social-icon" loading="lazy"></a>
+          <a href="https://www.youtube.com/nyckelai"><img src="/_content/Marketing/images/icon-youtube.svg"
+              alt="YouTube" class="social-icon" loading="lazy"></a>
+        </div>
+      </div>
+      <div class="col-3">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/docs">API</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/console">Log In</a></li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="mailto:feedback@nyckel.com" id="contactus">Contact Us</a></li>
+          <li><a href="https://status.nyckel.com/">Status / Uptime</a></li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <ul>
+          <li><a href="/terms">Terms of Use</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-centered p-t-30"><img srcset="/_content/Marketing/images/logo-california@2x.png 2x"
+        src="/_content/Marketing/images/logo-california.png" alt="Made in California" class=""
+        style="display: block; margin: 0 auto; max-width: 100%;" loading="lazy">
+      Made in California
+      <div class="p-t-20" style="font-size: .8rem; opacity: .8;">© {{ site.time | date: '%Y' }} Nyckel. All Rights
+        Reserved</div>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+
+  <script src="https://www.nyckel.com/_content/Marketing/js/site.js" defer></script>
+  <script
+    src="https://www.nyckel.com/_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"
+    defer></script>
+  <script src="https://www.nyckel.com/js/session.js?v=WOPUVBa_VkEzmBcoploysZirKVBOiIMClB9158C55mE" defer></script>
+  <script src="data:application/javascript,eval(document.currentScript.textContent)" defer>
+    Session.init({
+      "authority": "https://login.nyckel.com",
+      "audience": "https://nyckel.com",
+      "client_id": "IvyOjKPkMuarG36HolXosTSPMVrZOLm9",
+    });
+
+    function sessionSignIn() {
+      if (Session) {
+        Session.signIn();
+      }
+      else {
+        console.warn("Session was null or undefined; redirecting to /console");
+        window.location = "/console";
+      }
+    }
+
+    function sessionSignOut() {
+      Session.signOut();
+    }
+
+    function saveSessionToLocalStorage() {
+      Session.saveToLocalStorage();
+    }
+  </script>
+</body>
+
+</html>

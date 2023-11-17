@@ -1,0 +1,202 @@
+---
+layout: default
+permalink: "/contact-report/"
+description: Contact Discoverable Marketing to learn more about our services and products.
+fill: fill-light-wrapper
+title: Contact Discoverable Marketing
+cta: none
+nav: light
+page_header:
+  enable: true
+  title: Want your free mini-report?
+  sub_title: Get a free sample customized to your target market
+  button_text: 
+  button_url: "#"
+  background_image: "/assets/images/important/home-bg.webp"
+
+contact_area:
+  enable: true
+  title:
+  sub_title:
+  action_email: "chris@discoverablemarketing.com"
+  
+  lists:
+    - title: Test before you buy
+      info_01: Totally free sample
+      icon: "icofont-check"
+
+    - title: For B2B SaaS marketers
+      info_01: Get insights to grow
+      icon: "icofont-check"
+
+    - title: Quick delivery
+      info_01: You'll get the mini-report within a week
+      icon: "icofont-check"
+
+  forms_data: 
+
+    - field_type: "input"
+      field_name: "first_name"
+      placeholder: "First Name" 
+      error_message: "Required" 
+
+    - field_type: "input"
+      field_name: "last_name"
+      placeholder: "Last Name" 
+      error_message: "Required"
+
+    - field_type: "input"
+      field_name: "user_email"
+      placeholder: "Email"
+      error_message: "Required"
+
+    - field_type: "input"
+      field_name: "company"
+      placeholder: "Company"
+      error_message: "Required"
+
+    - field_type: "textarea"
+      field_name: "user_message"
+      placeholder: "What would you like to achieve with Discoverable?"
+      error_message: "Required"
+
+---
+
+{% if page.page_header.enable %}
+{% assign page_d = page.page_header %}
+<div class="wrapper image-wrapper bg-image page-title-wrapper inverse-text"
+    data-image-src="{{page_d.background_image}}">
+    <div class="container inner text-center">
+        
+        <div class="space90"></div>
+        {% if page_d.title %}
+        <h1 class="page-title">{{page_d.title}}</h1>
+        {% endif %}
+        {% if page_d.sub_title %}
+        <p class="lead mb-30">{{page_d.sub_title}}</p>
+        {% endif %}
+        {% if page_d.button_text != null %}
+        <a href="{{page_d.button_url}}" class="btn btn-white btn-strong-hover">{{page_d.button_text}}</a>
+        {% endif %}
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+{% endif %}
+
+
+{% if page.contact_area.enable %}
+<div class="wrapper light-wrapper" style="margin-top: -40px;padding-left:3%;padding-right:3%">
+    <div class="container inner" style="padding-left:5%;">
+        {% if page.contact_area.title %}
+          
+         <h2 class="section-title">{{page.contact_area.title}}</h2>
+        {% endif %}
+        {% if page.contact_area.sub_title %}
+         <p class="lead larger">{{page.contact_area.sub_title}}</p>
+        {% endif %}
+        <div class="space10"></div>
+        <div class="row">
+          <div class="col-lg-7">
+                      <!-- <h2 class="section-title" style="text-align: center;">Get the mini-report for free</h2>
+                       <div class="space10"></div>-->
+
+            <!-- HubSpot Form will be inserted here -->
+            <div style="padding-left:10%"><div id="hubspot-form"></div></div>
+            
+          </div>
+          <!--/column -->
+          <div class="space30 d-none d-md-block d-lg-none"></div>
+          <div class="col-lg-4 offset-lg-1" style="padding-top:2%;margin-left:30px;">
+            {% for lists in page.contact_area.lists %}
+            <div class="d-flex flex-row">
+              <div>
+                <div class="icon fs-34 mr-25" style="color: #8AA9D6;"> <i class="{{lists.icon}}"></i> </div>
+              </div>
+              <div>
+                <h3 class="mb-5">{{lists.title}}</h3>
+                <address>{{lists.info_01}} 
+                  {% if lists.info_02 %}
+                  <br class="d-none d-md-block" />
+                  {{lists.info_02}}
+                 {% endif %}
+                </address>
+              </div>
+            </div>
+              {% endfor %}
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+    </div>
+</div>
+  {% endif %}
+
+<!-- Load the HubSpot Forms Embed Code -->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    region: "na1",
+    portalId: "24298198",
+    formId: "eedb83cb-6d23-4263-9bdd-b4094c923767",
+    target: "#hubspot-form"
+  });
+</script>
+</div>
+
+
+<!--<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var formInputs = document.querySelectorAll('#contact-form input, #contact-form textarea');
+    for (var i = 0; i < formInputs.length; i++) {
+      formInputs[i].setAttribute('autocomplete', 'on');
+    }
+  });
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    var userEmail = document.getElementById('user_email').value;
+    var domain = userEmail.split('@')[1];
+
+    var blockedDomains = ['gmail.com', 'yahoo.com', 'hotmail.com'];
+    if (blockedDomains.includes(domain)) {
+      event.preventDefault();
+      alert('Please enter a non-personal email address.');
+    } else {
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', event.target.action, true);
+      xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+
+      xhr.onloadend = function() {
+        if (xhr.status === 200) {
+          window.location.href = 'https://www.discoverablemarketing.com/contact-thankyou/';
+        } else {
+          console.error('Form submission failed:', xhr.status, xhr.statusText);
+        }
+      };
+
+      xhr.send(new FormData(event.target));
+    }
+  });
+</script>-->
+
+<div class="wrapper light-wrapper" style="margin-top: -7%;">
+  <div class="container inner">
+    <div class="row" style="margin-top: -4%;">
+      <div class="col-md-10 offset-md-1 text-center col-lg-8 offset-lg-2">
+            <blockquote class="larger">
+              <p style="font-size: 25px;">"This report was very helpful in understanding our market presence and opportunities. Highly recommend getting the free report and seeing for yourself."
+              </p>
+              <div class="blockquote-details justify-content-center">
+                <div class="img-blob blob1"><img src="{{relative_url}}/assets/images/important/derek.webp" alt="discoverable customer quotation" /></div>
+                <div class="info">
+                  <h6 class="mb-0">Derek Osgood</h6>
+                  <span class="meta mb-0">CEO, Ignition</span>
+                </div>
+              </div>
+            </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+

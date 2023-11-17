@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!--Meta Tags & Codes -->
+<!--- General Meta -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- For Modern Browsers -->
+<link rel="icon" href="https://www.discoverablemarketing.com/favicon.svg" type="image/svg+xml">
+
+<!-- For older browsers -->
+<link rel="icon" sizes="16x16 32x32" type="image/x-icon" href="https://www.discoverablemarketing.com/favicon.ico">
+
+<!-- For Android & Chrome fallback -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.discoverablemarketing.com/favicon-192x192.png">
+
+<!-- For iOS Touch Screens-->
+<link rel="apple-touch-icon" sizes="180x180" type="image/png" href="https://www.discoverablemarketing.com/apple-touch-icon.png">
+
+<!-- For Windows Start Screen -->
+<meta name="msapplication-TileImage" type="image/png" sizes="144x144" content="https://www.discoverablemarketing.com//mstile-144x144.png">
+<meta name="msapplication-TileColor" content="#FFAD6A">
+
+
+<title>Same Same But Different: Content Moderation at Facebook, Twitter, TikTok, and Reddit</title>
+
+
+<link rel="canonical" href="https://www.discoverablemarketing.com/blog/content-moderation-comparison-facebook-twitter-reddit-tiktok/"/>
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog/content-moderation-comparison-facebook-twitter-reddit-tiktok/" hreflang="x-default" />
+<meta property="og:url" content="https://www.discoverablemarketing.com/blog/content-moderation-comparison-facebook-twitter-reddit-tiktok/"/>
+
+
+<meta name="description" content=" Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable."/>
+<meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
+<link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
+
+<!--- OpenGraph -->
+<meta property="og:title" content="Same Same But Different: Content Moderation at Facebook, Twitter, TikTok, and Reddit"/>
+<meta property="og:description" content=""/>
+<meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="628"/>
+<meta property="og:site_name" content="Discoverable Marketing"/>
+
+<meta property="og:type" content="website"/> 
+
+
+<!--- Robots -->
+<meta name="robots" content="max-image-preview:large"/>
+
+
+<!--- Schemas -->
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Discoverable Marketing","legalName":"Discoverable Marketing","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","logo":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","foundingDate":"2022","founders":[{"@type":"Person","name":"Chris Shuptrine"}],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"chris@discoverablemarketing.com","url":"https://www.discoverablemarketing.com/contact/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Discoverable Marketing","image":"https://www.discoverablemarketing.com/assets/images/important/DiscoverableLogo_Color_240.png","url":"https://www.discoverablemarketing.com/","@id":"discoverablemarketing.com/#organization","telephone":"910-516-8273","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
+
+  
+
+  
+
+  
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function loadGTM() {
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-587TTM6');
+  }
+
+  function lazyLoadGTM() {
+    window.removeEventListener('scroll', lazyLoadGTM);
+    loadGTM();
+  }
+
+  window.addEventListener('scroll', lazyLoadGTM);
+</script>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader">
+    // Function to load the script
+    function loadHubSpotScript() {
+        var script = document.createElement('script');
+        script.src = "//js.hs-scripts.com/24298198.js";
+        document.body.appendChild(script);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function() {
+        var loadPosition = 500; // Change this value based on when you want to load the script
+        if (window.scrollY > loadPosition) {
+            loadHubSpotScript();
+            // Remove the event listener after the script is loaded
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+</script>
+<!-- End of HubSpot Embed Code -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var image = document.querySelector('.hero-image');
+
+        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
+        var mobileBreakpoint = 768;
+
+        // Check if the screen width is less than or equal to the breakpoint
+        if (window.innerWidth <= mobileBreakpoint) {
+            // It's a mobile device, so add the lazy loading attribute
+            image.setAttribute('loading', 'lazy');
+        }
+    });
+</script>
+
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--Toggled -->
+
+  
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </noscript>
+
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
+
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+  </noscript>
+
+</head>
+
+<body >
+    
+<nav
+  class="navbar  absolute nav-uppercase  navbar-hover-opacity navbar-expand-lg">
+  <div
+    class=" container  flex-row justify-content-center">
+    <div class="navbar-brand">
+      <a href="/">
+
+        
+        <img src="/assets/images/important/nyckel-color.png"
+         class=" logo-dark  "
+          alt="Discoverable logo" width="320" height="77"/>
+
+        <!--
+        
+        <img src="/assets/images/important/nyckel-black-small.png"
+          srcset="/assets/images/important/nyckel-black-small.png 1x, /assets/images/important/nyckel-black.png 2x"
+          class=" logo-dark  "
+          alt="Nyckel" width="180" height="27"/> -->
+
+      </a>
+    </div>
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+        </li>
+        <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%"><a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Contact</a></li>
+       <li class="nav-item d-none d-lg-block pl-0"><a href="/contact-report/" class="btn m-0" style="background-color:#E96A57">Free Sign-Up</a></li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="/">
+          <img src="/assets/images/important/DiscoverableLogo_White_320.webp" class="logo-light" alt="Discoverable logo" width="180" height="27" loading="lazy"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/">Pricing</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/contact/">Customers</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/about/">About</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Blog</a>
+        </li>
+        
+        
+        
+        
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="/blog/">Developers</a>
+        </li>
+        
+        
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<div class="content-wrapper">
+<div class="wrapper white-wrapper">
+  <div class="container inner pt-80">
+    <div class="row">
+<article class="post">
+  <div class="hero">
+    <div class="back-link-container contain-1200 p-mobile-1350">
+      <a class="back-link" href="/blog/">← All posts</a>
+    </div>
+    <div class="hero-contents contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1>Same Same But Different: Content Moderation at Facebook, Twitter, TikTok, and Reddit</h1>
+          <div class="summary">The four platforms have different ways of balancing free speech against misinformation. We take a close look at their methods.</div>
+        </div>
+
+        
+        
+        <div class="author">
+          <div class="author-area">
+            
+            <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot" class="author-icon" />
+            
+            <span class="author-name">Oscar Beijbom</span>
+            
+            <a href="https://github.com/beijbom" target="_blank">
+              <i class="fa fa-github fa-lg social-icon"></i>
+            </a>
+            
+            
+            <a href="https://twitter.com/beijbom" target="_blank">
+              <i class="fa fa-twitter fa-lg social-icon"></i>
+            </a>
+            
+            
+            
+            <a href="https://linkedin.com/in/oscarbeijbom" target="_blank">
+              <i class="fa fa-linkedin fa-lg social-icon"></i>
+            </a>
+            
+            
+          </div>
+          <span class="date">
+            Posted Oct 2022
+          </span>
+        </div>
+        
+      </div>
+      
+      <div class="image-area">
+        <img class="safari_only_unset_height" src="/blog/images/2022/same-same-but-different.jpg" alt="Facebook, Twitter, TikTok, and Reddit" />
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="entry">
+    <p>*<em>Note: while we did our best to use the latest sources, some of the references used in this article are more than a year old at the time of writing</em></p>
+
+<p><a href="https://www.nyckel.com/blog/what-is-content-moderation/">Content moderation</a> on social media has had its share of controversy over the past few years.</p>
+
+<p>As concerns about misinformation versus free speech continue to be a subject of debate one thing remains sure: content moderation, at least to a certain extent, is essential for large social media platforms with millions (or in some cases, billions) of users.</p>
+
+<p>The moderation policies across these platforms differ somewhat according to their purpose and user base. This article takes a close-up look at four of Big social media sites: <a href="https://www.facebook.com/">Facebook</a>, <a href="https://twitter.com/">Twitter</a>, <a href="https://www.tiktok.com/">TikTok</a>, and <a href="https://www.reddit.com/">Reddit</a>.</p>
+
+<p>While there are obvious similarities between the four on basic policies (not tolerating violent, graphic, hateful content for example), there are some notable differences when it comes to more specific guidelines, which policies the platforms emphasize most, and what role the user base plays in the process of content moderation.</p>
+
+<p>TikTok, for example, is the most popular of these platforms for Gen Z and teens, and its content is all video-based – so its moderation policies are much more detailed than Reddit’s, whose focus is on community and conversation.</p>
+
+<p>TikTok, Facebook, and Twitter all outsource to 3rd party moderators, while Reddit uses a model that’s more or less self-moderated by volunteers in the role of community leaders – as a result, Reddit does not (generally) struggle with finding the time and resources to manage its content the way that Facebook and Twitter do.</p>
+
+<p>While TikTok does not (yet) deal with the same level of political/misinformation content issues that Twitter and Facebook do, <a href="https://www.axios.com/2020/09/23/tiktoks-content-moderation-time-bomb">some are worried that TikTok will soon run into the same challenges</a>. In fact, according to a recent experiment run by misinformation researchers, <a href="https://www.nytimes.com/2022/10/21/technology/tiktok-youtube-facebook-misinformation-ads.html">TikTok failed to 90% of ads featuring false or misleading information about elections</a>.</p>
+
+<p>Because Facebook and Twitter deal with so much political content (including misinformation) and because of the way the content on these platforms influences their user bases, they often have to make post hoc changes to their policies, <a href="https://slate.com/technology/2019/06/facebook-twitter-pinterest-youtube-content-moderation-rules-guide.html">leaving administrators in a continual state of catch-up</a>.</p>
+
+<p>To more easily compare the four platforms, we evaluated all of them based on the same criteria:</p>
+
+<ul>
+  <li><strong>Content guidelines</strong>: A run-down of the basic “what is” and “what isn’t” allowed</li>
+  <li><strong>Violation policies</strong>: How the platform deals with violation of its content and community rules</li>
+  <li><strong>Community input</strong>: How involved the users are in the process of moderating any problematic content (for example, flagging and reporting)</li>
+</ul>
+
+<p>In addition to these criteria, we’ve also included an overview of each platform that puts it into context with the others, including anything that sets it apart– including culture, niche, and user base demographics.</p>
+
+<h2 id="facebook">Facebook</h2>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+    <a href="https://www.facebook.com/">
+        
+        <img src="../images/2022/thumbs-up-buttons.jpg" alt="Thumbs up buttons" style="border-radius: 20px; max-width: 100%" srcset="../images/2022/thumbs-up-buttons.jpg 2x%" />
+        <figcaption></figcaption>
+        
+    </a>
+    
+
+</figure>
+
+<p>With just shy of 3 billion users, Facebook is the largest social media platform – at least, for now.</p>
+
+<p>In 2018, <a href="https://www.theguardian.com/technology/2018/apr/24/facebook-releases-content-moderation-guidelines-secret-rules">after the Guardian revealed Facebook’s long-secret guidelines</a>, Facebook finally released its own version of its policies to the public. Today, the social media giant employs over 15,000 third-party content moderators in addition to using AI to catch, flag, and in some cases remove problematic content.</p>
+
+<p>Facebook is gaining a reputation for being for “old people”, <a href="https://thesocialshepherd.com/blog/facebook-statistics">as its fastest-growing demographic is users age 65 and older</a> – but Millennials continue to be the largest audience.</p>
+
+<h3 id="content-guidelines">Content guidelines</h3>
+
+<p><a href="https://www.newamerica.org/oti/reports/everything-moderation-analysis-how-internet-platforms-are-using-artificial-intelligence-moderate-user-generated-content/case-study-facebook/">In a 2019 case study</a> comparing Facebook to Reddit and YouTube, Facebook was shown to have “by far the largest content moderation operation.”</p>
+
+<p>Facebook has a list of “Community Standards” detailing the values they seek to foster along with the types of content they prohibit or monitor for, broken down into categories including “violence and criminal behavior,” “safety”, “objectionable content,” and “integrity and authenticity.”</p>
+
+<p>Each section comes with a “policy rationale” explaining the guidelines in-depth, and problematic content is divided into two categories:</p>
+
+<ul>
+  <li>Content that’s not allowed</li>
+  <li>Content that requires additional information or context, content that needs to come with a warning, and/or content that should only be allowed for viewers age 18 or older</li>
+</ul>
+
+<p>According to their <a href="https://transparency.fb.com/fr-fr/policies/community-standards/">official page</a> for moderation policies, Facebook’s standards are based on “feedback from people and the advice of experts in fields like technology, public safety, and human rights.”</p>
+
+<h3 id="violation-policies">Violation policies</h3>
+
+<p>Facebook uses a system of <a href="https://about.fb.com/news/2020/08/how-we-review-content/">prioritization</a> to address content violation occurrences in order of how serious they are.</p>
+
+<p>Most content violations on Facebook result in a “first strike”, i.e., a warning with no further restrictions. Additional strikes result in the user being blocked from accessing certain parts of the platform for a certain length of time, depending on how many strikes. Users have come to describe this phenomenon as being in “Facebook jail.”</p>
+
+<p>Depending on the severity and nature of the content violations, users who receive more than 5 strikes may have their accounts disabled. Facebook also disables the accounts of dangerous people, such as convicted criminals or those misrepresenting their identity. Public figures who are creating civil unrest or other harmful activity can also have their accounts suspended.</p>
+
+<p>In addition to sending warning messages to first-strike offenders, Facebook will also send you a message informing you each time your account has been suspended or some other disciplinary action has occurred.</p>
+
+<h3 id="community-input">Community input</h3>
+
+<p>Facebook allows its users to report content by providing a “Report” link at the top right corner of the post in question. Users are prompted to describe what it is about the post that they find concerning. The platform provides additional resources and information to users seeking to report child abuse, criminal activity, and other serious issues.</p>
+
+<h2 id="twitter">Twitter</h2>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+    <a href="https://twitter.com/">
+        
+        <img src="../images/2022/twitter-cube.jpg" alt="Twitter cube" style="border-radius: 20px; max-width: 100%" srcset="../images/2022/twitter-cube.jpg 2x%" />
+        <figcaption></figcaption>
+        
+    </a>
+    
+
+</figure>
+
+<p>Although only the 15th most popular social media platform, Twitter continues to be very influential. <a href="https://thesocialshepherd.com/blog/twitter-statistics#:~:text=Twitter%20Has%20396.5%20Million%20Users%20Globally">10% of Twitter users are responsible for 92% of Tweets</a>, and many users turn to Twitter for their news or to follow their favorite influencers.</p>
+
+<p>In order to better direct the quality of public Tweets, Twitter recently launched its Twitter Circle feature allowing users to Tweet in private groups. 24 to 35-year-olds are the largest user group for Twitter.</p>
+
+<h3 id="content-guidelines-1">Content guidelines</h3>
+
+<p>Twitter’s guidelines, known as “the Twitter Rules”, are short and straightforward.</p>
+
+<p>Violence, hateful conduct, abuse, and other distressing content are all categorized under “Safety,” with several shorter sections for “Privacy,” “Authenticity,” and “Third Party Advertising.”</p>
+
+<h3 id="violation-policies-1">Violation policies</h3>
+
+<p>Twitter has a range of actions it takes against inappropriate content, accounting for both the very mild instances as well as more blatant violations.</p>
+
+<p>In the case of misleading information, Twitter will simply flag the content to inform users. Twitter may also limit the visibility of certain Tweets either by downranking them or removing them from top search results.</p>
+
+<p>In more serious cases, Twitter will require the user to delete the objectionable Tweet before being able to post any new Tweets. Twitter sends an email to the user notifying them of the Tweet(s) in violation and which policies were violated. The user has the chance to appeal if they believe the review board made an error.</p>
+
+<p>Twitter’s most severe enforcement action is to permanently suspend the user’s account and ban them from creating a new one. This has included several high-profile politicians as well as members of terrorists organizations such as ISIL and Al-Quaeda, and applied to the most serious instances of harassment, abuse and promotion of violence.</p>
+
+<h3 id="community-input-1">Community input</h3>
+
+<p>Similar to Facebook, Twitter users are able to report questionable content by selecting the option “Report Tweet” at the top of the Tweet in question.
+If the Tweet is in either the “harmful” or “abusive” category, the user will be asked to give more information, possibly along with additional posts from the same account so that the moderators have context to work with.</p>
+
+<h2 id="tiktok">TikTok</h2>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+    <a href="https://www.tiktok.com/">
+        
+        <img src="../images/2022/tiktok-3d-cube.jpg" alt="Tiktok" style="border-radius: 20px; max-width: 100%" srcset="../images/2022/tiktok-3d-cube.jpg 2x%" />
+        <figcaption></figcaption>
+        
+    </a>
+    
+
+</figure>
+
+<p>Clocking in with <a href="https://www.threecolts.com/blog-articles/social-media-statistics-2023">over a billion users</a>, TikTok is the current fastest-growing social media platform. It’s especially popular with Gen Z – <a href="https://wallaroomedia.com/blog/social-media/tiktok-statistics/#:~:text=Nearly%20half%20of%20Gen%20Z,app%2C%20according%20to%20Pew%20Research.">nearly half of Gen Z uses TikTok (along with Instagram) rather than Google for search</a>. It’s also by far the youngest of these platforms, having only been around since 2016.</p>
+
+<p>After getting hauled into court for its first congressional hearing last year, TikTok <a href="https://techcrunch.com/2022/02/08/tiktok-updates-its-policies-with-focus-on-minor-safety-age-appropriate-content-and-more/">updated its policies</a> to add extra protection for teens, including LGBTQ youth at risk of bullying and harassment.</p>
+
+<h3 id="content-guidelines-2">Content guidelines</h3>
+
+<p>At the top of TikTok’s <a href="https://www.tiktok.com/community-guidelines?lang=en">community guidelines</a> are Minor Safety, including the prohibition of any explicit content involving minors as well as grooming and other predatory behaviors. The guidelines also prohibit any content that encourages suicide, self-harm, eating disorders, dangerous challenges/behaviors, along with violent extremism, hateful content, nudity/adult content, and violent/graphic content.</p>
+
+<p>Unsurprisingly, because of TikTok’s popularity with young users, its community guidelines are the longest and the most detailed of all these four platforms.</p>
+
+<h3 id="violation-policies-2">Violation policies</h3>
+
+<p>TikTok uses AI to either automatically remove content that violates its guidelines or defer to a Safety Team for additional review.</p>
+
+<p>Similar to Facebook and Twitter, TikTok sends a warning to the user after the first violation and suspends the account after multiple multiple violations. Users are informed by the platform when their account has been suspended.</p>
+
+<p>Violation of “zero tolerance” policies (such as child sex abuse content) results in an automatic ban.</p>
+
+<h3 id="community-input-2">Community input</h3>
+
+<p>TikTok users can report harmful content by clicking the “Report” option at the top corner of the video posted, similar to the format of Facebook and Twitter. Users can then select the reason for the content being inappropriate.</p>
+
+<h2 id="reddit">Reddit</h2>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+    <a href="https://www.reddit.com/">
+        
+        <img src="../images/2022/reddit-spaceman.jpg" alt="Reddit" style="border-radius: 20px; max-width: 100%" srcset="../images/2022/reddit-spaceman.jpg 2x%" />
+        <figcaption></figcaption>
+        
+    </a>
+    
+
+</figure>
+
+<p>Reddit in many ways is the outlier of these four platforms when it comes to user experience and culture as well as policies. Unlike the others mentioned in this article, Reddit relies primarily on <a href="https://www.cnbc.com/2021/02/27/content-moderation-on-social-media.html">its community of volunteers</a> for moderation.</p>
+
+<p>Because its user base is formed of communities (subreddits), with individuals who are often very involved in their respective subreddits, Reddit has a strongly developed culture that the other three platforms lack; or perhaps more accurately, the platform is made up of (literally) millions of communities, each focused on a niche topic.</p>
+
+<p>Reddit’s user base also has the narrowest demographics: <a href="https://thrivemyway.com/reddit-statistics/#:~:text=People%20between%20the%20age%20of,%25">over half of its users are male, and the majority of its users are white and college-educated</a>%20and%20Instagram%20(65%25).</p>
+
+<h3 id="content-guidelines-3">Content guidelines</h3>
+
+<p>Because Reddit is a giant community divided into subreddits, the platform’s general rules are short and sweet.</p>
+
+<p>“Remember the human,” is the platform’s #1 rule, in reference to disallowing bullying, harassment, violence, and hate. Other general rules include privacy, authenticity, and abiding by the rules of each particular subreddit.</p>
+
+<p>Beyond that, the rules on Reddit vary within each Reddit community and what the community moderator and members have agreed on.</p>
+
+<h3 id="violation-policies-3">Violation policies</h3>
+
+<p>Reddit delegates its content moderation to subreddit moderators. Moderators follow a basic <a href="https://www.redditinc.com/policies/moderator-code-of-conduct">Code of Conduct</a> in addition to any rules specific to their own subreddit. Because Reddit expects and trusts its user base to be rule-abiding and self-moderated, administrators only get involved when mods fail to enforce rules.</p>
+
+<h3 id="community-input-3">Community input</h3>
+
+<p>Visibility in the Reddit community relies on upvoting (rather than thumbs up-ing) user comments to maintain quality and keep the conversation relevant.</p>
+
+<p>Posts have a “report” button that users can click if they find a post problematic, or they can contact the Reddit help center. Mods within each subreddit tend to be very proactive at moderating and deleting comments that are irrelevant or inappropriate.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Social media platforms, by nature, have many similarities in their content moderation policies (and the way those policies are enforced).</p>
+
+<p>At the same time, the four platforms mentioned in this article experience different challenges and emphasize their policies differently based on their users and the way the platform itself is set up.</p>
+
+<p>Here is a summary of the “big picture” differences we found between Facebook, Twitter, TikTok and Reddit, when it comes to content moderation:</p>
+
+<ul>
+  <li>TikTok is especially popular with youth and Gen Z, and so its moderation policies are geared towards especially young and vulnerable demographics. It’s also the youngest of the four platforms and so it (and the challenges it faces) have not evolved as much yet.</li>
+  <li>Facebook and Twitter continue to be widely used across varying demographics, but over time they’ve come to experience challenges in balancing free speech vs. rampant spread of misinformation.</li>
+  <li>Reddit, unlike the other three, is mostly self-moderated by a community of volunteers. Because it’s designed for meaningful discussion rather than as a platform for influencers, users more often tend to respect community standards and keep each other in check.</li>
+</ul>
+
+
+  </div>
+
+</article></div></div></div>
+</div>
+
+<!--likely needed for hero banner loads -->
+  <script defer src="/assets/js/jquery.min.js"></script>
+  <script defer src="/assets/js/popper.min.js"></script>
+  <script defer src="/assets/js/bootstrap.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script defer src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <!--likely not needed for hero banner loads -->
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script defer src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script defer src="/assets/js/plugins.js"></script>
+ <script defer src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script defer src="/assets/js/scripts.js"></script>
+  <footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+
+ 
+
+  <div class="space50"></div>
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+
+
+<div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Learn More</div>
+          
+          <ul class="list-unstyled mb-0">
+            <li><a href="/contact/">Contact</a></li>
+             <li><a href="/pricing/">Pricing</a></li>
+          </ul>
+        </div>
+
+
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <div class="h3 widget-title" style="color: white;">Follow Us</div>
+              <ul class="social social-mute social-s">
+                
+               <li><a href="https://twitter.com/discoverableB2B" title="Discoverable Marketing on Twitter"><i class="jam jam-twitter"></i></a></li>
+                
+               <li><a href="https://www.facebook.com/discoverablemarketing" title="Discoverable Marketing on Facebook"><i class="jam jam-facebook"></i></a></li>
+                
+               <li><a href="https://www.youtube.com/@discoverablemarketing" title="Discoverable Marketing on YouTube"><i class="jam jam-youtube"></i></a></li>
+                
+               <li><a href="https://www.linkedin.com/company/discoverable-marketing/" title="Discoverable Marketing on LinkedIn"><i class="jam jam-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            
+        <div class="widget">
+          
+           <div class="h5 widget-title" style="color: white;">Company</div>
+          
+          <ul class="list-unstyled mb-0">
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/blog/">Blog</a></li>
+            
+          </ul>
+        </div>
+        <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">© 2023 Nyckel | <a href="/privacy-policy/">Privacy Policy</a> | <a href="/terms-and-conditions/">T&Cs</a></p>
+  </div>
+</footer>
+  
+</body>
+</html>
