@@ -6,6 +6,28 @@
 {% include /meta/company-meta.html %}
 {% include /tags/head.html %}
 
+<style>
+.post-title {
+  font-family: Arial, sans-serif !important;
+}
+
+.post-font2 {
+  font-family: Arial, sans-serif !important;
+}
+
+.post-font p {
+  font-family: Arial, sans-serif !important;
+  font-size: 17px; /* Adjust this value to your desired font size */
+  font-weight: 400; /* Adjust this value for desired font weight, e.g., 400 (normal), 500 (medium), 600 (semi-bold), etc. */
+  line-height: 1.5; /* Adjust this value for desired space between rows; higher values increase space */
+  }
+
+.strong, b {
+  font-weight: bold !important;
+}
+
+</style>
+
 <!--SCSS -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
@@ -14,7 +36,7 @@
 <link rel="stylesheet" href="/lite-yt.css" />
 {% endif %}
   
-  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
+  <!--<link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
   <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
   <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
@@ -22,7 +44,7 @@
   <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
   <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
   <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
-  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" />
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" /> 
 
 
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -31,15 +53,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </noscript>
 
-  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" />
-
-  <link rel="preload"
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
-  </noscript>
+  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" /> -->
 
 </head>
 
@@ -47,9 +61,10 @@
     
 {% include header.html container_class="container" extra_class="absolute nav-uppercase" %}
 
+<!--<div class="post-font2 post-font">-->
 <div class="content-wrapper">
 {{ content }}
-</div>
+</div><!--</div>-->
 
 <!--likely needed for hero banner loads -->
   <script defer src="{{relative_url}}/assets/js/jquery.min.js"></script>
