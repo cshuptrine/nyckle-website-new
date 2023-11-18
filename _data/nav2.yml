@@ -1,10 +1,10 @@
 main_menu:
 
   - text: "Pricing"
-    url: "/"
+    url: "/pricing/"
   
   - text: "Customers"
-    url: "/contact/"
+    url: "https://www.nyckel.com/customers/"
        
   - text: "About"
     url: "/about/"
@@ -12,5 +12,5 @@ main_menu:
   - text: "Blog"
     url: "/blog/" 
 
-  - text: "Developers"
-    url: "/blog/"   
+  - text: "API Docs"
+    url: "https://www.nyckel.com/docs"   

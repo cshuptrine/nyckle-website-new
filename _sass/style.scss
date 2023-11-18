@@ -583,10 +583,12 @@ canvas {
 /*  03. NAVBAR
 /*-----------------------------------------------------------------------------------*/
 .navbar {
+    position: relative; // or remove this line entirely for static positioning
     z-index: 1008;
     width: 100%;
     padding: 0;
 }
+
 .navbar.fixed.banner--stick,
 .navbar.shadow:not(.fixed):not(.banner--stick) {
     -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.04);
@@ -996,7 +998,7 @@ button.hamburger.animate.active:after {
     -webkit-box-shadow: none;
     box-shadow: none;
     display: inline-block;
-    background-color: #8AA9D6;
+    background-color: #3877f6;
 }
 .btn-icon i {
     vertical-align: -1px;

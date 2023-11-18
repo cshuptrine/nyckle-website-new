@@ -22,17 +22,13 @@ copyright_text: "© 2023 Nyckel"
 social_accounts:
   title: "Follow Us"
   links:
-    - url: "https://twitter.com/discoverableB2B"
-      icon: "jam jam-twitter"
-      alt: "Discoverable Marketing on Twitter"
-
-    - url: "https://www.facebook.com/discoverablemarketing"
-      icon: "jam jam-facebook"
-      alt: "Discoverable Marketing on Facebook"
+    - url: "https://github.com/nyckelai"
+      icon: "jam jam-github"
+      alt: "Nyckel on Github"
       
-    - url: "https://www.youtube.com/@discoverablemarketing"
+    - url: "https://www.youtube.com/@nyckelai"
       icon: "jam jam-youtube"
-      alt: "Discoverable Marketing on YouTube"
+      alt: "Nyckel on YouTube"
 
     - url: "https://www.linkedin.com/company/discoverable-marketing/"
       icon: "jam jam-linkedin"
@@ -44,7 +40,11 @@ external_links:
     - url: "/contact/"
       text: "Contact"
     - url: "/pricing/"
-      text: "Pricing"   
+      text: "Pricing"
+    - url: "https://www.nyckel.com/public-functions"
+      text: "Pre-Trained Models"
+    - url: "https://www.nyckel.com/docs"
+      text: "API Docs"      
 
 external_links_03:
   title: "Company"
@@ -53,6 +53,8 @@ external_links_03:
       text: "About"
     - url: "/blog/"
       text: "Blog"   
+    - url: "https://www.nyckel.com/customers/"
+      text: "Customers" 
 
 # footer_newsletter:
 #  title: "Our Newsletter"

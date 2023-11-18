@@ -26,6 +26,17 @@
   font-weight: bold !important;
 }
 
+.hero2 {
+  width: 100%;
+  background-color: #3877f6 !important; /* Your desired color */
+  padding-top: 5%;
+}
+
+.hero-contents2 {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 </style>
 
 <!--SCSS -->
@@ -36,29 +47,10 @@
 <link rel="stylesheet" href="/lite-yt.css" />
 {% endif %}
   
-  <!--<link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/bootstrap/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/app.css" />
-  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/_content/Marketing/css/site.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/Spider.Server.styles.css" />
-  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/icofont/icofont.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/vendor/boxicons/css/boxicons.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/site.css" />
-  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/index.css" />
-  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/post.css" /> 
-
-
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </noscript>
-
-  <link rel="stylesheet" type="text/css" href="https://www.nyckel.com/css/syntax-base16.solarized.light.css" /> -->
-
 </head>
 
 <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
-    
+  
 {% include header.html container_class="container" extra_class="absolute nav-uppercase" %}
 
 <!--<div class="post-font2 post-font">-->
@@ -86,6 +78,7 @@
   <script defer src="{{relative_url}}/assets/js/plugins.js"></script>
  <script defer src="{{relative_url}}/assets/js/simple-jekyll-search.min.js"></script>
   <script defer src="{{relative_url}}/assets/js/scripts.js"></script>
+    {% include /global/cta2.html %}
   {% include footer.html light_logo="true" %}
   {% include /tags/body.html %}
 </body>
