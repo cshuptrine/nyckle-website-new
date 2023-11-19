@@ -1,0 +1,8 @@
+I"ý<p>If you are reading an article about vintage motorcycles, you are likely more interested in seeing ads for the latest
+Triumph Thruxton cafe racer than about woodworking supplies. For this reason, content publishers are
+interested in classifying content into some shared high-level categories. The Interactive Advertising Bureau
+(<a href="https://www.iab.com/">IAB</a>) publishes a common set of <a href="https://www.iab.com/guidelines/content-taxonomy/">categories</a> that is
+used for this purpose. The categories are hierarchical and contain about 600 categories at the lowest level.
+In this post, we look at how you can use Machine Learning (ML) to automatically categorize text and image data into IAB
+categories without any labeled data or ML expertise.</p>
+:ET

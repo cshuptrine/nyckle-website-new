@@ -1,0 +1,90 @@
+I")<div class="comment-div">
+  <p>Need help identifying a specific logo? Search for our pre-trained logo detectors including <a href="https://www.nyckel.com/public-functions/food-logos-image-classifier">food-related logos</a>, <a href="https://www.nyckel.com/public-functions/transportation-logos-image-classifier">transportation logos</a>, <a href="https://www.nyckel.com/public-functions/leisure-logos-image-classifier">leisure brands</a>, <a href="https://www.nyckel.com/public-functions/institution-logos-image-classifier">institution logos</a>, <a href="https://www.nyckel.com/public-functions/electronic-logos-image-classifier">electronic logos</a>, <a href="https://www.nyckel.com/public-functions/cosmetic-logos-image-classifier">cosmetic logos</a>, and <a href="https://www.nyckel.com/public-functions/clothes-logos-image-classifier">clothes logos</a>.</p>
+
+</div>
+
+<p>Your brand is one of your most valuable assets as a business. As a result, it’s critical to monitor and protect all visual representations of your brand, especially your logo. Logo detection (also called logo recognition) uses AI and automation to identify your logo across digital platforms and content.</p>
+
+<p>In today’s digital age, logo detection provides numerous benefits, enabling you to safeguard your brand identity, monitor brand mentions, and track the reach of your marketing efforts. For example, you can monitor your brand’s presence on social media platforms and across the broader online landscape, unlocking valuable insights into brand visibility and customer sentiment. </p>
+
+<p>Businesses can also swiftly identify counterfeit products bearing the company’s logo, thereby protecting brand integrity and consumer trust. A logo identifier can even be a powerful tool for anti-phishing efforts, enabling companies to spot fraudulent activities where companies illicitly employ their logo.</p>
+
+<p>In this article, we’ll share how your business can quickly and easily create a custom logo identifier to detect images containing your logo.</p>
+
+<h2 id="how-does-logo-detection-work">How does logo detection work?</h2>
+
+<p>Logo detection uses image classification, a fundamental task in <a href="https://www.nyckel.com/blog/glossary-of-computer-vision-function-types/">computer vision</a> where a machine learning model categorizes an image into predefined classes or labels. Image classification models analyze various visual features, such as shapes, colors, and textures, to determine which category or object an image belongs to.</p>
+
+<p>Logo detection leverages image classification to recognize the unique visual characteristics of a company’s logo in an image. Using machine learning algorithms, these models learn to identify the logo, distinguishing it from other elements in the image. When presented with new content to review, the model determines whether the logo is present in the image or not.</p>
+
+<h2 id="how-to-build-a-logo-identifier-in-5-steps">How to build a logo identifier in 5 steps</h2>
+
+<p>In this article, we’ll explore how you can easily build your own logo identifier. For this example, we’ll use Kaggle’s <a href="https://www.kaggle.com/datasets/linkanjarad/famous-brand-logos">Famous Brand Logos Dataset</a> and use it to train an image classification function with Nyckel. This data set contains over 2,500 logo images from 30 famous brands, with each image labeled by brand.</p>
+
+<h3 id="1-collect-training-data">1. Collect training data</h3>
+
+<p>The first step to creating an effective logo identifier involves collecting strong training data. To ensure good model performance, it’s important to collect a diverse array of images featuring your logo in various environments, including scenarios where the logo isn’t perfectly displayed. This image variety enables your image classifier to learn to recognize your logo under a wide range of conditions.</p>
+
+<p>When collecting the data, it’s also essential to determine a systematic labeling strategy. For example, you might want to use the label “Yes_[Brand Name] Logo” for images where your logo is correctly displayed, “Altered [Brand Name] Logo” for cases where your logo has been modified or adjusted, and “No_[Brand Name] Logo” for images where your logo is entirely absent. Organizing your training data into folders bearing these labels can simplify the annotation process in subsequent stages, making it more efficient to create your logo identifier.</p>
+
+<p>For our example, we’ll focus on identifying the Coca-Cola logo. Since we’re using a data set of official logos, we won’t be including altered versions of the logo in our training data. Instead, we’ll simply label the logos in our data set as either “CocaCola” or “NotCocaCola.” To do this, we start by placing all 98 Coca-Cola images from the data set in a folder called “CocaCola.” For our other logo examples, we’ll take 10 images from 10 other logo classes (i.e., brands) and place them in a folder labeled “NotCocaCola.”</p>
+
+<h3 id="2-upload-your-data-to-nyckel">2. Upload your data to Nyckel</h3>
+
+<p>To upload your data to Nyckel, you first need to <a href="https://www.nyckel.com/docs/image-classification-quickstart">configure an image classification function</a>. To do this, create a function that accepts an image as input and then set the output to “classify.” Next, you can import your training data into Nyckel’s platform.</p>
+
+<p>Nyckel lets you bulk-upload and bulk-label your images, simplifying the data annotation process. You can efficiently upload your data by selecting images in batch sizes (limited to 1,000 images per batch) and assigning labels accordingly. In this case, labeling the data is as simple as saving them into separate folders (e.g., “CocaCola” and “NotCocaCola”). We can then label all the images at once when we upload a folder. Nyckel also lets you annotate after uploading all of the images.</p>
+
+<p>After your data is uploaded and annotated, Nyckel immediately starts training your model. As the model trains, you’ll see an indicator on the side of your screen telling you how confident Nyckel is in its model predictions. This immediate feedback allows you to monitor and assess the accuracy and performance of your logo identifier in real time.</p>
+
+<h3 id="3-try-out-the-model">3. Try out the model</h3>
+
+<p>After the model finishes training, we can check its performance and see that it correctly classified 99% of examples as to whether they contained a Coca-Cola logo. Our model only got two examples wrong! Looking at the examples, it’s easy to see why our model may not have recognized the logo:</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/logo-identifer-api-model.webp" alt="" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/logo-identifer-api-model.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
+        
+
+</figure>
+
+<h3 id="4-deploy-the-model-into-your-systems-using-our-api">4. Deploy the model into your systems using our API</h3>
+
+<p>Once the logo identifier is trained and ready to go, the next step is to deploy the model into your systems using Nyckel’s API. Nyckel designed this deployment process to be simple to ensure you can easily integrate your model into your existing infrastructure.</p>
+
+<p>Through Nyckel’s API, your model automatically runs on optimized hardware, eliminating the need for you to grapple with hardware-related complexities. Because Nyckel handles scaling demands and performance optimization, you can focus on getting the most out of your logo identifier while enjoying the benefits of a high-performance logo detection API.</p>
+
+<h3 id="5-monitor-and-improve-model-performance">5. Monitor and improve model performance</h3>
+
+<p>Nyckel provides tools that make it easy to monitor and enhance your logo identifier’s performance. Its <a href="https://www.nyckel.com/blog/introducing-invoke-capture-integrated-active-learning/">invoke capture feature</a> makes the process of refining and fine-tuning your model quick and intuitive. This feature automatically captures random data and data with low confidence predictions from the model’s invokes, so that you can annotate this data to retrain the model, ultimately improving the model’s performance.</p>
+
+<figure class="figure" style="width: 100%">
+    <div style="position: relative; padding-bottom: calc(67.56756756756756% + 41px); height: 0;">
+        <iframe src="https://app.arcade.software/IcuRLvCTKTAQV5cGOMXY?embed" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px;"></iframe>
+    </div>
+    
+    <figcaption>Click through this demo to see how we built the logo detector with Nyckel.</figcaption>
+    
+</figure>
+
+<h2 id="nyckel-vs-pre-built-logo-identifier">Nyckel vs. pre-built logo identifier</h2>
+
+<p>There are many pre-built logo identifiers and image recognition tools available. And while these tools may work well for certain companies, custom logo identifiers (like the one we built with Nyckel) offer several benefits. </p>
+
+<p>The most noticeable distinction is that pre-built logo identifiers primarily cater to large companies with significant brand recognition. Meaning, these pre-built tools have been trained using popular, recognizable logos (like Coca-Cola’s). With a custom logo identifier, however, you provide your own training data, so you can build a tool that’s optimized to detect your logo, whether you’re a burgeoning startup or an established company.</p>
+
+<p>Second, Nyckel’s built-in data engine makes it easy for you to improve your model over time with new samples of real-world data. As your brand grows and evolves, your logo identifier does, too. With Nyckel, your logo identifier can adapt to new challenges and provide consistent brand protection even as your brand changes.</p>
+
+<p>Nyckel provides the flexibility, accuracy, and adaptability that businesses need to create a reliable logo identifier. If you’d like to take the next step to safeguarding your brand, <a href="https://www.nyckel.com/console">sign up for a free Nyckel account</a> to create your custom logo identifier. Run into any issues along the way? <a href="mailto:feedback@nyckel.com">Reach out to us</a> at any time.</p>
+:ET

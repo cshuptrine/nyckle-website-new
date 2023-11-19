@@ -1,0 +1,78 @@
+I"u<p>As someone who runs an online platform, you’re excited to see your users interacting and posting content. You’re focused on growth and traction, after all.</p>
+
+<p>Only afterward do you notice the <em>problem</em>.</p>
+
+<p>Most of your users (hopefully) are normal, awesome people who genuinely love your site. Their content adds value and helps to foster a community on your platform. Unfortunately, all it takes is a few bad apples to post random, inappropriate, or even dangerous content and suddenly you find yourself doing damage control.</p>
+
+<p><strong>Content moderation is essential for anyone looking to build, grow and manage a successful community within a platform</strong>. One of the biggest challenges with content moderation is finding a solution that’s both efficient and accurate.</p>
+
+<p>In this post, we’re sharing 4 effective steps to successful content moderation, using specific examples.</p>
+
+<h2 id="step-1-identify-the-type-of-problematic-content-youre-dealing-with">Step 1: Identify the Type of Problematic Content You’re Dealing With</h2>
+
+<p>Content moderation problems are as varied and frustrating as the individuals who cause them. Also, you might be experiencing more than one type of problematic content.</p>
+
+<p>Some of the most common examples include:</p>
+
+<ul>
+  <li>Rude/abusive/hate speech. This one runs the gamut from mild insults to pornography and graphic language. Cyberbullying falls into this category</li>
+  <li>Trolling. Users seeking attention, often in the form of harassing/annoying other users rather than contributing to the conversation</li>
+  <li>Spam/bots. Generic content intended to advertise, propagandize, or otherwise distract and influence users.</li>
+  <li>Irrelevant/self-promotional content. Content that’s off-topic, often with the purpose of redirecting users. For example: in a blog post comment section, a user may post a link to their own blog and encourage others to click on it and leave the original platform</li>
+  <li>Scams/Phishing. Irrelevant content, but specifically with the purpose of extracting either money or personal information from other users</li>
+  <li>Solicitations. Inappropriate content specifically aimed at exploiting children/minors or any other vulnerable person</li>
+  <li>An uptick in user complaints/user churn. Users expressing frustration with the platform, resulting in higher than normal complaints and turnover</li>
+  <li>Disintermediation. Users attempting to avoid platform fees by trying to take deals off-platform – this is often an issue with e-commerce sites</li>
+  <li>Inadvertent PII (Personally Identifiable Information). Users unwittingly posting a photo or image that, usually in the background or foreground, contains PII such as a phone number or address</li>
+</ul>
+
+<p>Note that some of these categories overlap, and some may contain subcategories of their own. <strong>Also keep in mind that the type of problematic content you experience likely has to do with the type of platform you’re running</strong>. If you’re running a website for children, for example, you are probably going to be focused on avoiding different content issues than if you were running, say, a travel blog.</p>
+
+<h2 id="step-2-use-quickest-solutions-heuristics-first">Step 2: Use Quickest Solutions (Heuristics) First</h2>
+
+<p>You’ve identified your problem, now it’s time to take action.</p>
+
+<p><strong>The most basic solutions to start with are non-ML (machine learning)</strong>. Human editing is time-consuming, so let’s take a look at the next step after that.</p>
+
+<p>If the content on your platform is mainly text-based, then a <strong>regex together with a blacklist</strong> of toxic or problematic words and phrases can be used to block users from posting content that includes these words. This blacklist (sometimes called a “blocklist”) is a pretty standard, comprehensive example.</p>
+
+<p>Keep in mind that you don’t need to have the perfect solution or be an expert when you begin doing content moderation. By definition, <strong>heuristics are not a perfect approach to resolving all your issues, but they will get you off to a good start.</strong></p>
+
+<p>In fact, Google research scientist Martin Zinkevich actually <a href="https://developers.google.com/machine-learning/guides/rules-of-ml">advises that you don’t use ML</a> when starting out with your content moderation. There are faster ways to get results until you have the data needed to then move on to ML-based solutions.</p>
+
+<p>Of course, heuristics have their downfalls. You can find yourself experiencing the “whack-a-mole” effect when fixing one content issue causes another problem to pop up in the process.</p>
+
+<p>For example, a potentially offensive word on a blacklist (like “balls”) may have a primary or secondary meaning that’s completely benign. You may find yourself fixing problems that you didn’t have in the first place.</p>
+
+<h2 id="step-3-use-a-pre-trained-ai">Step 3: Use a Pre-Trained AI</h2>
+
+<p>When heuristics are no longer sustainable, the next step is pre-trained AI.</p>
+
+<p>There are a number of platforms that will automate the content moderation process for you. <a href="https://hivemoderation.com/">Hive Moderation</a> offers options for all types of data, from video and audio to text and GIFs. <a href="https://www.assemblyai.com/">Assembly AI</a> focuses on AI-powered audio, with services that cover a range of audio-based services, while <a href="https://www.surgehq.ai/">Surge AI</a> is a dataset-focused platform. Alternatively, you can look for a vendor in a marketplace such as <a href="https://rapidapi.com/">RapidAPI</a>. <a href="https://rapidapi.com/inferdo/api/nsfw-image-classification1/">This</a> is an example of an API for detecting NSFW imagery.</p>
+
+<p>Obviously, all of the above are just a few notable examples.</p>
+
+<p>While pre-trained AI is far more efficient than heuristics, it still comes with some issues:</p>
+
+<ul>
+  <li>These moderation policies are “one size fits all” and may not fit your community and its specific needs.</li>
+  <li>You inherit any problems that come with the training data these platforms use.</li>
+  <li>The model is fixed so you can’t improve it by feeding it new data examples from your own community.</li>
+</ul>
+
+<h2 id="step-4-use-custom-ai">Step 4: Use Custom AI</h2>
+
+<p>If you’ve come to this point and still need a more precise approach, then it’s time for you to use custom AI.
+Custom AI-based content moderation means that you’re using AI trained on your own data.
+Here are some of the advantages of using custom AI:</p>
+
+<ul>
+  <li>You are able to continually improve the AI by giving it new/more data (that your team manually annotates)</li>
+  <li>Because the AI is learning from your data, it will be tailored to your community and the moderation style you want to enforce</li>
+  <li>Custom AI based on deep learning will be robust enough to catch misspellings. It can also generalize to other languages, depending on how it’s trained</li>
+</ul>
+
+<p>Depending on how sensitive, challenging, and time-consuming your content moderation needs are, you may be able to get by on heuristics and/or pre-trained AI. However, over time, a custom AI solution will minimize manual curation needs and deliver the best content to your platform.</p>
+
+<p>However, while Custom AI solutions are highly effective, they do require deep expertise in Machine Learning. The fastest way to implement custom AI is to go with a ML-SaaS service. Established platforms like <a href="https://www.nyckel.com">Nyckel</a> and <a href="https://imagga.com">Imagga</a> will quickly get you set up with custom AI moderation, helping resolve your issues so you can focus on building your brand.</p>
+:ET
