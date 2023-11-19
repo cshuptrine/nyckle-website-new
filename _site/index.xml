@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/index.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-19T09:58:23-05:00</updated><id>http://localhost:4000/index.xml</id><title type="html">Nyckel | Classification API</title><subtitle>Nyckel&apos;s Classification API makes it simple to auto-label any content using AI.</subtitle><entry><title type="html">What Is Image Recognition? (And How It Differs From Image Classification)</title><link href="http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification/" rel="alternate" type="text/html" title="What Is Image Recognition? (And How It Differs From Image Classification)" /><published>2023-11-09T00:00:00-05:00</published><updated>2023-11-09T00:00:00-05:00</updated><id>http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification</id><content type="html" xml:base="http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification/"><![CDATA[<p>Image recognition is a term often used to describe using machine learning or computer vision to recognize and identify what’s in an image. Even though people use the term image recognition frequently, its meaning is vague, which can cause confusion and misunderstanding. For example, when someone says image recognition, they likely actually mean one of the following <a href="https://www.nyckel.com/blog/glossary-of-computer-vision-function-types/">types of computer vision</a>:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/index.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-19T17:19:11-05:00</updated><id>http://localhost:4000/index.xml</id><title type="html">Nyckel | Classification API</title><subtitle>Nyckel&apos;s Classification API makes it simple to auto-label any content using AI.</subtitle><entry><title type="html">What Is Image Recognition? (And How It Differs From Image Classification)</title><link href="http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification/" rel="alternate" type="text/html" title="What Is Image Recognition? (And How It Differs From Image Classification)" /><published>2023-11-09T00:00:00-05:00</published><updated>2023-11-09T00:00:00-05:00</updated><id>http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification</id><content type="html" xml:base="http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification/"><![CDATA[<p>Image recognition is a term often used to describe using machine learning or computer vision to recognize and identify what’s in an image. Even though people use the term image recognition frequently, its meaning is vague, which can cause confusion and misunderstanding. For example, when someone says image recognition, they likely actually mean one of the following <a href="https://www.nyckel.com/blog/glossary-of-computer-vision-function-types/">types of computer vision</a>:</p>
 
 <ul>
   <li><strong>Image classification:</strong> Assigns a <em>single</em> label to an entire image. For example, you can train an image classification function to <a href="https://www.nyckel.com/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes/">determine whether an image is AI-generated or not</a>. </li>
@@ -31,7 +31,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/image-recognition-honda-cars.webp" alt="Image classification to identify car make" class="" style="border-radius: 20px; max-width: 80%" srcset="../images/image-recognition-honda-cars.webp 2x%" loading="lazy" />
+        <img src="../images/image-recognition-honda-cars.webp" alt="Image classification to identify car make" class=" " style="border-radius: 20px; max-width: 80%" srcset="../images/image-recognition-honda-cars.webp 2x%" loading="lazy" />
     </div>
     <figcaption>Image classification to identify car make.</figcaption>
         
@@ -57,7 +57,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/image-recognition-boy-blue.webp" alt="Image tagging to automatically identify colors on clothing" class="" style="border-radius: 20px; max-width: 80%" srcset="../images/image-recognition-boy-blue.webp 2x%" loading="lazy" />
+        <img src="../images/image-recognition-boy-blue.webp" alt="Image tagging to automatically identify colors on clothing" class=" " style="border-radius: 20px; max-width: 80%" srcset="../images/image-recognition-boy-blue.webp 2x%" loading="lazy" />
     </div>
     <figcaption></figcaption>
         
@@ -83,7 +83,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/function-example.webp" alt="Object detection to identify products on store shelves" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/function-example.webp 2x%" loading="lazy" />
+        <img src="../images/function-example.webp" alt="Object detection to identify products on store shelves" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/function-example.webp 2x%" loading="lazy" />
     </div>
     <figcaption>Nyckel object detector identifies Maple Cheerios on a store shelf.</figcaption>
         
@@ -149,7 +149,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/generic_tagging_dam.webp" alt="Google's tagging AI's response to an image of a telehandler" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/generic_tagging_dam.webp 2x%" loading="lazy" />
+        <img src="../images/generic_tagging_dam.webp" alt="Google's tagging AI's response to an image of a telehandler" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/generic_tagging_dam.webp 2x%" loading="lazy" />
     </div>
     <figcaption></figcaption>
         
@@ -241,7 +241,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/invoke-capture-workflow.webp" alt="Invoke capture flowchart" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/invoke-capture-workflow.webp 2x%" loading="lazy" />
+        <img src="../images/invoke-capture-workflow.webp" alt="Invoke capture flowchart" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/invoke-capture-workflow.webp 2x%" loading="lazy" />
     </div>
     <figcaption>Invoke capture is integrated into Nyckel functions. It is designed to help you continuously improve your model by annotating more data.</figcaption>
         
@@ -272,7 +272,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/invoke-capture-view-Nyckel.webp" alt="UI for invoke capture" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/invoke-capture-view-Nyckel.webp 2x%" loading="lazy" />
+        <img src="../images/invoke-capture-view-Nyckel.webp" alt="UI for invoke capture" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/invoke-capture-view-Nyckel.webp 2x%" loading="lazy" />
     </div>
     <figcaption>Invoke capture is integrated into Nyckel's UI. Here's an example of captured samples, ready for review.</figcaption>
         
@@ -357,7 +357,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/03-image-classification-glossary-computer-vision-functions.webp" alt="Image classifier classifies orange juice by its brand name" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/03-image-classification-glossary-computer-vision-functions.webp 2x%" loading="lazy" />
+        <img src="../images/03-image-classification-glossary-computer-vision-functions.webp" alt="Image classifier classifies orange juice by its brand name" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/03-image-classification-glossary-computer-vision-functions.webp 2x%" loading="lazy" />
     </div>
     <figcaption>Nyckel’s image classifier classifies orange juice by its brand</figcaption>
         
@@ -387,7 +387,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/gardyn-strawberry-not-strawberry.webp" alt="Image classification to monitor plant health" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/gardyn-strawberry-not-strawberry.webp 2x%" loading="lazy" />
+        <img src="../images/gardyn-strawberry-not-strawberry.webp" alt="Image classification to monitor plant health" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/gardyn-strawberry-not-strawberry.webp 2x%" loading="lazy" />
     </div>
     <figcaption>Gardyn uses image classification to monitor plant health</figcaption>
         
@@ -433,7 +433,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/automl-features-graphic-new.webp" alt="AutoML for image classification" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/automl-features-graphic-new.webp 2x%" loading="lazy" />
+        <img src="../images/automl-features-graphic-new.webp" alt="AutoML for image classification" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/automl-features-graphic-new.webp 2x%" loading="lazy" />
     </div>
     <figcaption>Nine features to evaluate in AutoML tools</figcaption>
         
@@ -467,7 +467,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/nyckel-flowchart-v4-medium-background.webp" alt="Choose between multi-label vs. multiclass classification" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/nyckel-flowchart-v4-medium-background.webp 2x%" loading="lazy" />
+        <img src="../images/nyckel-flowchart-v4-medium-background.webp" alt="Choose between multi-label vs. multiclass classification" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/nyckel-flowchart-v4-medium-background.webp 2x%" loading="lazy" />
     </div>
     <figcaption></figcaption>
         
@@ -505,7 +505,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/pmg-emoji-new2.webp" alt="Image classification for pet marketplace" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/pmg-emoji-new2.webp 2x%" loading="lazy" />
+        <img src="../images/pmg-emoji-new2.webp" alt="Image classification for pet marketplace" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/pmg-emoji-new2.webp 2x%" loading="lazy" />
     </div>
     <figcaption> PMG uses Nyckel's image classification API to detect if a seller added emojis to their image (fail) or not (pass).</figcaption>
         
@@ -575,7 +575,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/CV-pillar-CVlandscape.webp" alt="Computer vision SaaS tools" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/CV-pillar-CVlandscape.webp 2x%" loading="lazy" />
+        <img src="../images/CV-pillar-CVlandscape.webp" alt="Computer vision SaaS tools" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/CV-pillar-CVlandscape.webp 2x%" loading="lazy" />
     </div>
     <figcaption>Top 9 Computer Vision SaaS Players</figcaption>
         
@@ -635,7 +635,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/image-classification-with-automl.webp" alt="Image classification workflow with AutoML platform" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/image-classification-with-automl.webp 2x%" loading="lazy" />
+        <img src="../images/image-classification-with-automl.webp" alt="Image classification workflow with AutoML platform" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/image-classification-with-automl.webp 2x%" loading="lazy" />
     </div>
     <figcaption></figcaption>
         
@@ -702,7 +702,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/logo-identifer-api-model.webp" alt="" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/logo-identifer-api-model.webp 2x%" loading="lazy" />
+        <img src="../images/logo-identifer-api-model.webp" alt="" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/logo-identifer-api-model.webp 2x%" loading="lazy" />
     </div>
     <figcaption></figcaption>
         
@@ -776,25 +776,27 @@
 
 <p>With the model trained, I could now invoke the model with new inputs. Nyckel’s invoke tab allowed me to upload new images that our model would classify as real or synthetic, directly from the user interface. The invoke tab only allowed me to assess one image at a time, but Nyckel also provided an API to invoke the model, complete with example requests:</p>
 
-<p>``` python</p>
+<pre class="code-box">
+<code id="codeSnippet">
+python
 
-<p>import requests</p>
+import requests
 
-<p>url = ‘INSERT YOUR URL HERE`’</p>
+url = 'INSERT YOUR URL HERE`’
 
-<p>headers = {</p>
+headers = {
 
-<p>    ’Authorization’: ‘Bearer ‘ + ‘INSERT YOUR BEARER TOKEN HERE’</p>
+'Authorization': 'Bearer ' + ‘INSERT YOUR BEARER TOKEN HERE’
 
-<p>}</p>
+}
 
-<p>with open(‘<fileName>', 'rb') as f:</fileName></p>
+with open('INSERT FILE NAME', 'rb') as f:
 
-<p>    result = requests.post(url, headers=headers, files={‘data’: f})</p>
+result = requests.post(url, headers=headers, files={'data': f})
 
-<p>print(result.text)</p>
-
-<p>```</p>
+print(result.text)
+</code>
+</pre>
 
 <p>You can learn more about the API via the <a href="https://www.nyckel.com/docs">API documentation</a>.</p>
 
@@ -841,7 +843,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/hierarchical-classificationexample.webp" alt="hierarchical image classification example" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/hierarchical-classificationexample.webp 2x%" loading="lazy" />
+        <img src="../images/hierarchical-classificationexample.webp" alt="hierarchical image classification example" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/hierarchical-classificationexample.webp 2x%" loading="lazy" />
     </div>
     <figcaption> In a real example, you’d likely have many more brands, and thus, many more models to manage.</figcaption>
         
@@ -863,7 +865,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/flat-classification-example3.webp" alt="Flat image classification example" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/flat-classification-example3.webp 2x%" loading="lazy" />
+        <img src="../images/flat-classification-example3.webp" alt="Flat image classification example" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/flat-classification-example3.webp 2x%" loading="lazy" />
     </div>
     <figcaption> In a real example, you’d likely have many more output labels (as many labels are there are car types to classify).</figcaption>
         
@@ -912,7 +914,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/data-engine-workflow.webp" alt="AutoML platform with data engine" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/data-engine-workflow.webp 2x%" loading="lazy" />
+        <img src="../images/data-engine-workflow.webp" alt="AutoML platform with data engine" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/data-engine-workflow.webp 2x%" loading="lazy" />
     </div>
     <figcaption>Ensure your AutoML platform enables a data engine</figcaption>
         
@@ -1042,7 +1044,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/detect-AI-generation-image-classification-example.webp" alt="Detect if image is AI-generated with image classification" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/detect-AI-generation-image-classification-example.webp 2x%" loading="lazy" />
+        <img src="../images/detect-AI-generation-image-classification-example.webp" alt="Detect if image is AI-generated with image classification" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/detect-AI-generation-image-classification-example.webp 2x%" loading="lazy" />
     </div>
     <figcaption></figcaption>
         
@@ -1070,7 +1072,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/multi-label-classification-example.webp" alt="Streamline waste management operations with image classification" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/multi-label-classification-example.webp 2x%" loading="lazy" />
+        <img src="../images/multi-label-classification-example.webp" alt="Streamline waste management operations with image classification" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/multi-label-classification-example.webp 2x%" loading="lazy" />
     </div>
     <figcaption></figcaption>
         
@@ -1098,7 +1100,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/detect-plant-disease-image-classification-example.webp" alt="Detect plant disease with image classification" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/detect-plant-disease-image-classification-example.webp 2x%" loading="lazy" />
+        <img src="../images/detect-plant-disease-image-classification-example.webp" alt="Detect plant disease with image classification" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/detect-plant-disease-image-classification-example.webp 2x%" loading="lazy" />
     </div>
     <figcaption></figcaption>
         
@@ -1124,7 +1126,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/identify-marine-animals-image-classification-example.webp" alt="Identify marine animal with image classification" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/identify-marine-animals-image-classification-example.webp 2x%" loading="lazy" />
+        <img src="../images/identify-marine-animals-image-classification-example.webp" alt="Identify marine animal with image classification" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/identify-marine-animals-image-classification-example.webp 2x%" loading="lazy" />
     </div>
     <figcaption></figcaption>
         
@@ -1150,7 +1152,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/locate-littered-roads-image-classification-example.webp" alt="Identify littered roadways with image classification" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/locate-littered-roads-image-classification-example.webp 2x%" loading="lazy" />
+        <img src="../images/locate-littered-roads-image-classification-example.webp" alt="Identify littered roadways with image classification" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/locate-littered-roads-image-classification-example.webp 2x%" loading="lazy" />
     </div>
     <figcaption></figcaption>
         
@@ -1233,7 +1235,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/prompt-engineering-real-estate-listing.webp" alt="GPT-4 prompt engineering for real estate application" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/prompt-engineering-real-estate-listing.webp 2x%" loading="lazy" />
+        <img src="../images/prompt-engineering-real-estate-listing.webp" alt="GPT-4 prompt engineering for real estate application" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/prompt-engineering-real-estate-listing.webp 2x%" loading="lazy" />
     </div>
     <figcaption></figcaption>
         
@@ -1255,7 +1257,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/prompt-chaining-real-estate-listing2.webp" alt="Prompt chaining with GPT-4" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/prompt-chaining-real-estate-listing2.webp 2x%" loading="lazy" />
+        <img src="../images/prompt-chaining-real-estate-listing2.webp" alt="Prompt chaining with GPT-4" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/prompt-chaining-real-estate-listing2.webp 2x%" loading="lazy" />
     </div>
     <figcaption>Prompt chaining with GPT-4</figcaption>
         
@@ -1279,7 +1281,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/Nyckel-AI-approach-relating-to-GPT-4-2.webp" alt="The confusion matrix for the whale sound classification function" class="" style="border-radius: 20px; max-width: 80%" srcset="../images/Nyckel-AI-approach-relating-to-GPT-4-2.webp 2x%" loading="lazy" />
+        <img src="../images/Nyckel-AI-approach-relating-to-GPT-4-2.webp" alt="The confusion matrix for the whale sound classification function" class=" " style="border-radius: 20px; max-width: 80%" srcset="../images/Nyckel-AI-approach-relating-to-GPT-4-2.webp 2x%" loading="lazy" />
     </div>
     <figcaption></figcaption>
         
@@ -1326,7 +1328,7 @@
     
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="../images/discriminative-vs-generative-ai2.webp" alt="Generative AI vs. Discriminative AI" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/discriminative-vs-generative-ai2.webp 2x%" loading="lazy" />
+        <img src="../images/discriminative-vs-generative-ai2.webp" alt="Generative AI vs. Discriminative AI" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/discriminative-vs-generative-ai2.webp 2x%" loading="lazy" />
     </div>
     <figcaption></figcaption>
         

@@ -56,7 +56,9 @@ Nyckel provided a variety of sorting and filtering options that I could use to a
 
 With the model trained, I could now invoke the model with new inputs. Nyckel’s invoke tab allowed me to upload new images that our model would classify as real or synthetic, directly from the user interface. The invoke tab only allowed me to assess one image at a time, but Nyckel also provided an API to invoke the model, complete with example requests:
 
-\`\`` python
+<pre class="code-box">
+<code id="codeSnippet">
+python
 
 import requests
 
@@ -64,17 +66,17 @@ url = 'INSERT YOUR URL HERE`’
 
 headers = {
 
-    'Authorization': 'Bearer ' + ‘INSERT YOUR BEARER TOKEN HERE’
+'Authorization': 'Bearer ' + ‘INSERT YOUR BEARER TOKEN HERE’
 
 }
 
-with open('<fileName>', 'rb') as f:
+with open('INSERT FILE NAME', 'rb') as f:
 
-    result = requests.post(url, headers=headers, files={'data': f})
+result = requests.post(url, headers=headers, files={'data': f})
 
 print(result.text)
-
-\`\``
+</code>
+</pre>
 
 You can learn more about the API via the [API documentation](https://www.nyckel.com/docs).
 

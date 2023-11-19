@@ -37,14 +37,26 @@ social_accounts:
 external_links:
   title: "Learn More"
   links:
-    - url: "/contact/"
-      text: "Contact"
     - url: "/pricing/"
       text: "Pricing"
     - url: "https://www.nyckel.com/public-functions"
-      text: "Pre-Trained Models"
+      text: "Pre-Trained Models"  
+
+external_links_02:
+  title: "Get Started"
+  links:
+    - url: "/contact/"
+      text: "Contact"
+    - url: "https://www.nyckel.com/console"
+      text: "Sign-Up"
+
+external_links_04:
+  title: "Developers"
+  links:
     - url: "https://www.nyckel.com/docs"
-      text: "API Docs"      
+      text: "API Docs"
+    - url: "https://status.nyckel.com/"
+      text: "API Status"               
 
 external_links_03:
   title: "Company"
@@ -53,7 +65,7 @@ external_links_03:
       text: "About"
     - url: "/blog/"
       text: "Blog"   
-    - url: "https://www.nyckel.com/customers/"
+    - url: "/customers/"
       text: "Customers" 
 
 # footer_newsletter:

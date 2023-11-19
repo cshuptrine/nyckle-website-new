@@ -39,7 +39,7 @@
     font-weight: 400;
     font-size: 1.8rem;
     margin-bottom: 1.0rem;
-     color: #123376;
+     color: #0b2436;
 }
 
 .summary-img {
@@ -52,7 +52,7 @@
 
 .summary-card .entry {
     font-weight: 300;
-     color:#191970;
+     color:#0b2436;
      font-size: .80rem;
      line-height: 1.5;
 }
@@ -67,7 +67,7 @@
     font-size: .75rem;
     font-weight: 300;
     line-height: 2.0;
-    color:#191970;
+    color:#0b2436;
     font-weight:400;
 }
 
@@ -100,7 +100,7 @@
 .hero .read-more,
 .summary-footer .read-more {
     margin: auto 0;
-    color: #3877f6;
+    color: #0b2436;
     font-size: .9rem;
     font-weight: 500;
 
@@ -230,6 +230,10 @@ h4 {
 .entry h4 {
     font-weight: 300;
     margin-bottom: 0.5rem;
+}
+
+.entry p {
+    font-size: 18px; /* Replace 16px with your desired font size */
 }
 
 /* Actual site css */
@@ -444,7 +448,7 @@ article {
     font-size: 18px;
     font-weight: 300;
     line-height: 25px;
-    color:#191970;
+    color:#0b2436;
     font-size: .80rem;
 }
 
@@ -516,7 +520,7 @@ _:future,
     font-size: 2.5rem;
     line-height: 1.15;
     margin: 1rem 0 1rem 0;
-    color:#123376;
+    color:#0b2436;
 }
 
 @media (max-width: 594.98px) {
@@ -555,7 +559,7 @@ _:future,
     margin: 3px 10px 0 3px;
     font-size: .85rem;
     font-weight: 400;
-    color:#191970;
+    color:#0b2436;
 
 }
 
@@ -628,6 +632,10 @@ _:future,
     text-align: center;
     margin-bottom: 2em;
     margin-top: 2em;
+}
+
+.youtube iframe {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Example shadow */
 }
 
 .comment {
@@ -737,4 +745,94 @@ _:future,
   /* Other styles (if any) */
 }
 
+.fit {
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+  width: 90%; /* Set the width of the container to 75% of its parent element */
+  margin: 0 auto; /* Center the container horizontally */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.fit-small {
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+  width: 50% !important; /* Set the width of the container to 75% of its parent element */
+  margin: 0 auto; /* Center the container horizontally */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.fit-small2 {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  max-height: 80vh; /* Set maximum height relative to the viewport height */
+  max-width: 60%; /* Ensure the width does not exceed the container width */
+  padding: 20px; /* Add some padding around the image */
+  box-sizing: border-box; /* Include padding in the width and height calculation */
+  margin: 0 auto; /* Center the container horizontally */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.post-title {
+  font-family: Arial, sans-serif !important;
+}
+
+.post-font2 {
+  font-family: Arial, sans-serif !important;
+}
+
+.post-font p {
+  font-family: Arial, sans-serif !important;
+  font-size: 17px; /* Adjust this value to your desired font size */
+  font-weight: 400; /* Adjust this value for desired font weight, e.g., 400 (normal), 500 (medium), 600 (semi-bold), etc. */
+  line-height: 1.5; /* Adjust this value for desired space between rows; higher values increase space */
+  }
+
+.strong, b {
+  font-weight: bold !important;
+}
+
+.hero2 {
+  width: 100%;
+  background-color: #306fa2 !important; /* Your desired color */
+  padding-top: 5%;
+}
+
+.hero-contents2 {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.hero-image {
+    width: 125%; /* or you can specify any width you want */
+    height: auto; /* keeps image aspect ratio */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* adjust shadow as needed */
+    image-rendering: -webkit-optimize-contrast; /* try to make image crisper */
+}
+
+.post-img {
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  padding-top: 10px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+  width: 90%; /* Set the width of the container to 75% of its parent element */
+  margin: 0 auto; /* Center the container horizontally */
+
+}
 

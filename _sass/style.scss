@@ -7011,3 +7011,60 @@ footer.inverse-text address {
 .overflow-hidden {
     overflow: hidden;
 }
+
+.case-studies {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.case-study-box {
+  flex: 0 0 30%; /* Adjust the width percentage as needed */
+  margin: 1%; /* Adjust for spacing */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example shadow */
+  background-color: #FFF; /* Replace with the specific color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.case-study-box .logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.case-study-box .logo img {
+  max-width: 100%; /* Ensures the image is responsive */
+  height: auto;
+}
+
+.case-study-box .quote {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.case-study-box .author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.case-study-box .author img {
+  border-radius: 50%; /* Circular image */
+  margin-right: 10px;
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+}
+
+.case-study-box .case-study-link {
+  text-decoration: none;
+  color: #377db7; /* Example color */
+  font-weight: bold;
+}
+
+/* Responsive adjustments if necessary */
+@media (max-width: 768px) {
+  .case-study-box {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+}

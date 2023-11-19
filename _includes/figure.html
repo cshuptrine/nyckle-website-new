@@ -23,7 +23,7 @@
         {% endif %}
         <div class="post-img">
         <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
-        <img src="{{ include.url }}" alt="{{ alt }}" class="{% if include.box == 'yes' %}boxed{% endif %}" style="border-radius: 20px; max-width: {{width}}%" srcset="{{ url2x }} 2x%" loading="lazy">
+        <img src="{{ include.url }}" alt="{{ alt }}" class="{% if include.box == 'yes' %}boxed{% endif %} {% if include.fit == 'yes' %}fit{% endif %}" style="border-radius: 20px; max-width: {{width}}%" srcset="{{ url2x }} 2x%" loading="lazy">
     </div>
     <figcaption>{{ include.description }}</figcaption>
         {% if include.link != null and include.link != "" %}

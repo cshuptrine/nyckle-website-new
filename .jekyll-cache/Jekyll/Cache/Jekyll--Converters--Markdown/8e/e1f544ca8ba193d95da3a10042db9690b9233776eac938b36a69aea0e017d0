@@ -1,0 +1,110 @@
+I"%<h2 id="what-is-google-cloud-vision-api">What is Google Cloud Vision API?</h2>
+
+<p>Google released its Cloud Vision API in 2015 as a computer vision API that enables developers to incorporate image recognition, detection, and classification features into their applications. The Cloud Vision API utilizes <strong>pre-trained models</strong> to identify several image elements, including objects, faces, text, barcodes, landmarks, and more.</p>
+
+<p>This post will focus on Google Cloud Vision API’s “<a href="https://cloud.google.com/vision/docs/labels">Label Detection</a>” feature, which utilizes machine learning to automatically tag images with relevant labels based on their content. You can <a href="https://cloud.google.com/vision/docs/drag-and-drop">try it out for yourself</a>, but here is an example:</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/google-cloud-vision-api-burger.webp" alt="An example of Google Cloud Vision API's label detection applied to an image of a burger. The image only shows about a quarter of the labels returned - the rest are hidden below the scroll." class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/google-cloud-vision-api-burger.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption>An example of Google Cloud Vision API's label detection applied to an image of a burger. The image only shows about a quarter of the labels returned - the rest are hidden below the scroll.</figcaption>
+        
+
+</figure>
+
+<h2 id="what-is-the-class-list-and-why-is-it-important">What is the class list, and why is it important?</h2>
+
+<p>The class list is the complete list of all possible labels that Google’s pre-trained model can assign to an image. Google uses these pre-defined labels for both broad and specific categories. When an image is submitted, the Cloud Vision API returns a list of relevant labels from the class list that apply to that particular image.</p>
+
+<p>When using pre-trained models, it’s critical to understand the class list (i.e., vocabulary) that a classification or tagging API uses. We’ll illustrate the importance of this through an example; let’s say you operate a used car marketplace and want to automatically classify photos uploaded by your sellers.</p>
+
+<ul>
+  <li>First, you want to confirm that you can map the API’s vocabulary to yours. For example, if you want to classify images that contain cars, you want to ensure that the class list contains “car.” If the list doesn’t have that category, is too coarse-grained (e.g., only includes “vehicle”), or only contains a non-exhaustive list of sub-categories (e.g., only “Ford F-150” and “Toyota Camry”), then it won’t work for you.</li>
+  <li>Next, you want to do the actual mapping. Sometimes this is as simple as mapping “car” from the API to your “car.” But often, it’s more complicated. You may have to map multiple sub-categories like “sedan” and “hatchback” to “car” and keep track of this mapped list in case it changes. You may also have to check for the presence of multiple labels on a single image. For example, “car” and “headlights” to make sure you get the front view of a car.</li>
+</ul>
+
+<p>Google, unfortunately, doesn’t publish this list anywhere, so we wanted to use a public dataset to try to reverse-engineer some or most of this list. </p>
+
+<h2 id="how-did-we-reverse-engineer-the-class-list">How did we reverse-engineer the class list?</h2>
+
+<p>Our general approach was to invoke the API with a large and varied dataset of images and accumulate the set of unique labels found. The <a href="https://github.com/NyckelAI/codesamples/blob/main/google_vision_api_class_list/code.ipynb">code is available on GitHub</a>, but here’s a description of the important steps:</p>
+
+<ol>
+  <li>
+    <h3 id="downloaded-the-dataset-and-picked-random-images">Downloaded the dataset and picked random images.</h3>
+
+    <p>We used the <a href="https://www.kaggle.com/datasets/romainbeaumont/laion400m">Laion400m</a> dataset, a large and diverse dataset of links to images on the public web. The <a href="https://rom1504.github.io/clip-retrieval/?back=https%3A%2F%2Fknn.laion.ai&amp;index=laion_400m&amp;useMclip=false">searchable dataset</a> is split into several parquet files, each containing links to images along with metadata about the image, like image resolution. <br />
+<br />
+We read one random file at a time, filtered out images smaller than 224px on either side, and selected 100k image URLs at random. Later in the notebook, we called the Cloud Vision API on these images and accumulated a list and count of new unique labels found. We then came back to pick a new random set of images from a new random file to repeat the process until we were satisfied with the unique labels we’d accumulated.</p>
+  </li>
+  <li>
+    <h3 id="removed-dead-links">Removed dead links.</h3>
+
+    <p>The Laion400m dataset is several years old, and many links were dead. We filtered out dead links by making an HTTP HEAD request to the URL and checking for success. This step narrowed our list from 100k links to about 75k working links.</p>
+  </li>
+  <li>
+    <h3 id="called-the-api-and-stored-unique-labels">Called the API and stored unique labels.</h3>
+
+    <p>We called the API and accumulated a list of the unique labels we found. We did this in parallel across 15 threads to make the process faster. The process took roughly an hour for ~80k images. When we were done, we wrote the unique labels.</p>
+  </li>
+  <li>
+    <h3 id="graphed-the-count-of-unique-labels-discovered">Graphed the count of unique labels discovered.</h3>
+
+    <p>We graphed the number of unique labels found as a function of the number of images processed. The idea was that this line would start to steep as each new image discovered a large set of new labels but would level off over time, hopefully completely flattening out after some time.</p>
+  </li>
+</ol>
+
+<p>Using this method, we could never guarantee that we would get the entire class list, but from looking at the shape of the plot in the next section, you can see that we retrieved a large majority of it.</p>
+
+<h2 id="results">Results</h2>
+
+<p>We called the Cloud Vision API with over 400k images and accumulated a list of unique labels returned. Here is the count of unique labels graphed over the number of images processed:</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/unique_label_count_trend.svg" alt="A graph of unique labels accumulated over the number of images processed." class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/unique_label_count_trend.svg 2x%" loading="lazy" />
+    </div>
+    <figcaption>A graph of unique labels accumulated over the number of images processed.</figcaption>
+        
+
+</figure>
+
+<p>We were hoping to get to the “end of the rainbow” and see that graph fully flatten out - to the point where there are few new labels to be discovered from processing more images. But after several hundred dollars paid to Google, and several hours spent processing over 400k images, we had to call it a day. Here’s what we found:</p>
+
+<p><strong><a href="https://github.com/NyckelAI/codesamples/blob/main/google_vision_api_class_list/unique_labels.txt">See the complete list of Cloud Vision API labels</a>, sorted alphabetically.</strong></p>
+
+<p>Many of the items on the list are unsurprising, but there are several obscure words that I had to look up definitions. Here’s a small sampling of these: Accipitriformes, Alcapurria, Bigoli, Bredele, Calamondin, Carcharhiniformes, Coenagrion, Dongfang meiren, Ekiben, Eumeces, Frikadeller, Hamantash, Khinkali. See how many of them you know without having to look it up.</p>
+
+<p>It is truly impressive that Google can detect such a diverse array of items. <strong>But that only helps if your application’s needs match Google’s vocabulary.</strong> Let’s consider how Google Cloud Vision’s API class list would work from the perspective of the used car marketplace example. The class list has a mix of:</p>
+
+<ul>
+  <li>Specific car models like “Ford fairlane crown victoria skyliner” and “Chevrolet Corvair,” but the list is not very exhaustive. Even best-sellers like the Toyota Camry and Ford F-150 aren’t on it.</li>
+  <li>Vehicle makes like “Maserati” and “Audi,” but this list is also not very exhaustive. Some popular makes are missing, and many makes only have a small subset of models listed, with the make not listed by itself.</li>
+  <li>No categories like “car,” “sedan,” “SUV,” “pickup,” “hatchback,” etc. are present.</li>
+</ul>
+
+<p>You’d be out of luck if you had to categorize uploaded photos by make and type of vehicle (sedan, hatchback, etc.).</p>
+
+<p>________________________</p>
+
+<p><em>If the class list of pre-trained models is not cutting it for you, consider Nyckel. Nyckel makes it easy to train image classification and tagging functions tailored to your data and use case. Check out this <a href="https://www.youtube.com/watch?v=BzawKd_7WDY">1-minute video</a> to see how easy we make it, or <a href="https://www.nyckel.com/console">sign up</a> for a free account to try it out for yourself.</em></p>
+:ET

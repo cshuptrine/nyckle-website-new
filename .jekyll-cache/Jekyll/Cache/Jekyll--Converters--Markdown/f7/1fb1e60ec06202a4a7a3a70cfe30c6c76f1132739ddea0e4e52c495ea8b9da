@@ -1,0 +1,164 @@
+I"V+<p><em><a href="https://www.nyckel.com/blog/ml-too-hard-for-software-developers/">ML is still too hard for software developers</a>. So what’s the solution? OpenAI’s huge, generic models have rightfully made a big splash. But it comes at steep costs at several levels, and developers are finding that smaller, targeted “Narrow AI” functions are a better bet for their use cases.</em></p>
+
+<hr />
+
+<p>Machine learning (ML) has evolved rapidly over the last 10 years. Today, almost any business can benefit from ML in one way or another. However, <a href="https://www.nyckel.com/blog/ml-too-hard-for-software-developers/">ML is still too hard for software developers</a>. Complexities range from grasping core ML concepts; staying up-to-date with the literature; bringing up software for annotation, data inspection &amp; training; setting up infrastructure; and more.</p>
+
+<p>As a result, there is a vast under-utilization of ML-powered applications and features. And as a result of that, there are many ML players working on tackling this complexity.</p>
+
+<p>OpenAI, perhaps the most well-known player, is betting on so-called large language models (LLMs). They recently released their new flagship model GPT-4, with reportedly over 1 Trillion parameters. These models are trained to perform almost any task and come equipped with a very generic text → text interface. Because of this flexible interface, LLMs like GPT-4 can solve so-called “generative” ML tasks, where new content is created. The applications are endless, including generating blog posts similar to the very one you are reading.</p>
+
+<p>One can also use the GPT-4 interface to solve so-called “discriminative” ML tasks, where the goal is to make decisions. These tasks typically have a fixed schema, e.g., the input can be a text string, and the output can be one of a set of predefined categories. How is this achieved using GPT-4? Let’s take a look.</p>
+
+<h2 id="using-gpt-4-for-decision-making">Using GPT-4 for decision-making</h2>
+
+<p>Let’s start with so-called “zero-shot” learning, where you ask for a decision without providing any examples of the output categories. In this example, we use the <a href="https://openai.com/chatgpt">ChatGPT</a> client, powered by the GPT-4 model, but the same thing can be achieved by using the <a href="https://platform.openai.com/docs/introduction">OpenAI API</a>:</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/Nyckel-AI-approach-relating-to-GPT-4-6.webp" alt="The confusion matrix for the whale sound classification function" class="  " style="border-radius: 20px; max-width: 80%" srcset="../images/Nyckel-AI-approach-relating-to-GPT-4-6.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
+        
+
+</figure>
+
+<p>This reply makes sense, but in order to use it as part of an application, we need the output to be schematized so that the caller can parse it as part of the API request. To achieve that, we can simply ask:</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/Nyckel-AI-approach-relating-to-GPT-4-1.webp" alt="The confusion matrix for the whale sound classification function" class="  " style="border-radius: 20px; max-width: 80%" srcset="../images/Nyckel-AI-approach-relating-to-GPT-4-1.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
+        
+
+</figure>
+
+<p>That’s pretty good, although you’d have to strip the period, make your parser case insensitive, and manage cases when the GPT-4 replies out of schema.</p>
+
+<p>LLMs such as GPT-4 also support so-called “few-shot” learning, where you provide examples as part of the prompt. This is often required in production systems where the decisions are more nuanced. Here is what our “pass me the ketchup” example might look like:</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/Nyckel-AI-approach-relating-to-GPT-4-2.webp" alt="The confusion matrix for the whale sound classification function" class="  " style="border-radius: 20px; max-width: 80%" srcset="../images/Nyckel-AI-approach-relating-to-GPT-4-2.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
+        
+
+</figure>
+
+<p>Again, it works. And in general, for toy problems, it will continue to work. However, at some point, the lack of a data engine will become painfully evident, particularly for decisions with multiple output categories.</p>
+
+<p>For example, let’s say you are classifying press releases into 10 categories, such as “Events,” “Business,” “Tourism,” etc. You’d first need to provide examples for all ten categories in the prompt itself, which becomes quite a long list. Next, you will need to keep augmenting the prompt if you find samples where the AI gets it wrong. This can quickly become a game of “whack-a-mole,” where you fix one type of issue only to have another appear.</p>
+
+<p>The way to solve these types of problems is well known; you need to build a “<a href="https://www.nyckel.com/blog/9-ways-to-use-a-data-engine-to-improve-your-ml-model/">data engine.</a>” A data engine allows you to discover corner cases and iterate on the labeling of your existing samples to ensure the model receives the right kinds of inputs.</p>
+
+<p>So, ironically, the highly sophisticated AI solution from OpenAI lacks the basic scaffolding required to solve production-grade discriminative (decision) tasks.</p>
+
+<h2 id="alternative-to-llms-narrow-ai-models-trained-for-specific-tasks">Alternative to LLMs: Narrow AI models trained for specific tasks</h2>
+
+<p>At the highest level, <a href="https://www.nyckel.com">Nyckel</a> solves the same problem as OpenAI: abstracting away the complexities of managing the ML minutia. However, we take a diametrically different solution. Instead of providing a single, huge, static, general model, Nyckel provides tooling to spring up “narrow” AI models trained for specific tasks.</p>
+
+<p>Contrary to GPT-4, Nyckel’s functions are schematized with a “standard” Rest API interface. These functions are cheap and light and allow developers to spin up as many as they need for their application. This approach resonates with many developers, allowing them to break down their ML needs into simple, digestible pieces.</p>
+
+<p>With Nyckel, it’s fast to spin up a solution to the “pass-me-the ketchup” toy problem, albeit not quite as fast as with GPT-4. Here is the zero-shot example with Nyckel:</p>
+
+<figure class="figure" style="width: 100%">
+    <div style="position: relative; padding-bottom: calc(67.56756756756756% + 41px); height: 0;">
+        <iframe src="https://demo.arcade.software/v77HuZ5XvJoQ6x66ADfO?embed" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px;"></iframe>
+    </div>
+    
+    <figcaption>Zero-shot learning with Nyckel</figcaption>
+    
+</figure>
+
+<p>And for few-shot learning:</p>
+
+<figure class="figure" style="width: 100%">
+    <div style="position: relative; padding-bottom: calc(67.56756756756756% + 41px); height: 0;">
+        <iframe src="https://demo.arcade.software/UCzpYcR4NXhdqyWF25ne?embed" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 5px;"></iframe>
+    </div>
+    
+    <figcaption>Few-shot learning with Nyckel</figcaption>
+    
+</figure>
+
+<p>So while Nyckel functions are not quite as fast to create as an API call to GPT-4, they scale much better. Meaning: it is easy to add more outputs and more data while tracking how well the function performs.</p>
+
+<p>The narrow AI models are also smaller, meaning they’re cheaper to invoke; the output adheres to a fixed schema; and they scale to more complex problems that require a data engine to iterate on the data. For example, Nyckel’s data engine provides:</p>
+
+<ul>
+  <li>CRUD (Create, Read, Update, and Delete) operations on inputs and labels.</li>
+  <li>The ability to identify examples where Nyckel disagrees with the desired output. This can help identify labeling errors as well as highlight corner cases and problem areas.</li>
+  <li>The ability to identify examples from the invoke stream that should be labeled to further improve the model.</li>
+</ul>
+
+<h2 id="openais-gpt-4-vs-nyckel-key-differences">OpenAI’s GPT-4 vs. Nyckel: Key differences</h2>
+
+<p>OpenAI has created an incredible product with many practical and creative use cases. Yet, there are better tools available (including Nyckel) that are tailored to the unique needs of software developers and product teams who need an API for machine learning-driven decision making. We outline some of the key differences between Nyckel and GPT-4 below:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th><strong>GPT-4</strong></th>
+      <th><strong>Nyckel</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>AI paradigm</strong></td>
+      <td>General AI trained on a huge language model to perform almost any task.</td>
+      <td>N﻿arrow AI trained for specific tasks (e.g., classification of images and text).</td>
+    </tr>
+    <tr>
+      <td><strong>API interface</strong></td>
+      <td>Generic text-to-text API interface.</td>
+      <td>Schematized, “standard” REST API interface</td>
+    </tr>
+    <tr>
+      <td><strong>Decision-making capabilities</strong></td>
+      <td>Effective on simpler problems. Needs significant prompt engineering and external scaffolding for complex problems.</td>
+      <td>Optimized for decision-making tasks with a built-in data engine.</td>
+    </tr>
+    <tr>
+      <td><strong>C﻿ost</strong></td>
+      <td>$0.06 per API call (<a href="https://openai.com/pricing">for 1K tokens / 8K context</a>).</td>
+      <td>$0.001 per API call (at the <a href="https://www.nyckel.com/pricing">Growth</a> tier).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="nyckel-the-narrow-ai-api-for-decision-making">Nyckel: the “Narrow AI” API for decision-making</h2>
+
+<p>We built Nyckel specifically for the needs of developers and product teams who don’t have machine learning expertise in-house. (And for most companies, <a href="https://www.nyckel.com/blog/service-oriented-design-applies-to-ml-too/">we don’t think they need it</a> in-house anyways.) <a href="https://www.nyckel.com/docs">Check out our docs and quickstarts</a> to explore how your team could use our product.</p>
+
+<p>If you’re ready to give Nyckel a try, <a href="https://www.nyckel.com/console">sign up for a free account</a> or <a href="mailto:feeback@nyckel.com">get in touch with us</a> to chat through how best you could tackle your use case.</p>
+:ET

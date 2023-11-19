@@ -4,7 +4,7 @@ main_menu:
     url: "/pricing/"
   
   - text: "Customers"
-    url: "https://www.nyckel.com/customers/"
+    url: "/customers/"
        
   - text: "About"
     url: "/about/"
