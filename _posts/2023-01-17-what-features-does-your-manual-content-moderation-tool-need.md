@@ -3,16 +3,15 @@ layout: post
 title: "What Features Does Your Manual Content Moderation Tool Need? "
 date: 2023-01-16
 author: dan
-seo_title: Important Features of a Manual Content Moderation Tool
 summary: Automated content moderation helps you review large volumes of UGC
   quickly and efficiently. But even the most sophisticated tools aren’t perfect
   and still require some level of manual review. We outline the features to
   consider adding to your manual content moderation tool.
-seo_description: Even the most sophisticated content moderation tools aren't
+description: Even the most sophisticated content moderation tools aren't
   perfect solutions and require some level of manual review. We outline
   important manual review features.
-og_image: /blog/images/manual-content-moderation-tool-header.jpg
-og_image_alt: Important features of a content moderation tool
+image: /blog/images/manual-content-moderation-tool-header.webp
+image_alt: Important features of a content moderation tool
 ---
 
 If you have user-generated content (UGC) on your platform, then you have a [content moderation problem](https://www.nyckel.com/blog/what-is-content-moderation/). Moderating UGC may be a future problem, or it may be a now problem, but you will need to solve it at some point if your company wants to grow.
@@ -50,7 +49,7 @@ Interface design is very important for the usability and efficiency of a manual 
 
 We’ll review these recommendations using the mock-up of a manual moderation tool interface below.
 
-{% include figure.html url="../images/content-moderation-tool-mockup-1.png" description="Mock-up of a hypothetical manual content moderation tool" alt="Mock-up of a manual content moderation tool" %}
+{% include figure.html url="../images/content-moderation-tool-mockup-1.webp" description="Mock-up of a hypothetical manual content moderation tool" alt="Mock-up of a manual content moderation tool" %}
 
 #### FONT SIZE
 
@@ -74,7 +73,7 @@ Escalating may be necessary when the decision is too tricky, and you want to pas
 
 It may also make sense to sort items by the model’s confidence score, sorting the content items, for example, by what the model predicts is the most inappropriate to the most appropriate content.
 
-{% include figure.html url="../images/content-moderation-tool-mockup-3.png" description="Additional mock-up of a hypothetical manual content moderation tool" alt="Mock-up of a manual content moderation tool" %}
+{% include figure.html url="../images/content-moderation-tool-mockup-3.webp" description="Additional mock-up of a hypothetical manual content moderation tool" alt="Mock-up of a manual content moderation tool" %}
 
 In addition to sorting by rejected, skipped, or predicted level of inappropriateness, you may also want to consider functionality that allows you to:
 
@@ -107,7 +106,7 @@ Tracking individual moderator decisions also helps identify “oracles,” team 
 
 Tracking the annotation decisions of different users means building and managing a login system, as well as generating an audit log showing who reviewed each piece of content, when, and under which policy version.
 
-{% include figure.html url="../images/content-moderation-tool-mockup-2.png" description="Additional mock-up of a hypothetical manual content moderation tool" alt="Mock-up of a manual content moderation tool" %}
+{% include figure.html url="../images/content-moderation-tool-mockup-2.webp" description="Additional mock-up of a hypothetical manual content moderation tool" alt="Mock-up of a manual content moderation tool" %}
 
 ### Next-level features of a manual moderation tool
 

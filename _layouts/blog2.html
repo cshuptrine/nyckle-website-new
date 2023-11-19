@@ -1,8 +1,14 @@
 ---
-layout: default
+layout: default-post
 cta: none
 
 ---
+
+<div class="wrapper white-wrapper">
+    <div class="row">
+    </div></div>
+
+    <div class="container">
 
 {% assign all_posts = site.posts | where_exp: "item", "item.stage != true" %}
 <div class="posts contain-1300 p-mobile-1350 mb-3">
@@ -11,8 +17,6 @@ cta: none
     {% assign post = post %}
     {% include summary-hero.html %}
     {% endfor %}
-
-    {% include newsletter-signup.html %}
 
     <h1 class="heading">Posts</h1>
     <div class="row">
@@ -30,5 +34,4 @@ cta: none
         {% include summary-card.html %}
         {% endif %}
         {% endfor %}
-    </div>
-</div>
+  </div></div></div>

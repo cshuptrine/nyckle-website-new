@@ -5,14 +5,13 @@ date: 2023-04-19
 author: oscar
 stage: false
 featured: true
-seo_title: GPT-4 vs. Nyckel for Machine-Learning Driven Decisions
 summary: GPT-4 is impressive. Yet, there are better tools available (including
   Nyckel) that are tailored to the unique needs of software developers and
   product teams who need an API for machine learning-driven decision making.
-seo_description: Learn why products that can spring up narrow AI models trained
+description: Learn why products that can spring up narrow AI models trained
   for specific tasks outperform GPT-4 for ML-driven decisions.
-og_image: /blog/images/narrow-ai-approach-header.png
-og_image_alt: NarrowAI vs GPT as David vs Goliath
+image: /blog/images/narrow-ai-approach-header.webp
+image_alt: NarrowAI vs GPT as David vs Goliath
 ---
 
 *[ML is still too hard for software developers](https://www.nyckel.com/blog/ml-too-hard-for-software-developers/). So what’s the solution? OpenAI’s huge, generic models have rightfully made a big splash. But it comes at steep costs at several levels, and developers are finding that smaller, targeted “Narrow AI” functions are a better bet for their use cases.*
@@ -31,17 +30,17 @@ One can also use the GPT-4 interface to solve so-called "discriminative" ML task
 
 Let’s start with so-called “zero-shot” learning, where you ask for a decision without providing any examples of the output categories. In this example, we use the [ChatGPT](https://openai.com/chatgpt) client, powered by the GPT-4 model, but the same thing can be achieved by using the [OpenAI API](https://platform.openai.com/docs/introduction):
 
-{% include figure.html url="../images/Nyckel-AI-approach-relating-to-GPT-4-6.png" width="80" alt="The confusion matrix for the whale sound classification function"%}
+{% include figure.html url="../images/Nyckel-AI-approach-relating-to-GPT-4-6.webp" width="80" alt="The confusion matrix for the whale sound classification function"%}
 
 This reply makes sense, but in order to use it as part of an application, we need the output to be schematized so that the caller can parse it as part of the API request. To achieve that, we can simply ask:
 
-{% include figure.html url="../images/Nyckel-AI-approach-relating-to-GPT-4-1.png" width="80" alt="The confusion matrix for the whale sound classification function"%}
+{% include figure.html url="../images/Nyckel-AI-approach-relating-to-GPT-4-1.webp" width="80" alt="The confusion matrix for the whale sound classification function"%}
 
 That’s pretty good, although you’d have to strip the period, make your parser case insensitive, and manage cases when the GPT-4 replies out of schema.
 
 LLMs such as GPT-4 also support so-called “few-shot” learning, where you provide examples as part of the prompt. This is often required in production systems where the decisions are more nuanced. Here is what our “pass me the ketchup” example might look like:
 
-{% include figure.html url="../images/Nyckel-AI-approach-relating-to-GPT-4-2.png" width="80" alt="The confusion matrix for the whale sound classification function"%}
+{% include figure.html url="../images/Nyckel-AI-approach-relating-to-GPT-4-2.webp" width="80" alt="The confusion matrix for the whale sound classification function"%}
 
 Again, it works. And in general, for toy problems, it will continue to work. However, at some point, the lack of a data engine will become painfully evident, particularly for decisions with multiple output categories.
 

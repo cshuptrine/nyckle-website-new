@@ -4,9 +4,9 @@ date: 2022-10-09
 title: Whac-a-Spammer - How to Deal with Bots on Your Site
 author: dan
 summary: Bots posting content to your site can be a scourge. Stay one step ahead of them with these tips, tools, and tricks.
-og_image: /blog/images/2022/whac-a-mole.jpeg
-og_image_alt: Stop spammers from taking over your site
-seo_description: Learn the tools, tips, and tricks to prevent bots from taking over your site.
+image: /blog/images/2022/whac-a-mole.webp
+image_alt: Stop spammers from taking over your site
+description: Learn the tools, tips, and tricks to prevent bots from taking over your site.
 stage: false
 ---
 

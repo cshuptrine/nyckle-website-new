@@ -3,9 +3,9 @@ layout: post
 date: 2022-07-12
 title: IAB Classification of Text and Images Using Machine Learning
 author: george
-summary: IAB is a content taxonomy that is used by content publishers to organize their content in a consistent way. In this post we show you how to classify text and image content into IAB categories without any labeled data.
-og_image: /blog/images/2022/iab-hero.jpg
-og_image_alt: Chess pieces being categorized
+description: IAB is a content taxonomy that is used by content publishers to organize their content in a consistent way. In this post we show you how to classify text and image content into IAB categories without any labeled data.
+image: /blog/images/2022/iab-hero.webp
+image_alt: Chess pieces being categorized
 ---
 
 If you are reading an article about vintage motorcycles, you are likely more interested in seeing ads for the latest

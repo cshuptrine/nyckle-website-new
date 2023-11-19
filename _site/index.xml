@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/index.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-18T10:04:46-08:00</updated><id>http://localhost:4000/index.xml</id><title type="html">Nyckel | Classification API</title><subtitle>Nyckel&apos;s Classification API makes it simple to auto-label any content using AI.</subtitle><entry><title type="html">What Is Image Recognition? (And How It Differs From Image Classification)</title><link href="http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification/" rel="alternate" type="text/html" title="What Is Image Recognition? (And How It Differs From Image Classification)" /><published>2023-11-09T00:00:00-08:00</published><updated>2023-11-09T00:00:00-08:00</updated><id>http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification</id><content type="html" xml:base="http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification/"><![CDATA[<p>Image recognition is a term often used to describe using machine learning or computer vision to recognize and identify what’s in an image. Even though people use the term image recognition frequently, its meaning is vague, which can cause confusion and misunderstanding. For example, when someone says image recognition, they likely actually mean one of the following <a href="https://www.nyckel.com/blog/glossary-of-computer-vision-function-types/">types of computer vision</a>:</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/index.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-11-19T08:49:11-05:00</updated><id>http://localhost:4000/index.xml</id><title type="html">Nyckel | Classification API</title><subtitle>Nyckel&apos;s Classification API makes it simple to auto-label any content using AI.</subtitle><entry><title type="html">What Is Image Recognition? (And How It Differs From Image Classification)</title><link href="http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification/" rel="alternate" type="text/html" title="What Is Image Recognition? (And How It Differs From Image Classification)" /><published>2023-11-09T00:00:00-05:00</published><updated>2023-11-09T00:00:00-05:00</updated><id>http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification</id><content type="html" xml:base="http://localhost:4000/blog/what-is-image-recognition-and-how-it-differs-from-image-classification/"><![CDATA[<p>Image recognition is a term often used to describe using machine learning or computer vision to recognize and identify what’s in an image. Even though people use the term image recognition frequently, its meaning is vague, which can cause confusion and misunderstanding. For example, when someone says image recognition, they likely actually mean one of the following <a href="https://www.nyckel.com/blog/glossary-of-computer-vision-function-types/">types of computer vision</a>:</p>
 
 <ul>
   <li><strong>Image classification:</strong> Assigns a <em>single</em> label to an entire image. For example, you can train an image classification function to <a href="https://www.nyckel.com/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes/">determine whether an image is AI-generated or not</a>. </li>
@@ -29,15 +29,18 @@
     
 
     
-        <img src="../images/image-recognition-honda-cars.png" alt="Image classification to identify car make" style="border-radius: 20px; max-width: 80%" srcset="../images/image-recognition-honda-cars.png 2x%" />
-        <figcaption></figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/image-recognition-honda-cars.webp" alt="Image classification to identify car make" class="" style="border-radius: 20px; max-width: 80%" srcset="../images/image-recognition-honda-cars.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption>Image classification to identify car make.</figcaption>
         
 
 </figure>
 
 <ul>
   <li>
-    <p><strong>Do you want to label the image with multiple labels or tags?</strong> If so, you need to create an image tagging function (also called <a href="https://www.nyckel.com/blog/multi-class-classification-vs-multi-label-classification-key-differences-how-to-choose/">multi-label classification</a>). </p>
+    <p><strong>Do you want to label the image with multiple labels or tags?</strong> If so, you need to create an image tagging function (also called <a href="https://www.nyckel.com/blog/multi-class-classification-vs-multi-label-classification-key-differences-how-to-choose/">multi-label classification</a>).</p>
 
     <p>For example, if you’re an online retailer that wants to speed the process of tagging product inventory with all of its colors, you could create an image tagging function. The input image would be the article of clothing, and the output labels would be all of the possible colors. For example: yellow, orange, red, pink, purple, blue, green, black, white, brown.</p>
   </li>
@@ -52,8 +55,11 @@
     
 
     
-        <img src="../images/image-recognition-boy-blue.png" alt="Image tagging to automatically identify colors on clothing" style="border-radius: 20px; max-width: 80%" srcset="../images/image-recognition-boy-blue.png 2x%" />
-        <figcaption></figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/image-recognition-boy-blue.webp" alt="Image tagging to automatically identify colors on clothing" class="" style="border-radius: 20px; max-width: 80%" srcset="../images/image-recognition-boy-blue.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
         
 
 </figure>
@@ -75,8 +81,11 @@
     
 
     
-        <img src="https://www.nyckel.com/_content/Marketing/images/function-example-store@2x.jpg" alt="Object detection to identify products on store shelves" style="border-radius: 20px; max-width: 100%" srcset="https://www.nyckel.com/_content/Marketing/images/function-example-store@2x.jpg 2x%" />
-        <figcaption>Nyckel object detector identifies Maple Cheerios on a store shelf.</figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/function-example.webp" alt="Object detection to identify products on store shelves" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/function-example.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption>Nyckel object detector identifies Maple Cheerios on a store shelf.</figcaption>
         
 
 </figure>
@@ -95,7 +104,7 @@
 
 <p>Popular services that allow you to build custom models include <a href="https://www.nyckel.com/computer-vision-api">Nyckel</a> (👋), <a href="https://www.ximilar.com/">Ximilar</a>, <a href="https://roboflow.com/">Roboflow</a>, <a href="https://levity.ai/">Levity</a>, <a href="https://www.clarifai.com/">Clarifai</a>, <a href="https://cloud.google.com/vertex-ai?hl=en">Google Vertex AI</a>, <a href="https://azure.microsoft.com/en-us/products/ai-services/ai-custom-vision">Azure Custom Vision</a>, and <a href="https://aws.amazon.com/rekognition/custom-labels-features/?nc=sn&amp;loc=3&amp;dn=4">AWS Rekognition Custom Labels</a>. (We did a <a href="https://www.nyckel.com/blog/computer-vision-saas-landscape-comparison-of-the-top-9-players/">comparison of all of these computer vision SaaS players</a> if you’re interested in seeing how they perform against each other.)</p>
 
-<p>Interested in building a custom <a href="https://www.nyckel.com/docs/image-classification-quickstart">image classification</a>, <a href="https://www.nyckel.com/docs/image-tags-quickstart">image tagging</a>, or <a href="https://www.nyckel.com/docs/detection-quickstart">object detection</a> function? <a href="https://www.nyckel.com/console">Give Nyckel a try for free</a>, and reach out to us at any time for support with your use case.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;George Mathew&quot;, &quot;github&quot;=&gt;&quot;saintarian&quot;, &quot;twitter&quot;=&gt;&quot;georgemkan&quot;, &quot;linkedin&quot;=&gt;&quot;georgemathew&quot;}</name></author><summary type="html"><![CDATA[Image recognition is a term often used to describe using machine learning or computer vision to recognize and identify what’s in an image. Even though people use the term image recognition frequently, its meaning is vague, which can cause confusion and misunderstanding. For example, when someone says image recognition, they likely actually mean one of the following types of computer vision:]]></summary></entry><entry><title type="html">Customized Auto-Tagging for Digital Asset Management</title><link href="http://localhost:4000/blog/custom-auto-tagging-for-digital-asset-management/" rel="alternate" type="text/html" title="Customized Auto-Tagging for Digital Asset Management" /><published>2023-10-25T00:00:00-07:00</published><updated>2023-10-25T00:00:00-07:00</updated><id>http://localhost:4000/blog/custom-auto-tagging-for-digital-asset-management</id><content type="html" xml:base="http://localhost:4000/blog/custom-auto-tagging-for-digital-asset-management/"><![CDATA[<h2 id="tl-dr">TL; DR:</h2>
+<p>Interested in building a custom <a href="https://www.nyckel.com/docs/image-classification-quickstart">image classification</a>, <a href="https://www.nyckel.com/docs/image-tags-quickstart">image tagging</a>, or <a href="https://www.nyckel.com/docs/detection-quickstart">object detection</a> function? <a href="https://www.nyckel.com/console">Give Nyckel a try for free</a>, and reach out to us at any time for support with your use case.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;George Mathew&quot;, &quot;github&quot;=&gt;&quot;saintarian&quot;, &quot;twitter&quot;=&gt;&quot;georgemkan&quot;, &quot;linkedin&quot;=&gt;&quot;georgemathew&quot;, &quot;image&quot;=&gt;&quot;/assets/images/important/blog-george.jpeg&quot;}</name></author><summary type="html"><![CDATA[Image recognition uses AI to identify patterns in images. But its means is vague, which causes confusion. Learn more about what image recognition really means.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/images/what-is-image-recognition-header-image.webp" /><media:content medium="image" url="http://localhost:4000/blog/images/what-is-image-recognition-header-image.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Customized Auto-Tagging for Digital Asset Management</title><link href="http://localhost:4000/blog/custom-auto-tagging-for-digital-asset-management/" rel="alternate" type="text/html" title="Customized Auto-Tagging for Digital Asset Management" /><published>2023-10-25T00:00:00-04:00</published><updated>2023-10-25T00:00:00-04:00</updated><id>http://localhost:4000/blog/custom-auto-tagging-for-digital-asset-management</id><content type="html" xml:base="http://localhost:4000/blog/custom-auto-tagging-for-digital-asset-management/"><![CDATA[<h2 id="tl-dr">TL; DR:</h2>
 
 <ul>
   <li>AI-driven auto-tagging of digital assets (like images) aids in search, discovery, and workflow routing.</li>
@@ -138,8 +147,11 @@
     
 
     
-        <img src="../images/generic_tagging_dam.png" alt="Google's tagging AI's response to an image of a telehandler" style="border-radius: 20px; max-width: 100%" srcset="../images/generic_tagging_dam.png 2x%" />
-        <figcaption></figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/generic_tagging_dam.webp" alt="Google's tagging AI's response to an image of a telehandler" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/generic_tagging_dam.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
         
 
 </figure>
@@ -203,7 +215,7 @@
 
 <h2 id="get-in-touch">Get in touch</h2>
 
-<p><a href="https://www.nyckel.com/console">Try us out</a> for free or <a href="mailto:feedback@nyckel.com">get in touch</a> with our team to chat about your DAM use case.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;George Mathew&quot;, &quot;github&quot;=&gt;&quot;saintarian&quot;, &quot;twitter&quot;=&gt;&quot;georgemkan&quot;, &quot;linkedin&quot;=&gt;&quot;georgemathew&quot;}</name></author><summary type="html"><![CDATA[TL; DR:]]></summary></entry><entry><title type="html">Introducing Invoke Capture - Automatically Gather Important Data to Improve Your Model</title><link href="http://localhost:4000/blog/introducing-invoke-capture-integrated-active-learning/" rel="alternate" type="text/html" title="Introducing Invoke Capture - Automatically Gather Important Data to Improve Your Model" /><published>2023-10-12T00:00:00-07:00</published><updated>2023-10-12T00:00:00-07:00</updated><id>http://localhost:4000/blog/introducing-invoke-capture-integrated-active-learning</id><content type="html" xml:base="http://localhost:4000/blog/introducing-invoke-capture-integrated-active-learning/"><![CDATA[<p>At Nyckel, our goal is to give you the tools to keep your data fresh, correct, and up-to-date. To this end, we are excited to introduce our newest feature: invoke capture – active learning on model invoke data.</p>
+<p><a href="https://www.nyckel.com/console">Try us out</a> for free or <a href="mailto:feedback@nyckel.com">get in touch</a> with our team to chat about your DAM use case.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;George Mathew&quot;, &quot;github&quot;=&gt;&quot;saintarian&quot;, &quot;twitter&quot;=&gt;&quot;georgemkan&quot;, &quot;linkedin&quot;=&gt;&quot;georgemathew&quot;, &quot;image&quot;=&gt;&quot;/assets/images/important/blog-george.jpeg&quot;}</name></author><summary type="html"><![CDATA[AI auto-tagging of digital assets enables search, discovery, and content-based workflows. Discover how custom models can be trained in minutes with no AI expertise.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/images/image-classification-examples-datasets-to-build-functions.webp" /><media:content medium="image" url="http://localhost:4000/blog/images/image-classification-examples-datasets-to-build-functions.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Invoke Capture - Automatically Gather Important Data to Improve Your Model</title><link href="http://localhost:4000/blog/introducing-invoke-capture-integrated-active-learning/" rel="alternate" type="text/html" title="Introducing Invoke Capture - Automatically Gather Important Data to Improve Your Model" /><published>2023-10-12T00:00:00-04:00</published><updated>2023-10-12T00:00:00-04:00</updated><id>http://localhost:4000/blog/introducing-invoke-capture-integrated-active-learning</id><content type="html" xml:base="http://localhost:4000/blog/introducing-invoke-capture-integrated-active-learning/"><![CDATA[<p>At Nyckel, our goal is to give you the tools to keep your data fresh, correct, and up-to-date. To this end, we are excited to introduce our newest feature: invoke capture – active learning on model invoke data.</p>
 
 <h2 id="the-problem">The problem</h2>
 <p>Initial training is only the first step in the lifecycle of a machine learning model. To make your model more robust and keep it robust, you’ll want to continue to add more training data. Here are a couple of reasons why:</p>
@@ -227,8 +239,11 @@
     
 
     
-        <img src="../images/invoke-capture-workflow.jpeg" alt="Invoke capture flowchart" style="border-radius: 20px; max-width: 100%" srcset="../images/invoke-capture-workflow.jpeg 2x%" />
-        <figcaption>Invoke capture is integrated into Nyckel functions. It is designed to help you continuously improve your model by annotating more data.</figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/invoke-capture-workflow.webp" alt="Invoke capture flowchart" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/invoke-capture-workflow.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption>Invoke capture is integrated into Nyckel functions. It is designed to help you continuously improve your model by annotating more data.</figcaption>
         
 
 </figure>
@@ -255,8 +270,11 @@
     
 
     
-        <img src="../images/invoke-capture-view-Nyckel.png" alt="UI for invoke capture" style="border-radius: 20px; max-width: 100%" srcset="../images/invoke-capture-view-Nyckel.png 2x%" />
-        <figcaption>Invoke capture is integrated into Nyckel's UI. Here's an example of captured samples, ready for review.</figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/invoke-capture-view-Nyckel.webp" alt="UI for invoke capture" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/invoke-capture-view-Nyckel.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption>Invoke capture is integrated into Nyckel's UI. Here's an example of captured samples, ready for review.</figcaption>
         
 
 </figure>
@@ -304,7 +322,7 @@
 
 <p>We are excited to see you use this new feature and provide feedback. We are particularly excited about how this enables you to train and deploy a model with very little data and then continuously improve your model by periodically visiting Nyckel’s dashboard and annotating some captured data.</p>
 
-<p>Invoke capture is currently in beta. If you’re interested in trying it or have any questions about the feature, <a href="mailto:feedback@nyckel.com">reach out to us at any time</a>.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Oscar Beijbom&quot;, &quot;github&quot;=&gt;&quot;beijbom&quot;, &quot;linkedin&quot;=&gt;&quot;oscarbeijbom&quot;, &quot;twitter&quot;=&gt;&quot;beijbom&quot;}</name></author><summary type="html"><![CDATA[At Nyckel, our goal is to give you the tools to keep your data fresh, correct, and up-to-date. To this end, we are excited to introduce our newest feature: invoke capture – active learning on model invoke data.]]></summary></entry><entry><title type="html">What Is Image Classification? A Comprehensive Overview for Developers &amp;amp; Product Teams</title><link href="http://localhost:4000/blog/what-is-image-classification-a-comprehensive-overview-for-developers-product-teams/" rel="alternate" type="text/html" title="What Is Image Classification? A Comprehensive Overview for Developers &amp;amp; Product Teams" /><published>2023-10-05T00:00:00-07:00</published><updated>2023-10-05T00:00:00-07:00</updated><id>http://localhost:4000/blog/what-is-image-classification-a-comprehensive-overview-for-developers-product-teams</id><content type="html" xml:base="http://localhost:4000/blog/what-is-image-classification-a-comprehensive-overview-for-developers-product-teams/"><![CDATA[<p>Image classification is a vital technology in today’s data-driven world. But if the term is new to you, you may find yourself wondering, just what is image classification? In short, image classification is the automated categorization of images into predefined classes or labels, enabling computers to interpret visual data quickly. </p>
+<p>Invoke capture is currently in beta. If you’re interested in trying it or have any questions about the feature, <a href="mailto:feedback@nyckel.com">reach out to us at any time</a>.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Oscar Beijbom&quot;, &quot;github&quot;=&gt;&quot;beijbom&quot;, &quot;linkedin&quot;=&gt;&quot;oscarbeijbom&quot;, &quot;twitter&quot;=&gt;&quot;beijbom&quot;, &quot;image&quot;=&gt;&quot;/assets/images/important/blog-oscar.jpeg&quot;}</name></author><summary type="html"><![CDATA[With Nyckel's invoke capture feature, we automatically and intelligently capture data from your deployed models for your team to review and annotate in Nyckel's dashboard.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/images/invoke-capture-workflow-hero.webp" /><media:content medium="image" url="http://localhost:4000/blog/images/invoke-capture-workflow-hero.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">What Is Image Classification? A Comprehensive Overview for Developers &amp;amp; Product Teams</title><link href="http://localhost:4000/blog/what-is-image-classification-a-comprehensive-overview-for-developers-product-teams/" rel="alternate" type="text/html" title="What Is Image Classification? A Comprehensive Overview for Developers &amp;amp; Product Teams" /><published>2023-10-05T00:00:00-04:00</published><updated>2023-10-05T00:00:00-04:00</updated><id>http://localhost:4000/blog/what-is-image-classification-a-comprehensive-overview-for-developers-product-teams</id><content type="html" xml:base="http://localhost:4000/blog/what-is-image-classification-a-comprehensive-overview-for-developers-product-teams/"><![CDATA[<p>Image classification is a vital technology in today’s data-driven world. But if the term is new to you, you may find yourself wondering, just what is image classification? In short, image classification is the automated categorization of images into predefined classes or labels, enabling computers to interpret visual data quickly. </p>
 
 <p>Although it’s often confused with terms like object detection, it’s not the same thing. While object detection involves identifying and locating specific instances of objects within images, image classification assigns labels to entire images.</p>
 
@@ -337,8 +355,11 @@
     
 
     
-        <img src="../images/03-image-classification-glossary-computer-vision-functions.jpg" alt="Image classifier classifies orange juice by its brand name" style="border-radius: 20px; max-width: 100%" srcset="../images/03-image-classification-glossary-computer-vision-functions.jpg 2x%" />
-        <figcaption>Nyckel’s image classifier classifies orange juice by its brand</figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/03-image-classification-glossary-computer-vision-functions.webp" alt="Image classifier classifies orange juice by its brand name" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/03-image-classification-glossary-computer-vision-functions.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption>Nyckel’s image classifier classifies orange juice by its brand</figcaption>
         
 
 </figure>
@@ -364,8 +385,11 @@
     
 
     
-        <img src="../images/gardyn-strawberry-not-strawberry.jpg" alt="Image classification to monitor plant health" style="border-radius: 20px; max-width: 100%" srcset="../images/gardyn-strawberry-not-strawberry.jpg 2x%" />
-        <figcaption>Gardyn uses image classification to monitor plant health</figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/gardyn-strawberry-not-strawberry.webp" alt="Image classification to monitor plant health" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/gardyn-strawberry-not-strawberry.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption>Gardyn uses image classification to monitor plant health</figcaption>
         
 
 </figure>
@@ -407,8 +431,11 @@
     
 
     
-        <img src="../images/automl-features-graphic-new.jpeg" alt="AutoML for image classification" style="border-radius: 20px; max-width: 100%" srcset="../images/automl-features-graphic-new.jpeg 2x%" />
-        <figcaption>Nine features to evaluate in AutoML tools</figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/automl-features-graphic-new.webp" alt="AutoML for image classification" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/automl-features-graphic-new.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption>Nine features to evaluate in AutoML tools</figcaption>
         
 
 </figure>
@@ -438,8 +465,11 @@
     
 
     
-        <img src="../images/nyckel-flowchart-v4-medium-background.png" alt="Choose between multi-label vs. multiclass classification" style="border-radius: 20px; max-width: 100%" srcset="../images/nyckel-flowchart-v4-medium-background.png 2x%" />
-        <figcaption></figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/nyckel-flowchart-v4-medium-background.webp" alt="Choose between multi-label vs. multiclass classification" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/nyckel-flowchart-v4-medium-background.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
         
 
 </figure>
@@ -473,8 +503,11 @@
     
 
     
-        <img src="../images/pmg-emoji-new2.png" alt="Image classification for pet marketplace" style="border-radius: 20px; max-width: 100%" srcset="../images/pmg-emoji-new2.png 2x%" />
-        <figcaption> PMG uses Nyckel's image classification API to detect if a seller added emojis to their image (fail) or not (pass).</figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/pmg-emoji-new2.webp" alt="Image classification for pet marketplace" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/pmg-emoji-new2.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption> PMG uses Nyckel's image classification API to detect if a seller added emojis to their image (fail) or not (pass).</figcaption>
         
 
 </figure>
@@ -540,8 +573,11 @@
     
 
     
-        <img src="../images/CV-pillar-CVlandscape.png" alt="Computer vision SaaS tools" style="border-radius: 20px; max-width: 100%" srcset="../images/CV-pillar-CVlandscape.png 2x%" />
-        <figcaption>Top 9 Computer Vision SaaS Players</figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/CV-pillar-CVlandscape.webp" alt="Computer vision SaaS tools" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/CV-pillar-CVlandscape.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption>Top 9 Computer Vision SaaS Players</figcaption>
         
 
 </figure>
@@ -597,8 +633,11 @@
     
 
     
-        <img src="../images/image-classification-with-automl.jpeg" alt="Image classification workflow with AutoML platform" style="border-radius: 20px; max-width: 100%" srcset="../images/image-classification-with-automl.jpeg 2x%" />
-        <figcaption></figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/image-classification-with-automl.webp" alt="Image classification workflow with AutoML platform" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/image-classification-with-automl.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
         
 
 </figure>
@@ -609,7 +648,7 @@
 
 <p>Nyckel’s image classification capabilities empower businesses by simplifying the complex world of machine learning and enabling users to harness the power of image recognition. Nyckel’s <a href="https://www.nyckel.com/customers">real use cases from satisfied customers</a> highlight the practicality and effectiveness of our image classification solutions. Whether it’s streamlining inventory management for car dealerships, enhancing customer convenience in food ordering, or automating content moderation for online platforms, Nyckel has demonstrated its value across diverse industries. </p>
 
-<p><a href="https://www.nyckel.com/console">Sign up for a free account</a> to explore Nyckel’s product, check out our <a href="https://www.nyckel.com/docs/image-classification-quickstart">image classification quick start guide</a>, and don’t hesitate to <a href="mailto:feedback@nyckel.com">reach out to us at any time</a> if you need support.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;George Mathew&quot;, &quot;github&quot;=&gt;&quot;saintarian&quot;, &quot;twitter&quot;=&gt;&quot;georgemkan&quot;, &quot;linkedin&quot;=&gt;&quot;georgemathew&quot;}</name></author><summary type="html"><![CDATA[Image classification is a vital technology in today’s data-driven world. But if the term is new to you, you may find yourself wondering, just what is image classification? In short, image classification is the automated categorization of images into predefined classes or labels, enabling computers to interpret visual data quickly. ]]></summary></entry><entry><title type="html">Logo Identifier: How to Detect Your Logo With a Custom Image Classifier</title><link href="http://localhost:4000/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier/" rel="alternate" type="text/html" title="Logo Identifier: How to Detect Your Logo With a Custom Image Classifier" /><published>2023-10-02T00:00:00-07:00</published><updated>2023-10-02T00:00:00-07:00</updated><id>http://localhost:4000/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier</id><content type="html" xml:base="http://localhost:4000/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier/"><![CDATA[<div class="comment-div">
+<p><a href="https://www.nyckel.com/console">Sign up for a free account</a> to explore Nyckel’s product, check out our <a href="https://www.nyckel.com/docs/image-classification-quickstart">image classification quick start guide</a>, and don’t hesitate to <a href="mailto:feedback@nyckel.com">reach out to us at any time</a> if you need support.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;George Mathew&quot;, &quot;github&quot;=&gt;&quot;saintarian&quot;, &quot;twitter&quot;=&gt;&quot;georgemkan&quot;, &quot;linkedin&quot;=&gt;&quot;georgemathew&quot;, &quot;image&quot;=&gt;&quot;/assets/images/important/blog-george.jpeg&quot;}</name></author><summary type="html"><![CDATA[This guide discusses how image classification works and how companies can leverage it to enhance their competitive edge.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/images/image-classification-with-automl.webp" /><media:content medium="image" url="http://localhost:4000/blog/images/image-classification-with-automl.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Logo Identifier: How to Detect Your Logo With a Custom Image Classifier</title><link href="http://localhost:4000/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier/" rel="alternate" type="text/html" title="Logo Identifier: How to Detect Your Logo With a Custom Image Classifier" /><published>2023-10-02T00:00:00-04:00</published><updated>2023-10-02T00:00:00-04:00</updated><id>http://localhost:4000/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier</id><content type="html" xml:base="http://localhost:4000/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier/"><![CDATA[<div class="comment-div">
   <p>Need help identifying a specific logo? Search for our pre-trained logo detectors including <a href="https://www.nyckel.com/public-functions/food-logos-image-classifier">food-related logos</a>, <a href="https://www.nyckel.com/public-functions/transportation-logos-image-classifier">transportation logos</a>, <a href="https://www.nyckel.com/public-functions/leisure-logos-image-classifier">leisure brands</a>, <a href="https://www.nyckel.com/public-functions/institution-logos-image-classifier">institution logos</a>, <a href="https://www.nyckel.com/public-functions/electronic-logos-image-classifier">electronic logos</a>, <a href="https://www.nyckel.com/public-functions/cosmetic-logos-image-classifier">cosmetic logos</a>, and <a href="https://www.nyckel.com/public-functions/clothes-logos-image-classifier">clothes logos</a>.</p>
 
 </div>
@@ -661,8 +700,11 @@
     
 
     
-        <img src="../images/logo-identifer-api-model.png" alt="" style="border-radius: 20px; max-width: 100%" srcset="../images/logo-identifer-api-model.png 2x%" />
-        <figcaption></figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/logo-identifer-api-model.webp" alt="" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/logo-identifer-api-model.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
         
 
 </figure>
@@ -694,7 +736,7 @@
 
 <p>Second, Nyckel’s built-in data engine makes it easy for you to improve your model over time with new samples of real-world data. As your brand grows and evolves, your logo identifier does, too. With Nyckel, your logo identifier can adapt to new challenges and provide consistent brand protection even as your brand changes.</p>
 
-<p>Nyckel provides the flexibility, accuracy, and adaptability that businesses need to create a reliable logo identifier. If you’d like to take the next step to safeguarding your brand, <a href="https://www.nyckel.com/console">sign up for a free Nyckel account</a> to create your custom logo identifier. Run into any issues along the way? <a href="mailto:feedback@nyckel.com">Reach out to us</a> at any time.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Becca Miller&quot;, &quot;linkedin&quot;=&gt;&quot;becca-miller-96a570b8&quot;}</name></author><summary type="html"><![CDATA[Need help identifying a specific logo? Search for our pre-trained logo detectors including food-related logos, transportation logos, leisure brands, institution logos, electronic logos, cosmetic logos, and clothes logos.]]></summary></entry><entry><title type="html">AI Image Detector: Can You Use Image Classification to Spot the Fakes?</title><link href="http://localhost:4000/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes/" rel="alternate" type="text/html" title="AI Image Detector: Can You Use Image Classification to Spot the Fakes?" /><published>2023-09-11T00:00:00-07:00</published><updated>2023-09-11T00:00:00-07:00</updated><id>http://localhost:4000/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes</id><content type="html" xml:base="http://localhost:4000/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes/"><![CDATA[<p><em>For this article, we hired <a href="https://www.linkedin.com/in/becca-miller-96a570b8/">Becca Miller</a>, a freelance software developer and technical writer, to build an AI image detector using <a href="https://www.nyckel.com/image-classification-api">Nyckel image classification</a>. Becca details her experience below and shares how you can build the image classifier yourself.</em></p>
+<p>Nyckel provides the flexibility, accuracy, and adaptability that businesses need to create a reliable logo identifier. If you’d like to take the next step to safeguarding your brand, <a href="https://www.nyckel.com/console">sign up for a free Nyckel account</a> to create your custom logo identifier. Run into any issues along the way? <a href="mailto:feedback@nyckel.com">Reach out to us</a> at any time.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Becca Miller&quot;, &quot;linkedin&quot;=&gt;&quot;becca-miller-96a570b8&quot;}</name></author><summary type="html"><![CDATA[Logo detection enables you to safeguard your brand identity, monitor brand mentions, and track marketing efforts. Learn how to create a logo identifier with Nyckel.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/images/logo-identifier-image-classifier.webp" /><media:content medium="image" url="http://localhost:4000/blog/images/logo-identifier-image-classifier.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AI Image Detector: Can You Use Image Classification to Spot the Fakes?</title><link href="http://localhost:4000/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes/" rel="alternate" type="text/html" title="AI Image Detector: Can You Use Image Classification to Spot the Fakes?" /><published>2023-09-11T00:00:00-04:00</published><updated>2023-09-11T00:00:00-04:00</updated><id>http://localhost:4000/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes</id><content type="html" xml:base="http://localhost:4000/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes/"><![CDATA[<p><em>For this article, we hired <a href="https://www.linkedin.com/in/becca-miller-96a570b8/">Becca Miller</a>, a freelance software developer and technical writer, to build an AI image detector using <a href="https://www.nyckel.com/image-classification-api">Nyckel image classification</a>. Becca details her experience below and shares how you can build the image classifier yourself.</em></p>
 
 <p>Thanks to recent advancements in artificial intelligence, we’ve seen remarkable quality improvements in AI-generated images. Tools like DALL-E, Midjourney, and Stable Diffusion continue to impress us with each new product release. However, these improvements have also led to growing <a href="https://www.nytimes.com/2023/04/08/business/media/ai-generated-images.html">concerns about identifying authentic and trustworthy images</a> (e.g., deepfakes on social media). With surges in AI-generated content, we now encounter synthetic images created by image generators that are difficult to distinguish from real photos.</p>
 
@@ -778,7 +820,7 @@
     
 </figure>
 
-<p>Interested in building an image classifier yourself, or using Nyckel for AI detection? <a href="https://www.nyckel.com/console">Sign up for a free account</a> and <a href="mailto:feedback@nyckel.com">reach out to the Nyckel team</a> at any time with any questions.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Becca Miller&quot;, &quot;linkedin&quot;=&gt;&quot;becca-miller-96a570b8&quot;}</name></author><summary type="html"><![CDATA[For this article, we hired Becca Miller, a freelance software developer and technical writer, to build an AI image detector using Nyckel image classification. Becca details her experience below and shares how you can build the image classifier yourself.]]></summary></entry><entry><title type="html">Hierarchical Image Classification vs. Flat Classification: What Does Your ML Task Need?</title><link href="http://localhost:4000/blog/hierarchical-image-classification-vs-flat-classification-what-does-your-ml-task-need/" rel="alternate" type="text/html" title="Hierarchical Image Classification vs. Flat Classification: What Does Your ML Task Need?" /><published>2023-08-28T00:00:00-07:00</published><updated>2023-08-28T00:00:00-07:00</updated><id>http://localhost:4000/blog/hierarchical-image-classification-vs-flat-classification-what-does-your-ml-task-need</id><content type="html" xml:base="http://localhost:4000/blog/hierarchical-image-classification-vs-flat-classification-what-does-your-ml-task-need/"><![CDATA[<p>The objective of image classification is to categorize an image into one or more labels of your choosing. When building an image classifier, you can either use hierarchical image classification or flat image classification.</p>
+<p>Interested in building an image classifier yourself, or using Nyckel for AI detection? <a href="https://www.nyckel.com/console">Sign up for a free account</a> and <a href="mailto:feedback@nyckel.com">reach out to the Nyckel team</a> at any time with any questions.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Becca Miller&quot;, &quot;linkedin&quot;=&gt;&quot;becca-miller-96a570b8&quot;}</name></author><summary type="html"><![CDATA[We build an AI image detector to see how accurately an image classification function can spot AI-generated images. Learn more and build a classifier of your own.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/images/is-this-image-ai-generated-nyckel.webp" /><media:content medium="image" url="http://localhost:4000/blog/images/is-this-image-ai-generated-nyckel.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Hierarchical Image Classification vs. Flat Classification: What Does Your ML Task Need?</title><link href="http://localhost:4000/blog/hierarchical-image-classification-vs-flat-classification-what-does-your-ml-task-need/" rel="alternate" type="text/html" title="Hierarchical Image Classification vs. Flat Classification: What Does Your ML Task Need?" /><published>2023-08-28T00:00:00-04:00</published><updated>2023-08-28T00:00:00-04:00</updated><id>http://localhost:4000/blog/hierarchical-image-classification-vs-flat-classification-what-does-your-ml-task-need</id><content type="html" xml:base="http://localhost:4000/blog/hierarchical-image-classification-vs-flat-classification-what-does-your-ml-task-need/"><![CDATA[<p>The objective of image classification is to categorize an image into one or more labels of your choosing. When building an image classifier, you can either use hierarchical image classification or flat image classification.</p>
 
 <p>In this article, we explain the differences between hierarchical and flat image classification and make the case for why a flat structure is often the better choice for many use cases.</p>
 
@@ -797,8 +839,11 @@
     
 
     
-        <img src="../images/hierarchical-classificationexample.png" alt="hierarchical image classification example" style="border-radius: 20px; max-width: 100%" srcset="../images/hierarchical-classificationexample.png 2x%" />
-        <figcaption> In a real example, you’d likely have many more brands, and thus, many more models to manage.</figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/hierarchical-classificationexample.webp" alt="hierarchical image classification example" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/hierarchical-classificationexample.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption> In a real example, you’d likely have many more brands, and thus, many more models to manage.</figcaption>
         
 
 </figure>
@@ -816,8 +861,11 @@
     
 
     
-        <img src="../images/flat-classification-example3.png" alt="Flat image classification example" style="border-radius: 20px; max-width: 100%" srcset="../images/flat-classification-example3.png 2x%" />
-        <figcaption> In a real example, you’d likely have many more output labels (as many labels are there are car types to classify).</figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/flat-classification-example3.webp" alt="Flat image classification example" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/flat-classification-example3.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption> In a real example, you’d likely have many more output labels (as many labels are there are car types to classify).</figcaption>
         
 
 </figure>
@@ -836,7 +884,7 @@
 
 <p>However, if you are labeling images with a smaller set of labels, the benefit of only managing one function likely outweighs any benefits you could get from using a hierarchical structure. </p>
 
-<p>Do you have an image classification use case you’re trying to solve and not sure how to approach it? <a href="mailto:feedback@nyckel.com">Reach out to us</a>, and we’ll help you brainstorm how best to structure your classifier. Otherwise, <a href="https://www.nyckel.com/console">sign up for a free account</a> to give it a spin for yourself and use our <a href="https://www.nyckel.com/docs/image-classification-quickstart">image classification quick start</a> as a guide.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Oscar Beijbom&quot;, &quot;github&quot;=&gt;&quot;beijbom&quot;, &quot;linkedin&quot;=&gt;&quot;oscarbeijbom&quot;, &quot;twitter&quot;=&gt;&quot;beijbom&quot;}</name></author><summary type="html"><![CDATA[The objective of image classification is to categorize an image into one or more labels of your choosing. When building an image classifier, you can either use hierarchical image classification or flat image classification.]]></summary></entry><entry><title type="html">9 Must-Have Features for Your AutoML Platform: A Comprehensive Guide</title><link href="http://localhost:4000/blog/automl-platform-9-features-your-solution-should-include/" rel="alternate" type="text/html" title="9 Must-Have Features for Your AutoML Platform: A Comprehensive Guide" /><published>2023-08-22T00:00:00-07:00</published><updated>2023-08-22T00:00:00-07:00</updated><id>http://localhost:4000/blog/automl-platform-9-features-your-solution-should-include</id><content type="html" xml:base="http://localhost:4000/blog/automl-platform-9-features-your-solution-should-include/"><![CDATA[<div class="comment-div">
+<p>Do you have an image classification use case you’re trying to solve and not sure how to approach it? <a href="mailto:feedback@nyckel.com">Reach out to us</a>, and we’ll help you brainstorm how best to structure your classifier. Otherwise, <a href="https://www.nyckel.com/console">sign up for a free account</a> to give it a spin for yourself and use our <a href="https://www.nyckel.com/docs/image-classification-quickstart">image classification quick start</a> as a guide.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Oscar Beijbom&quot;, &quot;github&quot;=&gt;&quot;beijbom&quot;, &quot;linkedin&quot;=&gt;&quot;oscarbeijbom&quot;, &quot;twitter&quot;=&gt;&quot;beijbom&quot;, &quot;image&quot;=&gt;&quot;/assets/images/important/blog-oscar.jpeg&quot;}</name></author><summary type="html"><![CDATA[We explain the differences between hierarchical image classification and flat and make the case for why a flat structure is often the better choice.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/images/hierarchical-image-classification-header-image.webp" /><media:content medium="image" url="http://localhost:4000/blog/images/hierarchical-image-classification-header-image.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">9 Must-Have Features for Your AutoML Platform: A Comprehensive Guide</title><link href="http://localhost:4000/blog/automl-platform-9-features-your-solution-should-include/" rel="alternate" type="text/html" title="9 Must-Have Features for Your AutoML Platform: A Comprehensive Guide" /><published>2023-08-22T00:00:00-04:00</published><updated>2023-08-22T00:00:00-04:00</updated><id>http://localhost:4000/blog/automl-platform-9-features-your-solution-should-include</id><content type="html" xml:base="http://localhost:4000/blog/automl-platform-9-features-your-solution-should-include/"><![CDATA[<div class="comment-div">
   <p>This post is the final post in a series of articles about AutoML and what it offers organizations looking to implement ML. The first article of this series was an <a href="https://www.nyckel.com/blog/what-is-automl-a-comprehensive-guide-what-it-means-for-product-teams/">intro to AutoML</a> and the second article <a href="https://www.nyckel.com/blog/end-to-end-automl-your-automl-platform-should-span-the-entire-ml-development-pipeline/">examines the concept of End-to-End AutoML</a>.</p>
 
 </div>
@@ -862,8 +910,11 @@
     
 
     
-        <img src="../images/data-engine-workflow.png" alt="AutoML platform with data engine" style="border-radius: 20px; max-width: 100%" srcset="../images/data-engine-workflow.png 2x%" />
-        <figcaption>Ensure your AutoML platform enables a data engine</figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/data-engine-workflow.webp" alt="AutoML platform with data engine" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/data-engine-workflow.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption>Ensure your AutoML platform enables a data engine</figcaption>
         
 
 </figure>
@@ -966,7 +1017,7 @@
 
 <hr />
 
-<p><em>We built Nyckel as an end-to-end AutoML platform, so you can train and deploy machine learning functions without writing code or dealing with infrastructure. Explore <a href="https://www.nyckel.com/docs/quickstart">Nyckel’s quick starts</a> and <a href="https://www.nyckel.com/console">sign up for a free account</a> to get started. Reach out to us if you have any questions about how Nyckel could work for your use case.</em></p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;George Mathew&quot;, &quot;github&quot;=&gt;&quot;saintarian&quot;, &quot;twitter&quot;=&gt;&quot;georgemkan&quot;, &quot;linkedin&quot;=&gt;&quot;georgemathew&quot;}</name></author><summary type="html"><![CDATA[This post is the final post in a series of articles about AutoML and what it offers organizations looking to implement ML. The first article of this series was an intro to AutoML and the second article examines the concept of End-to-End AutoML.]]></summary></entry><entry><title type="html">5 Image Classification Examples (+ Datasets To Build Functions With Nyckel)</title><link href="http://localhost:4000/blog/5-image-classification-examples-datasets-to-build-functions-with-nyckel/" rel="alternate" type="text/html" title="5 Image Classification Examples (+ Datasets To Build Functions With Nyckel)" /><published>2023-08-07T00:00:00-07:00</published><updated>2023-08-07T00:00:00-07:00</updated><id>http://localhost:4000/blog/5-image-classification-examples-datasets-to-build-functions-with-nyckel</id><content type="html" xml:base="http://localhost:4000/blog/5-image-classification-examples-datasets-to-build-functions-with-nyckel/"><![CDATA[<p>Image classification is a type of computer vision that categorizes images into one of several buckets. For example, you could classify images of cars for sale by the view of the car in each image: “front,” “back,” “side,” “dash,” and so on. Organizations can also use image classification for more obscure cases ranging from <a href="https://www.nyckel.com/blog/image-classification-for-augmented-reality-games-spyscape-case-study/">an augmented reality Batman game</a> to <a href="https://www.nyckel.com/blog/time-series-signal-classification-using-computer-vision/">identifying the time-series signals of North Atlantic right whales</a>.</p>
+<p><em>We built Nyckel as an end-to-end AutoML platform, so you can train and deploy machine learning functions without writing code or dealing with infrastructure. Explore <a href="https://www.nyckel.com/docs/quickstart">Nyckel’s quick starts</a> and <a href="https://www.nyckel.com/console">sign up for a free account</a> to get started. Reach out to us if you have any questions about how Nyckel could work for your use case.</em></p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;George Mathew&quot;, &quot;github&quot;=&gt;&quot;saintarian&quot;, &quot;twitter&quot;=&gt;&quot;georgemkan&quot;, &quot;linkedin&quot;=&gt;&quot;georgemathew&quot;, &quot;image&quot;=&gt;&quot;/assets/images/important/blog-george.jpeg&quot;}</name></author><summary type="html"><![CDATA[The AutoML platform you choose should do more than train a model. Learn what 9 things you should look for when conducting an AutoML tools comparison.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/images/automl-features-graphic-new.webp" /><media:content medium="image" url="http://localhost:4000/blog/images/automl-features-graphic-new.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">5 Image Classification Examples (+ Datasets To Build Functions With Nyckel)</title><link href="http://localhost:4000/blog/5-image-classification-examples-datasets-to-build-functions-with-nyckel/" rel="alternate" type="text/html" title="5 Image Classification Examples (+ Datasets To Build Functions With Nyckel)" /><published>2023-08-07T00:00:00-04:00</published><updated>2023-08-07T00:00:00-04:00</updated><id>http://localhost:4000/blog/5-image-classification-examples-datasets-to-build-functions-with-nyckel</id><content type="html" xml:base="http://localhost:4000/blog/5-image-classification-examples-datasets-to-build-functions-with-nyckel/"><![CDATA[<p>Image classification is a type of computer vision that categorizes images into one of several buckets. For example, you could classify images of cars for sale by the view of the car in each image: “front,” “back,” “side,” “dash,” and so on. Organizations can also use image classification for more obscure cases ranging from <a href="https://www.nyckel.com/blog/image-classification-for-augmented-reality-games-spyscape-case-study/">an augmented reality Batman game</a> to <a href="https://www.nyckel.com/blog/time-series-signal-classification-using-computer-vision/">identifying the time-series signals of North Atlantic right whales</a>.</p>
 
 <p>In this post, we look at 5 practical use cases of image classification. In each of these examples, we’re also including a dataset you could use to actually <a href="https://www.nyckel.com/docs/image-classification-quickstart">create the image classifier with Nyckel</a>.</p>
 
@@ -989,8 +1040,11 @@
     
 
     
-        <img src="../images/detect-AI-generation-image-classification-example.png" alt="Detect if image is AI-generated with image classification" style="border-radius: 20px; max-width: 100%" srcset="../images/detect-AI-generation-image-classification-example.png 2x%" />
-        <figcaption></figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/detect-AI-generation-image-classification-example.webp" alt="Detect if image is AI-generated with image classification" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/detect-AI-generation-image-classification-example.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
         
 
 </figure>
@@ -1014,8 +1068,11 @@
     
 
     
-        <img src="../images/multi-label-classification-example.png" alt="Streamline waste management operations with image classification" style="border-radius: 20px; max-width: 100%" srcset="../images/multi-label-classification-example.png 2x%" />
-        <figcaption></figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/multi-label-classification-example.webp" alt="Streamline waste management operations with image classification" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/multi-label-classification-example.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
         
 
 </figure>
@@ -1039,8 +1096,11 @@
     
 
     
-        <img src="../images/detect-plant-disease-image-classification-example.jpg" alt="Detect plant disease with image classification" style="border-radius: 20px; max-width: 100%" srcset="../images/detect-plant-disease-image-classification-example.jpg 2x%" />
-        <figcaption></figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/detect-plant-disease-image-classification-example.webp" alt="Detect plant disease with image classification" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/detect-plant-disease-image-classification-example.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
         
 
 </figure>
@@ -1062,8 +1122,11 @@
     
 
     
-        <img src="../images/identify-marine-animals-image-classification-example.png" alt="Identify marine animal with image classification" style="border-radius: 20px; max-width: 100%" srcset="../images/identify-marine-animals-image-classification-example.png 2x%" />
-        <figcaption></figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/identify-marine-animals-image-classification-example.webp" alt="Identify marine animal with image classification" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/identify-marine-animals-image-classification-example.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
         
 
 </figure>
@@ -1085,8 +1148,11 @@
     
 
     
-        <img src="../images/locate-littered-roads-image-classification-example.png" alt="Identify littered roadways with image classification" style="border-radius: 20px; max-width: 100%" srcset="../images/locate-littered-roads-image-classification-example.png 2x%" />
-        <figcaption></figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/locate-littered-roads-image-classification-example.webp" alt="Identify littered roadways with image classification" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/locate-littered-roads-image-classification-example.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
         
 
 </figure>
@@ -1097,350 +1163,182 @@
 
 <p>Curious if Nyckel could work for your use case? <a href="https://www.nyckel.com/console">Sign up for a free account</a> to give it a try, and <a href="https://www.nyckel.com/docs/image-classification-quickstart">check out our image classification quick start</a> if you need help getting started.</p>
 
-<p>Not sure image classification is the right function type for your problem? Check out our other computer vision products: <a href="https://www.nyckel.com/docs/detection-quickstart">object detection</a>, <a href="https://www.nyckel.com/docs/image-tags-quickstart">image tagging</a>, <a href="https://www.nyckel.com/docs/image-search-quickstart">image search</a>, and <a href="https://www.nyckel.com/docs/ocr-quickstart">optical character recognition</a>.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Nyckel&quot;, &quot;image&quot;=&gt;&quot;https://www.nyckel.com/img/nyckel-icon.png&quot;, &quot;twitter&quot;=&gt;&quot;nyckelai&quot;, &quot;github&quot;=&gt;&quot;nyckelai&quot;, &quot;linkedin&quot;=&gt;&quot;nyckelai&quot;, &quot;is_linkedin_company&quot;=&gt;true}</name></author><summary type="html"><![CDATA[Image classification is a type of computer vision that categorizes images into one of several buckets. For example, you could classify images of cars for sale by the view of the car in each image: “front,” “back,” “side,” “dash,” and so on. Organizations can also use image classification for more obscure cases ranging from an augmented reality Batman game to identifying the time-series signals of North Atlantic right whales.]]></summary></entry><entry><title type="html">How to Improve your G2 Rank: 5 Top Strategies for 2023</title><link href="http://localhost:4000/blog/improve-g2-rank/" rel="alternate" type="text/html" title="How to Improve your G2 Rank: 5 Top Strategies for 2023" /><published>2023-08-05T01:05:11-07:00</published><updated>2023-08-05T01:05:11-07:00</updated><id>http://localhost:4000/blog/improve-g2-rank</id><content type="html" xml:base="http://localhost:4000/blog/improve-g2-rank/"><![CDATA[<p>How many times have you visited a B2B site and seen G2 badges that tout ‘#1 CRM’, ‘Top Vendor in SEO Tools’, ‘See our 5-star reviews’, and so on?</p>
+<p>Not sure image classification is the right function type for your problem? Check out our other computer vision products: <a href="https://www.nyckel.com/docs/detection-quickstart">object detection</a>, <a href="https://www.nyckel.com/docs/image-tags-quickstart">image tagging</a>, <a href="https://www.nyckel.com/docs/image-search-quickstart">image search</a>, and <a href="https://www.nyckel.com/docs/ocr-quickstart">optical character recognition</a>.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Nyckel&quot;, &quot;image&quot;=&gt;&quot;/favicon.png&quot;, &quot;twitter&quot;=&gt;&quot;nyckelai&quot;, &quot;github&quot;=&gt;&quot;nyckelai&quot;, &quot;linkedin&quot;=&gt;&quot;nyckelai&quot;, &quot;is_linkedin_company&quot;=&gt;true}</name></author><summary type="html"><![CDATA[Explore 5 practical use cases of image classification ranging from detecting AI-generated images to identifying diseases in bean plants. Learn to build each with Nyckel.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/images/image-classification-examples-datasets-to-build-functions.webp" /><media:content medium="image" url="http://localhost:4000/blog/images/image-classification-examples-datasets-to-build-functions.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Discriminative vs. Generative AI: Which Should You Build Into Your Product?</title><link href="http://localhost:4000/blog/building-ai-into-your-product-understand-the-difference-between-discriminative-and-generative-ai/" rel="alternate" type="text/html" title="Discriminative vs. Generative AI: Which Should You Build Into Your Product?" /><published>2023-07-28T00:00:00-04:00</published><updated>2023-07-28T00:00:00-04:00</updated><id>http://localhost:4000/blog/building-ai-into-your-product-understand-the-difference-between-discriminative-and-generative-ai</id><content type="html" xml:base="http://localhost:4000/blog/building-ai-into-your-product-understand-the-difference-between-discriminative-and-generative-ai/"><![CDATA[<p>At Nyckel, our goal is to not only make it simpler to solve problems with ML but also help developers and product teams learn what they actually need to know about ML to be successful in their roles. In this article, we’ll review one of the important ML distinctions you should know before building AI into your product: the differences between generative and discriminative AI.</p>
 
-<p>Rhetorical question - it’s a lot. SaaS companies sure do love their G2 social proof. If we had a nickel for every site that directed us to G2, we could start our own SaaS company.</p>
+<table>
+  <thead>
+    <tr>
+      <th><strong>Generative AI</strong></th>
+      <th><strong>Discriminative AI</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Typically trained on very large language models (LLMs) to perform almost any task</td>
+      <td>Can be trained on narrow models to perform very specific tasks (e.g., text or image classification), making it quick and easy to spin up functions</td>
+    </tr>
+    <tr>
+      <td>Objective of the model is to create entirely new content using the data the model has been trained on</td>
+      <td>Objective of the model is to make a decision based on data the model has been trained on</td>
+    </tr>
+    <tr>
+      <td>Input and output are very flexible, often requiring prompt engineering to determine the best input to get the output needed</td>
+      <td>Input is typically fixed schema (e.g., input: text string or image, output: predefined categories)</td>
+    </tr>
+    <tr>
+      <td>Sometimes makes things up (hallucinates), which requires a human to confirm the output’s accuracy</td>
+      <td>Having a human reviewer in the loop to moderate low confidence decisions and retrain the model with new annotated data can help improve model performance</td>
+    </tr>
+    <tr>
+      <td>Solutions typically do not have the scaffolding required to discover problem cases and iterate on annotated data</td>
+      <td>Best solutions enable a data engine — a process for detecting and managing problematic data</td>
+    </tr>
+    <tr>
+      <td>Popular tools include ChatGPT, DALL-E, Jasper, Ask Codi, Sythesia, and Writesonic</td>
+      <td>Popular tools include Nyckel, Roboflow, Vertex AI, Hugging Face, and Akkio</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>But there is a reason G2 is the review site everyone cares about. It’s the Coke to <a href="https://www.capterra.com/" target="_blank">Capterra’s</a> Pepsi, with the other review sites fighting for scraps.</p>
+<h2 id="what-is-generative-ai">What is generative AI?</h2>
 
-<div class="post-img">
-<img class="img" alt="Traffic volume of review sites" width="700" height="525" src="/assets/images/blog/g2-rank/review-site-ranks.webp" />
-</div>
+<p>We’ll start with the type of AI you’re likely most familiar with because it’s <a href="https://apnews.com/hub/generative-ai">driven much of the hype</a> in recent months: generative AI. The objective of generative AI is to create new content using what the ML model (a large language model) has learned from training data. The types of content you can create with generative AI are vast and include text, images, music, videos, 3D models, synthetic data, and more. One of the most commonly used forms of generative AI are customer support chatbots.</p>
 
-<p>It’s no surprise, then, that G2 Rank Optimization (G2RO - you heard it first here) is of growing interest to SaaS companies. Moving up the G2 rankings is the new Google SEO.</p>
+<p>Generative AI solutions, like GPT-4, typically have flexible interfaces, meaning you can guide the models to respond in a way that aligns with what you’re trying to accomplish. The applications for generative AI almost feel limitless; if there’s a type of content you want to create and deliver to your customers via your product, you can probably do it with support from LLMs like GPT-4.</p>
 
-<div class="post-img">
-<img class="img" alt="G2 category list" width="700" height="536" src="/assets/images/blog/g2-rank/g2-category.webp" loading="lazy" />
-</div>
-
-<p>And while there are no easy hacks (just like with Google), improving your rank on G2 is not impossible. A small company in a crowded industry may never vault from spot #50 to #1, but moving up 5-10 spots (or more) is doable with a concerted effort.</p>
-
-<p><b>This article explains the importance of ranking high on G2, how the G2 ranking algorithm works, and how to improve your own G2 category rank.</b></p>
-
-<h2>Table of Contents:</h2>
-
-<p><a href="#1">1. The importance of a high G2 rank</a><br /> 
-<a href="#2">2. How we tried to reverse engineer the G2 algorithm</a> <br /> 
-<a href="#3">3. How does the G2 ranking algorithm work?</a> <br /> 
-<a href="#4">4. How to use G2 Grids to understand your ranking</a> <br /> 
-<a href="#5">5. 5 steps to improve your G2 ranking</a></p>
-
-<h2 id="1">The importance of a high G2 rank</h2>
-
-<p>To grow your business cost-efficiently, you need a strong inbound lead channel. Building this involves becoming discoverable to high-intent buyers actively doing product research.</p>
-
-<p>Where are these buyers searching? Well, Google of course. But G2 is increasingly becoming a go-to source for SaaS research as well. Being a top spot on these lists means you’re reaching people searching for your type of product.</p>
-
-<p>Most buyers, though, aren’t going to G2.com and doing a category search. Rather, they arrive on the category page after doing a relevant Google search. Indeed - <a href="https://www.similarweb.com/website/g2.com/#overview" target="_blank">over 70% of G2’s traffic</a> is from Google searches, not direct visits.</p>
-
-<div class="post-img">
-<img class="img" alt="G2 traffic comes from Google" width="673" height="505" src="/assets/images/blog/g2-rank/g2-traffic.webp" loading="lazy" />
-</div>
-
-<p>This is because G2 has excellent SEO, so most Google searches for ‘top (insert category) vendors’ will return the G2 category link within the first five results. A good G2 rank has double value, then: you’re more discoverable on both Google and G2 search results.</p>
-
-<div class="post-img">
-<img class="img" alt="G2 comes up in Google searches" width="700" height="296" src="/assets/images/blog/g2-rank/g2-google.webp" loading="lazy" />
-</div>
-
-<h2 id="2">How we tried to reverse engineer the G2 algorithm</h2>
-
-<p>When building this guide, we assumed G2’s ranking algorithm was simple; a basic calculation using ratings and reviews, with a weighted average favoring recent reviews.</p>
-
-<p>Turns out, it wasn’t that simple. In doing analysis across 20 G2 categories, we found consistent trends that made reverse engineering their exact algorithm impossible. Below looks at this analysis (for the sake of simplicity, we’ll highlight a representative category - SEO Tools).</p>
-
-<p>We did discover a big correlation between # of reviews and rank - but it was far from a perfect fit.</p>
-
-<div class="post-img">
-<img class="img" alt="Improving Your G2 Rank With Reviews" width="700" height="525" src="/assets/images/blog/g2-rank/g2-reviews.webp" loading="lazy" />
-</div>
-
-<p>Average star rating didn’t seem to correlate much, with higher spots often having lower scores than the average.</p>
-
-<div class="post-img">
-<img class="img" alt="G2 Ranking by Ratings" width="700" height="525" src="/assets/images/blog/g2-rank/g2-ratings.webp" loading="lazy" />
-</div>
-
-<p>Employee count provided an additional strong signal, but again was far from linear.</p>
-
-<div class="post-img">
-<img class="img" alt="G2 Ranking by Employees" width="700" height="525" src="/assets/images/blog/g2-rank/g2-employees.webp" loading="lazy" />
-</div>
-
-<p>Clear trends emerged when we bucketed ranks by groups of five. There’s of course the obvious one that more reviews will, on average, put you above other listings.</p>
-
-<div class="post-img">
-<img class="img" alt="G2 Rank Buckets" width="700" height="525" src="/assets/images/blog/g2-rank/g2-rank-buckets.webp" loading="lazy" />
-</div>
-
-<p><b>But when the # of reviews was similar, the tie breaker was clearly employee count.</b></p>
-
-<p>As you can see, even though spots 11-15 had only 10% fewer reviews than spots 5-10, the average # of employees was substantially lower - around 50%. This highlights the weight that G2 must give to larger vendors.</p>
-
-<p>You see that same trend with 16-20 vs 21-25. While the average # of reviews is effectively the same, the average # of employees is 75% lower. It’s clear that when review counts and ratings are similar, G2 favors the more established company.</p>
-
-<p>While these findings were consistent across categories, we also kept encountering two outliers:</p>
+<p>For all of the upside of generative AI, there are also challenges you’ll need to overcome: </p>
 
 <ul>
-  <li><b>Large companies with relatively few reviews would often rank higher than smaller companies with a lot more reviews.</b> In this example from the Translation Management System (TMS) category, GlobalLink is #7 with 53 reviews, while Transifix has 345 and is #9. The difference? GlobalLink’s parent company, Transperfect, has 9,000 employees, while Transifix has 80.</li>
+  <li>Generative AI models are tricky to control. You never quite know what you’re going to get, so you may need a lot of trial and error (i.e., prompt engineering) to get closer to your desired output.</li>
+  <li>These models are prone to making stuff up (i.e., hallucinating). You’ll need a human reviewer involved to confirm the accuracy of the model’s output.</li>
+  <li>Most generative AI solutions lack the basic scaffolding required to help you solve discriminative (decision-based) tasks. More specifically, solutions like those from OpenAI don’t enable a <a href="https://www.nyckel.com/blog/9-ways-to-use-a-data-engine-to-improve-your-ml-model/">data engine</a> to help you discover corner cases and iterate on the labeling of your existing samples to ensure the model receives the right type of inputs.</li>
 </ul>
 
-<div class="post-img">
-<img class="img" alt="G2 favors bigger companies" width="700" height="525" src="/assets/images/blog/g2-rank/g2-products.webp" loading="lazy" />
-</div>
+<h3 id="generative-ai-skills">Generative AI skills</h3>
+
+<p>The most important generative AI skills to know as a product manager or developer are <strong>prompt engineering</strong> and <strong>prompt chaining.</strong></p>
+
+<p><strong>Prompt engineering</strong> is figuring out which words and phrases to use as an input to get the model to respond in the way you want it to (the output). Courses in prompt engineering are popping up left and right, and you can also learn a lot by searching for example prompts. But, in our opinion, the best way to learn is to jump into a tool like GPT-4 to give it a spin for yourself — experimenting with how different prompts get different results.</p>
+
+<p>Here’s how a product manager of a real estate mobile app could explore how they could use GPT-4 to help its customers (realtors) write property listings:</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/prompt-engineering-real-estate-listing.webp" alt="GPT-4 prompt engineering for real estate application" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/prompt-engineering-real-estate-listing.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
+        
+
+</figure>
+
+<p><strong>Prompt chaining</strong> is another important skill for generative AI. With prompt chaining, you ask the model a sequence of questions or provide a series of prompts to get additional information or closer to the answer you want from the model. For example, if the model’s initial output isn’t in the format you need it, you’ll need to “chain” prompts together to get the output in the right format. (In the example below, see how the user requested that the model only respond with the home type.)</p>
+
+<p>For example, the same real estate mobile app mentioned above could use generative AI to fill in all of the property fields for a listing by providing the high-level property details as the original prompt. By chaining together multiple prompts, the developer could have the LLM produce all the outputs it needs for each listing. See <a href="https://chat.openai.com/share/ade82814-d867-4902-87f8-fe6a2cd37f7f">an example chat transcript from ChatGPT</a> for how this might look.</p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/prompt-chaining-real-estate-listing2.webp" alt="Prompt chaining with GPT-4" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/prompt-chaining-real-estate-listing2.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption>Prompt chaining with GPT-4</figcaption>
+        
+
+</figure>
+
+<h2 id="what-is-discriminative-ai">What is discriminative AI?</h2>
+
+<p>Now let’s shift to discriminative AI, which is the type of solution that Nyckel provides. The objective of discriminative AI is to make a decision or distinguish between different types of data. These models learn the boundaries between different classes or categories in the training data and then make predictions (or decisions) based on them. One of the most commonly used forms of discriminative AI are spam filters: Is this “spam” or “not spam?”</p>
+
+<p>Typically, generative AI and discriminative AI are used for different situations altogether. However, you can use generative AI models/LLMs for discriminative tasks (including a spam filter). We shared an example of <a href="https://www.nyckel.com/blog/why-narrow-ai-is-better-than-gpt-4-for-machine-learning-driven-decisions/">how you could use GPT-4 for a discriminative task in this post</a>, showing how you could categorize an input as toxic or not toxic. </p>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/Nyckel-AI-approach-relating-to-GPT-4-2.webp" alt="The confusion matrix for the whale sound classification function" class="" style="border-radius: 20px; max-width: 80%" srcset="../images/Nyckel-AI-approach-relating-to-GPT-4-2.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
+        
+
+</figure>
+
+<p>However, when you need to complete a discriminative task (i.e., you need to make a decision), it’s often a lot faster to train a discriminative function. Plus, they scale much better because it’s easier to add more outputs and more data, while also tracking how well the function performs.</p>
+
+<p>Compared to generative AI, the downside of discriminative AI solutions is that they’re narrower in focus. In other words, they’re trained to complete specific tasks, like detect objects, classify images, search text, and more. As a result, you can’t perform as many tasks as you can with generative AI. However, this is only relevant if your use case is something you can’t manage with a discriminative function. The narrow scope is actually an upside if discriminative AI is what you need (again, because it’s faster and easier to scale).</p>
+
+<h3 id="discriminative-ai-skills">Discriminative AI skills</h3>
+
+<p>When you’re using a discriminative AI solution, the most important activities your team needs to do, include: </p>
 
 <ul>
-  <li><b>Similar categories would have the same companies but in different orders.</b> If the G2 algorithm was based purely on company info and the # of total reviews, this order would never change.</li>
+  <li><strong>Choosing the right data as inputs.</strong> The data you use to train your model needs to be real-world data from your system and have enough annotated examples from each label set to train the model with. </li>
+  <li><strong>Choose the right set of outputs.</strong> The output labels you choose will depend on what you’re trying to achieve with your discriminative function. For example, if you want to label your product images by the category they belong to on your website (e.g., <a href="https://www.rei.com">REI might label its products</a> by “Camp &amp; Hike,” “Climb,” “Cycle,” etc.), you will want to include all the relevant labels and decide <a href="https://www.nyckel.com/blog/multi-class-classification-vs-multi-label-classification-key-differences-how-to-choose/">whether a product image should only belong to one label or if it could have multiple labels assigned</a>.</li>
+  <li><strong>Chain together simpler functions to a more complex whole.</strong> For example, let’s go back to the real estate management app. Imagine the site auto-tags photos by which room they are taken in. This can be done by training a “WhichRoomIsThis” multi-class classification function. However, before tagging photos with which room they are, you may want to add a “pre-processing” function that simply says “is this photo relevant for the posting?” That function could filter out blurry photos, personal photos, and other non-relevant images. So, you end up chaining together the “IsThisPhotoRelevant” function with the “WhichRoomIsThis” function.</li>
+  <li><strong>Moderate decisions with low confidence and feed new annotated data into the model to improve performance.</strong> The most significant benefit to using a discriminative AI solution for discriminative tasks is the ability to monitor model performance and iterate on your data. Using a <a href="https://www.nyckel.com/blog/why-narrow-ai-is-better-than-gpt-4-for-machine-learning-driven-decisions/">discriminative solution that enables a data engine</a> helps you pinpoint where your model is underperforming and annotate new data to ensure the model receives the right kinds of inputs to increase performance. </li>
 </ul>
 
-<div class="post-img">
-<img class="img" alt="G2 Category Rank Differences" width="700" height="525" src="/assets/images/blog/g2-rank/g2-differences.webp" loading="lazy" />
-</div>
+<p>Here’s an example of how the same real estate mobile app could design a discriminative function to categorize listing photos into their respective categories:</p>
 
-<p>As an example, below looks at two similar categories: Translation Management Systems and Website Translation Software. As you can see, the companies are in slightly different orders.</p>
+<p><strong>Input data</strong>: Images from a listing of a house for sale</p>
 
-<p>So we realized a few things:</p>
+<p><strong>Output labels:</strong> Front exterior, Back exterior, Yard, Entryway, Kitchen, Dining Room, Living Room, Family Room, Sunroom, Office, Bedroom, ½ Bath, ¾ Bath, Full Bath, Closet, Mudroom, Stairway, Basement, Workout Room, Storage Space, Mechanical Room, Neighborhood Amenity, Neighborhood Park</p>
 
-<ul>
-  <li>Regardless of # of reviews, G2 prioritizes large market leaders.</li>
-  <li>Driving more reviews – especially in a short time – is a great way to rise in rankings, but your ceiling may be capped if you’re a new or smaller player.</li>
-  <li>Average rating doesn’t appear to have a big impact on rank, although we did notice that if your average rating is substantially lower than the category average, you do get penalized.</li>
-  <li>Your category ranking isn’t based on total reviews.  It’s based on reviews for that specific category.</li>
-</ul>
-
-<p>This final point is complicated, so bear with us. When you sign up for G2, by default you are in one category. But you can request to be in more. Many large brands are indeed in multiple product categories. <b>These categories correspond with the ‘Purpose’ dropdown reviewers must select when reviewing you.</b></p>
-
-<div class="post-img">
-<img class="img" alt="G2 Purpose Dropdown in Reviews" width="700" height="525" src="/assets/images/blog/g2-rank/g2-purposes.webp" loading="lazy" />
-</div>
-
-<p><i>Note: this list is alphabetical and doesn’t lead with your main category (the names may also not always match).</i></p>
-
-<p><b>We realized that the algorithm must factor in which purpose the user chose.</b> If a user reviews you for Purpose #1 (associated with a specific category), then that review won’t have a huge impact on your ranking for Purpose #2 (a different category).</p>
-
-<p>This makes sense. If you built a SaaS product that, for whatever reason, is both an SEO tool and an on-demand limousine app, why should positive reviews for the SEO Tool use case impact your ranking in the Taxi &amp; Limo Service category?</p>
-
-<p>Of course, in reality, the categories are more closely related. In the above Clearscope example, SEO involves content analytics, so the two purposes heavily overlap.</p>
-
-<p>We should note that users can select multiple purposes in the same review. But we think it’s most likely that reviewers just pick one and move on (let’s not forget that nearly all reviews are incentivized, so people will be filling these out quickly).</p>
-
-<div class="post-img">
-<img class="img" alt="Choosing purposes while G2 reviewing" width="700" height="316" src="/assets/images/blog/g2-rank/g2-reviewing.webp" loading="lazy" />
-</div>
-
-<h2 id="3">How DOES the G2 algorithm work?</h2>
-
-<p>In doing our research, we of course first read through <a href="https://research.g2.com/methodology/scoring" target="_blank">G2’s Research Scoring Methodology</a>. But we were hoping the page was more aspirational than realistic. Turns out we should have trusted it.</p>
-
-<p>According to G2, these factors influence a company’s <b>G2 Score</b>, which is how lists are sorted by default. This score is broken down into two buckets: Satisfaction and Market Presence.</p>
-
-<p><b><u>Satisfaction</u></b></p>
-
-<ul>
-  <li>The star rating. Takes the “Likely to Recommend” question (1-10) and divides by two</li>
-  <li>The statistical significance of ratings (aka, one 5-star review isn’t very telling)</li>
-  <li>The quality of reviews (are customers writing long reviews or just saying, “It’s good” to get the $25 gift card)
--Age of reviews (Grid Decay - see below)
--Ratings of individual features</li>
-</ul>
-
-<p><b><u>Market Presence</u></b></p>
-
-<ul>
-  <li>Number of employees (LinkedIn, Crunchbase)</li>
-  <li>Number of reviews &amp; age of reviews (overlaps with Satisfaction)</li>
-  <li>SEO traffic and ranks (Moz, SEMrush)</li>
-  <li>Social followers</li>
-  <li>Employee growth velocity</li>
-  <li>Age of vendor</li>
-  <li>Glassdoor ratings</li>
-</ul>
-
-<p>G2 takes this section seriously. To rank in the Top 5, you need to be an established vendor.</p>
-
-<p><b><u>G2 Grid Decay</u></b></p>
-
-<p>G2 is transparent about the value of a review over time, calling it Grid Decay. This involves an exponential decay compounded daily, equaling roughly a 3% loss in value every month.</p>
-
-<div class="post-img">
-<img class="img" alt="G2 Grid Decay Chart" width="700" height="525" src="/assets/images/blog/g2-rank/g2-grid-decay.webp" loading="lazy" />
-</div>
-
-<p>Meaning, one review from the current month has roughly the same value as:</p>
-
-<ul>
-  <li>1.2 reviews from six months ago</li>
-  <li>1.45 reviews from a year ago</li>
-  <li>2.1 reviews from two years ago</li>
-  <li>3 reviews from three years ago</li>
-</ul>
-
-<p>G2’s Grid Decay formula tells us two things:</p>
+<p>If the real estate app wanted to separate interior versus exterior photos from each other, they could chain together different functions to break down the listing photos into smaller subsets: </p>
 
 <ol>
-  <li>
-    <p>Companies happy with their position don’t have to constantly run incentivized review campaigns. After six months, a review has lost just ~17% of its value. That’s not a lot. Unless you’re trying to outpace someone else, doing a concerted review push twice a year is enough to maintain your rank.</p>
-  </li>
-  <li>
-    <p>If there’s a company above you with a lot of reviews - but no recent ones - you have a real opportunity to beat them with a big review campaign. Of course, # of reviews is just one factor in the algorithm, but it’s the big one.</p>
-  </li>
+  <li>Is this photo of the exterior or interior of a house?</li>
+  <li>If exterior → is it: Front exterior, Back exterior, Yard, Neighborhood Amenity, Neighborhood Park?</li>
+  <li>If interior → is it: Entryway, Kitchen, Dining Room, Living Room, Family Room, Sunroom, Office, Bedroom, ½ Bath, ¾ Bath, Full Bath, Closet, Mudroom, Stairway, Basement, Workout Room, Storage Space, Mechanical Room?</li>
 </ol>
 
-<h2 id="4">How to use the G2 Grids to understand your ranking</h2>
+<figure class="figure">
 
-<p>Each category with at least 6 products with 10+ reviews (and 150 total reviews) has a G2 Grid. You’ll find this on the right side of the category page, and clicking it will lead you to a bigger version (which is also on the bottom of the page).</p>
+    
 
-<div class="post-img">
-<img class="img" alt="G2 Grid using Satisfaction and Market Presence" width="700" height="525" src="/assets/images/blog/g2-rank/g2-satisfaction.webp" loading="lazy" />
-</div>
+    
 
-<p>The G2 Grids display a four-quadrant breakdown of Market Presence versus Satisfaction. The vendor who is furthest to the right and highest up will always be #1 in the category. Tie-breakers are usually given to the company furthest to the right versus higher up.</p>
+    
 
-<p>These grids correspond with the rankings. The companies in the top right quadrant are nearly always above everyone else. To get highly ranked, then, you need to enter this quadrant.</p>
+    
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/discriminative-vs-generative-ai2.webp" alt="Generative AI vs. Discriminative AI" class="" style="border-radius: 20px; max-width: 100%" srcset="../images/discriminative-vs-generative-ai2.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
+        
 
-<p>Your spot on the grid provides insights into your opportunities and challenges, as we outline below:</p>
+</figure>
 
-<p><b><u>Top right</u></b></p>
+<h2 id="do-you-need-to-create-new-content-or-make-a-decision">Do you need to create new content or make a decision?</h2>
 
-<p>You’re likely already in the Top 5-10. Great job! As an established leader who has invested in incentivized review campaigns, you’ve earned your spot. Climbing higher, even to #1, is possible if you can drive a significant influx of reviews. However, if you’re considerably lower on the Y-axis than #1, you could have trouble supplanting them.</p>
+<p>Chances are you’ll be in a meeting soon when someone broaches the topic of how to integrate AI in your product. During those conversations, we challenge you to get to the bottom of what you’re trying to accomplish with AI. For example, are you trying to automate a process? Help a customer find what they’re looking for quicker? Integrate a supportive AI chatbot that can respond to customer inquiries?</p>
 
-<p><b><u>Bottom right</u></b></p>
+<p>The crux of this question is whether you need to classify existing data to help your product make a decision, or generate entirely new content.</p>
 
-<p>You’re likely in spots #6-20, depending on the category’s competitiveness. The further down or to the left you are, the worse your ranking. Moving up is challenging; you can’t magically triple your employee count. There are growth opportunities, nevertheless, especially since the # and recency of reviews improves both Market Presence and Satisfaction. Your goal is to move as right as possible, via a lot of reviews, and shoot to be the first ranking outside of the top-right vendors. With enough positive reviews, you may even enter the top right.</p>
+<p>Once you have a solid understanding of this, you can begin to narrow in on the segment of the AI market that can best solve your challenge. Popular LLMs like GPT-4 can perform discriminative tasks, <a href="https://www.nyckel.com/blog/why-narrow-ai-is-better-than-gpt-4-for-machine-learning-driven-decisions/">but not as well as narrow AI models trained to make decisions</a> (discriminative models). Understanding the difference between these different types of models is one of the first steps to effectively building AI into your product. </p>
 
-<p><b><u>Top left</u></b></p>
-
-<p>You’re likely in spots #6-20, depending on the category’s competitiveness. You’re probably ranking below many vendors from the bottom right, as G2 prefers Satisfaction over Market Presence.</p>
-
-<p>This quadrant is the least populated. Companies with excellent market presence generally also invest in driving reviews. The good news is - it’s easier to move right than up! If you’re here, you have a great opportunity to push for reviews and move into the Top 5.</p>
-
-<p><b><u>Bottom left</u></b></p>
-
-<p>We’re sorry for you. G2 believes you have little market presence, and users who have reviewed you are not super satisfied. There is room for improvement, but it requires a decent number of 5-star reviews. Your best bet is to shoot for the bottom right quadrant and at least rise above the other bottom-left vendors.</p>
-
-<p><b><u>Not on the grid</u></b></p>
-
-<p>To make the grid, it appears you need 10 or more reviews in that category. If you’re ranked but not on the grid, then you haven’t hit that number. This spot is a wild card. If you’re a large company without many reviews, you could reach Top 5 with a tsunami of new reviews.</p>
-
-<h2 id="5">5 steps to improve your G2 ranking</h2>
-
-<p>Below outlines 5 steps you can take to improve your G2 ranking, via a combination of more reviews, better reviews, and improved market presence.</p>
-
-<h3>1. Choose one category to be in</h3>
-
-<p>By default, you’re placed in one software category. You can request more, and most large companies are in multiple.</p>
-
-<p>As mentioned, however, your category ranking is tied not to overall company reviews, but reviews for that specific category (the Purpose dropdown option when a reviewer goes to rank you). Unless reviewers pick every purpose in a review, there’s a chance reviews are ‘watered down’ - in that rather than moving up substantially in one category, you move up only slightly in three.</p>
-
-<div class="post-img">
-<img class="img" alt="G2 Purpose Dropdown in Reviews" width="700" height="525" src="/assets/images/blog/g2-rank/g2-purposes.webp" loading="lazy" />
-</div>
-
-<p>Rather than requesting multiple categories, contemplate being in just one. This means every single review will count toward that category’s rank.</p>
-
-<p>As a caveat, we’re not saying there’s no value to multiple categories. In fact, if you’re a market leader in the Top 10 of multiple categories, don’t reduce your category count. You’d lose overall visibility.</p>
-
-<p>But if you’re hyper-focused on improving your rank in one category, the one-category approach will maximize the impact of an incentivized review campaign.</p>
-
-<h3>2. Identify realistic targets</h3>
-
-<p>We believe it’s always possible to move up in the rankings. How much depends on where you are on the grid and the category’s competitiveness. Whether or not you prioritize G2 reviews as an initiative (and it doesn’t always make sense) boils down to these questions:</p>
-
-<ul>
-  <li>How do you rank compared to similarly-sized companies?</li>
-  <li>How does your # of reviews and ratings compare to similar-sized companies?</li>
-  <li>How do you compare to slightly larger companies (50-100 more employees)?</li>
-  <li>Are you close to the Y or X axes?</li>
-</ul>
-
-<p><b>There’s no magic number for ideal rank, but you should be aiming at the very least for Top 30, as there are 30 listings per page.</b></p>
-
-<p>If you don’t think 30 is possible, you shouldn’t pursue a G2 campaign at all (in SEO Tools, for instance, one would need ~150 reviews to enter Top 30). In practice, though, Top 10 is the actual number you should be aiming for.</p>
-
-<p>Once you’ve identified a rough number of reviews needed, you can gauge the work involved. Pushing for 25 reviews is much different than 250, but both are doable (depending on client base size). The latter just takes more time and money.</p>
-
-<div class="post-img">
-<img class="img" alt="G2 grid example" width="700" height="419" src="/assets/images/blog/g2-rank/g2-grid.webp" loading="lazy" />
-</div>
-
-<p>Want to outsource this research? Discoverable Marketing will analyze your G2 rankings and provide the # of reviews needed for each rank jump. You can learn more  <a href="https://www.discoverablemarketing.com" target="_blank">here</a>.</p>
-
-<h3>3. Run a G2 incentivized review campaign</h3>
-
-<p>Unsurprisingly, regardless of your grid position, reviews are invaluable. It’s also a two-for-one deal: according to G2, your # of reviews and recency of them influences both Market Presence and Satisfaction.</p>
-
-<p>We’re guessing you’ve already run an incentivized campaign at some point. If not, you’ve likely at least received a vendor email offering $25-$50+ for a G2 review, so you know what we mean. The most generous offer we’ve gotten was $100 AND a free pair of Allbirds (something only a SF start-up would think of).</p>
-
-<p>Here’s advice for a successful campaign:</p>
-
-<ul>
-  <li>Focus on just G2 reviews. Many companies ask for G2 and Capterra reviews at the same time, but this could lead to a paradox of choice and fewer total reviews. Plus, Capterra’s ranking is pay-to-play, so if you want a high spot on Capterra, just pay for it.
-Since bad star ratings can hurt you, first identify customers likely to give 5-star reviews. Start the campaign with this cohort and add additional groups as needed.</li>
-  <li>Don’t be stingy. It would be amazing to drive 200 new reviews in a month. If you pay reviewers $50 each, that’s $10K to jump in rankings - which is going to pay dividends down the line.
-Run a maintenance review campaign every six months. You don’t need it more often, and less often leaves you vulnerable to competitors.</li>
-  <li>If you’re using Amazon gift certificates, keep in mind Amazon doesn’t allow for cross-currency gifting, so you’ll need to find an alternative for those users</li>
-  <li>Expect some “Our company doesn’t allow us to accept incentives” responses.</li>
-  <li>Use an email drip campaign tool and shoot for 5 automated emails over 3 weeks.</li>
-</ul>
-
-<div class="post-img">
-<img class="img" alt="G2 incentivized review campaign email" width="700" height="279" src="/assets/images/blog/g2-rank/g2-campaign.webp" loading="lazy" />
-</div>
-
-<ul>
-  <li>Personalize emails as much as you can.</li>
-  <li>If possible, have a Client Success team member send the emails; otherwise, you can use someone in Marketing.</li>
-  <li>If you’re happy with your rank, run a maintenance review campaign every six months. You don’t need it more often, and less often leaves you vulnerable to competitors.</li>
-</ul>
-
-<h3>4. Invest in growing your market presence</h3>
-
-<p>You can’t magically grow from 50 to 400 employees, but G2’s Market Presence factors in more than just employee count. Follow these steps to look more like an industry leader:</p>
-
-<ul>
-  <li>Get listed on every relevant business directory. This includes long-tail business review sites, local listing directories, SaaS directories, etc.</li>
-  <li>Create social accounts on all social networks, even if you don’t actively post on them.</li>
-</ul>
-
-<div class="post-img">
-<img class="img" alt="List of social directories for better G2 rank" width="700" height="326" src="/assets/images/blog/g2-rank/g2-social.webp" loading="lazy" />
-</div>
-
-<ul>
-  <li>Keep LinkedIn and Crunchbase up-to-date.</li>
-  <li>Run an internal Glassdoor campaign to increase the # of Glassdoor reviews.</li>
-  <li>Produce more content! G2 factors in site traffic and SEO, so building a content engine helps with rankings.</li>
-  <li>Invest in a Technical SEO audit, which can greatly help with Google rankings.</li>
-</ul>
-
-<p>Don’t know where to start? <a href="https://www.discoverablemarketing.com" target="_blank">Discoverable’s Market Presence Report</a> provides an audit of these metrics, as well as step-by-step advice on improving your digital presence.</p>
-
-<h3>5. Consider a G2 paid plan</h3>
-
-<p>G2 emphasizes that their rankings aren’t pay-to-play. Meaning, customers with paid plans don’t get an extra boost in rank. It’s an even playing field.</p>
-
-<div class="post-img">
-<img class="img" alt="G2 Paid Plan Breakdown" width="700" height="384" src="/assets/images/blog/g2-rank/g2-paid.webp" loading="lazy" />
-</div>
-<p>But a paid plan does come with a G2 account manager. These are experts with unique insights on how to improve your position. They will also run review campaigns for you.</p>
-
-<p>You can tell if a competitor has a paid plan by looking for:</p>
-
-<ul>
-  <li>An orange “Try it Free” button on their listing</li>
-  <li>A banner/video at the top of their profile</li>
-</ul>
-
-<div class="post-img">
-<img class="img" alt="G2 Paid Plan Example" width="700" height="255" src="/assets/images/blog/g2-rank/g2-paid-plan.webp" loading="lazy" />
-</div>
-
-<p><i>(Note: We’re not affiliated with G2 and don’t receive kickbacks. These subscriptions can cost $10K+/year, so it’s also not a decision to take lightly.)</i></p>
-
-<hr />
-
-<p>There you go. You now have more information about how the G2 algorithm works and how to improve your G2 ranking. We truly believe it’s possible to jump in ranks through a concerted effort to increase Satisfaction (via more good reviews) and Market Presence (via investing in discoverability tactics).</p>
-
-<p>Is #1 feasible for everyone? No. But getting to Top 10 is, assuming you at least have a medium-sized presence in the space.</p>
-
-<p>As a final pitch for Discoverable, our focus is on helping SaaS companies like you improve your digital presences. This includes an audit of your current situation - be it G2 rankings, business directories, social, technical SEO (like <a href="https://www.discoverablemarketing.com/blog/webp-chatgpt/">webp</a> usage), and more. We then offer concrete steps on how to improve your market presence. Together, we can help your business become more discoverable, attract new customers, and succeed. You can learn more <a href="https://www.discoverablemarketing.com" target="_blank">here</a>.</p>]]></content><author><name>Chris Shuptrine</name></author><category term="SaaS Review Sites" /><summary type="html"><![CDATA[This article outlines the G2 ranking algorithm and the top 5 strategies for improving your rank.]]></summary></entry></feed>
+<p>If discriminative AI is what you need, <a href="https://www.nyckel.com/console">give Nyckel a try for free</a>. If you need help getting started, <a href="https://www.nyckel.com/docs/image-classification-quickstart">check out our quickstarts</a> or <a href="mailto:feedback@nyckel.com">reach out to us</a>.</p>]]></content><author><name>{&quot;display_name&quot;=&gt;&quot;Oscar Beijbom&quot;, &quot;github&quot;=&gt;&quot;beijbom&quot;, &quot;linkedin&quot;=&gt;&quot;oscarbeijbom&quot;, &quot;twitter&quot;=&gt;&quot;beijbom&quot;, &quot;image&quot;=&gt;&quot;/assets/images/important/blog-oscar.jpeg&quot;}</name></author><summary type="html"><![CDATA[If you’re considering building AI into your product, it’s important to know the difference between generative and discriminative AI. We dive into the differences and the pros and cons of each.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/blog/images/discriminative-vs-generative-ai1.webp" /><media:content medium="image" url="http://localhost:4000/blog/images/discriminative-vs-generative-ai1.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

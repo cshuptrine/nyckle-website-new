@@ -4,16 +4,15 @@ title: Pulse for Good Uses ML to Turn Cumbersome System into Showstopping
   Product Feature
 date: 2023-02-09
 author: oscar
-seo_title: Pulse for Good Customer Story
 summary: <i>Nyckel was so remarkably easy. My two other co-founders, who aren’t
   technical, were able to jump in and quickly annotate the customer feedback by
   its type and sentiment to train the model.</i> – Blake Kohler, CEO, Pulse for
   Good
-seo_description: Pulse for Good uses Nyckel to filter and categorize feedback
+description: Pulse for Good uses Nyckel to filter and categorize feedback
   from people from vulnerable populations so human service providers can better
   meet their needs.
-og_image: /blog/images/pulse-for-good-case-study-graphic.jpg
-og_image_alt: Pulse for Good uses NLP to categorize and filter feedback data
+image: /blog/images/pulse-for-good-case-study-graphic.webp
+image_alt: Pulse for Good uses NLP to categorize and filter feedback data
 ---
 
 [Pulse for Good](https://www.pulseforgood.com/) is the world’s first Human Services Feedback Management Platform, used by its customers to efficiently collect, analyze, and act on input from vulnerable populations. Pulse’s self-service kiosks are a safe space where people can anonymously share their true feelings and lived experiences.
@@ -33,7 +32,7 @@ Pulse for Good is a startup with a unique mission. The company provides human se
 
 “We help social service organizations around the world more effectively listen to their clients,” said Blake Kohler, CEO of Pulse. “So, if you think of the classic reputation management or customer experience system, we do that – but for people experiencing trauma or vulnerabilities.”
 
-{% include figure.html url="../images/pulseforgood-product.jpg" alt="Pulse for Good Product Overview" description="Pulse for Good uses self-serve kiosks to collect anonymous feedback for human services providers."%}
+{% include figure.html url="../images/pulseforgood-product.webp" alt="Pulse for Good Product Overview" description="Pulse for Good uses self-serve kiosks to collect anonymous feedback for human services providers."%}
 
 ## The Challenge
 

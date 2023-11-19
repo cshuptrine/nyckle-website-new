@@ -6,14 +6,13 @@ author: oscar
 stage: false
 featured: false
 headliner: false
-seo_title: "Discriminative vs. Generative AI: Which should you build into your product?"
 summary: If you’re considering building AI into your product, it’s important to
   know the difference between generative and discriminative AI. We dive into the
   differences and the pros and cons of each.
-seo_description: If you’re considering building AI into your product, it’s
+description: If you’re considering building AI into your product, it’s
   important to know the difference between generative and discriminative AI. We
   dive into the differences and the pros and cons of each.
-og_image: /blog/images/discriminative-vs-generative-ai1.png
+image: /blog/images/discriminative-vs-generative-ai1.webp
 ---
 At Nyckel, our goal is to not only make it simpler to solve problems with ML but also help developers and product teams learn what they actually need to know about ML to be successful in their roles. In this article, we’ll review one of the important ML distinctions you should know before building AI into your product: the differences between generative and discriminative AI.
 
@@ -46,13 +45,13 @@ The most important generative AI skills to know as a product manager or develope
 
 Here’s how a product manager of a real estate mobile app could explore how they could use GPT-4 to help its customers (realtors) write property listings:
 
-{% include figure.html url="../images/prompt-engineering-real-estate-listing.png" alt="GPT-4 prompt engineering for real estate application"%}
+{% include figure.html url="../images/prompt-engineering-real-estate-listing.webp" alt="GPT-4 prompt engineering for real estate application"%}
 
 **Prompt chaining** is another important skill for generative AI. With prompt chaining, you ask the model a sequence of questions or provide a series of prompts to get additional information or closer to the answer you want from the model. For example, if the model's initial output isn’t in the format you need it, you’ll need to “chain” prompts together to get the output in the right format. (In the example below, see how the user requested that the model only respond with the home type.)
 
 For example, the same real estate mobile app mentioned above could use generative AI to fill in all of the property fields for a listing by providing the high-level property details as the original prompt. By chaining together multiple prompts, the developer could have the LLM produce all the outputs it needs for each listing. See [an example chat transcript from ChatGPT](https://chat.openai.com/share/ade82814-d867-4902-87f8-fe6a2cd37f7f) for how this might look.
 
-{% include figure.html url="../images/prompt-chaining-real-estate-listing2.png" description= "Prompt chaining with GPT-4" alt="Prompt chaining with GPT-4"%}
+{% include figure.html url="../images/prompt-chaining-real-estate-listing2.webp" description= "Prompt chaining with GPT-4" alt="Prompt chaining with GPT-4"%}
 
 ## What is discriminative AI?
 
@@ -60,7 +59,7 @@ Now let’s shift to discriminative AI, which is the type of solution that Nycke
 
 Typically, generative AI and discriminative AI are used for different situations altogether. However, you can use generative AI models/LLMs for discriminative tasks (including a spam filter). We shared an example of [how you could use GPT-4 for a discriminative task in this post](https://www.nyckel.com/blog/why-narrow-ai-is-better-than-gpt-4-for-machine-learning-driven-decisions/), showing how you could categorize an input as toxic or not toxic. 
 
-{% include figure.html url="../images/Nyckel-AI-approach-relating-to-GPT-4-2.png" width="80" alt="The confusion matrix for the whale sound classification function"%}
+{% include figure.html url="../images/Nyckel-AI-approach-relating-to-GPT-4-2.webp" width="80" alt="The confusion matrix for the whale sound classification function"%}
 
 However, when you need to complete a discriminative task (i.e., you need to make a decision), it’s often a lot faster to train a discriminative function. Plus, they scale much better because it’s easier to add more outputs and more data, while also tracking how well the function performs.
 
@@ -87,7 +86,7 @@ If the real estate app wanted to separate interior versus exterior photos from e
 2. If exterior → is it: Front exterior, Back exterior, Yard, Neighborhood Amenity, Neighborhood Park?
 3. If interior → is it: Entryway, Kitchen, Dining Room, Living Room, Family Room, Sunroom, Office, Bedroom, ½ Bath, ¾ Bath, Full Bath, Closet, Mudroom, Stairway, Basement, Workout Room, Storage Space, Mechanical Room?
 
-{% include figure.html url="../images/discriminative-vs-generative-ai2.png" alt="Generative AI vs. Discriminative AI"%}
+{% include figure.html url="../images/discriminative-vs-generative-ai2.webp" alt="Generative AI vs. Discriminative AI"%}
 
 ## Do you need to create new content or make a decision?
 

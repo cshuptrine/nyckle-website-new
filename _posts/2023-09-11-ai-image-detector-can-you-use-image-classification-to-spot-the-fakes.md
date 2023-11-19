@@ -6,16 +6,15 @@ author: becca
 stage: false
 featured: true
 headliner: false
-seo_title: "AI Image Detector: Use Image Classification to Detect AI"
 summary: Thanks to recent advancements in AI, we’ve seen remarkable quality
   improvements in AI-generated images. However, these improvements have also led
   to growing concerns about identifying authentic and trustworthy images. This
   article explores if we can create an AI image detector with Nyckel image
   classification.
-seo_description: "We build an AI image detector to see how accurately an image
+description: "We build an AI image detector to see how accurately an image
   classification function can spot AI-generated images. Learn more and build a
   classifier of your own. "
-og_image: /blog/images/is-this-image-ai-generated-nyckel.png
+image: /blog/images/is-this-image-ai-generated-nyckel.webp
 ---
 *For this article, we hired [Becca Miller](https://www.linkedin.com/in/becca-miller-96a570b8/), a freelance software developer and technical writer, to build an AI image detector using [Nyckel image classification](https://www.nyckel.com/image-classification-api). Becca details her experience below and shares how you can build the image classifier yourself.*
 

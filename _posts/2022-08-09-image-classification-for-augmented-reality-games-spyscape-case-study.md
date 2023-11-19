@@ -6,15 +6,14 @@ author: oscar
 stage: false
 featured: false
 headliner: false
-seo_title: SPYSCAPE Customer Story
 summary: <i>Literally over the space of ten minutes, I created a Nyckel account,
   threw some random images at it… and it blew my mind! It was
   spooky-accurate!</i> – Gwyn Morfey, SPYSCAPE Tech Lead
-seo_description: Using Nyckel ML FaaS, SPYSCAPE trained and deployed an image
+description: Using Nyckel ML FaaS, SPYSCAPE trained and deployed an image
   classification function, used as a key feature of the Augmented Reality
   in-game experience.
-og_image: /blog/images/spyscape-case-study-header-image.png
-og_image_alt: Spyscape uses Nyckel to build augmented reality experiences
+image: /blog/images/spyscape-case-study-header-image.webp
+image_alt: Spyscape uses Nyckel to build augmented reality experiences
 ---
 
 <a href="https://spyscape.com/">SPYSCAPE</a> is a destination spy museum and experience in New York City, with interactive exhibits about fictional and real spies.
@@ -36,7 +35,7 @@ The HQ also features a rolling exhibit. 007 x SPYSCAPE has recently moved out, a
 What you do in the game moves the story forward. Although you’re in fact communicating with software, SPYSCAPE wants it to feel like you’re communicating with real people. But the question was how to do this at scale?
 The game already used a large branching script about the length of a typical novel. This allows the characters to react to the choices that players make in the game, which begins to establish the feeling of reality.
 
-{% include figure.html url="../images/2022/spyscape-ux.jpg" width="100" alt="Spyscape UX" link="https://spyscape.com" %}
+{% include figure.html url="../images/2022/spyscape-ux.webp" width="100" alt="Spyscape UX" link="https://spyscape.com" %}
 
 The physical exhibits in New York use RF wristbands and NFC to maintain a personalised sense of reality throughout the game, producing an immersive magic that resonates with customers. But another powerful element of the HQ’s immersiveness comes from its use of picture recognition.
 

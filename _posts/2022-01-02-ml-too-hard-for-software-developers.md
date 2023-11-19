@@ -4,9 +4,9 @@ date: 2022-01-02
 title: Machine Learning is Still Too Hard for Software Engineers
 author: george
 featured: true
-summary: Machine Learning has made huge strides in the last few decades, but it remains largely inaccessible to the average developer. This post examines some of the reasons why.
-og_image: /blog/images/ml-still-too-hard-for-developers-hero.jpg
-og_image_alt: AI eye candy
+description: Machine Learning has made huge strides in the last few decades, but it remains largely inaccessible to the average developer. This post examines some of the reasons why.
+image: /blog/images/ml-still-too-hard-for-developers-hero.webp
+image_alt: AI eye candy
 ---
 
 For a software engineer, the hardest thing about developing Machine Learning functionality *should* be finding clean and representative ground-truth data, but it often isn't. If you already have a source of good quality data (perhaps because it is already gathered by your application), here are some obstacles that still lay ahead of you:

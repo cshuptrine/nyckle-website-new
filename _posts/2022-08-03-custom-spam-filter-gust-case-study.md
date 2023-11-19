@@ -4,15 +4,14 @@ title: How Startup Accelerator Gust Trained a Custom Spam Filter using Nyckel
 date: 2022-08-03
 author: oscar
 stage: false
-seo_title: How Gust Trained a Custom Spam Filter using Nyckel Deep Learning API
 summary: <i>It was wonderful and saved us a ton of time. We finally got rid of
   spam profiles that were draining our site ranking, bothering customers, and
   giving us a general headache!</i> – Peter Swan, CEO, Gust
-seo_description: Gust used Nyckel to train a custom AI spam filter. The new
+description: Gust used Nyckel to train a custom AI spam filter. The new
   filter is 95% accurate and reduced their curation workload, while improving
   site quality.
-og_image: /blog/images/gust-case-study-header-image.png
-og_image_alt: Gust uses Nyckel for custom AI spam filter
+image: /blog/images/gust-case-study-header-image.webp
+image_alt: Gust uses Nyckel for custom AI spam filter
 ---
 
 <a href="https://gust.com">Gust</a> helps entrepreneurs turn good ideas into great startups. It combines software tools, a funding application platform, and community to make it easy to start a startup that's set up for success. After being in business for more than 10 years, Gust needed some bespoke AI, and that’s when they came to <a href="https://www.nyckel.com/custom-content-moderation-api">Nyckel</a>.

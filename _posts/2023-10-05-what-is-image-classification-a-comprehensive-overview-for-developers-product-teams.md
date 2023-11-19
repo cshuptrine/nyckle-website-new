@@ -7,14 +7,13 @@ author: george
 stage: false
 featured: true
 headliner: false
-seo_title: What Is Image Classification? A Comprehensive Overview
 summary: Image classification is a fundamental technology in today's data-driven
   world. In this guide, we provide insights into how image classification works
   and discuss how you can leverage it to enhance your company’s competitive
   edge.
-seo_description: This guide discusses how image classification works and how
+description: This guide discusses how image classification works and how
   companies can leverage it to enhance their competitive edge.
-og_image: /blog/images/image-classification-with-automl.jpeg
+image: /blog/images/image-classification-with-automl.webp
 ---
 Image classification is a vital technology in today’s data-driven world. But if the term is new to you, you may find yourself wondering, just what is image classification? In short, image classification is the automated categorization of images into predefined classes or labels, enabling computers to interpret visual data quickly. 
 
@@ -34,7 +33,7 @@ As companies generate and consume increasing amounts of visual data, the importa
 
 By harnessing advanced image classification techniques, companies can efficiently classify images, providing opportunities to improve their internal processes, create enhanced customer features, and provide improved content moderation services.
 
-{% include figure.html url="../images/03-image-classification-glossary-computer-vision-functions.jpg" description="Nyckel’s image classifier classifies orange juice by its brand" alt="Image classifier classifies orange juice by its brand name"%}
+{% include figure.html url="../images/03-image-classification-glossary-computer-vision-functions.webp" description="Nyckel’s image classifier classifies orange juice by its brand" alt="Image classifier classifies orange juice by its brand name"%}
 
 ### 1. Improve internal processes
 {: .no_toc}
@@ -50,7 +49,7 @@ Additionally, by harnessing advanced image classification techniques, your compa
 
 Take, for instance, Gardyn, a company that sells smart indoor gardening systems. [Gardyn utilizes image classification](https://www.nyckel.com/blog/gardyn-reduces-workload-by-70-while-growing-2x-after-implementing-computer-vision/) to analyze its customers’ plant health, helping them maintain thriving gardens. When the image classifier detects signs of stress or disease in their customers’ plants, it alerts the owner, suggesting specific actions for care. This not only simplifies gardening for users but also ensures healthy plant growth and longevity.
 
-{% include figure.html url="../images/gardyn-strawberry-not-strawberry.jpg" description="Gardyn uses image classification to monitor plant health" alt="Image classification to monitor plant health" %}
+{% include figure.html url="../images/gardyn-strawberry-not-strawberry.webp" description="Gardyn uses image classification to monitor plant health" alt="Image classification to monitor plant health" %}
 
 E-commerce platforms also regularly leverage image classification to provide improved customer features. For example, Amazon uses this technology in its Amazon lens feature, which enables a visually-driven search. Customers can snap or upload a picture of a product they like, and using image classification, Amazon can quickly identify a similar item, allowing users to conveniently locate and purchase it. Amazon’s image search not only streamlines the shopping process but also sets Amazon apart as a leader in providing innovative solutions that enhance customer experiences. 
 
@@ -81,7 +80,7 @@ Traditionally, the domain of machine learning (ML) was exclusive to data scienti
 
 The [best image classification platforms](https://www.nyckel.com/blog/image-classification-benchmark-google-vs-aws-vs-hugging-face-vs-nyckel/) make integrating an image classifier into your product straightforward. The process involves annotating your dataset with labels and deploying it through an API into your systems. This revolutionary approach eliminates the complexity and barriers that once held businesses without ML teams back from utilizing image classification to enhance their products and services. As a result, it’s key that your AutoML platform includes [must-have features](https://www.nyckel.com/blog/automl-platform-9-features-your-solution-should-include/), including a data engine and active learning.
 
-{% include figure.html url="../images/automl-features-graphic-new.jpeg" description="Nine features to evaluate in AutoML tools" alt="AutoML for image classification" %}
+{% include figure.html url="../images/automl-features-graphic-new.webp" description="Nine features to evaluate in AutoML tools" alt="AutoML for image classification" %}
 
 ## Types of image classification
 
@@ -102,7 +101,7 @@ Multi-class classification takes image categorization a step further by enabling
 
 Multi-label classification brings versatility to image classification by allowing images to belong to multiple categories concurrently. In the realm of content tagging for social media posts, multi-label classification proves its worth. An image posted on a social platform can be tagged with several labels, such as beach, sunset, and friends, all simultaneously. This approach enriches content discovery and user engagement.
 
-{% include figure.html url="../images/nyckel-flowchart-v4-medium-background.png" alt="Choose between multi-label vs. multiclass classification"%}
+{% include figure.html url="../images/nyckel-flowchart-v4-medium-background.webp" alt="Choose between multi-label vs. multiclass classification"%}
 
 ## Applications of image classification
 
@@ -128,7 +127,7 @@ The improvements we’ve seen in AI-generated content are stunning but also pres
 
 Image classification is integral to content moderation and inappropriate image detection, helping ensure online platforms remain safe and free from inappropriate content. As mentioned earlier, [Pet Media Group uses image classification](https://www.nyckel.com/blog/pet-media-group-saves-120k-annually-with-ai-content-moderation/) to do just that: monitoring pet listings that violate the company's animal welfare policies by detecting pictures of dogs with cropped ears or images with emojis overlaid, which often hide surgical modifications that PMG doesn’t allow.
 
-{% include figure.html url="../images/pmg-emoji-new2.png" description=" PMG uses Nyckel's image classification API to detect if a seller added emojis to their image (fail) or not (pass)." alt="Image classification for pet marketplace"%}
+{% include figure.html url="../images/pmg-emoji-new2.webp" description=" PMG uses Nyckel's image classification API to detect if a seller added emojis to their image (fail) or not (pass)." alt="Image classification for pet marketplace"%}
 
 ### Identify your company logo
 {: .no_toc}
@@ -191,7 +190,7 @@ For those with programming experience, Python is one of the most popular languag
 
 With image classification, the right tool can make all the difference for software engineers, product owners, and tech leaders looking to streamline their workflow without diving into the complexities of machine learning. Here, we guide you through a selection of image classification tools designed to simplify your journey. Our [computer vision SaaS landscape](https://www.nyckel.com/blog/computer-vision-saas-landscape-comparison-of-the-top-9-players/) review offers a deeper look into these top players, and our [image classification benchmark](https://www.nyckel.com/blog/image-classification-benchmark-google-vs-aws-vs-hugging-face-vs-nyckel/) offers additional side-by-side comparisons.
 
-{% include figure.html url="../images/CV-pillar-CVlandscape.png" alt="Computer vision SaaS tools" description="Top 9 Computer Vision SaaS Players" %}
+{% include figure.html url="../images/CV-pillar-CVlandscape.webp" alt="Computer vision SaaS tools" description="Top 9 Computer Vision SaaS Players" %}
 
 
 ### Nyckel
@@ -246,7 +245,7 @@ With image classification, the right tool can make all the difference for softwa
 
 When choosing the best image classification tool for you, we recommend reviewing each platform to see [how many of these nine features they include](https://www.nyckel.com/blog/automl-platform-9-features-your-solution-should-include/). Consider factors like function type support, ease of use, model accuracy, latency, pricing transparency, and developer experience. Your ideal solution will depend on your specific needs, whether it's rapid model training, top-notch accuracy, low latency, or a smooth developer experience. To optimize your image classification workflow, be sure to make an informed choice that aligns with your priorities.
 
-{% include figure.html url="../images/image-classification-with-automl.jpeg" alt="Image classification workflow with AutoML platform" %}
+{% include figure.html url="../images/image-classification-with-automl.webp" alt="Image classification workflow with AutoML platform" %}
 
 ## Efficient, accurate, and powerful image classification
 

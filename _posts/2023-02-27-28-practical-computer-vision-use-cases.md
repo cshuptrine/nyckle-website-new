@@ -4,16 +4,15 @@ title: 28 Practical Computer Vision Use Cases
 date: 2023-02-27
 author: nyckel
 stage: true
-seo_title: 28 Practical Computer Vision Use Cases
 summary: "Computer vision has far-reaching benefits, and some of your favorite
   brands may be using it without you even realizing it. We put together a list
   of 28 real-world computer vision use cases to inspire you to think about how
   to use computer vision in your business. "
-seo_description: "Learn about 28 practical computer vision use cases that enable
+description: "Learn about 28 practical computer vision use cases that enable
   companies to automate repetitive tasks or achieve things they couldn’t
   otherwise. "
-og_image: /blog/images/practical-computer-vision-use-cases.jpg
-og_image_alt: List of 28 practical computer vision cases
+image: /blog/images/practical-computer-vision-use-cases.webp
+image_alt: List of 28 practical computer vision cases
 ---
 
 With computer vision, you train a machine learning (ML) function to understand the contents of an image. When a function can accurately predict what’s in an image, it enables companies to automate repetitive tasks or achieve things they wouldn’t have been able to otherwise. (For example, [Gardyn used computer vision](https://www.nyckel.com/blog/gardyn-reduces-workload-by-70-while-growing-2x-after-implementing-computer-vision/) to speed the assessment of its customers’ plant health.)

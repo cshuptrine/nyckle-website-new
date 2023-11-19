@@ -3,9 +3,9 @@ layout: post
 date: 2022-11-10
 title: Smarter, Faster, Automated Image Organization
 author: oscar
-summary: Nyckel's real-time API for custom machine learning is a game-changing to for digital asset management. Here is why.
-og_image: /blog/images/2022/digital-asset-management-hero.jpg
-og_image_alt: Woman organizing photos
+description: Nyckel's real-time API for custom machine learning is a game-changing to for digital asset management. Here is why.
+image: /blog/images/2022/digital-asset-management-hero.webp
+image_alt: Woman organizing photos
 stage: false
 ---
 

@@ -5,15 +5,14 @@ date: 2023-03-01
 author: oscar
 stage: false
 featured: false
-seo_title: 9 Ways to Use a Data Engine to Improve Your ML Model
 summary: "You can improve ML systems in two ways: better models or better data.
   This article looks at how to improve your data by finding and annotating
   hard-to-classify cases."
-seo_description: "You can improve ML systems in two ways: better models or
+description: "You can improve ML systems in two ways: better models or
   better data. Learn how to improve your data by finding and annotating
   hard-to-classify cases."
-og_image: /blog/images/data-engine-workflow.png
-og_image_alt: Data engine workflow for machine learning
+image: /blog/images/data-engine-workflow.webp
+image_alt: Data engine workflow for machine learning
 ---
 
 Teams looking to increase the accuracy of their ML systems can do so in two ways: 1) Through better models (i.e., better model architecture/neural networks and/or training architecture), or 2) better data. Generally speaking, it is [well-established](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/35179.pdf) that improving your data is the more effective of these routes.
@@ -28,7 +27,7 @@ But what’s the best way to detect and manage problematic data (what we call in
 
 ## What is a data engine, and how can you improve it?
 
-{% include figure.html url="../images/data-engine-workflow.png" alt="Data engine"%}
+{% include figure.html url="../images/data-engine-workflow.webp" alt="Data engine"%}
 
 A data engine is a process for finding new, informative data. This means leveraging your existing workflow to find problem cases that illuminate where your model is making bad decisions. Identifying these problem cases allows you to retrain your model to be more accurate.
 
@@ -46,7 +45,7 @@ You can use metadata – supplementary data that you normally collect alongside 
 
 For example, in the case of a toll booth classifier that takes pictures of vehicles and classifies them to determine the appropriate toll for each driver to pay, a stratified random sample could include images taken in different weather conditions, at different times of day, and in different seasons. You can extract these situations using metadata (e.g., possibly by using timestamps together with a weather report). Purely random sampling, in contrast, would over-represent images captured during the day since there is more traffic, and therefore more pictures taken overall during the day. This would train the model to do well on the daytime images but not on ones captured at night.
 
-{% include figure.html url="../images/random-sample-vs-stratified-sample-ML-data-engine.png" alt="Random sample vs stratified sample ML data engine"%}
+{% include figure.html url="../images/random-sample-vs-stratified-sample-ML-data-engine.webp" alt="Random sample vs stratified sample ML data engine"%}
 
 ### 3. AI confidence score
 
@@ -54,7 +53,7 @@ Perhaps the most obvious way to directly target problem data is to look at cases
 
 Note, however, that in this method, you rely on the model to grade its own homework. You’re using the model’s confidence scores to measure its success. In other words, the same model you’re trying to improve is also producing the scores. It would be more reassuring to get a more objective, model-external metric of the model’s success. Let’s look at how to do that next.
 
-{% include figure.html url="../images/ai-confidence-score-ML-data-engine.png" alt="Ai confidence score ML data engine"%}
+{% include figure.html url="../images/ai-confidence-score-ML-data-engine.webp" alt="Ai confidence score ML data engine"%}
 
 ### 4. Model ensemble agreement
 
@@ -62,7 +61,7 @@ Model ensemble agreement is the extent to which a group of models agrees on the 
 
 A model ensemble could either comprise models of the same type/architecture or models with different architectures. Even models with the same architecture will predict slightly different results because the training process has random elements that will vary between the two models. Either way, you can use a model ensemble to pinpoint where answers vary.
 
-{% include figure.html url="../images/model-ensemble-agreement-ML-data-engine.png" alt="Model ensemble agreement ML data engine"%}
+{% include figure.html url="../images/model-ensemble-agreement-ML-data-engine.webp" alt="Model ensemble agreement ML data engine"%}
 
 ### 5. Deploy-phase data augmentation
 
@@ -70,7 +69,7 @@ Another approach is to use a single model but feed it an augmented version of th
 \
 No matter what kind of data you're using, low confidence values or discrepancies between model ensembles or augmented data sets will always uncover your model's weakest performance areas. But, in addition to these general methods, you may want to investigate domain-specific tactics.
 
-{% include figure.html url="../images/deploy-phase-data-augmentation-ml-data-engine.png" alt="Deploy phase data augmentation ml data engine"%}
+{% include figure.html url="../images/deploy-phase-data-augmentation-ml-data-engine.webp" alt="Deploy phase data augmentation ml data engine"%}
 
 ### 6. Spatio-temporal consistency for robotics
 
@@ -102,7 +101,7 @@ In the case of a data engine, we can use this method to identify informative dat
 
 However, even in the realm of a thousand dimensions, vector embeddings are still abstractions; the original picture would have had as many dimensions as pixels. To get a feel for why this level of abstraction is still useful, take a look at this two-dimensional representation of an image data set:
 
-{% include figure.html url="../images/2d-vector-image-example.png" description="Example of a 2-D vector image. Source: [Andrej Karpathy, PhD, Stanford](https://cs.stanford.edu/people/karpathy/cnnembed/)" alt="2D representation of an image data set"%}
+{% include figure.html url="../images/2d-vector-image-example.webp" description="Example of a 2-D vector image. Source: [Andrej Karpathy, PhD, Stanford](https://cs.stanford.edu/people/karpathy/cnnembed/)" alt="2D representation of an image data set"%}
 
 You can likely see similarities even in this very low-dimensional space. But the process of dimension reduction from image to model vector embeddings means that the semantic content of the embedding may fail to capture something salient to human eyes, or it may over-emphasize something trivial.
 

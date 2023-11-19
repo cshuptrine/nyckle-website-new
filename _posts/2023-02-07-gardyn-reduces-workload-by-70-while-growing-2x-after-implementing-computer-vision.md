@@ -3,16 +3,15 @@ layout: post
 title: Gardyn Reduces Workload by 70%, Grows 2x After Implementing Computer Vision
 date: 2023-02-07
 author: george
-seo_title: Gardyn Customer Story
 summary: <i>Because of the way Nyckel does things, the model trains immediately.
   This was rather shocking and awesome! The time between me seeing Nyckel on a
   Google search and having a model was a few minutes.</i> - Sunil Rawal, AI
   Lead, Gardyn
-seo_description: Gardyn uses Nyckel’s computer vision functions to monitor its
+description: Gardyn uses Nyckel’s computer vision functions to monitor its
   customers’ home plant growing systems, significantly reducing Gardyn’s
   workload while scaling up.
-og_image: /blog/images/gardyn-home-kit-wide.jpg
-og_image_alt: Gardyn uses Nyckel for computer vision
+image: /blog/images/gardyn-home-kit-wide.webp
+image_alt: Gardyn uses Nyckel for computer vision
 ---
 
 [Gardyn](https://mygardyn.com/) makes reliable home growing easy. Their smart, indoor vertical hydroponic systems help customers monitor the growth and health of their plants, notifying customers via Gardyn's app when their plants need attention.
@@ -32,7 +31,7 @@ Gardyn’s devices make the nutrition and taste benefits of fresh produce availa
 
 To help customers keep their plants healthy, Gardyn uses technology that controls pumps and monitors humidity and temperature. But they also need rich data that goes beyond this basic telemetry. To get this, Gardyn added a pair of cameras to its plant systems, capturing multiple snapshots of its customers' plants per day and sending the images to the cloud for manual review by their botanists.
 
-{% include figure.html url="../images/gardyn-home-kit-wide.jpg" alt="Gardyn's home kit product" link="https://mygardyn.com"%}
+{% include figure.html url="../images/gardyn-home-kit-wide.webp" alt="Gardyn's home kit product" link="https://mygardyn.com"%}
 
 ## The Challenge
 
@@ -48,7 +47,7 @@ It was a top-level company initiative and mission to automate the process, led b
 
 But finding the right AI solution wasn’t an easy task. The team first tried Microsoft’s Azure Custom Vision platform, which worked well for many simple cases. However, some superficially easy computer vision problems, such as detecting the presence of strawberries, were nearly impossible due to the number of situational variables.
 
-{% include figure.html url="../images/gardyn-strawberry-not-strawberry.jpg" description="Gardyn needed a computer vision system that could correctly detect a strawberry" alt="Computer vision system detects a strawberry" %}
+{% include figure.html url="../images/gardyn-strawberry-not-strawberry.webp" description="Gardyn needed a computer vision system that could correctly detect a strawberry" alt="Computer vision system detects a strawberry" %}
 
 Unfortunately, it took a huge investment of time to train a model that was still not nearly accurate enough for distinguishing plant growth classes. This was frustrating and bad news in terms of business growth. Plus, it wasn’t obvious how to tweak the model. Adding more data wasn't improving the separation of classes. How many more hours of model training service time should one pay for in a situation like that?
 

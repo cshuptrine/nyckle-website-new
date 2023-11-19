@@ -3,9 +3,9 @@ layout: post
 date: 2022-11-09
 title: Best practices for AI content moderation
 author: oscar
-summary: How do you train, configure, integrate, and monitor an AI-based content moderation system such that it gives your users the best experience while protecting your bottom line?
-og_image: /blog/images/2022/best-practices-ai-moderation-hero.jpg
-og_image_alt: Looking glass
+description: How do you train, configure, integrate, and monitor an AI-based content moderation system such that it gives your users the best experience while protecting your bottom line?
+image: /blog/images/2022/best-practices-ai-moderation-hero.webp
+image_alt: Looking glass
 stage: false
 ---
 
@@ -31,7 +31,7 @@ Let’s take a closer look at the moderation and monitoring loops next. After th
 
 ### Moderation loop
 
-{% include figure.html url="../images/2022/moderation-loop.png" alt="Moderation loop" %}
+{% include figure.html url="../images/2022/moderation-loop.webp" alt="Moderation loop" %}
 
 The primary purpose of this loop is to moderate content. As a side-benefit, it also improves the model. First, a piece of data is produced on the platform (by a user). The data is automatically classified by the trained model, which produces two outputs: a moderation decision ("OK" or "Not OK"), and a confidence score, e.g., 84% confidence.
 
@@ -41,7 +41,7 @@ In cases where the confidence threshold is not met, the implementation should se
 
 ### Monitoring loop
 
-{% include figure.html url="../images/2022/monitoring-loop.png" alt="Monitoring loop" %}
+{% include figure.html url="../images/2022/monitoring-loop.webp" alt="Monitoring loop" %}
 
 Because AI has a hard time dealing with so-called “[data drift](https://www.nyckel.com/blog/what-is-class-balance-drift-and-why-does-it-matter-for-content-moderation/)” – where the training data and implementation data are drawn from substantially different use cases – you cannot always rely on a model’s confidence scores. So, we need to have a way to pick up inaccurate confidence scores that arise due to data drift. To do this, we implement a monitoring loop, which is relatively straight-forward to do.
 

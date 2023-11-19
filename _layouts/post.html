@@ -14,7 +14,7 @@ layout: default-post
       <div class="title-area d-flex flex-column justify-content-between">
         <div>
           <h1 style="font-size: 0.6em;">{{ page.title }}</h1>
-          <div class="summary">{{ page.summary }}</div>
+          <div class="summary">{{ page.description }}</div>
         </div>
 
         {% assign author = site.data.authors[page.author] %}
@@ -55,9 +55,9 @@ layout: default-post
         </div>
         {% endif %}
       </div>
-      {% if page.og_image %}
+      {% if page.image %}
       <div class="image-area">
-        <img class="safari_only_unset_height" src="{{ page.og_image }}" alt="{{ page.og_image_alt }}" />
+        <img src="{{ page.image }}" alt="{{ page.image_alt }}" />
       </div>
       {% endif %}
     </div>

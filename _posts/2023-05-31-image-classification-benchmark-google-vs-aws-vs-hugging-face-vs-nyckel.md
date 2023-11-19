@@ -3,18 +3,13 @@ layout: post
 title: "Image Classification Benchmark: Google, AWS, Hugging Face & Nyckel"
 date: 2023-05-31
 author: andrew
-description: This article shows how to use ChatGPT to convert png, jpg, or jpeg files to webp.
+description: We benchmark Nyckel against leading AutoML providers using several public datasets. We evaluate performance, training time, latency, throughput,and developer experience.
 stage: false
 featured: false
 headliner: true
-seo_title: "Image Classification Benchmark: Google vs. AWS vs. Hugging Face vs. Nyckel"
-summary: We benchmark Nyckel against leading AutoML providers using several
-  public datasets. We evaluate performance, training time, latency, throughput,
-  and developer experience.
-seo_description: In this image classification benchmark, we compare leading
-  AutoML provides on model performance, training time, ablation, latency &
-  throughput of model inference, and developer experience.
-og_image: /blog/images/image_classification_benchmark_header.png
+summary: We benchmark Nyckel against leading AutoML providers using several public datasets. We evaluate performance, training time, latency, throughput,and developer experience.
+description: In this image classification benchmark, we compare leading AutoML provides on model performance, training time, ablation, latency & throughput of model inference, and developer experience.
+image: /blog/images/image_classification_benchmark_header.webp
 badge_color: "bg-leaf"
 blog: true
 fill: fill-gray-wrapper  
@@ -35,7 +30,7 @@ Every day it seems there are more options for training and deploying image class
 
 In this image classification benchmark, we test four machine learning services on image classification tasks to see how each stacks up. To do so, we trained over 100 models on 273,280 images across 7 datasets and 4 machine learning services, so we could test the performance of each service across different datasets and training set sizes. Let’s look at what we found!
 
-{% include figure.html url="../images/image_classification_benchmark_header.png" description="Training time vs. accuracy across 7 image classification datasets. Results show order of magnitude difference in training times and ~5% difference in accuracy across the 4 benchmarked ML services." alt="Training time vs accuracy"%}
+{% include figure.html url="../images/image_classification_benchmark_header.webp" description="Training time vs. accuracy across 7 image classification datasets. Results show order of magnitude difference in training times and ~5% difference in accuracy across the 4 benchmarked ML services." alt="Training time vs accuracy"%}
 
 ## Table of Contents
 
@@ -65,7 +60,7 @@ Each ML service was used either through an API, the product’s online UI, or a 
 - [Clothing1M dataset](https://paperswithcode.com/dataset/clothing1m)
 - [Chest X-Ray Images dataset](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 
-{% include figure.html url="../images/image_classification_benchmark_dataset_examples.jpg" description="Image examples from each of the datasets" alt="Image examples"%}
+{% include figure.html url="../images/image_classification_benchmark_dataset_examples.webp" description="Image examples from each of the datasets" alt="Image examples"%}
 
 Depending on the size of the dataset, models were trained with 5, 20, 80, 320, and 1280 images per class. This is called **ablation** and is used to understand how the model performs with various amounts of training data.
 

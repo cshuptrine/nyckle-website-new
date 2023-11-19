@@ -6,15 +6,14 @@ author: becca
 stage: false
 featured: true
 headliner: false
-seo_title: Create a Logo Identifier to Detect Your Logo
 summary: Your brand is one of your most valuable assets as a business, so it’s
   important to monitor and protect all visual representations of your brand,
   especially your logo. In this article, we share how your business can quickly
   and easily create a logo identifier to detect images containing your logo.
-seo_description: Logo detection enables you to safeguard your brand identity,
+description: Logo detection enables you to safeguard your brand identity,
   monitor brand mentions, and track marketing efforts. Learn how to create a
   logo identifier with Nyckel.
-og_image: /blog/images/logo-identifier-image-classifier.png
+image: /blog/images/logo-identifier-image-classifier.webp
 ---
 <div markdown="1" class="comment-div">
 Need help identifying a specific logo? Search for our pre-trained logo detectors including [food-related logos](https://www.nyckel.com/public-functions/food-logos-image-classifier), [transportation logos](https://www.nyckel.com/public-functions/transportation-logos-image-classifier), [leisure brands](https://www.nyckel.com/public-functions/leisure-logos-image-classifier), [institution logos](https://www.nyckel.com/public-functions/institution-logos-image-classifier), [electronic logos](https://www.nyckel.com/public-functions/electronic-logos-image-classifier), [cosmetic logos](https://www.nyckel.com/public-functions/cosmetic-logos-image-classifier), and [clothes logos](https://www.nyckel.com/public-functions/clothes-logos-image-classifier).
@@ -59,7 +58,7 @@ After your data is uploaded and annotated, Nyckel immediately starts training yo
 
 After the model finishes training, we can check its performance and see that it correctly classified 99% of examples as to whether they contained a Coca-Cola logo. Our model only got two examples wrong! Looking at the examples, it’s easy to see why our model may not have recognized the logo:
 
-{% include figure.html url="../images/logo-identifer-api-model.png"%}
+{% include figure.html url="../images/logo-identifer-api-model.webp"%}
 
 ### 4. Deploy the model into your systems using our API
 

@@ -6,14 +6,13 @@ author: nyckel
 stage: false
 featured: false
 headliner: false
-seo_title: Pet Media Group Customer Story
 summary: '<i>Nyckel’s API docs were super straightforward to use. Our first
   custom content moderation model was live within a day.</i> — Eyass Shakrah,
   Co-Founder, Pet Media Group'
-seo_description: Pet Media Group uses Nyckel's image classification to moderate
+description: Pet Media Group uses Nyckel's image classification to moderate
   pet listings to ensure they meet animal welfare policies. Using Nyckel has
   resulted in $120K in annual savings.
-og_image: /blog/images/pet-media-group-case-study-header.jpg
+image: /blog/images/pet-media-group-case-study-header.webp
 ---
 {% include quote.html text="Before Pet Media Group, I built and sold two other billion-dollar marketplaces. Each had an entire floor of manual reviewers before we invested in an AI solution. When building PMG, we wanted to avoid these mistakes and integrate with an AI service early on." author="Eyass Shakrah" title="Co-Founder, Pet Media Group" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-pmg.jpg" %}
 
@@ -37,7 +36,7 @@ PMG is deeply committed to operating ethical online pet marketplaces and doing i
 * Puppies advertised without a picture of the puppy with its mother (required to certify the authenticity of the breeder), and
 * Any image with emojis overlaid on the image (not allowed because they are often used to hide surgical modifications of the pet that PMG does not allow).
 
-{% include figure.html url="../images/pmg-nyckel-functions-new.jpg" description=" Pet Media Group uses several Nyckel functions to moderate pet listings for violations to its animal welfare policies." alt="Pet marketplace AI content moderation"%}
+{% include figure.html url="../images/pmg-nyckel-functions-new.webp" description=" Pet Media Group uses several Nyckel functions to moderate pet listings for violations to its animal welfare policies." alt="Pet marketplace AI content moderation"%}
 
 Moderating so many images for various violations proved both time-consuming and labor-intensive for PMG. In fact, the company had 15 full-time employees dedicated exclusively to moderating its pet listings.
 
@@ -59,7 +58,7 @@ But it wasn’t just the price that sold PMG on Nyckel. Nyckel felt like a devel
 
 {% include quote.html text="The fact that within 10 minutes, we could sign-up, train a model and have it deployed made Nyckel a compelling option for us." author="Eyass Shakrah" title="Co-Founder, Pet Media Group" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-pmg.jpg" %}
 
-{% include figure.html url="../images/pmg-emoji-new2.png" description=" Nyckel image classification API detects if a seller added emojis to their image (fail) or not (pass)." alt="Image classification for pet marketplace"%}
+{% include figure.html url="../images/pmg-emoji-new2.webp" description=" Nyckel image classification API detects if a seller added emojis to their image (fail) or not (pass)." alt="Image classification for pet marketplace"%}
 
 ## The Results
 

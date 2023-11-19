@@ -3,7 +3,7 @@ layout: post
 date: 2022-01-14
 title: Machine Learning on Tabular Data with Nyckel
 author: george
-summary: Nyckel releases a new feature to create Machine Learning models for tabular data in minutes.
+description: Nyckel releases a new feature to create Machine Learning models for tabular data in minutes.
 ---
 
 Our customers very quickly see the value that Nyckel brings - someone with zero knowledge of machine learning

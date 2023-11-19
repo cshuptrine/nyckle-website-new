@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 <!--Meta Tags & Codes -->
 <!--- General Meta -->
 <meta charset="utf-8"/>
@@ -24,7 +24,7 @@
 <meta name="msapplication-TileColor" content="#FFAD6A">
 
 
-<title>Discoverable Marketing Blog - page 5</title>
+<title>Nyckel's Blog - page 5</title>
 
 
 <link rel="canonical" href="https://www.discoverablemarketing.com/blog/"/>
@@ -32,13 +32,13 @@
 <meta property="og:url" content="https://www.discoverablemarketing.com/blog"/>
 
 
-<meta name="description" content=" Insights into how to make your SaaS company more discoverable "/>
+<meta name="description" content=" Machine learning insights around image and text classificaiton. "/>
 <meta name="google-site-verification" content="7i-yehDH_LgDCUWUgUwo-ZhCY_Zf7SAQ-_wGwEUeySU"/> 
 <link rel="alternate" href="https://www.discoverablemarketing.com/blog-feed.xml" type="application/rss+xml" title="Discoverable - RSS"/> 
 
 <!--- OpenGraph -->
-<meta property="og:title" content="Discoverable Marketing Blog - page 5"/>
-<meta property="og:description" content="Insights into how to make your SaaS company more discoverable"/>
+<meta property="og:title" content="Nyckel's Blog - page 5"/>
+<meta property="og:description" content="Machine learning insights around image and text classificaiton."/>
 <meta property="og:image" content="https://www.discoverablemarketing.com/assets/images/important/cover.jpg"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="628"/>
@@ -125,48 +125,83 @@
     });
 </script>
 
-<!--SCSS -->
-<link rel="stylesheet" href="/assets/css/main.css">
-
-<!--Toggled -->
-
-
 <style>
+.post-title {
+  font-family: Arial, sans-serif !important;
+}
+
+.post-font2 {
+  font-family: Arial, sans-serif !important;
+}
+
+.post-font p {
+  font-family: Arial, sans-serif !important;
+  font-size: 17px; /* Adjust this value to your desired font size */
+  font-weight: 400; /* Adjust this value for desired font weight, e.g., 400 (normal), 500 (medium), 600 (semi-bold), etc. */
+  line-height: 1.5; /* Adjust this value for desired space between rows; higher values increase space */
+  }
+
+.strong, b {
+  font-weight: bold !important;
+}
+
+.hero2 {
+  width: 100%;
+  background-color: #191970 !important; /* Your desired color */
+  padding-top: 5%;
+}
+
+.hero-contents2 {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 .hero-image {
     width: 125%; /* or you can specify any width you want */
     height: auto; /* keeps image aspect ratio */
     box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* adjust shadow as needed */
     image-rendering: -webkit-optimize-contrast; /* try to make image crisper */
 }
+
+.post-img {
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  padding-top: 10px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+  width: 90%; /* Set the width of the container to 75% of its parent element */
+  margin: 0 auto; /* Center the container horizontally */
+
+}
+
 </style>
 
+<!--SCSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--Toggled -->
+
+  
 </head>
 
 <body >
-    
-
+  
 <nav
-  class="navbar  absolute transparent inverse-text nav-uppercase  navbar-hover-opacity navbar-expand-lg">
+  class="navbar  absolute nav-uppercase  navbar-hover-opacity navbar-expand-lg">
   <div
     class=" container  flex-row justify-content-center">
     <div class="navbar-brand">
       <a href="/">
 
         
-        <img src="/assets/images/important/DiscoverableLogo_White_320.webp"
-          class=" logo-light "
-          alt="Discoverable logo" width="180" height="27"/>
-           
         <img src="/assets/images/important/nyckel-logo-320x48.png"
          class=" logo-dark  "
           alt="Discoverable logo" width="320" height="77"/>
 
         <!--
-        
-        <img src="/assets/images/important/DiscoverableLogo_White_180.webp"
-          srcset="/assets/images/important/DiscoverableLogo_White_180.webp 1x, /assets/images/important/DiscoverableLogo_White_320.webp 2x"
-          class=" logo-light "
-          alt="Nyckel" width="180" height="27"/>
         
         <img src="/assets/images/important/nyckel-black-small.png"
           srcset="/assets/images/important/nyckel-black-small.png 1x, /assets/images/important/nyckel-black.png 2x"
@@ -233,8 +268,14 @@
   <!-- /.container -->
 </nav>
 
-
+<!--<div class="post-font2 post-font">-->
 <div class="content-wrapper">
+<div class="wrapper white-wrapper">
+    <div class="row">
+    </div></div>
+
+    <div class="container">
+
 
 <div class="posts contain-1300 p-mobile-1350 mb-3">
     
@@ -247,8 +288,8 @@
         <div class="hero-contents d-flex mx-2 mt-4">
             <div class="title-area d-flex flex-column justify-content-between">
                 <div>
-                    <h1>Image Classification Benchmark: Google, AWS, Hugging Face & Nyckel</h1>
-                    <div class="summary">We benchmark Nyckel against leading AutoML providers using several public datasets. We evaluate performance, training time, latency, throughput, and developer experience.</div>
+                     <h1 style="font-size: 0.6em;">Image Classification Benchmark: Google, AWS, Hugging Face & Nyckel</h1>
+                    <div class="summary">In this image classification benchmark, we compare leading AutoML provides on model performance, training time, ablation, latency & throughput of model inference, and developer experience.</div>
                 </div>
 
                 
@@ -256,10 +297,9 @@
                 <div class="author">
                     <div class="author-area">
                         
-                        <img src="https://avatars.githubusercontent.com/ajtatey" alt="mugshot"
-                            class="author-icon" />
+                        <img src="/assets/images/important/blog-andrew.jpeg" alt="mugshot" class="author-icon" />
                         
-                        <span class="author-name">Andrew Tate</span>
+                        <span class="author-name" style="font-size: 1em">Andrew Tate</span>
                         
                         <i class="fa fa-github fa-lg social-icon"></i>
                         
@@ -270,16 +310,15 @@
                         
                         
                     </div>
-                    <span class="date">
-                        Posted May 2023
+                       <span class="read-more">Read more →
                     </span>
-                    <div class="read-more">Read more →</div>
+             
                 </div>
                 
             </div>
             
             <div class="image-area card summary-card">
-                <img class="card-img-top summary-img safari_only_unset_height" src="/blog/images/image_classification_benchmark_header.png"
+                <img class="card-img-top summary-img safari_only_unset_height" src="/blog/images/image_classification_benchmark_header.webp"
                     alt="" />
             </div>
             
@@ -287,19 +326,6 @@
     </div>
 </a>
     
-
-    <div class="newsletter-cta">
-    <h2>Subscribe for more ML content</h2>
-    <p>
-        We send occasional email newsletters with informative content about how to solve problems with machine learning,
-        product updates, and more. Subscribe to get updates sent directly to your inbox.
-    </p>
-    <button data-tf-popup="WRFhNxwm" data-tf-iframe-props="title=Newsletter Signup" data-tf-medium="snippet"
-        data-tf-size="70">
-        Sign me up
-    </button>
-    <script src="//embed.typeform.com/next/embed.js"></script>
-</div>
 
     <h1 class="heading">Posts</h1>
     <div class="row">
@@ -312,25 +338,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/what-is-image-recognition-and-how-it-differs-from-image-classification/">
         
-        <img class="card-img-top summary-img" src="/blog/images/what-is-image-recognition-header-image.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/what-is-image-recognition-header-image.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>What Is Image Recognition? (And How It Differs From Image Classification)</h1>
+            <h1 style="font-size: 1.5em;">What Is Image Recognition? (And How It Differs From Image Classification)</h1>
             <div class="entry">
-                Image recognition is a term often used to describe using machine learning or computer vision to recognize and identify what’s in an image. Even though people use the term image recognition frequently, its meaning is vague, which can cause confusion and misunderstanding. This post explores image recognition and what people usually mean when they say it.
+                Image recognition uses AI to identify patterns in images. But its means is vague, which causes confusion. Learn more about what image recognition really means.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Nov 2023
@@ -338,7 +358,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -349,25 +368,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/custom-auto-tagging-for-digital-asset-management/">
         
-        <img class="card-img-top summary-img" src="/blog/images/image-classification-examples-datasets-to-build-functions.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/image-classification-examples-datasets-to-build-functions.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Customized Auto-Tagging for Digital Asset Management</h1>
+            <h1 style="font-size: 1.5em;">Customized Auto-Tagging for Digital Asset Management</h1>
             <div class="entry">
-                AI-driven auto-tagging of digital assets (like images) enables search, discovery, and content-based workflows. Generic auto-tagging can be frustrating because it doesn't handle the specific tags you are interested in. Custom trained auto-tagging models can help, and these models can be trained in minutes, with minimal data, and without any AI expertise.
+                AI auto-tagging of digital assets enables search, discovery, and content-based workflows. Discover how custom models can be trained in minutes with no AI expertise.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Oct 2023
@@ -375,7 +388,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -386,25 +398,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/introducing-invoke-capture-integrated-active-learning/">
         
-        <img class="card-img-top summary-img" src="/blog/images/invoke-capture-workflow.jpeg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/invoke-capture-workflow-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Introducing Invoke Capture - Automatically Gather Important Data to Improve Your Model</h1>
+            <h1 style="font-size: 1.5em;">Introducing Invoke Capture - Automatically Gather Important Data to Improve Your Model</h1>
             <div class="entry">
-                A machine learning model is only as good as the data it is trained on. At Nyckel, our goal is to give you have the tools to keep your data fresh, correct, and up to date. To this end, we are excited to introduce our newest feature: invoke capture - automatically and intelligently capture important data to improve your model.
+                With Nyckel's invoke capture feature, we automatically and intelligently capture data from your deployed models for your team to review and annotate in Nyckel's dashboard.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Oct 2023
@@ -412,7 +418,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -423,25 +428,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/what-is-image-classification-a-comprehensive-overview-for-developers-product-teams/">
         
-        <img class="card-img-top summary-img" src="/blog/images/image-classification-with-automl.jpeg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/image-classification-with-automl.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>What Is Image Classification? A Comprehensive Overview for Developers & Product Teams</h1>
+            <h1 style="font-size: 1.5em;">What Is Image Classification? A Comprehensive Overview for Developers & Product Teams</h1>
             <div class="entry">
-                Image classification is a fundamental technology in today's data-driven world. In this guide, we provide insights into how image classification works and discuss how you can leverage it to enhance your company’s competitive edge.
+                This guide discusses how image classification works and how companies can leverage it to enhance their competitive edge.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Oct 2023
@@ -449,7 +448,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -460,22 +458,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/logo-identifier-how-to-detect-your-logo-with-a-custom-image-classifier/">
         
-        <img class="card-img-top summary-img" src="/blog/images/logo-identifier-image-classifier.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/logo-identifier-image-classifier.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Logo Identifier: How to Detect Your Logo With a Custom Image Classifier</h1>
+            <h1 style="font-size: 1.5em;">Logo Identifier: How to Detect Your Logo With a Custom Image Classifier</h1>
             <div class="entry">
-                Your brand is one of your most valuable assets as a business, so it’s important to monitor and protect all visual representations of your brand, especially your logo. In this article, we share how your business can quickly and easily create a logo identifier to detect images containing your logo.
+                Logo detection enables you to safeguard your brand identity, monitor brand mentions, and track marketing efforts. Learn how to create a logo identifier with Nyckel.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <span class="author-name">Becca Miller</span>
                 </div>
                 <span class="date">
                     Posted Oct 2023
@@ -483,7 +478,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -494,22 +488,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/ai-image-detector-can-you-use-image-classification-to-spot-the-fakes/">
         
-        <img class="card-img-top summary-img" src="/blog/images/is-this-image-ai-generated-nyckel.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/is-this-image-ai-generated-nyckel.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>AI Image Detector: Can You Use Image Classification to Spot the Fakes?</h1>
+            <h1 style="font-size: 1.5em;">AI Image Detector: Can You Use Image Classification to Spot the Fakes?</h1>
             <div class="entry">
-                Thanks to recent advancements in AI, we’ve seen remarkable quality improvements in AI-generated images. However, these improvements have also led to growing concerns about identifying authentic and trustworthy images. This article explores if we can create an AI image detector with Nyckel image classification.
+                We build an AI image detector to see how accurately an image classification function can spot AI-generated images. Learn more and build a classifier of your own. 
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <span class="author-name">Becca Miller</span>
                 </div>
                 <span class="date">
                     Posted Sep 2023
@@ -517,7 +508,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -528,25 +518,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/end-to-end-automl-your-automl-platform-should-span-the-entire-ml-development-pipeline/">
         
-        <img class="card-img-top summary-img" src="/blog/images/end-to-end-automl-header_v2.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/end-to-end-automl-header_v2.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>End-to-End AutoML: Your AutoML Platform Should Span the Entire ML Development Lifecycle</h1>
+            <h1 style="font-size: 1.5em;">End-to-End AutoML: Your AutoML Platform Should Span the Entire ML Development Lifecycle</h1>
             <div class="entry">
-                AutoML platforms automate the work required to train an ML model. However, training a model is a small part of the ML development lifecycle. An end-to-end AutoML platform that handles all aspects of ML development can provide significant benefits. 
+                And end-to-end AutoML platform that handles all aspects of the ML development lifecycle offers significant benefits when compared to AutoML platforms that only do model training.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Jun 2023
@@ -554,7 +538,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -565,25 +548,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/a-content-moderation-benchmark-using-kaggle-toxicity-data/">
         
-        <img class="card-img-top summary-img" src="/blog/images/content-moderation-benchmark.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/content-moderation-benchmark.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>What's Best for Content Moderation? Blacklists vs. Pre-Trained ML vs. Custom ML (A Benchmark)</h1>
+            <h1 style="font-size: 1.5em;">What's Best for Content Moderation? Blacklists vs. Pre-Trained ML vs. Custom ML (A Benchmark)</h1>
             <div class="entry">
-                In this post, we compare the accuracy of various content moderation approaches — blacklists, pre-trained ML models, and custom-trained ML models — on a public Kaggle dataset.
+                Comparing accuracy of blacklist, pre-trained & custom-trained ML models for content moderation using a public Kaggle toxicity dataset. 
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Apr 2023
@@ -591,7 +568,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -602,25 +578,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/why-narrow-ai-is-better-than-gpt-4-for-machine-learning-driven-decisions/">
         
-        <img class="card-img-top summary-img" src="/blog/images/narrow-ai-approach-header.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/narrow-ai-approach-header.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Why Narrow AI is Better Than GPT-4 For Machine Learning-Driven Decisions</h1>
+            <h1 style="font-size: 1.5em;">Why Narrow AI is Better Than GPT-4 For Machine Learning-Driven Decisions</h1>
             <div class="entry">
-                GPT-4 is impressive. Yet, there are better tools available (including Nyckel) that are tailored to the unique needs of software developers and product teams who need an API for machine learning-driven decision making.
+                Learn why products that can spring up narrow AI models trained for specific tasks outperform GPT-4 for ML-driven decisions.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Apr 2023
@@ -628,7 +598,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -639,25 +608,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/are-bounding-boxes-necessary-for-object-detection/">
         
-        <img class="card-img-top summary-img" src="/blog/images/are-bounding-boxes-necessary-object-detection.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/are-bounding-boxes-necessary-object-detection.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Are Bounding Boxes Necessary for Object Detection?</h1>
+            <h1 style="font-size: 1.5em;">Are Bounding Boxes Necessary for Object Detection?</h1>
             <div class="entry">
-                Bounding boxes are usually used to annotate data for object detection. However, they are hard to annotate and are not required for all object detection use cases. In this post, we examine where bounding boxes are unnecessary and compare them to center points, which are significantly easier to annotate.
+                Are bounding boxes necessary for object detection? We experiment to discover whether center pointing or bounding boxes are more efficient.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Mar 2023
@@ -665,7 +628,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -676,25 +638,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/ml-too-hard-for-software-developers/">
         
-        <img class="card-img-top summary-img" src="/blog/images/ml-still-too-hard-for-developers-hero.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/ml-still-too-hard-for-developers-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Machine Learning is Still Too Hard for Software Engineers</h1>
+            <h1 style="font-size: 1.5em;">Machine Learning is Still Too Hard for Software Engineers</h1>
             <div class="entry">
                 Machine Learning has made huge strides in the last few decades, but it remains largely inaccessible to the average developer. This post examines some of the reasons why.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Jan 2022
@@ -702,7 +658,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -735,25 +690,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/hierarchical-image-classification-vs-flat-classification-what-does-your-ml-task-need/">
         
-        <img class="card-img-top summary-img" src="/blog/images/hierarchical-image-classification-header-image.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/hierarchical-image-classification-header-image.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Hierarchical Image Classification vs. Flat Classification: What Does Your ML Task Need?</h1>
+            <h1 style="font-size: 1.5em;">Hierarchical Image Classification vs. Flat Classification: What Does Your ML Task Need?</h1>
             <div class="entry">
-                In this article, we explain the differences between hierarchical and flat image classification and make the case for why a flat structure is often the better choice for many use cases.
+                We explain the differences between hierarchical image classification and flat and make the case for why a flat structure is often the better choice.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Aug 2023
@@ -761,7 +710,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -774,25 +722,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/automl-platform-9-features-your-solution-should-include/">
         
-        <img class="card-img-top summary-img" src="/blog/images/automl-features-graphic-new.jpeg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/automl-features-graphic-new.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>9 Must-Have Features for Your AutoML Platform: A Comprehensive Guide</h1>
+            <h1 style="font-size: 1.5em;">9 Must-Have Features for Your AutoML Platform: A Comprehensive Guide</h1>
             <div class="entry">
-                AutoML involves more than just training a model; it should span the entire ML development pipeline. In this post, we explore what features and functionality you should look for in an AutoML platform.
+                The AutoML platform you choose should do more than train a model. Learn what 9 things you should look for when conducting an AutoML tools comparison.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Aug 2023
@@ -800,7 +742,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -813,24 +754,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/5-image-classification-examples-datasets-to-build-functions-with-nyckel/">
         
-        <img class="card-img-top summary-img" src="/blog/images/image-classification-examples-datasets-to-build-functions.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/image-classification-examples-datasets-to-build-functions.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>5 Image Classification Examples (+ Datasets To Build Functions With Nyckel) </h1>
+            <h1 style="font-size: 1.5em;">5 Image Classification Examples (+ Datasets To Build Functions With Nyckel) </h1>
             <div class="entry">
-                The sky is (almost) the limit when it comes to applications of image classification. We share 5 unique image classification examples to get you thinking about how you could classify images with machine learning in your own business.
+                Explore 5 practical use cases of image classification ranging from detecting AI-generated images to identifying diseases in bean plants. Learn to build each with Nyckel.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://www.nyckel.com/img/nyckel-icon.png" alt="mugshot" class="author-icon" />
-                    
-                    <span class="author-name">Nyckel</span>
                 </div>
                 <span class="date">
                     Posted Aug 2023
@@ -838,53 +774,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
-    </a>
-</div>
-        
-        
-        
-        
-        
-
-
-<div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
-    <a class="card summary-card" href="/blog/improve-g2-rank/">
-        
-        <img class="card-img-top summary-img" src="/blog/images/placeholder-header.png" loading="lazy" />
-        
-        <div class="card-body">
-            <h1>How to Improve your G2 Rank: 5 Top Strategies for 2023</h1>
-            <div class="entry">
-                
-            </div>
-        </div>
-
-        <!-- Look the author details up from the site config. -->
-        
-    </a>
-</div>
-        
-        
-        
-        
-        
-
-
-<div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
-    <a class="card summary-card" href="/blog/webp-chatgpt/">
-        
-        <img class="card-img-top summary-img" src="/blog/images/placeholder-header.png" loading="lazy" />
-        
-        <div class="card-body">
-            <h1>How to Convert PNG & JPG Images to WebP using ChatGPT</h1>
-            <div class="entry">
-                
-            </div>
-        </div>
-
-        <!-- Look the author details up from the site config. -->
-        
     </a>
 </div>
         
@@ -897,25 +786,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/building-ai-into-your-product-understand-the-difference-between-discriminative-and-generative-ai/">
         
-        <img class="card-img-top summary-img" src="/blog/images/discriminative-vs-generative-ai1.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/discriminative-vs-generative-ai1.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Discriminative vs. Generative AI: Which Should You Build Into Your Product?</h1>
+            <h1 style="font-size: 1.5em;">Discriminative vs. Generative AI: Which Should You Build Into Your Product?</h1>
             <div class="entry">
                 If you’re considering building AI into your product, it’s important to know the difference between generative and discriminative AI. We dive into the differences and the pros and cons of each.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Jul 2023
@@ -923,7 +806,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -939,25 +821,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/what-is-automl-a-comprehensive-guide-what-it-means-for-product-teams/">
         
-        <img class="card-img-top summary-img" src="/blog/images/what-is-automl-9.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/what-is-automl-9.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>What is AutoML? A Comprehensive Guide & What It Means for Product Teams</h1>
+            <h1 style="font-size: 1.5em;">What is AutoML? A Comprehensive Guide & What It Means for Product Teams</h1>
             <div class="entry">
-                In this post we look at AutoML, explain what it is and how it works, and discuss how it can help product teams build AI-enabled products and features. 
+                In this post we look at AutoML, explain what it is and how it works, and discuss how it can benefit product teams trying to build AI-enabled products and features. 
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Jun 2023
@@ -965,7 +841,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -978,24 +853,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/guide-to-computer-vision-for-non-ml-experts/">
         
-        <img class="card-img-top summary-img" src="/blog/images/computer-vision-pillar.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/computer-vision-pillar.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Guide to Computer Vision for Non-ML Experts</h1>
+            <h1 style="font-size: 1.5em;">Guide to Computer Vision for Non-ML Experts</h1>
             <div class="entry">
-                In this guide, we help you understand what you actually need to know about computer vision, so you can evaluate the available CV SaaS solutions and choose the one that’s best for your use case. 
+                The complex nature of computer vision often holds companies back from implementing it in their businesses. This guide shares what you need to know about computer vision.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://www.nyckel.com/img/nyckel-icon.png" alt="mugshot" class="author-icon" />
-                    
-                    <span class="author-name">Nyckel</span>
                 </div>
                 <span class="date">
                     Posted Jun 2023
@@ -1003,7 +873,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1016,24 +885,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/pet-media-group-saves-120k-annually-with-ai-content-moderation/">
         
-        <img class="card-img-top summary-img" src="/blog/images/pet-media-group-case-study-header.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/pet-media-group-case-study-header.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Pet Media Group saves $120k annually with AI content moderation</h1>
+            <h1 style="font-size: 1.5em;">Pet Media Group saves $120k annually with AI content moderation</h1>
             <div class="entry">
-                <i>Nyckel’s API docs were super straightforward to use. Our first custom content moderation model was live within a day.</i> — Eyass Shakrah, Co-Founder, Pet Media Group
+                Pet Media Group uses Nyckel's image classification to moderate pet listings to ensure they meet animal welfare policies. Using Nyckel has resulted in $120K in annual savings.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://www.nyckel.com/img/nyckel-icon.png" alt="mugshot" class="author-icon" />
-                    
-                    <span class="author-name">Nyckel</span>
                 </div>
                 <span class="date">
                     Posted Jun 2023
@@ -1041,7 +905,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1057,24 +920,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/computer-vision-saas-landscape-comparison-of-the-top-9-players/">
         
-        <img class="card-img-top summary-img" src="/blog/images/computer-vision-landscape.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/computer-vision-landscape.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Computer Vision SaaS Landscape: Comparison of the Top 9 Players</h1>
+            <h1 style="font-size: 1.5em;">Computer Vision SaaS Landscape: Comparison of the Top 9 Players</h1>
             <div class="entry">
-                In this article, we compare the functionality, amount of time it takes to set up a model, performance, positioning, and pricing of the nine leading computer vision SaaS players. Results show significant variations across accuracy, user experience, and pricing structures.
+                We compare nine leading computer vision SaaS providers on functionality, model creation time, performance, market positioning, and pricing.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://www.nyckel.com/blog/images/John_Weston_headshot.jpg" alt="mugshot" class="author-icon" />
-                    
-                    <span class="author-name">John Weston</span>
                 </div>
                 <span class="date">
                     Posted May 2023
@@ -1082,7 +940,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1095,25 +952,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/reverse-engineering-the-class-list-for-google-cloud-vision-api/">
         
-        <img class="card-img-top summary-img" src="/blog/images/google-cloud-vision-api-burger.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/google-cloud-vision-api-burger.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Google Cloud Vision API Class List: Can We Reverse-Engineer to Find the List?</h1>
+            <h1 style="font-size: 1.5em;">Google Cloud Vision API Class List: Can We Reverse-Engineer to Find the List?</h1>
             <div class="entry">
-                Google's pre-trained computer vision model, Cloud Vision API, tags images with labels based on image contents. However, Google hasn't published the complete list of class labels. In this post, we try to reverse-engineer this list. 
+                Google provides a pre-trained computer vision model that tags images with labels based on image contents. In this post, we try to reverse-engineer the labels list.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Apr 2023
@@ -1121,7 +972,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1140,25 +990,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/time-series-signal-classification-using-computer-vision/">
         
-        <img class="card-img-top summary-img" src="/blog/images/signal_classification_header.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/signal_classification_header.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>How to Classify Time Series Signals With Computer Vision: Kaggle Whale Example</h1>
+            <h1 style="font-size: 1.5em;">How to Classify Time Series Signals With Computer Vision: Kaggle Whale Example</h1>
             <div class="entry">
-                Classifying time-series signals is a surprising and cool use-case of image classification. In this post, we show you one way to do that,  by solving the kaggle whale sound classification challenge using image classification.  
+                Learn how to use image classification to classify time series signals, and in this case, audio recordings. No ML expertise required. You'll see how to process the audio into images and how to use Nyckel to train an image classification function in minutes. 
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Mar 2023
@@ -1166,7 +1010,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1179,24 +1022,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/glossary-of-computer-vision-function-types/">
         
-        <img class="card-img-top summary-img" src="/blog/images/001-header-glossary-computer-visions.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/001-header-glossary-computer-visions.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Glossary of Computer Vision Function Types</h1>
+            <h1 style="font-size: 1.5em;">Glossary of Computer Vision Function Types</h1>
             <div class="entry">
-                Computer vision can be a reliable way to search, identify, and categorize many images in a matter of moments. We define various types of computer vision to get you a better sense of how much you can do with it.
+                Various types of computer vision can help you identify, categorize, and search among millions of images in just a few moments. Discover the most common types of computer vision.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://www.nyckel.com/img/nyckel-icon.png" alt="mugshot" class="author-icon" />
-                    
-                    <span class="author-name">Nyckel</span>
                 </div>
                 <span class="date">
                     Posted Mar 2023
@@ -1204,7 +1042,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1220,25 +1057,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/9-ways-to-use-a-data-engine-to-improve-your-ml-model/">
         
-        <img class="card-img-top summary-img" src="/blog/images/data-engine-workflow.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/data-engine-workflow.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>9 Ways to Use a Data Engine to Improve Your ML Model</h1>
+            <h1 style="font-size: 1.5em;">9 Ways to Use a Data Engine to Improve Your ML Model</h1>
             <div class="entry">
-                You can improve ML systems in two ways: better models or better data. This article looks at how to improve your data by finding and annotating hard-to-classify cases.
+                You can improve ML systems in two ways: better models or better data. Learn how to improve your data by finding and annotating hard-to-classify cases.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Mar 2023
@@ -1246,7 +1077,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1259,24 +1089,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/a-quick-guide-to-semantic-image-search-with-examples/">
         
-        <img class="card-img-top summary-img" src="/blog/images/quick-guide-to-semantic-image-search.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/quick-guide-to-semantic-image-search.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>A Quick Guide to Semantic Image Search (with Examples)</h1>
+            <h1 style="font-size: 1.5em;">A Quick Guide to Semantic Image Search (with Examples)</h1>
             <div class="entry">
-                Search engines continue to get better at understanding what exactly we’re looking for when we search. Today, this also includes when we search image databases. Learn about semantic image search and how companies can use it to support a better user experience.
+                Semantic image search enables users to search a database of images quickly. Discover 11 practical use cases that support a better user experience. 
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://www.nyckel.com/img/nyckel-icon.png" alt="mugshot" class="author-icon" />
-                    
-                    <span class="author-name">Nyckel</span>
                 </div>
                 <span class="date">
                     Posted Feb 2023
@@ -1284,7 +1109,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1297,25 +1121,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/pulse-for-good-uses-ml-to-turn-cumbersome-system-into-showstopping-product-feature/">
         
-        <img class="card-img-top summary-img" src="/blog/images/pulse-for-good-case-study-graphic.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/pulse-for-good-case-study-graphic.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Pulse for Good Uses ML to Turn Cumbersome System into Showstopping Product Feature</h1>
+            <h1 style="font-size: 1.5em;">Pulse for Good Uses ML to Turn Cumbersome System into Showstopping Product Feature</h1>
             <div class="entry">
-                <i>Nyckel was so remarkably easy. My two other co-founders, who aren’t technical, were able to jump in and quickly annotate the customer feedback by its type and sentiment to train the model.</i> – Blake Kohler, CEO, Pulse for Good
+                Pulse for Good uses Nyckel to filter and categorize feedback from people from vulnerable populations so human service providers can better meet their needs.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Feb 2023
@@ -1323,7 +1141,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1336,25 +1153,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/gardyn-reduces-workload-by-70-while-growing-2x-after-implementing-computer-vision/">
         
-        <img class="card-img-top summary-img" src="/blog/images/gardyn-home-kit-wide.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/gardyn-home-kit-wide.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Gardyn Reduces Workload by 70%, Grows 2x After Implementing Computer Vision</h1>
+            <h1 style="font-size: 1.5em;">Gardyn Reduces Workload by 70%, Grows 2x After Implementing Computer Vision</h1>
             <div class="entry">
-                <i>Because of the way Nyckel does things, the model trains immediately. This was rather shocking and awesome! The time between me seeing Nyckel on a Google search and having a model was a few minutes.</i> - Sunil Rawal, AI Lead, Gardyn
+                Gardyn uses Nyckel’s computer vision functions to monitor its customers’ home plant growing systems, significantly reducing Gardyn’s workload while scaling up.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Feb 2023
@@ -1362,7 +1173,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1375,25 +1185,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/what-features-does-your-manual-content-moderation-tool-need/">
         
-        <img class="card-img-top summary-img" src="/blog/images/manual-content-moderation-tool-header.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/manual-content-moderation-tool-header.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>What Features Does Your Manual Content Moderation Tool Need? </h1>
+            <h1 style="font-size: 1.5em;">What Features Does Your Manual Content Moderation Tool Need? </h1>
             <div class="entry">
-                Automated content moderation helps you review large volumes of UGC quickly and efficiently. But even the most sophisticated tools aren’t perfect and still require some level of manual review. We outline the features to consider adding to your manual content moderation tool.
+                Even the most sophisticated content moderation tools aren't perfect solutions and require some level of manual review. We outline important manual review features.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/danielott" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Dan Ott</span>
                 </div>
                 <span class="date">
                     Posted Jan 2023
@@ -1401,7 +1205,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1414,25 +1217,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/the-ever-growing-landscape-of-content-moderation-ai-platforms/">
         
-        <img class="card-img-top summary-img" src="/blog/images/content-moderation-landscape-new.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/content-moderation-landscape-new.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>The Ever-Growing Landscape of Content Moderation AI Platforms</h1>
+            <h1 style="font-size: 1.5em;">The Ever-Growing Landscape of Content Moderation AI Platforms</h1>
             <div class="entry">
-                There’s a wider variety than ever of content moderation AI services available. Knowing your exact needs will help you find the platform that’s right for your specific business needs.
+                Learn about the similarities and differences between 9 high-performing content moderation AI platforms to choose the one that’s best for your business.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Jan 2023
@@ -1440,7 +1237,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1453,25 +1249,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/how-reddit-could-use-auto-moderation-for-r-earthporn/">
         
-        <img class="card-img-top summary-img" src="/blog/images/moderating-earthporn-hero.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/moderating-earthporn-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>How Reddit Could Use Machine Learning to Better Moderate Subreddits</h1>
+            <h1 style="font-size: 1.5em;">How Reddit Could Use Machine Learning to Better Moderate Subreddits</h1>
             <div class="entry">
-                Subreddit moderators don’t have an easy job. We experimented to see how Reddit could use to Nyckel to moderate r/EarthPorn images quickly and effectively. 
+                Could online communities like Reddit use machine learning instead of human moderators for content moderation? We experimented with Nyckel's image classifier.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/danielott" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Dan Ott</span>
                 </div>
                 <span class="date">
                     Posted Dec 2022
@@ -1479,7 +1269,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1492,25 +1281,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/service-oriented-design-applies-to-ml-too/">
         
-        <img class="card-img-top summary-img" src="/blog/images/service-oriented-design-v4.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/service-oriented-design-v4.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Service Oriented Design Applies to ML Too</h1>
+            <h1 style="font-size: 1.5em;">Service Oriented Design Applies to ML Too</h1>
             <div class="entry">
-                The way we’re building ML solutions today runs contrary to system design best practices. Thinking holistically about ML as a service yields designs that are cleaner technically and better organizationally.
+                Service oriented design applied to machine learning will help manage ML complexity and build scalable organizations. Learn why.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/danielott" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Dan Ott</span>
                 </div>
                 <span class="date">
                     Posted Dec 2022
@@ -1518,7 +1301,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1531,25 +1313,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/multi-class-classification-vs-multi-label-classification-key-differences-how-to-choose/">
         
-        <img class="card-img-top summary-img" src="/blog/images/nyckel-flowchart-v4-medium-background.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/nyckel-flowchart-v4-medium-background-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Multi-Class Classification vs. Multi-Label Classification: Key Differences & How to Choose</h1>
+            <h1 style="font-size: 1.5em;">Multi-Class Classification vs. Multi-Label Classification: Key Differences & How to Choose</h1>
             <div class="entry">
-                One of the first steps before creating a new classification function is to decide whether to use multi-class classification or multi-label classification. In this article, we’ll cover the differences between the two types of classification and help you choose which approach makes the most sense for your problem.
+                Learn about the differences between multi-class classification and multi-label classification. Which should you use? Let’s explore.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Nov 2022
@@ -1557,7 +1333,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1570,25 +1345,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/smarter-faster-automated-image-organization/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/digital-asset-management-hero.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/digital-asset-management-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Smarter, Faster, Automated Image Organization</h1>
+            <h1 style="font-size: 1.5em;">Smarter, Faster, Automated Image Organization</h1>
             <div class="entry">
                 Nyckel's real-time API for custom machine learning is a game-changing to for digital asset management. Here is why.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Nov 2022
@@ -1596,7 +1365,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1609,25 +1377,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/ai-content-moderation-best-practices/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/best-practices-ai-moderation-hero.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/best-practices-ai-moderation-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Best practices for AI content moderation</h1>
+            <h1 style="font-size: 1.5em;">Best practices for AI content moderation</h1>
             <div class="entry">
                 How do you train, configure, integrate, and monitor an AI-based content moderation system such that it gives your users the best experience while protecting your bottom line?
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Nov 2022
@@ -1635,7 +1397,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1648,25 +1409,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/how-to-approach-multilingual-content-moderation/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/language-pie-chart.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/language-pie-chart.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>How to Approach Multilingual Content Moderation</h1>
+            <h1 style="font-size: 1.5em;">How to Approach Multilingual Content Moderation</h1>
             <div class="entry">
                 A lot of the internet's content is in non-mainstream languages. We look at some things to consider when building content moderation models for multi-lingual content.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Nov 2022
@@ -1674,7 +1429,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1687,25 +1441,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/why-content-moderation-is-important-for-your-business/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/content-moderation-business-benefits.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/content-moderation-business-benefits.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Why Content Moderation is Important for Your Business</h1>
+            <h1 style="font-size: 1.5em;">Why Content Moderation is Important for Your Business</h1>
             <div class="entry">
                 Some examples of how content moderation can benefit your business in unexpected ways.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Nov 2022
@@ -1713,7 +1461,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1726,25 +1473,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/what-is-class-balance-drift-and-why-does-it-matter-for-content-moderation/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/class-balance-drift-hero.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/class-balance-drift-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>What is class-balance drift, and why does it matter for content moderation?</h1>
+            <h1 style="font-size: 1.5em;">What is class-balance drift, and why does it matter for content moderation?</h1>
             <div class="entry">
                 Class-balance drift can degrade your auto content-moderation system. We look at what it is, how to track it, and what to do when it occurs.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Oct 2022
@@ -1752,7 +1493,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1765,25 +1505,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/how-whats-that-charge-quadrupled-ad-revenue-using-nyckel/">
         
-        <img class="card-img-top summary-img" src="/blog/images/whats-that-charge-case-study-graphic.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/whats-that-charge-case-study-graphic.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>How What’s That Charge 4x’d It's Revenue Using Nyckel Auto-Moderation</h1>
+            <h1 style="font-size: 1.5em;">How What’s That Charge 4x’d It's Revenue Using Nyckel Auto-Moderation</h1>
             <div class="entry">
-                <i>AI-powered auto-moderation allowed quicker release of more content to our public repository of credit card charges, driving a 4x increase in Ad revenue.</i> – Jeremy Schneider, Co-founder, WTC
+                What's That Charge uses Nyckel to automate its content moderation, improving the site's user experience and increasing WTC's revenue.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Oct 2022
@@ -1791,7 +1525,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1804,25 +1537,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/content-moderation-comparison-facebook-twitter-reddit-tiktok/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/same-same-but-different.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/same-same-but-different.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Same Same But Different: Content Moderation at Facebook, Twitter, TikTok, and Reddit</h1>
+            <h1 style="font-size: 1.5em;">Same Same But Different: Content Moderation at Facebook, Twitter, TikTok, and Reddit</h1>
             <div class="entry">
-                The four platforms have different ways of balancing free speech against misinformation. We take a close look at their methods.
+                Discover the similarities and differences in content moderation policies of Facebook, Twitter, TikTok, and Reddit in this in-depth comparison.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Oct 2022
@@ -1830,7 +1557,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1843,25 +1569,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/whac-a-spammer-how-to-deal-with-bots/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/whac-a-mole.jpeg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/whac-a-mole.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Whac-a-Spammer - How to Deal with Bots on Your Site</h1>
+            <h1 style="font-size: 1.5em;">Whac-a-Spammer - How to Deal with Bots on Your Site</h1>
             <div class="entry">
-                Bots posting content to your site can be a scourge. Stay one step ahead of them with these tips, tools, and tricks.
+                Learn the tools, tips, and tricks to prevent bots from taking over your site.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/danielott" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Dan Ott</span>
                 </div>
                 <span class="date">
                     Posted Oct 2022
@@ -1869,7 +1589,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1882,25 +1601,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/long-tail-of-content-moderation-use-cases/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/long-tail-hero.jpeg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/long-tail-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>The Long Tail of Content Moderation Use-Cases</h1>
+            <h1 style="font-size: 1.5em;">The Long Tail of Content Moderation Use-Cases</h1>
             <div class="entry">
                 Beyond Spam, NSFW and violence are a long tail of situations that require content moderation across gaming, dating, e-commerce and children's platforms.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Sep 2022
@@ -1908,7 +1621,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1921,25 +1633,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/what-is-content-moderation/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/what-is-content-moderation-books.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/what-is-content-moderation-books.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>What is Content Moderation?</h1>
+            <h1 style="font-size: 1.5em;">What is Content Moderation?</h1>
             <div class="entry">
                 Content Moderation is critical when hosting user generated content. We break down the basic concepts and solutions.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Sep 2022
@@ -1947,7 +1653,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1960,25 +1665,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/four-steps-to-improving-your-content-moderation/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/content-moderation-steps-hero.jpeg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/content-moderation-steps-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>4 Steps to Improved Content Moderation</h1>
+            <h1 style="font-size: 1.5em;">4 Steps to Improved Content Moderation</h1>
             <div class="entry">
-                Progress through blacklists and pre-trained AI's to full custom-AI content moderation.
+                Learn how to improve your content moderation through blacklists and regular expressions, through pre-trained AIs, to custom AI that learns from your data.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Sep 2022
@@ -1986,7 +1685,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -1999,25 +1697,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/building-a-recommender-systems-using-the-nyckel-api/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/recommender-systems.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/recommender-systems.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Building a Recommender system using the Nyckel API.</h1>
+            <h1 style="font-size: 1.5em;">Building a Recommender system using the Nyckel API.</h1>
             <div class="entry">
-                We break down the components of a Recommender system and show how ot set this up using the Nyckel API.
+                We break down the components of a Recommender system into Collaborative, Content and Hybrid filters. We then show how ot set this up using the Nyckel API.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Sep 2022
@@ -2025,7 +1717,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2038,25 +1729,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/content-moderation-using-surgehq-toxicity-dataset/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/toxicity-moderation.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/toxicity-moderation.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Content Moderation using SurgeAI's Toxicity Dataset</h1>
+            <h1 style="font-size: 1.5em;">Content Moderation using SurgeAI's Toxicity Dataset</h1>
             <div class="entry">
-                Train a text classification model for content moderation using SurgeAI's toxicity dataset.
+                Learn how to train a Nyckel text classification model for content moderation using SurgeAI's toxicity dataset.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Sep 2022
@@ -2064,7 +1749,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2077,25 +1761,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/image-classification-for-augmented-reality-games-spyscape-case-study/">
         
-        <img class="card-img-top summary-img" src="/blog/images/spyscape-case-study-header-image.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/spyscape-case-study-header-image.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>How SPYSCAPE Added Magic Into Their AR Game Using Nyckel</h1>
+            <h1 style="font-size: 1.5em;">How SPYSCAPE Added Magic Into Their AR Game Using Nyckel</h1>
             <div class="entry">
-                <i>Literally over the space of ten minutes, I created a Nyckel account, threw some random images at it… and it blew my mind! It was spooky-accurate!</i> – Gwyn Morfey, SPYSCAPE Tech Lead
+                Using Nyckel ML FaaS, SPYSCAPE trained and deployed an image classification function, used as a key feature of the Augmented Reality in-game experience.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Aug 2022
@@ -2103,7 +1781,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2116,25 +1793,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/content-moderation-of-social-network-taimi-case-study/">
         
-        <img class="card-img-top summary-img" src="/blog/images/taimi-case-study-header-image.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/taimi-case-study-header-image.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Taimi Reduces Content Moderation Time by 3x, Experiences 10x Cost Reduction With Nyckel</h1>
+            <h1 style="font-size: 1.5em;">Taimi Reduces Content Moderation Time by 3x, Experiences 10x Cost Reduction With Nyckel</h1>
             <div class="entry">
-                <i>Our average moderation time went down by three times, auto moderation coverage increased four times, and accuracy imporoved to 96%!</i> – Vladislav Yavorskyi, Moderation Manager, Taimi
+                Taimi used Nyckel’s text classification API to increase curation coverage and accuracy and reduce latency over time with its auto-retrain. Read more.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Aug 2022
@@ -2142,7 +1813,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2155,25 +1825,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/custom-spam-filter-gust-case-study/">
         
-        <img class="card-img-top summary-img" src="/blog/images/gust-case-study-header-image.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/gust-case-study-header-image.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>How Startup Accelerator Gust Trained a Custom Spam Filter using Nyckel</h1>
+            <h1 style="font-size: 1.5em;">How Startup Accelerator Gust Trained a Custom Spam Filter using Nyckel</h1>
             <div class="entry">
-                <i>It was wonderful and saved us a ton of time. We finally got rid of spam profiles that were draining our site ranking, bothering customers, and giving us a general headache!</i> – Peter Swan, CEO, Gust
+                Gust used Nyckel to train a custom AI spam filter. The new filter is 95% accurate and reduced their curation workload, while improving site quality.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Aug 2022
@@ -2181,7 +1845,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2194,25 +1857,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/iab-classification/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/iab-hero.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/iab-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>IAB Classification of Text and Images Using Machine Learning</h1>
+            <h1 style="font-size: 1.5em;">IAB Classification of Text and Images Using Machine Learning</h1>
             <div class="entry">
                 IAB is a content taxonomy that is used by content publishers to organize their content in a consistent way. In this post we show you how to classify text and image content into IAB categories without any labeled data.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Jul 2022
@@ -2220,7 +1877,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2236,22 +1892,16 @@
         <img class="card-img-top summary-img" src="/blog/images/placeholder-header.png" loading="lazy" />
         
         <div class="card-body">
-            <h1>A Quick Look at Text Search Functions</h1>
+            <h1 style="font-size: 1.5em;">A Quick Look at Text Search Functions</h1>
             <div class="entry">
                 See some of the creative ways to add smarts to your application with Text Search
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/danielott" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Dan Ott</span>
                 </div>
                 <span class="date">
                     Posted May 2022
@@ -2259,7 +1909,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2272,25 +1921,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/custom-ai-assisted-content-moderation-pipeline/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/content-moderation-workflow.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/content-moderation-workflow-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Custom AI-Assisted Content Moderation</h1>
+            <h1 style="font-size: 1.5em;">Custom AI-Assisted Content Moderation</h1>
             <div class="entry">
                 Online communities need content moderation to thrive, but the diversity of the internet is not fully served by general purpose content moderation APIs. We lay out the need for custom AI-assisted content moderation, look at what such a moderation pipeline would look like, and show how Nyckel makes it significantly easier to build such a pipeline.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Apr 2022
@@ -2298,7 +1941,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2314,22 +1956,16 @@
         <img class="card-img-top summary-img" src="/blog/images/placeholder-header.png" loading="lazy" />
         
         <div class="card-body">
-            <h1>ML is Just a Developer Tool</h1>
+            <h1 style="font-size: 1.5em;">ML is Just a Developer Tool</h1>
             <div class="entry">
-                ... at least for now
+                Even with massive advances, Machine Learning should still be considered one tool of many in a developers' toolchain; not a panacea.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/danielott" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Dan Ott</span>
                 </div>
                 <span class="date">
                     Posted Apr 2022
@@ -2337,7 +1973,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2350,25 +1985,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/introducing-search-functions/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/nft-finder-screenshot.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/nft-finder-screenshot.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Introducing Nyckel Image Search Functions</h1>
+            <h1 style="font-size: 1.5em;">Introducing Nyckel Image Search Functions</h1>
             <div class="entry">
                 Nyckel Image Search functions enable cross-modal semantic search of images and text using the latest Deep Learning technology. Get started with a few simple API commands.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Apr 2022
@@ -2376,7 +2005,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2392,22 +2020,16 @@
         <img class="card-img-top summary-img" src="/blog/images/placeholder-header.png" loading="lazy" />
         
         <div class="card-body">
-            <h1>Machine Learning on Tabular Data with Nyckel</h1>
+            <h1 style="font-size: 1.5em;">Machine Learning on Tabular Data with Nyckel</h1>
             <div class="entry">
                 Nyckel releases a new feature to create Machine Learning models for tabular data in minutes.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Jan 2022
@@ -2415,7 +2037,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2428,25 +2049,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/nyckel-accepted-to-y-combinator/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2022/yc-hero.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2022/yc-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>Nyckel Accepted to Y Combinator (W22)</h1>
+            <h1 style="font-size: 1.5em;">Nyckel Accepted to Y Combinator (W22)</h1>
             <div class="entry">
                 Nyckel has been accepted to Y Combinator batch of Winter 2022!
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Jan 2022
@@ -2454,7 +2069,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2470,25 +2084,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/titanic-vs-transformers/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2021/titanic-kaggle-hero.jpg" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2021/titanic-kaggle-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>A top 3% score in the Kaggle Titanic Challenge using Transformers</h1>
+            <h1 style="font-size: 1.5em;">A top 3% score in the Kaggle Titanic Challenge using Transformers</h1>
             <div class="entry">
                 In this post we show how to make a top 3% submission on the Kaggle Titanic Challenge using Transformers
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Oct 2021
@@ -2496,7 +2104,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2512,22 +2119,16 @@
         <img class="card-img-top summary-img" src="/blog/images/placeholder-header.png" loading="lazy" />
         
         <div class="card-body">
-            <h1>Local Development and Validation of Nuget Packages</h1>
+            <h1 style="font-size: 1.5em;">Local Development and Validation of Nuget Packages</h1>
             <div class="entry">
                 Learnings from setting up a local development workflow for developing and validating nuget packages
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/saintarian" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">George Mathew</span>
                 </div>
                 <span class="date">
                     Posted Oct 2021
@@ -2535,7 +2136,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2548,25 +2148,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/automl-benchmark-nyckel-google-huggingface/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2021/imdb-classification-benchmark-hero.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2021/imdb-classification-benchmark-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>AutoML benchmark: Nyckel vs Google vs Huggingface</h1>
+            <h1 style="font-size: 1.5em;">AutoML benchmark: Nyckel vs Google vs Huggingface</h1>
             <div class="entry">
                 A comparison of accuracy, training times, and invoke latencies for three major AutoML engines
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/beijbom" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Oscar Beijbom</span>
                 </div>
                 <span class="date">
                     Posted Jun 2021
@@ -2574,7 +2168,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2590,22 +2183,16 @@
         <img class="card-img-top summary-img" src="/blog/images/placeholder-header.png" loading="lazy" />
         
         <div class="card-body">
-            <h1>AutoML Comment Moderation in a Rails App</h1>
+            <h1 style="font-size: 1.5em;">AutoML Comment Moderation in a Rails App</h1>
             <div class="entry">
                 Using machine learning to help curate user content
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/danielott" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Dan Ott</span>
                 </div>
                 <span class="date">
                     Posted May 2021
@@ -2613,7 +2200,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2629,22 +2215,16 @@
         <img class="card-img-top summary-img" src="/blog/images/2021/hotdog-training.png" loading="lazy" />
         
         <div class="card-body">
-            <h1>Add Image Classification Using Machine Learning to a Web App With a Single Line of Code</h1>
+            <h1 style="font-size: 1.5em;">Add Image Classification Using Machine Learning to a Web App With a Single Line of Code</h1>
             <div class="entry">
                 Inspired by a scene from HBO's Silicon Valley, I decided to build a website that identifies whether a photo is of a hot dog.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/jerschneid" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Jeremy Schneider</span>
                 </div>
                 <span class="date">
                     Posted Apr 2021
@@ -2652,7 +2232,6 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
@@ -2665,25 +2244,19 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="/blog/add-custom-image-classification-to-your-application-using-machine-learning/">
         
-        <img class="card-img-top summary-img" src="/blog/images/2021/nyckel-prediction.png" loading="lazy" />
+        <img class="card-img-top summary-img" src="/blog/images/2021/nyckel-prediction-hero.webp" loading="lazy" />
         
         <div class="card-body">
-            <h1>How to Add Custom Image Classification To Your Application Using Machine Learning (The Easy Way!)</h1>
+            <h1 style="font-size: 1.5em;">How to Add Custom Image Classification To Your Application Using Machine Learning (The Easy Way!)</h1>
             <div class="entry">
                 It’s often valuable to be able to programmatically classify an image into a category. This post explains how you can use Nyckel to do that in minutes.
             </div>
         </div>
 
         <!-- Look the author details up from the site config. -->
-        
         <div class="card-footer summary-footer d-flex flex-row justify-content-between">
             <div class="author d-flex flex-column">
                 <div>
-                    
-                    <img src="https://avatars.githubusercontent.com/jerschneid" alt="mugshot"
-                        class="author-icon" />
-                    
-                    <span class="author-name">Jeremy Schneider</span>
                 </div>
                 <span class="date">
                     Posted Apr 2021
@@ -2691,14 +2264,12 @@
             </div>
             <div class="read-more">Read more →</div>
         </div>
-        
     </a>
 </div>
         
         
-    </div>
-</div>
-</div>
+  </div></div></div>
+</div><!--</div>-->
 
 
 
@@ -2743,28 +2314,53 @@
     };
 </script>
 
-<!-- original JS implementation 
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/popper.min.js"></script>
-<script src="/assets/js/bootstrap.min.js"></script>
-<script src="/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script src="/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
-<script src="/assets/js/plugins.js"></script>
-<script src="/assets/js/simple-jekyll-search.min.js"></script>
-<script src="/assets/js/scripts.js"></script>-->
 
 
+ <div><div class="wrapper image-wrapper light-wrapper bg-auto no-overlay bg-image text-center" data-image-src="/assets/images/important/map.webp">
+                <div class="container inner">
+                    <div class="row">
+                        <div class="col-md-9 mx-auto">
+                             <h3 class="display-3">Subscribe for more ML content</h3>
+
+     <p class="lead" style="padding-left:15%;padding-right:15%">
+                            You'll get periodic newsletters around machine learning, classification, and how anyone can build their own AI/ML models in just minutes.</p>
+ <div class="space20"></div>
+<ul class="navbar-nav flex-row align-items-center justify-content-center" data-sm-skip="true" style="justify-content: center; width: 100%;">
+    <li class="nav-item">
+      <div class="navbar-hamburger d-lg-none d-xl-none ml-auto">
+        <button data-tf-popup="WRFhNxwm" data-tf-iframe-props="title=Newsletter Signup" data-tf-medium="snippet"
+        data-tf-size="70"></button>
+      </div>
+    </li>
+    <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%">
+      <a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Sign-up</a>
+    </li>
+    
+</ul>
+                  
+                  
+                        </div>
+                    </div>
+                </div>
+            </div></div>
 
 
+<!--
+                            <div class="space20"></div>
+<ul class="navbar-nav flex-row align-items-center justify-content-center" data-sm-skip="true" style="justify-content: center; width: 100%;">
+    <li class="nav-item">
+      <div class="navbar-hamburger d-lg-none d-xl-none ml-auto">
+       <button data-tf-popup="WRFhNxwm" data-tf-iframe-props="title=Newsletter Signup" data-tf-medium="snippet"
+        data-tf-size="70"></button>
+      </div>
+    </li>
+    <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%">
+      <a href="/contact/" class="btn m-0" style="background-color:#3877f6;">Sign-up</a>
+    </li>
+</ul> 
+         
+
+  <script src="//embed.typeform.com/next/embed.js"></script></div></div></div></div></div> -->
 <footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/important/home-bg.webp" loading="lazy">
   <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
  <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
@@ -2839,8 +2435,6 @@
   </div>
 </footer>
 
-
-<!---->
 
 </body>
 

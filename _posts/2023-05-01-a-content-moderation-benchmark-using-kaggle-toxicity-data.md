@@ -6,13 +6,12 @@ date: 2023-04-30
 author: george
 stage: false
 featured: true
-seo_title: "Content Moderation Benchmark: Blacklists vs. Pre-Trained ML vs. Custom ML"
 summary: In this post, we compare the accuracy of various content moderation
   approaches — blacklists, pre-trained ML models, and custom-trained ML models —
   on a public Kaggle dataset.
-seo_description: "Comparing accuracy of blacklist, pre-trained & custom-trained
+description: "Comparing accuracy of blacklist, pre-trained & custom-trained
   ML models for content moderation using a public Kaggle toxicity dataset. "
-og_image: /blog/images/content-moderation-benchmark.jpg
+image: /blog/images/content-moderation-benchmark.webp
 ---
 In an earlier post of ours, *[4 Steps to Improved Content Moderation](https://www.nyckel.com/blog/four-steps-to-improving-your-content-moderation/)*, we outline the stages of maturity most businesses go through when it comes to content moderation:
 

@@ -5,8 +5,8 @@
         <div class="hero-contents d-flex mx-2 mt-4">
             <div class="title-area d-flex flex-column justify-content-between">
                 <div>
-                    <h1>{{ post.title }}</h1>
-                    <div class="summary">{{ post.summary }}</div>
+                     <h1 style="font-size: 0.6em;">{{ post.title }}</h1>
+                    <div class="summary">{{ post.description }}</div>
                 </div>
 
                 {% assign author = site.data.authors[post.author] %}
@@ -19,7 +19,7 @@
                         <img src="https://avatars.githubusercontent.com/{{author.github}}" alt="mugshot"
                             class="author-icon" />
                         {% endif %}
-                        <span class="author-name">{{ author.display_name }}</span>
+                        <span class="author-name" style="font-size: 1em">{{ author.display_name }}</span>
                         {% if author.github %}
                         <i class="fa fa-github fa-lg social-icon"></i>
                         {% endif %}
@@ -34,17 +34,16 @@
                         {% endif %}
                         {% endif %}
                     </div>
-                    <span class="date">
-                        Posted {{ post.date | date: "%b %Y"}}
+                       <span class="read-more">Read more →
                     </span>
-                    <div class="read-more">Read more →</div>
+             
                 </div>
                 {% endif %}
             </div>
-            {% if post.og_image %}
+            {% if post.image %}
             <div class="image-area card summary-card">
-                <img class="card-img-top summary-img safari_only_unset_height" src="{{ post.og_image }}"
-                    alt="{{ post.og_image_alt }}" />
+                <img class="card-img-top summary-img safari_only_unset_height" src="{{ post.image }}"
+                    alt="{{ post.image_alt }}" />
             </div>
             {% endif %}
         </div>

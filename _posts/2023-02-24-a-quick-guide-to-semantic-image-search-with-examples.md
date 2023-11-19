@@ -4,16 +4,15 @@ title: A Quick Guide to Semantic Image Search (with Examples)
 date: 2023-02-24
 author: nyckel
 stage: false
-seo_title: A Quick Guide to Semantic Image Search (with Examples)
 summary: Search engines continue to get better at understanding what exactly
   we’re looking for when we search. Today, this also includes when we search
   image databases. Learn about semantic image search and how companies can use
   it to support a better user experience.
-seo_description: "Semantic image search enables users to search a database of
+description: "Semantic image search enables users to search a database of
   images quickly. Discover 11 practical use cases that support a better user
   experience. "
-og_image: /blog/images/quick-guide-to-semantic-image-search.jpg
-og_image_alt: Guide to semantic image search
+image: /blog/images/quick-guide-to-semantic-image-search.webp
+image_alt: Guide to semantic image search
 ---
 
 In the early days of the internet, if you searched “the dark knight,” search engines like Google didn’t necessarily know that you were referring to Batman.
@@ -34,19 +33,19 @@ Semantic image search has become invaluable for businesses that need to help the
 
 Online retailers need to make it as easy as possible for their customers to find what they’re looking for. Let’s say a customer saw a photo on Instagram of a blue sweater with polka dots she liked. Since she already has an idea of what she wants, she can use that image to search for a similar sweater rather than sorting through all of the results under the “sweaters” page. If the retailer sells an item similar to what the customer is looking for, she can quickly find it using a semantic image search.
 
-{% include figure.html url="../images/search-for-sweater-with-image.jpg" description="User searches for a sweater using an image of one she likes" alt="Search for product with semantic image search"%}
+{% include figure.html url="../images/search-for-sweater-with-image.webp" description="User searches for a sweater using an image of one she likes" alt="Search for product with semantic image search"%}
 
 ### 2. Recommend a similar product
 
 Similar to the example above, online retailers can use semantic image search to identify products to recommend to customers that are similar to the product they’re currently looking at. This makes it easier to help the customer find what they need and encourages them to keep looking for other items they might be interested in.
 
-{% include figure.html url="../images/recommend-similar-product-nordstrom-semantic-image-search.jpg" description="User is shown recommended products based off current search" alt="Recommend similar products with semantic image search"%}
+{% include figure.html url="../images/recommend-similar-product-nordstrom-semantic-image-search.webp" description="User is shown recommended products based off current search" alt="Recommend similar products with semantic image search"%}
 
 ### 3. Stock photo search
 
 Stock photography websites that offer semantic image search can help their users more efficiently find a photo to license. For example, let’s say a user found a photo of the Golden Gate Bridge against a sunset background that they want to use on their website, but the image is copyrighted. Instead of browsing manually through thousands of images to find one similar, they can do a quick semantic image search on a stock photo site using the image as the input to find the closest match. Or they could search for “golden gate bridge at sunset” with the same effect.
 
-{% include figure.html url="../images/iStock-image-search-semantic-image-search.jpeg" alt="Search for stock photo with semantic image search"%}
+{% include figure.html url="../images/iStock-image-search-semantic-image-search.webp" alt="Search for stock photo with semantic image search"%}
 
 ### 4. Duplicate image detection
 
@@ -54,7 +53,7 @@ Many companies store large amounts of digital images. For example, scientific or
 
 A semantic image search function allows the organization to detect duplicate images in its database, freeing up storage and improving search results. Highly accurate semantic image searches [can find slightly altered versions of the duplicate image](https://www.nyckel.com/docs/near-duplicate-removal), including an image that has been recolored, reformatted differently, or slightly resized.
 
-{% include figure.html url="../images/duplicate-image-search-semantic-image-search.png" description="Use semantic image search to find duplicate images in photo library" alt="Find duplicate images with semantic image search"%}
+{% include figure.html url="../images/duplicate-image-search-semantic-image-search.webp" description="Use semantic image search to find duplicate images in photo library" alt="Find duplicate images with semantic image search"%}
 
 ### 5. Manage, protect, and sell digital art
 
@@ -64,7 +63,7 @@ Using a semantic image search, a customer can use an image to search a large mar
 
 Online art marketplaces, museums, and other art organizations that need to maintain the integrity of their collections can also use semantic image search to find scammers who are selling or using plagiarized versions of their artwork elsewhere. This uses the same techniques as duplicate image detection mentioned above.
 
-{% include figure.html url="../images/saatch-art-online-gallery-semantic-image-search.jpg" alt="Manage digital art with semantic image search"%}
+{% include figure.html url="../images/saatch-art-online-gallery-semantic-image-search.webp" alt="Manage digital art with semantic image search"%}
 
 ### 6. Marketing and product photo search
 
@@ -72,31 +71,31 @@ Many businesses maintain large databases of images for marketing purposes. Seman
 
 For example, a marketing agency needs to find the right photo from its catalog to use in an upcoming ad campaign for its client. Instead of manually sifting through image files, it could upload a similar picture of its client’s product to locate what it needs.
 
-{% include figure.html url="../images/marketing-and-product-search-semantic-image-search.jpg" alt="Marketing and product photo search with semantic image search"%}
+{% include figure.html url="../images/marketing-and-product-search-semantic-image-search.webp" alt="Marketing and product photo search with semantic image search"%}
 
 ### 7. Real estate search
 
 Semantic image search is useful for real estate agents, home buyers, and sellers who want to find a home similar to something they already saw and liked. Using a semantic image search, a buyer could upload a photo of a home (or even a specific room) they love to find the closest match in their buying area. This saves the home buyer time wading through pages of available houses and takes some of the stress out of the house-hunting process.
 
-{% include figure.html url="../images/real-estate-search-semantic-search.jpg" alt="Real estate search with semantic image search"%}
+{% include figure.html url="../images/real-estate-search-semantic-search.webp" alt="Real estate search with semantic image search"%}
 
 ### 8. Image-based travel search
 
 A travel booking site, like Expedia, Priceline, or Booking.com, could use a semantic image search to help its users find a travel destination based on an image they saw and liked. For example, a user may have seen a picture of the Múlafossur Waterfall in the Faroe Islands on social media. Unlike the most famous iconic landmarks like the Eiffel Tower, the user may not immediately recognize the waterfall or know where it’s located. If they want to travel somewhere similar, they could visit their favorite travel booking site to search using the image to locate the destination and find hotels and excursions to book in the area.
 
-{% include figure.html url="../images/image-travel-search-semantic-image-search.jpg" alt="Image-based travel search with semantic image search"%}
+{% include figure.html url="../images/image-travel-search-semantic-image-search.webp" alt="Image-based travel search with semantic image search"%}
 
 ### 9. Pet and animal search
 
 Many people turn to online pet marketplaces to find their furry friends. Many would-be pet owners have an idea in mind of the type of pet (e.g., breed, color, size) they want, but doing a basic search on an online pet adoption website can quickly become overwhelming because of the number of pet listings. With semantic image search, a visitor can use a specific image of an adorable puppy (or another animal) to quickly sort through the database of available pets to find similar matches.
 
-{% include figure.html url="../images/pet-search-semantic-image-search.jpg" alt="Search for a pet with semantic image search"%}
+{% include figure.html url="../images/pet-search-semantic-image-search.webp" alt="Search for a pet with semantic image search"%}
 
 ### 10. Augment a museum experience
 
 Museums have an opportunity to augment their visitors’ experiences by allowing them to snap photos of things they see and then provide them with more information about the object they’re looking at. After a visitor snaps a photo, a semantic image search uses it to sort through the museum’s database to locate more information about the relevant object. It then sends this information about the object back to the visitor.
 
-{% include figure.html url="../images/augment-museum-experience-semantic-image-search.jpg" alt="Augment museum experience with semantic image search"%}
+{% include figure.html url="../images/augment-museum-experience-semantic-image-search.webp" alt="Augment museum experience with semantic image search"%}
 
 ### 11. Buying and selling on a resale marketplace
 
@@ -104,7 +103,7 @@ Resale marketplaces, like Craigslist or Facebook Marketplace, are popular ways t
 
 Using a semantic image search, a marketplace could enable its users to upload a photo of what they’re selling and then auto-populate the description fields based on the database of items previously sold on the marketplace. Similarly, a user shopping on a marketplace could upload a photo of what they’re looking for to find a listing that matches what they want to buy.
 
-{% include figure.html url="../images/marketplace-semantic-image-search.jpg" alt="Create marketplace listing using semantic image search"%}
+{% include figure.html url="../images/marketplace-semantic-image-search.webp" alt="Create marketplace listing using semantic image search"%}
 
 ## How to create a semantic image search
 

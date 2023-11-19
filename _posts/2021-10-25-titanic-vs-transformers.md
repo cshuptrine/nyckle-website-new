@@ -3,9 +3,9 @@ layout: post
 date: 2021-10-25
 title: 'A top 3% score in the Kaggle Titanic Challenge using Transformers'
 author: oscar
-summary: In this post we show how to make a top 3% submission on the Kaggle Titanic Challenge using Transformers
-og_image: /blog/images/2021/titanic-kaggle-hero.jpg
-og_image_alt: Titanic - learning from disaster
+description: In this post we show how to make a top 3% submission on the Kaggle Titanic Challenge using Transformers
+image: /blog/images/2021/titanic-kaggle-hero.webp
+image_alt: Titanic - learning from disaster
 ---
 
 The tragic Titanic shipwreck, documented in countless books and movies, has made its way into the Machine Learning world via the Kaggle challenge: [Titanic - learning from disaster](https://www.kaggle.com/c/titanic). In this challenge the goal is to predict which passengers survive based on metadata like sex, name and ticket price.

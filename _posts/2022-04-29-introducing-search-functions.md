@@ -3,8 +3,8 @@ layout: post
 date: 2022-04-29
 title: Introducing Nyckel Image Search Functions
 author: oscar
-summary: Nyckel Image Search functions enable cross-modal semantic search of images and text using the latest Deep Learning technology. Get started with a few simple API commands.
-og_image: /blog/images/2022/nft-finder-screenshot.jpg
+description: Nyckel Image Search functions enable cross-modal semantic search of images and text using the latest Deep Learning technology. Get started with a few simple API commands.
+image: /blog/images/2022/nft-finder-screenshot.webp
 ---
 
 We just released a new function type: Search! Our Search functions complement our Classification functions and broaden the use-cases supported by Nyckel. In this blogpost I discuss what they are, why we released them, and how they work.
@@ -15,7 +15,7 @@ A search function lets you upload a “gallery” (set) of images and then run q
 
 Nyckel lets you define your own gallery and conduct searches with a few simple API calls. We support galleries up to 10s of millions of images while maintaining around 300-500ms query latency. And as usual, we abstract away the machine learning and infrastructure minutia.
 
-{% include figure.html url="../images/2022/image-search-api-example.png" link="https://www.nyckel.com/docs" alt="Nyckel API documentation" width = 90 %}
+{% include figure.html url="../images/2022/image-search-api-example.webp" link="https://www.nyckel.com/docs" alt="Nyckel API documentation" width = 90 %}
 
 ## Some use-cases
 
@@ -39,7 +39,7 @@ Second, we use modern vector search technology that enables searching huge vecto
 
 To demonstrate the power of our search functions, we created one for NFTs (Non Fungible Tokens). The function gallery contains over 3 Million NFTs and can be searched by both text and image queries. Go ahead and [give it a try](https://www.nyckel.com/nft-finder/)!
 
-{% include figure.html url="../images/2022/nft-finder-screenshot.jpg" link= "https://www.nyckel.com/nft-finder/" alt="NFT finder" width=95 %}
+{% include figure.html url="../images/2022/nft-finder-screenshot.webp" link= "https://www.nyckel.com/nft-finder/" alt="NFT finder" width=95 %}
 
 ## In conclusion
 

@@ -3,9 +3,9 @@ layout: post
 date: 2022-11-06
 title: Why Content Moderation is Important for Your Business
 author: george
-summary: Some examples of how content moderation can benefit your business in unexpected ways.
-og_image: /blog/images/2022/content-moderation-business-benefits.jpg
-og_image_alt: Content moderation benefits
+description: Some examples of how content moderation can benefit your business in unexpected ways.
+image: /blog/images/2022/content-moderation-business-benefits.webp
+image_alt: Content moderation benefits
 ---
 
 Content moderation isn’t necessarily the sexiest topic when it comes to your business. It almost certainly wasn’t what you had in mind when you started your platform in the first place.

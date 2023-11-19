@@ -4,10 +4,9 @@ date: 2022-09-10
 title: Building a Recommender system using the Nyckel API.
 author: oscar
 summary: We break down the components of a Recommender system and show how ot set this up using the Nyckel API.
-og_image: /blog/images/2022/recommender-systems.jpg
-og_image_alt: Recommender systems using Nyckel
-seo_title: Building a Recommender system using the Nyckel Machine Learning API.
-seo_description: We break down the components of a Recommender system into Collaborative, Content and Hybrid filters. We then show how ot set this up using the Nyckel API.
+image: /blog/images/2022/recommender-systems.webp
+image_alt: Recommender systems using Nyckel
+description: We break down the components of a Recommender system into Collaborative, Content and Hybrid filters. We then show how ot set this up using the Nyckel API.
 ---
 
 ## Intro
@@ -78,7 +77,7 @@ Content-based filtering can be implemented using nearest neighbor search. For ex
 * Query using the new User and retrieve the most similar users.
 * Recommend the albums they listen to.
 
-{% include figure.html url="../images/2022/rs-user-content.png" alt="User based content filtering" description="Content-based filter by Text Search."%}
+{% include figure.html url="../images/2022/rs-user-content.webp" alt="User based content filtering" description="Content-based filter by Text Search."%}
 
 Conversely, if you have rich album meta-data, you can try filtering like so:
 
@@ -94,7 +93,7 @@ Collaborative filtering can be posed as classification where the input is a User
 
 The challenge arises due to the User context. Clearly, it is not enough to provide a UserId or Name – we must somehow encode the interaction and meta-data into the input so the classifier has access to it. So this becomes a context encoding challenge. We will look at two ways of doing this below. Let's first look at how it all would fit together using a [Nyckel Text Classification function](https://www.nyckel.com/docs/quickstart).
 
-{% include figure.html url="../images/2022/rs-collaborative.png" alt="Collaborative filtering by Classification" description="Collaborative filtering by Classification."%}
+{% include figure.html url="../images/2022/rs-collaborative.webp" alt="Collaborative filtering by Classification" description="Collaborative filtering by Classification."%}
 
 The core idea is that the Text Classification function is *trained to associate a set of album preferences with a new album*. So how to create train samples from the music preferences? We look at two ways next.
 

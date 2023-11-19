@@ -5,10 +5,10 @@ date: 2022-10-31
 author: oscar
 summary: Class-balance drift can degrade your auto content-moderation system. We
   look at what it is, how to track it, and what to do when it occurs.
-seo_description: Class-balance drift can degrade your auto content-moderation
+description: Class-balance drift can degrade your auto content-moderation
   system. We look at what it is, how to track it, and what to do when it occurs.
-og_image: /blog/images/2022/class-balance-drift-hero.jpg
-og_image_alt: Class balance drift
+image: /blog/images/2022/class-balance-drift-hero.webp
+image_alt: Class balance drift
 stage: false
 ---
 

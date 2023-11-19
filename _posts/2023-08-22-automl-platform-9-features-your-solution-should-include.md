@@ -6,14 +6,13 @@ author: george
 stage: false
 featured: false
 headliner: false
-seo_title: "AutoML Platform: 9 Must-Have Features"
 summary: AutoML involves more than just training a model; it should span the
   entire ML development pipeline. In this post, we explore what features and
   functionality you should look for in an AutoML platform.
-seo_description: The AutoML platform you choose should do more than train a
+description: The AutoML platform you choose should do more than train a
   model. Learn what 9 things you should look for when conducting an AutoML tools
   comparison.
-og_image: /blog/images/automl-features-graphic-new.jpeg
+image: /blog/images/automl-features-graphic-new.webp
 ---
 <div markdown="1" class="comment-div">
 This post is the final post in a series of articles about AutoML and what it offers organizations looking to implement ML. The first article of this series was an [intro to AutoML](https://www.nyckel.com/blog/what-is-automl-a-comprehensive-guide-what-it-means-for-product-teams/) and the second article [examines the concept of End-to-End AutoML](https://www.nyckel.com/blog/end-to-end-automl-your-automl-platform-should-span-the-entire-ml-development-pipeline/).
@@ -32,7 +31,7 @@ A [data engine](https://www.nyckel.com/blog/9-ways-to-use-a-data-engine-to-impro
 
 This data-centric approach to ML, [as advocated by Andrew Ng](https://mitsloan.mit.edu/ideas-made-to-matter/why-its-time-data-centric-artificial-intelligence), emphasizes that focusing on data quality is the best way to create a good model and that improving data quality is an iterative process. With the support of an AutoML tool with a robust data engine, continuous improvement of ML models becomes a streamlined process, leading to models that produce more accurate and reliable outcomes.
 
-{% include figure.html url="../images/data-engine-workflow.png" alt="AutoML platform with data engine" description="Ensure your AutoML platform enables a data engine"%}
+{% include figure.html url="../images/data-engine-workflow.webp" alt="AutoML platform with data engine" description="Ensure your AutoML platform enables a data engine"%}
 
 ## 2. Labeling tool
 

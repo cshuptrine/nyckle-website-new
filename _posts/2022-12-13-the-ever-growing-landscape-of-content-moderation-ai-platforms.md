@@ -6,15 +6,14 @@ author: george
 stage: false
 featured: false
 headliner: false
-seo_title: Landscape of Content Moderation AI Platforms
 summary: There’s a wider variety than ever of content moderation AI services
   available. Knowing your exact needs will help you find the platform that’s
   right for your specific business needs.
-seo_description: Learn about the similarities and differences between 9
+description: Learn about the similarities and differences between 9
   high-performing content moderation AI platforms to choose the one that’s best
   for your business.
-og_image: /blog/images/content-moderation-landscape-new.png
-og_image_alt: Comparing content moderation platforms
+image: /blog/images/content-moderation-landscape-new.webp
+image_alt: Comparing content moderation platforms
 ---
 
 If you run a social platform, e-commerce business, or any other online space that includes user-generated content, you understand the [importance of content moderation](https://www.nyckel.com/blog/why-content-moderation-is-important-for-your-business/). Luckily, content moderation has come a long way thanks to AI, making it easier and more efficient than ever to implement.
@@ -55,7 +54,7 @@ Nyckel includes classification, search, detection, and OCR for image as well as 
 
 Nyckel offers several tiers of pricing, including a free option at 1,000 invokes per month.
 
-{% include figure.html url="../images/nyckel-screenshot.jpg" alt="Nyckel content moderation AI platform" link="https://www.nyckel.com"%}
+{% include figure.html url="../images/nyckel-screenshot.webp" alt="Nyckel content moderation AI platform" link="https://www.nyckel.com"%}
 
 ### Hive Moderation
 
@@ -65,7 +64,7 @@ Hive’s main clients include gaming, streaming, and community platforms, and it
 \
 Hive does not have pricing readily available on their site, but you can request a demo.
 
-{% include figure.html url="../images/hive-screenshot.jpg" alt="Hive Moderation" link="https://hivemoderation.com"%}
+{% include figure.html url="../images/hive-screenshot.webp" alt="Hive Moderation" link="https://hivemoderation.com"%}
 
 ### Imagga
 
@@ -75,7 +74,7 @@ Clients use Imagga across a wide range of industries, from real estate to techno
 
 Imagga offers several monthly pricing tiers, including a “test” level that’s free and can process up to 1,000 API requests.
 
-{% include figure.html url="../images/imagga-screenshot.jpg" alt="Imagga" link="https://imagga.com/content-moderation-platform"%}
+{% include figure.html url="../images/imagga-screenshot.webp" alt="Imagga" link="https://imagga.com/content-moderation-platform"%}
 
 ### Sightengine
 
@@ -85,7 +84,7 @@ Sightengine offers off-the-shelf models as well as a higher-tier, customized sol
 
 Users looking to explore Sightengine can start with a free tier that allows for up to 2,000 invokes per month.
 
-{% include figure.html url="../images/sightengine-screenshot.jpg" alt="Sightengine" link="https://sightengine.com"%}
+{% include figure.html url="../images/sightengine-screenshot.webp" alt="Sightengine" link="https://sightengine.com"%}
 
 ### Membrace
 
@@ -95,7 +94,7 @@ Membrace’s solutions include 35 classes and 30 models, and the solution combin
 
 Membrace does not offer pricing details on their site, but they allow you to request a trial to test their platform.
 
-{% include figure.html url="../images/membrace-screenshot.jpg" alt="Membrace" link="https://membrace.ai/"%}
+{% include figure.html url="../images/membrace-screenshot.webp" alt="Membrace" link="https://membrace.ai/"%}
 
 ### Clarifai
 
@@ -105,7 +104,7 @@ Clarifai has a broad selection of models and workflows that include image recogn
 
 Clarifai’s “community” tier is free and allows up to 1,000 invokes per month.
 
-{% include figure.html url="../images/clarifai-screenshot.jpg" alt="Clarifai" link="https://www.clarifai.com/solutions/content-moderation"%}
+{% include figure.html url="../images/clarifai-screenshot.webp" alt="Clarifai" link="https://www.clarifai.com/solutions/content-moderation"%}
 
 ### Microsoft Azure
 
@@ -115,7 +114,7 @@ The Content Moderator service offers Moderation APIs that scan and classify vide
 
 Azure’s Content Moderator technically does not have a free program, but Microsoft offers up to 1,000 transactions for $1.00. It does not include human moderation in its services, but its human review tool allows users to implement their own human-in-the-loop.
 
-{% include figure.html url="../images/azure-screenshot.jpg" alt="Microsoft Azure Content Moderator" link="https://azure.microsoft.com/en-us/products/cognitive-services/content-moderator"%}
+{% include figure.html url="../images/azure-screenshot.webp" alt="Microsoft Azure Content Moderator" link="https://azure.microsoft.com/en-us/products/cognitive-services/content-moderator"%}
 
 ### Spectrum Labs
 
@@ -125,7 +124,7 @@ Spectrum Labs’ text and audio content moderation solutions are multilingual, b
 
 Spectrum Labs integrates into a number of social platforms, including Grindr. Pricing is not readily available on their site, but interested visitors can request a demo.
 
-{% include figure.html url="../images/spectrum-labs-screenshot.jpg" alt="Spectrum Labs" link="https://www.spectrumlabsai.com/guardian"%}
+{% include figure.html url="../images/spectrum-labs-screenshot.webp" alt="Spectrum Labs" link="https://www.spectrumlabsai.com/guardian"%}
 
 ### WebPurify
 
@@ -133,7 +132,7 @@ Spectrum Labs integrates into a number of social platforms, including Grindr. Pr
 
 WebPurify offers live moderation services, automated AI, and a hybrid option as well. It allows for video, image, and text data inputs with very simple-to-implement APIs that use HTTP request formats. WebPurify also offers a 15-minute free video trial with no set-up or payment information required.
 
-{% include figure.html url="../images/webpurify-screenshot.jpg" alt="WebPurify" link="https://www.webpurify.com"%}
+{% include figure.html url="../images/webpurify-screenshot.webp" alt="WebPurify" link="https://www.webpurify.com"%}
 
 ## Choosing a content moderation AI platform to fit your unique needs
 

@@ -21,9 +21,11 @@
     {% if include.link != null and include.link != "" %}
     <a href="{{ include.link }}">
         {% endif %}
-        <img src="{{ include.url }}" alt="{{ alt }}" style="border-radius: 20px; max-width: {{width}}%"
-            srcset="{{ url2x }} 2x%">
-        <figcaption>{{ include.description }}</figcaption>
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="{{ include.url }}" alt="{{ alt }}" class="{% if include.box == 'yes' %}boxed{% endif %}" style="border-radius: 20px; max-width: {{width}}%" srcset="{{ url2x }} 2x%" loading="lazy">
+    </div>
+    <figcaption>{{ include.description }}</figcaption>
         {% if include.link != null and include.link != "" %}
     </a>
     {% endif %}

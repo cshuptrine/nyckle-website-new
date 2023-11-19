@@ -3,9 +3,9 @@ layout: post
 date: 2022-09-18
 title: The Long Tail of Content Moderation Use-Cases
 author: oscar
-summary: Beyond Spam, NSFW and violence are a long tail of situations that require content moderation across gaming, dating, e-commerce and children's platforms.
-og_image: /blog/images/2022/long-tail-hero.jpeg
-og_image_alt: Long Tail of Content Moderation Use-Cases
+description: Beyond Spam, NSFW and violence are a long tail of situations that require content moderation across gaming, dating, e-commerce and children's platforms.
+image: /blog/images/2022/long-tail-hero.webp
+image_alt: Long Tail of Content Moderation Use-Cases
 ---
 
 As Dylan Jhaveri of Mux.com put it, [”You either die an MVP or live long enough to build content moderation.”](https://www.mux.com/blog/you-either-die-an-mvp-or-live-long-enough-to-build-content-moderation)
@@ -16,7 +16,7 @@ In this blog post we’ll explore these less obvious, “long tail” types of c
 
 ## Gaming
 
-{% include figure.html url="../images/2022/long-tail-gaming.jpeg" alt="Gaming Use-Cases" %}
+{% include figure.html url="../images/2022/long-tail-gaming.webp" alt="Gaming Use-Cases" %}
 
 ### Profanity
 
@@ -44,7 +44,7 @@ These days it’s easy for users to take screen-grabs of copyrighted materials a
 
 ## Dating
 
-{% include figure.html url="../images/2022/long-tail-dating.jpg" alt="Dating Use-Cases" %}
+{% include figure.html url="../images/2022/long-tail-dating.webp" alt="Dating Use-Cases" %}
 
 ### Profile particulars
 
@@ -68,7 +68,7 @@ To prevent this from happening in the first place, you need a strong vetting sys
 
 ## Children’s Platforms
 
-{% include figure.html url="../images/2022/long-tail-childrens.jpeg" alt="Platform for children Use-Cases" %}
+{% include figure.html url="../images/2022/long-tail-childrens.webp" alt="Platform for children Use-Cases" %}
 
 ### Cyberbullying
 
@@ -94,7 +94,7 @@ Without realizing it, they may post photos or other content that reveals this in
 
 ## E-Commerce/Online Marketplaces
 
-{% include figure.html url="../images/2022/long-tail-ecommerce.jpg" alt="Ecommerce Use-Cases" %}
+{% include figure.html url="../images/2022/long-tail-ecommerce.webp" alt="Ecommerce Use-Cases" %}
 
 ### Disintermediation
 
@@ -124,7 +124,7 @@ When moderating content, you need to consider sensitive situations like these an
 
 ## Blogs and Communities
 
-{% include figure.html url="../images/2022/long-tail-earthporn.jpg" alt="r/Earthporn Use-Cases" description="The absence of manmade structures qualifies this image as acceptable in the r/Earthporn subreddit" %}
+{% include figure.html url="../images/2022/long-tail-earthporn.webp" alt="r/Earthporn Use-Cases" description="The absence of manmade structures qualifies this image as acceptable in the r/Earthporn subreddit" %}
 
 ### Off-topic content
 

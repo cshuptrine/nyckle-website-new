@@ -7,14 +7,13 @@ author: oscar
 stage: false
 featured: false
 headliner: false
-seo_title: Hierarchical Image Classification vs. Flat Classification
 summary: In this article, we explain the differences between hierarchical and
   flat image classification and make the case for why a flat structure is often
   the better choice for many use cases.
-seo_description: We explain the differences between hierarchical image
+description: We explain the differences between hierarchical image
   classification and flat and make the case for why a flat structure is often
   the better choice.
-og_image: /blog/images/hierarchical-image-classification-header-image.png
+image: /blog/images/hierarchical-image-classification-header-image.webp
 ---
 The objective of image classification is to categorize an image into one or more labels of your choosing. When building an image classifier, you can either use hierarchical image classification or flat image classification. 
 
@@ -26,13 +25,13 @@ Hierarchical image classification organizes categories using a tree structure. A
 
 For example, let’s consider a use case where you are classifying a dataset of car images by their make and model, and your model is trying to classify a photo of a Toyota Camry. In a hierarchical classifier, your model would first predict the brand/make of the car (Toyota, Honda, Ford, etc.). Next, it predicts the vehicle type (sedan, SUV, truck, etc.). And then finally, it predicts the model of the car (e.g., Camry, Corolla, Prius, etc.). This means you end up with **a lot** of models. In the example below, you have 1 model in Level 1, N models in Level 2 (where N is the number of brands in Level 1), and so on.
 
-{% include figure.html url="../images/hierarchical-classificationexample.png" description=" In a real example, you’d likely have many more brands, and thus, many more models to manage." alt="hierarchical image classification example"%}
+{% include figure.html url="../images/hierarchical-classificationexample.webp" description=" In a real example, you’d likely have many more brands, and thus, many more models to manage." alt="hierarchical image classification example"%}
 
 ## What is flat image classification?
 
 Flat image classification bypasses the granular steps of the different levels used in hierarchical classification and goes directly from input image → desired output label. Using the same example above, the image classifier would immediately classify the image with the make & model (Toyota Camry), without making more granular decisions along the way (like whether the car is a sedan or SUV). If you really needed to know the vehicle type (sedan), you could work backward from the output label of “Toyota Camry” to infer what it is.
 
-{% include figure.html url="../images/flat-classification-example3.png" description=" In a real example, you’d likely have many more output labels (as many labels are there are car types to classify)." alt="Flat image classification example"%}
+{% include figure.html url="../images/flat-classification-example3.webp" description=" In a real example, you’d likely have many more output labels (as many labels are there are car types to classify)." alt="Flat image classification example"%}
 
 ## Are hierarchical classifiers more accurate?
 

@@ -3,8 +3,8 @@ layout: post
 date: 2022-04-30
 title: Custom AI-Assisted Content Moderation 
 author: george
-summary: Online communities need content moderation to thrive, but the diversity of the internet is not fully served by general purpose content moderation APIs. We lay out the need for custom AI-assisted content moderation, look at what such a moderation pipeline would look like, and show how Nyckel makes it significantly easier to build such a pipeline.
-og_image: /blog/images/2022/content-moderation-workflow.png
+description: Online communities need content moderation to thrive, but the diversity of the internet is not fully served by general purpose content moderation APIs. We lay out the need for custom AI-assisted content moderation, look at what such a moderation pipeline would look like, and show how Nyckel makes it significantly easier to build such a pipeline.
+image: /blog/images/2022/content-moderation-workflow-hero.webp
 ---
 
 As noted on [this mux.com blog post](https://www.mux.com/blog/you-either-die-an-mvp-or-live-long-enough-to-build-content-moderation),
@@ -49,7 +49,7 @@ people try to work around it.
 
 With that in mind, here is a diagram of an AI-assisted content moderation workflow:
 
-{% include figure.html url="../images/2022/content-moderation-workflow.png" description="AI-assisted content moderation workflow" link = "https://www.nyckel.com/custom-content-moderation-api"%}
+{% include figure.html url="../images/2022/content-moderation-workflow.webp" description="AI-assisted content moderation workflow" link = "https://www.nyckel.com/custom-content-moderation-api"%}
 
 While the diagram leaves out some implementation-specific details, it captures the essence of the solution. User input
 is sent to an AI model to predict whether it's acceptable. If the model accepts or rejects the input with high

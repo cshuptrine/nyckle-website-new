@@ -6,15 +6,14 @@ author: john
 stage: false
 featured: false
 headliner: false
-seo_title: "Computer Vision SaaS Landscape: Comparison of the Top 9 Players"
 summary: In this article, we compare the functionality, amount of time it takes
   to set up a model, performance, positioning, and pricing of the nine leading
   computer vision SaaS players. Results show significant variations across
   accuracy, user experience, and pricing structures.
-seo_description: We compare nine leading computer vision SaaS providers on
+description: We compare nine leading computer vision SaaS providers on
   functionality, model creation time, performance, market positioning, and
   pricing.
-og_image: /blog/images/computer-vision-landscape.png
+image: /blog/images/computer-vision-landscape.webp
 ---
 *To maintain as objective of an assessment as possible, we hired a freelance writer, [John Weston](https://www.linkedin.com/in/john-weston/), who did not have prior experience using Nyckel and does not have ML expertise to test the computer vision platforms featured in this post.*
 
@@ -70,7 +69,7 @@ Now we have a list of CV SaaS players and a list of criteria to use to compare t
 
 Our dataset included a set of 76 images sourced from Google. The images fall into three categories: wearing a mask correctly (n = 20), wearing a mask incorrectly (n = 32), and not wearing a mask (n = 24).
 
-{% include figure.html url="../images/mask.png" alt="The images fall into three categories: wearing a mask correctly, wearing a mask incorrectly, and not wearing a mask"%}
+{% include figure.html url="../images/mask.webp" alt="The images fall into three categories: wearing a mask correctly, wearing a mask incorrectly, and not wearing a mask"%}
 
 We initially started with a smaller set of images, but one of the platforms (Ximilar) required a minimum of 20 images per class. So, we adjusted the dataset for all providers.
 
@@ -108,7 +107,7 @@ Now we’ll dive a little deeper into each of the players we evaluated.
 
 ### Nyckel
 
-{% include figure.html url="../images/nyckel-cv-saas2.jpeg" alt="Nyckel computer vision SaaS" link="https://www.nyckel.com" %}
+{% include figure.html url="../images/nyckel-cv-saas2.webp" alt="Nyckel computer vision SaaS" link="https://www.nyckel.com" %}
 
 ***Super quick and accurate with a breadth of ML services***
 
@@ -118,7 +117,7 @@ The model trained on the fly, and its predictions continued to update during dat
 
 ### Ximilar
 
-{% include figure.html url="../images/ximilar-cv-saas.jpg" alt="Ximilar computer vision SaaS" link="https://www.ximilar.com" %}
+{% include figure.html url="../images/ximilar-cv-saas.webp" alt="Ximilar computer vision SaaS" link="https://www.ximilar.com" %}
 
 ***User-friendly and accurate with a narrow focus on computer vision***
 
@@ -128,7 +127,7 @@ After uploading the data, model training took about 20 minutes, which was good/a
 
 ### Roboflow
 
-{% include figure.html url="../images/roboflow-cv-saas.jpg" alt="Roboflow computer vision SaaS" link="https://www.roboflow.com" %}
+{% include figure.html url="../images/roboflow-cv-saas.webp" alt="Roboflow computer vision SaaS" link="https://www.roboflow.com" %}
 
 ***Computer vision platform for enthusiasts who want to get into the details***
 
@@ -140,7 +139,7 @@ Although Roboflow offers a range of options for model tweaking, a subscription i
 
 ### Hasty
 
-{% include figure.html url="../images/hasty-cv-saas.jpg" alt="Hasty computer vision SaaS" link="https://hasty.cloudfactory.com/" %}
+{% include figure.html url="../images/hasty-cv-saas.webp" alt="Hasty computer vision SaaS" link="https://hasty.cloudfactory.com/" %}
 
 ***Low performance & usability — but may perform better with image classification (if the option exists)***
 
@@ -152,7 +151,7 @@ The process of annotating our training data using Hasty's object detection funct
 
 ### Levity
 
-{% include figure.html url="../images/levity-cv-saas.jpg" alt="Levity computer vision SaaS" link="https://levity.ai/" %}
+{% include figure.html url="../images/levity-cv-saas.webp" alt="Levity computer vision SaaS" link="https://levity.ai/" %}
 
 ***Easy-to-use with many no-code integrations, core ML performance lagging others***
 
@@ -162,7 +161,7 @@ Model training only took a few minutes to complete, and **Levity correctly class
 
 ### Clarifai
 
-{% include figure.html url="../images/clarifai-cv-saas.jpg"  alt="Clarifai computer vision SaaS" link="https://www.clarifai.com" %}
+{% include figure.html url="../images/clarifai-cv-saas.webp"  alt="Clarifai computer vision SaaS" link="https://www.clarifai.com" %}
 
 ***The OG offers a comprehensive product suite in a somewhat confusing platform***
 
@@ -176,7 +175,7 @@ Clarifai was the only smaller provider that talked about its user community and 
 
 ### Google Vertex AI
 
-{% include figure.html url="../images/vertex-ai-cv-saas.png" alt="Google Vertex AI computer vision SaaS" link="https://cloud.google.com/vertex-ai" %}
+{% include figure.html url="../images/vertex-ai-cv-saas.webp" alt="Google Vertex AI computer vision SaaS" link="https://cloud.google.com/vertex-ai" %}
 
 ***Steep learning curve with solid accuracy and helpful user tutorials***
 
@@ -190,7 +189,7 @@ Once we (finally) got to the model training step, Google asked us to choose betw
 
 ### Azure Custom Vision
 
-{% include figure.html url="../images/azure-cv-saas.png" alt="Azure Custom Vision" link="https://azure.microsoft.com/en-us/products/cognitive-services/custom-vision-service" %}
+{% include figure.html url="../images/azure-cv-saas.webp" alt="Azure Custom Vision" link="https://azure.microsoft.com/en-us/products/cognitive-services/custom-vision-service" %}
 
 ***Getting started is an absolute headache, but the model performs accurately***
 
@@ -202,7 +201,7 @@ When it was finally time to set up our model, Azure asked us to choose a domain 
 
 ### AWS Rekognition Custom Labels
 
-{% include figure.html url="../images/aws-cv-saas.png" alt="AWS Custom Vision" link="https://docs.aws.amazon.com/rekognition/latest/customlabels-dg/what-is.html" %}
+{% include figure.html url="../images/aws-cv-saas.webp" alt="AWS Custom Vision" link="https://docs.aws.amazon.com/rekognition/latest/customlabels-dg/what-is.html" %}
 
 ***Tedious set-up; deployment required coding, so we couldn’t test its performance***
 

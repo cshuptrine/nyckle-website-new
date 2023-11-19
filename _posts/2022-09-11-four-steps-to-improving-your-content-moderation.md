@@ -6,14 +6,13 @@ author: oscar
 stage: false
 featured: false
 headliner: false
-seo_title: From Blacklists & Regex, via Pre-trained to custom AIs, for moderating UGC.
 summary: Progress through blacklists and pre-trained AI's to full custom-AI
   content moderation.
-seo_description: Learn how to improve your content moderation through blacklists
+description: Learn how to improve your content moderation through blacklists
   and regular expressions, through pre-trained AIs, to custom AI that learns
   from your data.
-og_image: /blog/images/2022/content-moderation-steps-hero.jpeg
-og_image_alt: The four steps to content moderation
+image: /blog/images/2022/content-moderation-steps-hero.webp
+image_alt: The four steps to content moderation
 ---
 
 As someone who runs an online platform, you’re excited to see your users interacting and posting content. You’re focused on growth and traction, after all.

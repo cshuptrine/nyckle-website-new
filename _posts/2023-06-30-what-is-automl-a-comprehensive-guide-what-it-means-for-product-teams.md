@@ -6,14 +6,13 @@ author: george
 stage: false
 featured: false
 headliner: false
-seo_title: What is AutoML? A Comprehensive Guide & What It Means for Product Teams
 summary: "In this post we look at AutoML, explain what it is and how it works,
   and discuss how it can help product teams build AI-enabled products and
   features. "
-seo_description: "In this post we look at AutoML, explain what it is and how it
+description: "In this post we look at AutoML, explain what it is and how it
   works, and discuss how it can benefit product teams trying to build AI-enabled
   products and features. "
-og_image: /blog/images/what-is-automl-9.png
+image: /blog/images/what-is-automl-9.webp
 ---
 <div markdown="1" class="comment-div">
 This post is the first in a series of articles about AutoML and what it offers organizations looking to implement ML. The second article of this series [examines the concept of End-to-End AutoML](https://www.nyckel.com/blog/end-to-end-automl-your-automl-platform-should-span-the-entire-ml-development-pipeline/) and the final article shares [nine features your AutoML platform should include](https://www.nyckel.com/blog/automl-platform-9-features-your-solution-should-include/).

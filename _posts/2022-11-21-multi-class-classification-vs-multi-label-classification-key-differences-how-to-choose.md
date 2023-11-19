@@ -5,16 +5,15 @@ title: "Multi-Class Classification vs. Multi-Label Classification: Key
 date: 2022-11-21
 author: oscar
 stage: false
-seo_title: Multi-Class vs. Multi-Label Classification
 summary: One of the first steps before creating a new classification function is
   to decide whether to use multi-class classification or multi-label
   classification. In this article, we’ll cover the differences between the two
   types of classification and help you choose which approach makes the most
   sense for your problem.
-seo_description: Learn about the differences between multi-class classification
+description: Learn about the differences between multi-class classification
   and multi-label classification. Which should you use? Let’s explore.
-og_image: /blog/images/nyckel-flowchart-v4-medium-background.png
-og_image_alt: Multi-class classification vs. multi-label classification
+image: /blog/images/nyckel-flowchart-v4-medium-background-hero.webp
+image_alt: Multi-class classification vs. multi-label classification
 ---
 
 One of the first steps before creating a new classification function is to decide whether to use multi-class classification or multi-label classification. In this article, we’ll cover the differences between the two types of classification and help you choose which approach makes the most sense for your problem.
@@ -82,7 +81,7 @@ However, the overhead of managing 20 different binary functions at some point ou
 
 ## How to choose between multi-label classification and multi-class classification
 
-{% include figure.html url="../images/nyckel-flowchart-v4-medium-background.png" alt="Decision flowchart"%}
+{% include figure.html url="../images/nyckel-flowchart-v4-medium-background.webp" alt="Decision flowchart"%}
 
 Choosing between the different types of classification isn’t always a straightforward answer and may require you to weigh the pros and cons. However, below are a few guidelines we like to follow.
 

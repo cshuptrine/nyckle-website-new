@@ -4,7 +4,7 @@ date: 2022-04-29
 title: ML is Just a Developer Tool
 author: dan
 summary: ... at least for now
-seo_description: Even with massive advances, Machine Learning should still be considered one tool of many in a developers' toolchain; not a panacea.
+description: Even with massive advances, Machine Learning should still be considered one tool of many in a developers' toolchain; not a panacea.
 ---
 
 Like most companies who went through Y-Combinator this winter, Nyckel just raised a seed round.  One of the frequent questions we got from investors was something along the lines of “won’t GPT-3 put you out of a job?”  Like, now that GPT-3 exists, programming has been solved, and we can all go home.
@@ -15,13 +15,13 @@ Granted, it’s a heck of a tool.  ML unlocks capabilities that have previously 
 
 For example: suppose you’re asked to write software that can grade worksheets with handwritten answers.  One example might look like this:
 
-{% include figure.html url="../images/2022/worksheet-partial.jpg" description="An example worksheet" %}
+{% include figure.html url="../images/2022/worksheet-partial.webp" description="An example worksheet" %}
 
 How do you write a program that grades written exams?  Well, you break the problem down, just like you would any software project.  First you have to capture images of the exam pages; perhaps by integrating with a scanner or camera API.  Then what?  Well, you probably need to identify which handwriting represents the answer to which question.
 
 For a worksheet like the example above, you might be able to get away with just hardcoding the bounding boxes for each answer section.  But, if your users are scanning with their phones, you’ll need to take into account images taken from closer or farther away, or taken at an angle.  You can look for an image library that can resize and correct for skewed images, or you might consider training an image detector to find where the answers are written.
 
-{% include figure.html url="../images/2022/detected-question-1.png" description="Grabbing just question 1" %}
+{% include figure.html url="../images/2022/detected-question-1.webp" description="Grabbing just question 1" %}
 
 Once you’re able to point to the specific handwritten text for question 1, you need to convert it to a string using OCR:
 

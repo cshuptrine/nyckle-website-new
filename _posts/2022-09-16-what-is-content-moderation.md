@@ -3,9 +3,9 @@ layout: post
 date: 2022-09-16
 title: What is Content Moderation?
 author: oscar
-summary: Content Moderation is critical when hosting user generated content. We break down the basic concepts and solutions.
-og_image: /blog/images/2022/what-is-content-moderation-books.jpg
-og_image_alt: What is content moderation
+description: Content Moderation is critical when hosting user generated content. We break down the basic concepts and solutions.
+image: /blog/images/2022/what-is-content-moderation-books.webp
+image_alt: What is content moderation
 ---
 
 Content moderation refers to all the actions and processes you employ to monitor the text and other media that users post on your platform. This includes screening and removing user-generated content (UGC) that you regard as unacceptable according to your online community standards.

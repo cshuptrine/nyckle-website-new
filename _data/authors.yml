@@ -3,28 +3,32 @@ dan:
   display_name: Dan Ott
   github: danielott
   linkedin: danott
+  image: /assets/images/important/blog-dan.jpeg
 
 oscar:
   display_name: Oscar Beijbom
   github: beijbom
   linkedin: oscarbeijbom
   twitter: beijbom
+  image: /assets/images/important/blog-oscar.jpeg
 
 george:
   display_name: George Mathew
   github: saintarian
   twitter: georgemkan
   linkedin: georgemathew
+  image: /assets/images/important/blog-george.jpeg
 
 jeremy:
   display_name: Jeremy Schneider
   github: jerschneid
   linkedin: jerschneid
   twitter: jerschneid
+  image: /assets/images/important/blog-jeremy.jpeg
 
 nyckel:
   display_name: Nyckel
-  image: https://www.nyckel.com/img/nyckel-icon.png
+  image: /favicon.png
   twitter: nyckelai
   github: nyckelai
   linkedin: nyckelai
@@ -32,13 +36,13 @@ nyckel:
 
 john:
   display_name: John Weston
-  image: https://www.nyckel.com/blog/images/John_Weston_headshot.jpg
   linkedin: john-weston
 
 andrew:
   display_name: Andrew Tate
   linkedin: andrew-tate-224b30a7
   github: ajtatey
+  image: /assets/images/important/blog-andrew.jpeg
 
 becca:
   display_name: Becca Miller

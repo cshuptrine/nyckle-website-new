@@ -5,16 +5,15 @@ title: "How to Classify Time Series Signals With Computer Vision: Kaggle Whale
 date: 2023-03-31
 author: george
 stage: false
-seo_title: How to Classify Time Series Signals With Computer Vision
 summary: "Classifying time-series signals is a surprising and cool use-case of
   image classification. In this post, we show you one way to do that,  by
   solving the kaggle whale sound classification challenge using image
   classification.  "
-seo_description: "Learn how to use image classification to classify time series
+description: "Learn how to use image classification to classify time series
   signals, and in this case, audio recordings. No ML expertise required. You'll
   see how to process the audio into images and how to use Nyckel to train an
   image classification function in minutes. "
-og_image: /blog/images/signal_classification_header.jpg
+image: /blog/images/signal_classification_header.webp
 ---
 We are constantly surprised by the various ways our customers use our platform. One such use case that caught our attention is using image classification to analyze time series signals. In this blog post, we'll demonstrate one approach to accomplish this by guiding you through building an [image classification function](https://www.nyckel.com/image-classification-api) to classify audio clips, a form of time series signals.
 
@@ -27,7 +26,7 @@ The challenge we aim to solve in this post is Kaggle's [whale detection challeng
 Time series data is generally a series of numbers representing amplitudes of the signal along the time series. In the case of the whale dataset, each audio clip is 2 seconds long and is sampled at 2kHz. This means that each clip is a series of 4000 numbers. To solve the challenge using image classification, the first thing we’ll have to do, of course, is turn the time series signal into an image. We have a few options for doing that:
 
 * **Plot the waveform with amplitude on the x-axis and time on the y-axis.** This is the easiest method and can produce good classification results in some cases. See an example of such a plot below:
-{% include figure.html url="../images/whale_waveform.png" width="60" alt="A waveform plot of a right whale call"%}
+{% include figure.html url="../images/whale_waveform.webp" width="60" alt="A waveform plot of a right whale call"%}
 * **[Spectrogram](https://en.wikipedia.org/wiki/Spectrogram):** A spectrogram is a visual representation of the frequencies present in a signal, with time on the x-axis, frequency on the y-axis, and the amplitude at each frequency represented by color intensity. This method exposes a lot more information about the signal in image form, and it's the method we'll use in this post. You’ll see example images of spectrograms further down. 
 * **[Mel spectrogram](https://ketanhdoshi.github.io/Audio-Mel/):** This is a variation of the spectrogram that uses a non-linear frequency scale on the y-axis, called the mel scale, which more closely mimics human perception of pitch. Automatic speech recognition models, like [OpenAI’s Whisper](https://github.com/openai/whisper), commonly use this method. 
 
@@ -87,8 +86,8 @@ fig.savefig("not_whale_spectrograms.png")
 ```
 
 And here are a few examples of resulting spectrograms:
-{% include figure.html url="../images/whale_spectrograms.png" alt="Three example spectrograms of a right whale call"%}
-{% include figure.html url="../images/not_whale_spectrograms.png" alt="Three example spectrograms that don't contain a right whale call"%}
+{% include figure.html url="../images/whale_spectrograms.webp" alt="Three example spectrograms of a right whale call"%}
+{% include figure.html url="../images/not_whale_spectrograms.webp" alt="Three example spectrograms that don't contain a right whale call"%}
 
 As you can see, there is somewhat of a pattern for the whale calls in the spectrogram - a wisp in the lower end of the frequency spectrum that curves up (increases in frequency) as it progresses. You might also notice the amount of noise present in some of these clips. This is not going to be easy!
 
@@ -183,7 +182,7 @@ print("Done adding samples")
 
 The function trains within a few seconds (yes, really!) after the images are uploaded. Here is a screenshot of the resulting function in our UI:
 
-{% include figure.html url="../images/whale_classification_function_screenshot.png" alt="A screenshot of a trained Nyckel image classification function for whale calls"%}
+{% include figure.html url="../images/whale_classification_function_screenshot.webp" alt="A screenshot of a trained Nyckel image classification function for whale calls"%}
 
 The accuracy bars on the top right of the screen show that we got an ~85% accuracy as measured by [cross-validation](https://docs.aws.amazon.com/machine-learning/latest/dg/cross-validation.html). Not bad! But let’s check how it does against a holdout test set. Here’s the code we used to call our trained function using 1,000 examples each of whale and “not whale” audio clips:
 
@@ -219,7 +218,7 @@ print(f"Accuracy: {(true_positives + true_negatives) / (true_positives + true_ne
 
 We got an accuracy of 85.45%, which is pretty much exactly what Nyckel’s cross-validation produced. Finally, here is the confusion matrix for the function:
 
-{% include figure.html url="../images/whale_classification_confusion_matrix.png" width="45" alt="The confusion matrix for the whale sound classification function"%}
+{% include figure.html url="../images/whale_classification_confusion_matrix.webp" width="45" alt="The confusion matrix for the whale sound classification function"%}
 
 ## Possible improvements
 

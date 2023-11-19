@@ -4,15 +4,14 @@ title: "Google Cloud Vision API Class List: Can We Reverse-Engineer to Find the 
 date: 2023-04-30
 author: george
 stage: false
-seo_title: What's the Class List for Google Cloud Vision API?
 summary: "Google's pre-trained computer vision model, Cloud Vision API, tags
   images with labels based on image contents. However, Google hasn't published
   the complete list of class labels. In this post, we try to reverse-engineer
   this list. "
-seo_description: Google provides a pre-trained computer vision model that tags
+description: Google provides a pre-trained computer vision model that tags
   images with labels based on image contents. In this post, we try to
   reverse-engineer the labels list.
-og_image: /blog/images/google-cloud-vision-api-burger.jpg
+image: /blog/images/google-cloud-vision-api-burger.webp
 ---
 ## What is Google Cloud Vision API?
 
@@ -20,7 +19,7 @@ Google released its Cloud Vision API in 2015 as a computer vision API that enabl
 
 This post will focus on Google Cloud Vision API’s “[Label Detection](https://cloud.google.com/vision/docs/labels)” feature, which utilizes machine learning to automatically tag images with relevant labels based on their content. You can [try it out for yourself](https://cloud.google.com/vision/docs/drag-and-drop), but here is an example:
 
-{% include figure.html url="../images/google-cloud-vision-api-burger.jpg" description="An example of Google Cloud Vision API's label detection applied to an image of a burger. The image only shows about a quarter of the labels returned - the rest are hidden below the scroll."%}
+{% include figure.html url="../images/google-cloud-vision-api-burger.webp" description="An example of Google Cloud Vision API's label detection applied to an image of a burger. The image only shows about a quarter of the labels returned - the rest are hidden below the scroll."%}
 
 ## What is the class list, and why is it important?
 

@@ -3,7 +3,7 @@ layout: post
 date: 2021-10-19
 title: Local Development and Validation of Nuget Packages
 author: george
-summary: Learnings from setting up a local development workflow for developing and validating nuget packages
+description: Learnings from setting up a local development workflow for developing and validating nuget packages
 ---
 
 *Why is an ML company talking about nuget instead of PyTorch or transformers? Because we are C# nerds and because production ML is a [whole lot more](https://www.nyckel.com/blog/ml-too-hard-for-software-developers/) than training a model. You shouldn't need to know anything about PyTorch, tensors, or GPUs to use ML. More on that in this [short video](https://www.youtube.com/watch?v=BzawKd_7WDY).*

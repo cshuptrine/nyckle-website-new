@@ -5,15 +5,14 @@ title: Taimi Reduces Content Moderation Time by 3x, Experiences 10x Cost
 date: 2022-08-09
 author: oscar
 stage: false
-seo_title: Taimi Customer Story
 summary: <i>Our average moderation time went down by three times, auto
   moderation coverage increased four times, and accuracy imporoved to 96%!</i> –
   Vladislav Yavorskyi, Moderation Manager, Taimi
-seo_description: Taimi used Nyckel’s text classification API to increase
+description: Taimi used Nyckel’s text classification API to increase
   curation coverage and accuracy and reduce latency over time with its
   auto-retrain. Read more.
-og_image: /blog/images/taimi-case-study-header-image.png
-og_image_alt: Taimi uses Nyckel for content moderation
+image: /blog/images/taimi-case-study-header-image.webp
+image_alt: Taimi uses Nyckel for content moderation
 ---
 
 <a href="https://taimi.com">Taimi</a> is an LGBTQ+ dating app, with over 16 million users on the platform. With a community as large as Taimi’s, content moderation is critical to ensure a positive user experience.
@@ -31,7 +30,7 @@ Taimi uses Nyckel text classification to moderate content across its platforms
 
 Taimi is a dating app for lesbian, gay, bi, trans, queer, and others who don’t identify as cisgender and heterosexual. The company built the app around the concept of dating fluidity, and users choose it because it offers them a queer-centric bio, authentic connections, a place to be themselves, and a strong commitment to harassment prevention.
 
-{% include figure.html url="../images/2022/taimi-info-card.jpg" alt="Taimi info card" link="https://taimi.com"%}
+{% include figure.html url="../images/2022/taimi-info-card.webp" alt="Taimi info card" link="https://taimi.com"%}
 
 ## The Challenge
 

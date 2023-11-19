@@ -7,16 +7,15 @@ author: george
 stage: false
 featured: true
 headliner: false
-seo_title: "End-to-End AutoML: Your AutoML Platform Should Span the Entire ML
   Development Pipeline"
 summary: "AutoML platforms automate the work required to train an ML model.
   However, training a model is a small part of the ML development lifecycle. An
   end-to-end AutoML platform that handles all aspects of ML development can
   provide significant benefits. "
-seo_description: And end-to-end AutoML platform that handles all aspects of the
+description: And end-to-end AutoML platform that handles all aspects of the
   ML development lifecycle offers significant benefits when compared to AutoML
   platforms that only do model training.
-og_image: /blog/images/end-to-end-automl-header_v2.png
+image: /blog/images/end-to-end-automl-header_v2.webp
 ---
 <div markdown="1" class="comment-div">
 This post is the second in a series of articles about AutoML and what it offers organizations looking to implement ML. The first article of this series was an [intro to AutoML](https://www.nyckel.com/blog/what-is-automl-a-comprehensive-guide-what-it-means-for-product-teams/) and the final article shares [nine features your AutoML platform should include](https://www.nyckel.com/blog/automl-platform-9-features-your-solution-should-include/).
@@ -25,7 +24,7 @@ This post is the second in a series of articles about AutoML and what it offers 
 
 In our previous post, *[What is AutoML? A Comprehensive Guide & What It Means for Product Teams](https://www.nyckel.com/blog/what-is-automl-a-comprehensive-guide-what-it-means-for-product-teams/),* we talked about what AutoML is and how it’s a huge help in making ML accessible to non-experts. We mentioned how AutoML takes your annotated data and produces a model, automating most of the work an expert would perform in this process. This automation makes the process faster, less error-prone, ensures you follow best practices, and makes it possible to train a model without ML expertise. 
 
-{% include figure.html url="../images/what_is_automl_header_cropped.png" description="AutoML can take you from annotated data to a trained model, but that is just a small part of the ML development lifecycle." alt="AutoML can take you from annotated data to a trained model"%}
+{% include figure.html url="../images/what_is_automl_header_cropped.webp" description="AutoML can take you from annotated data to a trained model, but that is just a small part of the ML development lifecycle." alt="AutoML can take you from annotated data to a trained model"%}
 
 In this post, we explore why an AutoML platform can and should do more than just model training.
 
@@ -107,7 +106,7 @@ Andrew Ng talks about the importance of [data-centric AI](https://mitsloan.mit.e
 
 Even after you are satisfied with the performance of your model, you will need to periodically iterate on your data to account for data drift. The more you iterate on your data, the better the model and, in turn, your product will be. The easier and faster it is to iterate on your data, the more likely you are to do it. 
 
-{% include figure.html url="../images/end-to-end-automl-header_v2.png" description="AutoML as part of the data iteration loop" alt="AutoML as part of the data iteration loop"%}
+{% include figure.html url="../images/end-to-end-automl-header_v2.webp" description="AutoML as part of the data iteration loop" alt="AutoML as part of the data iteration loop"%}
 
 ### Iterating on your product
 

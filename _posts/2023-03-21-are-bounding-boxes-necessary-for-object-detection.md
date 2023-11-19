@@ -5,13 +5,12 @@ date: 2023-03-21
 author: george
 stage: false
 featured: true
-seo_title: Are bounding boxes necessary for object detection?
 summary: "Bounding boxes are usually used to annotate data for object detection. However, they are hard to annotate and are not required for all object detection use cases. In this post, we examine where bounding boxes are unnecessary and compare them to center points, which are significantly easier to annotate."
-seo_description: Are bounding boxes necessary for object detection? We
+description: Are bounding boxes necessary for object detection? We
   experiment to discover whether center pointing or bounding boxes are more
   efficient.
-og_image: /blog/images/are-bounding-boxes-necessary-object-detection.jpg
-og_image_alt: Object detector draws bounding boxes around foxes
+image: /blog/images/are-bounding-boxes-necessary-object-detection.webp
+image_alt: Object detector draws bounding boxes around foxes
 ---
 
 One of the primary applications of computer vision is object detection, which is used to locate and count objects in images or video frames. Object detection has thousands of practical applications and is one of the most commonly used forms of computer vision.
@@ -48,7 +47,7 @@ Our hypothesis is that annotating with points is faster than bounding boxes. We 
 
 [Roboflow](https://roboflow.com) has a set of 100 benchmarking datasets, called [Roboflow 100](https://universe.roboflow.com/roboflow-100), available for this kind of experiment. We used their [grass weeds data](https://universe.roboflow.com/roboflow-100/grass-weeds) and selected 50 images at random from the dataset. Each image contained anywhere from one to 24 weeds. These are the kind of images included in the dataset:
 
-{% include figure.html url="../images/input-data-roboflow-grass.jpg" description="Sample images from the Roboflow 100 dataset" alt="Roboflow 100 grass weeds data examples"%}
+{% include figure.html url="../images/input-data-roboflow-grass.webp" description="Sample images from the Roboflow 100 dataset" alt="Roboflow 100 grass weeds data examples"%}
 
 ### Our experience annotating with Vertex AI’s bounding boxes
 
@@ -66,7 +65,7 @@ However, the suggested annotations occasionally include false positives and some
 
 ### The results
 
-{% include figure.html url="../images/Bounding-box-bar-graph-v2.jpg" alt="Annotate data using object detection center pointing"%}
+{% include figure.html url="../images/Bounding-box-bar-graph-v2.webp" alt="Annotate data using object detection center pointing"%}
 
 The difference is pretty striking between the two methods of object annotation: a factor of 3 difference! The additional clicks and image inspection time for the bounded box method quickly add up. If your use case doesn’t need bounding boxes, platforms using center-point detection have a clear advantage in annotation time and tedium.
 

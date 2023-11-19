@@ -3,15 +3,14 @@ layout: post
 title: How Reddit Could Use Machine Learning to Better Moderate Subreddits
 date: 2022-12-30
 author: dan
-seo_title: Automated Content Moderation of r/EarthPorn
 summary: "Subreddit moderators don’t have an easy job. We experimented to see
   how Reddit could use to Nyckel to moderate r/EarthPorn images quickly and
   effectively. "
-seo_description: Could online communities like Reddit use machine learning
+description: Could online communities like Reddit use machine learning
   instead of human moderators for content moderation? We experimented with
   Nyckel's image classifier.
-og_image: /blog/images/moderating-earthporn-hero.jpg
-og_image_alt: r/EarthPorn example
+image: /blog/images/moderating-earthporn-hero.webp
+image_alt: r/EarthPorn example
 ---
 
 Subreddit moderators don’t have an easy job. These are the hard-working people who lock down comments when they’re getting overly contentious, block NSFW content, and reject posts for straying from community guidelines, like a fence striking its way across the landscape in a picture posted in [r/EarthPorn](https://www.reddit.com/r/EarthPorn).
@@ -62,7 +61,7 @@ Is the function accurate enough yet to accurately approve or reject any image we
 
 Our example above shows how to classify the images from r/EarthPorn retrospectively. However, this process could be embedded in the subreddit moderation workflow with [Custom AI-Assisted Content Moderation](https://www.nyckel.com/blog/custom-ai-assisted-content-moderation-pipeline/).
 
-{% include figure.html url="../images/2022/content-moderation-workflow.png" description="AI-assisted content moderation workflow" link = "https://www.nyckel.com/custom-content-moderation-api"%}
+{% include figure.html url="../images/2022/content-moderation-workflow.webp" description="AI-assisted content moderation workflow" link = "https://www.nyckel.com/custom-content-moderation-api"%}
 
 Each time a moderator manually approves or disapproves a post, the image and its approval or disapproval tag is routed to Nyckel via the API, so AI-assisted moderation gets more accurate with each manual action.
 

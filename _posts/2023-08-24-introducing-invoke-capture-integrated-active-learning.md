@@ -7,16 +7,15 @@ author: oscar
 stage: false
 featured: true
 headliner: false
-seo_title: Invoke Capture - Automatically Gather Important Data to Improve Your Model
 summary: "A machine learning model is only as good as the data it is trained on.
   At Nyckel, our goal is to give you have the tools to keep your data fresh,
   correct, and up to date. To this end, we are excited to introduce our newest
   feature: invoke capture - automatically and intelligently capture important
   data to improve your model."
-seo_description: With Nyckel's invoke capture feature, we automatically and
+description: With Nyckel's invoke capture feature, we automatically and
   intelligently capture data from your deployed models for your team to review
   and annotate in Nyckel's dashboard.
-og_image: /blog/images/invoke-capture-workflow.jpeg
+image: /blog/images/invoke-capture-workflow-hero.webp
 ---
 At Nyckel, our goal is to give you the tools to keep your data fresh, correct, and up-to-date. To this end, we are excited to introduce our newest feature: invoke capture – active learning on model invoke data.
 
@@ -31,7 +30,7 @@ But where do you find data to add to your model? And once you have data, how do 
 
 The best place to find more data is through the samples your model encounters as it is invoked. With invoke capture, Nyckel automatically and intelligently captures informative data as you invoke your models and then places it in a queue for your team to review and annotate later. When capturing data, we try only to capture *important* data. For example, data where the model is not confident, data from rare classes, etc. This process is commonly referred to as "active learning." As you annotate this data in Nyckel's dashboard, we retrain and redeploy your improved model. 
 
-{% include figure.html url="../images/invoke-capture-workflow.jpeg" alt="Invoke capture flowchart" description="Invoke capture is integrated into Nyckel functions. It is designed to help you continuously improve your model by annotating more data." %}
+{% include figure.html url="../images/invoke-capture-workflow.webp" alt="Invoke capture flowchart" description="Invoke capture is integrated into Nyckel functions. It is designed to help you continuously improve your model by annotating more data." %}
 
 ## How does it work?
 
@@ -44,7 +43,7 @@ Invoke capture is a key element of our end-to-end ML offering. It's a built-in d
 5. Annotated samples are automatically added to the training data.
 6. Nyckel retrains and redeploys the improved model.
 
-{% include figure.html url="../images/invoke-capture-view-Nyckel.png" alt="UI for invoke capture" description="Invoke capture is integrated into Nyckel's UI. Here's an example of captured samples, ready for review." %}
+{% include figure.html url="../images/invoke-capture-view-Nyckel.webp" alt="UI for invoke capture" description="Invoke capture is integrated into Nyckel's UI. Here's an example of captured samples, ready for review." %}
 
 ## How do we decide which samples to capture?
 

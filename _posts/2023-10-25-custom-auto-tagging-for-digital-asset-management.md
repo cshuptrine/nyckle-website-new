@@ -6,16 +6,15 @@ author: george
 stage: false
 featured: true
 headliner: false
-seo_title: Customized Auto-Tagging for Digital Asset Management
 summary: AI-driven auto-tagging of digital assets (like images) enables search,
   discovery, and content-based workflows. Generic auto-tagging can be
   frustrating because it doesn't handle the specific tags you are interested in.
   Custom trained auto-tagging models can help, and these models can be trained
   in minutes, with minimal data, and without any AI expertise.
-seo_description: AI auto-tagging of digital assets enables search, discovery,
+description: AI auto-tagging of digital assets enables search, discovery,
   and content-based workflows. Discover how custom models can be trained in
   minutes with no AI expertise.
-og_image: /blog/images/image-classification-examples-datasets-to-build-functions.jpg
+image: /blog/images/image-classification-examples-datasets-to-build-functions.webp
 ---
 ## TL; DR:
 
@@ -45,7 +44,7 @@ Several APIs provide generic auto-tagging of images. For example, [this one](htt
 
 Let's look at an illustrative example. Say you manage images of construction equipment, and you want to tag photos of [telehandlers](https://en.wikipedia.org/wiki/Telescopic_handler). Let's look at the tags that Google's API provides for an image of a telehandler:
 
-{% include figure.html url="../images/generic_tagging_dam.png" alt="Google's tagging AI's response to an image of a telehandler"%}
+{% include figure.html url="../images/generic_tagging_dam.webp" alt="Google's tagging AI's response to an image of a telehandler"%}
 
 There are two things worth noting:
 

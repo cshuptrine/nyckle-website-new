@@ -3,8 +3,8 @@ layout: post
 date: 2022-11-07
 title: How to Approach Multilingual Content Moderation
 author: george
-summary: A lot of the internet's content is in non-mainstream languages. We look at some things to consider when building content moderation models for multi-lingual content.
-og_image: /blog/images/2022/language-pie-chart.jpg
+description: A lot of the internet's content is in non-mainstream languages. We look at some things to consider when building content moderation models for multi-lingual content.
+image: /blog/images/2022/language-pie-chart.webp
 ---
 
 In a perfect world, all users would play by the rules and post only relevant, appropriate content. Since our world isn’t perfect, a robust content moderation solution is the next best thing.
@@ -25,7 +25,7 @@ While English may still be the “lingua franca” for now, the spread of techno
 
 Here are the current [top most used languages on the Internet](https://www.statista.com/statistics/262946/share-of-the-most-common-languages-on-the-internet/), in basic percentages:
 
-{% include figure.html url="../images/2022/language-pie-chart.jpg" alt="Chart showing most used languages on the internet" %}
+{% include figure.html url="../images/2022/language-pie-chart.webp" alt="Chart showing most used languages on the internet" %}
 
 This list is fairly accurate when measured against languages spoken in real life. Chinese (Mandarin), Spanish and Arabic are the top 6 most widely spoken languages in the world today, along with English, Hindi and French.
 

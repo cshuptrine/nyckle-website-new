@@ -3,7 +3,7 @@ layout: post
 date: 2021-05-12
 title: AutoML Comment Moderation in a Rails App
 author: dan
-summary: Using machine learning to help curate user content
+description: Using machine learning to help curate user content
 ---
 
 ## The Problem

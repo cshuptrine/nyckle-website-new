@@ -3,8 +3,8 @@ layout: post
 date: 2021-04-28
 title: Add Image Classification Using Machine Learning to a Web App With a Single Line of Code 
 author: jeremy
-summary: Inspired by a scene from HBO's Silicon Valley, I decided to build a website that identifies whether a photo is of a hot dog.
-og_image: /blog/images/2021/hotdog-training.png
+description: Inspired by a scene from HBO's Silicon Valley, I decided to build a website that identifies whether a photo is of a hot dog.
+image: /blog/images/2021/hotdog-training.png
 ---
 
 Inspired by [this scene in HBO's Silicon Valley](https://www.youtube.com/watch?v=ACmydtFDTGs), I decided to build a website that identifies whether a photo is of a hot dog. Below is the magical line of JavaScript code that executes the image recognition:
@@ -56,7 +56,7 @@ By using an auto machine learning service like Nyckel you can skip most of those
 
 Here’s a screenshot of how training the model in Nyckel looks:
 
-{% include figure.html url="../images/2021/hotdog-training.png" alt="Training a custom image classification function"%}
+{% include figure.html url="../images/2021/hotdog-training.webp" alt="Training a custom image classification function"%}
 
 The above screenshot shows that the model is already actively identifying the difference between a hot dog and a sandwich (is a hot dog a sandwich?!)
 

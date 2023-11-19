@@ -6,14 +6,13 @@ author: nyckel
 stage: false
 featured: false
 headliner: false
-seo_title: Guide to Computer Vision for Non-ML Experts
 summary: "In this guide, we help you understand what you actually need to know
   about computer vision, so you can evaluate the available CV SaaS solutions and
   choose the one that’s best for your use case. "
-seo_description: The complex nature of computer vision often holds companies
+description: The complex nature of computer vision often holds companies
   back from implementing it in their businesses. This guide shares what you need
   to know about computer vision.
-og_image: /blog/images/computer-vision-pillar.jpg
+image: /blog/images/computer-vision-pillar.webp
 ---
 Machine learning can be daunting. After all, ML requires vast amounts of highly specialized skills and knowledge. 
 
@@ -56,7 +55,7 @@ Well-annotated data is the foundation of training a good computer vision model f
 * Human annotators make mistakes too, so it’s important to have a process in place to catch these incorrect annotations. You can uncover annotation mistakes with a [data engine](https://www.nyckel.com/blog/9-ways-to-use-a-data-engine-to-improve-your-ml-model/) and then retrain the model with updated annotations.
 * Your [data can shift over time for various reasons](https://www.nyckel.com/blog/what-is-class-balance-drift-and-why-does-it-matter-for-content-moderation/), including shifts in consumer behavior or attitudes or broader socioeconomic trends. In these cases, your model’s predictions will become less accurate because the data that you used to train your model no longer aligns with your input data. It’s critical to keep an eye on this and retrain your model as necessary.
 
-{% include figure.html url="../images/4-principles-quality-data-computer-visions.png" alt="data principles for computer vision"%}
+{% include figure.html url="../images/4-principles-quality-data-computer-visions.webp" alt="data principles for computer vision"%}
 
 For the reasons above, iterating on your training data with the goal of fixing mistakes and continuously improving your model is the highest value activity you can do to build a strong computer vision system. [Andrew Ng](https://www.linkedin.com/in/andrewyng/), a globally recognized leader in AI, calls the process of  “systematically engineering the data needed to build a successful AI system," [data-centric AI.](https://mitsloan.mit.edu/ideas-made-to-matter/why-its-time-data-centric-artificial-intelligence)  Data-centric AI is best done with a [data engine](https://www.nyckel.com/blog/9-ways-to-use-a-data-engine-to-improve-your-ml-model/) that works in concert with your CV model. A data engine is your process of finding new, informative data that pinpoints where your model is making bad decisions. Identifying these problem cases allows you to retrain your model to be more accurate.
 
@@ -81,7 +80,7 @@ Image classification is one of the most fundamental tasks in computer vision. Te
 * **Multi-class classification:** Each image that you are classifying can only be assigned to one correct label. For example, a picture of an animal is either a cat, dog, bird, or snake.
 * **Multi-label classification:** Each image that you are classifying can belong to multiple labels. For example, an item of clothing can have the colors red, blue, green, yellow, or purple.
 
-{% include figure.html url="../images/nyckel-flowchart-v4-medium-background.png" alt="Choose between multi-label vs. multiclass classification"%}
+{% include figure.html url="../images/nyckel-flowchart-v4-medium-background.webp" alt="Choose between multi-label vs. multiclass classification"%}
 
 Now that we have this computer vision terminology straight, let’s explore some computer vision examples.
 
@@ -126,7 +125,7 @@ Visualizing what’s happening inside of our bodies is critical for many health 
 
 The underworkings of computer vision are a complicated science, which holds many people back from getting started on their CV project. But are the hurdles getting in your way real? Or are they imaginary or a result of a misconception? Here are a few of imaginary hurdles we see a lot of businesses running into, plus a few real ones you will likely need to overcome. 
 
-{% include figure.html url="../images/real-vs-imaginary-computer-vision-hurdles.png" alt="Computer vision hurdles"%}
+{% include figure.html url="../images/real-vs-imaginary-computer-vision-hurdles.webp" alt="Computer vision hurdles"%}
 
 ### Imaginary hurdles in computer vision
 {: .no_toc}
@@ -168,7 +167,7 @@ You’ll also need to monitor your model for [data drift](https://www.nyckel.com
 
 Developing custom computer vision solutions no longer has the barriers to entry that it once did, thanks to the availability of pre-trained models, transfer learning, and AutoML solutions. While it still requires a not insignificant amount of labeled, clean data, and humans to choose the right solutions and moderate results, the barriers to entry are much, much lower.
 
-{% include figure.html url="../images/data-engine-workflow.png" alt="Machine learning data engine workflow"%}
+{% include figure.html url="../images/data-engine-workflow.webp" alt="Machine learning data engine workflow"%}
 
 ## A look at the computer vision APIs market
 
@@ -193,7 +192,7 @@ Our [qualitative analysis of these computer vision platforms](https://www.nyckel
 * **Levity:** Easy-to-use with many no-code integrations, core ML performance lagging others
 * **Clarifai:** The OG offers a comprehensive product suite in a somewhat confusing platform
 
-{% include figure.html url="../images/CV-pillar-CVlandscape.png" alt="Computer vision SaaS tools" description="Top 9 Computer Vision SaaS Players" %}
+{% include figure.html url="../images/CV-pillar-CVlandscape.webp" alt="Computer vision SaaS tools" description="Top 9 Computer Vision SaaS Players" %}
 
 ### Where does Nyckel fit into the computer vision market?
 {: .no_toc}
@@ -237,7 +236,7 @@ AutoML solutions abstract away what an ML engineer would usually do to create a 
 
 While AutoML is not as flexible or transparent as custom solutions built from scratch and may not fit highly specific use cases, the benefits for most users far outweigh the downsides.
 
-{% include figure.html url="../images/what_is_automl_header_cropped.png" description="AutoML tools automate the training & optimizing of machine learning models." alt="AutoML for computer vision"%}
+{% include figure.html url="../images/what_is_automl_header_cropped.webp" description="AutoML tools automate the training & optimizing of machine learning models." alt="AutoML for computer vision"%}
 
 #### A production-grade ML solution needs more than AutoML
 {: .no_toc}

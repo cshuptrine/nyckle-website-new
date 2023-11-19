@@ -4,14 +4,13 @@ title: How What’s That Charge 4x’d It's Revenue Using Nyckel Auto-Moderation
 date: 2022-10-30
 author: oscar
 stage: false
-seo_title: WTC Customer Story
 summary: <i>AI-powered auto-moderation allowed quicker release of more content
   to our public repository of credit card charges, driving a 4x increase in Ad
   revenue.</i> – Jeremy Schneider, Co-founder, WTC
-seo_description: What's That Charge uses Nyckel to automate its content
+description: What's That Charge uses Nyckel to automate its content
   moderation, improving the site's user experience and increasing WTC's revenue.
-og_image: /blog/images/whats-that-charge-case-study-graphic.png
-og_image_alt: What's That Charge uses Nyckel to automate content moderation
+image: /blog/images/whats-that-charge-case-study-graphic.webp
+image_alt: What's That Charge uses Nyckel to automate content moderation
 ---
 
 [What's That Charge](https://www.whatsthatcharge.com/) (WTC) is like Urban Dictionary for credit card charges. The site helps people understand the sometimes mysterious entries on their credit card statement. It does so by hosting over 100,000 credit card charges along with crowd-sourced explanations. Making sure the content is up to date and informative is critical for WTC to stay relevant and to drive Google Ad traffic. After seeing revenue falter slowly over time, WTC was able to dramatically turn the situation around by using Nyckel to automate their content moderation process.
@@ -36,7 +35,7 @@ Jeremy realized that he had a problem identifying charges on his credit card sta
 
 {% include quote.html text="To this day, WTC is paying my rent." author="Jeremy Schneider" title="Co-founder, WTC" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-wtc.jpg"%}
 
-{% include figure.html url="../images/2022/WTC-screenshot-border.jpg" alt="What's that charge screenshot" %}
+{% include figure.html url="../images/2022/WTC-screenshot-border.webp" alt="What's that charge screenshot" %}
 
 ## How does WTC make money?
 
@@ -83,7 +82,7 @@ The business side hadn’t yet caught up with the technology. They could find bu
 
 WTC has two text classification functions: IsCharge, and IsGoodComment. All the complexity around the different types of bad charges and the different types of unhelpful comments is reduced to these two binary functions.
 
-{% include figure.html url="../images/2022/WTC-examples.jpg" alt="What's that charge example content" %}
+{% include figure.html url="../images/2022/WTC-examples.webp" alt="What's that charge example content" %}
 
 The text classification function was trained just on those binary classifications, without the need for more granular categories.
 
@@ -97,7 +96,7 @@ WTC had no shortage of data, but none of it was classified. They uploaded a csv 
 
 A false negative is not a big deal for WTC, and, in the spirit of keeping things lightweight, they don’t feel very much pressure for continuous monitoring and improvement.
 
-{% include figure.html url="../images/2022/WTC-flow.png" alt="What's that charge improvement flow" %}
+{% include figure.html url="../images/2022/WTC-flow.webp" alt="What's that charge improvement flow" %}
 
 They have set a modest confidence threshold of 80%, meaning that Nyckel will only flag a comment for human moderation when the ML model is less than 80% confident in its own classification of the comment. Whether or not a human reviewer disagrees with the ML classification, the result is fed back to the model, making it more accurate. Furthermore, if WTC notices that the model is in fact correctly classifying comments but flagging too many of them for review, they can adjust down the confidence threshold, allowing a greater proportion of the moderation to be automated.
 
@@ -107,7 +106,7 @@ They have set a modest confidence threshold of 80%, meaning that Nyckel will onl
 
 WTC’s business moves forward by listing the most charge names and the most recent charge names. Manually curating their list was bad for business. In a lightweight company, manual moderation will always be a bottleneck, and the impact for WTC was that pages were not being created quickly enough to rank highly against competitors – bad news for an advertisement traffic revenue site.
 
-{% include figure.html url="../images/2022/WTC-revenue.png" alt="What's that charge revenue" %}
+{% include figure.html url="../images/2022/WTC-revenue.webp" alt="What's that charge revenue" %}
 
 When WTC launched, they made $3k per month. Then, competitors entered the field and they slowly lost market share over the next 8 years, reaching a low point of $800 in September 2019.
 

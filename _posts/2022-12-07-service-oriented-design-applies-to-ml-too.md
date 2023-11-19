@@ -4,14 +4,13 @@ title: Service Oriented Design Applies to ML Too
 date: 2022-12-07
 author: dan
 featured: false
-seo_title: Service Oriented Design for ML
 summary: The way we’re building ML solutions today runs contrary to system
   design best practices. Thinking holistically about ML as a service yields
   designs that are cleaner technically and better organizationally.
-seo_description: Service oriented design applied to machine learning will help
+description: Service oriented design applied to machine learning will help
   manage ML complexity and build scalable organizations. Learn why.
-og_image: /blog/images/service-oriented-design-v4.jpg
-og_image_alt: Service oriented design for machine learning
+image: /blog/images/service-oriented-design-v4.webp
+image_alt: Service oriented design for machine learning
 ---
 
 Imagine you’re building a product that needs to accept credit card payments. Do you:

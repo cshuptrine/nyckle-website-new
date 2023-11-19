@@ -6,16 +6,10 @@ author: george
 stage: false
 featured: true
 headliner: false
-seo_title: What Is Image Recognition? (And How It Differs From Image Classification)
-summary: Image recognition is a term often used to describe using machine
-  learning or computer vision to recognize and identify what’s in an image. Even
-  though people use the term image recognition frequently, its meaning is vague,
-  which can cause confusion and misunderstanding. This post explores image
-  recognition and what people usually mean when they say it.
-seo_description: Image recognition uses AI to identify patterns in images. But
+description: Image recognition uses AI to identify patterns in images. But
   its means is vague, which causes confusion. Learn more about what image
   recognition really means.
-og_image: /blog/images/what-is-image-recognition-header-image.jpg
+image: /blog/images/what-is-image-recognition-header-image.webp
 ---
 Image recognition is a term often used to describe using machine learning or computer vision to recognize and identify what’s in an image. Even though people use the term image recognition frequently, its meaning is vague, which can cause confusion and misunderstanding. For example, when someone says image recognition, they likely actually mean one of the following [types of computer vision](https://www.nyckel.com/blog/glossary-of-computer-vision-function-types/):
 
@@ -33,19 +27,23 @@ If you’ve set out to solve an image recognition problem, your first task is to
 
   For example, if you’re a car dealership that wants to use AI to label its vehicle inventory with the brand name of each car, you could create an image classification function. The input image would be the photo of the vehicle and the output labels would be all of the brands that you stock in your dealership. For example: Ford, Honda, Toyota, Kia, Hyundai.
 
-{% include figure.html url="../images/image-recognition-honda-cars.png" alt="Image classification to identify car make" width=80 %}
+{% include figure.html
+url="../images/image-recognition-honda-cars.webp"
+alt="Image classification to identify car make"
+description="Image classification to identify car make."
+width=80 %}
 
-* **Do you want to label the image with multiple labels or tags?** If so, you need to create an image tagging function (also called [multi-label classification](https://www.nyckel.com/blog/multi-class-classification-vs-multi-label-classification-key-differences-how-to-choose/)). 
+* **Do you want to label the image with multiple labels or tags?** If so, you need to create an image tagging function (also called [multi-label classification](https://www.nyckel.com/blog/multi-class-classification-vs-multi-label-classification-key-differences-how-to-choose/)).
 
   For example, if you’re an online retailer that wants to speed the process of tagging product inventory with all of its colors, you could create an image tagging function. The input image would be the article of clothing, and the output labels would be all of the possible colors. For example: yellow, orange, red, pink, purple, blue, green, black, white, brown.
 
-{% include figure.html url="../images/image-recognition-boy-blue.png" alt="Image tagging to automatically identify colors on clothing" width=80 %}
+{% include figure.html url="../images/image-recognition-boy-blue.webp" alt="Image tagging to automatically identify colors on clothing" width=80 %}
 
 * **Do you want to pinpoint the exact location of one or more specific objects in an image?** If so, you need to create an object detection function.
 
   For example, if you are a brand manager that wants to monitor how your product inventory is displayed on store shelves, you could use an object detector to identify all instances of your products, like Cheerios boxes.
 
-{% include figure.html url="https://www.nyckel.com/_content/Marketing/images/function-example-store@2x.jpg" alt="Object detection to identify products on store shelves" description="Nyckel object detector identifies Maple Cheerios on a store shelf." %}
+{% include figure.html url="../images/function-example.webp" alt="Object detection to identify products on store shelves" description="Nyckel object detector identifies Maple Cheerios on a store shelf." %}
 
 While any of these computer vision function types *could* be referred to as image recognition, it’s best to be more specific, so that you can identify the best approach for solving your challenge and which machine learning services are best designed to support you.
 

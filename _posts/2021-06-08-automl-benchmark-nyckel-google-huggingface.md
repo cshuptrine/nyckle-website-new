@@ -3,8 +3,8 @@ layout: post
 date: 2021-06-08
 title: 'AutoML benchmark: Nyckel vs Google vs Huggingface'
 author: oscar
-summary: A comparison of accuracy, training times, and invoke latencies for three major AutoML engines
-og_image: /blog/images/2021/imdb-classification-benchmark-hero.png
+description: A comparison of accuracy, training times, and invoke latencies for three major AutoML engines
+image: /blog/images/2021/imdb-classification-benchmark-hero.webp
 ---
 
 My name is Oscar and I’m a co-founder of [Nyckel](https://www.nyckel.com). We have developed a site that allows anyone to train and integrate a Machine Learning (ML) model into their application, and do so in less than an hour. We have put a lot of work into our Auto-ML system and in this blogpost I’m excited to share some benchmarking results against [Google Vertex AI](https://cloud.google.com/vertex-ai) (formerly Google AutoML) and [Huggingface AutoNLP](https://huggingface.co/autotrain) comparing accuracy, training times and invoke latencies.
@@ -15,11 +15,11 @@ I use two public datasets: [IMDB](https://huggingface.co/datasets/imdb), a movie
 
 In the first experiment I train a model using 500 samples from IMDB and plot training time vs accuracy.
 
-{% include figure.html url="../images/2021/imdb-classification-benchmark.png" description="<em>Training time vs model accuracy</em> for three AutoML engines as benchmarked on the IMDB sentiment classification dataset. Nyckel’s model was most accurate and trained in ~60s, Huggingface trained in ~12 minutes and was least accurate. Google required ~5 hours to train." %}
+{% include figure.html url="../images/2021/imdb-classification-benchmark.webp" description="<em>Training time vs model accuracy</em> for three AutoML engines as benchmarked on the IMDB sentiment classification dataset. Nyckel’s model was most accurate and trained in ~60s, Huggingface trained in ~12 minutes and was least accurate. Google required ~5 hours to train." %}
 
 A few things to note about this plot. First, the x-axis is in log scale. This means there is literally an order of magnitude difference between the Nyckel and Huggingface (HF) and Google training times. Second, all providers returned highly accurate models (>86% accuracy) with Nyckel and Google outperforming Huggingface. Third, there are two measurements for Nyckel. The reason is subtle. Nyckel uses cross-validation to determine the best model for the data while Google and HF require fixed validation splits. For example, HF requires the user to pick a model based on the performance on the validation set using the CLI.
 
-{% include figure.html url="../images/2021/huggingface-cli-output-imdb.png" description="Huggingface CLI output for the IMDB 500 training" %}
+{% include figure.html url="../images/2021/huggingface-cli-output-imdb.webp" description="Huggingface CLI output for the IMDB 500 training" %}
 
 The use of cross-validation allows Nyckel to train on all 500 samples in the train and validation sets combined. To even the score I therefore re-ran the Nyckel experiment while only providing the 400 samples in train. Regardless, it appears Nyckel is able to train a more accurate model and do so much faster. How is it possible?
 
@@ -35,13 +35,13 @@ So is there a need for such rapid training times? I’d argue there is. As has b
 
 To ensure that the accuracy in the previous section isn’t an outlier I added one more dataset and trained with three different train set sizes. No clear winner emerged from these results. Nyckel did best on IMDB, in particular in the low-data regime while Huggingface did best on AG News, in particular in the high-data regime. Training times did not change much within this range of training set size: Nyckel remains around 1 minute, Huggingface around 12 minutes and Google around ~5 hours.
 
-{% include figure.html url="../images/2021/train-size-sweep.png" description="Training size sweep. Model accuracy as a function of training set size. Among the three providers no clear winner emerged across all train set sizes and the two datasets." %}
+{% include figure.html url="../images/2021/train-size-sweep.webp" description="Training size sweep. Model accuracy as a function of training set size. Among the three providers no clear winner emerged across all train set sizes and the two datasets." %}
 
 ## What about inference?
 
 A key features of ML platforms is to provide API endpoints to invoke the trained models on new data. The three services benchmarked all provide such endpoints. Using the 1000 samples in the test-set I measure the end-to-end invoke latencies for a single call.
 
-{% include figure.html url="../images/2021/invoke-latency.png" description="API invoke latency. Left: box and whiskers plot with box indicating upper and lower quartiles, orange line median and whiskers the 1 and 99th percentiles. Right: full latency distribution displayed as bar plot." %}
+{% include figure.html url="../images/2021/invoke-latency.webp" description="API invoke latency. Left: box and whiskers plot with box indicating upper and lower quartiles, orange line median and whiskers the 1 and 99th percentiles. Right: full latency distribution displayed as bar plot." %}
 
 From this data it appears Nyckel is the fastest, completing most invokes within 400ms. Google does second best with most calls finishing in 600ms. Huggingface (HF) has two modes: around half the calls are centered around 450ms while the other half take much longer, around 1s.
 

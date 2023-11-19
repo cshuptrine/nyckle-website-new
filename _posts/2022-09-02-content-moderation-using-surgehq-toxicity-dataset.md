@@ -4,10 +4,9 @@ date: 2022-09-02
 title: Content Moderation using SurgeAI's Toxicity Dataset
 author: george
 summary: Train a text classification model for content moderation using SurgeAI's toxicity dataset. 
-og_image: /blog/images/2022/toxicity-moderation.jpg
-og_image_alt: Automated content moderation
-seo_title: Content Moderation using Nyckel Text Classification Function Trained Using SurgeAI's Toxicity Dataset
-seo_description: Learn how to train a Nyckel text classification model for content moderation using SurgeAI's toxicity dataset. 
+image: /blog/images/2022/toxicity-moderation.webp
+image_alt: Automated content moderation
+description: Learn how to train a Nyckel text classification model for content moderation using SurgeAI's toxicity dataset. 
 ---
 
 ## What can you do when your online community outgrows your content moderation capacity?

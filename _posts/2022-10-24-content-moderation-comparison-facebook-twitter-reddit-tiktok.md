@@ -5,13 +5,12 @@ title: "Same Same But Different: Content Moderation at Facebook, Twitter,
 date: 2022-10-24
 author: oscar
 stage: false
-seo_title: Content Moderation at Facebook, Twitter, TikTok & Reddit
 summary: The four platforms have different ways of balancing free speech against
   misinformation. We take a close look at their methods.
-seo_description: Discover the similarities and differences in content moderation
+description: Discover the similarities and differences in content moderation
   policies of Facebook, Twitter, TikTok, and Reddit in this in-depth comparison.
-og_image: /blog/images/2022/same-same-but-different.jpg
-og_image_alt: Facebook, Twitter, TikTok, and Reddit
+image: /blog/images/2022/same-same-but-different.webp
+image_alt: Facebook, Twitter, TikTok, and Reddit
 ---
 
 \**Note: while we did our best to use the latest sources, some of the references used in this article are more than a year old at the time of writing*
@@ -42,7 +41,7 @@ In addition to these criteria, we’ve also included an overview of each platfor
 
 ## Facebook
 
-{% include figure.html url="../images/2022/thumbs-up-buttons.jpg" alt="Thumbs up buttons" link="https://www.facebook.com/" %}
+{% include figure.html url="../images/2022/thumbs-up-buttons.webp" alt="Thumbs up buttons" link="https://www.facebook.com/" %}
 
 With just shy of 3 billion users, Facebook is the largest social media platform – at least, for now.
 
@@ -79,7 +78,7 @@ Facebook allows its users to report content by providing a “Report” link at 
 
 ## Twitter
 
-{% include figure.html url="../images/2022/twitter-cube.jpg" alt="Twitter cube" link="https://twitter.com/" %}
+{% include figure.html url="../images/2022/twitter-cube.webp" alt="Twitter cube" link="https://twitter.com/" %}
 
 Although only the 15th most popular social media platform, Twitter continues to be very influential. [10% of Twitter users are responsible for 92% of Tweets](https://thesocialshepherd.com/blog/twitter-statistics#:~:text=Twitter%20Has%20396.5%20Million%20Users%20Globally), and many users turn to Twitter for their news or to follow their favorite influencers.
 
@@ -108,7 +107,7 @@ If the Tweet is in either the “harmful” or “abusive” category, the user 
 
 ## TikTok
 
-{% include figure.html url="../images/2022/tiktok-3d-cube.jpg" alt="Tiktok" link="https://www.tiktok.com/" %}
+{% include figure.html url="../images/2022/tiktok-3d-cube.webp" alt="Tiktok" link="https://www.tiktok.com/" %}
 
 Clocking in with [over a billion users](https://www.threecolts.com/blog-articles/social-media-statistics-2023), TikTok is the current fastest-growing social media platform. It’s especially popular with Gen Z – [nearly half of Gen Z uses TikTok (along with Instagram) rather than Google for search](https://wallaroomedia.com/blog/social-media/tiktok-statistics/#:~:text=Nearly%20half%20of%20Gen%20Z,app%2C%20according%20to%20Pew%20Research.). It’s also by far the youngest of these platforms, having only been around since 2016.
 
@@ -134,7 +133,7 @@ TikTok users can report harmful content by clicking the “Report” option at t
 
 ## Reddit
 
-{% include figure.html url="../images/2022/reddit-spaceman.jpg" alt="Reddit" link="https://www.reddit.com/" %}
+{% include figure.html url="../images/2022/reddit-spaceman.webp" alt="Reddit" link="https://www.reddit.com/" %}
 
 Reddit in many ways is the outlier of these four platforms when it comes to user experience and culture as well as policies. Unlike the others mentioned in this article, Reddit relies primarily on [its community of volunteers](https://www.cnbc.com/2021/02/27/content-moderation-on-social-media.html) for moderation.
 

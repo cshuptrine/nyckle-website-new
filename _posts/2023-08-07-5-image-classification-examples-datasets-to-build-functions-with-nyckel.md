@@ -6,15 +6,14 @@ author: nyckel
 stage: false
 featured: false
 headliner: false
-seo_title: 5 Image Classification Examples (+Datasets)
 summary: The sky is (almost) the limit when it comes to applications of image
   classification. We share 5 unique image classification examples to get you
   thinking about how you could classify images with machine learning in your own
   business.
-seo_description: Explore 5 practical use cases of image classification ranging
+description: Explore 5 practical use cases of image classification ranging
   from detecting AI-generated images to identifying diseases in bean plants.
   Learn to build each with Nyckel.
-og_image: /blog/images/image-classification-examples-datasets-to-build-functions.jpg
+image: /blog/images/image-classification-examples-datasets-to-build-functions.webp
 ---
 Image classification is a type of computer vision that categorizes images into one of several buckets. For example, you could classify images of cars for sale by the view of the car in each image: “front,” “back,” “side,” “dash,” and so on. Organizations can also use image classification for more obscure cases ranging from [an augmented reality Batman game](https://www.nyckel.com/blog/image-classification-for-augmented-reality-games-spyscape-case-study/) to [identifying the time-series signals of North Atlantic right whales](https://www.nyckel.com/blog/time-series-signal-classification-using-computer-vision/).
 
@@ -30,7 +29,7 @@ Fortunately, we can use AI to detect AI by training an image classification func
 
 **Build it with Nyckel:** Use the [CIFAKE dataset](https://www.kaggle.com/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images?resource=download) created by Dr. Jordan J. Bird and Professor Ahmad Lotfi to build an image classifier to detect whether or not an image is AI-generated.
 
-{% include figure.html url="../images/detect-AI-generation-image-classification-example.png" alt="Detect if image is AI-generated with image classification"%}
+{% include figure.html url="../images/detect-AI-generation-image-classification-example.webp" alt="Detect if image is AI-generated with image classification"%}
 
 ## 2. Streamline the collection of waste materials 
 
@@ -42,7 +41,7 @@ This example is a form of multi-label classification, sometimes called [image ta
 
 **Build it with Nyckel:** Use [Hugging Face’s outdoor garbage dataset](https://huggingface.co/datasets/TrainingDataPro/outdoor_garbage_dataset) to build an image classifier that optimizes your waste management system.
 
-{% include figure.html url="../images/multi-label-classification-example.png" alt="Streamline waste management operations with image classification"%}
+{% include figure.html url="../images/multi-label-classification-example.webp" alt="Streamline waste management operations with image classification"%}
 
 ## 3. Detect deadly diseases in bean plants
 
@@ -54,7 +53,7 @@ Unfortunately, beans are vulnerable to several devastating diseases, including a
 
 *This use case is similar to how our customer [Gardyn uses an image classifier](https://www.nyckel.com/blog/gardyn-reduces-workload-by-70-while-growing-2x-after-implementing-computer-vision/) to monitor the health of its customers’ plants.*
 
-{% include figure.html url="../images/detect-plant-disease-image-classification-example.jpg" alt="Detect plant disease with image classification"%}
+{% include figure.html url="../images/detect-plant-disease-image-classification-example.webp" alt="Detect plant disease with image classification"%}
 
 ## 4. Classify marine animals
 
@@ -64,7 +63,7 @@ For example, an image classifier trained on images of marine wildlife could help
 
 **Build it with Nyckel:** Use [Kaggle’s marine animals dataset](https://www.kaggle.com/datasets/mikoajfish99/marine-animal-images) to build an image classifier to identify different types of marine species, including jellyfish, starfish, lobster, and squid.
 
-{% include figure.html url="../images/identify-marine-animals-image-classification-example.png" alt="Identify marine animal with image classification"%}
+{% include figure.html url="../images/identify-marine-animals-image-classification-example.webp" alt="Identify marine animal with image classification"%}
 
 ## 5. Locate littered roads in a city 
 
@@ -74,7 +73,7 @@ A more efficient way to detect littered roads would be to use street cameras to 
 
 **Build it with Nyckel:** Use [Kaggle’s clean/littered roads dataset](https://www.kaggle.com/datasets/faizalkarim/cleandirty-road-classification) to build an image classifier to detect whether a road is clean or littered.
 
-{% include figure.html url="../images/locate-littered-roads-image-classification-example.png" alt="Identify littered roadways with image classification"%}
+{% include figure.html url="../images/locate-littered-roads-image-classification-example.webp" alt="Identify littered roadways with image classification"%}
 
 ## Could image classification solve your challenge?
 
