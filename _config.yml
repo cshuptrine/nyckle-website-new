@@ -10,7 +10,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-archives
-
+  
 collections:
   authors:
     output: true
@@ -19,7 +19,7 @@ collections:
     permalink: /blog/:title/
   functions:
     output: true
-    permalink: /public-functions/:title/   
+    permalink: /public-functions/:title/      
     
 defaults:
   - scope:
