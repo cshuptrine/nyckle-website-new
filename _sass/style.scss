@@ -739,6 +739,35 @@ acronym[title] {
     font-size: 0.75rem;
     padding: 0.15rem 0;
 }
+
+/* Drop-down menu styling */
+.navbar .dropdown-menu {
+    background: #ffffff; /* Background color */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Shadow effect */
+    display: none; /* Initially hidden */
+    position: absolute; /* Positioning relative to the parent element */
+    width: auto; /* Width can be auto or fixed */
+    z-index: 10; /* Ensure it's on top of other content */
+}
+
+/* Styling for drop-down items */
+.navbar .dropdown-menu .dropdown-item {
+    color: #303030; /* Text color */
+    padding: 10px 20px; /* Padding for the drop-down items */
+    text-decoration: none; /* No underline */
+    display: block; /* Block display */
+}
+
+/* Hover effect for drop-down items */
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f8f8; /* Background color on hover */
+}
+
+/* Show the drop-down menu on hover */
+.navbar .nav-item:hover .dropdown-menu {
+    display: block;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  04. STICKY HEADER
 /*-----------------------------------------------------------------------------------*/
@@ -7179,4 +7208,11 @@ footer.inverse-text address {
     line-height: 1.7rem;
     color:#0b2436;
     /* Add other h1 styles here if needed */
+}
+
+.intro {
+    font-size: 0.3em;
+    font-weight: light;
+    line-height: 1rem;
+    color:#808080;
 }
