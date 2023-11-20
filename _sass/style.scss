@@ -7014,57 +7014,162 @@ footer.inverse-text address {
 
 .case-studies {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align to the start to manage spacing manually */
+  margin-left: -15px; /* Negative margin to counteract the padding on each box */
+  margin-right: -15px;
+}
+
+.case-study-box {
+  width: calc(33.333% - 30px); /* Width to fit 3 boxes in a row minus the total margin */
+  margin: 15px; /* Margin around the boxes */
+  padding: 20px; /* Padding inside the boxes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  background-color: #FFF; /* Background color for the box */
+  border-radius: 10px; /* Rounded corners for the box */
+  text-decoration: none; /* No underline on the link */
+  color: inherit; /* Inherit the font color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+  display: block; /* Block display for the link */
+}
+
+/* Hover effect */
+.case-study-box:hover {
+  transform: scale(1.03); /* Scale up the box slightly */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for hover effect */
+}
+
+/* Logo Image */
+.case-study-box .logo img {
+  max-width: 100%; /* Ensure the logo image is responsive */
+  height: auto;
+  margin-bottom: 20px; /* Space below the logo */
+}
+
+/* Quote Style */
+.case-study-box .quote {
+  font-style: italic;
+  margin-bottom: 20px; /* Space below the quote */
+  color: #0b2436;
+}
+
+/* Author Image and Name */
+.case-study-box .author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Space below the author section */
+  color: #0b2436;
+  font-size: 0.7rem;
+}
+
+.case-study-box .author img {
+  border-radius: 50%; /* Make the author image circular */
+  margin-right: 10px; /* Space to the right of the author image */
+  width: 50px; /* Width of the author image */
+  height: 50px; /* Height of the author image */
+}
+
+/* Link to Case Study */
+.case-study-box .case-study-link {
+  color: #377db7; /* Color for the link text */
+  font-weight: bold; /* Make the link text bold */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 992px) {
+  .case-study-box {
+    width: calc(50% - 30px); /* Adjust to have two boxes per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .case-study-box {
+    width: calc(100% - 30px); /* Adjust to have one box per row */
+  }
+}
+
+.rounded-shadow-image img {
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    width: auto; /* Maintain the original width */
+    height: auto; /* Maintain the original height */
+}
+
+.logo-matrix {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* This will space out the logos evenly */
+  max-width: 100%;
+}
+
+.logo-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Spacing between the rows */
+  width: 100%;
+}
+
+.logo-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48%; /* Slightly less than half to account for the space-between */
+}
+
+.logo-cell img {
+  max-width: 100%; /* Makes the image responsive */
+  height: auto; /* Keeps the aspect ratio */
+}
+
+.logo-matrix .logo-cell img {
+  max-width: 50%; /* Reducing the size to 70% of the original */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.leadership-team {
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.case-study-box {
-  flex: 0 0 30%; /* Adjust the width percentage as needed */
-  margin: 1%; /* Adjust for spacing */
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example shadow */
-  background-color: #FFF; /* Replace with the specific color */
-  border-radius: 10px; /* Rounded corners */
+.team-member {
+  flex: 0 0 23%; /* 4 per row, minus some space for margins */
+  margin: 1%; /* Space between the boxes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+  border-radius: 10px; /* Rounded corners for the boxes */
+  text-align: center; /* Center the text inside the box */
+  padding: 20px; /* Padding inside the box */
+  background-color: #FFF; /* Background color for the box */
 }
 
-.case-study-box .logo {
-  text-align: center;
-  margin-bottom: 20px;
+.team-photo {
+  width: 100px; /* Example size, adjust as needed */
+  height: 100px; /* Maintain aspect ratio */
+  border-radius: 50%; /* Circular photo */
+  margin-bottom: 10px; /* Space below the photo */
 }
 
-.case-study-box .logo img {
-  max-width: 100%; /* Ensures the image is responsive */
-  height: auto;
+.team-name {
+  margin: 0;
+  font-size: 1.15rem; /* Example size, adjust as needed */
 }
 
-.case-study-box .quote {
-  font-style: italic;
-  margin-bottom: 20px;
-}
-
-.case-study-box .author {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.case-study-box .author img {
-  border-radius: 50%; /* Circular image */
-  margin-right: 10px;
-  width: 50px; /* Adjust as needed */
-  height: 50px; /* Adjust as needed */
-}
-
-.case-study-box .case-study-link {
-  text-decoration: none;
-  color: #377db7; /* Example color */
-  font-weight: bold;
+.team-title {
+  margin: 0;
+  font-size: 0.8rem; /* Example size, adjust as needed */
+  color: #666; /* Grey text for the title */
 }
 
 /* Responsive adjustments if necessary */
-@media (max-width: 768px) {
-  .case-study-box {
-    flex: 0 0 100%;
-    margin-bottom: 20px;
+@media (max-width: 1200px) {
+  .team-member {
+    flex: 0 0 48%; /* Adjust to have two items per row on medium screens */
   }
 }
+
+@media (max-width: 768px) {
+  .team-member {
+    flex: 0 0 100%; /* Adjust to have one item per row on small screens */
+  }
+}
+

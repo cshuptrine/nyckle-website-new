@@ -1,14 +1,15 @@
 ---
 layout: default
 permalink: "/contact/"
-description: Contact Discoverable Marketing to learn more about our services and products.
+description: Contact Nyckel to learn more.
 fill: fill-light-wrapper
-title: Contact Discoverable Marketing
+title: Contact Nyckel
 cta: none
+hubspot: yes
 nav: light
 page_header:
   enable: true
-  title: Want a Discoverable report?
+  title: Want to chat?
   sub_title: We'd love to chat further about how we can help.
   button_text: 
   button_url: "#"
@@ -18,19 +19,19 @@ contact_area:
   enable: true
   title:
   sub_title:
-  action_email: "chris@discoverablemarketing.com"
+  action_email: "feedback@nyckel.com"
   
   lists:
-    - title: Quick delivery
-      info_01: You'll get the report within a week
+    - title: Dashboard review
+      info_01: We'll show you how to get started
       icon: "icofont-check"
 
-    - title: Cost-efficient
-      info_01: Hiring a Marketing VP could be $200K+
+    - title: API integration
+      info_01: Get a look at how the API works
       icon: "icofont-check"
 
-    - title: Low effort
-      info_01: Your only work is a 5-minute form
+    - title: Pricing overview
+      info_01: Learn how costs scale with volume
       icon: "icofont-check"
    
 
@@ -58,7 +59,7 @@ contact_area:
 
     - field_type: "textarea"
       field_name: "user_message"
-      placeholder: "What would you like to achieve with Discoverable?"
+      placeholder: "What brings you to Nyckel?"
       error_message: "Required"
 
 ---
@@ -112,7 +113,7 @@ contact_area:
             {% for lists in page.contact_area.lists %}
             <div class="d-flex flex-row">
               <div>
-                <div class="icon fs-34 mr-25" style="color: #8AA9D6;"> <i class="{{lists.icon}}"></i> </div>
+                <div class="icon fs-34 mr-25" style="color: #306fa2;"> <i class="{{lists.icon}}"></i> </div>
               </div>
               <div>
                 <h3 class="mb-5">{{lists.title}}</h3>
@@ -143,92 +144,5 @@ contact_area:
     formId: "0627bc0b-ebdf-4c0e-85e5-931bd009ac6f",
     target: "#hubspot-form"
   });
-</script></div>
-<!--end HS code -->
-
-             <!-- Load the HubSpot Forms Embed Code -->
-<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-<script>
-  hbspt.forms.create({
-    region: "na1",
-    portalId: "24298198",
-    formId: "e8d11077-6bf3-4a78-a959-2152b36df865",
-    target: "#hubspot-form2"
-  });
 </script>
 <!--end HS code -->
-
-<!--<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var formInputs = document.querySelectorAll('#contact-form input, #contact-form textarea');
-    for (var i = 0; i < formInputs.length; i++) {
-      formInputs[i].setAttribute('autocomplete', 'on');
-    }
-  });
-
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    var userEmail = document.getElementById('user_email').value;
-    var domain = userEmail.split('@')[1];
-
-    var blockedDomains = ['gmail.com', 'yahoo.com', 'hotmail.com'];
-    if (blockedDomains.includes(domain)) {
-      event.preventDefault();
-      alert('Please enter a non-personal email address.');
-    } else {
-      var xhr = new XMLHttpRequest();
-      xhr.open('POST', event.target.action, true);
-      xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
-      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-
-      xhr.onloadend = function() {
-        if (xhr.status === 200) {
-          window.location.href = 'https://www.discoverablemarketing.com/contact-thankyou/';
-        } else {
-          console.error('Form submission failed:', xhr.status, xhr.statusText);
-        }
-      };
-
-      xhr.send(new FormData(event.target));
-    }
-  });
-</script>-->
-
-      <div style="margin-top:-5%"><div class="wrapper image-wrapper light-wrapper bg-auto no-overlay bg-image text-center" data-image-src="/assets/images/important/map.webp">
-                <div class="container inner">
-                    <div class="row">
-                        <div class="col-md-9 mx-auto">
-                             <h3 class="display-3">Just want an example audit?</h3>
-
-     <p class="lead larger" style="padding-left:15%;padding-right:15%">
-                            Let us know, and we'll share the Notion report</p>
-                            <div class="space20"></div>
-
-                            
-                             <div style="padding-left:28%;padding-right:25%"><div id="hubspot-form2"></div></div>
-
-                  
-                        </div>
-                    </div>
-                </div>
-            </div></div>  
-
-
-<div class="wrapper light-wrapper" style="margin-top: -7%;">
-  <div class="container inner">
-    <div class="row" style="margin-top: -4%;">
-      <div class="col-md-10 offset-md-1 text-center col-lg-8 offset-lg-2">
-            <blockquote class="larger">
-              <p style="font-size: 25px;">"This report was very helpful in understanding our market presence and opportunities. No other consultant could provide such a 360 review of how discoverable we were to potential buyers."
-              </p>
-              <div class="blockquote-details justify-content-center">
-                <div class="img-blob blob1"><img src="{{relative_url}}/assets/images/important/derek.webp" alt="discoverable customer quotation" /></div>
-                <div class="info">
-                  <h6 class="mb-0">Derek Osgood</h6>
-                  <span class="meta mb-0">CEO, Ignition</span>
-                </div>
-              </div>
-            </blockquote>
-      </div>
-    </div>
-  </div>
-</div>

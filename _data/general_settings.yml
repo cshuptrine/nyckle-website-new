@@ -41,6 +41,8 @@ external_links:
       text: "Pricing"
     - url: "https://www.nyckel.com/public-functions"
       text: "Pre-Trained Models"  
+    - url: "/customers/"
+      text: "Customers"    
 
 external_links_02:
   title: "Get Started"
@@ -65,8 +67,8 @@ external_links_03:
       text: "About"
     - url: "/blog/"
       text: "Blog"   
-    - url: "/customers/"
-      text: "Customers" 
+    - url: "mailto:feedback@nyckel.com"
+      text: "Support" 
 
 # footer_newsletter:
 #  title: "Our Newsletter"
