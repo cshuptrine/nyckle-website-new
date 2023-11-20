@@ -39,7 +39,7 @@
     font-weight: 400;
     font-size: 1.8rem;
     margin-bottom: 1.0rem;
-     color: #0b2436;
+    color: #0b2436;
 }
 
 .summary-img {
@@ -713,6 +713,10 @@ _:future,
     font-weight: 400;
 }
 
+.case-study-mugshot {
+    border-radius: 10px; /* Adjust as needed for desired curvature */
+}
+
 .customer-quote-title {
     font-size: .85rem;
     line-height: 1.1;
@@ -730,6 +734,54 @@ _:future,
     .customer-quote-signature {
         justify-content: left;
     }
+}
+
+.customer-quote-block {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.customer-quote {
+    font-style: italic;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.9rem; /* Updated font size */
+    line-height: 1.1;
+    text-align: center;
+    padding: 15px 20px;
+    color: #0b2436; /* Updated color */
+}
+
+.customer-quote-signature {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.case-study-mugshot {
+    border-radius: 10px; /* Added border-radius */
+}
+
+picture {
+    display: inline-block;
+    padding-right: 20px; /* Added padding */
+}
+
+.customer-quote-name {
+    font-size: 0.9rem; /* Updated font size */
+    line-height: 1.1;
+    color: #0b2436; /* Updated color */
+    padding-bottom: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+.customer-quote-title {
+    font-size: 0.9rem; /* Updated font size */
+    line-height: 1.1;
+    color: #0b2436; /* Updated color */
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
 }
 
 /* Add this to your CSS file */

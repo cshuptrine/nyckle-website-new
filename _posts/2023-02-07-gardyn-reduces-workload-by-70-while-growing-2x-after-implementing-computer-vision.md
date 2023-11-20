@@ -3,9 +3,9 @@ layout: post
 title: Gardyn Reduces Workload by 70%, Grows 2x After Implementing Computer Vision
 date: 2023-02-07
 author: george
-summary: <i>Because of the way Nyckel does things, the model trains immediately.
+summary: Because of the way Nyckel does things, the model trains immediately.
   This was rather shocking and awesome! The time between me seeing Nyckel on a
-  Google search and having a model was a few minutes.</i> - Sunil Rawal, AI
+  Google search and having a model was a few minutes. - Sunil Rawal, AI
   Lead, Gardyn
 description: Gardyn uses Nyckel’s computer vision functions to monitor its
   customers’ home plant growing systems, significantly reducing Gardyn’s
