@@ -17,6 +17,9 @@ collections:
   posts:
     output: true
     permalink: /blog/:title/
+  functions:
+    output: true
+    permalink: /public-functions/:title/   
     
 defaults:
   - scope:
@@ -28,7 +31,13 @@ defaults:
   - scope:
       path: "images"
     values:
-      image: true    
+      image: true 
+  - scope:
+      path: ""
+      type: functions
+    values:
+      layout: function
+      weight: 999        
 
    # SCSS
 sass:

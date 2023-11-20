@@ -1,0 +1,50 @@
+---
+layout: default-function
+---
+
+<div class="wrapper white-wrapper">
+    <div class="row">
+    </div></div>
+        <div id="main" role="main" class="readingpane">
+<article class="post">
+
+  
+  <div class="hero hero2">
+    <div class="hero-contents hero-contents2 contain-1200 p-mobile-1350 d-flex">
+      <div class="title-area d-flex flex-column justify-content-between">
+        <div>
+          <h1 style="font-size: 0.7em;">Use AI to identify {{ page.name }}</h1>
+          <div class="function-text">Below is an entirely free {{ page.name }} identifier. Just upload a picture of a {{ page.sname }}, and our AI will classify what it is - in just seconds.<br><br><p>Want to do this at scale? Contact us below.</p></div>
+        </div>
+      </div>
+      <div class="image-area">
+        <img src="{{ page.image }}" alt="{{ page.sname }} identifier" />
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container inner" style="margin-top:-50px;">
+     <div class="text-box" style="border: 2px dotted #306fa2; border-radius: 15px; padding: 20px; color: #306fa2; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">INSERT THE JAVASCRIPT</div>
+     <div class="space30"></div>
+</div>
+
+<div class="services-area" style="margin-top:-7%;"> 
+  <div class="wrapper gray-wrapper">
+  <div class="container inner text-center">
+          <div style="margin-top:-6%;margin-bottom:-8%">
+            <h2 class="display-3">
+     How it works</h2>
+     <div class="space20"></div>
+    <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">To start, drag and drop (or import) a picture of a {{ page.sname }}. Within seconds, our AI tool will tell you what {{ page.sname }} it is.</p>
+        <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">The model uses the {{ page.model }} dataset and is built with {{ page.samplecount }} samples across {{ page.labelcount }} labels, including {{ page.labelsamples }}. We'll also show a confidence score (the higher the number, the more confident we are around the answer).</p>
+
+{% if page.line3 %}
+            
+            <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436"><b>{{ page.line3 }}</b></p>
+{% endif %}
+</div></div></div></div>
+
+
+</article></div></div></div>

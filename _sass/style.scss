@@ -7173,3 +7173,17 @@ footer.inverse-text address {
   }
 }
 
+.function-text {
+    font-weight: 300;
+     color:#FFFFFF;
+     font-size: 1.1rem;
+     line-height: 1.5;
+}
+
+.styled-as-h1 {
+    font-size: 0.6em;
+    font-weight: bold; /* Assuming h1 has bold weight */
+    line-height: 1.7rem;
+    color:#0b2436;
+    /* Add other h1 styles here if needed */
+}

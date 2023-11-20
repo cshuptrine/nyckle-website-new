@@ -3,8 +3,7 @@ title: "Nyckel"
 email: "chris@nyckel.com"
 email_2: "chris@nyckel.com"
 image: "/assets/images/important/cover.jpg"
-description: >- # this means to ignore newlines until "baseurl:"
- Get months of marketing research for just one hour of work. Discoverable helps overworked SaaS marketers outsource manual go-to-market research and find ways to be more discoverable.
+description: "Use AI to classify text and images."
 black_logo_1x: "/assets/images/important/nyckel-black-small.png"
 black_logo_2x: "/assets/images/important/nyckel-black.png"
 light_logo_1x: "/assets/images/important/DiscoverableLogo_White_180.webp"
@@ -30,16 +29,16 @@ social_accounts:
       icon: "jam jam-youtube"
       alt: "Nyckel on YouTube"
 
-    - url: "https://www.linkedin.com/company/discoverable-marketing/"
+    - url: "https://www.linkedin.com/company/nyckelai/"
       icon: "jam jam-linkedin"
-      alt: "Discoverable Marketing on LinkedIn"
+      alt: "Nyckel on LinkedIn"
 
 external_links:
   title: "Learn More"
   links:
     - url: "/pricing/"
       text: "Pricing"
-    - url: "https://www.nyckel.com/public-functions"
+    - url: "/public-functions/"
       text: "Pre-Trained Models"  
     - url: "/customers/"
       text: "Customers"    

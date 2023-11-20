@@ -1,0 +1,6 @@
+I"<p>As noted on <a href="https://www.mux.com/blog/you-either-die-an-mvp-or-live-long-enough-to-build-content-moderation">this mux.com blog post</a>,
+when you have a social platform, you either die an MVP or live long enough to build content moderation.
+For many moderation use-cases, like filtering NSFW or offensive content, a general purpose moderation API like
+<a href="https://hivemoderation.com">hivemoderation</a> fits the bill. But, as we’ve seen with several of our customers,
+content moderation is often more nuanced than that.</p>
+:ET

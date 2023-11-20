@@ -1,0 +1,20 @@
+{% assign function = include.function %}
+
+<div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
+    <a class="card summary-card" href="{{ site.baseurl }}{{ function.url }}">
+        {% if function.image %}
+        <img class="card-img-top summary-img" src="{{ function.image }}" loading="lazy" />
+        {% else %}
+        <img class="card-img-top summary-img" src="/blog/images/placeholder-header.png" loading="lazy" />
+        {% endif %}
+        <div class="card-body">
+            <h1 style="font-size: 1.5em;">{{ function.title }}</h1>
+            <div class="entry">
+                {{ function.description }}
+            </div>
+        </div>
+        <div class="card-footer summary-footer d-flex flex-row justify-content-between">
+            <div class="read-more" style="text-align:right">Try it →</div>
+        </div>
+    </a>
+</div>

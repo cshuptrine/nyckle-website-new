@@ -1,0 +1,244 @@
+I"�F<p>*<em>Note: while we did our best to use the latest sources, some of the references used in this article are more than a year old at the time of writing</em></p>
+
+<p><a href="https://www.nyckel.com/blog/what-is-content-moderation/">Content moderation</a> on social media has had its share of controversy over the past few years.</p>
+
+<p>As concerns about misinformation versus free speech continue to be a subject of debate one thing remains sure: content moderation, at least to a certain extent, is essential for large social media platforms with millions (or in some cases, billions) of users.</p>
+
+<p>The moderation policies across these platforms differ somewhat according to their purpose and user base. This article takes a close-up look at four of Big social media sites: <a href="https://www.facebook.com/">Facebook</a>, <a href="https://twitter.com/">Twitter</a>, <a href="https://www.tiktok.com/">TikTok</a>, and <a href="https://www.reddit.com/">Reddit</a>.</p>
+
+<p>While there are obvious similarities between the four on basic policies (not tolerating violent, graphic, hateful content for example), there are some notable differences when it comes to more specific guidelines, which policies the platforms emphasize most, and what role the user base plays in the process of content moderation.</p>
+
+<p>TikTok, for example, is the most popular of these platforms for Gen Z and teens, and its content is all video-based – so its moderation policies are much more detailed than Reddit’s, whose focus is on community and conversation.</p>
+
+<p>TikTok, Facebook, and Twitter all outsource to 3rd party moderators, while Reddit uses a model that’s more or less self-moderated by volunteers in the role of community leaders – as a result, Reddit does not (generally) struggle with finding the time and resources to manage its content the way that Facebook and Twitter do.</p>
+
+<p>While TikTok does not (yet) deal with the same level of political/misinformation content issues that Twitter and Facebook do, <a href="https://www.axios.com/2020/09/23/tiktoks-content-moderation-time-bomb">some are worried that TikTok will soon run into the same challenges</a>. In fact, according to a recent experiment run by misinformation researchers, <a href="https://www.nytimes.com/2022/10/21/technology/tiktok-youtube-facebook-misinformation-ads.html">TikTok failed to 90% of ads featuring false or misleading information about elections</a>.</p>
+
+<p>Because Facebook and Twitter deal with so much political content (including misinformation) and because of the way the content on these platforms influences their user bases, they often have to make post hoc changes to their policies, <a href="https://slate.com/technology/2019/06/facebook-twitter-pinterest-youtube-content-moderation-rules-guide.html">leaving administrators in a continual state of catch-up</a>.</p>
+
+<p>To more easily compare the four platforms, we evaluated all of them based on the same criteria:</p>
+
+<ul>
+  <li><strong>Content guidelines</strong>: A run-down of the basic “what is” and “what isn’t” allowed</li>
+  <li><strong>Violation policies</strong>: How the platform deals with violation of its content and community rules</li>
+  <li><strong>Community input</strong>: How involved the users are in the process of moderating any problematic content (for example, flagging and reporting)</li>
+</ul>
+
+<p>In addition to these criteria, we’ve also included an overview of each platform that puts it into context with the others, including anything that sets it apart– including culture, niche, and user base demographics.</p>
+
+<h2 id="facebook">Facebook</h2>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+    <a href="https://www.facebook.com/">
+        
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/2022/thumbs-up-buttons.webp" alt="Thumbs up buttons" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/2022/thumbs-up-buttons.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
+        
+    </a>
+    
+
+</figure>
+
+<p>With just shy of 3 billion users, Facebook is the largest social media platform – at least, for now.</p>
+
+<p>In 2018, <a href="https://www.theguardian.com/technology/2018/apr/24/facebook-releases-content-moderation-guidelines-secret-rules">after the Guardian revealed Facebook’s long-secret guidelines</a>, Facebook finally released its own version of its policies to the public. Today, the social media giant employs over 15,000 third-party content moderators in addition to using AI to catch, flag, and in some cases remove problematic content.</p>
+
+<p>Facebook is gaining a reputation for being for “old people”, <a href="https://thesocialshepherd.com/blog/facebook-statistics">as its fastest-growing demographic is users age 65 and older</a> – but Millennials continue to be the largest audience.</p>
+
+<h3 id="content-guidelines">Content guidelines</h3>
+
+<p><a href="https://www.newamerica.org/oti/reports/everything-moderation-analysis-how-internet-platforms-are-using-artificial-intelligence-moderate-user-generated-content/case-study-facebook/">In a 2019 case study</a> comparing Facebook to Reddit and YouTube, Facebook was shown to have “by far the largest content moderation operation.”</p>
+
+<p>Facebook has a list of “Community Standards” detailing the values they seek to foster along with the types of content they prohibit or monitor for, broken down into categories including “violence and criminal behavior,” “safety”, “objectionable content,” and “integrity and authenticity.”</p>
+
+<p>Each section comes with a “policy rationale” explaining the guidelines in-depth, and problematic content is divided into two categories:</p>
+
+<ul>
+  <li>Content that’s not allowed</li>
+  <li>Content that requires additional information or context, content that needs to come with a warning, and/or content that should only be allowed for viewers age 18 or older</li>
+</ul>
+
+<p>According to their <a href="https://transparency.fb.com/fr-fr/policies/community-standards/">official page</a> for moderation policies, Facebook’s standards are based on “feedback from people and the advice of experts in fields like technology, public safety, and human rights.”</p>
+
+<h3 id="violation-policies">Violation policies</h3>
+
+<p>Facebook uses a system of <a href="https://about.fb.com/news/2020/08/how-we-review-content/">prioritization</a> to address content violation occurrences in order of how serious they are.</p>
+
+<p>Most content violations on Facebook result in a “first strike”, i.e., a warning with no further restrictions. Additional strikes result in the user being blocked from accessing certain parts of the platform for a certain length of time, depending on how many strikes. Users have come to describe this phenomenon as being in “Facebook jail.”</p>
+
+<p>Depending on the severity and nature of the content violations, users who receive more than 5 strikes may have their accounts disabled. Facebook also disables the accounts of dangerous people, such as convicted criminals or those misrepresenting their identity. Public figures who are creating civil unrest or other harmful activity can also have their accounts suspended.</p>
+
+<p>In addition to sending warning messages to first-strike offenders, Facebook will also send you a message informing you each time your account has been suspended or some other disciplinary action has occurred.</p>
+
+<h3 id="community-input">Community input</h3>
+
+<p>Facebook allows its users to report content by providing a “Report” link at the top right corner of the post in question. Users are prompted to describe what it is about the post that they find concerning. The platform provides additional resources and information to users seeking to report child abuse, criminal activity, and other serious issues.</p>
+
+<h2 id="twitter">Twitter</h2>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+    <a href="https://twitter.com/">
+        
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/2022/twitter-cube.webp" alt="Twitter cube" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/2022/twitter-cube.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
+        
+    </a>
+    
+
+</figure>
+
+<p>Although only the 15th most popular social media platform, Twitter continues to be very influential. <a href="https://thesocialshepherd.com/blog/twitter-statistics#:~:text=Twitter%20Has%20396.5%20Million%20Users%20Globally">10% of Twitter users are responsible for 92% of Tweets</a>, and many users turn to Twitter for their news or to follow their favorite influencers.</p>
+
+<p>In order to better direct the quality of public Tweets, Twitter recently launched its Twitter Circle feature allowing users to Tweet in private groups. 24 to 35-year-olds are the largest user group for Twitter.</p>
+
+<h3 id="content-guidelines-1">Content guidelines</h3>
+
+<p>Twitter’s guidelines, known as “the Twitter Rules”, are short and straightforward.</p>
+
+<p>Violence, hateful conduct, abuse, and other distressing content are all categorized under “Safety,” with several shorter sections for “Privacy,” “Authenticity,” and “Third Party Advertising.”</p>
+
+<h3 id="violation-policies-1">Violation policies</h3>
+
+<p>Twitter has a range of actions it takes against inappropriate content, accounting for both the very mild instances as well as more blatant violations.</p>
+
+<p>In the case of misleading information, Twitter will simply flag the content to inform users. Twitter may also limit the visibility of certain Tweets either by downranking them or removing them from top search results.</p>
+
+<p>In more serious cases, Twitter will require the user to delete the objectionable Tweet before being able to post any new Tweets. Twitter sends an email to the user notifying them of the Tweet(s) in violation and which policies were violated. The user has the chance to appeal if they believe the review board made an error.</p>
+
+<p>Twitter’s most severe enforcement action is to permanently suspend the user’s account and ban them from creating a new one. This has included several high-profile politicians as well as members of terrorists organizations such as ISIL and Al-Quaeda, and applied to the most serious instances of harassment, abuse and promotion of violence.</p>
+
+<h3 id="community-input-1">Community input</h3>
+
+<p>Similar to Facebook, Twitter users are able to report questionable content by selecting the option “Report Tweet” at the top of the Tweet in question.
+If the Tweet is in either the “harmful” or “abusive” category, the user will be asked to give more information, possibly along with additional posts from the same account so that the moderators have context to work with.</p>
+
+<h2 id="tiktok">TikTok</h2>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+    <a href="https://www.tiktok.com/">
+        
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/2022/tiktok-3d-cube.webp" alt="Tiktok" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/2022/tiktok-3d-cube.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
+        
+    </a>
+    
+
+</figure>
+
+<p>Clocking in with <a href="https://www.threecolts.com/blog-articles/social-media-statistics-2023">over a billion users</a>, TikTok is the current fastest-growing social media platform. It’s especially popular with Gen Z – <a href="https://wallaroomedia.com/blog/social-media/tiktok-statistics/#:~:text=Nearly%20half%20of%20Gen%20Z,app%2C%20according%20to%20Pew%20Research.">nearly half of Gen Z uses TikTok (along with Instagram) rather than Google for search</a>. It’s also by far the youngest of these platforms, having only been around since 2016.</p>
+
+<p>After getting hauled into court for its first congressional hearing last year, TikTok <a href="https://techcrunch.com/2022/02/08/tiktok-updates-its-policies-with-focus-on-minor-safety-age-appropriate-content-and-more/">updated its policies</a> to add extra protection for teens, including LGBTQ youth at risk of bullying and harassment.</p>
+
+<h3 id="content-guidelines-2">Content guidelines</h3>
+
+<p>At the top of TikTok’s <a href="https://www.tiktok.com/community-guidelines?lang=en">community guidelines</a> are Minor Safety, including the prohibition of any explicit content involving minors as well as grooming and other predatory behaviors. The guidelines also prohibit any content that encourages suicide, self-harm, eating disorders, dangerous challenges/behaviors, along with violent extremism, hateful content, nudity/adult content, and violent/graphic content.</p>
+
+<p>Unsurprisingly, because of TikTok’s popularity with young users, its community guidelines are the longest and the most detailed of all these four platforms.</p>
+
+<h3 id="violation-policies-2">Violation policies</h3>
+
+<p>TikTok uses AI to either automatically remove content that violates its guidelines or defer to a Safety Team for additional review.</p>
+
+<p>Similar to Facebook and Twitter, TikTok sends a warning to the user after the first violation and suspends the account after multiple multiple violations. Users are informed by the platform when their account has been suspended.</p>
+
+<p>Violation of “zero tolerance” policies (such as child sex abuse content) results in an automatic ban.</p>
+
+<h3 id="community-input-2">Community input</h3>
+
+<p>TikTok users can report harmful content by clicking the “Report” option at the top corner of the video posted, similar to the format of Facebook and Twitter. Users can then select the reason for the content being inappropriate.</p>
+
+<h2 id="reddit">Reddit</h2>
+
+<figure class="figure">
+
+    
+
+    
+
+    
+
+    
+    <a href="https://www.reddit.com/">
+        
+        <div class="post-img">
+        <!-- Add the 'boxed' class if 'box' attribute is 'yes' -->
+        <img src="../images/2022/reddit-spaceman.webp" alt="Reddit" class=" " style="border-radius: 20px; max-width: 100%" srcset="../images/2022/reddit-spaceman.webp 2x%" loading="lazy" />
+    </div>
+    <figcaption></figcaption>
+        
+    </a>
+    
+
+</figure>
+
+<p>Reddit in many ways is the outlier of these four platforms when it comes to user experience and culture as well as policies. Unlike the others mentioned in this article, Reddit relies primarily on <a href="https://www.cnbc.com/2021/02/27/content-moderation-on-social-media.html">its community of volunteers</a> for moderation.</p>
+
+<p>Because its user base is formed of communities (subreddits), with individuals who are often very involved in their respective subreddits, Reddit has a strongly developed culture that the other three platforms lack; or perhaps more accurately, the platform is made up of (literally) millions of communities, each focused on a niche topic.</p>
+
+<p>Reddit’s user base also has the narrowest demographics: <a href="https://thrivemyway.com/reddit-statistics/#:~:text=People%20between%20the%20age%20of,%25">over half of its users are male, and the majority of its users are white and college-educated</a>%20and%20Instagram%20(65%25).</p>
+
+<h3 id="content-guidelines-3">Content guidelines</h3>
+
+<p>Because Reddit is a giant community divided into subreddits, the platform’s general rules are short and sweet.</p>
+
+<p>“Remember the human,” is the platform’s #1 rule, in reference to disallowing bullying, harassment, violence, and hate. Other general rules include privacy, authenticity, and abiding by the rules of each particular subreddit.</p>
+
+<p>Beyond that, the rules on Reddit vary within each Reddit community and what the community moderator and members have agreed on.</p>
+
+<h3 id="violation-policies-3">Violation policies</h3>
+
+<p>Reddit delegates its content moderation to subreddit moderators. Moderators follow a basic <a href="https://www.redditinc.com/policies/moderator-code-of-conduct">Code of Conduct</a> in addition to any rules specific to their own subreddit. Because Reddit expects and trusts its user base to be rule-abiding and self-moderated, administrators only get involved when mods fail to enforce rules.</p>
+
+<h3 id="community-input-3">Community input</h3>
+
+<p>Visibility in the Reddit community relies on upvoting (rather than thumbs up-ing) user comments to maintain quality and keep the conversation relevant.</p>
+
+<p>Posts have a “report” button that users can click if they find a post problematic, or they can contact the Reddit help center. Mods within each subreddit tend to be very proactive at moderating and deleting comments that are irrelevant or inappropriate.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Social media platforms, by nature, have many similarities in their content moderation policies (and the way those policies are enforced).</p>
+
+<p>At the same time, the four platforms mentioned in this article experience different challenges and emphasize their policies differently based on their users and the way the platform itself is set up.</p>
+
+<p>Here is a summary of the “big picture” differences we found between Facebook, Twitter, TikTok and Reddit, when it comes to content moderation:</p>
+
+<ul>
+  <li>TikTok is especially popular with youth and Gen Z, and so its moderation policies are geared towards especially young and vulnerable demographics. It’s also the youngest of the four platforms and so it (and the challenges it faces) have not evolved as much yet.</li>
+  <li>Facebook and Twitter continue to be widely used across varying demographics, but over time they’ve come to experience challenges in balancing free speech vs. rampant spread of misinformation.</li>
+  <li>Reddit, unlike the other three, is mostly self-moderated by a community of volunteers. Because it’s designed for meaningful discussion rather than as a platform for influencers, users more often tend to respect community standards and keep each other in check.</li>
+</ul>
+:ET
