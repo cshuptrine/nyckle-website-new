@@ -4,9 +4,8 @@ permalink: "/contact/"
 description: Contact Nyckel to learn more.
 fill: fill-light-wrapper
 title: Contact Nyckel
-cta: none
 hubspot: yes
-nav: light
+nav:
 page_header:
   enable: true
   title: Want to chat?
@@ -64,31 +63,20 @@ contact_area:
 
 ---
 
-{% if page.page_header.enable %}
-{% assign page_d = page.page_header %}
-<div class="wrapper image-wrapper bg-image page-title-wrapper inverse-text"
-    data-image-src="{{page_d.background_image}}">
-    <div class="container inner text-center">
-        
-        <div class="space90"></div>
-        {% if page_d.title %}
-        <h1 class="page-title">{{page_d.title}}</h1>
-        {% endif %}
-        {% if page_d.sub_title %}
-        <p class="lead mb-30">{{page_d.sub_title}}</p>
-        {% endif %}
-        {% if page_d.button_text != null %}
-        <a href="{{page_d.button_url}}" class="btn btn-white btn-strong-hover">{{page_d.button_text}}</a>
-        {% endif %}
-    </div>
-    <!-- /.container -->
-</div>
-<!-- /.wrapper -->
-{% endif %}
+<div class="wrapper gray-wrapper">
+  <div class="container inner">
+
+      <div class="space20"></div>
+    <h1 class="display-2 text-center" style="color:#0b2436">Want to chat?
+</h1>
+    <p class="display-5 text-center" style="color:#0b2436">We'd love to chat further about how we can help.</p>
+</div></div>
+
+
 
 
 {% if page.contact_area.enable %}
-<div class="wrapper light-wrapper" style="margin-top: -40px;padding-left:3%;padding-right:3%">
+<div class="wrapper light-wrapper" style="margin-top: -70px;padding-left:3%;padding-right:3%">
     <div class="container inner" style="padding-left:5%;">
         {% if page.contact_area.title %}
           

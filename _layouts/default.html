@@ -60,7 +60,8 @@ light_logo="true" %}
         "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.video.min.js",
         "{{relative_url}}/assets/js/simple-jekyll-search.min.js"
         "{relative_url}}/assets/js/codebox.js",
-        "//embed.typeform.com/next/embed.js" // Added Typeform script
+        "//embed.typeform.com/next/embed.js",
+        "{{relative_url}}/assets/js/plugins.js"
     ];
 
     var hasLoadedJsFiles = new Array(jsUrls.length).fill(false);
@@ -84,6 +85,7 @@ light_logo="true" %}
 {% include /global/cta2.html %}
 {% elsif page.url contains '/public-functions/' %}
 {% include /global/cta3.html %}
+{% elsif page.url contains '/contact/' %}
 {% else %}
 {% include /global/cta.html %}
 {% endif %}
