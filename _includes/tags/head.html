@@ -1,34 +1,22 @@
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-191564533-1">
-</script>
+<!-- Google Analytics - This script loads the analytics library asynchronously -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-191564533-1"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    const gaMeasurementID = 'UA-191564533-1';
-    gtag('config', gaMeasurementID, {'linker': {'domains': ['www.nyckel.com', 'login.nyckel.com', 'try.nyckel.com']}});
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    window.pageChange = (path) => {
-        gtag('config', gaMeasurementID, { 'page_path': path });
-    }
+  const gaMeasurementID = 'UA-191564533-1';
+  gtag('config', gaMeasurementID, {
+    'linker': {'domains': ['www.nyckel.com', 'login.nyckel.com', 'try.nyckel.com']}
+  });
+
+  // Function to trigger a page view for SPA or after navigation
+  window.pageChange = (path) => {
+    gtag('config', gaMeasurementID, { 'page_path': path });
+  };
 </script>
 
-
-<!-- Google Tag Manager -->
-<script defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WXH98NF7');</script>
-<!-- End Google Tag Manager -->
-
-  {% if page.hubspot %}
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/24298198.js"></script>
-<!-- End of HubSpot Embed Code -->
-{% endif %}
-
+<!-- Lazy load Google Tag Manager on first scroll -->
 <script>
   window.dataLayer = window.dataLayer || [];
 
@@ -42,7 +30,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.src=
       j.async = true;
       j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
       f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NL7KWX59');
+
+      // Once GTM is loaded, initialize GA tracking
+      gtag('event', 'GTM loaded');
+    })(window, document, 'script', 'dataLayer', 'GTM-WXH98NF7');
   }
 
   function lazyLoadGTM() {
@@ -53,17 +44,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.src=
   window.addEventListener('scroll', lazyLoadGTM);
 </script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var image = document.querySelector('.hero-image');
 
-        // Define the breakpoint for mobile devices (e.g., 768px for tablets)
-        var mobileBreakpoint = 768;
-
-        // Check if the screen width is less than or equal to the breakpoint
-        if (window.innerWidth <= mobileBreakpoint) {
-            // It's a mobile device, so add the lazy loading attribute
-            image.setAttribute('loading', 'lazy');
-        }
-    });
-</script>
+{% if page.hubspot %}
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/24298198.js"></script>
+<!-- End of HubSpot Embed Code -->
+{% endif %}
