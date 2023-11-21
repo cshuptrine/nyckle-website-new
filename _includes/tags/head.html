@@ -31,7 +31,7 @@
 
   var lazyLoadGTM = function(event) {
     // Ensure this is a legitimate scroll by the user
-    if (event.currentTarget.pageYOffset > 0) {
+    if (event.currentTarget.pageYOffset > 50) {
       window.removeEventListener('scroll', lazyLoadGTM);
       loadGTM();
     }
