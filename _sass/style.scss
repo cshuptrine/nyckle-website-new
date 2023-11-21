@@ -7138,9 +7138,17 @@ footer.inverse-text address {
   width: 48%; /* Slightly less than half to account for the space-between */
 }
 
+/* Existing CSS */
 .logo-cell img {
-  max-width: 100%; /* Makes the image responsive */
-  height: auto; /* Keeps the aspect ratio */
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .logo-cell img, .row.clients img {
+    max-width: 40% !important;
+    height: auto;
+  }
 }
 
 .logo-matrix .logo-cell img {
