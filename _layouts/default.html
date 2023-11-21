@@ -14,25 +14,19 @@
 <link rel="stylesheet" href="/assets/css/lite-yt.css" />
 {% endif %}
 
-<style>
-.hero-image {
-    width: 125%; /* or you can specify any width you want */
-    height: auto; /* keeps image aspect ratio */
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* adjust shadow as needed */
-    image-rendering: -webkit-optimize-contrast; /* try to make image crisper */
-}
-</style>
-
 </head>
 
 <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
-    
-{% if page.nav == 'dark' %}
+
+{% if page.url contains '/blog/' or page.url contains '/public-functions/' %}
 {% include header.html container_class="container" extra_class="absolute nav-uppercase" %}
-{% elsif page.nav == 'light' %}
+{% else %}
+{% if page.nav == 'light' %}
 {% include header.html container_class="container" extra_class="absolute transparent inverse-text nav-uppercase"
 light_logo="true" %}
 {% else %}
+{% include header.html container_class="container" extra_class="absolute nav-uppercase" %}
+{% endif %}
 {% endif %}
 
 <div class="content-wrapper">
@@ -64,7 +58,9 @@ light_logo="true" %}
         "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.parallax.min.js",
         "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.slideanims.min.js",
         "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.video.min.js",
-        "{{relative_url}}/assets/js/simple-jekyll-search.min.js",
+        "{{relative_url}}/assets/js/simple-jekyll-search.min.js"
+        "{relative_url}}/assets/js/codebox.js",
+        "//embed.typeform.com/next/embed.js" // Added Typeform script
     ];
 
     var hasLoadedJsFiles = new Array(jsUrls.length).fill(false);
@@ -84,49 +80,17 @@ light_logo="true" %}
     };
 </script>
 
-<!-- original JS implementation 
-<script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/popper.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/revolution/js/jquery.themepunch.tools.min.js' | relative_url }}"></script>
-<script src="{{relative_url}}/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
-<script src="{{relative_url}}/assets/js/plugins.js"></script>
-<script src="{{relative_url}}/assets/js/simple-jekyll-search.min.js"></script>
-<script src="{{relative_url}}/assets/js/scripts.js"></script>-->
-
-{% unless page.cta %}
-{% include /global/cta.html %}
+{% if page.url contains '/blog/' %}
+{% include /global/cta2.html %}
+{% elsif page.url contains '/public-functions/' %}
+{% include /global/cta3.html %}
 {% else %}
-{% endunless %}
+{% include /global/cta.html %}
+{% endif %}
 
 {% include footer-flat.html light_logo="true" %}
 {% include /tags/body.html %}
 
-<!--{% if page.youtubevideo %}
-<script>
-window.addEventListener('load', function() {
-  if (window.innerWidth >= 768) { // same breakpoint as in the CSS
-    var liteYoutube = document.createElement('lite-youtube');
-    // set lite-youtube attributes
-    liteYoutube.setAttribute('videoid', '{{page.youtubevideo}}');
-    liteYoutube.setAttribute('playlabel', 'Play');
-
-    // Append the lite-youtube to the container
-    document.getElementById('myFrameContainer').appendChild(liteYoutube);
-  }
-});
-</script>
-{% endif %}-->
 
 </body>
-
 </html>
