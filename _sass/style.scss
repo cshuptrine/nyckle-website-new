@@ -7224,3 +7224,14 @@ footer.inverse-text address {
     line-height: 1rem;
     color:#808080;
 }
+
+.spacemobile {
+    height: 30px;
+    display: none; /* Hide by default */
+}
+
+@media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+    .spacemobile {
+        display: block; /* Display on mobile */
+    }
+}
