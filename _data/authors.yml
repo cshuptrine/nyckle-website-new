@@ -3,28 +3,35 @@ dan:
   display_name: Dan Ott
   github: danielott
   linkedin: danott
-  image: /assets/images/important/blog-dan.jpeg
+  image: /assets/images/important/blog-dan.webp
 
 oscar:
   display_name: Oscar Beijbom
   github: beijbom
   linkedin: oscarbeijbom
   twitter: beijbom
-  image: /assets/images/important/blog-oscar.jpeg
+  image: /assets/images/important/blog-oscar.webp
 
 george:
   display_name: George Mathew
   github: saintarian
   twitter: georgemkan
   linkedin: georgemathew
-  image: /assets/images/important/blog-george.jpeg
+  image: /assets/images/important/blog-george.webp
 
 jeremy:
   display_name: Jeremy Schneider
   github: jerschneid
   linkedin: jerschneid
   twitter: jerschneid
-  image: /assets/images/important/blog-jeremy.jpeg
+  image: /assets/images/important/blog-jeremy.webp
+
+chris:
+  display_name: Chris Shuptrine
+  github: jerschneid
+  linkedin: jerschneid
+  twitter: jerschneid
+  image: /assets/images/important/blog-chris.webp  
 
 nyckel:
   display_name: Nyckel
@@ -42,7 +49,7 @@ andrew:
   display_name: Andrew Tate
   linkedin: andrew-tate-224b30a7
   github: ajtatey
-  image: /assets/images/important/blog-andrew.jpeg
+  image: /assets/images/important/blog-andrew.webp
 
 becca:
   display_name: Becca Miller
