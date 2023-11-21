@@ -1,17 +1,17 @@
 # General Settings
 title: "Nyckel"
-email: "chris@nyckel.com"
-email_2: "chris@nyckel.com"
-image: "/assets/images/important/cover.jpg"
-description: "Use AI to classify text and images."
-black_logo_1x: "/assets/images/important/nyckel-black-small.png"
-black_logo_2x: "/assets/images/important/nyckel-black.png"
-light_logo_1x: "/assets/images/important/DiscoverableLogo_White_180.webp"
-light_logo_2x: "/assets/images/important/DiscoverableLogo_White_320.webp"
+email: "feedback@nyckel.com"
+email_2: "feedback@nyckel.com"
+image: "/assets/images/important/nyckel-cover.webp"
+description: "Use AI to easily classify text and images."
+black_logo_1x: "/assets/images/important/Nyckel-Logo-Color-180.webp"
+black_logo_2x: "/assets/images/important/Nyckel-Logo-Color-350.webp"
+light_logo_1x: "/assets/images/important/Nyckel-Logo-White-180.webp"
+light_logo_2x: "/assets/images/important/Nyckel-Logo-White-350.webp"
 favicon_1x: "/favicon.png"
 favicon_2x: "/favicon.png"
 
-address_01: '5540 Centerview Dr Ste 204<br />PMB 158585<br /> Raleigh, NC'
+address_01: '01 Silver Terrace Waterville Maine'
 phone_number: "+01 (434) 444 2268"
 copyright_text: "© 2023 Nyckel"
 
@@ -68,16 +68,6 @@ external_links_03:
       text: "Blog"   
     - url: "mailto:feedback@nyckel.com"
       text: "Support" 
-
-# footer_newsletter:
-#  title: "Our Newsletter"
-#  sub_title: "Subscribe to our newsletter to get our news & deals delivered to your inbox!"
-#  subscribe_button_text: "Join"
-
-# one_page_nav_settings:
-#  links:
-#    - text: "Home"
-#      url: "#home"
 
 author_page_header:
   header_background_image: "/assets/images/art/bg31.jpg"
