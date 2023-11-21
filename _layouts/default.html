@@ -82,6 +82,41 @@ light_logo="true" %}
     };
 </script>
 
+<script>
+    function loadCSS(urls) {
+        urls.forEach(function(url) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = url;
+            link.onerror = function() {
+                console.error('Failed to load CSS:', url);
+            };
+            document.head.appendChild(link);
+        });
+    }
+
+    var cssLoaded = false;
+
+    function handleScroll() {
+        if (!cssLoaded && window.scrollY > 100) { // Check if scrolled more than 100 pixels
+            loadCSS([
+                '/assets/css/lazy/style-lazy.css',
+                '/assets/css/lazy/layers.css',
+                '/assets/css/lazy/plugins-lazy.css',
+                '/assets/css/lazy/type-lazy.css',
+                // Add more URLs as needed
+            ]);
+            cssLoaded = true;
+            window.removeEventListener('scroll', handleScroll); // Remove event listener once CSS is loaded
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+</script>
+
+
+
 {% if page.url contains '/blog/' %}
 {% include /global/cta2.html %}
 {% elsif page.url contains '/public-functions/' %}
