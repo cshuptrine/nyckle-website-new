@@ -7235,10 +7235,3 @@ CUSTOM CSS ADDED BY NYCKEL
         display: block; /* Display on mobile */
     }
 }
-
-.hero-image {
-    width: 125%; /* or you can specify any width you want */
-    height: auto; /* keeps image aspect ratio */
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* adjust shadow as needed */
-    image-rendering: -webkit-optimize-contrast; /* try to make image crisper */
-}
