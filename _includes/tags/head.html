@@ -2,7 +2,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-191564533-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){ dataLayer.push(arguments); }
   gtag('js', new Date());
 
   const gaMeasurementID = 'UA-191564533-1';
@@ -18,32 +18,27 @@
 
 <!-- Lazy load Google Tag Manager on first scroll -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-
   function loadGTM() {
-    (function(w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
+    // Load GTM script
+    var gtmScript = document.createElement('script');
+    gtmScript.async = true;
+    gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-WXH98NF7';
+    document.head.appendChild(gtmScript);
 
-      // Once GTM is loaded, initialize GA tracking
-      gtag('event', 'GTM loaded');
-    })(window, document, 'script', 'dataLayer', 'GTM-WXH98NF7');
+    // Once GTM is loaded, initialize GA tracking
+    gtag('event', 'GTM loaded');
   }
 
-  function lazyLoadGTM() {
-    window.removeEventListener('scroll', lazyLoadGTM);
-    loadGTM();
-  }
+  var lazyLoadGTM = function(event) {
+    // Ensure this is a legitimate scroll by the user
+    if (event.currentTarget.pageYOffset > 0) {
+      window.removeEventListener('scroll', lazyLoadGTM);
+      loadGTM();
+    }
+  };
 
   window.addEventListener('scroll', lazyLoadGTM);
 </script>
-
 
 {% if page.hubspot %}
 <!-- Start of HubSpot Embed Code -->
