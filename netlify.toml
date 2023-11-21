@@ -13,3 +13,11 @@
 [[redirects]]
   from = "/blog/index.html"
   to = "/blog/" 
+
+[[redirects]]
+  from = "/custom-categorize-aerial-imagery-api/"
+  to = "/"   
+
+[[redirects]]
+  from = "/machine-learning-functions-as-a-service/"
+  to = "/"  
