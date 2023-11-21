@@ -41,7 +41,7 @@ light_logo="true" %}
 <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/popper.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/revolution/js/jquery.themepunch.tools.min.js' | relative_url }}"></script>
+<!--<script src="{{ '/assets/revolution/js/jquery.themepunch.tools.min.js' | relative_url }}"></script>-->
 <script src="{{relative_url}}/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
 <script src="{{relative_url}}/assets/js/plugins.js"></script>
 <script src="{{relative_url}}/assets/js/scripts.js"></script>
@@ -61,7 +61,8 @@ light_logo="true" %}
         "{{relative_url}}/assets/js/simple-jekyll-search.min.js"
         "{relative_url}}/assets/js/codebox.js",
         "//embed.typeform.com/next/embed.js",
-        "{{relative_url}}/assets/js/plugins.js"
+        "{{relative_url}}/assets/js/plugins.js",
+        "{{relative_url}}/assets/revolution/js/jquery.themepunch.tools.min.js",
     ];
 
     var hasLoadedJsFiles = new Array(jsUrls.length).fill(false);
