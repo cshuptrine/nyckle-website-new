@@ -112,33 +112,3 @@ Here is a short video showing me training, deploying, and using a custom trained
 ## Get in touch
 
 [Try us out](https://www.nyckel.com/console) for free or [get in touch](mailto:feedback@nyckel.com) with our team to chat about your DAM use case.
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var iframe = document.querySelector('iframe[data-src]');
-    var iframeLoaded = false;
-
-    function loadIframe() {
-        var rect = iframe.getBoundingClientRect();
-        var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-        var windowWidth = (window.innerWidth || document.documentElement.clientWidth);
-
-        // Check if iframe is in the viewport
-        if (rect.top <= windowHeight && rect.left <= windowWidth && rect.bottom >= 0 && rect.right >= 0) {
-            // Set the src attribute to the actual URL
-            iframe.src = iframe.getAttribute('data-src');
-            iframeLoaded = true;
-
-            // Remove the event listener once the iframe has loaded
-            window.removeEventListener('scroll', loadIframe);
-        }
-    }
-
-    // Attach scroll event listener
-    window.addEventListener('scroll', loadIframe);
-
-    // Load iframe if it's already in the viewport without scrolling
-    loadIframe();
-});
-</script>
-

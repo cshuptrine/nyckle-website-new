@@ -1,5 +1,4 @@
-<nav
-  class="navbar {% if include.extra_class %} {{include.extra_class}} {% endif %} navbar-hover-opacity navbar-expand-lg">
+<nav class="navbar {% if include.extra_class %} {{include.extra_class}} {% endif %} navbar-hover-opacity navbar-expand-lg">
   <div
     class="{% if include.container_class %} {{include.container_class}} {% else %} container-fluid {% endif %} flex-row justify-content-center">
     <div class="navbar-brand">
@@ -40,50 +39,42 @@
     <!-- /.navbar-other -->
 
     <div class="navbar-collapse offcanvas-nav">
-      <div class="offcanvas-header d-lg-none d-xl-none">
-        <a href="/">
-          <img src="/assets/images/important/Nyckel-Logo-White-350.webp" class="logo-light" alt="Nyckel logo" width="350" height="61" loading="lazy"/></a>
-        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
-      </div>
-      <ul class="navbar-nav mx-auto">
-        {% for menu in site.data.nav2.main_menu %}
-        {% assign check_menu = menu.menu_type %}
-        {% case check_menu %}
-        {% when "megamenu" %} 
-        <li class="nav-item">
-      
-          <!--/.dropdown-menu -->
-        </li>
-        {% when "dropdown" %}
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
-          <ul class="dropdown-menu submenu">
-            {% for label_two in menu.label_two %}
-    			 <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">{{label_two.sub_menu_text}}</a>
-    			   <ul class="dropdown-menu submenu">
-    			   	 {% for sub_menu in label_two.sub_menu %}
-    			      <li class="nav-item"><a class="dropdown-item" href="{{sub_menu.url}}">{{sub_menu.text}}</a></li>
-    			   	 {% endfor %}
-
-    			   </ul>
-    			 </li>
-			   {% endfor %}
-       {% if menu.submenu %}
-        {% for label_one in menu.submenu %}
-              <li><a class="dropdown-item" href="{{label_one.url}}">{{label_one.text}}</a></li>
-              {% endfor %}
+    <!-- ... offcanvas header ... -->
+<ul class="navbar-nav mx-auto">
+  {% for menu in site.data.nav2.main_menu %}
+    <li class="nav-item {% if menu.dropdown %}dropdown{% endif %}">
+      <a class="nav-link {% if menu.dropdown %}dropdown-toggle{% endif %}" href="{{ menu.url }}">
+        {{ menu.text }}
+      </a>
+      {% if menu.dropdown %}
+        <ul class="dropdown-menu">
+          {% for dropdown_item in menu.dropdown %}
+            <a class="dropdown-item" href="{{ dropdown_item.url }}">
+              {% if dropdown_item.icon %}
+                <!-- Check if 'logo' attribute is set to true -->
+                {% if dropdown_item.logo %}
+                  <!-- Image with circular style -->
+                  <img loading="lazy" src="{{ dropdown_item.icon }}" alt="{{ dropdown_item.text }} Icon" class="logo-image">
+                {% else %}
+                  <!-- Standard image style -->
+                  <img loading="lazy" src="{{ dropdown_item.icon }}" alt="{{ dropdown_item.text }} Icon">
+                {% endif %}
               {% endif %}
-              
-          </ul>
-        </li>
-        {% else %}
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
-        </li>
-        {% endcase %}
-        {% endfor %}
-      </ul>
-      <!-- /.navbar-nav -->
-    </div>
-    <!-- /.navbar-collapse -->
+              <span class="dropdown-item-content">
+                <span class="dropdown-item-header">{{ dropdown_item.text }}</span>
+                <span class="dropdown-item-subtext">{{ dropdown_item.subtext }}</span>
+              </span>
+            </a>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+
+
+    <!-- /.navbar-nav -->
   </div>
-  <!-- /.container -->
+  <!-- /.navbar-collapse -->
 </nav>

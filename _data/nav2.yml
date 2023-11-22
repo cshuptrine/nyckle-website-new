@@ -1,16 +1,78 @@
 main_menu:
 
+  - text: "Product"
+    url: "/products/image-classification-api/"
+    dropdown:
+      - text: "Image Classification"
+        url: "/products/image-classification-api/"
+        icon: "/assets/images/icons/nav/image.png"
+        subtext: "Auto-label images at scale"
+      - text: "Text Classification"
+        url: "/products/text-classification-api/"
+        icon: "/assets/images/icons/nav/text.png"
+        subtext: "Auto-label text at scale"
+
   - text: "Pricing"
     url: "/pricing/"
   
   - text: "Customers"
     url: "/customers/"
+    dropdown:
+      - text: "Gardyn"
+        url: "/blog/gardyn-reduces-workload-by-70-while-growing-2x-after-implementing-computer-vision/"
+        icon: "/assets/images/important/gardyn-icon.png"
+        subtext: "Image classification for IOT devices"
+        logo: true
+      - text: "Taimi"
+        url: "/blog/content-moderation-of-social-network-taimi-case-study/"
+        icon: "/assets/images/important/taimi-icon.png"
+        subtext: "Image & text content moderation"
+        logo: true
+      - text: "Gust"
+        url: "/blog/custom-spam-filter-gust-case-study/"
+        icon: "/assets/images/important/gust-icon.png"
+        subtext: "Spam identification of new profiles"
+        logo: true
+      - text: "Spycape"
+        url: "/blog/image-classification-for-augmented-reality-games-spyscape-case-study/"
+        icon: "/assets/images/important/spyscape-icon.svg"
+        logo: true   
+        subtext: "Real-time augmented reality"
+      - text: "See all"
+        url: "/customers/"
+        icon: "/favicon.png"
+        logo: true   
+        subtext: "See all customer stories"  
+
        
   - text: "About"
     url: "/about/"
+    dropdown:
+      - text: "Our Story"
+        url: "/about/"
+        icon: "/favicon.png"
+        subtext: "Who we are"
+      - text: "Talk to Sales"
+        url: "/contact/"
+        icon: "/assets/images/icons/nav/sales.png"
+        subtext: "Reach out for a custom demo"
+      - text: "Support"
+        url: "mailto:feedback@nyckel.com"
+        icon: "/assets/images/icons/nav/support.png"
+        subtext: "Contact Support"
     
-  - text: "Blog"
-    url: "/blog/" 
-
-  - text: "API Docs"
-    url: "https://www.nyckel.com/docs"   
+  - text: "Resources"
+    url: "https://www.nyckel.com/docs" 
+    dropdown:
+      - text: "API Docs"
+        url: "https://www.nyckel.com/docs"
+        icon: "/assets/images/icons/nav/api.png"
+        subtext: "Test the API in just minutes"
+      - text: "Blog"
+        url: "/blog/"
+        icon: "/assets/images/icons/nav/blog.png"
+        subtext: "Learn more about ML classification"
+      - text: "Pre-Trained Models"
+        url: "/public-functions/"
+        icon: "/assets/images/icons/nav/invention.png"
+        subtext: "Classify with these already-made models"

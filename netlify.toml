@@ -21,3 +21,15 @@
 [[redirects]]
   from = "/machine-learning-functions-as-a-service/"
   to = "/"  
+
+[[redirects]]
+  from = "/text-classification-api/"
+  to = "/products/text-classification-api/"  
+
+[[redirects]]
+  from = "/computer-vision-api"
+  to = "/products//computer-vision-api/"      
+
+[[redirects]]
+  from = "/image-classification-api/"
+  to = "/products/image-classification-api/"   
