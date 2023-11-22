@@ -31,7 +31,7 @@ main_menu:
       - text: "Gust"
         url: "/blog/custom-spam-filter-gust-case-study/"
         icon: "/assets/images/important/gust-icon.png"
-        subtext: "Spam identification of new profiles"
+        subtext: "Spam identification using text"
         logo: true
       - text: "Spycape"
         url: "/blog/image-classification-for-augmented-reality-games-spyscape-case-study/"
