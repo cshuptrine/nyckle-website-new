@@ -94,7 +94,7 @@ These myths were all true a few years ago, so they are not outright lies. But re
 
 Here is a short video showing me training, deploying, and using a custom trained model to detect telehandlers, all in under three minutes!
 
-<p align="center"><iframe style="text-align:center" width="512" height="421" src="https://www.loom.com/embed/b71afe551eab40e3ab8baefd1f86a16a?sid=1fa7d442-c411-4f93-ab03-36112bbef114" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
+<p align="center"><iframe style="text-align:center" width="512" height="421" src="https://www.loom.com/embed/b71afe551eab40e3ab8baefd1f86a16a?sid=1fa7d442-c411-4f93-ab03-36112bbef114" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen loading="lazy"></iframe></p>
 
 ## Get in touch
 

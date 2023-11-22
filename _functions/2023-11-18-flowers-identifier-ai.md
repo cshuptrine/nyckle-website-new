@@ -1,11 +1,12 @@
 ---
 layout: function
 function: true
-description: This is a totally free flower species identifier. Just upload a picture of a flower, and our AI will identify the species it is.
+description: This is a free flower species identifier. Just upload a picture of a flower, and our AI will identify the species it is.
+title: Use AI to identify flower species
 image: /assets/images/functions/flowers-identifier.webp
-headliner: true
 name: flowers
 sname: flower
+article: a flower
 model: oxford-flowers
 samplecount: 7125
 labelcount: 102

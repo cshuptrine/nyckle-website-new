@@ -54,8 +54,8 @@ layout: default
         {% endif %}
       </div>
       {% if page.image %}
-      <div class="image-area">
-        <img src="{{ page.image }}" alt="{{ page.image_alt }}" />
+      <div class="image-area d-none d-lg-block">
+        <img class="hero-image" src="{{ page.image }}" alt="{{ page.image_alt }}" />
       </div>
       {% endif %}
     </div>
