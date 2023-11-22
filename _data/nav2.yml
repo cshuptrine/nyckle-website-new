@@ -1,7 +1,7 @@
 main_menu:
 
   - text: "Product"
-    url: "/products/image-classification-api/"
+    url: "/products/"
     dropdown:
       - text: "Image Classification"
         url: "/products/image-classification-api/"
