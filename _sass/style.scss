@@ -5090,8 +5090,19 @@ CUSTOM CSS ADDED BY NYCKEL
     display: none; /* Hide by default */
 }
 
+.spacemobile-s {
+    height: 15px;
+    display: none; /* Hide by default */
+}
+
 @media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
     .spacemobile {
+        display: block; /* Display on mobile */
+    }
+}
+
+@media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+    .spacemobile-s {
         display: block; /* Display on mobile */
     }
 }
