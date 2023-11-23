@@ -111,15 +111,15 @@ training_data = \[]
 
 for file in train_cat_files:
 
-    filename = train_cat_dir + '/' + file
+filename = train_cat_dir + '/' + file
 
-    training_data.append((filename, 'cats'))
+training_data.append((filename, 'cats'))
 
 for file in train_dog_files:
 
-    filename = train_dog_dir + '/' + file
+filename = train_dog_dir + '/' + file
 
-    training_data.append((filename, 'dogs'))
+training_data.append((filename, 'dogs'))
 
 func = ImageClassificationFunction.new("IsCatOrDog", user)
 
