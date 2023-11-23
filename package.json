@@ -1,7 +1,7 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "Discoverable Marketing's website",
+  "description": "Nyckel's Website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,9 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@netlify/plugin-sitemap": "^0.8.1"
-  },
   "dependencies": {
     "lite-youtube-embed": "^0.2.0"
   }

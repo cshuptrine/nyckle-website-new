@@ -3,7 +3,7 @@
 
 <head>
 <!--Meta Tags & Codes -->
-{% include /meta/company-meta.html %}
+{% include /tags/meta.html %}
 {% include /tags/head.html %}
 
 <!--SCSS -->
@@ -33,16 +33,25 @@ light_logo="true" %}
 {{ content }}
 </div>
 
-{% if page.video %}
-<script src="/assets/js/lite-yt.js"></script>
+{% if page.url contains '/blog/' %}
+{% include /cta/cta-blog.html %}
+{% elsif page.url contains '/public-functions/' %}
+{% include /cta/cta-functions.html %}
+{% elsif page.url contains '/products/' %}
+{% include /cta/cta-products.html %}
+{% elsif page.url contains 'contact' or page.url contains 'privacy' or page.url contains 'terms' %}
+{% else %}
+{% include /cta/cta.html %}
 {% endif %}
 
+{% include footer-flat.html light_logo="true" %}
+{% include /tags/body.html %}
+
 <!-- Above-the-fold JS tags -->
-<script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/popper.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
-<!--<script src="{{ '/assets/revolution/js/jquery.themepunch.tools.min.js' | relative_url }}"></script>-->
-<script src="{{relative_url}}/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="{{relative_url}}/assets/js/jquery.min.js"></script>
+<script src="{{relative_url}}/assets/js/popper.min.js"></script>
+<script src="{{relative_url}}/assets/js/bootstrap.min.js"></script>
+<script src="{{relative_url}}/assets/revolution/js/jquery.revolution.min.js"></script>
 <script src="{{relative_url}}/assets/js/plugins.js"></script>
 <script src="{{relative_url}}/assets/js/scripts.js"></script>
 
@@ -58,11 +67,11 @@ light_logo="true" %}
         "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.parallax.min.js",
         "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.slideanims.min.js",
         "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.video.min.js",
-        "{{relative_url}}/assets/js/simple-jekyll-search.min.js"
+        "{{relative_url}}/assets/js/simple-jekyll-search.min.js",
         "{relative_url}}/assets/js/codebox.js",
-        "//embed.typeform.com/next/embed.js",
         "{{relative_url}}/assets/js/plugins.js",
-        "{{relative_url}}/assets/revolution/js/jquery.themepunch.tools.min.js",
+        "{{relative_url}}/assets/revolution/js/jquery.tools.min.js",
+        "{relative_url}}/assets/js/lite-yt.js"
     ];
 
     var hasLoadedJsFiles = new Array(jsUrls.length).fill(false);
@@ -114,23 +123,6 @@ light_logo="true" %}
 
     window.addEventListener('scroll', handleScroll, { passive: true });
 </script>
-
-
-
-{% if page.url contains '/blog/' %}
-{% include /global/cta2.html %}
-{% elsif page.url contains '/public-functions/' %}
-{% include /global/cta3.html %}
-{% elsif page.url contains '/products/' %}
-{% include /global/cta-products.html %}
-{% elsif page.url contains '/contact/' %}
-{% else %}
-{% include /global/cta.html %}
-{% endif %}
-
-{% include footer-flat.html light_logo="true" %}
-{% include /tags/body.html %}
-
 
 </body>
 </html>

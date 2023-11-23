@@ -40,8 +40,8 @@ main_menu:
         subtext: "Real-time augmented reality"
       - text: "See all"
         url: "/customers/"
-        icon: "/favicon.png"
-        logo: true   
+        icon: "/favicon.webp"
+        logo:   
         subtext: "See all customer stories"  
 
        
@@ -50,7 +50,7 @@ main_menu:
     dropdown:
       - text: "Our Story"
         url: "/about/"
-        icon: "/favicon.png"
+        icon: "/favicon.webp"
         subtext: "Who we are"
       - text: "Talk to Sales"
         url: "/contact/"
