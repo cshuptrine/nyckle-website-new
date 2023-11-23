@@ -58,6 +58,10 @@ layout: default
       <div class="image-area d-none d-lg-block">
         <img class="hero-image" src="{{ page.image }}" alt="{{ page.image_alt }}" />
       </div>
+          {% else %}
+      <div class="image-area d-none d-lg-block">
+        <img class="hero-image" src="/assets/images/important/nyckel-cover.webp" alt="Nyckel classification API}" />
+      </div>
       {% endif %}
     </div>
   </div>
