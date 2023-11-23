@@ -7,15 +7,15 @@ author: becca
 stage: false
 featured: true
 headliner: false
-seo_title: Nyckel vs. PyTorch Image Classification Comparison
+title: Nyckel vs. PyTorch Image Classification Comparison
 summary: Dive into a comprehensive comparison of PyTorch and Nyckel for image
   classification to understand their unique approaches, strengths, and
   usability. Choose the best machine learning approach for your use case based
   on your ML needs and expertise.
-seo_description: Explore the differences between PyTorch and Nyckel for image
+description: Explore the differences between PyTorch and Nyckel for image
   classification.  Identify the best fit for you based on your requirements and
   ML expertise.
-og_image: /blog/images/pytorch-image-classification3.png
+image: /blog/images/pytorch-image-classification3.webp
 ---
 Image classification is a common application of machine learning that trains computers to recognize and categorize images into labels. In this article, I'll compare how you can solve an image classification task with [PyTorch](https://pytorch.org), a prominent deep learning framework, to [Nyckel](https://www.nyckel.com/image-classification-api), a specialized AutoML platform that does most of the ML heavy-lifting for you.
 
@@ -53,7 +53,7 @@ Once I’ve trained the image classifier, I can move on to evaluating its perfor
 
 I can also evaluate the model’s performance via a confusion matrix, which offers insights into the classifier's ability to correctly classify and differentiate between different classes:
 
-{% include figure.html url="../images/predicted-true-label3.png" description="As shown in the confusion matrix above, all 20 cat images were correctly classified as dogs, and 19 dog images were correctly classified as dogs. Similarly, no cat images were incorrectly classified as dogs, and only 1 dog image was incorrectly classified as a cat." %}
+{% include figure.html url="../images/predicted-true-label3.webp" description="As shown in the confusion matrix above, all 20 cat images were correctly classified as dogs, and 19 dog images were correctly classified as dogs. Similarly, no cat images were incorrectly classified as dogs, and only 1 dog image was incorrectly classified as a cat." %}
 
 ### 5. Package the image classification model as a Docker container
 
@@ -157,7 +157,7 @@ print('predicted label: {}, true label: dogs'.format(prediction.label_name))
 
 With this, I can see that the model correctly classifies all data in the testing set, too. All 20 dogs are correctly classified as dogs, and all 20 cats are correctly classified as cats. I can visualize this performance with a confusion matrix:
 
-{% include figure.html url="../images/predicted-true-label4.png" %}
+{% include figure.html url="../images/predicted-true-label4.webp" %}
 
 ## Understanding how Nyckel works
 

@@ -7,15 +7,11 @@ author: becca
 stage: false
 featured: true
 headliner: false
-seo_title: Nyckel vs. Keras Image Classification Comparison
-summary: Dive into a comprehensive comparison of Keras and Nyckel for image
-  classification to understand their distinct approaches, strengths, and
-  usability. Identify the best fit for your use case based on your requirements
-  and ML expertise.
-seo_description: Explore the differences between Keras and Nyckel for image
+title: Nyckel vs. Keras Image Classification Comparison
+description: Explore the differences between Keras and Nyckel for image
   classification. Identify the best fit for you based on your requirements and
   ML expertise.
-og_image: /blog/images/keres-image-classification4.png
+image: /blog/images/keres-image-classification4.webp
 ---
 *For this article, we hired [Becca Miller](https://www.linkedin.com/in/becca-miller-96a570b8/), a freelance software developer and technical writer, to compare Keras image classification and Nyckel image classification. Becca details her experience with both ML services and shares how you can build the image classifier yourself with either option.*
 
@@ -57,7 +53,7 @@ After I train the Keras image classifier, I can evaluate the model's performance
 
 I also evaluated the model’s performance via a confusion matrix, which offers insights into the classifier's ability to correctly classify and differentiate between different classes:
 
-{% include figure.html url="../images/predicted-true-label.png" description="As shown in the confusion matrix above, 19 dog images were correctly classified as dogs and 18 cat images were correctly classified as cats. Similarly, only 1 dog image was incorrectly classified as a cat and 2 cat images were incorrectly classified as dogs."%}
+{% include figure.html url="../images/predicted-true-label.webp" description="As shown in the confusion matrix above, 19 dog images were correctly classified as dogs and 18 cat images were correctly classified as cats. Similarly, only 1 dog image was incorrectly classified as a cat and 2 cat images were incorrectly classified as dogs."%}
 
 ### 5. Package the image classification model as a Docker container
 
@@ -161,7 +157,7 @@ print('predicted label: {}, true label: dogs'.format(prediction.label_name))
 
 By looking at this code’s output, I can see that the model correctly classified all data in the testing set, too. All 20 dogs are correctly classified as dogs, and all 20 cats are correctly classified as cats. Again, I can visualize this performance with a confusion matrix:
 
-{% include figure.html url="../images/predicted-true-label2.png" %}
+{% include figure.html url="../images/predicted-true-label2.webp" %}
 
 ## Understanding how Nyckel works
 

@@ -5,32 +5,12 @@ noindex: true
 fill: fill-light-wrapper
 cta: none
 nav: dark
-page_header:
-  enable: true
-  title: "Thank you for reaching out!"
-  sub_title: We'll respond ASAP. We hope you have a great rest of the day.
-  button_text: 
-  button_url: "#"
-  background_image:
 
 ---
 
-{% if page.page_header.enable %}
-{% assign page_d = page.page_header %}
-<div class="wrapper light-wrapper page-title-wrapper inverse-text">
+<div class="wrapper light-wrapper page-title-wrapper inverse-text" style="padding-bottom:100px">
     <div class="container inner text-center">
-        
-        <div class="space90"></div>
-        {% if page_d.title %}
-        <h1 class="page-title" style="color: #0C0F44;">{{page_d.title}}</h1>
-        {% endif %}
-        {% if page_d.sub_title %}
-        <p class="lead mb-30" style="color: #0C0F44;">{{page_d.sub_title}}</p>
-        {% endif %}
+        <h1 class="page-title" style="color: #0b2436;">Thank you for reaching out!</h1>
+        <p class="lead mb-30" style="color: #0b2436;">We'll respond ASAP. We hope you have a great rest of the day.</p>
     </div>
-    <!-- /.container -->
 </div>
-<!-- /.wrapper -->
-{% endif %}
-
-      <div class="space100"></div>
