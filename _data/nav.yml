@@ -1,7 +1,7 @@
 main_menu:
 
   - text: "Product"
-    url: "/products/"
+    url: "/how-nyckel-works/"
     dropdown:
       - text: "Image Classification"
         url: "/products/image-classification-api/"
