@@ -32,4 +32,28 @@
 
 [[redirects]]
   from = "/image-classification-api/"
-  to = "/products/image-classification-api/"   
+  to = "/products/image-classification-api/"  
+
+[[redirects]]
+  from = "/product/"
+  to = "/products/"
+
+[[redirects]]
+  from = "/semantic-image-search"
+  to = "/products/semantic-image-search"
+
+[[redirects]]
+  from = "/migrating-from-monkey-learn"
+  to = "/products/migrating-from-monkey-learn"
+
+[[redirects]]
+  from = "/custom-content-moderation-api"
+  to = "/products/custom-content-moderation-api"
+
+[[redirects]]
+  from = "/semantic-text-search"
+  to = "/products/semantic-text-search"
+
+[[redirects]]
+  from = "/ai-for-digital-asset-management"
+  to = "/products/ai-for-digital-asset-management"
