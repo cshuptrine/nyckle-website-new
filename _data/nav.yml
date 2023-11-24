@@ -11,6 +11,10 @@ main_menu:
         url: "/products/text-classification-api/"
         icon: "/assets/images/icons/nav/text.webp"
         subtext: "Auto-label text at scale"
+      - text: "How Nyckel Works"
+        url: "/how-nyckel-works/"
+        icon: "/favicon.webp"
+        subtext: "Deep product dive"    
 
   - text: "Pricing"
     url: "/pricing/"

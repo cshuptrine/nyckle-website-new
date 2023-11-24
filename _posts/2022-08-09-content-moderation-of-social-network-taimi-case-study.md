@@ -17,7 +17,7 @@ image_alt: Taimi uses Nyckel for content moderation
 
 <a href="https://taimi.com">Taimi</a> is an LGBTQ+ dating app, with over 16 million users on the platform. With a community as large as Taimi’s, content moderation is critical to ensure a positive user experience.
 
-{% include quote.html text="[Nyckel] is significantly cheaper than manual moderation…9 or 10 times cheaper than using a [moderation] company in Europe or the US." author="Vladislav Yavorskyi" title="Moderation Manager, Taimi" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-taimi.jpg" %}
+{% include quote.html text="[Nyckel] is significantly cheaper than manual moderation…9 or 10 times cheaper than using a [moderation] company in Europe or the US." author="Vladislav Yavorskyi" title="Moderation Manager, Taimi" mugshot="/assets/images/important/quote-vlad.webp" %}
 
 {: .highlights }
 Taimi uses Nyckel text classification to moderate content across its platforms
@@ -42,13 +42,13 @@ Taimi needed a content moderation solution that was faster and higher quality th
 
 Taimi’s Moderation Manager, Vladislav Yavorskyi, discovered Nyckel’s [content curation solutions](https://www.nyckel.com/custom-content-moderation-api) via an internet search for ML and AI solutions. Vladislav was immediately pleased with the simplicity and usability of Nyckel’s interface, and the ready-to-use free plan meant that Vladislav’s team could get started right away.
 
-{% include quote.html text="The user interface is really ergonomic and user-friendly." author="Vladislav Yavorskyi" title="Moderation Manager, Taimi" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-taimi.jpg" %}
+{% include quote.html text="The user interface is really ergonomic and user-friendly." author="Vladislav Yavorskyi" title="Moderation Manager, Taimi" mugshot="/assets/images/important/quote-vlad.webp" %}
 
 Taimi’s moderation isn’t as simple as classifying content as acceptable or unacceptable. The team uses more than 10 categories during the moderation process, including contextual considerations. For example, the team weighs whether the content contains external links or social media.
 
 Taimi’s first approach with Nyckel was to use a single model across half a dozen moderation categories. This was successful, but Vladislav’s team needed the model to auto-moderate more content, and with greater accuracy. They decided to train individual models for each of their categories. The next step was to train the first of these stripped-down models.
 
-{% include quote.html text="Training this model took less than two minutes and you can really trust it." author="Vladislav Yavorskyi" title="Moderation Manager, Taimi" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-taimi.jpg" %}
+{% include quote.html text="Training this model took less than two minutes and you can really trust it." author="Vladislav Yavorskyi" title="Moderation Manager, Taimi" mugshot="/assets/images/important/quote-vlad.webp" %}
 
 The first of the new models that the team tested were able to moderate 45% of Taimi’s content with 95% accuracy. And with every training cycle, the numbers improved. The team moved forward with implementing these models across each category.
 
