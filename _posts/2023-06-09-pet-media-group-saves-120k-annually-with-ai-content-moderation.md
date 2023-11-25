@@ -14,7 +14,7 @@ description: Pet Media Group uses Nyckel's image classification to moderate
   resulted in $120K in annual savings.
 image: /blog/images/pet-media-group-case-study-header.webp
 ---
-{% include quote.html text="Before Pet Media Group, I built and sold two other billion-dollar marketplaces. Each had an entire floor of manual reviewers before we invested in an AI solution. When building PMG, we wanted to avoid these mistakes and integrate with an AI service early on." author="Eyass Shakrah" title="Co-Founder, Pet Media Group" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-pmg.jpg" %}
+{% include quote.html text="Before Pet Media Group, I built and sold two other billion-dollar marketplaces. Each had an entire floor of manual reviewers before we invested in an AI solution. When building PMG, we wanted to avoid these mistakes and integrate with an AI service early on." author="Eyass Shakrah" title="Co-Founder, Pet Media Group" mugshot="/assets/images/important/quote-pmg.webp" %}
 
 {: .highlights }
 PMG uses Nyckel image classification to moderate pet listings and enforce animal welfare policies
@@ -44,7 +44,7 @@ Eyass Shakrah, a co-founder of Pet Media Group, was familiar with how quickly th
 
 In addition to knowing he wanted to integrate with AI early, Eyass also knew they wouldn’t build an ML team in-house because of how competitive the talent pool is and how quickly PMG wanted to go to market with the solution.
 
-{% include quote.html text="We were looking for a solution that provided a good combination of high accuracy with fast time-to-value. Plus, the total cost of ownership is always an important factor for us when considering any third-party software." author="Eyass Shakrah" title="Co-Founder, Pet Media Group" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-pmg.jpg" %}
+{% include quote.html text="We were looking for a solution that provided a good combination of high accuracy with fast time-to-value. Plus, the total cost of ownership is always an important factor for us when considering any third-party software." author="Eyass Shakrah" title="Co-Founder, Pet Media Group" mugshot="/assets/images/important/quote-pmg.webp" %}
 
 ## The Solution
 
@@ -56,7 +56,7 @@ When PMG found Nyckel, the team was intrigued by its reasonable cost, including 
 
 But it wasn’t just the price that sold PMG on Nyckel. Nyckel felt like a developer tool, was incredibly fast, and demonstrated strong performance from the outset when the team demoed the product on an actual use case. Plus, PMG appreciated the wide array of function types Nyckel had available, including text, image, and tabular classification, optical character recognition (OCR), object detection, and text and image search.
 
-{% include quote.html text="The fact that within 10 minutes, we could sign-up, train a model and have it deployed made Nyckel a compelling option for us." author="Eyass Shakrah" title="Co-Founder, Pet Media Group" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-pmg.jpg" %}
+{% include quote.html text="The fact that within 10 minutes, we could sign-up, train a model and have it deployed made Nyckel a compelling option for us." author="Eyass Shakrah" title="Co-Founder, Pet Media Group" mugshot="/assets/images/important/quote-pmg.webp" %}
 
 {% include figure.html url="../images/pmg-emoji-new2.webp" description=" Nyckel image classification API detects if a seller added emojis to their image (fail) or not (pass)." alt="Image classification for pet marketplace"%}
 
@@ -64,13 +64,13 @@ But it wasn’t just the price that sold PMG on Nyckel. Nyckel felt like a devel
 
 The integration of Nyckel into Pet Media Group’s production environment was very quick. The team used Nyckel’s UI to upload and annotate a data set of images— requiring less than one hour total. Within the same day of setting up the model, PMG was live in production with its first model.
 
-{% include quote.html text="Nyckel’s API docs were super straightforward to use. Our first custom content moderation model was live within a day." author="Eyass Shakrah" title="Co-Founder, Pet Media Group" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-pmg.jpg" %}
+{% include quote.html text="Nyckel’s API docs were super straightforward to use. Our first custom content moderation model was live within a day." author="Eyass Shakrah" title="Co-Founder, Pet Media Group" mugshot="/assets/images/important/quote-pmg.webp" %}
 
 Now, instead of human moderators reviewing every listing on PMG’s site, its moderators focus on monitoring listings with low-confidence predictions from Nyckel. To improve the model’s accuracy even more, the team adds any errors back into Nyckel as training samples.
 
 This additional training has paid off; the Nyckel-based content moderator now matches or surpasses the accuracy of PMG’s manual reviewers across all applied models.
 
-{% include quote.html text="Within 4 weeks of getting set up with Nyckel, we went from 100% manual review of all pet adverts to 25%. A few months later, that number is now approaching 10% manual review." author="Eyass Shakrah" title="Co-Founder, Pet Media Group" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-pmg.jpg" %}
+{% include quote.html text="Within 4 weeks of getting set up with Nyckel, we went from 100% manual review of all pet adverts to 25%. A few months later, that number is now approaching 10% manual review." author="Eyass Shakrah" title="Co-Founder, Pet Media Group" mugshot="/assets/images/important/quote-pmg.webp" %}
 
 Pet Media Group has also quantified its results: Nyckel has freed up work corresponding to $120k annually, which the company can now invest in other high-value areas. PMG is so pleased with its results with Nyckel that it’s exploring how to use Nyckel for additional use cases, including:
 

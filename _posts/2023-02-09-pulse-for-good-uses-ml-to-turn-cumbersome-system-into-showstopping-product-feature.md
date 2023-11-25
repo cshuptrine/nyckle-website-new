@@ -17,7 +17,7 @@ image_alt: Pulse for Good uses NLP to categorize and filter feedback data
 
 [Pulse for Good](https://www.pulseforgood.com/) is the world’s first Human Services Feedback Management Platform, used by its customers to efficiently collect, analyze, and act on input from vulnerable populations. Pulse’s self-service kiosks are a safe space where people can anonymously share their true feelings and lived experiences.
 
-{% include quote.html text="Nyckel has been one of our best-received product features – the sentiment analysis, the spam filtering – that we've ever implemented…probably more than almost any other feature in our system." author="Blake Kohler" title="CEO, Pulse for Good" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-pulseforgood.jpg" %}
+{% include quote.html text="Nyckel has been one of our best-received product features – the sentiment analysis, the spam filtering – that we've ever implemented…probably more than almost any other feature in our system." author="Blake Kohler" title="CEO, Pulse for Good" mugshot="/assets/images/important/quote-pfg.webp" %}
 
 {: .highlights }
 Pulse for good uses Nyckel text classification to categorize and filter 100,000+ pieces of feedback data
@@ -56,13 +56,13 @@ When first using Nyckel, Pulse for Good focused primarily on managing spam. But 
 
 “We started realizing Nyckel could do much more for us,” said Blake. “And so we quickly jumped from just doing spam into breaking things down by sentiment: happy, sad, disgusted, and so on.”
 
-{% include quote.html text="I honestly don’t know how Nyckel could have been an easier experience. It provided the UI to train the model, I could see the results that I expected, and then the API functioned like I’d expect any other REST API to work. We haven’t had any issues at all." author="Blake Kohler" title="CEO, Pulse for Good" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-pulseforgood.jpg" %}
+{% include quote.html text="I honestly don’t know how Nyckel could have been an easier experience. It provided the UI to train the model, I could see the results that I expected, and then the API functioned like I’d expect any other REST API to work. We haven’t had any issues at all." author="Blake Kohler" title="CEO, Pulse for Good" mugshot="/assets/images/important/quote-pfg.webp" %}
 
 Now, instead of having an overwhelming backlog of feedback that slowed the team’s progress, they could quickly sort feedback into helpful, distinctive categories that offered incredible value to their customers.
 
 And not only that — Pulse’s product feature allowed its customers to see how Nyckel labeled their clients’ feedback. Customers could then verify whether or not Nyckel had categorized it into the correct sentiment (e.g.,” disgust” vs. “anger”) and the correct category (e.g., “suggestion” or “complaint”). This consistent customer input has allowed Pulse to continually re-train Nyckel’s model, resulting in an even more accurate and efficient system.
 
-{% include quote.html text="Nyckel was so remarkably easy. My two other co-founders, who aren’t technical, were able to jump in and quickly annotate the customer feedback by its type and sentiment to train the model." author="Blake Kohler" title="CEO, Pulse for Good" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-pulseforgood.jpg" %}
+{% include quote.html text="Nyckel was so remarkably easy. My two other co-founders, who aren’t technical, were able to jump in and quickly annotate the customer feedback by its type and sentiment to train the model." author="Blake Kohler" title="CEO, Pulse for Good" mugshot="/assets/images/important/quote-pfg.webp" %}
 
 ## The Results
 
@@ -74,7 +74,7 @@ All of this has directly equated to saved time and energy, along with more renew
 
 Pulse for Good has already enjoyed a lot of success implementing Nyckel to categorize and filter content, but they’re not stopping there. The team hopes to expand Nyckel’s categorization abilities to create a “marketplace of ideas,” where service providers can share their experiences and ideas about improving their organizations. These insights will then be automatically categorized so that they can be easily accessed and shared by Pulse customers.
 
-{% include quote.html text="Nyckel will be used in our system in perpetuity. We will definitely keep finding ways to expand our use of it." author="Blake Kohler" title="CEO, Pulse for Good" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-pulseforgood.jpg" %}
+{% include quote.html text="Nyckel will be used in our system in perpetuity. We will definitely keep finding ways to expand our use of it." author="Blake Kohler" title="CEO, Pulse for Good" mugshot="/assets/images/important/quote-pfg.webp" %}
 
 Blake and his team are also looking into ways to help their customers understand how they are doing in relation to other service providers. Benchmarks for human services providers will help customers identify opportunities for improvement, so they can better serve the vulnerable populations in their areas.
 

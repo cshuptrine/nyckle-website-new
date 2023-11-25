@@ -5823,10 +5823,6 @@ _:future,
     font-weight: 400;
 }
 
-.case-study-mugshot {
-    border-radius: 10px; /* Adjust as needed for desired curvature */
-}
-
 .customer-quote-title {
     font-size: .85rem;
     line-height: 1.1;
@@ -5870,6 +5866,7 @@ _:future,
 
 .case-study-mugshot {
     border-radius: 10px; /* Added border-radius */
+    padding-left:3%;
 }
 
 picture {
@@ -5882,6 +5879,7 @@ picture {
     line-height: 1;
     color: #0b2436; /* Updated color */
     padding-bottom: 5px;
+    margin-left:-20px;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
 }
@@ -5889,6 +5887,7 @@ picture {
 .customer-quote-title {
     font-size: 0.7rem; /* Updated font size */
     line-height: 1;
+    margin-left:-20px;
     color: #0b2436; /* Updated color */
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
@@ -6137,4 +6136,8 @@ picture {
 
 .icon-mb {
     margin-bottom:20px;
+}
+
+.navbar-collapse.offcanvas-nav {
+    top: 110px !important; /* Adjust this value based on your navbar's height */
 }

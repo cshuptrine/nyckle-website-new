@@ -16,7 +16,7 @@ image_alt: Gardyn uses Nyckel for computer vision
 
 [Gardyn](https://mygardyn.com/) makes reliable home growing easy. Their smart, indoor vertical hydroponic systems help customers monitor the growth and health of their plants, notifying customers via Gardyn's app when their plants need attention.
 
-{% include quote.html text="Because of the way Nyckel does things, the model trains immediately. This was rather shocking and awesome!" author="Sunil Rawal" title="AI Lead, Gardyn" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-gardyn.jpg" %}
+{% include quote.html text="Because of the way Nyckel does things, the model trains immediately. This was rather shocking and awesome!" author="Sunil Rawal" title="AI Lead, Gardyn" mugshot="/assets/images/important/quote-gardyn.webp" %}
 
 {: .highlights }
 Gardyn uses Nyckel image classification to monitor the health of its customers’ plants
@@ -37,7 +37,7 @@ To help customers keep their plants healthy, Gardyn uses technology that control
 
 Manual botanist review worked well when the company had only a few hundred devices in use. But by the time Sunil joined Gardyn to lead their AI effort, the company had a fast-growing number of devices in use, with a team of botanists manually training the system and addressing customer queries. The botanists couldn't keep up with monitoring the plants and responding to customer inquiries.
 
-{% include quote.html text="The moment that we decided to put cameras on was the moment we decided to embrace computer vision wholesale." author="Sunil Rawal" title="AI Lead, Gardyn" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-gardyn.jpg" %}
+{% include quote.html text="The moment that we decided to put cameras on was the moment we decided to embrace computer vision wholesale." author="Sunil Rawal" title="AI Lead, Gardyn" mugshot="/assets/images/important/quote-gardyn.webp" %}
 
 Gardyn knew they had a scaling problem. The minimum review and notification frequency for customers had been stretched to two weeks. Gardyn risked harming customer engagement if they extended that period any longer. It was time to automate some of the telemetry review.
 
@@ -51,7 +51,7 @@ But finding the right AI solution wasn’t an easy task. The team first tried Mi
 
 Unfortunately, it took a huge investment of time to train a model that was still not nearly accurate enough for distinguishing plant growth classes. This was frustrating and bad news in terms of business growth. Plus, it wasn’t obvious how to tweak the model. Adding more data wasn't improving the separation of classes. How many more hours of model training service time should one pay for in a situation like that?
 
-{% include quote.html text="[Azure's] workflow was so painfully slow. I couldn’t get the models to a place where I wanted them. I was looking for something fast." author="Sunil Rawal" title="AI Lead, Gardyn" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-gardyn.jpg" %}
+{% include quote.html text="[Azure's] workflow was so painfully slow. I couldn’t get the models to a place where I wanted them. I was looking for something fast." author="Sunil Rawal" title="AI Lead, Gardyn" mugshot="/assets/images/important/quote-gardyn.webp" %}
 
 Sunil wanted the ability to iterate the model and a quick model training process. Gardyn was growing at 2x per year, and it was not feasible from a business perspective to invest an unknown number of days and weeks in refining AI model settings.
 
@@ -65,7 +65,7 @@ Sunil’s experiments with using Azure Custom Vision to classify plants as healt
 
 Nyckel, on the other hand, was able to handle these difficult cases with high accuracy in ways Custom Vision couldn’t. Nyckel also allowed fast iteration, increasing productivity and bringing down the time it took Gardyn to create a new model from weeks to just days. Plus, the on-demand scaling of model invokes on Nyckel allowed Gardyn to quickly process a night’s worth of images.
 
-{% include quote.html text="It worked! It worked after about a thousand training images. The degree of sensitivity to the range of issues in those images was better. It was qualitatively different with Nyckel." author="Sunil Rawal" title="AI Lead, Gardyn" mugshot="https://www.nyckel.com/_content/Marketing/images/mugshot-gardyn.jpg" %}
+{% include quote.html text="It worked! It worked after about a thousand training images. The degree of sensitivity to the range of issues in those images was better. It was qualitatively different with Nyckel." author="Sunil Rawal" title="AI Lead, Gardyn" mugshot="/assets/images/important/quote-gardyn.webp" %}
 
 Gardyn had to make sure Nyckel was a system that could be integrated, from a technical and financial point of view, to the rest of its ecosystem. This was not difficult in light of Nyckel’s clear technical and efficiency advantages.
 
