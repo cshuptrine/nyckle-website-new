@@ -1,8 +1,8 @@
 baseurl: ""
 url: "https://www.nyckel.com"
 permalink: "/:title"
-title: Nyckel | Classification API
-description: Nyckel's Classification API makes it simple to auto-label any content using AI.
+title: Nyckel | Classify Images & Text Using AI
+description: Nyckel's classification API makes it simple to auto-label images and text using AI.
 
 # Build settings
 theme: minima

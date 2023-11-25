@@ -4,7 +4,7 @@ date: 2021-04-28
 title: Add Image Classification Using Machine Learning to a Web App With a Single Line of Code 
 author: jeremy
 description: Inspired by a scene from HBO's Silicon Valley, I decided to build a website that identifies whether a photo is of a hot dog.
-image: /blog/images/2021/hotdog-training.png
+image: /blog/images/2021/hotdog-training.webp
 ---
 
 Inspired by [this scene in HBO's Silicon Valley](https://www.youtube.com/watch?v=ACmydtFDTGs), I decided to build a website that identifies whether a photo is of a hot dog. Below is the magical line of JavaScript code that executes the image recognition:
