@@ -11,7 +11,7 @@
 </head>
 
 <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
-{% if page.url contains '/blog/' or page.url contains '/public-functions/' %}
+{% if page.url contains '/blog/' or page.url contains '/pretrained-models/' %}
 {% include header.html container_class="container" extra_class="absolute nav-uppercase" %}
 {% else %}
 {% if page.nav == 'light' %}
@@ -28,7 +28,7 @@ light_logo="true" %}
 
 {% if page.url contains '/blog/' %}
 {% include /cta/cta-blog.html %}
-{% elsif page.url contains '/public-functions/' %}
+{% elsif page.url contains '/pretrained-models/' %}
 {% include /cta/cta-functions.html %}
 {% elsif page.cta2 %}
 {% else %}

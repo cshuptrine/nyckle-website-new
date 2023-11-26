@@ -6141,3 +6141,22 @@ picture {
 .navbar-collapse.offcanvas-nav {
     top: 110px !important; /* Adjust this value based on your navbar's height */
 }
+
+.text-box {
+    border: 2px dotted #306fa2;
+    border-radius: 15px;
+    padding: 20px;
+    color: #306fa2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Remove or adjust margin-top as needed */
+    margin-top: 0; /* Adjust or remove as per your design */
+}
+
+.content-wrapper2 {
+    display: flex !important;
+    justify-content: center !important; /* Centers horizontally */
+    align-items: center !important; /* Centers vertically */
+    height: 130px !important; /* Fixed height */
+}
+
+

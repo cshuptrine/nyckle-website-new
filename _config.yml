@@ -19,7 +19,7 @@ collections:
     permalink: /blog/:title/
   functions:
     output: true
-    permalink: /public-functions/:title/      
+    permalink: /pretrained-models/:title/      
     
 defaults:
   - scope:
