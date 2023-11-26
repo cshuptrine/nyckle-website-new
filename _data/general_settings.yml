@@ -36,7 +36,7 @@ external_links:
     - url: "/pricing/"
       text: "Pricing"
     - url: "/public-functions/"
-      text: "Pre-Trained Models"  
+      text: "Pretrained Models"  
     - url: "/customers/"
       text: "Customers"    
 

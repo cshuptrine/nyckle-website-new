@@ -76,7 +76,7 @@ main_menu:
         url: "/blog/"
         icon: "/assets/images/icons/nav/blog.webp"
         subtext: "Learn more about ML classification"
-      - text: "Pre-Trained Models"
+      - text: "Pretrained Models"
         url: "/public-functions/"
         icon: "/assets/images/icons/nav/invention.webp"
         subtext: "Classify with these already-made models"
