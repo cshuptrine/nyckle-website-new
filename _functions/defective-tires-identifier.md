@@ -5,9 +5,8 @@ live: true
 number: 4
 dataurl:
 image: /assets/images/functions/defective-tires-identifier.webp
-article: a
 name: defective tires
-sname: tire
+image-singular: tire
 model: tyre-quality-classification
 samplecount: 1,825
 labelcount: 2

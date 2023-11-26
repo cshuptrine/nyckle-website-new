@@ -19,7 +19,7 @@
 {% assign url_segments = page.url | split: '/' %}
 {% if url_segments contains 'pretrained-models' %}
 <title>Use AI to identify {{ page.name }} in just seconds</title>
-<meta name="description" content="This is a free AI-powered {{ page.sname}} identifier. Just upload your content, and our AI will identify what {{ page.sname}} it is. Test it manually or request API acess."/>
+<meta name="description" content="This is a free AI-powered {{ page.name}} identifier. Just upload your content, and our AI will classify it. Test it manually or request API access."/>
 {% else %}
 <title>{% if page.title %}{{ page.title }}{% else %}{{ site.data.general_settings.title }}{% endif %}</title>
 <meta name="description" content="{% if page.description %} {{ page.description }} {% else %} {{ site.data.general_settings.description }}{% endif %}"/>
@@ -33,7 +33,7 @@
 {% assign url_segments = page.url | split: '/' %}
 {% if url_segments contains 'pretrained-models' %}
 <meta property="og:title" content="Use AI to identify {{ page.name }} in just seconds"/>
-<meta property="og:description" content="This is a free AI-powered {{ page.sname}} identifier. Just upload your content, and our AI will identify what {{ page.sname}} it is. Test it manually or request API acess."/>
+<meta property="og:description" content="This is a free AI-powered {{ page.name}} identifier. Just upload your content, and our AI will classify it. Test it manually or request API access."/>
 {% else %}
 <meta property="og:title" content="{{ page.title }}"/>
 <meta property="og:description" content="{{ page.description }}"/>
@@ -75,10 +75,10 @@
 
 {% if page.url contains '/pretrained-models/' and page.image %}
 <!--- ImageObject --->
-<script type="application/ld+json">{"@context":"https://schema.org/","@type":"ImageObject","contentUrl":"https://www.nyckel.com{{ page.image }}", "acquireLicensePage":"https://www.nyckel.com/contact/","license":"https://www.nyckel.com/contact/", "copyrightNotice": "Nyckel","caption":"This is a free AI-powered {{ page.sname}} identifier. Just upload your content, and our AI will identify what {{ page.sname}} it is.","creditText":"Nyckel","creator":{"@type":"Organization","name":"Nyckel"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org/","@type":"ImageObject","contentUrl":"https://www.nyckel.com{{ page.image }}", "acquireLicensePage":"https://www.nyckel.com/contact/","license":"https://www.nyckel.com/contact/", "copyrightNotice": "Nyckel","caption":"This is a free AI-powered {{ page.name}} identifier.","creditText":"Nyckel","creator":{"@type":"Organization","name":"Nyckel"}}</script>
 {% elsif page.image  %}
 <!--- ImageObject --->
-<script type="application/ld+json">{"@context":"https://schema.org/","@type":"ImageObject","contentUrl":"https://www.nyckel.com{{ page.image }}", "acquireLicensePage":"https://www.nyckel.com/contact/","license":"https://www.nyckel.com/contact/", "copyrightNotice": "Nyckel","caption":"This is a free AI-powered {{ page.sname}} identifier. Just upload an image, and our AI will identify what {{ page.sname}} it is.","creditText":"Nyckel","creator":{"@type":"Organization","name":"Nyckel"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org/","@type":"ImageObject","contentUrl":"https://www.nyckel.com{{ page.image }}", "acquireLicensePage":"https://www.nyckel.com/contact/","license":"https://www.nyckel.com/contact/", "copyrightNotice": "Nyckel","caption":"{{ page.description }}","creditText":"Nyckel","creator":{"@type":"Organization","name":"Nyckel"}}</script>
 {% else %}
 {% endif %}
 
