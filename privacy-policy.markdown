@@ -4,7 +4,7 @@ title:  "Nyckel's Privacy Policy"
 description: This page outlines Nyckel's Privacy Policy.
 fill: fill-light-wrapper
 nav: dark
-cta: none
+cta2: none
   
 ---
 

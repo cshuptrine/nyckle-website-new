@@ -5,8 +5,29 @@
                 <h3 class="display-3">Looking for API access to do {{ page.sname }} labeling at scale?</h3>
                 <div class="space20"></div>
                 <!-- CTA Button for Typeform -->
-                <button data-tf-popup="vWUcxOFh" class="btn" style="background-color:#e7a83d;">Contact us</button>
+                <button data-tf-popup="vWUcxOFh" class="btn" style="background-color:#e7a83d;">Get Free Access</button>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var lazyLoadScriptDiv = document.querySelector('.wrapper.white-wrapper');
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                var script = document.createElement('script');
+                script.src = "//embed.typeform.com/next/embed.js";
+                script.defer = true;
+                document.body.appendChild(script);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 }); // Adjust threshold as needed
+
+    observer.observe(lazyLoadScriptDiv);
+});
+</script>
+

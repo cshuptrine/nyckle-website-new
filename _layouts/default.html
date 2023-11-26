@@ -30,9 +30,7 @@ light_logo="true" %}
 {% include /cta/cta-blog.html %}
 {% elsif page.url contains '/public-functions/' %}
 {% include /cta/cta-functions.html %}
-{% elsif page.url contains '/products/' %}
-{% include /cta/cta-products.html %}
-{% elsif page.url contains 'contact' or page.url contains 'privacy' or page.url contains 'terms' %}
+{% elsif page.cta2 %}
 {% else %}
 {% include /cta/cta.html %}
 {% endif %}

@@ -4,7 +4,7 @@ title:  "Nyckel's Terms & Conditions"
 description: This page outlines Nyckel's Terms & Conditions.
 fill: fill-white-wrapper
 nav: dark
-cta: none
+cta2: none
   
 ---
 

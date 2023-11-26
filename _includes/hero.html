@@ -15,14 +15,7 @@
               <h2 class="display-4" style="color:#0b2436">{{ page.header3 }}</h2>
                   <div class="space20"></div>
 
-              {% if page.ctacontact %}
-              <a href="/contact/" class="btn" style="background-color:#306fa2;">Contact Us</a>
-               {% else %}
-              {% endif %}
-               {% if page.ctatry %}
-              <a href="https://www.nyckel.com/console" class="btn" style="background-color:#e7a83d;">Try it for free</a>
-              {% else %}
-              {% endif %}
+        {% include /cta-buttons.html %}
             </div>
 
 <div class="col-lg-7 pl-60 d-none d-lg-block">
