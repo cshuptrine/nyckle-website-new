@@ -1,5 +1,3 @@
-{% assign function = include.function %}
-
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="{{ site.baseurl }}{{ function.url }}">
         {% if function.image %}
@@ -8,13 +6,13 @@
         <img class="card-img-top summary-img" src="/assets/images/important/nyckel-cover.webp" loading="lazy" />
         {% endif %}
         <div class="card-body">
-            <h1 style="font-size: 1.5em;">Use AI to identify {{ function.name }}</h1>
+            <h1 style="font-size: 1.5em;">{{ function.name | title_case }}</h1>
             <div class="entry">
 
    {% if function.type == "image" %} 
-   Below is a free {{ function.name }} identifier. Just upload an image of {{ function.article }} {{ function.sname }}, and our AI will classify what it is - in just seconds.
+   Below is a free {{ function.name }} identifier. Just upload an image of {{ function.article }} {{ function.sname }}, and our AI will classify {% if function.binary %}if it's {{ function.binary }}{% else %}what it is{% endif %}.
     {% else %}
-       Below is a free {{ function.name }} identifier. Just input your text, and our AI will classify what it is - in just seconds.
+       Below is a free {{ function.name }} identifier. Just input your text, and our AI will classify {% if function.binary %}if it's {{ function.binary }}{% else %}what it is{% endif %}.
     {% endif %}
 
 

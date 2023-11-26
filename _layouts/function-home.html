@@ -6,7 +6,7 @@ layout: default
         <div class="posts contain-1300 p-mobile-1350 mb-3" style="margin-top:-9%">
 
 
-<a href="/pretrained-model/flowers-identifier-ai/">
+<a href="/pretrained-model/flowers-identifier/">
     <div class="hero">
         <div class="hero-contents d-flex mx-2 mt-4" style="padding-top:5%;padding-left:5%;">
             <div class="title-area d-flex flex-column justify-content-between">
@@ -29,10 +29,12 @@ layout: default
 
     <h1 class="heading" style="text-align:center">All Pre-Trained Functions</h1>
     <div class="row">
-{% assign all_functions = site.functions %}
+{% assign all_functions = site.functions | sort: 'number' %}
 {% for function in all_functions %}
+  {% if function.live %}
   {% assign function = function %}
   {% include summary-card-function.html %}
+    {% endif %}
 {% endfor %}
 
   </div></div></div>

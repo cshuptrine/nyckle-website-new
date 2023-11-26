@@ -5,7 +5,7 @@ layout: default
 
 <div class="content-wrapper mt-0">
     <div class="wrapper white-wrapper">
-      <div class="container inner" style="padding-left:6%;margin-bottom:-4%">
+      <div class="container inner" style="padding-left:6%;margin-bottom:-50px;">
         <div class="two-column-one" style="margin-top:-6%">
           <div class="row align-items-center">
             <div class="col-lg-5" style="margin-top:-30px">
@@ -18,9 +18,9 @@ layout: default
               <div class="space10"></div>
 
               {% if page.type == "image" %} 
-             <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} identifier. Just upload an image of {{ page.article }} {{ page.sname }}, and our AI will classify what it is - in just seconds.</h2>
+             <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} identifier. Just upload an image of {{ page.article }} {{ page.sname }}, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% else %}what it is{% endif %} - in just seconds.</h2>
                  {% else %}
-                  <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} identifier. Just input your text, and our AI will classify what it is - in just seconds.</h2>
+                  <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} identifier. Just input your text, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% else %}what it is{% endif %} - in just seconds.</h2>
                      {% endif %}
             
      
@@ -37,7 +37,7 @@ layout: default
   <div class="wrapper gray-wrapper" style="height: 130px">
   <div class="container inner text-center">
             <h2 class="display-3" style="margin-top:-7%;padding-left:6%;padding-right:6%">
-    Want API access to this pretrained {{ page.name}} model?<span style="color: #e7a83d;"> Contact us below.</span></h2>
+    Want API access to this pretrained model?<span style="color: #e7a83d;"> Contact us below.</span></h2>
   </div></div>
 
 <div class="content-wrapper content-wrapper2">
@@ -56,14 +56,14 @@ layout: default
      <div class="space20"></div>
 
     {% if page.type == "image" %} 
-    <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">To start, drag and drop (or import) a picture of {{ page.article }} {{ page.sname }}. Within seconds, our AI tool will tell you what {{ page.sname }} it is.</p>
+    <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">To start, drag and drop (or import) a picture of {{ page.article }} {{ page.sname }}. Within seconds, our AI tool will tell you {% if page.binary %}if it's {{ page.binary }}{% else %}what {{ page.sname}} it is{% endif %}.</p>
     {% else %}
-        <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">To start, input the text that you'd like analyzed. Within seconds, our AI tool will tell you what {{ page.sname }} it is.</p>
+        <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">To start, input the text that you'd like analyzed. Within seconds, our AI tool will tell you {% if page.binary %}if it's {{ page.binary }}{% else %}what {{ page.sname}} it is{% endif %}.</p>
     {% endif %}
 
 
-        <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">The pretrained model uses the <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.model }} dataset</span> and is built with <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.samplecount }} samples</span> across <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.labelcount }} labels</span>, including {{ page.labelsamples }}. We'll also show a confidence score (the higher the number, the more confident we are around the answer).</p>        
-            <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436"><b>Whether you’re a {{ page.role }}, just curious, or building automated {{ page.sname }} detection into your application, we hope our {{ page.sname }} identifier proves helpful.</b></p>
+        <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">The pretrained model uses the {% if page.dataurl %}<a href="{{ page.dataurl }}">{% else %}{% endif %}<span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.model }} dataset</span>{% if page.dataurl %}</a>{% else %}{% endif %} and is built with <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.samplecount }} samples</span> across <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.labelcount }} labels</span>, including {{ page.labelsamples }}. We'll also show a confidence score (the higher the number, the more confident we are around the answer).</p>        
+            <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436"><b>Whether you’re a {% if page.role %}{{ page.role }}{% else %}hobbyist{% endif %}, just curious, or building automated {{ page.sname }} detection into your application, we hope our tool proves helpful.</b></p>
 </div></div></div>
 
 <div class="content-wrapper" style="height:650px">
@@ -73,7 +73,7 @@ layout: default
         <div class="spacemobile"></div>
       The benefits of an AI-powered {{ page.name}} classification API</span>
       </h2>
-            <p class="display-5 text-center" style="text-align:left;padding-left:12%;padding-right:12%;color:#e7a83d"><b>API access is perfect for a DIY {{ page.role }} or businesses looking for a pretrained {{ page.sname}} model.</b></p>
+            <p class="display-5 text-center" style="text-align:left;padding-left:12%;padding-right:12%;color:#e7a83d"><b>API access is perfect for a DIY {% if page.role %}{{ page.role }}{% else %}hobbyist{% endif %} or business looking for a pretrained {{ page.sname}} model.</b></p>
       <div class="space40"></div>
       <div class="row align-items-center">
         <div class="col-lg-6 pl-60 pl-sm-15 d-none d-lg-block" style="padding-right:1%;padding-left:6%">

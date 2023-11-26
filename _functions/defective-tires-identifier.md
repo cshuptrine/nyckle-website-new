@@ -1,0 +1,19 @@
+---
+layout: function
+function: true
+live: true
+number: 4
+dataurl:
+image: /assets/images/functions/defective-tires-identifier.webp
+article: a
+name: defective tires
+sname: tire
+model: tyre-quality-classification
+samplecount: 1,825
+labelcount: 2
+labelsamples: Defective vs. Good
+type: image
+role: mechanic
+binary: defective
+
+---
