@@ -16,19 +16,31 @@
 <meta name="msapplication-TileColor" content="#0b2436">
 
 <!-- Metatags -->
+{% assign url_segments = page.url | split: '/' %}
+{% if url_segments contains 'pretrained-models' %}
+<title>Use AI to identify {{ page.name }} in just seconds</title>
+<meta name="description" content="This is a free AI-powered {{ page.sname}} identifier. Just upload your content, and our AI will identify what {{ page.sname}} it is. Test it manually or request API acess."/>
+{% else %}
 <title>{% if page.title %}{{ page.title }}{% else %}{{ site.data.general_settings.title }}{% endif %}</title>
 <meta name="description" content="{% if page.description %} {{ page.description }} {% else %} {{ site.data.general_settings.description }}{% endif %}"/>
+{% endif %}
 <link rel="canonical" href="https://www.nyckel.com{{ page.url | remove: 'index.html' }}"/>
 <link rel="alternate" href="https://www.nyckel.com{{ page.url | remove: 'index.html' }}" hreflang="x-default" />
 <meta name="google-site-verification" content="D1Sb_HlWxKALYtw5gfg6yqEdCgS8w4F8sIk1scf_gFo"/>
 <link rel="alternate" href="https://www.nyckel.com/blog/feed.xml" type="application/rss+xml" title="Nyckel - RSS"/> 
 
 <!--- OpenGraph -->
+{% assign url_segments = page.url | split: '/' %}
+{% if url_segments contains 'pretrained-models' %}
+<meta property="og:title" content="Use AI to identify {{ page.name }} in just seconds"/>
+<meta property="og:description" content="This is a free AI-powered {{ page.sname}} identifier. Just upload your content, and our AI will identify what {{ page.sname}} it is. Test it manually or request API acess."/>
+{% else %}
 <meta property="og:title" content="{{ page.title }}"/>
 <meta property="og:description" content="{{ page.description }}"/>
+{% endif %}
 <meta property="og:url" content="https://www.nyckel.com{{ page.url | remove: 'index.html' }}"/>
 {% if page.image %}<meta property="og:image" content="https://www.nyckel.com{{ page.image }}"/>{% else %}<meta property="og:image" content="https://www.nyckel.com{{ site.data.general_settings.image }}"/>{% endif %}
-{% if page.url contains '/blog/' %}<meta property="og:image:width" content="800"/>
+{% if page.url contains '/blog/' or '/pretrained-models/ %}<meta property="og:image:width" content="800"/>
 <meta property="og:image:height" content="400"/>{% else %}
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="628"/>
@@ -60,9 +72,16 @@
 
 <!--- BlogPosting Schema --->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"{{ page.author }}"},"dateModified":"{{ page.modified }}","datePublished":"{{ page.date }}","headline":"{{ page.title }}","mainEntityOfPage":{"@id":"https://www.nyckel.com{{ page.url | remove: 'index.html' }}","@type":"itemPage","url":"https://www.nyckel.com{{ page.url | remove: 'index.html' }}"},"description":"{{ page.description }}","url":"https://www.nyckel.com{{ page.url | remove: 'index.html' }}","image":{"@type":"ImageObject","url":"https://www.nyckel.com{{ page.post_image }}","width":"400","height":"800"},"publisher":{"@type":"Organization","name":"Nyckel","url":"https://www.nyckel.com/"}}</script>{% endif %}
-{% if page.image %}
+
+{% if page.url contains '/pretrained-models/' and page.image %}
 <!--- ImageObject --->
-<script type="application/ld+json">{"@context":"https://schema.org/","@type":"ImageObject","contentUrl":"https://www.nyckel.com{{ page.image }}", "acquireLicensePage":"https://www.nyckel.com/contact/","license":"https://www.nyckel.com/contact/", "copyrightNotice": "Nyckel","caption":"{{ page.description }}","creditText":"Nyckel","creator":{"@type":"Organization","name":"Nyckel"}}</script>{% endif %}
+<script type="application/ld+json">{"@context":"https://schema.org/","@type":"ImageObject","contentUrl":"https://www.nyckel.com{{ page.image }}", "acquireLicensePage":"https://www.nyckel.com/contact/","license":"https://www.nyckel.com/contact/", "copyrightNotice": "Nyckel","caption":"This is a free AI-powered {{ page.sname}} identifier. Just upload your content, and our AI will identify what {{ page.sname}} it is.","creditText":"Nyckel","creator":{"@type":"Organization","name":"Nyckel"}}</script>
+{% elsif page.image  %}
+<!--- ImageObject --->
+<script type="application/ld+json">{"@context":"https://schema.org/","@type":"ImageObject","contentUrl":"https://www.nyckel.com{{ page.image }}", "acquireLicensePage":"https://www.nyckel.com/contact/","license":"https://www.nyckel.com/contact/", "copyrightNotice": "Nyckel","caption":"This is a free AI-powered {{ page.sname}} identifier. Just upload an image, and our AI will identify what {{ page.sname}} it is.","creditText":"Nyckel","creator":{"@type":"Organization","name":"Nyckel"}}</script>
+{% else %}
+{% endif %}
+
 {% if page.faq %}
 <!--- FAQ Schema --->
 <script type="application/ld+json">
