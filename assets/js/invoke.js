@@ -138,7 +138,7 @@ function displayResult(response) {
 
 function displayError(response) {
     resetPage();
-    $("#error #message").text("There was an error trying to call Nyckel");
+    $("#error #message").text("We're sorry - there was an error trying to call Nyckel!");
     $("#error").show();
     console.log(response);
 }
