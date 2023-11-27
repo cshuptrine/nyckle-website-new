@@ -6196,13 +6196,15 @@ picture {
 }
 
 #invoke-container .upload-area {
-    border: 3px dashed #007bffaa;
+    border: 3px dashed #306fa2;
     border-radius: 20px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 3 / 2; /* Adjust this for different aspect ratios */
+    width: 40%; /* Reduced from 50% to 40% */
+    /* Optionally adjust padding and margin here */
 }
 
 #invoke-container .upload-area:hover {

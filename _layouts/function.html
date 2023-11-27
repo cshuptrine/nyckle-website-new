@@ -4,8 +4,8 @@ layout: default
 
 
 <div class="content-wrapper mt-0">
-    <div class="wrapper white-wrapper">
-      <div class="container inner" style="padding-left:6%;margin-bottom:-50px;">
+    <div class="wrapper white-wrapper" style="margin-top:-3%">
+      <div class="container inner" style="padding-left:6%;margin-bottom:-30px;">
         <div class="two-column-one" style="margin-top:-6%">
           <div class="row align-items-center">
             <div class="col-lg-5" style="margin-top:-30px">
@@ -18,7 +18,7 @@ layout: default
               <div class="space10"></div>
 
  
-             <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} {{ page.type }} identifier. {% if page.type == "image" %}Just upload your {{ page.image-singular }} image{% else%}Just input your text{% endif %}, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {% if page.image-singular %}{{ page.image-singular }}{% else %}{% endif %} it is{% endif %} - in just seconds.</h2>
+             <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} {{ page.type }} identifier. {% if page.type == "image" %}Just upload your image{% else%}Just input your text{% endif %}, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {% if page.image-singular %}{{ page.image-singular }}{% else %}{% endif %} it is{% endif %} - in just seconds.</h2>
       
             
      
@@ -29,42 +29,31 @@ layout: default
         <img class="hero-image img shadow" src="{{ page.image }}" alt="{{ page.name }} identifier" style="width: 90%;"/>
     </figure>
 </div>
-</div></div></div></div></div>
-
-
-<div class="wrapper light-wrapper" style="margin-bottom:-8%">
-  <div class="container inner">
-            <h2 class="display-3 text-center" style="margin-top:-7%;padding-left:6%;padding-right:6%;">
-    Want API access to this pretrained {{ page.type }} model?<span style="color: #e7a83d;"> Contact us below.</span></h2>
-  </div></div>
-
-<div class="wrapper white-wrapper"> 
-    <div class="container inner" style="padding-top:3%;padding-bottom:0%">
+</div></div></div>
       {% include invoke-image.html %}
-    </div>
-</div>
+  </div></div>    
 
-  <div class="wrapper gray-wrapper">
-  <div class="container inner text-center">
-          <div style="margin-top:-6%;margin-bottom:-8%">
-            <h2 class="display-3">
+<div class="content-wrapper">
+  <div class="wrapper light-wrapper">
+    <div class="container side-padded" style="padding-top:4%;padding-bottom:4%">
+            <h2 class="display-3 text-center">
      How this {{ page.name}} classifier works</h2>
      <div class="space20"></div>
 
     <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">{% if page.type == "image" %}To start, drag and drop (or import) your {{ page.image-singular }} image{% else %}To start, input the text that you'd like analyzed{% endif %}. Our AI tool will then tell you {% if page.binary %}if it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {% if page.image-singular %}{{ page.image-singular }}{% else %}{% endif %} it is{% endif %}.</p>
 
-        <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">This {{ page.type}} pretrained model uses the {% if page.dataurl %}<a href="{{ page.dataurl }}">{% else %}{% endif %}<span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.model }} dataset</span>{% if page.dataurl %}</a>{% else %}{% endif %} and is built with <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.samplecount }} samples</span> across <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.labelcount }} labels</span>, including {{ page.labelsamples }}. We'll also show a confidence score (the higher the number, the more confident we are {% if page.binary %}that it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {% if page.image-singular %}{{ page.image-singular }}{% else %}{% endif %} it is{% endif %}).</p>        
+        <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">This pretrained {{ page.type}} model uses the {% if page.dataurl %}<a href="{{ page.dataurl }}">{% else %}{% endif %}<span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.model }} dataset</span>{% if page.dataurl %}</a>{% else %}{% endif %} and is built with <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.samplecount }} samples</span> across <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.labelcount }} labels</span>, including {{ page.labelsamples }}. We'll also show a confidence score (the higher the number, the more confident we are {% if page.binary %}that it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {% if page.image-singular %}{{ page.image-singular }}{% else %}{% endif %} it is{% endif %}).</p>        
             <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436"><b>Whether you’re an uncertain {% if page.role %}{{ page.role }}{% else %}hobbyist{% endif %}, just curious, or building {% if page.which %}{{ page.which}}{% else %}{{ page.name }}{% endif %} detection into your application, we hope our tool proves helpful.</b></p>
-</div></div></div>
+</div></div>
 
 <div class="content-wrapper">
   <div class="wrapper white-wrapper">
     <div class="container side-padded" style="padding-top:4%;">
       <h2 class="display-3 text-center">
         <div class="spacemobile"></div>
-      The benefits of an AI-powered {{ page.name}} classification API</span>
+     Want API access to this {{ page.name }} model?</span>
       </h2>
-            <p class="display-5 text-center" style="text-align:left;padding-left:12%;padding-right:12%;color:#e7a83d"><b>API access is perfect for a tech-minded {% if page.role %}{{ page.role }}{% else %}hobbyist{% endif %} or a business looking for a pretrained {{ page.name}} model.</b></p>
+            <p class="display-4 text-center" style="padding-left:12%;padding-right:12%">Our {{ page.name}} API is perfect for a tech-minded {% if page.role %}{{ page.role }}{% else %}hobbyist{% endif %} or a business looking to integrate a pretrained {{ page.name}} model.</p>
       <div class="space40"></div>
       <div class="row align-items-center">
         <div class="col-lg-6 pl-60 pl-sm-15 d-none d-lg-block" style="padding-right:1%;padding-left:6%">
