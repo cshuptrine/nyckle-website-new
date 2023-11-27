@@ -5140,7 +5140,8 @@ CUSTOM CSS ADDED BY NYCKEL
 }
 
 .summary-card:hover {
-    box-shadow: 0px 0px 18px rgba(44, 68, 94, 0.1);
+    transform: scale(1.03); /* Scale up the box slightly */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for hover effect */
 }
 
 .summary-card h1 {
@@ -6267,3 +6268,4 @@ picture {
         transform: rotate(360deg);
     }
 }
+
