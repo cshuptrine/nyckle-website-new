@@ -14,5 +14,6 @@ labelsamples: alpinesaholly, anthurium, artichoke, and 99 other labels
 type: image
 role: gardener
 binary:
+which:
 
 ---

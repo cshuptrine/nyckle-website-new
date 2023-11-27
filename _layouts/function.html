@@ -18,9 +18,9 @@ layout: default
               <div class="space10"></div>
 
               {% if page.type == "image" %} 
-             <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} identifier. Just upload your {{ page.sname }} image, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% else %}what it is{% endif %} - in just seconds.</h2>
+             <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} image identifier. Just upload your {{ page.sname }} image, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% else %}what it is{% endif %} - in just seconds.</h2>
                  {% else %}
-                  <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} identifier. Just input your text, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% else %}what it is{% endif %} - in just seconds.</h2>
+                  <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} text identifier. Just input your text, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% else %}what it is{% endif %} - in just seconds.</h2>
                      {% endif %}
             
      
@@ -62,7 +62,7 @@ layout: default
     {% endif %}
 
 
-        <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">The pretrained model uses the {% if page.dataurl %}<a href="{{ page.dataurl }}">{% else %}{% endif %}<span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.model }} dataset</span>{% if page.dataurl %}</a>{% else %}{% endif %} and is built with <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.samplecount }} samples</span> across <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.labelcount }} labels</span>, including {{ page.labelsamples }}. We'll also show a confidence score (the higher the number, the more confident we are around the answer).</p>        
+        <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">This {{ page.type}} pretrained model uses the {% if page.dataurl %}<a href="{{ page.dataurl }}">{% else %}{% endif %}<span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.model }} dataset</span>{% if page.dataurl %}</a>{% else %}{% endif %} and is built with <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.samplecount }} samples</span> across <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.labelcount }} labels</span>, including {{ page.labelsamples }}. We'll also show a confidence score (the higher the number, the more confident we are around the answer).</p>        
             <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436"><b>Whether you’re an uncertain {% if page.role %}{{ page.role }}{% else %}hobbyist{% endif %}, just curious, or building {% if page.which %}{{ page.which}}{% else %}{{ page.name }}{% endif %} detection into your application, we hope our tool proves helpful.</b></p>
 </div></div></div>
 
