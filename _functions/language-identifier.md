@@ -12,6 +12,8 @@ labelcount: 20
 labelsamples: Ar, Bg, De, and 17 other labels
 type: text
 role: translator
+
+image-singular:
 binary:
 which: 
 

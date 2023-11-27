@@ -12,6 +12,8 @@ labelcount: 2
 labelsamples: Notspam vs. Spam
 type: text
 role: moderator
-binary: spam
 
+image-singular:
+binary: spam
+which:
 ---

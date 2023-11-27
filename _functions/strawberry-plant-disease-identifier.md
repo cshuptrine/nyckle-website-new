@@ -12,8 +12,9 @@ labelcount: 3
 labelsamples: Healthy, Leafspot, & Other disease labels
 type: image
 role: gardener
+
 image-singular: strawberry plant
 binary:
-which: 
+which: disease
 
 ---

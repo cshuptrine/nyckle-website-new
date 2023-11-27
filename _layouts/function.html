@@ -18,7 +18,7 @@ layout: default
               <div class="space10"></div>
 
               {% if page.type == "image" %} 
-             <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} image identifier. Just upload your {{ page.sname }} image, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% else %}what it is{% endif %} - in just seconds.</h2>
+             <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} image identifier. Just upload your {{ page.sname }} image, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what it is{% endif %} - in just seconds.</h2>
                  {% else %}
                   <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} text identifier. Just input your text, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% else %}what it is{% endif %} - in just seconds.</h2>
                      {% endif %}
