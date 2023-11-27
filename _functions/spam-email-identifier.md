@@ -4,7 +4,7 @@ function: true
 live: true
 number: 4
 dataurl:
-image: /assets/images/functions/spammy-emails-identifier.webp
+image: /assets/images/functions/spam.webp
 name: spam email
 model: email-spam-classification
 samplecount: 82

@@ -17,11 +17,9 @@ layout: default
 
               <div class="space10"></div>
 
-              {% if page.type == "image" %} 
-             <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} image identifier. Just upload your {{ page.sname }} image, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what it is{% endif %} - in just seconds.</h2>
-                 {% else %}
-                  <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} text identifier. Just input your text, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% else %}what it is{% endif %} - in just seconds.</h2>
-                     {% endif %}
+ 
+             <h2 class="display-4" style="color:#0b2436">Below is a free {{ page.name }} image identifier. {% if page.type == "image" %}Just upload your {{ page.image-singular }} image{% else%}Just input your text{% endif %}, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {% if page.image-singular %}{{ page.image-singular }}{% else %}{% endif %} it is{% endif %} - in just seconds.</h2>
+      
             
      
             </div>
@@ -34,13 +32,13 @@ layout: default
 </div></div></div></div></div>
 
 
-  <div class="wrapper gray-wrapper" style="height: 130px">
-  <div class="container inner text-center">
-            <h2 class="display-3" style="margin-top:-7%;padding-left:6%;padding-right:6%">
-    Want API access to this pretrained model?<span style="color: #e7a83d;"> Contact us below.</span></h2>
+<div class="wrapper light-wrapper" style="margin-bottom:-8%">
+  <div class="container inner">
+            <h2 class="display-3 text-center" style="margin-top:-7%;padding-left:6%;padding-right:6%;">
+    Want API access to this pretrained {{ page.type }} model?<span style="color: #e7a83d;"> Contact us below.</span></h2>
   </div></div>
 
-<div class="content-wrapper content-wrapper2">
+<div class="wrapper white-wrapper"> 
     <div class="container inner">
         <div class="text-box">
             INSERT THE JAVASCRIPT
@@ -55,20 +53,15 @@ layout: default
      How this {{ page.name}} classifier works</h2>
      <div class="space20"></div>
 
-    {% if page.type == "image" %} 
-    <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">To start, drag and drop (or import) your {{ page.sname }} image. Within seconds, our AI tool will tell you {% if page.binary %}if it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {{ page.sname}} it is{% endif %}.</p>
-    {% else %}
-        <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">To start, input the text that you'd like analyzed. Within seconds, our AI tool will tell you {% if page.binary %}if it's {{ page.binary }}{% else %}what {{ page.name}} it is{% endif %}.</p>
-    {% endif %}
+    <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">{% if page.type == "image" %}To start, drag and drop (or import) your {{ page.image-singular }} image{% else %}To start, input the text that you'd like analyzed{% endif %}. Our AI tool will then tell you {% if page.binary %}if it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {% if page.image-singular %}{{ page.image-singular }}{% else %}{% endif %} it is{% endif %}.</p>
 
-
-        <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">This {{ page.type}} pretrained model uses the {% if page.dataurl %}<a href="{{ page.dataurl }}">{% else %}{% endif %}<span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.model }} dataset</span>{% if page.dataurl %}</a>{% else %}{% endif %} and is built with <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.samplecount }} samples</span> across <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.labelcount }} labels</span>, including {{ page.labelsamples }}. We'll also show a confidence score (the higher the number, the more confident we are around the answer).</p>        
+        <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">This {{ page.type}} pretrained model uses the {% if page.dataurl %}<a href="{{ page.dataurl }}">{% else %}{% endif %}<span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.model }} dataset</span>{% if page.dataurl %}</a>{% else %}{% endif %} and is built with <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.samplecount }} samples</span> across <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.labelcount }} labels</span>, including {{ page.labelsamples }}. We'll also show a confidence score (the higher the number, the more confident we are {% if page.binary %}that it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {% if page.image-singular %}{{ page.image-singular }}{% else %}{% endif %} it is{% endif %}).</p>        
             <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436"><b>Whether you’re an uncertain {% if page.role %}{{ page.role }}{% else %}hobbyist{% endif %}, just curious, or building {% if page.which %}{{ page.which}}{% else %}{{ page.name }}{% endif %} detection into your application, we hope our tool proves helpful.</b></p>
 </div></div></div>
 
-<div class="content-wrapper" style="height:650px">
+<div class="content-wrapper">
   <div class="wrapper white-wrapper">
-    <div class="container side-padded" style="padding-top:4%;padding-bottom:3%">
+    <div class="container side-padded" style="padding-top:4%;">
       <h2 class="display-3 text-center">
         <div class="spacemobile"></div>
       The benefits of an AI-powered {{ page.name}} classification API</span>

@@ -1,33 +1,15 @@
 ---
 layout: default
+
 ---
 
+<div class="wrapper gray-wrapper inner">
     <div class="container">
         <div class="posts contain-1300 p-mobile-1350 mb-3" style="margin-top:-9%">
-
-
-<a href="/pretrained-model/flowers-identifier/">
-    <div class="hero">
-        <div class="hero-contents d-flex mx-2 mt-4" style="padding-top:5%;padding-left:5%;">
-            <div class="title-area d-flex flex-column justify-content-between">
-                <div>
-                    <div class="intro">Featured pre-trained function</div>
-                     <p class="styled-as-h1" style="padding-top:6%">Use AI to identify flowers</p>
-                    <div class="summary">Just upload a picture of a flower, and our AI will classify what it is - in just seconds.</div>
-               
-                <div class="author">
-                       <span class="read-more">Test it out →</span>
-                </div></div>
-        </div>    
-            <div class="image-area card summary-card">
-                <img class="card-img-top summary-img safari_only_unset_height" src="/assets/images/functions/flowers-identifier.webp"
-                    alt="flowers pretrained dataset image" />
-            </div>
-        </div>
-    </div>
-</a>
-
-    <h1 class="heading" style="text-align:center">All Pre-Trained Functions</h1>
+      <div class="space40"></div>
+    <h1 class="display-2 text-center" style="color:#0b2436;margin-top:-8%">Nyckel's Pretrained Models
+</h1>
+    <p class="display-5 text-center" style="color:#0b2436">Explore our pretrained models you can start using in just minutes</p>
     <div class="row">
 {% assign all_functions = site.functions | sort: 'number' %}
 {% for function in all_functions %}
@@ -37,4 +19,4 @@ layout: default
     {% endif %}
 {% endfor %}
 
-  </div></div></div>
+  </div></div></div></div>

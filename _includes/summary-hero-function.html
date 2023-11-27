@@ -1,51 +1,28 @@
-{% assign function = include.function %}
 
-<a href="{{ site.baseurl }}{{ function.url }}">
+{% assign function = include.function %}
+{% if function.hero-card %}
+<a href="{{ function.url }}">
     <div class="hero">
-        <div class="hero-contents d-flex mx-2 mt-4">
+        <div class="hero-contents d-flex mx-2 mt-4" style="padding-top:5%;padding-left:5%;">
             <div class="title-area d-flex flex-column justify-content-between">
                 <div>
-                     <h1 style="font-size: 0.6em;">{{ function.title }}</h1>
-                    <div class="summary">{{ function.description }}</div>
-                </div>
-
-                {% assign author = site.data.authors[function.author] %}
-                {% if author %}
+                    <div class="intro">Featured pre-trained function</div>
+                     <p class="styled-as-h1" style="padding-top:6%">Use AI to identify<span style="color: #306fa2;"> {{ function.name }}}</p>
+                       {% if function.type == "image" %} 
+             <h2 class="display-4" style="color:#0b2436">Below is a free {{ function.name }} image identifier. Just upload your {{ function.sname }} image, and our AI will classify {% if function.binary %}if it's {{ function.binary }}{% elsif function.which %}which {{function.which}} it is{% else %}what it is{% endif %} - in just seconds.</h2>
+                 {% else %}
+                  <h2 class="display-4" style="color:#0b2436">Below is a free {{ function.name }} text identifier. Just input your text, and our AI will classify {% if function.binary %}if it's {{ function.binary }}{% else %}what it is{% endif %} - in just seconds.</h2>
+                     {% endif %}
+               
                 <div class="author">
-                    <div class="author-area">
-                        {% if author.image %}
-                        <img src="{{author.image}}" alt="mugshot" class="author-icon" />
-                        {% elsif author.github %}
-                        <img src="https://avatars.githubusercontent.com/{{author.github}}" alt="mugshot"
-                            class="author-icon" />
-                        {% endif %}
-                        <span class="author-name" style="font-size: 1em">{{ author.display_name }}</span>
-                        {% if author.github %}
-                        <i class="fa fa-github fa-lg social-icon"></i>
-                        {% endif %}
-                        {% if author.twitter %}
-                        <i class="fa fa-twitter fa-lg social-icon"></i>
-                        {% endif %}
-                        {% if author.linkedin %}
-                        {% if author.is_linkedin_company %}
-                        <i class="fa fa-linkedin fa-lg social-icon"></i>
-                        {% else %}
-                        <i class="fa fa-linkedin fa-lg social-icon"></i>
-                        {% endif %}
-                        {% endif %}
-                    </div>
-                       <span class="read-more">Read more →
-                    </span>
-             
-                </div>
-                {% endif %}
-            </div>
-            {% if function.image %}
+                       <span class="read-more">Test it out →</span>
+                </div></div>
+        </div>    
             <div class="image-area card summary-card">
                 <img class="card-img-top summary-img safari_only_unset_height" src="{{ function.image }}"
-                    alt="{{ function.image_alt }}" />
+                    alt="{{ function.name }} pretrained dataset image" />
             </div>
-            {% endif %}
         </div>
     </div>
 </a>
+{% endif %}

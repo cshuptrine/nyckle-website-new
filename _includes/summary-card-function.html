@@ -1,12 +1,13 @@
 <div class="col-lg-4 col-md-6 col-sm-12 pt-3 px-2">
     <a class="card summary-card" href="{{ site.baseurl }}{{ function.url }}">
         {% if function.image %}
-        <img class="card-img-top summary-img" src="{{ function.image }}" alt="{{ function.name}} identifier" loading="lazy" />
+        <img class="card-img-top summary-img" src="{{ function.image }}" alt="{{ function.name}} identifier" />
         {% else %}
-        <img class="card-img-top summary-img" src="/assets/images/important/nyckel-cover.webp" loading="lazy" />
+        <img class="card-img-top summary-img" src="/assets/images/important/nyckel-cover.webp"/>
         {% endif %}
         <div class="card-body">
             <h1 style="font-size: 1.5em;">{{ function.name | title_case }}</h1>
+            <p class="h5" style="margin-top:-20px;color:#306fa2;font-size:0.8rem">{{ function.type | title_case }} classifier</p>
             <div class="entry">
 
    {% if function.type == "image" %} 

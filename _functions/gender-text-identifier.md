@@ -4,7 +4,7 @@ function: true
 live: true
 number: 6
 dataurl: https://lingcog.blogspot.com/p/datasets.html
-image: /assets/images/functions/gendered-blog-posts-identifier.webp
+image: /assets/images/functions/gender.webp
 name:  likely gender
 model: blog_authorship_corpus
 samplecount: 24,567
