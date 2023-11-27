@@ -79,4 +79,4 @@ main_menu:
       - text: "Pretrained Models"
         url: "/pretrained-models/"
         icon: "/assets/images/icons/nav/invention.webp"
-        subtext: "Classify with these already-made models"
+        subtext: "Classify with these premade models"

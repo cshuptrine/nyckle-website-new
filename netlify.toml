@@ -35,10 +35,6 @@
   to = "/products/image-classification-api/"  
 
 [[redirects]]
-  from = "/product/"
-  to = "/products/"
-
-[[redirects]]
   from = "/semantic-image-search"
   to = "/products/semantic-image-search"
 
