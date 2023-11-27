@@ -1,125 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-{% include /tags/meta.html %}
-{% include /tags/head.html %}
-
-<!--SCSS -->
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-
-</head>
-
-<body {% if page.overflow %} class="overflow-hidden" {% endif %}>
-{% if page.url contains '/blog/' or page.url contains '/pretrained-models/' %}
-{% include header.html container_class="container" extra_class="absolute nav-uppercase" %}
-{% else %}
-{% if page.nav == 'light' %}
-{% include header.html container_class="container" extra_class="absolute transparent inverse-text nav-uppercase"
-light_logo="true" %}
-{% else %}
-{% include header.html container_class="container" extra_class="absolute nav-uppercase" %}
-{% endif %}
-{% endif %}
-
-<div class="content-wrapper main-content">
-{{ content }}
-</div>
-
-{% if page.url contains '/blog/' %}
-{% include /cta/cta-blog.html %}
-{% elsif page.url contains '/pretrained-models/' %}
-{% include /cta/cta-functions.html %}
-{% elsif page.cta2 %}
-{% else %}
-{% include /cta/cta.html %}
-{% endif %}
-
-{% include footer.html light_logo="true" %}
-{% include /tags/body.html %}
-
-<!-- Above-the-fold JS tags -->
-<script src="{{relative_url}}/assets/js/jquery.min.js"></script>
-<script src="{{relative_url}}/assets/js/popper.min.js"></script>
-<script src="{{relative_url}}/assets/js/bootstrap.min.js"></script>
-<script src="{{relative_url}}/assets/revolution/js/jquery.revolution.min.js"></script>
-<script src="{{relative_url}}/assets/js/plugins.js"></script>
-<script src="{{relative_url}}/assets/js/scripts.js"></script>
-<!-- End Above-the-fold JS tags -->
-
-<!-- Lazyloaded JavaScript Tags -->
-<script>
-    var jsUrls = [
-        "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.actions.min.js",
-        "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.carousel.min.js",
-        "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.kenburn.min.js",
-        "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js",
-        "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.migration.min.js",
-        "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.navigation.min.js",
-        "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.parallax.min.js",
-        "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.slideanims.min.js",
-        "{{relative_url}}/assets/revolution/js/extensions/revolution.extension.video.min.js",
-        "{{relative_url}}/assets/js/simple-jekyll-search.min.js",
-        "/assets/js/codebox.js",
-        "{{relative_url}}/assets/js/plugins.js",
-        "{{relative_url}}/assets/revolution/js/jquery.tools.min.js",
-        "/assets/js/lite-yt.js",
-        "/assets/js/invoke.js"
-    ];
-
-    var hasLoadedJsFiles = new Array(jsUrls.length).fill(false);
-
-    window.onscroll = function() {
-        for (var i = 0; i < jsUrls.length; i++) {
-            if (!hasLoadedJsFiles[i]) {
-                var script = document.createElement('script');
-                script.src = jsUrls[i];
-                script.type = 'text/javascript';
-                document.body.appendChild(script);
-
-                // Remember that we've loaded this JavaScript file so we don't try to load it again
-                hasLoadedJsFiles[i] = true;
-            }
-        }
-    };
-</script>
-<!-- End Lazyloaded JavaScript Tags -->
-
-<!-- Lazyloaded CSS -->
-<script>
-    function loadCSS(urls) {
-        urls.forEach(function(url) {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = url;
-            link.onerror = function() {
-                console.error('Failed to load CSS:', url);
-            };
-            document.head.appendChild(link);
-        });
-    }
-
-    var cssLoaded = false;
-
-    function handleScroll() {
-        if (!cssLoaded && window.scrollY > 100) { // Check if scrolled more than 100 pixels
-            loadCSS([
-                '/assets/css/lazy/style-lazy.css',
-                '/assets/css/lazy/layers.css',
-                '/assets/css/lazy/plugins-lazy.css',
-                '/assets/css/lazy/type-lazy.css',
-                // Add more URLs as needed
-            ]);
-            cssLoaded = true;
-            window.removeEventListener('scroll', handleScroll); // Remove event listener once CSS is loaded
-        }
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-</script>
-<!-- End Lazyloaded CSS -->
-
 <script>
 $(function () {
     // preventing page from redirecting
@@ -279,7 +157,7 @@ function checkImageWithNyckel(image) {
     formdata.append("file", image);
 
     var functionId = $("#invoke-container").data("functionId");
-    var url = `https://www.nyckel.com/v1/functions/${functionId}/invoke`;
+    var url = `https://www.nyckel.com/v1/functions/${{ page.functionid }}/invoke`;
 
     $.ajax({
         url: url,
@@ -297,7 +175,3 @@ function checkImageWithNyckel(image) {
     });
 }
 </script>
-
-
-</body>
-</html>
