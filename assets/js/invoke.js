@@ -1,10 +1,9 @@
-<script>
 $(function () {
     // preventing page from redirecting
     $("html").on("dragover", function (e) {
         e.preventDefault();
         e.stopPropagation();
-        $("h2").text("Drag here");
+       
     });
 
     $("html").on("drop", function (e) {
@@ -15,19 +14,19 @@ $(function () {
     $(".upload-area").on("dragenter", function (e) {
         e.stopPropagation();
         e.preventDefault();
-        $("h2").text("Drop");
+       
     });
 
     $(".upload-area").on("dragover", function (e) {
         e.stopPropagation();
         e.preventDefault();
-        $("h2").text("Drop");
+      
     });
 
     $(".upload-area").on("drop", function (e) {
         e.stopPropagation();
         e.preventDefault();
-        $("h2").text("Checking...");
+       
 
         var file = e.originalEvent.dataTransfer.files[0];
         invokeImage(file);
@@ -157,7 +156,7 @@ function checkImageWithNyckel(image) {
     formdata.append("file", image);
 
     var functionId = $("#invoke-container").data("functionId");
-    var url = `https://www.nyckel.com/v1/functions/${{ page.functionid }}/invoke`;
+    var url = `https://www.nyckel.com/v1/functions/${functionId}/invoke`;
 
     $.ajax({
         url: url,
@@ -174,4 +173,3 @@ function checkImageWithNyckel(image) {
         }
     });
 }
-</script>
