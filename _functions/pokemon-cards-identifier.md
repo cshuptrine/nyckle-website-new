@@ -15,4 +15,5 @@ role: Pokemon player
 image-singular: Pokemon card
 binary: 
 which: 
+functionid: ge9uxrp067icblqk
 ---

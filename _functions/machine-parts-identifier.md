@@ -15,4 +15,5 @@ role: industrialist
 image-singular: part
 binary: 
 which: 
+functionid: pfm9r7pb4yggatr6
 ---
