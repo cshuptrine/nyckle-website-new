@@ -1,12 +1,7 @@
-<nav class="navbar {% if include.extra_class %} {{ include.extra_class }} {% endif %} navbar-hover-opacity navbar-expand-lg">
-    <div class="{% if include.container_class %} {{ include.container_class }} {% else %} container-fluid {% endif %} flex-row justify-content-center">
+<nav class="navbar absolute nav-uppercase navbar-hover-opacity navbar-expand-lg nav-padding">
+    <div class="container flex-row justify-content-center">
         <div class="navbar-brand">
             <a href="/">
-                {% if include.light_logo %}
-                <img src="/assets/images/important/Nyckel-Logo-White-350.webp"
-                     class="{% if include.logo_class %} {{ include.logo_class }} {% else %} logo-light {% endif %}"
-                     alt="Nyckel Logo" width="180" height="27"/>
-                {% endif %}
                 <img src="/assets/images/important/Nyckel-Logo-Color-350.webp"
                      class="{% if include.logo_class %} {{ include.logo_class }} {% else %} logo-dark {% endif %} {% if include.black_logo_disable %} d-none {% endif %}"
                      alt="Nyckel logo" width="180" height="27"/>

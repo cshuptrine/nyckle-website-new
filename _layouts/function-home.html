@@ -4,13 +4,12 @@ layout: default
 ---
 
 <div class="wrapper gray-wrapper inner">
-    <div class="container">
-        <div class="posts contain-1300 p-mobile-1350 mb-3" style="margin-top:-9%">
-      <div class="space40"></div>
+    <div class="container" style="padding-top:2%">
     <h1 class="display-2 text-center" style="color:#0b2436;margin-top:-8%">Nyckel's Pretrained Models
 </h1>
-    <p class="display-5 text-center" style="color:#0b2436">Explore our pretrained models you can start using in just minutes</p>
-    <div class="row">
+    <p class="display-5 text-center" style="color:#0b2436">Explore pretrained models you can start using in just minutes</p>
+            <div class="posts">
+    <div class="row" style="margin-top:-75px">
 {% assign all_functions = site.functions | sort: 'number' %}
 {% for function in all_functions %}
   {% if function.live %}

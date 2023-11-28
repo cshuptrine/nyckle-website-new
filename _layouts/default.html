@@ -11,16 +11,8 @@
 </head>
 
 <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
-{% if page.url contains '/blog/' or page.url contains '/pretrained-models/' %}
-{% include header.html container_class="container" extra_class="absolute nav-uppercase" %}
-{% else %}
-{% if page.nav == 'light' %}
-{% include header.html container_class="container" extra_class="absolute transparent inverse-text nav-uppercase"
-light_logo="true" %}
-{% else %}
-{% include header.html container_class="container" extra_class="absolute nav-uppercase" %}
-{% endif %}
-{% endif %}
+
+{% include header.html %}
 
 <div class="content-wrapper main-content">
 {{ content }}
@@ -35,7 +27,7 @@ light_logo="true" %}
 {% include /cta/cta.html %}
 {% endif %}
 
-{% include footer.html light_logo="true" %}
+{% include footer.html %}
 {% include /tags/body.html %}
 
 <!-- Above-the-fold JS tags -->

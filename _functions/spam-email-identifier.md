@@ -5,7 +5,7 @@ live: true
 number: 4
 dataurl:
 image: /assets/images/functions/spam.webp
-name: spam email
+name: spam emails
 model: email-spam-classification
 samplecount: 82
 labelcount: 2
