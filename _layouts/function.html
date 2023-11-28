@@ -32,7 +32,19 @@ layout: default
 </div>
 </div></div></div>
 <div style="margin-top:-75px">
-      {% include invoke-image.html %}</div>
+
+{% if page.type == "image" %}
+{% include invoke-image.html %}
+{% elsif page.type =="text" %}
+{% include invoke-image.html %}
+{% else %}
+<div class="container side-padded">
+<h2 class="display-4 text-box text-center" style="color:#0b2436">We are having trouble loading the widget. Please try again later!</h2></div>
+<div class="space30"></div>
+{% endif %}
+
+
+    </div>
   </div></div>    
 
 <div class="content-wrapper">

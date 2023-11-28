@@ -1,42 +1,26 @@
 [[redirects]]
-  from = "/improve-g2-rank/"
-  to = "/blog/improve-g2-rank/"
-
-[[redirects]]
-  from = "/articles/improve-g2-rankings/"
-  to = "/blog/improve-g2-rank/"
-
-[[redirects]]
-  from = "/faq"
-  to = "/" 
-
-[[redirects]]
   from = "/blog/index.html"
   to = "/blog/" 
 
 [[redirects]]
-  from = "/custom-categorize-aerial-imagery-api/"
+  from = "/custom-categorize-aerial-imagery-api"
   to = "/"   
 
 [[redirects]]
-  from = "/machine-learning-functions-as-a-service/"
+  from = "/machine-learning-functions-as-a-service"
   to = "/"  
 
 [[redirects]]
-  from = "/text-classification-api/"
+  from = "/text-classification-api"
   to = "/products/text-classification-api/"  
 
 [[redirects]]
   from = "/computer-vision-api"
-  to = "/products//computer-vision-api/"      
+  to = "/products/computer-vision-api/"      
 
 [[redirects]]
-  from = "/image-classification-api/"
-  to = "/products/image-classification-api/"  
-
-[[redirects]]
-  from = "/semantic-image-search"
-  to = "/products/semantic-image-search"
+  from = "/image-classification-api"
+  to = "/products/image-classification-api/"  "
 
 [[redirects]]
   from = "/migrating-from-monkey-learn"
@@ -44,12 +28,732 @@
 
 [[redirects]]
   from = "/custom-content-moderation-api"
-  to = "/products/custom-content-moderation-api"
-
-[[redirects]]
-  from = "/semantic-text-search"
-  to = "/products/semantic-text-search"
+  to = "/products/custom-content-moderation-api/"
 
 [[redirects]]
   from = "/ai-for-digital-asset-management"
   to = "/products/ai-for-digital-asset-management"
+
+[[redirects]]
+  from = "/sitemap.txt"
+  to = "/sitemap.xml"  
+
+[[redirects]]
+  from = "/blog/sitemap.xml"
+  to = "/sitemap.xml"  
+
+[[redirects]]
+  from = "/public-functions/sitemap.txt"
+  to = "/sitemap.xml"      
+
+[[redirects]]
+  from = "/public-functions"
+  to = "/pretrained-models/"      
+
+[[redirects]]
+  from = "/public-functions/fake-or-real-image-classifier"
+  to = "/pretrained-models/AI-images-identifier/"
+
+[[redirects]]
+  from = "/public-functions/art-genres-image-classifier"
+  to = "/pretrained-models/art-genres-identifier/"
+
+[[redirects]]
+  from = "/public-functions/art-styles-image-classifier"
+  to = "/pretrained-models/art-styles-identifier/"
+
+[[redirects]]
+  from = "/public-functions/artists-image-classifier"
+  to = "/pretrained-models/artists-identifier/"
+
+[[redirects]]
+  from = "/public-functions/banking-customer-queries-text-classifier"
+  to = "/pretrained-models/banking-support-issues/"
+
+[[redirects]]
+  from = "/public-functions/bean-plant-diseases-image-classifier"
+  to = "/pretrained-models/bean-plant-diseases-identifier/"
+
+[[redirects]]
+  from = "/public-functions/clickbaity-headlines-text-classifier"
+  to = "/pretrained-models/clickbait-identifier/"
+
+[[redirects]]
+  from = "/public-functions/countries-image-classifier"
+  to = "/pretrained-models/countries-identifier/"
+
+[[redirects]]
+  from = "/public-functions/defective-tires-image-classifier"
+  to = "/pretrained-models/defective-tires-identifier/"
+
+[[redirects]]
+  from = "/public-functions/document-types-image-classifier"
+  to = "/pretrained-models/document-types-identifier/"
+
+[[redirects]]
+  from = "/public-functions/dog-emotions-image-classifier"
+  to = "/pretrained-models/dog-emotions-identifier/"
+
+[[redirects]]
+  from = "/public-functions/tweet-emotions-text-classifier"
+  to = "/pretrained-models/emojies-based-on-text-identifier/"
+
+[[redirects]]
+  from = "/public-functions/fast-foods-image-classifier"
+  to = "/pretrained-models/fast-food-identifier/"
+
+[[redirects]]
+  from = "/public-functions/flowers-image-classifier"
+  to = "/pretrained-models/flowers-identifier/"
+
+[[redirects]]
+  from = "/public-functions/gendered-faces-image-classifier"
+  to = "/pretrained-models/gender-image-identifier/"
+
+[[redirects]]
+  from = "/public-functions/gendered-blog-posts-text-classifier"
+  to = "/pretrained-models/gender-text-identifier/"
+
+[[redirects]]
+  from = "/public-functions/correct-english-sentences-text-classifier"
+  to = "/pretrained-models/grammar-identifier/"
+
+[[redirects]]
+  from = "/public-functions/human-actions-image-classifier"
+  to = "/pretrained-models/human-actions-identifier/"
+
+[[redirects]]
+  from = "/public-functions/human-face-emotions-image-classifier"
+  to = "/pretrained-models/human-emotions-identifier/"
+
+[[redirects]]
+  from = "/public-functions/iab-categorized-news-text-classifier"
+  to = "/pretrained-models/IAB-categories-identifier/"
+
+[[redirects]]
+  from = "/public-functions/machine-parts-image-classifier"
+  to = "/pretrained-models/machine-parts-identifier/"
+
+[[redirects]]
+  from = "/public-functions/materials-image-classifier"
+  to = "/pretrained-models/materials-identifier/"
+
+[[redirects]]
+  from = "/public-functions/meals-image-classifier"
+  to = "/pretrained-models/meals-identifier/"
+
+[[redirects]]
+  from = "/public-functions/memes-image-classifier"
+  to = "/pretrained-models/memes-identifier/"
+
+[[redirects]]
+  from = "/public-functions/movie-review-sentences-text-classifier"
+  to = "/pretrained-models/movie-review-sentiment-identifier/"
+
+[[redirects]]
+  from = "/public-functions/offensive-tweets-text-classifier"
+  to = "/pretrained-models/offensive-tweets-identifier/"
+
+[[redirects]]
+  from = "/public-functions/pet-breeds-image-classifier"
+  to = "/pretrained-models/pet-breeds-identifier/"
+
+[[redirects]]
+  from = "/public-functions/pokemon-characters-image-classifier"
+  to = "/pretrained-models/pokemon-cards-identifier/"
+
+[[redirects]]
+  from = "/public-functions/rice-grains-image-classifier"
+  to = "/pretrained-models/rice-grains-identifier/"
+
+[[redirects]]
+  from = "/public-functions/sms-emotions-text-classifier"
+  to = "/pretrained-models/SMS-sentiment-identifier/"
+
+[[redirects]]
+  from = "/public-functions/spammy-emails-text-classifier"
+  to = "/pretrained-models/spam-email-identifier/"
+
+[[redirects]]
+  from = "/public-functions/strawberry-plant-diseases-image-classifier"
+  to = "/pretrained-models/strawberry-plant-disease-identifier/"
+
+[[redirects]]
+  from = "/public-functions/tweet-emoji-reactions-text-classifier"
+  to = "/pretrained-models/tweet-emotions-identifier/"
+
+[[redirects]]
+  from = "/public-functions/tweet-sentiments-text-classifier"
+  to = "/pretrained-models/tweet-sentiments-identifier/"
+
+[[redirects]]
+  from = "/public-functions/vegetables-image-classifier"
+  to = "/pretrained-models/vegetables-identifier/"
+
+[[redirects]]
+  from = "/public-functions/vehicle-models-image-classifier"
+  to = "/pretrained-models/vehicle-models-identifier/"
+
+[[redirects]]
+  from = "/public-functions/yelp-reviews-text-classifier"
+  to = "/pretrained-models/yelp-review-sentiment-identifier/"
+
+[[redirects]]
+  from = "/public-functions/sms-spam-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/portuguese-fake-news-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/reuters-news-articles-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/merced-aerial-landscapes-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/polish-unfair-contractual-terms-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/romainian-facebook-comments-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/eight-turkish-languages-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/spoken-dialogues-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/sms-spam-(demo)-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/twitter-financial-news-topics-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/slovenian-migrant-&-lbgt-news-facebook-comments-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/swedish-website-reviews-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/white-supremacist-hate-speech-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/climate-change-stance-tweets-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/resisc-aerial-landscapes-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/siri-whu-aerial-landscapes-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/arabian-book-reviews-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/hillary-clinton-stance-tweets-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/vietnamese-celebrities-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/french-parliament-qa-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/arabic-sign-language-signs-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/french-movie-reviews-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/gastrointestinal-endoscopy-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/endometriosis-lesions-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/hungarian-migrant-&-lbgt-news-facebook-comments-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/indoor-scenes-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/myanmar-news-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/tcfd-recommendations-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/german-book-reviews-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/sarcastic-headlines-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/muscle-fibers-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/scanned-sentiments-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/filipino-hate-tweets-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/catalan-restaurant-reviews-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/social-media-toxicity-(demo)-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/wellformed-google-queries-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/movie-shot-types-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/atheism-stance-tweets-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/hyperpartisan-news-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/tiny-imagenet-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/twitter-financial-news-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/electronic-logos-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/artificial-weapons-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/asian-trees-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/magic-the-gathering-cards-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/arabic-hotel-reviews-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/rough-textures-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/multilingual-text-passages-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/videogame-gameplays-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/ai-generated-images-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/curbside-wastebags-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/news-articles-(demo)-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/hate-tweets-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/tree-species-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/anime-ratings-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/pubmed-sections-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/bengali-hate-speech-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/academic-citation-intents-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/korean-entertaiment-news-comments-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/recycling-materials-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/medical-case-reports-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/corporate-climate-disclosure-specificity-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/breast-histopathology-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/corporate-climate-disclosure-actions-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/brazilian-tweets-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/watermarked-scenes-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/rotten-tomatoes-movie-reviews-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/nail-biting-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/bengali-authors-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/eu-parliament-danish-texts-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/portuguese-hate-speech-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/european-satellite-landscapes-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/news-articles-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/music-emotions-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/swahili-news-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/hex-&-ascii-payloads-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/donuts-vs-croissants-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/movie-shot-scales-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/indonesian-news-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/medical-logos-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/indian-foods-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/radar-backscatter-icebergs-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/depression-related-reddit-posts-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/csgo-weapons-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/smoky-skies-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/necessities-logos-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/sneakers-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/poems-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/ironic-tweets-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/corporate-climate-disclosure-opportunities-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/chickens-vs-muffins-vs-dogs-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/reddit-crypto-sentiments-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/sustainable-development-goals-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/dementia-brain-scans-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/french-product-sheets-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/street-views-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/wildfires-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/feminism-stance-tweets-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/rocks-vs-glaciers-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/accessories-logos-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/clothes-logos-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/food-logos-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/hindi-bbc-news-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/arabic-poetry-meters-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/dbpedia-articles-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/alzheimer-brain-scans-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/english-migrant-&-lbgt-news-facebook-comments-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/turkish-sms-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/romainian-sports-news-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/medical-questions-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/politifact-statements-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/questionable-health-claims-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/artificial-girlfriends-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/cats-vs-dogs-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/transportation-logos-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/us-patents-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/institution-logos-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/hebrew-president-facebook-post-comments-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/evaporated-spirit-drops-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/amazonian-fishes-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/arxiv-papers-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/leisure-logos-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/depths-of-field-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/imdb-movie-reviews-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/home-assistant-commands-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/german-news-articles-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/snacks-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/describable-textures-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/bbc-news-articles-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/polish-product-reviews-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/korean-utterance-intents-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/norwegian-parliament-speeches-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/arabian-tweets-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/cosmetic-logos-image-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/abortion-stance-tweets-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/questions-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/catalan-wikipedia-texts-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/cnn-news-articles-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/financial-news-titles-text-classifier"
+  to = "/"
+
+[[redirects]]
+  from = "/public-functions/botox-treated-faces-image-classifier"
+  to = "/"
