@@ -20,7 +20,7 @@
 
 [[redirects]]
   from = "/image-classification-api"
-  to = "/products/image-classification-api/"  "
+  to = "/products/image-classification-api/"
 
 [[redirects]]
   from = "/migrating-from-monkey-learn"
@@ -239,10 +239,6 @@
   to = "/"
 
 [[redirects]]
-  from = "/public-functions/slovenian-migrant-&-lbgt-news-facebook-comments-text-classifier"
-  to = "/"
-
-[[redirects]]
   from = "/public-functions/swedish-website-reviews-text-classifier"
   to = "/"
 
@@ -292,10 +288,6 @@
 
 [[redirects]]
   from = "/public-functions/endometriosis-lesions-image-classifier"
-  to = "/"
-
-[[redirects]]
-  from = "/public-functions/hungarian-migrant-&-lbgt-news-facebook-comments-text-classifier"
   to = "/"
 
 [[redirects]]
@@ -499,10 +491,6 @@
   to = "/"
 
 [[redirects]]
-  from = "/public-functions/hex-&-ascii-payloads-text-classifier"
-  to = "/"
-
-[[redirects]]
   from = "/public-functions/donuts-vs-croissants-image-classifier"
   to = "/"
 
@@ -620,10 +608,6 @@
 
 [[redirects]]
   from = "/public-functions/alzheimer-brain-scans-image-classifier"
-  to = "/"
-
-[[redirects]]
-  from = "/public-functions/english-migrant-&-lbgt-news-facebook-comments-text-classifier"
   to = "/"
 
 [[redirects]]
