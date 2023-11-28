@@ -5973,15 +5973,22 @@ picture {
 }
 
 .hero-contents2 {
-    padding-left: 10%;
+    padding-left: 12%;
     padding-right: 10%;
 }
 
 .hero-image {
-    width: 125%; /* or you can specify any width you want */
+    width: 80%; /* or you can specify any width you want */
     height: auto; /* keeps image aspect ratio */
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* adjust shadow as needed */
     image-rendering: -webkit-optimize-contrast; /* try to make image crisper */
+    box-shadow: 10px 10px 25px rgba(.1, .1, .1, .3) !important; /* Increased alpha value for darker shadow */
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    border-radius: 10px; 
+}
+
+.hero-blog {
+    width: 100% !important; /* or you can specify any width you want */
+
 }
 
 .shadow {

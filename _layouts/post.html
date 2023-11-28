@@ -8,13 +8,13 @@ layout: default
 
   
   <div class="hero hero2">
-    <div class="hero-contents hero-contents2 contain-1200 p-mobile-1350 d-flex">
+    <div class="hero-contents hero-contents2 d-flex">
       <div class="title-area d-flex flex-column justify-content-between">
-        <div>
+        
           <div class="spacemobile-s"></div>
           <h1 style="font-size: 0.6em;">{{ page.title }}</h1>
           <div class="summary">{{ page.description }}</div>
-        </div>
+       
 
         {% assign author = site.data.authors[page.author] %}
         {% if author %}
@@ -26,27 +26,6 @@ layout: default
             <img src="https://avatars.githubusercontent.com/{{author.github}}" alt="mugshot" class="author-icon" />
             {% endif %}
             <span class="author-name">{{ author.display_name }}</span>
-            {% if author.github %}
-            <a href="https://github.com/{{ author.github }}" target="_blank">
-              <i class="fa fa-github fa-lg social-icon"></i>
-            </a>
-            {% endif %}
-            {% if author.twitter %}
-            <a href="https://twitter.com/{{ author.twitter }}" target="_blank">
-              <i class="fa fa-twitter fa-lg social-icon"></i>
-            </a>
-            {% endif %}
-            {% if author.linkedin %}
-            {% if author.is_linkedin_company %}
-            <a href="https://linkedin.com/company/{{ author.linkedin }}" target="_blank">
-              <i class="fa fa-linkedin fa-lg social-icon"></i>
-            </a>
-            {% else %}
-            <a href="https://linkedin.com/in/{{ author.linkedin }}" target="_blank">
-              <i class="fa fa-linkedin fa-lg social-icon"></i>
-            </a>
-            {% endif %}
-            {% endif %}
           </div>
           <span class="date">
             Posted {{ page.date | date: "%b %Y"}}
@@ -56,11 +35,11 @@ layout: default
       </div>
       {% if page.image %}
       <div class="image-area d-none d-lg-block">
-        <img class="hero-image" src="{{ page.image }}" alt="{{ page.image_alt }}" />
+        <img class="hero-image hero-blog" src="{{ page.image }}" alt="{{ page.image_alt }}" />
       </div>
           {% else %}
       <div class="image-area d-none d-lg-block">
-        <img class="hero-image" src="/assets/images/important/nyckel-cover.webp" alt="Nyckel classification API}" />
+        <img class="hero-image hero-blog" src="/assets/images/important/nyckel-cover.webp" alt="Nyckel classification API" />
       </div>
       {% endif %}
     </div>
