@@ -3,7 +3,7 @@ layout: function
 function: true
 live: true
 number: 4
-dataurl:
+dataurl: https://huggingface.co/datasets/TrainingDataPro/email-spam-classification
 image: /assets/images/functions/spam.webp
 name: spam emails
 model: email-spam-classification

@@ -3,7 +3,7 @@ layout: function
 function: true
 live: true
 number: 3
-dataurl:
+dataurl: https://www.robots.ox.ac.uk/~vgg/data/flowers/
 image: /assets/images/functions/flowers-identifier.webp
 name: flowers
 model: oxford-flowers
