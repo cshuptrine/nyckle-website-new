@@ -6285,5 +6285,6 @@ picture {
 @media (max-width: 767px) { /* Mobile devices breakpoint */
     .header-text {
         font-size: 40px !important; /* Smaller size for mobile screens */
+        line-height:2.3rem !important;
     }
 }
