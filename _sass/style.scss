@@ -6203,8 +6203,15 @@ picture {
     background-position-x: center;
     background-position-y: center;
     aspect-ratio: 3 / 2; /* Adjust this for different aspect ratios */
-    width: 40%; /* Reduced from 50% to 40% */
+    width: 40%; /* Default width for larger screens */
     /* Optionally adjust padding and margin here */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    #invoke-container .upload-area {
+        width: 70%; /* Width for mobile devices */
+    }
 }
 
 #invoke-container .upload-area:hover {
