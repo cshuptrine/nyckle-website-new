@@ -3,7 +3,7 @@ $(function () {
     $("html").on("dragover", function (e) {
         e.preventDefault();
         e.stopPropagation();
-       
+        $("h2").text("Drag here");
     });
 
     $("html").on("drop", function (e) {
@@ -14,19 +14,19 @@ $(function () {
     $(".upload-area").on("dragenter", function (e) {
         e.stopPropagation();
         e.preventDefault();
-       
+        $("h2").text("Drop");
     });
 
     $(".upload-area").on("dragover", function (e) {
         e.stopPropagation();
         e.preventDefault();
-      
+        $("h2").text("Drop");
     });
 
     $(".upload-area").on("drop", function (e) {
         e.stopPropagation();
         e.preventDefault();
-       
+        $("h2").text("Checking...");
 
         var file = e.originalEvent.dataTransfer.files[0];
         invokeImage(file);
@@ -44,7 +44,20 @@ $(function () {
 
         invokeImage(file);
     });
+
+    $("#invoke-button").click(function () {
+        var text = $("#text-area textarea").val();
+        invokeText(text);
+    });
 });
+
+function invokeText(text) {
+    resetPage();
+    $("#thinking").show();
+    $("#invoke-button").hide();
+
+    checkTextWithNyckel(text);
+}
 
 function invokeImage(file) {
     $(".upload-instructions").hide();
@@ -138,7 +151,7 @@ function displayResult(response) {
 
 function displayError(response) {
     resetPage();
-    $("#error #message").text("We're sorry - there was an error trying to call Nyckel!");
+    $("#error #message").text("There was an error trying to call Nyckel");
     $("#error").show();
     console.log(response);
 }
@@ -148,9 +161,30 @@ function resetPage() {
     $("#thinking").hide();
     $("#prediction").hide();
     $("#no-prediction").hide();
+    $("#invoke-button").show();
 }
 
-// Sending AJAX request to Nyckel to run against ML model
+function checkTextWithNyckel(text) {
+    var functionId = $("#invoke-container").data("functionId");
+    var url = `https://www.nyckel.com/v1/functions/${functionId}/invoke`;
+    var body = JSON.stringify({ data: text });
+
+    $.ajax({
+        url: url,
+        type: "post",
+        data: body,
+        contentType: "application/json",
+        processData: false,
+        dataType: "json",
+        success: function (response) {
+            displayResult(response);
+        },
+        error: function (response) {
+            displayError(response);
+        }
+    });
+}
+
 function checkImageWithNyckel(image) {
     var formdata = new FormData();
     formdata.append("file", image);

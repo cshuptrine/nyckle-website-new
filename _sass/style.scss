@@ -6199,7 +6199,16 @@ picture {
 #invoke-container .text-area textarea {
     width: 100%;
     padding: 1rem;
-    border-radius: 20px;
+    min-height: 220px;
+    border-radius: 5px; /* Small border-radius */
+    border: 2px solid #306fa2; /* Initial border color and width */
+    background-color: #ffffff; /* Initial background color set to white */
+}
+
+#invoke-container .text-area textarea:focus {
+    outline: none; /* Removes the default focus outline */
+    border: 3px solid #e7a83d; /* Thicker border on focus */
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2); /* Shadow effect on focus */
 }
 
 #invoke-container .upload-area {
@@ -6295,3 +6304,14 @@ picture {
         line-height:2.3rem !important;
     }
 }
+
+#invoke-button {
+    margin: 10px auto;
+    display: block;
+    padding: 15px 20px;
+    border-radius: 20px;
+    background-color: #306fa2;
+    color: #ffffff; /* Sets the text color to white */
+}
+
+

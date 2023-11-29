@@ -3,7 +3,7 @@ layout: function
 live: true
 function: true
 number: 30
-name: yelp review sentiment
+name: Yelp review sentiment
 image: /assets/images/functions/yelp.webp
 dataurl: https://www.yelp.com/dataset
 model: yelp_review_full

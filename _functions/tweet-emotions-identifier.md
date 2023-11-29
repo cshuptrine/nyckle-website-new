@@ -3,7 +3,7 @@ layout: function
 live: true
 function: true
 number: 34
-name: tweet emotions
+name: Tweet emotions
 image: /assets/images/functions/twitter.webp
 dataurl: https://github.com/dair-ai/emotion_dataset
 model: emotion
