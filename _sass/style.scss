@@ -6197,11 +6197,11 @@ picture {
 }
 
 #invoke-container .text-area textarea {
-    width: 100%;
+    width: 90%;
     padding: 1rem;
-    min-height: 220px;
+    min-height: 240px;
     border-radius: 5px; /* Small border-radius */
-    border: 2px solid #306fa2; /* Initial border color and width */
+    border: 2px dashed #306fa2; /* Initial border color and width */
     background-color: #ffffff; /* Initial background color set to white */
 }
 
@@ -6219,15 +6219,14 @@ picture {
 }
 
 #invoke-container .upload-area {
-    border: 3px dashed #306fa2;
+    border: 2px dashed #306fa2;
     border-radius: 20px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
-    aspect-ratio: 3 / 2; /* Adjust this for different aspect ratios */
+    aspect-ratio: 3.5  / 2; /* Adjust this for different aspect ratios */
     width: 40%; /* Default width for larger screens */
-    /* Optionally adjust padding and margin here */
 }
 
 /* Media query for mobile devices */
