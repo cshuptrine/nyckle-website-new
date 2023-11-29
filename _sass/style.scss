@@ -6205,6 +6205,13 @@ picture {
     background-color: #ffffff; /* Initial background color set to white */
 }
 
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    #invoke-container .text-area {
+        width: 80%; /* Adjust the width as needed for mobile devices */
+    }
+}
+
 #invoke-container .text-area textarea:focus {
     outline: none; /* Removes the default focus outline */
     border: 3px solid #e7a83d; /* Thicker border on focus */
