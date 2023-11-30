@@ -1,5 +1,5 @@
 ---
-layout: function-home
+layout: default
 title: "Nyckel's Pretrained Models | Classify In Just Seconds"
 description: "classification image and text"
 subtitle: "Machine learning tools that make it easy to classify text and images"
@@ -11,6 +11,23 @@ permalink: "/pretrained-models/"
 cta: none
 nav: light
 image: /assets/images/important/nyckel-cover.webp
+nocta: true
 
 ---
 
+<div class="wrapper gray-wrapper inner">
+    <div class="container" style="padding-top:2%">
+    <h1 class="display-2 text-center" style="color:#0b2436;margin-top:-8%">Nyckel's Pretrained Models
+</h1>
+    <p class="display-5 text-center" style="color:#0b2436">Explore pretrained models you can start using in just minutes</p>
+            <div class="posts">
+    <div class="row" style="margin-top:-75px">
+{% assign all_functions = site.functions | sort: 'number' %}
+{% for function in all_functions %}
+  {% if function.live %}
+  {% assign function = function %}
+  {% include summary-card-function.html %}
+    {% endif %}
+{% endfor %}
+
+  </div></div></div></div>

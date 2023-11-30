@@ -6201,7 +6201,7 @@ picture {
     padding: 1rem;
     min-height: 240px;
     border-radius: 5px; /* Small border-radius */
-    border: 2px dashed #306fa2; /* Initial border color and width */
+    border: 1px solid #306fa2; /* Initial border color and width */
     background-color: #ffffff; /* Initial background color set to white */
 }
 
@@ -6214,8 +6214,8 @@ picture {
 
 #invoke-container .text-area textarea:focus {
     outline: none; /* Removes the default focus outline */
-    border: 3px solid #e7a83d; /* Thicker border on focus */
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2); /* Shadow effect on focus */
+    border: 2px solid #e7a83d; /* Thicker border on focus */
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1); /* Shadow effect on focus */
 }
 
 #invoke-container .upload-area {

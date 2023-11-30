@@ -20,6 +20,7 @@
 
 {% if page.url contains '/blog/' %}
 {% include /cta/cta-blog.html %}
+{% elsif page.nocta %}
 {% elsif page.url contains '/pretrained-models/' %}
 {% include /cta/cta-functions.html %}
 {% elsif page.cta2 %}
