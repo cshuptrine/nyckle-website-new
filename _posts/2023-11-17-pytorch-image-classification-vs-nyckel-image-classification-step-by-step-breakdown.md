@@ -1,29 +1,27 @@
 ---
 layout: post
-title: "PyTorch Image Classification vs. Nyckel Image Classification:
-  Step-by-Step Breakdown"
+title: "PyTorch Image Classification: A Step-by-Step Guide (+ An Alternative Method)"
 date: 2023-11-17
 author: becca
 stage: false
 featured: true
 headliner: false
-title: Nyckel vs. PyTorch Image Classification Comparison
-summary: Dive into a comprehensive comparison of PyTorch and Nyckel for image
-  classification to understand their unique approaches, strengths, and
-  usability. Choose the best machine learning approach for your use case based
-  on your ML needs and expertise.
-description: Explore the differences between PyTorch and Nyckel for image
-  classification.  Identify the best fit for you based on your requirements and
-  ML expertise.
+description: Learn how to build an image classification model with PyTorch
+  and get introduced to Nyckel as an alternative. Identify the best fit for you
+  based on your requirements and ML expertise.
 image: /blog/images/pytorch-image-classification3.webp
 ---
-Image classification is a common application of machine learning that trains computers to recognize and categorize images into labels. In this article, I'll compare how you can solve an image classification task with [PyTorch](https://pytorch.org), a prominent deep learning framework, to [Nyckel](https://www.nyckel.com/image-classification-api), a specialized AutoML platform that does most of the ML heavy-lifting for you.
+*For this article, we hired [Becca Miller](https://www.linkedin.com/in/becca-miller-96a570b8/), a freelance software developer and technical writer, to walk through the PyTorch and Nyckel image classification processes. Becca details her experience with both ML services and shares how you can build the image classifier yourself with either option.*
+
+Image classification is a common application of machine learning that trains computers to recognize and categorize images into labels. In this article, I'll demonstrate how you can build an image classification model with [PyTorch](https://pytorch.org), a prominent deep learning framework.
+
+Then, I'll compare how you can solve image classification tasks with [Nyckel](https://www.nyckel.com/image-classification-api), a specialized AutoML platform that does most of the ML heavy-lifting for you. 
 
 To facilitate a detailed comparison of these two solutions, I will work with a [publicly available dataset](https://www.kaggle.com/datasets/tongpython/cat-and-dog/data?select=training_set) that contains a diverse array of cat and dog images. My goal is to train an image classifier using both PyTorch and Nyckel by leveraging the technique of transfer learning. Transfer learning allows you to use pretrained models that have been extensively trained on large datasets, which enables you to fine-tune and adapt these models for a specific classification task. The main benefit of transfer learning is that you can train a model without needing a significant amount of data.
 
 Through this comparison, I will:
 
-* demonstrate how to use either solution for [image classification](https://www.nyckel.com/blog/what-is-image-classification-a-comprehensive-overview-for-developers-product-teams/),
+* demonstrate how to use PyTorch or Nyckel for [image classification](https://www.nyckel.com/blog/what-is-image-classification-a-comprehensive-overview-for-developers-product-teams/),
 * provide an in-depth analysis of the strengths and weaknesses of each approach, and
 * equip you with a comprehensive understanding of both methodologies, so you can make an informed decision based on your precise requirements and constraints.
 

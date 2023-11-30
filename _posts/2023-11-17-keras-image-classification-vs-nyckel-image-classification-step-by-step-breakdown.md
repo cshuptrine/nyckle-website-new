@@ -1,21 +1,22 @@
 ---
 layout: post
-title: "Keras Image Classification vs. Nyckel Image Classification: Step-by-Step
-  Breakdown"
+title: "A Step-by-Step Guide to Keras Image Classification (+ An Alternative Method)"
 date: 2023-11-17
 author: becca
 stage: false
 featured: true
 headliner: false
 title: Nyckel vs. Keras Image Classification Comparison
-description: Explore the differences between Keras and Nyckel for image
-  classification. Identify the best fit for you based on your requirements and
-  ML expertise.
+description: Learn how to build an image classification model with Keras and
+  get introduced to Nyckel as an alternative. Identify the best fit for you
+  based on your requirements and ML expertise.
 image: /blog/images/keres-image-classification4.webp
 ---
-*For this article, we hired [Becca Miller](https://www.linkedin.com/in/becca-miller-96a570b8/), a freelance software developer and technical writer, to compare Keras image classification and Nyckel image classification. Becca details her experience with both ML services and shares how you can build the image classifier yourself with either option.*
+*For this article, we hired [Becca Miller](https://www.linkedin.com/in/becca-miller-96a570b8/), a freelance software developer and technical writer, to walk through the Keras and Nyckel image classification processes. Becca details her experience with both ML services and shares how you can build the image classifier yourself with either option.*
 
-Image classification is a popular machine learning method that trains computers to recognize and categorize images into labels. In this article, I’ll compare how you can solve an image classification task with [Keras](https://keras.io), an open-source deep learning framework, to [Nyckel](https://www.nyckel.com/image-classification-api), a specialized AutoML platform that simplifies the ML development process, making machine learning accessible to experts and novices alike.
+Image classification is a popular machine learning method that trains computers to recognize and categorize images into labels. In this article, I'll demonstrate how you can build an image classification model with [Keras](https://keras.io).
+
+Then, I’ll compare how you can solve an image classification task with [Nyckel](https://www.nyckel.com/image-classification-api), a specialized AutoML platform that simplifies the ML development process.
 
 To compare Keras vs. Nyckel, I’ll work with a [publicly available dataset](https://www.kaggle.com/datasets/tongpython/cat-and-dog/data?select=training_set) that contains various cat and dog images. My goal is to train an image classifier using both ML services by leveraging the technique of transfer learning. With transfer learning, you can use pretrained models that have been extensively trained on large datasets, enabling you to fine-tune and adapt these models for a specific classification task without needing a significant amount of data.
 

@@ -1,20 +1,14 @@
 ---
 layout: post
 title: Customized Auto-Tagging for Digital Asset Management
-date: 2023-10-25
-author: george
-stage: false
-featured: true
-headliner: false
-summary: AI-driven auto-tagging of digital assets (like images) enables search,
-  discovery, and content-based workflows. Generic auto-tagging can be
-  frustrating because it doesn't handle the specific tags you are interested in.
-  Custom trained auto-tagging models can help, and these models can be trained
-  in minutes, with minimal data, and without any AI expertise.
 description: AI auto-tagging of digital assets enables search, discovery,
   and content-based workflows. Discover how custom models can be trained in
   minutes with no AI expertise.
 image: /blog/images/image-classification-examples-datasets-to-build-functions.webp
+date: 2023-10-25
+author: george
+stage: false
+headliner: false
 ---
 ## TL; DR:
 

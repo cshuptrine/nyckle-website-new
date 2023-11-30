@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What Is Image Recognition? (And How It Differs From Image Classification)
+title: "What Is Image Recognition? (And How Does It Differ From Image Classification?)"
 date: 2023-11-09
 author: george
 stage: false
