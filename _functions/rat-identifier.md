@@ -4,16 +4,16 @@ function: true
 live: true
 number: 100
 dataurl: https://www.nyckel.com
-model: Nyckel-created dataset
+model: Nyckel-created
 type: image
 image: /assets/images/functions/rat-identifier.webp
 name: rats
-samplecount: 405
-labelcount: 13
-labelsamples: Mouse, Rat, and 11 other labels
+samplecount: 1756
+labelcount: 14
+labelsamples: Mouse, Rat, and 12 other labels
 role: homeowner
 image-singular: rodent
-binary: a rat
+binary: a rat or not
 which: 
-functionid: gz6qoyfybvj2mbjd
+functionid: slxkv3n13p9v1yto
 ---
