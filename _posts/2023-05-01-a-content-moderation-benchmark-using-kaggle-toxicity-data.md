@@ -30,7 +30,7 @@ At Nyckel, we are in the business of providing ML models customized to your data
 
 ### Pre-trained ML moderators
 
-* [Detoxify](https://rapidapi.com/jing-is-coding-jing-is-coding-default/api/detoxify) is a freemium ML-based toxicity and profanity moderator available on RapidAPI, limited to 10,000 requests per month.
+* [Detoxify](https://github.com/unitaryai/detoxify) is a freemium ML-based toxicity and profanity moderator available on Github.
 * [Perspective API](https://perspectiveapi.com) is a free ML-based toxicity checker that runs on Google Cloud Console.
 
 ### Custom ML moderators

@@ -3,7 +3,7 @@ layout: function
 function: true
 live: true
 number: 6
-dataurl: https://datasets.stanford.edu/sentiment/index.html
+dataurl: https://snap.stanford.edu/data/
 image: /assets/images/functions/movie-reviews.webp
 name:  movie review sentiment
 model: Stanford Sentiment Treebank

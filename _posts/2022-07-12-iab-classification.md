@@ -26,7 +26,7 @@ use ML. When they do, they usually face a couple of challenges:
 
 ## The Solution
 
-We are going to use Nyckel's [text search](..{% post_url 2022-05-26-a-quick-look-at-text-search-functions %}) functionality to classify image and text data into IAB categories in just minutes. Text search works in the following way:
+We are going to use Nyckel's [text search](https://www.nyckel.com/blog/a-quick-look-at-text-search-functions/) functionality to classify image and text data into IAB categories in just minutes. Text search works in the following way:
 
 * You upload a set of test samples that form your "search set". In this case, we will use IAB categories as the search
 set.
@@ -59,9 +59,7 @@ embedding vectors in the search set that are closest to the embedding vector for
 
 ## Try it out
 
-You can create a [free Nyckel account](https://www.nyckel.com/console) and use [this text file](../data/IABTaxonomy.tsv) of IAB
-categories to create your own IAB classification function as shown in the demo above. The API tab on your function
-will show you how invoke your function using an API, but here is one example of getting the top 2 matching categories
+You can create a [free Nyckel account](https://www.nyckel.com/console) and use [this IAB pretrained function](https://www.nyckel.com/pretrained-models/iab-categories-identifier/) to create your own IAB classifier as shown in the demo above. The API tab on your function will show you how invoke your function using an API, but here is one example of getting the top 2 matching categories
 for an image:
 
 ```bash

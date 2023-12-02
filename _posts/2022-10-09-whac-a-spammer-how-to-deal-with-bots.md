@@ -46,7 +46,7 @@ In a variation on the honeypot, you can add a drop-down to your form with a ques
 
 Captchas are tests given to users to tell humans and bots apart. Whether it’s reading blurry or distorted characters from an image, or selecting all the images that contain boats, captchas have long been used to keep out bots.
 
-More recent, sophisticated captchas just have one question: “Are you a human?”  For example, the captchas from [Google](https://www.programmableweb.com/api/google-recaptcha) and [hCaptcha](https://www.hcaptcha.com/) perform a variety of checks, such as whether your browser has cookies that a human’s browser would have, and checking if you move your mouse in a human-like way.
+More recent, sophisticated captchas just have one question: “Are you a human?”  For example, the captchas from Google and hCaptcha perform a variety of checks, such as whether your browser has cookies that a human’s browser would have, and checking if you move your mouse in a human-like way.
 
 ## Verification
 
