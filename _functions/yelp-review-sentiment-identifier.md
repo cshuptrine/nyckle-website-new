@@ -14,6 +14,6 @@ type: text
 role: reviewer
 image-singular: 
 binary: 
-which: emotion
+which: star rating
 functionid: vr0ukqrr1yn2sbpi
 ---

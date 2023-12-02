@@ -3,6 +3,10 @@
   to = "/blog/" 
 
 [[redirects]]
+  from = "/contact-thankyou"
+  to = "/contact/thankyou/"   
+
+[[redirects]]
   from = "/custom-categorize-aerial-imagery-api"
   to = "/"   
 
@@ -12,15 +16,15 @@
 
 [[redirects]]
   from = "/text-classification-api"
-  to = "/products/text-classification-api/"  
+  to = "/products/text-classification/"  
 
 [[redirects]]
   from = "/computer-vision-api"
-  to = "/products/computer-vision-api/"      
+  to = "/products/computer-vision/"      
 
 [[redirects]]
   from = "/image-classification-api"
-  to = "/products/image-classification-api/"
+  to = "/products/image-classification/"
 
 [[redirects]]
   from = "/migrating-from-monkey-learn"
@@ -28,7 +32,11 @@
 
 [[redirects]]
   from = "/custom-content-moderation-api"
-  to = "/products/custom-content-moderation-api/"
+  to = "/products/content-moderation/"
+
+[[redirects]]
+  from = "/vertex-ai-alternative"
+  to = "/products/vertex-ai-alternatives/"  
 
 [[redirects]]
   from = "/ai-for-digital-asset-management"

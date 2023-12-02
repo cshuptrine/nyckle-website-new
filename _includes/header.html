@@ -15,7 +15,7 @@
                     </div>
                 </li>
                 <li class="nav-item d-none d-lg-block">
-                    <a href="https://www.nyckel.com/console/" class="nav-link" style="color:#0b2436; font-size:0.9em; margin-right:-5px; white-space: nowrap;">Log-in</a>
+                    <a href="https://www.nyckel.com/console/" class="nav-link log">Log-in</a>
                 </li>
               {% if page.leadform == null or page.leadform == '' %}
                 <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%">
@@ -33,7 +33,7 @@
                 <div class="spacemobile"></div>
                 <div class="spacemobile"></div>
                 {% for menu in site.data.nav.main_menu %}
-                    <li class="nav-item {% if menu.dropdown %}dropdown{% endif %}">
+                    <li class="nav-item {% if menu.hide %}hide-on-medium{% endif %} {% if menu.dropdown %}dropdown{% endif %}">
                         <a class="nav-link {% if menu.dropdown %}dropdown-toggle{% endif %}" href="{{ menu.url }}">
                             {{ menu.text }}
                         </a>

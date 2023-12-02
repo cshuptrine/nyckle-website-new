@@ -648,10 +648,10 @@ canvas {
     text-align: left;
 }
 .nav-fill>.nav-item {
-    text-align: center;
+    text-align: center
 }
 .navbar-nav .nav-link {
-    color: #0b2436;
+    color: #0b2436 !important;
 }
 .navbar-nav .nav-link,
 .dropdown-item,
@@ -817,6 +817,12 @@ acronym[title] {
     background: none !important;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
+}
+.log {
+    color: #0b2436 !important; 
+    font-size:0.9em !important; 
+    white-space: nowrap !important;
+    
 }
 /*-----------------------------------------------------------------------------------*/
 /*  05. MEGA MENU
@@ -1744,6 +1750,12 @@ footer.inverse-text address {
 /*-----------------------------------------------------------------------------------*/
 /*  64. RESPONSIVE
 /*-----------------------------------------------------------------------------------*/
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    .hide-on-medium {
+        display: none;
+    }
+}
 @media (min-width: 1280px) {
     .split-layout .content-wrapper {
         position: relative;
@@ -1863,14 +1875,8 @@ footer.inverse-text address {
     }
     @media (max-width: 1200px) {
     .navbar .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
-    }
-    }
-    @media (max-width: 1050px) {
-    .navbar .navbar-nav .nav-link {
-        padding-right: 0.3rem;
-        padding-left: 0.3rem;
+        padding-right: 0.6rem;
+        padding-left: 0.6rem;
     }
     }
     .dropdown-menu:not(.mega-menu):not(.image-dropdown) {

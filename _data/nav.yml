@@ -4,11 +4,11 @@ main_menu:
     url: "/how-nyckel-works/"
     dropdown:
       - text: "Image Classification"
-        url: "/products/image-classification-api/"
+        url: "/products/image-classification/"
         icon: "/assets/images/icons/nav/image.webp"
         subtext: "Auto-label images at scale"
       - text: "Text Classification"
-        url: "/products/text-classification-api/"
+        url: "/products/text-classification/"
         icon: "/assets/images/icons/nav/text.webp"
         subtext: "Auto-label text at scale"
       - text: "How Nyckel Works"
@@ -21,6 +21,7 @@ main_menu:
   
   - text: "Customers"
     url: "/customers/"
+    hide: true
     dropdown:
       - text: "Gardyn"
         url: "/blog/gardyn-reduces-workload-by-70-while-growing-2x-after-implementing-computer-vision/"
@@ -51,6 +52,7 @@ main_menu:
        
   - text: "About"
     url: "/about/"
+    hide: true
     dropdown:
       - text: "Our Story"
         url: "/about/"

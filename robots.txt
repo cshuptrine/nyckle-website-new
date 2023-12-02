@@ -1,4 +1,8 @@
 User-agent: *
 Disallow: /
+Disallow: /2021*
+Disallow: /2022*
+Disallow: /2023*
+Disallow: /2024*
 
 Sitemap: https://www.nyckel.com/sitemap.xml
