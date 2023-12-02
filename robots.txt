@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /
+Disallow:
 Disallow: /2021*
 Disallow: /2022*
 Disallow: /2023*

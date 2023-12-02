@@ -3592,12 +3592,12 @@ picture {
 }
 
 .hero-image {
-    width: 80%; /* or you can specify any width you want */
+    width: 90%; /* or you can specify any width you want */
     height: auto; /* keeps image aspect ratio */
     image-rendering: -webkit-optimize-contrast; /* try to make image crisper */
     box-shadow: 10px 10px 25px rgba(.1, .1, .1, .3) !important; /* Increased alpha value for darker shadow */
     box-sizing: border-box; /* Ensure padding is included in the width calculation */
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 .hero-blog {
@@ -3966,3 +3966,9 @@ picture {
     }
 }
 
+.underlined-text {
+    text-decoration: underline;
+    text-decoration-color: #e7a83d;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
