@@ -22,8 +22,6 @@ layout: default
           <div class="author-area">
             {% if author.image %}
             <img src="{{author.image}}" alt="mugshot" class="author-icon" />
-            {% elsif author.github %}
-            <img src="https://avatars.githubusercontent.com/{{author.github}}" alt="mugshot" class="author-icon" />
             {% endif %}
             <span class="author-name">{{ author.display_name }}</span>
           </div>
