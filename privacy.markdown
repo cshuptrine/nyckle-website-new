@@ -2,8 +2,6 @@
 layout: basic
 title:  "Nyckel's Privacy Policy"
 description: This page outlines Nyckel's Privacy Policy.
-fill: fill-light-wrapper
-nav: dark
 cta2: none
   
 ---

@@ -20,10 +20,9 @@
 
 {% if page.url contains '/blog/' %}
 {% include /cta/cta-blog.html %}
-{% elsif page.nocta %}
+{% elsif page.cta2 %}
 {% elsif page.url contains '/pretrained-models/' %}
 {% include /cta/cta-functions.html %}
-{% elsif page.cta2 %}
 {% else %}
 {% include /cta/cta.html %}
 {% endif %}
@@ -70,7 +69,7 @@
             }
         }
     };
-</script> -->
+</script>
 <!-- End Lazyloaded JavaScript Tags -->
 
 <!-- Lazyloaded CSS -->

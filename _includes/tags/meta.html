@@ -63,7 +63,7 @@
 <!--- LocalBusiness Schema -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Nyckel","image":"https://www.nyckel.com/assets/images/important/Nyckel-Logo-Color-350.png","url":"https://www.nyckel.com/","@id":"nyckel.com/#organization","telephone":"434-444-2268","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}}</script>
 
-{% if page.url contains '/blog/' %}
+{% if page.url contains '/blog/' and page.bloghome == nil %}
 <!--- Blog Meta -->
 <meta property="og:type" content="article"/>
 <meta property="article:author" content="{{page.author}}"/>

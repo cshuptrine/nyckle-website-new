@@ -13,8 +13,7 @@ cta: none
     {% assign post = post %}
     {% include summary-hero.html %}
     {% endfor %}
-
-    <h1 class="heading">Posts</h1>
+<div class="space50"></div>
     <div class="row">
         {% assign featured_posts = all_posts | where: "featured", true %}
         {% for post in featured_posts %}

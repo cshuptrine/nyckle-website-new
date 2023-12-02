@@ -2,6 +2,7 @@
 layout: post
 title: "PyTorch Image Classification: A Step-by-Step Guide (+ An Alternative Method)"
 date: 2023-11-17
+modified:
 author: becca
 stage: false
 featured: true
@@ -10,6 +11,8 @@ description: Learn how to build an image classification model with PyTorch
   and get introduced to Nyckel as an alternative. Identify the best fit for you
   based on your requirements and ML expertise.
 image: /blog/images/pytorch-image-classification3.webp
+alt: pytorch image classification
+
 ---
 *For this article, we hired [Becca Miller](https://www.linkedin.com/in/becca-miller-96a570b8/), a freelance software developer and technical writer, to walk through the PyTorch and Nyckel image classification processes. Becca details her experience with both ML services and shares how you can build the image classifier yourself with either option.*
 

@@ -8,8 +8,8 @@ layout: default
 
   
   <div class="hero hero2">
-    <div class="hero-contents hero-contents2 d-flex">
-      <div class="title-area d-flex flex-column justify-content-between">
+    <div class="hero-contents hero-contents2 d-flex" style="margin-left:-25px;">
+      <div class="title-area d-flex flex-column justify-content-between" style="padding-right:7%;padding-left:4%">
         
           <div class="spacemobile-s"></div>
           <h1 style="font-size: 0.6em;">{{ page.title }}</h1>
@@ -25,7 +25,7 @@ layout: default
             {% endif %}
             <span class="author-name">{{ author.display_name }}</span>
           </div>
-          <span class="date">
+          <span class="date" style="padding-right:5%">
             Posted {{ page.date | date: "%b %Y"}}
           </span>
         </div>
@@ -33,7 +33,7 @@ layout: default
       </div>
       {% if page.image %}
       <div class="image-area d-none d-lg-block">
-        <img class="hero-image hero-blog" src="{{ page.image }}" alt="{{ page.image_alt }}" />
+        <img class="hero-image hero-blog" src="{{ page.image }}" alt="{{ page.alt }}" />
       </div>
           {% else %}
       <div class="image-area d-none d-lg-block">

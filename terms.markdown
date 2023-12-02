@@ -2,8 +2,6 @@
 layout: basic
 title:  "Nyckel's Terms & Conditions"
 description: This page outlines Nyckel's Terms & Conditions.
-fill: fill-white-wrapper
-nav: dark
 cta2: none
   
 ---
