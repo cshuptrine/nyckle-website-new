@@ -2109,34 +2109,31 @@ footer.inverse-text address {
         display: none;
     }
     .offcanvas-nav {
+        position: fixed;
         top: 0;
         bottom: 0;
-        left: 0; /* updated */
-        width: 100%; /* updated */
+        right: 100%;
+        left: -300px;
+        width: 300px;
+        padding-right: 1.5rem;
         padding-left: 1.5rem;
-        padding-bottom: 5%;
+        padding-bottom: 0.5rem;
         overflow-y: auto;
         visibility: hidden;
-        background: #FFFFFF; /* updated */
-        align-items: start;
-        background-clip: padding-box;
-        border: 1px dashed #306FA2; /* added border */
-    }
+        background: #0b2436;
+        border: 1px dashed #FFFFFF;
 
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: start;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding;
+        background-clip: padding-box;
+    }
     .offcanvas-nav.open {
+        left: 0;
         visibility: visible;
     }
-
-    .offcanvas-nav .navbar-nav:first-child {
-        margin-top: -40px !important; /* Adjust or remove this margin */
-        /* other styles */
-    }
-
-    .navbar-nav .nav-link {
-        font-size: larger; /* updated - choose an appropriate size */
-        color: #0B2436; /* updated */
-    }
-
     .navbar.fixed .offcanvas-nav.open {
         display: none !important;
     }
