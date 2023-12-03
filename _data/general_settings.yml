@@ -14,6 +14,8 @@ favicon_2x: "/favicon.png"
 address_01: '01 Silver Terrace Waterville Maine'
 phone_number: "+01 (434) 444 2268"
 copyright_text: "© 2023 Nyckel"
+privacy: "/privacy/"
+terms: "/terms/"
 
 social_accounts:
   title: "Follow Us"

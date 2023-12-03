@@ -11,19 +11,22 @@ cta2: none
 
 ---
 
-<div class="wrapper gray-wrapper inner">
-    <div class="container" style="padding-top:2%">
-    <h1 class="display-2 text-center" style="color:#0b2436;margin-top:-8%">Nyckel's Pretrained Models
-</h1>
-    <p class="display-5 text-center" style="color:#0b2436">Explore pretrained models you can start using in just minutes</p>
+<div class="content-wrapper">
+    <div class="wrapper white-wrapper">
+        <div class="container inner side-padded">
+            <h1 class="display-2 text-center blue mtn8">Nyckel's Pretrained Models</h1>
+            <p class="display-5 text-center blue">Explore pretrained models you can start using in just minutes</p>
             <div class="posts">
-    <div class="row" style="margin-top:-75px">
-{% assign all_functions = site.functions | sort: 'number' %}
-{% for function in all_functions %}
-  {% if function.live %}
-  {% assign function = function %}
-  {% include summary-card-function.html %}
-    {% endif %}
-{% endfor %}
-
-  </div></div></div></div>
+                <div class="row" style="margin-top:-75px">
+                    {% assign all_functions = site.functions | sort: 'number' %}
+                    {% for function in all_functions %}
+                        {% if function.live %}
+                            {% assign function = function %}
+                            {% include summary-card-function.html %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

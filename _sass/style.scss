@@ -2514,6 +2514,7 @@ CUSTOM CSS ADDED BY NYCKEL
   justify-content: flex-start; /* Align to the start to manage spacing manually */
   margin-left: -15px; /* Negative margin to counteract the padding on each box */
   margin-right: -15px;
+  margin-bottom: -5%;
 }
 
 .case-study-box {
@@ -3791,11 +3792,10 @@ picture {
 .text-box {
     border: 2px dotted #306fa2;
     border-radius: 15px;
-    padding: 20px;
+    padding: 40px;
     color: #306fa2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Remove or adjust margin-top as needed */
-    margin-top: 0; /* Adjust or remove as per your design */
+    margin-top: -70px;
 }
 
 .content-wrapper2 {
@@ -3996,3 +3996,153 @@ picture {
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
 }
+
+.pricing-caveat {
+    text-align: center;
+    padding-left: 18%; 
+    padding-right: 18%;
+    margin-bottom: -5%;
+    text-decoration-color: #e7a83d;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.pricing-headers {
+    text-decoration: underline; 
+    text-decoration-color: #E96A57; 
+    text-decoration-thickness: 2px; 
+    text-underline-offset: 3px;
+}
+
+.blue {
+    color:#0b2436 !important;
+}
+
+.orange {
+    color:#e7a83d !important;
+}
+
+.light-blue {
+    color:#306fa2 !important;
+}
+
+.white {
+    color:#FFFFFF
+}
+
+.b-orange {
+    background-color:#e7a83d !important
+}
+
+.b-light-blue {
+    background-color:#306fa2 !important
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Padding/Margin Percentages
+/*-----------------------------------------------------------------------------------*/
+
+.top-container-margin {
+    margin-top:-3% !important; 
+    margin-bottom:-3% !important;
+}
+
+.top-container-padding {
+    padding-top:3% !important;
+    padding-bottom:3% !important;
+}
+
+.pl5 {
+    padding-left:5% !important;
+}
+
+.pl6 {
+    padding-left:6% !important;
+}
+
+.pl7 {
+    padding-left:7% !important;
+}
+
+.pl10 {
+    padding-left:10% !important;
+}
+
+.pr10 {
+    padding-right:10% !important;
+}
+
+.pl6 {
+    padding-left:6% !important;
+}
+
+.pr1 {
+    padding-right:1% !important;
+}
+
+.pr2 {
+    padding-right:2% !important;
+}
+
+.pr5 {
+    padding-right:5% !important;
+}
+
+.pr6 {
+    padding-right:6% !important;
+}
+
+.pt2 {
+    padding-top:2% !important;
+}
+
+.pt4 {
+    padding-top:4% !important;
+}
+
+.pb4 {
+    padding-bottom:4% !important;
+}
+
+.pb5 {
+    padding-bottom:5% !important;
+}
+
+.mtn3 {
+    margin-top: -3% !important;
+}
+
+.mtn6 {
+    margin-top: -6% !important;
+}
+
+.mtn8 {
+    margin-top: -8% !important;
+}
+
+.mtn9 {
+    margin-top: -9% !important;
+}
+
+.mtn10 {
+    margin-top: -10% !important;
+}
+
+.mbn5 {
+    margin-bottom:-5% !important;
+}
+
+.mbn8 {
+    margin-bottom:-8% !important;
+}
+
+.mb4 {
+    margin-bottom:4% !important;
+}
+
+.mln2 {
+    margin-left:-2% !important;
+}
+
+

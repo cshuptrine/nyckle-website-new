@@ -11,86 +11,64 @@ page_header:
   button_text: 
   button_url: "#"
   background_image: "/assets/images/important/home-bg.webp"
-
 contact_area:
   enable: true
-  title:
-  sub_title:
   action_email: "feedback@nyckel.com"
-  
   lists:
     - title: Dashboard review
       info_01: We'll show you how to get started
       icon: "icofont-check"
-
     - title: API integration
       info_01: Get a look at how the API works
       icon: "icofont-check"
-
     - title: Pricing overview
       info_01: Learn how costs scale with volume
       icon: "icofont-check"
-  
 ---
 
-<div class="wrapper gray-wrapper">
-  <div class="container inner">
+<div class="content-wrapper mt-0">
+    <div class="wrapper white-wrapper top-container-margin">
+        <div class="container inner">
+            <div class="space40"></div>
+            <h1 class="display-2 text-center blue mtn8">Want to chat?</h1>
+            <p class="display-5 text-center blue">We'd love to chat further about how we can help.</p>
 
-      <div class="space20"></div>
-    <h1 class="display-2 text-center" style="color:#0b2436;margin-top:-7%">Want to chat?
-</h1>
-    <p class="display-5 text-center" style="color:#0b2436">We'd love to chat further about how we can help.</p>
-</div></div>
+            <div class="space40"></div>
 
-
-
-
-{% if page.contact_area.enable %}
-<div class="wrapper light-wrapper" style="margin-top: -70px;padding-left:3%;padding-right:3%">
-    <div class="container inner" style="padding-left:5%;">
-        {% if page.contact_area.title %}
-          
-         <h2 class="section-title">{{page.contact_area.title}}</h2>
-        {% endif %}
-        {% if page.contact_area.sub_title %}
-         <p class="lead larger">{{page.contact_area.sub_title}}</p>
-        {% endif %}
-        <div class="space10"></div>
-        <div class="row" style="margin-top:-40px">
-          <div class="col-lg-7">
-                      <!-- <h2 class="section-title" style="text-align: center;">Get the mini-report for free</h2>
-                       <div class="space10"></div>-->
-
-            <!-- HubSpot Form will be inserted here -->
-            <div style="padding-left:10%"><div id="hubspot-form"></div></div>
-            
-          </div>
-          <!--/column -->
-          <div class="space30 d-none d-md-block d-lg-none"></div>
-          <div class="col-lg-4 offset-lg-1" style="padding-top:2%;margin-left:30px;">
-            {% for lists in page.contact_area.lists %}
-            <div class="d-flex flex-row">
-              <div>
-                <div class="icon fs-34 mr-25" style="color: #306fa2;"> <i class="{{lists.icon}}"></i> </div>
-              </div>
-              <div>
-                <h3 class="mb-5">{{lists.title}}</h3>
-                <address>{{lists.info_01}} 
-                  {% if lists.info_02 %}
-                  <br class="d-none d-md-block" />
-                  {{lists.info_02}}
-                 {% endif %}
-                </address>
-              </div>
+            <div class="container side-padded">
+                <div class="row"></div>
             </div>
-              {% endfor %}
-          </div>
-          <!--/column -->
+
+            <div class="row">
+                <div class="col-lg-7 pl6">
+                    <div class="pl10"><div id="hubspot-form"></div></div>
+                </div>
+                <!-- /column -->
+                {% if page.contact_area.enable %}
+                    <div class="space30 d-none d-md-block d-lg-none"></div>
+                    <div class="col-lg-4 offset-lg-1" style="padding-top:2%;margin-left:30px;">
+                        {% for lists in page.contact_area.lists %}
+                            <div class="d-flex flex-row">
+                                <div>
+                                    <div class="icon fs-34 mr-25" style="color: #306fa2;"> <i class="{{lists.icon}}"></i> </div>
+                                </div>
+                                <div>
+                                    <h3 class="mb-5">{{lists.title}}</h3>
+                                    <address>{{lists.info_01}}
+                                        {% if lists.info_02 %}
+                                            <br class="d-none d-md-block" />
+                                            {{lists.info_02}}
+                                        {% endif %}
+                                    </address>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
         </div>
-        <!--/.row -->
     </div>
 </div>
-  {% endif %}
 
 <!-- Load the HubSpot Forms Embed Code -->
 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
@@ -102,8 +80,7 @@ contact_area:
     target: "#hubspot-form"
   });
 </script>
-<!--end HS code -->
-
+<!-- End HS code -->
 
 <link rel="stylesheet" href="{{ '/assets/css/lazy/style-lazy.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/lazy/layers.css' | relative_url }}">

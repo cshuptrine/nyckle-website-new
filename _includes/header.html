@@ -3,7 +3,7 @@
         <div class="navbar-brand">
             <a href="/">
                 <img src="/assets/images/important/Nyckel-Logo-Color-350.webp"
-                     class="{% if include.logo_class %} {{ include.logo_class }} {% else %} logo-dark {% endif %} {% if include.black_logo_disable %} d-none {% endif %}"
+                     class="logo-dark"
                      alt="Nyckel logo" width="180" height="27"/>
             </a>
         </div>
@@ -18,13 +18,13 @@
                     <a href="https://www.nyckel.com/console/" class="nav-link log">Log-in</a>
                 </li>
               {% if page.leadform == null or page.leadform == '' %}
-                <li class="nav-item d-none d-lg-block pl-0" style="padding-right:2%">
-                    <a href="/contact/" class="btn m-0" style="background-color:#306fa2;">Get a Demo</a>
+                <li class="nav-item d-none d-lg-block pl-0 pr2">
+                    <a href="/contact/" class="btn m-0 b-light-blue">Get a Demo</a>
                 </li>
                 {% else %}
                 {% endif %}
                 <li class="nav-item d-none d-lg-block pl-0">
-                    <a href="https://www.nyckel.com/console" class="btn m-0" style="background-color:#e7a83d">Test for Free</a>
+                    <a href="https://www.nyckel.com/console" class="btn m-0 b-orange">Test for Free</a>
                 </li>
             </ul>
         </div>

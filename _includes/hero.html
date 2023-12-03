@@ -1,33 +1,28 @@
-
 <div class="content-wrapper mt-0">
-    <div class="wrapper white-wrapper" style="margin-top:-3%;">
-      <div class="container inner" style="padding-left:7%;margin-bottom:4%">
-        <div class="two-column-one" style="margin-top:-6%">
-          <div class="row align-items-center">
-            <div class="col-lg-5" style="margin-top:-30px">
-              <div class="space50"></div>
- <h1 class="display-custom">
-  <div style="color:#0b2436;font-size:50px">{{ page.header1 }}<span style="color: #306fa2;"> {{ page.header2 }}</span></div>
-</h1>
-
-
-   
-              <h2 class="display-4" style="color:#0b2436">{{ page.header3 }}</h2>
-                  <div class="space20"></div>
-
-        {% include /cta-buttons.html %}
+    <div class="wrapper white-wrapper mtn3">
+        <div class="container inner pl6 mb4">
+            <div class="two-column-one mtn6">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 mtn3">
+                        <div class="space50"></div>
+                        <h1 class="display-custom">
+                            <div class="blue header-text">
+                                {{ page.header1 }}
+                                <span class="light-blue">{{ page.header2 }}</span>
+                            </div>
+                        </h1>
+                        <h2 class="display-4 blue">{{ page.header3 }}</h2>
+                        <div class="space20"></div>
+                        {% include /cta-buttons.html %}
+                    </div>
+                    <div class="col-lg-7 pl-60 d-none d-lg-block pt2 mln2">
+                        <figure>
+                            <img class="hero-image" src="{{ page.image1 }}" alt="{{ page.alt1 }}"/>
+                        </figure>
+                    </div>
+                </div>
             </div>
-
-<div class="col-lg-7 pl-60 d-none d-lg-block" style="padding-top:2%;margin-left:-10px;">
-    <figure>
-        <img class="hero-image" src="{{ page.image1 }}" alt="{{ page.alt1 }}"/>
-    </figure>
-</div>
-
-          </div>
         </div>
-      </div>
-        <div class="divider" style="margin-top: -110px"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper" preserveAspectRatio="none" viewBox="0 0 1070 20.98">
-      <path d="M0,0V21H1070V0A6830.24,6830.24,0,0,1,0,0Z" /></svg></div>
+        {% include /divider.html %}
     </div>
 </div>
