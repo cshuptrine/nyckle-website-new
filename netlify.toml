@@ -28,7 +28,7 @@
 
 [[redirects]]
   from = "/migrating-from-monkey-learn"
-  to = "/alternatives/monkeylearn-alternatives/"
+  to = "/alternatives/monkeylearn/"
 
 [[redirects]]
   from = "/custom-content-moderation-api"
@@ -36,7 +36,7 @@
 
 [[redirects]]
   from = "/vertex-ai-alternative"
-  to = "/alternatives/vertex-ai-alternatives/"  
+  to = "/alternatives/vertex-ai/"  
 
 [[redirects]]
   from = "/ai-for-digital-asset-management"

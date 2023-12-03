@@ -59,7 +59,7 @@ layout: default
 
         <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">This pretrained {{ page.type}} model uses the {% if page.dataurl %}<a href="{{ page.dataurl }}">{% else %}{% endif %}{{ page.model }} dataset{% if page.dataurl %}</a>{% else %}{% endif %} and is built with <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.samplecount }} samples</span> across <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.labelcount }} labels</span>, including <span style="text-decoration: underline; text-decoration-color: #e7a83d; text-decoration-thickness: 2px; text-underline-offset: 3px;">{{ page.labelsamples }}</span>.</p>
           <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">We'll also show a confidence score (the higher the number, the more confident we are {% if page.binary %}that it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {% if page.image-singular %}{{ page.image-singular }}{% else %}{% endif %} it is{% endif %}).</p>        
-            <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436"><b>Whether you’re a curious {% if page.role %}{{ page.role }}{% else %}hobbyist{% endif %} or building {% if page.which %}{{ page.which}}{% else %}{{ page.name }}{% endif %} detection into your application, we hope our tool proves helpful.</b></p>
+            <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436"><b>Whether you’re a tech-minded {% if page.role %}{{ page.role }}{% else %}hobbyist{% endif %}, just curious, or building {% if page.image-singular %}{{ page.image-singular}}{% elsif page.binary %}{{ page.binary}}{% elsif page.which %}{{ page.which}}{% else %}{{ page.name }}{% endif %} detection into your application, we hope our tool proves helpful.</b></p>
 </div></div>
 
 <div class="content-wrapper">
@@ -69,7 +69,7 @@ layout: default
         <div class="spacemobile"></div>
      Want API access to this {{ page.name }} model?</span>
       </h2>
-            <p class="display-4 text-center" style="padding-left:12%;padding-right:12%">Nyckel's {{ page.name}} API is perfect for a tech-minded {% if page.role %}{{ page.role }}{% else %}hobbyist{% endif %} or a business looking to integrate a pretrained {{ page.name}} model.</p>
+            <p class="display-4 text-center" style="padding-left:12%;padding-right:12%">Nyckel's {{ page.name}} API is perfect for a tech-savvy {% if page.role %}{{ page.role }}{% else %}hobbyist{% endif %} or a business looking to integrate a pretrained {{ page.name}} model.</p>
       <div class="space40"></div>
       <div class="row align-items-center">
         <div class="col-lg-6 pl-60 pl-sm-15 d-none d-lg-block" style="padding-right:1%;padding-left:6%">
