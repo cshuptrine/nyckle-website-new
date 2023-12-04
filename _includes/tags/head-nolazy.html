@@ -1,0 +1,89 @@
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KNG7GRG');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/24298198.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var gtmLoaded = false;
+    var hubSpotLoaded = false;
+    var iframeLoaded = false;
+
+    // Function to load GTM
+    function loadGTM() {
+      if (gtmLoaded) return;
+      gtmLoaded = true;
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-WXH98NF7');
+    }
+
+    // Function to load HubSpot
+    function loadHubSpot() {
+      if (hubSpotLoaded) return;
+      hubSpotLoaded = true;
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.id = 'hs-script-loader';
+      script.async = true;
+      script.defer = true;
+      script.src = '//js.hs-scripts.com/24298198.js';
+      document.body.appendChild(script);
+    }
+
+    // Function to lazy load Hero Image for mobile
+    function lazyLoadHeroImage() {
+      var image = document.querySelector('.hero-image');
+      var mobileBreakpoint = 768;
+      if (image && window.innerWidth <= mobileBreakpoint) {
+        image.setAttribute('loading', 'lazy');
+      }
+    }
+
+    // Function to load iFrame
+    function loadIframe() {
+      var iframe = document.querySelector('iframe[data-src]');
+      if (!iframe || iframeLoaded) return;
+      var rect = iframe.getBoundingClientRect();
+      var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      var windowWidth = window.innerWidth || document.documentElement.clientWidth;
+      if (rect.top <= windowHeight && rect.left <= windowWidth && rect.bottom >= 0 && rect.right >= 0) {
+        iframe.src = iframe.getAttribute('data-src');
+        iframeLoaded = true;
+      }
+    }
+
+    // Unified scroll event listener
+    function onScrollHandler() {
+      loadGTM();
+      loadHubSpot();
+      loadIframe();
+
+      // If all are loaded, remove the event listener
+      if (gtmLoaded && hubSpotLoaded && iframeLoaded) {
+        window.removeEventListener('scroll', onScrollHandler);
+      }
+    }
+
+    window.addEventListener('scroll', onScrollHandler);
+
+    // Initial checks
+    lazyLoadHeroImage();
+    loadIframe(); // for iFrame already in viewport
+  });
+</script>

@@ -3,7 +3,11 @@
 
 <head>
 {% include /tags/meta.html %}
+{% if page.nolazy %}
+{% include /tags/head-nolazy.html %}
+{% else %}
 {% include /tags/head.html %}
+{% endif %}
 
 <!--SCSS -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">

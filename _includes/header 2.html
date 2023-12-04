@@ -1,0 +1,69 @@
+<nav class="navbar absolute nav-uppercase navbar-hover-opacity navbar-expand-lg nav-padding">
+    <div class="container flex-row justify-content-center">
+        <div class="navbar-brand">
+            <a href="/">
+                <img src="/assets/images/logos/nyckel2.png"
+                     class="logo-dark"
+                     alt="Nyckel logo" width="180" height="27"/>
+            </a>
+        </div>
+        <div class="navbar-other ml-auto order-lg-3">
+            <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+                <li class="nav-item">
+                    <div class="navbar-hamburger d-lg-none d-xl-none ml-auto">
+                        <button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button>
+                    </div>
+                </li>
+                <li class="nav-item d-none d-lg-block">
+                    <a href="https://www.nyckel.com/console/" class="nav-link log">Log-in</a>
+                </li>
+              {% if page.leadform == null or page.leadform == '' %}
+                <li class="nav-item d-none d-lg-block pl-0 pr2">
+                    <a href="/contact/" class="btn m-0 b-light-blue">Get a Demo</a>
+                </li>
+                {% else %}
+                {% endif %}
+                <li class="nav-item d-none d-lg-block pl-0">
+                    <a href="https://www.nyckel.com/console" class="btn m-0 b-orange">Test for Free</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse offcanvas-nav">
+            <ul class="navbar-nav mx-auto">
+                <div class="spacemobile"></div>
+                <div class="spacemobile"></div>
+                {% for menu in site.data.nav.main_menu %}
+                    <li class="nav-item {% if menu.hide %}hide-on-medium{% endif %} {% if menu.dropdown %}dropdown{% endif %}">
+                        <a class="nav-link {% if menu.dropdown %}dropdown-toggle{% endif %}" href="{{ menu.url }}">
+                            {{ menu.text }}
+                        </a>
+                        {% if menu.dropdown %}
+                            <ul class="dropdown-menu">
+                                {% for dropdown_item in menu.dropdown %}
+                                    <a class="dropdown-item" href="{{ dropdown_item.url }}">
+                                        {% if dropdown_item.icon %}
+                                            <img loading="lazy" src="{{ dropdown_item.icon }}" alt="{{ dropdown_item.text }} Icon" class="{{ dropdown_item.logo ? 'logo-image' : '' }}">
+                                        {% endif %}
+                                        <span class="dropdown-item-content">
+                                            <span class="dropdown-item-header">{{ dropdown_item.text }}</span>
+                                            <span class="dropdown-item-subtext">{{ dropdown_item.subtext }}</span>
+                                        </span>
+                                    </a>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                <li class="nav-item d-lg-none">
+                    <a href="https://www.nyckel.com/console/" class="nav-link">Sign-Up</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                    <a href="https://www.nyckel.com/console/" class="nav-link">Log-In</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                    <a href="/contact/" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
