@@ -18,3 +18,55 @@ noindex: true
 </div>
 <div class="space20"></div>
 {% include /stories.html %}
+
+<script>
+(function() {
+    // Check if the tag has already run
+    if (!localStorage.getItem('myUniqueTagFired')) {
+        // Function to get the hutk cookie
+        function getCookie(name) {
+            var cookieArr = document.cookie.split(";");
+            for(var i = 0; i < cookieArr.length; i++) {
+                var cookiePair = cookieArr[i].split("=");
+                if(name == cookiePair[0].trim()) {
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+            return null;
+        }
+
+        var hutk = getCookie('hubspotutk');
+
+        // HubSpot API URL
+        var hubspotApiUrl = 'https://api.hsforms.com/submissions/v3/integration/submit/24298198/12d8e844-8a19-4d02-982e-d61a7f66804f';
+
+        // Form data
+        var formData = {
+            "fields": [
+                {
+                    "name": "email",
+                    "value": "chris@nyckel.com"
+                }
+            ],
+            "context": {
+                "hutk": hutk,
+                "pageUri": window.location.href,
+                "pageName": document.title
+            }
+        };
+
+        // Making the POST request to HubSpot
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", hubspotApiUrl, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify(formData));
+
+        xhr.onload = function() {
+            console.log(this.responseText);
+        };
+
+        // Set the local storage item so this script doesn't run again
+        localStorage.setItem('myUniqueTagFired', 'true');
+    }
+})();
+</script>
