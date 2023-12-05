@@ -34,7 +34,6 @@ noindex: true
     }
 
     var hutk = getCookie('hubspotutk');
-    console.log('hutk:', hutk); // Log the hutk value to the console
 
     // HubSpot API URL
     var hubspotApiUrl = 'https://api.hsforms.com/submissions/v3/integration/submit/24298198/12d8e844-8a19-4d02-982e-d61a7f66804f';
@@ -49,8 +48,6 @@ noindex: true
         ],
         "context": {
             "hutk": hutk,
-            "pageUri": window.location.href,
-            "pageName": document.title
         }
     };
 
@@ -61,7 +58,8 @@ noindex: true
     xhr.send(JSON.stringify(formData));
 
     xhr.onload = function() {
-        console.log('Response:', this.responseText);
+        // Log both the response and the hutk value
+        console.log('hutk:', hutk, 'Response:', this.responseText);
     };
 })();
 </script>
