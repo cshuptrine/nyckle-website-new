@@ -8,13 +8,13 @@ model: Nyckel-created
 type: image
 image: /assets/images/functions/herbs-identifier.webp
 name: herbs
-samplecount: 19
+samplecount: 14
 labelcount: 2
 labelsamples: Angelica vs Anise
 role: gardener
 image-singular: herb
 binary: 
 which: 
-functionid: 676db5rewkp1deao
+functionid: ihtqkl1lmzzzliet
 basic: 
 ---
