@@ -2,7 +2,7 @@
 layout: function
 function: true
 live: true
-number: 100
+number: 5
 dataurl: https://www.nyckel.com
 model: Nyckel-created
 type: image
@@ -15,5 +15,5 @@ role: advertiser
 image-singular: ad
 binary: an ad or not
 which: 
-functionid: m71fwyh9ja8gkubw
+functionid: iz3j5sc4tgkouhqb
 ---
