@@ -56,155 +56,155 @@
 
 [[redirects]]
   from = "/public-functions"
-  to = "/pretrained-models/"      
+  to = "/pretrained-classifiers/"      
 
 [[redirects]]
   from = "/public-functions/fake-or-real-image-classifier"
-  to = "/pretrained-models/AI-images-identifier/"
+  to = "/pretrained-classifiers/AI-images-identifier/"
 
 [[redirects]]
   from = "/public-functions/art-genres-image-classifier"
-  to = "/pretrained-models/art-genres-identifier/"
+  to = "/pretrained-classifiers/art-genres-identifier/"
 
 [[redirects]]
   from = "/public-functions/art-styles-image-classifier"
-  to = "/pretrained-models/art-styles-identifier/"
+  to = "/pretrained-classifiers/art-styles-identifier/"
 
 [[redirects]]
   from = "/public-functions/artists-image-classifier"
-  to = "/pretrained-models/artists-identifier/"
+  to = "/pretrained-classifiers/artists-identifier/"
 
 [[redirects]]
   from = "/public-functions/banking-customer-queries-text-classifier"
-  to = "/pretrained-models/banking-support-issues/"
+  to = "/pretrained-classifiers/banking-support-issues/"
 
 [[redirects]]
   from = "/public-functions/bean-plant-diseases-image-classifier"
-  to = "/pretrained-models/bean-plant-diseases-identifier/"
+  to = "/pretrained-classifiers/bean-plant-diseases-identifier/"
 
 [[redirects]]
   from = "/public-functions/clickbaity-headlines-text-classifier"
-  to = "/pretrained-models/clickbait-identifier/"
+  to = "/pretrained-classifiers/clickbait-identifier/"
 
 [[redirects]]
   from = "/public-functions/countries-image-classifier"
-  to = "/pretrained-models/countries-identifier/"
+  to = "/pretrained-classifiers/countries-identifier/"
 
 [[redirects]]
   from = "/public-functions/defective-tires-image-classifier"
-  to = "/pretrained-models/defective-tires-identifier/"
+  to = "/pretrained-classifiers/defective-tires-identifier/"
 
 [[redirects]]
   from = "/public-functions/document-types-image-classifier"
-  to = "/pretrained-models/document-types-identifier/"
+  to = "/pretrained-classifiers/document-types-identifier/"
 
 [[redirects]]
   from = "/public-functions/dog-emotions-image-classifier"
-  to = "/pretrained-models/dog-emotions-identifier/"
+  to = "/pretrained-classifiers/dog-emotions-identifier/"
 
 [[redirects]]
   from = "/public-functions/tweet-emotions-text-classifier"
-  to = "/pretrained-models/emojies-based-on-text-identifier/"
+  to = "/pretrained-classifiers/emojies-based-on-text-identifier/"
 
 [[redirects]]
   from = "/public-functions/fast-foods-image-classifier"
-  to = "/pretrained-models/fast-food-identifier/"
+  to = "/pretrained-classifiers/fast-food-identifier/"
 
 [[redirects]]
   from = "/public-functions/flowers-image-classifier"
-  to = "/pretrained-models/flowers-identifier/"
+  to = "/pretrained-classifiers/flowers-identifier/"
 
 [[redirects]]
   from = "/public-functions/gendered-faces-image-classifier"
-  to = "/pretrained-models/gender-image-identifier/"
+  to = "/pretrained-classifiers/gender-image-identifier/"
 
 [[redirects]]
   from = "/public-functions/gendered-blog-posts-text-classifier"
-  to = "/pretrained-models/gender-text-identifier/"
+  to = "/pretrained-classifiers/gender-text-identifier/"
 
 [[redirects]]
   from = "/public-functions/correct-english-sentences-text-classifier"
-  to = "/pretrained-models/grammar-identifier/"
+  to = "/pretrained-classifiers/grammar-identifier/"
 
 [[redirects]]
   from = "/public-functions/human-actions-image-classifier"
-  to = "/pretrained-models/human-actions-identifier/"
+  to = "/pretrained-classifiers/human-actions-identifier/"
 
 [[redirects]]
   from = "/public-functions/human-face-emotions-image-classifier"
-  to = "/pretrained-models/human-emotions-identifier/"
+  to = "/pretrained-classifiers/human-emotions-identifier/"
 
 [[redirects]]
   from = "/public-functions/iab-categorized-news-text-classifier"
-  to = "/pretrained-models/IAB-categories-identifier/"
+  to = "/pretrained-classifiers/IAB-categories-identifier/"
 
 [[redirects]]
   from = "/public-functions/machine-parts-image-classifier"
-  to = "/pretrained-models/machine-parts-identifier/"
+  to = "/pretrained-classifiers/machine-parts-identifier/"
 
 [[redirects]]
   from = "/public-functions/materials-image-classifier"
-  to = "/pretrained-models/materials-identifier/"
+  to = "/pretrained-classifiers/materials-identifier/"
 
 [[redirects]]
   from = "/public-functions/meals-image-classifier"
-  to = "/pretrained-models/meals-identifier/"
+  to = "/pretrained-classifiers/meals-identifier/"
 
 [[redirects]]
   from = "/public-functions/memes-image-classifier"
-  to = "/pretrained-models/memes-identifier/"
+  to = "/pretrained-classifiers/memes-identifier/"
 
 [[redirects]]
   from = "/public-functions/movie-review-sentences-text-classifier"
-  to = "/pretrained-models/movie-review-sentiment-identifier/"
+  to = "/pretrained-classifiers/movie-review-sentiment-identifier/"
 
 [[redirects]]
   from = "/public-functions/offensive-tweets-text-classifier"
-  to = "/pretrained-models/offensive-tweets-identifier/"
+  to = "/pretrained-classifiers/offensive-tweets-identifier/"
 
 [[redirects]]
   from = "/public-functions/pet-breeds-image-classifier"
-  to = "/pretrained-models/pet-breeds-identifier/"
+  to = "/pretrained-classifiers/pet-breeds-identifier/"
 
 [[redirects]]
   from = "/public-functions/pokemon-characters-image-classifier"
-  to = "/pretrained-models/pokemon-cards-identifier/"
+  to = "/pretrained-classifiers/pokemon-cards-identifier/"
 
 [[redirects]]
   from = "/public-functions/rice-grains-image-classifier"
-  to = "/pretrained-models/rice-grains-identifier/"
+  to = "/pretrained-classifiers/rice-grains-identifier/"
 
 [[redirects]]
   from = "/public-functions/sms-emotions-text-classifier"
-  to = "/pretrained-models/SMS-sentiment-identifier/"
+  to = "/pretrained-classifiers/SMS-sentiment-identifier/"
 
 [[redirects]]
   from = "/public-functions/spammy-emails-text-classifier"
-  to = "/pretrained-models/spam-email-identifier/"
+  to = "/pretrained-classifiers/spam-email-identifier/"
 
 [[redirects]]
   from = "/public-functions/strawberry-plant-diseases-image-classifier"
-  to = "/pretrained-models/strawberry-plant-disease-identifier/"
+  to = "/pretrained-classifiers/strawberry-plant-disease-identifier/"
 
 [[redirects]]
   from = "/public-functions/tweet-emoji-reactions-text-classifier"
-  to = "/pretrained-models/tweet-emotions-identifier/"
+  to = "/pretrained-classifiers/tweet-emotions-identifier/"
 
 [[redirects]]
   from = "/public-functions/tweet-sentiments-text-classifier"
-  to = "/pretrained-models/tweet-sentiments-identifier/"
+  to = "/pretrained-classifiers/tweet-sentiments-identifier/"
 
 [[redirects]]
   from = "/public-functions/vegetables-image-classifier"
-  to = "/pretrained-models/vegetables-identifier/"
+  to = "/pretrained-classifiers/vegetables-identifier/"
 
 [[redirects]]
   from = "/public-functions/vehicle-models-image-classifier"
-  to = "/pretrained-models/vehicle-models-identifier/"
+  to = "/pretrained-classifiers/vehicle-models-identifier/"
 
 [[redirects]]
   from = "/public-functions/yelp-reviews-text-classifier"
-  to = "/pretrained-models/yelp-review-sentiment-identifier/"
+  to = "/pretrained-classifiers/yelp-review-sentiment-identifier/"
 
 [[redirects]]
   from = "/public-functions/sms-spam-text-classifier"

@@ -20,7 +20,7 @@ collections:
     permalink: /blog/:title/
   functions:
     output: true
-    permalink: /pretrained-models/:title/      
+    permalink: /pretrained-classifiers/:title/      
     
 defaults:
   - scope:
