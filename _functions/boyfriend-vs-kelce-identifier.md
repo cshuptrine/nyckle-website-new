@@ -8,13 +8,13 @@ model: Nyckel-created
 type: image
 image: /assets/images/functions/boyfriend-vs-kelce-identifier.webp
 name: whether your boyfriend is cuter than Travis Kelce
-samplecount: 1243
-labelcount: 5
-labelsamples: Yes vs No
+samplecount: 14
+labelcount: 1
+labelsamples: Not enough labels
 role: lover
 image-singular: boyfriend's
 binary: Kelce-level or not
 which: 
-functionid: e8dbz5rycwzuu6nn
-basic: true
+functionid: g80jkw0o9x9yb2t3
+basic: TRUE
 ---
