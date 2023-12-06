@@ -8,7 +8,11 @@
 
 [[redirects]]
   from = "/custom-categorize-aerial-imagery-api"
-  to = "/"   
+  to = "/" 
+
+[[redirects]]
+  from = "/pretrained-models"
+  to = "/pretrained-classifiers"     
 
 [[redirects]]
   from = "/machine-learning-functions-as-a-service"

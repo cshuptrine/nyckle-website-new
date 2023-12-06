@@ -25,7 +25,7 @@
 {% if page.url contains '/blog/' %}
 {% include /cta/cta-blog.html %}
 {% elsif page.cta2 %}
-{% elsif page.url contains '/pretrained-models/' %}
+{% elsif page.url contains '/pretrained-classifiers/' %}
 {% include /cta/cta-functions.html %}
 {% else %}
 {% include /cta/cta.html %}
@@ -41,12 +41,12 @@
 <script src="{{relative_url}}/assets/js/scripts.js"></script>
 <!-- End Above-the-fold JS tags -->
 
-<!-- Pre Trained Models Invoke JS -->
+<!-- Pre Trained Classifiers Invoke JS -->
 {% assign url_segments = page.url | split: '/' %}
-{% if url_segments contains 'pretrained-models' %}
+{% if url_segments contains 'pretrained-classifiers' %}
 <script src="{{relative_url}}/assets/js/invoke.js"></script>
 {% endif %}
-<!-- End Pre Trained Models Invoke JS -->
+<!-- End Pre Trained Classifiers Invoke JS -->
 
 <!-- Lazyloaded JavaScript Tags -->
 <script>

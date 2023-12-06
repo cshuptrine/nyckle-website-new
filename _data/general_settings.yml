@@ -37,8 +37,8 @@ external_links:
   links:
     - url: "/pricing/"
       text: "Pricing"
-    - url: "/pretrained-models/"
-      text: "Pretrained Models"  
+    - url: "/pretrained-classifiers/"
+      text: "Pretrained Classifiers"  
     - url: "/customers/"
       text: "Customers"    
 
