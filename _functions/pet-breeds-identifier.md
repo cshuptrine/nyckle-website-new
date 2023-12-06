@@ -2,7 +2,7 @@
 layout: function
 live: true
 function: true
-number: 70
+number: 9
 name: pet breeds
 image: /assets/images/functions/pet-breeds.webp
 dataurl: https://www.robots.ox.ac.uk/~vgg/data/pets/

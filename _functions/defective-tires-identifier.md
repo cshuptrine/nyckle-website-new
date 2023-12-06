@@ -2,7 +2,7 @@
 layout: function
 function: true
 live: true
-number: 4
+number: 40
 dataurl: https://www.kaggle.com/datasets/warcoder/tyre-quality-classification
 image: /assets/images/functions/defective-tires-identifier.webp
 name: defective tires

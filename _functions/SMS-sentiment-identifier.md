@@ -2,7 +2,7 @@
 layout: function
 live: true
 function: true
-number: 24
+number: 9
 name: SMS sentiment
 image: /assets/images/functions/sentiment.webp
 dataurl: https://www.aclweb.org/anthology/S19-2005/

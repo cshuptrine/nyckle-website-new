@@ -2,7 +2,7 @@
 layout: function
 live: true
 function: true
-number: 16
+number: 9
 name: Tweet sentiment
 image: /assets/images/functions/twitter.webp
 dataurl: https://github.com/cardiffnlp/tweeteval

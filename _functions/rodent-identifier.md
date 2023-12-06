@@ -2,7 +2,7 @@
 layout: function
 function: true
 live: true
-number: 50
+number: 8
 dataurl: https://www.nyckel.com
 model: Nyckel-created
 type: image

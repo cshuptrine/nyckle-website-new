@@ -2,7 +2,7 @@
 layout: function
 live: true
 function: true
-number: 38
+number: 13
 name: human emotions
 image: /assets/images/functions/human-face-emotions-identifier.webp
 dataurl: https://huggingface.co/datasets/FastJobs/Visual_Emotional_Analysis
