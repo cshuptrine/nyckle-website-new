@@ -19,7 +19,7 @@ layout: default
               <div class="space10"></div>
 
  
-             <p class="display-4" style="color:#0b2436">Below is a free tool to identify {{ page.name }}. {% if page.type == "image" %}Just upload your image{% else%}Just input your text{% endif %}, and our AI will classify {% if page.binary %}if it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {% if page.image-singular %}{{ page.image-singular }}{% else %}{% endif %} it is{% endif %} - in just seconds.</p>
+             <p class="display-4" style="color:#0b2436">Below is a free tool to identify {{ page.name }}. {% if page.type == "image" %}Just upload your image{% else%}Just input your text{% endif %}, and our AI will predict {% if page.binary %}if it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {% if page.image-singular %}{{ page.image-singular }}{% else %}{% endif %} it is{% endif %} - in just seconds.</p>
       
             
      
@@ -55,7 +55,7 @@ layout: default
      How this {% if page.basic %}{% else %}{{ page.name}}{% endif %} classifier works</h2>
      <div class="space20"></div>
 
-    <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">{% if page.type == "image" %}To start, drag and drop (or import) your {{ page.image-singular }} image{% else %}To start, input the text that you'd like analyzed{% endif %}. Our AI tool will then tell you {% if page.binary %}if it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {% if page.image-singular %}{{ page.image-singular }}{% else %}{% endif %} it is{% endif %}.</p>
+    <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">{% if page.type == "image" %}To start, drag and drop (or import) your {{ page.image-singular }} image{% else %}To start, input the text that you'd like analyzed{% endif %}. Our AI tool will then predict {% if page.binary %}if it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {% if page.image-singular %}{{ page.image-singular }}{% else %}{% endif %} it is{% endif %}.</p>
 
         <p class="display-4" style="text-align:left;padding-left:10%;padding-right:10%;color:#0b2436">This pretrained {{ page.type}} model uses the {% if page.dataurl %}<a href="{{ page.dataurl }}">{% else %}{% endif %}{{ page.model }} dataset{% if page.dataurl %}</a>{% else %}{% endif %} and is built with <span class="underlined-text">{{ page.samplecount }} samples</span> across <span class="underlined-text">{{ page.labelcount }} labels</span>, including <span class="underlined-text">{{ page.labelsamples }}</span>.</p>
           <p class="display-4 blue" style="text-align:left;padding-left:10%;padding-right:10%">We'll also show a confidence score (the higher the number, the more confident we are {% if page.binary %}that it's {{ page.binary }}{% elsif page.which %}which {{page.which}} it is{% else %}what {% if page.image-singular %}{{ page.image-singular }}{% else %}{% endif %} it is{% endif %}).</p>        

@@ -2,18 +2,18 @@
 layout: function
 function: true
 live: true
-number: 12
+number: 32
 dataurl: https://www.nyckel.com
 model: Nyckel-created
 type: image
 image: /assets/images/functions/rat-identifier.webp
-name: rats
+name: mice
 samplecount: 2881
 labelcount: 15
-labelsamples: Mouse, Rat, and 12 other labels
+labelsamples: Mouse, Gerbil, and 12 other labels
 role: homeowner
 image-singular: rodent
-binary: a rat or not
+binary: a mouse or not
 which: 
 functionid: cppkhj2ujnnva86b
 ---

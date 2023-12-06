@@ -3,11 +3,11 @@
         <div class="container inner text-center">
             <div class="mtn6 mbn8 pl6 pr6">
                 <h2 class="display-3">
-                   For most classification use cases,
-                    <span class="orange">AI/ML tools are needlessly complex</span>
+                   For most {% if page.type2 %}{{ page.type2 }} {% else %}{% endif %}classification use cases,
+                    <span class="orange">AI/ML tools are {% if page.type2 %}too{% else %}needlessly{% endif %} complex</span>
                 </h2>
                 <p class="display-4 blue pl10 pr10">
-                   Trying to do classification through “we-do-it-all” AI/ML tools is hard. Especially if you’re not a machine learning expert. That’s why Nyckel built a platform that makes {{ page.type }} classification easy for everyone.
+                   Trying to do {% if page.type2 %}{{ page.type2 }} {% else %}{% endif %}classification through “we-do-it-all” AI/ML tools is hard. Especially if you’re not a machine learning expert. That’s why Nyckel built a platform that makes {{ page.type }} classification easy for everyone.
                 </p>
             </div>
         </div>
