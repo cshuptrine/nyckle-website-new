@@ -3821,6 +3821,7 @@ picture {
 
 #invoke-container #prediction {
     font-size: 2rem;
+    line-height:1.5rem;
 }
 
 #invoke-container .upload-area,
@@ -3885,7 +3886,7 @@ picture {
     font-family: "Assistant", sans-serif;
     font-size: 0.85rem;
     line-height: 1.5rem;
-    color: #595959;
+    color: #306fa2;
 }
 
 #invoke-container .upload-icon svg {
